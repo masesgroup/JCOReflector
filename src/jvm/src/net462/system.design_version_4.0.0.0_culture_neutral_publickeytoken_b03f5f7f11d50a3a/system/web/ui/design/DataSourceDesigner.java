@@ -106,7 +106,10 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,15 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SchemasEquivalent.
+     *
+     * @param schema1 the argument of type {@code IDataSourceSchema}
+     * @param schema2 the argument of type {@code IDataSourceSchema}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.SchemasEquivalent" target="_top">.NET documentation</a>
+     */
     public static boolean SchemasEquivalent(IDataSourceSchema schema1, IDataSourceSchema schema2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -181,6 +199,15 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member ViewSchemasEquivalent.
+     *
+     * @param viewSchema1 the argument of type {@code IDataSourceViewSchema}
+     * @param viewSchema2 the argument of type {@code IDataSourceViewSchema}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.ViewSchemasEquivalent" target="_top">.NET documentation</a>
+     */
     public static boolean ViewSchemasEquivalent(IDataSourceViewSchema viewSchema1, IDataSourceViewSchema viewSchema2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +222,17 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDesignTimeHtml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.GetDesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +247,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetViewNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.GetViewNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetViewNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +277,14 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetView.
+     *
+     * @param viewName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.GetView" target="_top">.NET documentation</a>
+     */
     public DesignerDataSourceView GetView(java.lang.String viewName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +300,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member Configure.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.Configure" target="_top">.NET documentation</a>
+     */
     public void Configure() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +317,14 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member RefreshSchema.
+     *
+     * @param preferSilent the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.RefreshSchema" target="_top">.NET documentation</a>
+     */
     public void RefreshSchema(boolean preferSilent) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +335,23 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResumeDataSourceEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.ResumeDataSourceEvents" target="_top">.NET documentation</a>
+     */
     public void ResumeDataSourceEvents() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +362,12 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member SuppressDataSourceEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.SuppressDataSourceEvents" target="_top">.NET documentation</a>
+     */
     public void SuppressDataSourceEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +382,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanConfigure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.CanConfigure" target="_top">.NET documentation</a>
+     */
     public boolean getCanConfigure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +403,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRefreshSchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DataSourceDesigner.CanRefreshSchema" target="_top">.NET documentation</a>
+     */
     public boolean getCanRefreshSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +429,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +446,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +463,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSchemaRefreshed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +480,13 @@ public class DataSourceDesigner extends system.web.ui.design.ControlDesigner  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSchemaRefreshed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

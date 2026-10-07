@@ -101,7 +101,10 @@ public class DbFunctionCommandTree extends system.data.common.commandtrees.DbCom
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbFunctionCommandTree(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class DbFunctionCommandTree extends system.data.common.commandtrees.DbCom
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EdmFunction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbFunctionCommandTree.EdmFunction" target="_top">.NET documentation</a>
+     */
     public EdmFunction getEdmFunction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class DbFunctionCommandTree extends system.data.common.commandtrees.DbCom
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbFunctionCommandTree.ResultType" target="_top">.NET documentation</a>
+     */
     public TypeUsage getResultType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

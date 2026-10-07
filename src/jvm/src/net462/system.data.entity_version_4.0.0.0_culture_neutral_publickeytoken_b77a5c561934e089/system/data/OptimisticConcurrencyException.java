@@ -105,7 +105,9 @@ public class OptimisticConcurrencyException extends system.data.UpdateException 
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public OptimisticConcurrencyException(java.lang.Object instance) {
         super(instance);
@@ -166,6 +168,17 @@ public class OptimisticConcurrencyException extends system.data.UpdateException 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @param stateEntries the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OptimisticConcurrencyException.-ctor" target="_top">.NET documentation</a>
+     */
     public OptimisticConcurrencyException(java.lang.String message, NetException innerException, IEnumerable_1 stateEntries) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

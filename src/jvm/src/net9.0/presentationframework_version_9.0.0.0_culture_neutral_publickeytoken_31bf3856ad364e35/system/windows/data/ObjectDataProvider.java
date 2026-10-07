@@ -101,7 +101,10 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectDataProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,26 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.TimeoutException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectDataProvider() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +185,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeConstructorParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ShouldSerializeConstructorParameters" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeConstructorParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +206,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeMethodParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ShouldSerializeMethodParameters" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeMethodParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +227,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeObjectInstance.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ShouldSerializeObjectInstance" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeObjectInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +248,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeObjectType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ShouldSerializeObjectType" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +273,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAsynchronous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.IsAsynchronous" target="_top">.NET documentation</a>
+     */
     public boolean getIsAsynchronous() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +294,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsAsynchronous.
+     *
+     * @param IsAsynchronous the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.IsAsynchronous" target="_top">.NET documentation</a>
+     */
     public void setIsAsynchronous(boolean IsAsynchronous) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +311,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConstructorParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ConstructorParameters" target="_top">.NET documentation</a>
+     */
     public IList getConstructorParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +333,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.MethodParameters" target="_top">.NET documentation</a>
+     */
     public IList getMethodParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +355,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ObjectInstance" target="_top">.NET documentation</a>
+     */
     public NetObject getObjectInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +377,22 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Sets the value of the .NET property ObjectInstance.
+     *
+     * @param ObjectInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ObjectInstance" target="_top">.NET documentation</a>
+     */
     public void setObjectInstance(NetObject ObjectInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +403,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.MethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +424,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Sets the value of the .NET property MethodName.
+     *
+     * @param MethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.MethodName" target="_top">.NET documentation</a>
+     */
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +441,13 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ObjectType" target="_top">.NET documentation</a>
+     */
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +463,21 @@ public class ObjectDataProvider extends system.windows.data.DataSourceProvider  
         }
     }
 
+    /**
+     * Sets the value of the .NET property ObjectType.
+     *
+     * @param ObjectType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ObjectDataProvider.ObjectType" target="_top">.NET documentation</a>
+     */
     public void setObjectType(NetType ObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

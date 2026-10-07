@@ -100,7 +100,10 @@ public class InputLanguageChangingEventArgs extends system.windows.input.InputLa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InputLanguageChangingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class InputLanguageChangingEventArgs extends system.windows.input.InputLa
     public InputLanguageChangingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param newLanguageId the argument of type {@code CultureInfo}
+     * @param previousLanguageId the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageChangingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public InputLanguageChangingEventArgs(CultureInfo newLanguageId, CultureInfo previousLanguageId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class InputLanguageChangingEventArgs extends system.windows.input.InputLa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Rejected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageChangingEventArgs.Rejected" target="_top">.NET documentation</a>
+     */
     public boolean getRejected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class InputLanguageChangingEventArgs extends system.windows.input.InputLa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Rejected.
+     *
+     * @param Rejected the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageChangingEventArgs.Rejected" target="_top">.NET documentation</a>
+     */
     public void setRejected(boolean Rejected) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

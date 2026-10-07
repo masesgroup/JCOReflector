@@ -98,7 +98,10 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IIntellisenseBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,16 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Show.
+     *
+     * @param language the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @param newValue the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IIntellisenseBuilder.Show" target="_top">.NET documentation</a>
+     */
     public boolean Show(java.lang.String language, java.lang.String value, JCORefOut newValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +171,13 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IIntellisenseBuilder.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

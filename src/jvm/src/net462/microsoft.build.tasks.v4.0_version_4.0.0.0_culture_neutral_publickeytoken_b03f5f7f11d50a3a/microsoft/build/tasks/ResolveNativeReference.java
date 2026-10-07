@@ -101,7 +101,10 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveNativeReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveNativeReference() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,33 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xml.xpath.XPathException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.ObjectDisposedException, system.RankException, system.security.SecurityException, system.NotImplementedException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.io.IOException, system.xml.XmlException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +217,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContainedComComponents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedComComponents" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getContainedComComponents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +245,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainedComComponents.
+     *
+     * @param ContainedComComponents the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedComComponents" target="_top">.NET documentation</a>
+     */
     public void setContainedComComponents(ITaskItem[] ContainedComComponents) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +262,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainedLooseEtcFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseEtcFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getContainedLooseEtcFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +290,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainedLooseEtcFiles.
+     *
+     * @param ContainedLooseEtcFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseEtcFiles" target="_top">.NET documentation</a>
+     */
     public void setContainedLooseEtcFiles(ITaskItem[] ContainedLooseEtcFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +307,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainedLooseTlbFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseTlbFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getContainedLooseTlbFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +335,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainedLooseTlbFiles.
+     *
+     * @param ContainedLooseTlbFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedLooseTlbFiles" target="_top">.NET documentation</a>
+     */
     public void setContainedLooseTlbFiles(ITaskItem[] ContainedLooseTlbFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +352,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainedPrerequisiteAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedPrerequisiteAssemblies" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getContainedPrerequisiteAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +380,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainedPrerequisiteAssemblies.
+     *
+     * @param ContainedPrerequisiteAssemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedPrerequisiteAssemblies" target="_top">.NET documentation</a>
+     */
     public void setContainedPrerequisiteAssemblies(ITaskItem[] ContainedPrerequisiteAssemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +397,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainedTypeLibraries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedTypeLibraries" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getContainedTypeLibraries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +425,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainedTypeLibraries.
+     *
+     * @param ContainedTypeLibraries the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainedTypeLibraries" target="_top">.NET documentation</a>
+     */
     public void setContainedTypeLibraries(ITaskItem[] ContainedTypeLibraries) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +442,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainingReferenceFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainingReferenceFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getContainingReferenceFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +470,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainingReferenceFiles.
+     *
+     * @param ContainingReferenceFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.ContainingReferenceFiles" target="_top">.NET documentation</a>
+     */
     public void setContainingReferenceFiles(ITaskItem[] ContainingReferenceFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +487,19 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property NativeReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.NativeReferences" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getNativeReferences() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +521,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property NativeReferences.
+     *
+     * @param NativeReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.NativeReferences" target="_top">.NET documentation</a>
+     */
     public void setNativeReferences(ITaskItem[] NativeReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +538,19 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalSearchPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.AdditionalSearchPaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAdditionalSearchPaths() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +574,13 @@ public class ResolveNativeReference extends microsoft.build.tasks.TaskExtension 
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdditionalSearchPaths.
+     *
+     * @param AdditionalSearchPaths the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.ResolveNativeReference.AdditionalSearchPaths" target="_top">.NET documentation</a>
+     */
     public void setAdditionalSearchPaths(java.lang.String[] AdditionalSearchPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

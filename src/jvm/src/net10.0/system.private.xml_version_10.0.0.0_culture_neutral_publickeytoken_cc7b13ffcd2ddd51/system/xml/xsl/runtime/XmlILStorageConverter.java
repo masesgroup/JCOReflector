@@ -107,7 +107,10 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlILStorageConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,15 @@ public class XmlILStorageConverter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member NavigatorsToItems.
+     *
+     * @param listNavigators the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.NavigatorsToItems" target="_top">.NET documentation</a>
+     */
     public static IList_1 NavigatorsToItems(IList_1 listNavigators) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +187,16 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ItemsToNavigators.
+     *
+     * @param listItems the argument of type {@code IList_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.ItemsToNavigators" target="_top">.NET documentation</a>
+     */
     public static IList_1 ItemsToNavigators(IList_1 listItems) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +212,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BooleanToAtomicValue.
+     *
+     * @param value the argument of type {@code boolean}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.BooleanToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue BooleanToAtomicValue(boolean value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +242,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BytesToAtomicValue.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.BytesToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue BytesToAtomicValue(byte[] value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +272,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BytesToAtomicValue.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.BytesToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue BytesToAtomicValue(JCORefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +302,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DateTimeToAtomicValue.
+     *
+     * @param value the argument of type {@code DateTime}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.DateTimeToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue DateTimeToAtomicValue(DateTime value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +332,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DecimalToAtomicValue.
+     *
+     * @param value the argument of type {@code Decimal}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.DecimalToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue DecimalToAtomicValue(Decimal value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -265,6 +362,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DoubleToAtomicValue.
+     *
+     * @param value the argument of type {@code double}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.DoubleToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue DoubleToAtomicValue(double value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -280,6 +392,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Int32ToAtomicValue.
+     *
+     * @param value the argument of type {@code int}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.Int32ToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue Int32ToAtomicValue(int value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +422,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Int64ToAtomicValue.
+     *
+     * @param value the argument of type {@code long}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.Int64ToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue Int64ToAtomicValue(long value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -310,6 +452,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SingleToAtomicValue.
+     *
+     * @param value the argument of type {@code Single}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.SingleToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue SingleToAtomicValue(Single value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +482,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StringToAtomicValue.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.StringToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue StringToAtomicValue(java.lang.String value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +512,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TimeSpanToAtomicValue.
+     *
+     * @param value the argument of type {@code TimeSpan}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.TimeSpanToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue TimeSpanToAtomicValue(TimeSpan value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -355,6 +542,21 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member XmlQualifiedNameToAtomicValue.
+     *
+     * @param value the argument of type {@code XmlQualifiedName}
+     * @param index the argument of type {@code int}
+     * @param runtime the argument of type {@code XmlQueryRuntime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.XmlQualifiedNameToAtomicValue" target="_top">.NET documentation</a>
+     */
     public static XmlAtomicValue XmlQualifiedNameToAtomicValue(XmlQualifiedName value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

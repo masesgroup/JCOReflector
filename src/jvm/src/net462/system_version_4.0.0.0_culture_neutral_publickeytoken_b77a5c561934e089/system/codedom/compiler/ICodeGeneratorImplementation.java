@@ -107,7 +107,10 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICodeGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsValidIdentifier.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.IsValidIdentifier" target="_top">.NET documentation</a>
+     */
     public boolean IsValidIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +174,14 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member Supports.
+     *
+     * @param supports the argument of type {@code GeneratorSupport}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.Supports" target="_top">.NET documentation</a>
+     */
     public boolean Supports(GeneratorSupport supports) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +196,14 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member CreateEscapedIdentifier.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.CreateEscapedIdentifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateEscapedIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +218,14 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member CreateValidIdentifier.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.CreateValidIdentifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateValidIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +240,14 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeOutput.
+     *
+     * @param type the argument of type {@code CodeTypeReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GetTypeOutput" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetTypeOutput(CodeTypeReference type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,15 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromCompileUnit.
+     *
+     * @param e the argument of type {@code CodeCompileUnit}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromCompileUnit" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +281,15 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromExpression.
+     *
+     * @param e the argument of type {@code CodeExpression}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromExpression" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +300,15 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromNamespace.
+     *
+     * @param e the argument of type {@code CodeNamespace}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromNamespace" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +319,15 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromStatement.
+     *
+     * @param e the argument of type {@code CodeStatement}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromStatement" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +338,15 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateCodeFromType.
+     *
+     * @param e the argument of type {@code CodeTypeDeclaration}
+     * @param w the argument of type {@code TextWriter}
+     * @param o the argument of type {@code CodeGeneratorOptions}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromType" target="_top">.NET documentation</a>
+     */
     public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +357,13 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateIdentifier.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeGenerator.ValidateIdentifier" target="_top">.NET documentation</a>
+     */
     public void ValidateIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

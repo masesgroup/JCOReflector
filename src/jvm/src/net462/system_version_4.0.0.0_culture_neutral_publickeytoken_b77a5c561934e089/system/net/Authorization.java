@@ -98,7 +98,10 @@ public class Authorization extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Authorization(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class Authorization extends NetObject  {
     public Authorization() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.-ctor" target="_top">.NET documentation</a>
+     */
     public Authorization(java.lang.String token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +168,14 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code java.lang.String}
+     * @param finished the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.-ctor" target="_top">.NET documentation</a>
+     */
     public Authorization(java.lang.String token, boolean finished) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +186,15 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code java.lang.String}
+     * @param finished the argument of type {@code boolean}
+     * @param connectionGroupId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.-ctor" target="_top">.NET documentation</a>
+     */
     public Authorization(java.lang.String token, boolean finished, java.lang.String connectionGroupId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +214,13 @@ public class Authorization extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Complete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.Complete" target="_top">.NET documentation</a>
+     */
     public boolean getComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +235,13 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MutuallyAuthenticated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.MutuallyAuthenticated" target="_top">.NET documentation</a>
+     */
     public boolean getMutuallyAuthenticated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +256,13 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MutuallyAuthenticated.
+     *
+     * @param MutuallyAuthenticated the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.MutuallyAuthenticated" target="_top">.NET documentation</a>
+     */
     public void setMutuallyAuthenticated(boolean MutuallyAuthenticated) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +273,13 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionGroupId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.ConnectionGroupId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionGroupId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +294,13 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +315,13 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionRealm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.ProtectionRealm" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getProtectionRealm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +345,13 @@ public class Authorization extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionRealm.
+     *
+     * @param ProtectionRealm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Authorization.ProtectionRealm" target="_top">.NET documentation</a>
+     */
     public void setProtectionRealm(java.lang.String[] ProtectionRealm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

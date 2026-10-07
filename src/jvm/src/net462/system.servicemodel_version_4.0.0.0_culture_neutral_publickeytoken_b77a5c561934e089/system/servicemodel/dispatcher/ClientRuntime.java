@@ -108,7 +108,10 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClientRuntime(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -167,6 +170,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ManualAddressing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing" target="_top">.NET documentation</a>
+     */
     public boolean getManualAddressing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +191,27 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property ManualAddressing.
+     *
+     * @param ManualAddressing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing" target="_top">.NET documentation</a>
+     */
     public void setManualAddressing(boolean ManualAddressing) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +222,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageVersionNoneFaultsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.MessageVersionNoneFaultsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getMessageVersionNoneFaultsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +243,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageVersionNoneFaultsEnabled.
+     *
+     * @param MessageVersionNoneFaultsEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.MessageVersionNoneFaultsEnabled" target="_top">.NET documentation</a>
+     */
     public void setMessageVersionNoneFaultsEnabled(boolean MessageVersionNoneFaultsEnabled) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +271,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateMustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ValidateMustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getValidateMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +292,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateMustUnderstand.
+     *
+     * @param ValidateMustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ValidateMustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setValidateMustUnderstand(boolean ValidateMustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +320,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxFaultSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.MaxFaultSize" target="_top">.NET documentation</a>
+     */
     public int getMaxFaultSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +367,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxFaultSize.
+     *
+     * @param MaxFaultSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.MaxFaultSize" target="_top">.NET documentation</a>
+     */
     public void setMaxFaultSize(int MaxFaultSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +395,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientOperations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ClientOperations" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getClientOperations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +417,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientMessageInspectors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ClientMessageInspectors" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getClientMessageInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +439,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelInitializers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers" target="_top">.NET documentation</a>
+     */
     public SynchronizedCollection_1 getChannelInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +461,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageInspectorsNewClientRuntime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectorsNewClientRuntime" target="_top">.NET documentation</a>
+     */
     public SynchronizedCollection_1 getMessageInspectorsNewClientRuntime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +483,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property InteractiveChannelInitializers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.InteractiveChannelInitializers" target="_top">.NET documentation</a>
+     */
     public SynchronizedCollection_1 getInteractiveChannelInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +505,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationsNewClientRuntime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.OperationsNewClientRuntime" target="_top">.NET documentation</a>
+     */
     public SynchronizedKeyedCollection_2 getOperationsNewClientRuntime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +527,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnhandledClientOperation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.UnhandledClientOperation" target="_top">.NET documentation</a>
+     */
     public ClientOperation getUnhandledClientOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +549,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallbackDispatchRuntime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime" target="_top">.NET documentation</a>
+     */
     public DispatchRuntime getCallbackDispatchRuntime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +582,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector" target="_top">.NET documentation</a>
+     */
     public IClientOperationSelector getOperationSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +604,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property OperationSelector.
+     *
+     * @param OperationSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector" target="_top">.NET documentation</a>
+     */
     public void setOperationSelector(IClientOperationSelector OperationSelector) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +632,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ContractName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +653,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContractNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +674,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallbackClientType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType" target="_top">.NET documentation</a>
+     */
     public NetType getCallbackClientType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +696,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property CallbackClientType.
+     *
+     * @param CallbackClientType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType" target="_top">.NET documentation</a>
+     */
     public void setCallbackClientType(NetType CallbackClientType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +724,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractClientType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType" target="_top">.NET documentation</a>
+     */
     public NetType getContractClientType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +746,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContractClientType.
+     *
+     * @param ContractClientType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType" target="_top">.NET documentation</a>
+     */
     public void setContractClientType(NetType ContractClientType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +774,13 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Gets the value of the .NET property Via.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.Via" target="_top">.NET documentation</a>
+     */
     public Uri getVia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +796,24 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
         }
     }
 
+    /**
+     * Sets the value of the .NET property Via.
+     *
+     * @param Via the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.Via" target="_top">.NET documentation</a>
+     */
     public void setVia(Uri Via) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

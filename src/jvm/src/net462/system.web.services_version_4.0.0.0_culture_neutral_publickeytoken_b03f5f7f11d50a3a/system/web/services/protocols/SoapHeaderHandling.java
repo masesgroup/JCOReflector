@@ -104,7 +104,10 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapHeaderHandling(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class SoapHeaderHandling extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapHeaderHandling() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,38 @@ public class SoapHeaderHandling extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ReadHeaders.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param serializer the argument of type {@code XmlSerializer}
+     * @param headers the argument of type {@code SoapHeaderCollection}
+     * @param mappings the argument of type {@code SoapHeaderMapping[]}
+     * @param direction the argument of type {@code SoapHeaderDirection}
+     * @param envelopeNS the argument of type {@code java.lang.String}
+     * @param encodingStyle the argument of type {@code java.lang.String}
+     * @param checkRequiredHeaders the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.ReadHeaders" target="_top">.NET documentation</a>
+     */
     public java.lang.String ReadHeaders(XmlReader reader, XmlSerializer serializer, SoapHeaderCollection headers, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, java.lang.String envelopeNS, java.lang.String encodingStyle, boolean checkRequiredHeaders) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException, system.OverflowException, system.NotImplementedException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +220,27 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EnsureHeadersUnderstood.
+     *
+     * @param headers the argument of type {@code SoapHeaderCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.web.services.protocols.SoapHeaderException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.EnsureHeadersUnderstood" target="_top">.NET documentation</a>
+     */
     public static void EnsureHeadersUnderstood(SoapHeaderCollection headers) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.web.services.protocols.SoapHeaderException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +251,17 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeaderMembers.
+     *
+     * @param headers the argument of type {@code SoapHeaderCollection}
+     * @param target the argument of type {@code NetObject}
+     * @param mappings the argument of type {@code SoapHeaderMapping[]}
+     * @param direction the argument of type {@code SoapHeaderDirection}
+     * @param client the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.GetHeaderMembers" target="_top">.NET documentation</a>
+     */
     public static void GetHeaderMembers(SoapHeaderCollection headers, NetObject target, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean client) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +272,31 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetHeaderMembers.
+     *
+     * @param headers the argument of type {@code SoapHeaderCollection}
+     * @param target the argument of type {@code NetObject}
+     * @param mappings the argument of type {@code SoapHeaderMapping[]}
+     * @param direction the argument of type {@code SoapHeaderDirection}
+     * @param client the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.web.services.protocols.SoapHeaderException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.SetHeaderMembers" target="_top">.NET documentation</a>
+     */
     public static void SetHeaderMembers(SoapHeaderCollection headers, NetObject target, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean client) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.web.services.protocols.SoapHeaderException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +307,52 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteHeaders.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param serializer the argument of type {@code XmlSerializer}
+     * @param headers the argument of type {@code SoapHeaderCollection}
+     * @param mappings the argument of type {@code SoapHeaderMapping[]}
+     * @param direction the argument of type {@code SoapHeaderDirection}
+     * @param isEncoded the argument of type {@code boolean}
+     * @param defaultNS the argument of type {@code java.lang.String}
+     * @param serviceDefaultIsEncoded the argument of type {@code boolean}
+     * @param envelopeNS the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.WriteHeaders" target="_top">.NET documentation</a>
+     */
     public static void WriteHeaders(XmlWriter writer, XmlSerializer serializer, SoapHeaderCollection headers, SoapHeaderMapping[] mappings, SoapHeaderDirection direction, boolean isEncoded, java.lang.String defaultNS, boolean serviceDefaultIsEncoded, java.lang.String envelopeNS) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.MissingMethodException, system.xml.XmlException, system.RankException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.security.SecurityException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ApplicationException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +363,26 @@ public class SoapHeaderHandling extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteUnknownHeaders.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param headers the argument of type {@code SoapHeaderCollection}
+     * @param envelopeNS the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapHeaderHandling.WriteUnknownHeaders" target="_top">.NET documentation</a>
+     */
     public static void WriteUnknownHeaders(XmlWriter writer, SoapHeaderCollection headers, java.lang.String envelopeNS) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

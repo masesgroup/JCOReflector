@@ -104,7 +104,10 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BasePackagingPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AcquireStreamForLinkTargets.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireStreamForLinkTargets" target="_top">.NET documentation</a>
+     */
     public IList_1 AcquireStreamForLinkTargets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireResourceStreamForXpsColorContext.
+     *
+     * @param resourceId the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireResourceStreamForXpsColorContext" target="_top">.NET documentation</a>
+     */
     public XpsResourceStream AcquireResourceStreamForXpsColorContext(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireResourceStreamForXpsFont.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireResourceStreamForXpsFont" target="_top">.NET documentation</a>
+     */
     public XpsResourceStream AcquireResourceStreamForXpsFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +227,14 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireResourceStreamForXpsFont.
+     *
+     * @param resourceId the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireResourceStreamForXpsFont" target="_top">.NET documentation</a>
+     */
     public XpsResourceStream AcquireResourceStreamForXpsFont(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +250,14 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireResourceStreamForXpsImage.
+     *
+     * @param resourceId the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireResourceStreamForXpsImage" target="_top">.NET documentation</a>
+     */
     public XpsResourceStream AcquireResourceStreamForXpsImage(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +273,14 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireResourceStreamForXpsResourceDictionary.
+     *
+     * @param resourceId the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireResourceStreamForXpsResourceDictionary" target="_top">.NET documentation</a>
+     */
     public XpsResourceStream AcquireResourceStreamForXpsResourceDictionary(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +296,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireXmlWriterForFixedDocument.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireXmlWriterForFixedDocument" target="_top">.NET documentation</a>
+     */
     public XmlWriter AcquireXmlWriterForFixedDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +318,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireXmlWriterForFixedDocumentSequence.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireXmlWriterForFixedDocumentSequence" target="_top">.NET documentation</a>
+     */
     public XmlWriter AcquireXmlWriterForFixedDocumentSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +340,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireXmlWriterForFixedPage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireXmlWriterForFixedPage" target="_top">.NET documentation</a>
+     */
     public XmlWriter AcquireXmlWriterForFixedPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +362,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireXmlWriterForPage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireXmlWriterForPage" target="_top">.NET documentation</a>
+     */
     public XmlWriter AcquireXmlWriterForPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +384,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireXmlWriterForResourceDictionary.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.AcquireXmlWriterForResourceDictionary" target="_top">.NET documentation</a>
+     */
     public XmlWriter AcquireXmlWriterForResourceDictionary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +406,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member PersistPrintTicket.
+     *
+     * @param printTicket the argument of type {@code PrintTicket}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.PersistPrintTicket" target="_top">.NET documentation</a>
+     */
     public void PersistPrintTicket(PrintTicket printTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +423,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member PreCommitCurrentPage.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.PreCommitCurrentPage" target="_top">.NET documentation</a>
+     */
     public void PreCommitCurrentPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +439,14 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member RelateResourceToCurrentPage.
+     *
+     * @param targetUri the argument of type {@code Uri}
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.RelateResourceToCurrentPage" target="_top">.NET documentation</a>
+     */
     public void RelateResourceToCurrentPage(Uri targetUri, java.lang.String relationshipName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +457,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member RelateRestrictedFontToCurrentDocument.
+     *
+     * @param targetUri the argument of type {@code Uri}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.RelateRestrictedFontToCurrentDocument" target="_top">.NET documentation</a>
+     */
     public void RelateRestrictedFontToCurrentDocument(Uri targetUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +474,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseResourceStreamForXpsColorContext.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseResourceStreamForXpsColorContext" target="_top">.NET documentation</a>
+     */
     public void ReleaseResourceStreamForXpsColorContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +490,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseResourceStreamForXpsFont.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseResourceStreamForXpsFont" target="_top">.NET documentation</a>
+     */
     public void ReleaseResourceStreamForXpsFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +506,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseResourceStreamForXpsFont.
+     *
+     * @param resourceId the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseResourceStreamForXpsFont" target="_top">.NET documentation</a>
+     */
     public void ReleaseResourceStreamForXpsFont(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +523,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseResourceStreamForXpsImage.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseResourceStreamForXpsImage" target="_top">.NET documentation</a>
+     */
     public void ReleaseResourceStreamForXpsImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +539,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseResourceStreamForXpsResourceDictionary.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseResourceStreamForXpsResourceDictionary" target="_top">.NET documentation</a>
+     */
     public void ReleaseResourceStreamForXpsResourceDictionary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +555,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseXmlWriterForFixedDocument.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseXmlWriterForFixedDocument" target="_top">.NET documentation</a>
+     */
     public void ReleaseXmlWriterForFixedDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +571,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseXmlWriterForFixedDocumentSequence.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseXmlWriterForFixedDocumentSequence" target="_top">.NET documentation</a>
+     */
     public void ReleaseXmlWriterForFixedDocumentSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +587,12 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseXmlWriterForFixedPage.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.ReleaseXmlWriterForFixedPage" target="_top">.NET documentation</a>
+     */
     public void ReleaseXmlWriterForFixedPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,8 +606,11 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IDisposable.Dispose" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Dispose() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
@@ -468,6 +632,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentFixedDocumentUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.CurrentFixedDocumentUri" target="_top">.NET documentation</a>
+     */
     public Uri getCurrentFixedDocumentUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +654,13 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentFixedPageUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy.CurrentFixedPageUri" target="_top">.NET documentation</a>
+     */
     public Uri getCurrentFixedPageUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

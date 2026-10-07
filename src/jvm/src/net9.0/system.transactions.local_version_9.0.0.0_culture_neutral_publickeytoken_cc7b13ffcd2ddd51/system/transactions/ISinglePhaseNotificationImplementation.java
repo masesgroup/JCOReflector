@@ -103,7 +103,10 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISinglePhaseNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @param enlistment the argument of type {@code Enlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.ISinglePhaseNotification.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,13 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member InDoubt.
+     *
+     * @param enlistment the argument of type {@code Enlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.ISinglePhaseNotification.InDoubt" target="_top">.NET documentation</a>
+     */
     public void InDoubt(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +182,13 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member Prepare.
+     *
+     * @param preparingEnlistment the argument of type {@code PreparingEnlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.ISinglePhaseNotification.Prepare" target="_top">.NET documentation</a>
+     */
     public void Prepare(PreparingEnlistment preparingEnlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +199,13 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member Rollback.
+     *
+     * @param enlistment the argument of type {@code Enlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.ISinglePhaseNotification.Rollback" target="_top">.NET documentation</a>
+     */
     public void Rollback(Enlistment enlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +216,13 @@ public class ISinglePhaseNotificationImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member SinglePhaseCommit.
+     *
+     * @param singlePhaseEnlistment the argument of type {@code SinglePhaseEnlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.ISinglePhaseNotification.SinglePhaseCommit" target="_top">.NET documentation</a>
+     */
     public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

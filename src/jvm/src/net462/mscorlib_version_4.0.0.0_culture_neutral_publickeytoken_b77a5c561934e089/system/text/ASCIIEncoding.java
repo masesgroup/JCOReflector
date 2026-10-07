@@ -101,7 +101,10 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ASCIIEncoding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class ASCIIEncoding extends system.text.Encoding  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.-ctor" target="_top">.NET documentation</a>
+     */
     public ASCIIEncoding() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,18 @@ public class ASCIIEncoding extends system.text.Encoding  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetByteCount.
+     *
+     * @param chars the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetByteCount" target="_top">.NET documentation</a>
+     */
     public int GetByteCount(char[] chars, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +224,18 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetByteCount.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetByteCount" target="_top">.NET documentation</a>
+     */
     public int GetByteCount(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +276,16 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetByteCount.
+     *
+     * @param chars the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetByteCount" target="_top">.NET documentation</a>
+     */
     public int GetByteCount(java.lang.String chars) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +326,20 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param chars the argument of type {@code char[]}
+     * @param charIndex the argument of type {@code int}
+     * @param charCount the argument of type {@code int}
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetBytes" target="_top">.NET documentation</a>
+     */
     public int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +380,20 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetBytes" target="_top">.NET documentation</a>
+     */
     public int GetBytes(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +434,20 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param chars the argument of type {@code java.lang.String}
+     * @param charIndex the argument of type {@code int}
+     * @param charCount the argument of type {@code int}
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetBytes" target="_top">.NET documentation</a>
+     */
     public int GetBytes(java.lang.String chars, int charIndex, int charCount, byte[] bytes, int byteIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +488,20 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetBytes" target="_top">.NET documentation</a>
+     */
     public int GetBytes(java.lang.String dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +542,18 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharCount.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetCharCount" target="_top">.NET documentation</a>
+     */
     public int GetCharCount(byte[] bytes, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +594,18 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCharCount.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetCharCount" target="_top">.NET documentation</a>
+     */
     public int GetCharCount(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +646,20 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @param byteCount the argument of type {@code int}
+     * @param chars the argument of type {@code char[]}
+     * @param charIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetChars" target="_top">.NET documentation</a>
+     */
     public int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +700,20 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetChars" target="_top">.NET documentation</a>
+     */
     public int GetChars(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +754,15 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMaxByteCount.
+     *
+     * @param charCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetMaxByteCount" target="_top">.NET documentation</a>
+     */
     public int GetMaxByteCount(int charCount) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +803,15 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMaxCharCount.
+     *
+     * @param byteCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetMaxCharCount" target="_top">.NET documentation</a>
+     */
     public int GetMaxCharCount(int byteCount) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +852,18 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param bytes the argument of type {@code byte[]}
+     * @param byteIndex the argument of type {@code int}
+     * @param byteCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(byte[] bytes, int byteIndex, int byteCount) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +878,18 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -710,6 +904,13 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecoder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetDecoder" target="_top">.NET documentation</a>
+     */
     public Decoder GetDecoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +926,13 @@ public class ASCIIEncoding extends system.text.Encoding  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEncoder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.ASCIIEncoding.GetEncoder" target="_top">.NET documentation</a>
+     */
     public Encoder GetEncoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

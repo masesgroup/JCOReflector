@@ -100,7 +100,10 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InertiaRotationBehavior2D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.-ctor" target="_top">.NET documentation</a>
+     */
     public InertiaRotationBehavior2D() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesiredDeceleration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public Single getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,23 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredDeceleration.
+     *
+     * @param DesiredDeceleration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public void setDesiredDeceleration(Single DesiredDeceleration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +223,13 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesiredRotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation" target="_top">.NET documentation</a>
+     */
     public Single getDesiredRotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +245,23 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredRotation.
+     *
+     * @param DesiredRotation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.DesiredRotation" target="_top">.NET documentation</a>
+     */
     public void setDesiredRotation(Single DesiredRotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +272,13 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.InitialVelocity" target="_top">.NET documentation</a>
+     */
     public Single getInitialVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +294,23 @@ public class InertiaRotationBehavior2D extends system.windows.input.manipulation
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialVelocity.
+     *
+     * @param InitialVelocity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.InertiaRotationBehavior2D.InitialVelocity" target="_top">.NET documentation</a>
+     */
     public void setInitialVelocity(Single InitialVelocity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

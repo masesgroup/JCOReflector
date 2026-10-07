@@ -101,7 +101,10 @@ public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaRedefine(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaRedefine.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaRedefine() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,13 @@ public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaRedefine.Items" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,13 @@ public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AttributeGroups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaRedefine.AttributeGroups" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getAttributeGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +221,13 @@ public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Groups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaRedefine.Groups" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +243,13 @@ public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaRedefine.SchemaTypes" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectTable getSchemaTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

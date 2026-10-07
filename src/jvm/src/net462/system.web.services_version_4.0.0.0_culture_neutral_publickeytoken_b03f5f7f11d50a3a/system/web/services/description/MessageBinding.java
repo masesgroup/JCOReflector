@@ -100,7 +100,10 @@ public class MessageBinding extends system.web.services.description.NamedItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class MessageBinding extends system.web.services.description.NamedItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OperationBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MessageBinding.OperationBinding" target="_top">.NET documentation</a>
+     */
     public OperationBinding getOperationBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

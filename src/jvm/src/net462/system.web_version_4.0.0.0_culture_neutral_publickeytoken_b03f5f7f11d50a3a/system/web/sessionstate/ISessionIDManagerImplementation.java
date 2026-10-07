@@ -99,7 +99,10 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISessionIDManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,16 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member InitializeRequest.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param suppressAutoDetectRedirect the argument of type {@code boolean}
+     * @param supportSessionIDReissue the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.InitializeRequest" target="_top">.NET documentation</a>
+     */
     public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> supportSessionIDReissue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +168,14 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param id the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.Validate" target="_top">.NET documentation</a>
+     */
     public boolean Validate(java.lang.String id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +190,14 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSessionID.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.CreateSessionID" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +212,14 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
+    /**
+     * Invokes the .NET member GetSessionID.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.GetSessionID" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +234,12 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +250,13 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveSessionID.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.RemoveSessionID" target="_top">.NET documentation</a>
+     */
     public void RemoveSessionID(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +267,16 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
+    /**
+     * Invokes the .NET member SaveSessionID.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param id the argument of type {@code java.lang.String}
+     * @param redirected the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @param cookieAdded the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.ISessionIDManager.SaveSessionID" target="_top">.NET documentation</a>
+     */
     public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> redirected, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> cookieAdded) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

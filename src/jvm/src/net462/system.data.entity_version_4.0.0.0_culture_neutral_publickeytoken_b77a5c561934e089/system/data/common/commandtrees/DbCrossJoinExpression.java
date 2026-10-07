@@ -102,7 +102,10 @@ public class DbCrossJoinExpression extends system.data.common.commandtrees.DbExp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbCrossJoinExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class DbCrossJoinExpression extends system.data.common.commandtrees.DbExp
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class DbCrossJoinExpression extends system.data.common.commandtrees.DbExp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Inputs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression.Inputs" target="_top">.NET documentation</a>
+     */
     public IList_1 getInputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

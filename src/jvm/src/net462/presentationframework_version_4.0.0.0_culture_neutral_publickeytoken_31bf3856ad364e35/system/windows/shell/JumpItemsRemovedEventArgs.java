@@ -101,7 +101,10 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JumpItemsRemovedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public JumpItemsRemovedEventArgs() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +169,15 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param removedItems the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public JumpItemsRemovedEventArgs(IList_1 removedItems) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +196,13 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RemovedItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.RemovedItems" target="_top">.NET documentation</a>
+     */
     public IList_1 getRemovedItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +218,13 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemovedItems.
+     *
+     * @param RemovedItems the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.RemovedItems" target="_top">.NET documentation</a>
+     */
     public void setRemovedItems(IList_1 RemovedItems) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

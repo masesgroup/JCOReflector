@@ -99,7 +99,10 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StringListProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public StringListProperty() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CommandLineValueSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandLineValueSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandLineValueSeparator.
+     *
+     * @param CommandLineValueSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator" target="_top">.NET documentation</a>
+     */
     public void setCommandLineValueSeparator(java.lang.String CommandLineValueSeparator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendererValueSeparator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRendererValueSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
         }
     }
 
+    /**
+     * Sets the value of the .NET property RendererValueSeparator.
+     *
+     * @param RendererValueSeparator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator" target="_top">.NET documentation</a>
+     */
     public void setRendererValueSeparator(java.lang.String RendererValueSeparator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subtype.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubtype() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class StringListProperty extends microsoft.build.framework.xamltypes.Base
         }
     }
 
+    /**
+     * Sets the value of the .NET property Subtype.
+     *
+     * @param Subtype the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype" target="_top">.NET documentation</a>
+     */
     public void setSubtype(java.lang.String Subtype) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

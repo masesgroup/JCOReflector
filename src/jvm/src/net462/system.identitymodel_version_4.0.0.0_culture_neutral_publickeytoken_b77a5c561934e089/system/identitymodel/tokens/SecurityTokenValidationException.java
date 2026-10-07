@@ -103,7 +103,9 @@ public class SecurityTokenValidationException extends system.identitymodel.token
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SecurityTokenValidationException(java.lang.Object instance) {
         super(instance);

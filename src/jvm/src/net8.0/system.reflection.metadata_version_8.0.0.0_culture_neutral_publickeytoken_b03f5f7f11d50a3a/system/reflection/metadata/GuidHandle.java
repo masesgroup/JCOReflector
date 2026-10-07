@@ -100,7 +100,10 @@ public class GuidHandle extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GuidHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class GuidHandle extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code GuidHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.GuidHandle.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(GuidHandle other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +184,13 @@ public class GuidHandle extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNil.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.GuidHandle.IsNil" target="_top">.NET documentation</a>
+     */
     public boolean getIsNil() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

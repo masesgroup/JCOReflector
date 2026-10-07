@@ -101,7 +101,10 @@ public class VisualBasicSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualBasicSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class VisualBasicSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public VisualBasicSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class VisualBasicSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicSettings.Default" target="_top">.NET documentation</a>
+     */
     public static VisualBasicSettings getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -181,6 +197,13 @@ public class VisualBasicSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicSettings.ImportReferences" target="_top">.NET documentation</a>
+     */
     public ISet_1 getImportReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class VisualBasicSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImportReferences.
+     *
+     * @param ImportReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicSettings.ImportReferences" target="_top">.NET documentation</a>
+     */
     public void setImportReferences(ISet_1 ImportReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

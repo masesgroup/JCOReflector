@@ -98,7 +98,10 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IResourceUrlGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetResourceUrl.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param resourceName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IResourceUrlGenerator.GetResourceUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetResourceUrl(NetType type, java.lang.String resourceName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

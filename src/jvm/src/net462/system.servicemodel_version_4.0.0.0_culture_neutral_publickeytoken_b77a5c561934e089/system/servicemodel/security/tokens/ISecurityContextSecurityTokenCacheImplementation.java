@@ -102,7 +102,10 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISecurityContextSecurityTokenCacheImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member TryAddContext.
+     *
+     * @param token the argument of type {@code SecurityContextSecurityToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.TryAddContext" target="_top">.NET documentation</a>
+     */
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllContexts.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.GetAllContexts" target="_top">.NET documentation</a>
+     */
     public Collection_1 GetAllContexts(UniqueId contextId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,15 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member GetContext.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param generation the argument of type {@code UniqueId}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.GetContext" target="_top">.NET documentation</a>
+     */
     public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +216,13 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member AddContext.
+     *
+     * @param token the argument of type {@code SecurityContextSecurityToken}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.AddContext" target="_top">.NET documentation</a>
+     */
     public void AddContext(SecurityContextSecurityToken token) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +233,12 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member ClearContexts.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.ClearContexts" target="_top">.NET documentation</a>
+     */
     public void ClearContexts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +249,13 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAllContexts.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.RemoveAllContexts" target="_top">.NET documentation</a>
+     */
     public void RemoveAllContexts(UniqueId contextId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +266,14 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveContext.
+     *
+     * @param contextId the argument of type {@code UniqueId}
+     * @param generation the argument of type {@code UniqueId}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.RemoveContext" target="_top">.NET documentation</a>
+     */
     public void RemoveContext(UniqueId contextId, UniqueId generation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +284,14 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateContextCachingTime.
+     *
+     * @param context the argument of type {@code SecurityContextSecurityToken}
+     * @param expirationTime the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.UpdateContextCachingTime" target="_top">.NET documentation</a>
+     */
     public void UpdateContextCachingTime(SecurityContextSecurityToken context, DateTime expirationTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

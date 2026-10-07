@@ -101,7 +101,10 @@ public class ActivityDesignerVerbCollection extends system.componentmodel.design
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDesignerVerbCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ActivityDesignerVerbCollection extends system.componentmodel.design
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerVerbCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class ActivityDesignerVerbCollection extends system.componentmodel.design
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param verbs the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerVerbCollection(IEnumerable_1 verbs) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

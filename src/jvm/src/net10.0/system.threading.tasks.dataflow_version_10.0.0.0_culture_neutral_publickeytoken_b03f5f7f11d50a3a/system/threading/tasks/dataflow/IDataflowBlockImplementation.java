@@ -99,7 +99,10 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataflowBlockImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,12 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IDataflowBlock.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +160,13 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
         }
     }
 
+    /**
+     * Invokes the .NET member Fault.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IDataflowBlock.Fault" target="_top">.NET documentation</a>
+     */
     public void Fault(NetException exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +181,13 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Completion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.IDataflowBlock.Completion" target="_top">.NET documentation</a>
+     */
     public Task getCompletion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.GetAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,15 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.GetAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +192,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetPathOfAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.GetPathOfAssembly" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +214,14 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +237,15 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,16 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param throwOnError the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +286,13 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ReferenceAssembly.
+     *
+     * @param name the argument of type {@code AssemblyName}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ITypeResolutionService.ReferenceAssembly" target="_top">.NET documentation</a>
+     */
     public void ReferenceAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

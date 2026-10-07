@@ -104,7 +104,10 @@ public class MessageQueryCollection extends system.collections.objectmodel.Colle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageQueryCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,15 @@ public class MessageQueryCollection extends system.collections.objectmodel.Colle
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Evaluate.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageQueryCollection.Evaluate" target="_top">.NET documentation</a>
+     */
     public <TResult extends IJCOBridgeReflected> IEnumerable_1 Evaluate(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +184,15 @@ public class MessageQueryCollection extends system.collections.objectmodel.Colle
         }
     }
 
+    /**
+     * Invokes the .NET member Evaluate.
+     *
+     * @param <TResult> the type of the generic argument TResult
+     * @param buffer the argument of type {@code MessageBuffer}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.MessageQueryCollection.Evaluate" target="_top">.NET documentation</a>
+     */
     public <TResult extends IJCOBridgeReflected> IEnumerable_1 Evaluate(MessageBuffer buffer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

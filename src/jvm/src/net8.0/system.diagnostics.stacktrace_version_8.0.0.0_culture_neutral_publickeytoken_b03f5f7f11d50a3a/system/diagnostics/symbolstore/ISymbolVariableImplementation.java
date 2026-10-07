@@ -99,7 +99,10 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolVariableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSignature.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.GetSignature" target="_top">.NET documentation</a>
+     */
     public byte[] GetSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +178,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddressField1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.AddressField1" target="_top">.NET documentation</a>
+     */
     public int getAddressField1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +225,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressField2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.AddressField2" target="_top">.NET documentation</a>
+     */
     public int getAddressField2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +272,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressField3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.AddressField3" target="_top">.NET documentation</a>
+     */
     public int getAddressField3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +319,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.EndOffset" target="_top">.NET documentation</a>
+     */
     public int getEndOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +366,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.StartOffset" target="_top">.NET documentation</a>
+     */
     public int getStartOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +413,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.AddressKind" target="_top">.NET documentation</a>
+     */
     public SymAddressKind getAddressKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +435,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.Attributes" target="_top">.NET documentation</a>
+     */
     public NetObject getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +457,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolVariable.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

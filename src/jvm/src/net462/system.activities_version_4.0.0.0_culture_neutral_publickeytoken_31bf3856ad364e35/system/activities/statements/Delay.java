@@ -100,7 +100,10 @@ public class Delay extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Delay(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class Delay extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Delay.-ctor" target="_top">.NET documentation</a>
+     */
     public Delay() throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,13 @@ public class Delay extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Duration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Delay.Duration" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class Delay extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Duration.
+     *
+     * @param Duration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Delay.Duration" target="_top">.NET documentation</a>
+     */
     public void setDuration(InArgument_1 Duration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

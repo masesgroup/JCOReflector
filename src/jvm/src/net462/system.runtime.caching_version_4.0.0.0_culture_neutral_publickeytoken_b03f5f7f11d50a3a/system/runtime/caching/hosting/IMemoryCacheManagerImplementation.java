@@ -99,7 +99,10 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMemoryCacheManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ReleaseCache.
+     *
+     * @param cache the argument of type {@code MemoryCache}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.Hosting.IMemoryCacheManager.ReleaseCache" target="_top">.NET documentation</a>
+     */
     public void ReleaseCache(MemoryCache cache) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +161,14 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateCacheSize.
+     *
+     * @param size the argument of type {@code long}
+     * @param cache the argument of type {@code MemoryCache}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.Hosting.IMemoryCacheManager.UpdateCacheSize" target="_top">.NET documentation</a>
+     */
     public void UpdateCacheSize(long size, MemoryCache cache) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

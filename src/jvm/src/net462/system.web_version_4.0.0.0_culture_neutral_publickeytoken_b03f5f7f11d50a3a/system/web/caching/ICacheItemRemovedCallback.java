@@ -52,5 +52,12 @@ import system.web.caching.CacheItemRemovedReason;
  * @version 2.0.0.0
  */
 public interface ICacheItemRemovedCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param key the .NET argument of type {@code System.String}
+     * @param value the .NET argument of type {@code System.Object}
+     * @param reason the .NET argument of type {@code System.Web.Caching.CacheItemRemovedReason}
+     */
     public void Invoke(java.lang.String key, NetObject value, CacheItemRemovedReason reason);
 }

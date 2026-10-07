@@ -104,7 +104,10 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextEmbeddedObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Format.
+     *
+     * @param remainingParagraphWidth the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObject.Format" target="_top">.NET documentation</a>
+     */
     public TextEmbeddedObjectMetrics Format(double remainingParagraphWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,15 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
         }
     }
 
+    /**
+     * Invokes the .NET member ComputeBoundingBox.
+     *
+     * @param rightToLeft the argument of type {@code boolean}
+     * @param sideways the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObject.ComputeBoundingBox" target="_top">.NET documentation</a>
+     */
     public Rect ComputeBoundingBox(boolean rightToLeft, boolean sideways) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +207,16 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
         }
     }
 
+    /**
+     * Invokes the .NET member Draw.
+     *
+     * @param drawingContext the argument of type {@code DrawingContext}
+     * @param origin the argument of type {@code Point}
+     * @param rightToLeft the argument of type {@code boolean}
+     * @param sideways the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObject.Draw" target="_top">.NET documentation</a>
+     */
     public void Draw(DrawingContext drawingContext, Point origin, boolean rightToLeft, boolean sideways) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasFixedSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObject.HasFixedSize" target="_top">.NET documentation</a>
+     */
     public boolean getHasFixedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
         }
     }
 
+    /**
+     * Gets the value of the .NET property BreakAfter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObject.BreakAfter" target="_top">.NET documentation</a>
+     */
     public LineBreakCondition getBreakAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +274,13 @@ public class TextEmbeddedObject extends system.windows.media.textformatting.Text
         }
     }
 
+    /**
+     * Gets the value of the .NET property BreakBefore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextEmbeddedObject.BreakBefore" target="_top">.NET documentation</a>
+     */
     public LineBreakCondition getBreakBefore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

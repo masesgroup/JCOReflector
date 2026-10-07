@@ -105,7 +105,10 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AspNetMemoryMonitor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,17 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.Subscribe" target="_top">.NET documentation</a>
+     */
     public IDisposable Subscribe(IObserver_1 observer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +189,17 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +210,17 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
 
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.Start" target="_top">.NET documentation</a>
+     */
     public void Start() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +231,17 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
 
+    /**
+     * Invokes the .NET member Stop.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.Stop" target="_top">.NET documentation</a>
+     */
     public void Stop() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,8 +255,13 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIObservable_1 method available in IObservable_1 to obtain an object with an invocable method
+     *
+     * @param observer the argument of type {@code IObserver_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IObservable-1.SubscribeFromIObservable_1" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IDisposable SubscribeFromIObservable_1(IObserver_1 observer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIObservable_1 to obtain the full interface.");
     }
@@ -231,6 +283,13 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultLowPhysicalMemoryObserver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultLowPhysicalMemoryObserver" target="_top">.NET documentation</a>
+     */
     public IObserver_1 getDefaultLowPhysicalMemoryObserver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +305,16 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultLowPhysicalMemoryObserver.
+     *
+     * @param DefaultLowPhysicalMemoryObserver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultLowPhysicalMemoryObserver" target="_top">.NET documentation</a>
+     */
     public void setDefaultLowPhysicalMemoryObserver(IObserver_1 DefaultLowPhysicalMemoryObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +325,13 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultRecycleLimitObserver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultRecycleLimitObserver" target="_top">.NET documentation</a>
+     */
     public IObserver_1 getDefaultRecycleLimitObserver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +347,16 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultRecycleLimitObserver.
+     *
+     * @param DefaultRecycleLimitObserver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultRecycleLimitObserver" target="_top">.NET documentation</a>
+     */
     public void setDefaultRecycleLimitObserver(IObserver_1 DefaultRecycleLimitObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

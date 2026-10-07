@@ -101,7 +101,10 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumerationOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,19 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumerationOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +174,30 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code ManagementNamedValueCollection}
+     * @param timeout the argument of type {@code TimeSpan}
+     * @param blockSize the argument of type {@code int}
+     * @param rewindable the argument of type {@code boolean}
+     * @param returnImmediatley the argument of type {@code boolean}
+     * @param useAmendedQualifiers the argument of type {@code boolean}
+     * @param ensureLocatable the argument of type {@code boolean}
+     * @param prototypeOnly the argument of type {@code boolean}
+     * @param directRead the argument of type {@code boolean}
+     * @param enumerateDeep the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumerationOptions(ManagementNamedValueCollection context, TimeSpan timeout, int blockSize, boolean rewindable, boolean returnImmediatley, boolean useAmendedQualifiers, boolean ensureLocatable, boolean prototypeOnly, boolean directRead, boolean enumerateDeep) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +212,23 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +248,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DirectRead.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.DirectRead" target="_top">.NET documentation</a>
+     */
     public boolean getDirectRead() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +269,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DirectRead.
+     *
+     * @param DirectRead the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.DirectRead" target="_top">.NET documentation</a>
+     */
     public void setDirectRead(boolean DirectRead) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +286,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnsureLocatable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.EnsureLocatable" target="_top">.NET documentation</a>
+     */
     public boolean getEnsureLocatable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +307,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnsureLocatable.
+     *
+     * @param EnsureLocatable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.EnsureLocatable" target="_top">.NET documentation</a>
+     */
     public void setEnsureLocatable(boolean EnsureLocatable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +324,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnumerateDeep.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.EnumerateDeep" target="_top">.NET documentation</a>
+     */
     public boolean getEnumerateDeep() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +345,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnumerateDeep.
+     *
+     * @param EnumerateDeep the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.EnumerateDeep" target="_top">.NET documentation</a>
+     */
     public void setEnumerateDeep(boolean EnumerateDeep) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +362,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrototypeOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.PrototypeOnly" target="_top">.NET documentation</a>
+     */
     public boolean getPrototypeOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +383,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrototypeOnly.
+     *
+     * @param PrototypeOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.PrototypeOnly" target="_top">.NET documentation</a>
+     */
     public void setPrototypeOnly(boolean PrototypeOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +400,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnImmediately.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.ReturnImmediately" target="_top">.NET documentation</a>
+     */
     public boolean getReturnImmediately() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +421,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnImmediately.
+     *
+     * @param ReturnImmediately the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.ReturnImmediately" target="_top">.NET documentation</a>
+     */
     public void setReturnImmediately(boolean ReturnImmediately) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +438,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Rewindable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.Rewindable" target="_top">.NET documentation</a>
+     */
     public boolean getRewindable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +459,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Rewindable.
+     *
+     * @param Rewindable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.Rewindable" target="_top">.NET documentation</a>
+     */
     public void setRewindable(boolean Rewindable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +476,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseAmendedQualifiers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.UseAmendedQualifiers" target="_top">.NET documentation</a>
+     */
     public boolean getUseAmendedQualifiers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +497,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAmendedQualifiers.
+     *
+     * @param UseAmendedQualifiers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.UseAmendedQualifiers" target="_top">.NET documentation</a>
+     */
     public void setUseAmendedQualifiers(boolean UseAmendedQualifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +514,13 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlockSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.BlockSize" target="_top">.NET documentation</a>
+     */
     public int getBlockSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +561,14 @@ public class EnumerationOptions extends system.management.ManagementOptions  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BlockSize.
+     *
+     * @param BlockSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.EnumerationOptions.BlockSize" target="_top">.NET documentation</a>
+     */
     public void setBlockSize(int BlockSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

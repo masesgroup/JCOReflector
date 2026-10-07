@@ -103,7 +103,9 @@ public class RowNotInTableException extends system.data.DataException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public RowNotInTableException(java.lang.Object instance) {
         super(instance);

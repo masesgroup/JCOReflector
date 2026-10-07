@@ -100,7 +100,10 @@ public class DesigntimeLicenseContextSerializer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesigntimeLicenseContextSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,28 @@ public class DesigntimeLicenseContextSerializer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param o the argument of type {@code Stream}
+     * @param cryptoKey the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code DesigntimeLicenseContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesigntimeLicenseContextSerializer.Serialize" target="_top">.NET documentation</a>
+     */
     public static void Serialize(Stream o, java.lang.String cryptoKey, DesigntimeLicenseContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.runtime.serialization.SerializationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

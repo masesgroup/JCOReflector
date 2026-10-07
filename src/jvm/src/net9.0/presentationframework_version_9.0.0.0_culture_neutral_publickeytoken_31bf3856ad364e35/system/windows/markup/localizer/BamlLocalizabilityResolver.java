@@ -100,7 +100,10 @@ public class BamlLocalizabilityResolver extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BamlLocalizabilityResolver(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class BamlLocalizabilityResolver extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ResolveAssemblyFromClass.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizabilityResolver.ResolveAssemblyFromClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String ResolveAssemblyFromClass(java.lang.String className) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +178,14 @@ public class BamlLocalizabilityResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveFormattingTagToClass.
+     *
+     * @param formattingTag the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizabilityResolver.ResolveFormattingTagToClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String ResolveFormattingTagToClass(java.lang.String formattingTag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +200,16 @@ public class BamlLocalizabilityResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyLocalizability.
+     *
+     * @param assembly the argument of type {@code java.lang.String}
+     * @param className the argument of type {@code java.lang.String}
+     * @param property the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizabilityResolver.GetPropertyLocalizability" target="_top">.NET documentation</a>
+     */
     public LocalizabilityAttribute GetPropertyLocalizability(java.lang.String assembly, java.lang.String className, java.lang.String property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +225,15 @@ public class BamlLocalizabilityResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElementLocalizability.
+     *
+     * @param assembly the argument of type {@code java.lang.String}
+     * @param className the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizabilityResolver.GetElementLocalizability" target="_top">.NET documentation</a>
+     */
     public ElementLocalizability GetElementLocalizability(java.lang.String assembly, java.lang.String className) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

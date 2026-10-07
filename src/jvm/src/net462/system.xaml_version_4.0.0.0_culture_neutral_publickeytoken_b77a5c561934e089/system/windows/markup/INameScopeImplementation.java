@@ -98,7 +98,10 @@ public class INameScopeImplementation extends NetObject implements INameScope {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public INameScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class INameScopeImplementation extends NetObject implements INameScope {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member FindName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.INameScope.FindName" target="_top">.NET documentation</a>
+     */
     public NetObject FindName(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,14 @@ public class INameScopeImplementation extends NetObject implements INameScope {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param scopedElement the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.INameScope.RegisterName" target="_top">.NET documentation</a>
+     */
     public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +184,13 @@ public class INameScopeImplementation extends NetObject implements INameScope {
         }
     }
 
+    /**
+     * Invokes the .NET member UnregisterName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.INameScope.UnregisterName" target="_top">.NET documentation</a>
+     */
     public void UnregisterName(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

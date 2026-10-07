@@ -100,7 +100,10 @@ public class LicenseProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LicenseProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,17 @@ public class LicenseProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLicense.
+     *
+     * @param context the argument of type {@code LicenseContext}
+     * @param type the argument of type {@code NetType}
+     * @param instance the argument of type {@code NetObject}
+     * @param allowExceptions the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.LicenseProvider.GetLicense" target="_top">.NET documentation</a>
+     */
     public License GetLicense(LicenseContext context, NetType type, NetObject instance, boolean allowExceptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class NamedPipeSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamedPipeSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class NamedPipeSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationContainerSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.NamedPipeSettings.ApplicationContainerSettings" target="_top">.NET documentation</a>
+     */
     public ApplicationContainerSettings getApplicationContainerSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class NamedPipeSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationContainerSettings.
+     *
+     * @param ApplicationContainerSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.NamedPipeSettings.ApplicationContainerSettings" target="_top">.NET documentation</a>
+     */
     public void setApplicationContainerSettings(ApplicationContainerSettings ApplicationContainerSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

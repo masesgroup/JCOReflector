@@ -107,7 +107,10 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITaskFactory2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,17 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param taskName the argument of type {@code java.lang.String}
+     * @param parameterGroup the argument of type {@code IDictionary_2}
+     * @param taskBody the argument of type {@code java.lang.String}
+     * @param taskFactoryLoggingHost the argument of type {@code IBuildEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.Initialize" target="_top">.NET documentation</a>
+     */
     public boolean Initialize(java.lang.String taskName, IDictionary_2 parameterGroup, java.lang.String taskBody, IBuildEngine taskFactoryLoggingHost) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +177,18 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param taskName the argument of type {@code java.lang.String}
+     * @param factoryIdentityParameters the argument of type {@code IDictionary_2}
+     * @param parameterGroup the argument of type {@code IDictionary_2}
+     * @param taskBody the argument of type {@code java.lang.String}
+     * @param taskFactoryLoggingHost the argument of type {@code IBuildEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.Initialize" target="_top">.NET documentation</a>
+     */
     public boolean Initialize(java.lang.String taskName, IDictionary_2 factoryIdentityParameters, IDictionary_2 parameterGroup, java.lang.String taskBody, IBuildEngine taskFactoryLoggingHost) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +203,14 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTask.
+     *
+     * @param taskFactoryLoggingHost the argument of type {@code IBuildEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.CreateTask" target="_top">.NET documentation</a>
+     */
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +226,15 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTask.
+     *
+     * @param taskFactoryLoggingHost the argument of type {@code IBuildEngine}
+     * @param taskIdentityParameters the argument of type {@code IDictionary_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.CreateTask" target="_top">.NET documentation</a>
+     */
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost, IDictionary_2 taskIdentityParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +250,13 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
 
+    /**
+     * Invokes the .NET member GetTaskParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.GetTaskParameters" target="_top">.NET documentation</a>
+     */
     public TaskPropertyInfo[] GetTaskParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +278,13 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
 
+    /**
+     * Invokes the .NET member CleanupTask.
+     *
+     * @param task the argument of type {@code ITask}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.CleanupTask" target="_top">.NET documentation</a>
+     */
     public void CleanupTask(ITask task) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +299,13 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FactoryName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.FactoryName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFactoryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +320,13 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITaskFactory2.TaskType" target="_top">.NET documentation</a>
+     */
     public NetType getTaskType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

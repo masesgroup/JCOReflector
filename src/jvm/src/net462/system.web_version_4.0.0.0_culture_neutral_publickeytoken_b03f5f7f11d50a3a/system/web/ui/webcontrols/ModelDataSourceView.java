@@ -106,7 +106,10 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,26 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     public ModelDataSourceView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ModelDataSource}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelDataSourceView(ModelDataSource owner) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.web.HttpException, system.collections.generic.KeyNotFoundException, system.threading.ThreadAbortException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +194,31 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Delete.
+     *
+     * @param keys the argument of type {@code IDictionary}
+     * @param oldValues the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.Delete" target="_top">.NET documentation</a>
+     */
     public void Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +229,30 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param values the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +263,27 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param arguments the argument of type {@code DataSourceSelectArguments}
+     * @param callback the argument of type {@code DataSourceViewSelectCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.Select" target="_top">.NET documentation</a>
+     */
     public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +294,32 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param keys the argument of type {@code IDictionary}
+     * @param values the argument of type {@code IDictionary}
+     * @param oldValues the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.Update" target="_top">.NET documentation</a>
+     */
     public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +330,18 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateProperties.
+     *
+     * @param modelTypeName the argument of type {@code java.lang.String}
+     * @param selectMethod the argument of type {@code java.lang.String}
+     * @param updateMethod the argument of type {@code java.lang.String}
+     * @param insertMethod the argument of type {@code java.lang.String}
+     * @param deleteMethod the argument of type {@code java.lang.String}
+     * @param dataKeyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.UpdateProperties" target="_top">.NET documentation</a>
+     */
     public void UpdateProperties(java.lang.String modelTypeName, java.lang.String selectMethod, java.lang.String updateMethod, java.lang.String insertMethod, java.lang.String deleteMethod, java.lang.String dataKeyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,8 +355,12 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.SaveViewState" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject SaveViewState() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
@@ -233,8 +368,12 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     *
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.LoadViewState" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void LoadViewState(NetObject state) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
@@ -242,8 +381,11 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.TrackViewState" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void TrackViewState() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
@@ -252,6 +394,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataKeyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.DataKeyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataKeyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +415,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataKeyName.
+     *
+     * @param DataKeyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.DataKeyName" target="_top">.NET documentation</a>
+     */
     public void setDataKeyName(java.lang.String DataKeyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +432,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +453,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteMethod.
+     *
+     * @param DeleteMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +470,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.InsertMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInsertMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +491,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertMethod.
+     *
+     * @param InsertMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.InsertMethod" target="_top">.NET documentation</a>
+     */
     public void setInsertMethod(java.lang.String InsertMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +508,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.ModelTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getModelTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +529,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelTypeName.
+     *
+     * @param ModelTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.ModelTypeName" target="_top">.NET documentation</a>
+     */
     public void setModelTypeName(java.lang.String ModelTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +546,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.SelectMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +567,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectMethod.
+     *
+     * @param SelectMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.SelectMethod" target="_top">.NET documentation</a>
+     */
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +584,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +605,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateMethod.
+     *
+     * @param UpdateMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceView.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +627,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addCallingDataMethods.
+     *
+     * @param handler the argument of type {@code CallingDataMethodsEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +644,13 @@ public class ModelDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeCallingDataMethods.
+     *
+     * @param handler the argument of type {@code CallingDataMethodsEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

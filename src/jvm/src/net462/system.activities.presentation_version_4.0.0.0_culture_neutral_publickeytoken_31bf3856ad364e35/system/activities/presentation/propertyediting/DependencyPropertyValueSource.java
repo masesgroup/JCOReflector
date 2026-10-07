@@ -100,7 +100,10 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DependencyPropertyValueSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCustomMarkupExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsCustomMarkupExtension" target="_top">.NET documentation</a>
+     */
     public boolean getIsCustomMarkupExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDataBound.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsDataBound" target="_top">.NET documentation</a>
+     */
     public boolean getIsDataBound() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsDefaultValue" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsExpression" target="_top">.NET documentation</a>
+     */
     public boolean getIsExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInherited.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsInherited" target="_top">.NET documentation</a>
+     */
     public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +267,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLocal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsLocal" target="_top">.NET documentation</a>
+     */
     public boolean getIsLocal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +288,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLocalResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsLocalResource" target="_top">.NET documentation</a>
+     */
     public boolean getIsLocalResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +309,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsResource" target="_top">.NET documentation</a>
+     */
     public boolean getIsResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +330,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSystemResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsSystemResource" target="_top">.NET documentation</a>
+     */
     public boolean getIsSystemResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +351,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTemplateBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.IsTemplateBinding" target="_top">.NET documentation</a>
+     */
     public boolean getIsTemplateBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +372,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomMarkupExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.CustomMarkupExtension" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getCustomMarkupExtension() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +394,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataBound.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.DataBound" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getDataBound() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -329,6 +416,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.DefaultValue" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getDefaultValue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -344,6 +438,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Inherited.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.Inherited" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getInherited() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -359,6 +460,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property Local.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.Local" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getLocal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -374,6 +482,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalDynamicResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.LocalDynamicResource" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getLocalDynamicResource() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -389,6 +504,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalStaticResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.LocalStaticResource" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getLocalStaticResource() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -404,6 +526,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.SystemResource" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getSystemResource() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -419,6 +548,13 @@ public class DependencyPropertyValueSource extends system.activities.presentatio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplateBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DependencyPropertyValueSource.TemplateBinding" target="_top">.NET documentation</a>
+     */
     public static DependencyPropertyValueSource getTemplateBinding() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -107,7 +107,10 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SystemAcl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,20 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
     public SystemAcl() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param revision the argument of type {@code byte}
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.-ctor" target="_top">.NET documentation</a>
+     */
     public SystemAcl(boolean isContainer, boolean isDS, byte revision, int capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +184,18 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.-ctor" target="_top">.NET documentation</a>
+     */
     public SystemAcl(boolean isContainer, boolean isDS, int capacity) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +206,21 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param rawAcl the argument of type {@code RawAcl}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.-ctor" target="_top">.NET documentation</a>
+     */
     public SystemAcl(boolean isContainer, boolean isDS, RawAcl rawAcl) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.SystemException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +236,25 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveAudit.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.RemoveAudit" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +269,28 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAudit.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.RemoveAudit" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +305,22 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAudit.
+     *
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAuditRule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.RemoveAudit" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAudit(SecurityIdentifier sid, ObjectAuditRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +335,24 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAudit.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.AddAudit" target="_top">.NET documentation</a>
+     */
     public void AddAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +363,27 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAudit.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.AddAudit" target="_top">.NET documentation</a>
+     */
     public void AddAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +394,21 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAudit.
+     *
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.AddAudit" target="_top">.NET documentation</a>
+     */
     public void AddAudit(SecurityIdentifier sid, ObjectAuditRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +419,21 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditSpecific.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.RemoveAuditSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditSpecific(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +444,24 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditSpecific.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.RemoveAuditSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditSpecific(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +472,18 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAuditSpecific.
+     *
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.RemoveAuditSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAuditSpecific(SecurityIdentifier sid, ObjectAuditRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +494,24 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAudit.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.SetAudit" target="_top">.NET documentation</a>
+     */
     public void SetAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +522,27 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAudit.
+     *
+     * @param auditFlags the argument of type {@code AuditFlags}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.SetAudit" target="_top">.NET documentation</a>
+     */
     public void SetAudit(AuditFlags auditFlags, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +553,21 @@ public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAudit.
+     *
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAuditRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.SystemAcl.SetAudit" target="_top">.NET documentation</a>
+     */
     public void SetAudit(SecurityIdentifier sid, ObjectAuditRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

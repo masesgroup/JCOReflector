@@ -99,7 +99,10 @@ public class SecurityTokenHandlerSetElementCollection extends system.configurati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityTokenHandlerSetElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,16 @@ public class SecurityTokenHandlerSetElementCollection extends system.configurati
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerSetElementCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityTokenHandlerSetElementCollection() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +177,13 @@ public class SecurityTokenHandlerSetElementCollection extends system.configurati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsConfigured.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Configuration.SecurityTokenHandlerSetElementCollection.IsConfigured" target="_top">.NET documentation</a>
+     */
     public boolean getIsConfigured() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAdviseSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,12 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnClose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IAdviseSink.OnClose" target="_top">.NET documentation</a>
+     */
     public void OnClose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +163,14 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
+    /**
+     * Invokes the .NET member OnDataChange.
+     *
+     * @param format the argument of type {@code JCORefOut<FORMATETC>}
+     * @param stgmedium the argument of type {@code JCORefOut<STGMEDIUM>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IAdviseSink.OnDataChange" target="_top">.NET documentation</a>
+     */
     public void OnDataChange(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> stgmedium) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +181,13 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
+    /**
+     * Invokes the .NET member OnRename.
+     *
+     * @param moniker the argument of type {@code IMoniker}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IAdviseSink.OnRename" target="_top">.NET documentation</a>
+     */
     public void OnRename(IMoniker moniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +198,12 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
+    /**
+     * Invokes the .NET member OnSave.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IAdviseSink.OnSave" target="_top">.NET documentation</a>
+     */
     public void OnSave() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +214,14 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
+    /**
+     * Invokes the .NET member OnViewChange.
+     *
+     * @param aspect the argument of type {@code int}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IAdviseSink.OnViewChange" target="_top">.NET documentation</a>
+     */
     public void OnViewChange(int aspect, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

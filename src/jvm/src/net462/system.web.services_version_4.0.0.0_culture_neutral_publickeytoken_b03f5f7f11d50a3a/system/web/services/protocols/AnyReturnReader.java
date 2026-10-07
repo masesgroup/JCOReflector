@@ -102,7 +102,10 @@ public class AnyReturnReader extends system.web.services.protocols.MimeReturnRea
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AnyReturnReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class AnyReturnReader extends system.web.services.protocols.MimeReturnRea
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.AnyReturnReader.-ctor" target="_top">.NET documentation</a>
+     */
     public AnyReturnReader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,14 @@ public class AnyReturnReader extends system.web.services.protocols.MimeReturnRea
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetInitializer.
+     *
+     * @param methodInfo the argument of type {@code LogicalMethodInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.AnyReturnReader.GetInitializer" target="_top">.NET documentation</a>
+     */
     public NetObject GetInitializer(LogicalMethodInfo methodInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,15 @@ public class AnyReturnReader extends system.web.services.protocols.MimeReturnRea
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @param response the argument of type {@code WebResponse}
+     * @param responseStream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.AnyReturnReader.Read" target="_top">.NET documentation</a>
+     */
     public NetObject Read(WebResponse response, Stream responseStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class AnyReturnReader extends system.web.services.protocols.MimeReturnRea
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.AnyReturnReader.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(NetObject o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

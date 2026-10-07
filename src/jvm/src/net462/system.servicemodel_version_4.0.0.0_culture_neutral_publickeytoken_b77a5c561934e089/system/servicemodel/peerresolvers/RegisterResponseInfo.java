@@ -100,7 +100,10 @@ public class RegisterResponseInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegisterResponseInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RegisterResponseInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public RegisterResponseInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class RegisterResponseInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param registrationId the argument of type {@code Guid}
+     * @param registrationLifetime the argument of type {@code TimeSpan}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public RegisterResponseInfo(Guid registrationId, TimeSpan registrationLifetime) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +188,13 @@ public class RegisterResponseInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.HasBody" target="_top">.NET documentation</a>
+     */
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,13 @@ public class RegisterResponseInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RegistrationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.RegistrationId" target="_top">.NET documentation</a>
+     */
     public Guid getRegistrationId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +235,13 @@ public class RegisterResponseInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegistrationId.
+     *
+     * @param RegistrationId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.RegistrationId" target="_top">.NET documentation</a>
+     */
     public void setRegistrationId(Guid RegistrationId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +252,13 @@ public class RegisterResponseInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegistrationLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.RegistrationLifetime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRegistrationLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +274,28 @@ public class RegisterResponseInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegistrationLifetime.
+     *
+     * @param RegistrationLifetime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.RegisterResponseInfo.RegistrationLifetime" target="_top">.NET documentation</a>
+     */
     public void setRegistrationLifetime(TimeSpan RegistrationLifetime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

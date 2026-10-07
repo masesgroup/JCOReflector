@@ -99,7 +99,10 @@ public class ObsoletedOSPlatformAttribute extends system.runtime.versioning.OSPl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObsoletedOSPlatformAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ObsoletedOSPlatformAttribute extends system.runtime.versioning.OSPl
     public ObsoletedOSPlatformAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param platformName the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ObsoletedOSPlatformAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObsoletedOSPlatformAttribute(java.lang.String platformName, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,13 @@ public class ObsoletedOSPlatformAttribute extends system.runtime.versioning.OSPl
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param platformName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ObsoletedOSPlatformAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ObsoletedOSPlatformAttribute(java.lang.String platformName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +196,13 @@ public class ObsoletedOSPlatformAttribute extends system.runtime.versioning.OSPl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ObsoletedOSPlatformAttribute.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +217,13 @@ public class ObsoletedOSPlatformAttribute extends system.runtime.versioning.OSPl
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ObsoletedOSPlatformAttribute.Url" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +238,13 @@ public class ObsoletedOSPlatformAttribute extends system.runtime.versioning.OSPl
         }
     }
 
+    /**
+     * Sets the value of the .NET property Url.
+     *
+     * @param Url the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ObsoletedOSPlatformAttribute.Url" target="_top">.NET documentation</a>
+     */
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

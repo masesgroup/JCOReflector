@@ -101,7 +101,10 @@ public class ServiceHealthBehavior extends system.servicemodel.description.Servi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceHealthBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ServiceHealthBehavior extends system.servicemodel.description.Servi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceHealthBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,29 @@ public class ServiceHealthBehavior extends system.servicemodel.description.Servi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HandleHealthRequest.
+     *
+     * @param serviceHost the argument of type {@code ServiceHostBase}
+     * @param httpGetRequest the argument of type {@code Message}
+     * @param queries the argument of type {@code java.lang.String[]}
+     * @param replyMessage the argument of type {@code JCORefOut<Message>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceHealthBehavior.HandleHealthRequest" target="_top">.NET documentation</a>
+     */
     public void HandleHealthRequest(ServiceHostBase serviceHost, Message httpGetRequest, java.lang.String[] queries, JCORefOut<Message> replyMessage) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

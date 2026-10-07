@@ -99,7 +99,10 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlFacetAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SqlFacetAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlFacetAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class SqlFacetAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsFixedLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.IsFixedLength" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixedLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsFixedLength.
+     *
+     * @param IsFixedLength the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.IsFixedLength" target="_top">.NET documentation</a>
+     */
     public void setIsFixedLength(boolean IsFixedLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.IsNullable" target="_top">.NET documentation</a>
+     */
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNullable.
+     *
+     * @param IsNullable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.IsNullable" target="_top">.NET documentation</a>
+     */
     public void setIsNullable(boolean IsNullable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize" target="_top">.NET documentation</a>
+     */
     public int getMaxSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +296,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxSize.
+     *
+     * @param MaxSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize" target="_top">.NET documentation</a>
+     */
     public void setMaxSize(int MaxSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +313,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Precision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.Precision" target="_top">.NET documentation</a>
+     */
     public int getPrecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +360,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Precision.
+     *
+     * @param Precision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.Precision" target="_top">.NET documentation</a>
+     */
     public void setPrecision(int Precision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +377,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.Scale" target="_top">.NET documentation</a>
+     */
     public int getScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +424,13 @@ public class SqlFacetAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scale.
+     *
+     * @param Scale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.SqlServer.Server.SqlFacetAttribute.Scale" target="_top">.NET documentation</a>
+     */
     public void setScale(int Scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

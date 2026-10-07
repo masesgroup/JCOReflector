@@ -101,7 +101,10 @@ public class PointHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PointHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class PointHitTestResult extends system.windows.media.HitTestResult  {
     public PointHitTestResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualHit the argument of type {@code Visual}
+     * @param pointHit the argument of type {@code Point}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PointHitTestResult.-ctor" target="_top">.NET documentation</a>
+     */
     public PointHitTestResult(Visual visualHit, Point pointHit) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class PointHitTestResult extends system.windows.media.HitTestResult  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VisualHitNewPointHitTestResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PointHitTestResult.VisualHitNewPointHitTestResult" target="_top">.NET documentation</a>
+     */
     public Visual getVisualHitNewPointHitTestResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class PointHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointHit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PointHitTestResult.PointHit" target="_top">.NET documentation</a>
+     */
     public Point getPointHit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

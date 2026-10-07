@@ -103,7 +103,10 @@ public class IProducerConsumerCollection_1Implementation<T extends IJCOBridgeRef
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IProducerConsumerCollection_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IProducerConsumerCollection_1Implementation<T extends IJCOBridgeRef
 
     // Methods section
     
+    /**
+     * Invokes the .NET member TryAdd.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.TryAdd" target="_top">.NET documentation</a>
+     */
     public boolean TryAdd(T item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,14 @@ public class IProducerConsumerCollection_1Implementation<T extends IJCOBridgeRef
         }
     }
 
+    /**
+     * Invokes the .NET member TryTake.
+     *
+     * @param item the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.TryTake" target="_top">.NET documentation</a>
+     */
     public boolean TryTake(JCORefOut<T> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,13 @@ public class IProducerConsumerCollection_1Implementation<T extends IJCOBridgeRef
         }
     }
 
+/**
+ * Invokes the .NET member ToArray.
+ *
+ * @return the value returned by the .NET member
+ * @throws Throwable if the call fails in the bridge or in the CLR
+ * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.ToArray" target="_top">.NET documentation</a>
+ */
 public T[] ToArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +222,14 @@ public T[] ToArray() throws Throwable {
             throw translateException(jcne);
         }
     }
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +240,14 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code T[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(T[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +262,13 @@ public T[] ToArray() throws Throwable {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +283,13 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +330,13 @@ public T[] ToArray() throws Throwable {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.IProducerConsumerCollection-1.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class Comparer_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Comparer_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class Comparer_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Comparer-1.Compare" target="_top">.NET documentation</a>
+     */
     public int Compare(T x, T y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,8 +206,14 @@ public class Comparer_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIComparer method available in IComparer to obtain an object with an invocable method
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IComparer.Compare" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int Compare(NetObject x, NetObject y) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
     }

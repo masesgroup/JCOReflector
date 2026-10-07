@@ -102,7 +102,10 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMemberCreationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,17 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateEvent.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param eventName the argument of type {@code java.lang.String}
+     * @param eventType the argument of type {@code NetType}
+     * @param attributes the argument of type {@code AttributeInfo[]}
+     * @param emitDependencyProperty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.CreateEvent" target="_top">.NET documentation</a>
+     */
     public void CreateEvent(java.lang.String className, java.lang.String eventName, NetType eventType, AttributeInfo[] attributes, boolean emitDependencyProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +168,19 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member CreateField.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param fieldName the argument of type {@code java.lang.String}
+     * @param fieldType the argument of type {@code NetType}
+     * @param genericParameterTypes the argument of type {@code NetType[]}
+     * @param attributes the argument of type {@code MemberAttributes}
+     * @param initializationExpression the argument of type {@code CodeSnippetExpression}
+     * @param overwriteExisting the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.CreateField" target="_top">.NET documentation</a>
+     */
     public void CreateField(java.lang.String className, java.lang.String fieldName, NetType fieldType, NetType[] genericParameterTypes, MemberAttributes attributes, CodeSnippetExpression initializationExpression, boolean overwriteExisting) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +191,21 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member CreateProperty.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @param attributes the argument of type {@code AttributeInfo[]}
+     * @param emitDependencyProperty the argument of type {@code boolean}
+     * @param isMetaProperty the argument of type {@code boolean}
+     * @param isAttached the argument of type {@code boolean}
+     * @param ownerType the argument of type {@code NetType}
+     * @param isReadOnly the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.CreateProperty" target="_top">.NET documentation</a>
+     */
     public void CreateProperty(java.lang.String className, java.lang.String propertyName, NetType propertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty, boolean isAttached, NetType ownerType, boolean isReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +216,15 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveEvent.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param eventName the argument of type {@code java.lang.String}
+     * @param eventType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.RemoveEvent" target="_top">.NET documentation</a>
+     */
     public void RemoveEvent(java.lang.String className, java.lang.String eventName, NetType eventType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +235,15 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveProperty.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @param propertyType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.RemoveProperty" target="_top">.NET documentation</a>
+     */
     public void RemoveProperty(java.lang.String className, java.lang.String propertyName, NetType propertyType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +254,12 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ShowCode.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.ShowCode" target="_top">.NET documentation</a>
+     */
     public void ShowCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +270,15 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member ShowCode.
+     *
+     * @param activity the argument of type {@code Activity}
+     * @param methodName the argument of type {@code java.lang.String}
+     * @param delegateType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.ShowCode" target="_top">.NET documentation</a>
+     */
     public void ShowCode(Activity activity, java.lang.String methodName, NetType delegateType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +289,14 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateBaseType.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param baseType the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.UpdateBaseType" target="_top">.NET documentation</a>
+     */
     public void UpdateBaseType(java.lang.String className, NetType baseType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +307,20 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateEvent.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param oldEventName the argument of type {@code java.lang.String}
+     * @param oldEventType the argument of type {@code NetType}
+     * @param newEventName the argument of type {@code java.lang.String}
+     * @param newEventType the argument of type {@code NetType}
+     * @param attributes the argument of type {@code AttributeInfo[]}
+     * @param emitDependencyProperty the argument of type {@code boolean}
+     * @param isMetaProperty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.UpdateEvent" target="_top">.NET documentation</a>
+     */
     public void UpdateEvent(java.lang.String className, java.lang.String oldEventName, NetType oldEventType, java.lang.String newEventName, NetType newEventType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +331,20 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateProperty.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param oldPropertyName the argument of type {@code java.lang.String}
+     * @param oldPropertyType the argument of type {@code NetType}
+     * @param newPropertyName the argument of type {@code java.lang.String}
+     * @param newPropertyType the argument of type {@code NetType}
+     * @param attributes the argument of type {@code AttributeInfo[]}
+     * @param emitDependencyProperty the argument of type {@code boolean}
+     * @param isMetaProperty the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.UpdateProperty" target="_top">.NET documentation</a>
+     */
     public void UpdateProperty(java.lang.String className, java.lang.String oldPropertyName, NetType oldPropertyType, java.lang.String newPropertyName, NetType newPropertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +355,14 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateTypeName.
+     *
+     * @param oldClassName the argument of type {@code java.lang.String}
+     * @param newClassName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService.UpdateTypeName" target="_top">.NET documentation</a>
+     */
     public void UpdateTypeName(java.lang.String oldClassName, java.lang.String newClassName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

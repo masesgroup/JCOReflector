@@ -100,7 +100,10 @@ public class PemFields extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PemFields(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class PemFields extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DecodedDataLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PemFields.DecodedDataLength" target="_top">.NET documentation</a>
+     */
     public int getDecodedDataLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class PemFields extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Base64Data.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PemFields.Base64Data" target="_top">.NET documentation</a>
+     */
     public Range getBase64Data() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +231,13 @@ public class PemFields extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Label.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PemFields.Label" target="_top">.NET documentation</a>
+     */
     public Range getLabel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +253,13 @@ public class PemFields extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.PemFields.Location" target="_top">.NET documentation</a>
+     */
     public Range getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

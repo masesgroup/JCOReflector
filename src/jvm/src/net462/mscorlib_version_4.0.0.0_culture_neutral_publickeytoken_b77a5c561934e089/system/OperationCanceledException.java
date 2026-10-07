@@ -104,7 +104,9 @@ public class OperationCanceledException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public OperationCanceledException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,15 @@ public class OperationCanceledException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @param token the argument of type {@code CancellationToken}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperationCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationCanceledException(java.lang.String message, NetException innerException, CancellationToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +186,14 @@ public class OperationCanceledException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param token the argument of type {@code CancellationToken}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperationCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationCanceledException(java.lang.String message, CancellationToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +204,13 @@ public class OperationCanceledException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param token the argument of type {@code CancellationToken}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperationCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationCanceledException(CancellationToken token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -203,6 +229,13 @@ public class OperationCanceledException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CancellationToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperationCanceledException.CancellationToken" target="_top">.NET documentation</a>
+     */
     public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +251,13 @@ public class OperationCanceledException extends system.SystemException {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CancellationToken.
+     *
+     * @param CancellationToken the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperationCanceledException.CancellationToken" target="_top">.NET documentation</a>
+     */
     public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

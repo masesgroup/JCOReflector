@@ -99,7 +99,10 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BamlLocalizableResource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class BamlLocalizableResource extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.-ctor" target="_top">.NET documentation</a>
+     */
     public BamlLocalizableResource() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,17 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param content the argument of type {@code java.lang.String}
+     * @param comments the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code LocalizationCategory}
+     * @param modifiable the argument of type {@code boolean}
+     * @param readable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.-ctor" target="_top">.NET documentation</a>
+     */
     public BamlLocalizableResource(java.lang.String content, java.lang.String comments, LocalizationCategory category, boolean modifiable, boolean readable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +194,13 @@ public class BamlLocalizableResource extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Modifiable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Modifiable" target="_top">.NET documentation</a>
+     */
     public boolean getModifiable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +215,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Modifiable.
+     *
+     * @param Modifiable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Modifiable" target="_top">.NET documentation</a>
+     */
     public void setModifiable(boolean Modifiable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +232,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Readable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Readable" target="_top">.NET documentation</a>
+     */
     public boolean getReadable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +253,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Readable.
+     *
+     * @param Readable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Readable" target="_top">.NET documentation</a>
+     */
     public void setReadable(boolean Readable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +270,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Comments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Comments" target="_top">.NET documentation</a>
+     */
     public java.lang.String getComments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +291,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Comments.
+     *
+     * @param Comments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Comments" target="_top">.NET documentation</a>
+     */
     public void setComments(java.lang.String Comments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +308,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Content" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +329,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(java.lang.String Content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +346,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Category.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Category" target="_top">.NET documentation</a>
+     */
     public LocalizationCategory getCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +368,13 @@ public class BamlLocalizableResource extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Category.
+     *
+     * @param Category the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizableResource.Category" target="_top">.NET documentation</a>
+     */
     public void setCategory(LocalizationCategory Category) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

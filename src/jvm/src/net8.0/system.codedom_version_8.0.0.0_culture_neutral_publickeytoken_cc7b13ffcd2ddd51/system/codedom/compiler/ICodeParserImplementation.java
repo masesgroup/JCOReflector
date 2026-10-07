@@ -100,7 +100,10 @@ public class ICodeParserImplementation extends NetObject implements ICodeParser 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICodeParserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class ICodeParserImplementation extends NetObject implements ICodeParser 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param codeStream the argument of type {@code TextReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeParser.Parse" target="_top">.NET documentation</a>
+     */
     public CodeCompileUnit Parse(TextReader codeStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

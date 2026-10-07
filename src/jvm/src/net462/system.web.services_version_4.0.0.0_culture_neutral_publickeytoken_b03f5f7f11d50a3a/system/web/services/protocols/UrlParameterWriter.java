@@ -99,7 +99,10 @@ public class UrlParameterWriter extends system.web.services.protocols.UrlEncoded
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UrlParameterWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class UrlParameterWriter extends system.web.services.protocols.UrlEncoded
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.UrlParameterWriter.-ctor" target="_top">.NET documentation</a>
+     */
     public UrlParameterWriter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,20 @@ public class UrlParameterWriter extends system.web.services.protocols.UrlEncoded
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRequestUrl.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.UrlParameterWriter.GetRequestUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetRequestUrl(java.lang.String url, NetObject[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

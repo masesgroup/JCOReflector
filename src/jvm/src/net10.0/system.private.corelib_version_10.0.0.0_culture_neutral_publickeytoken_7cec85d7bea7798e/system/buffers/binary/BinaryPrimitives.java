@@ -106,7 +106,10 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BinaryPrimitives(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,14 @@ public class BinaryPrimitives extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static byte ReverseEndianness(byte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +210,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code short}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static short ReverseEndianness(short value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -239,6 +258,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static int ReverseEndianness(int value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +306,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static long ReverseEndianness(long value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +354,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code SByte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static SByte ReverseEndianness(SByte value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -334,6 +377,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code Int128}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static Int128 ReverseEndianness(Int128 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +400,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code UInt128}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static UInt128 ReverseEndianness(UInt128 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -364,6 +423,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code UInt16}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static UInt16 ReverseEndianness(UInt16 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -379,6 +446,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code UInt32}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static UInt32 ReverseEndianness(UInt32 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +469,14 @@ public class BinaryPrimitives extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReverseEndianness.
+     *
+     * @param value the argument of type {@code UInt64}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Binary.BinaryPrimitives.ReverseEndianness" target="_top">.NET documentation</a>
+     */
     public static UInt64 ReverseEndianness(UInt64 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

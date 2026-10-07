@@ -109,7 +109,10 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeLibConverterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,19 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPrimaryInteropAssembly.
+     *
+     * @param g the argument of type {@code Guid}
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param lcid the argument of type {@code int}
+     * @param asmName the argument of type {@code JCORefOut}
+     * @param asmCodeBase the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibConverter.GetPrimaryInteropAssembly" target="_top">.NET documentation</a>
+     */
     public boolean GetPrimaryInteropAssembly(Guid g, int major, int minor, int lcid, JCORefOut asmName, JCORefOut asmCodeBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +181,17 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertAssemblyToTypeLib.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @param typeLibName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code TypeLibExporterFlags}
+     * @param notifySink the argument of type {@code ITypeLibExporterNotifySink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibConverter.ConvertAssemblyToTypeLib" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String typeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +207,20 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param typeLib the argument of type {@code NetObject}
+     * @param asmFileName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code int}
+     * @param notifySink the argument of type {@code ITypeLibImporterNotifySink}
+     * @param publicKey the argument of type {@code byte[]}
+     * @param keyPair the argument of type {@code StrongNameKeyPair}
+     * @param unsafeInterfaces the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +236,20 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param dupParam0 the argument of type {@code NetObject}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code int}
+     * @param dupParam3 the argument of type {@code ITypeLibImporterNotifySink}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code StrongNameKeyPair}
+     * @param dupParam6 the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, int dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, boolean dupParam6) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +265,21 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param typeLib the argument of type {@code NetObject}
+     * @param asmFileName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code TypeLibImporterFlags}
+     * @param notifySink the argument of type {@code ITypeLibImporterNotifySink}
+     * @param publicKey the argument of type {@code byte[]}
+     * @param keyPair the argument of type {@code StrongNameKeyPair}
+     * @param asmNamespace the argument of type {@code java.lang.String}
+     * @param asmVersion the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, TypeLibImporterFlags flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, java.lang.String asmNamespace, Version asmVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +295,21 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertTypeLibToAssembly.
+     *
+     * @param dupParam0 the argument of type {@code NetObject}
+     * @param dupParam1 the argument of type {@code java.lang.String}
+     * @param dupParam2 the argument of type {@code TypeLibImporterFlags}
+     * @param dupParam3 the argument of type {@code ITypeLibImporterNotifySink}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code StrongNameKeyPair}
+     * @param dupParam6 the argument of type {@code java.lang.String}
+     * @param dupParam7 the argument of type {@code Version}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ITypeLibConverter.ConvertTypeLibToAssembly" target="_top">.NET documentation</a>
+     */
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, TypeLibImporterFlags dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, java.lang.String dupParam6, Version dupParam7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

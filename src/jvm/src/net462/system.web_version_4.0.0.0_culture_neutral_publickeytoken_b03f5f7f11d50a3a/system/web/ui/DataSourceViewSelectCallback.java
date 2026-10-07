@@ -154,7 +154,10 @@ public class DataSourceViewSelectCallback extends JCVoidDelegate implements IJCV
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceViewSelectCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -176,6 +179,13 @@ public class DataSourceViewSelectCallback extends JCVoidDelegate implements IJCV
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param data the argument of type {@code IEnumerable}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(IEnumerable data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,7 +197,9 @@ public class DataSourceViewSelectCallback extends JCVoidDelegate implements IJCV
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param data the .NET argument of type {@code System.Collections.IEnumerable}
      */
     public void Invoke(IEnumerable data) {
     }

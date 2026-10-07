@@ -52,5 +52,12 @@ import system.windows.DependencyObject;
  * @version 2.0.0.0
  */
 public interface ICoerceValueCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param d the .NET argument of type {@code System.Windows.DependencyObject}
+     * @param baseValue the .NET argument of type {@code System.Object}
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke(DependencyObject d, NetObject baseValue);
 }

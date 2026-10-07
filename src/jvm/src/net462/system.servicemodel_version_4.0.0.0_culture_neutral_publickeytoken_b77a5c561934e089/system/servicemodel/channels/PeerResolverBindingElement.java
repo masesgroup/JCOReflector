@@ -101,7 +101,10 @@ public class PeerResolverBindingElement extends system.servicemodel.channels.Bin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerResolverBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,13 @@ public class PeerResolverBindingElement extends system.servicemodel.channels.Bin
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePeerResolver.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.PeerResolverBindingElement.CreatePeerResolver" target="_top">.NET documentation</a>
+     */
     public PeerResolver CreatePeerResolver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class PeerResolverBindingElement extends system.servicemodel.channels.Bin
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReferralPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.PeerResolverBindingElement.ReferralPolicy" target="_top">.NET documentation</a>
+     */
     public PeerReferralPolicy getReferralPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class PeerResolverBindingElement extends system.servicemodel.channels.Bin
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferralPolicy.
+     *
+     * @param ReferralPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.PeerResolverBindingElement.ReferralPolicy" target="_top">.NET documentation</a>
+     */
     public void setReferralPolicy(PeerReferralPolicy ReferralPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

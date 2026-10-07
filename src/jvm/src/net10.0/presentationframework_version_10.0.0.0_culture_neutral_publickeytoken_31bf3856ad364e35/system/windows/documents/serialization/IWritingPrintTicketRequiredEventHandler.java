@@ -52,5 +52,11 @@ import system.windows.documents.serialization.WritingPrintTicketRequiredEventArg
  * @version 2.0.0.0
  */
 public interface IWritingPrintTicketRequiredEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs}
+     */
     public void Invoke(NetObject sender, WritingPrintTicketRequiredEventArgs e);
 }

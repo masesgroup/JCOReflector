@@ -108,7 +108,9 @@ public class SoapException extends system.SystemException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SoapException(java.lang.Object instance) {
         super(instance);
@@ -169,6 +171,14 @@ public class SoapException extends system.SystemException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +189,15 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +208,15 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -199,6 +227,16 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -209,6 +247,20 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param role the argument of type {@code java.lang.String}
+     * @param lang the argument of type {@code java.lang.String}
+     * @param detail the argument of type {@code XmlNode}
+     * @param subCode the argument of type {@code SoapFaultSubCode}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, java.lang.String role, java.lang.String lang, XmlNode detail, SoapFaultSubCode subCode, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -219,6 +271,19 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param role the argument of type {@code java.lang.String}
+     * @param detail the argument of type {@code XmlNode}
+     * @param subCode the argument of type {@code SoapFaultSubCode}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, java.lang.String role, XmlNode detail, SoapFaultSubCode subCode, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -229,6 +294,16 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param detail the argument of type {@code XmlNode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, XmlNode detail) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -239,6 +314,17 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param detail the argument of type {@code XmlNode}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, XmlNode detail, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -249,6 +335,15 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param subCode the argument of type {@code SoapFaultSubCode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapException(java.lang.String message, XmlQualifiedName code, SoapFaultSubCode subCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -263,6 +358,14 @@ public class SoapException extends system.SystemException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsClientFaultCode.
+     *
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.IsClientFaultCode" target="_top">.NET documentation</a>
+     */
     public static boolean IsClientFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +380,14 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Invokes the .NET member IsMustUnderstandFaultCode.
+     *
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.IsMustUnderstandFaultCode" target="_top">.NET documentation</a>
+     */
     public static boolean IsMustUnderstandFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +402,14 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Invokes the .NET member IsServerFaultCode.
+     *
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.IsServerFaultCode" target="_top">.NET documentation</a>
+     */
     public static boolean IsServerFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +424,14 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Invokes the .NET member IsVersionMismatchFaultCode.
+     *
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.IsVersionMismatchFaultCode" target="_top">.NET documentation</a>
+     */
     public static boolean IsVersionMismatchFaultCode(XmlQualifiedName code) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +446,29 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +483,13 @@ public class SoapException extends system.SystemException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Actor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.Actor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +504,13 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lang.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.Lang" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLang() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +525,13 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Node.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.Node" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +546,13 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.Role" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +567,13 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.SubCode" target="_top">.NET documentation</a>
+     */
     public SoapFaultSubCode getSubCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +589,13 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Detail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.Detail" target="_top">.NET documentation</a>
+     */
     public XmlNode getDetail() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +611,13 @@ public class SoapException extends system.SystemException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Code.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapException.Code" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemoveFromCollection_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.-ctor" target="_top">.NET documentation</a>
+     */
     public RemoveFromCollection_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Collection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Collection" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
         }
     }
 
+    /**
+     * Sets the value of the .NET property Collection.
+     *
+     * @param Collection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Collection" target="_top">.NET documentation</a>
+     */
     public void setCollection(InArgument_1 Collection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
         }
     }
 
+    /**
+     * Gets the value of the .NET property Item.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Item" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
         }
     }
 
+    /**
+     * Sets the value of the .NET property Item.
+     *
+     * @param Item the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Item" target="_top">.NET documentation</a>
+     */
     public void setItem(InArgument_1 Item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

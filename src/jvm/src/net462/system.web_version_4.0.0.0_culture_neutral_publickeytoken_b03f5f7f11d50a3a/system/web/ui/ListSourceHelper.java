@@ -102,7 +102,10 @@ public class ListSourceHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ListSourceHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ListSourceHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsListCollection.
+     *
+     * @param dataSource the argument of type {@code IDataSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ListSourceHelper.ContainsListCollection" target="_top">.NET documentation</a>
+     */
     public static boolean ContainsListCollection(IDataSource dataSource) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +180,14 @@ public class ListSourceHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetList.
+     *
+     * @param dataSource the argument of type {@code IDataSource}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ListSourceHelper.GetList" target="_top">.NET documentation</a>
+     */
     public static IList GetList(IDataSource dataSource) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

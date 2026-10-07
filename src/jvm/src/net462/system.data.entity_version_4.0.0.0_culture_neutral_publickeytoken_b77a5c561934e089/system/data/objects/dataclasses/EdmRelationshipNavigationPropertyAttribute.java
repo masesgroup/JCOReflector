@@ -99,7 +99,10 @@ public class EdmRelationshipNavigationPropertyAttribute extends system.data.obje
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmRelationshipNavigationPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class EdmRelationshipNavigationPropertyAttribute extends system.data.obje
     public EdmRelationshipNavigationPropertyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relationshipNamespaceName the argument of type {@code java.lang.String}
+     * @param relationshipName the argument of type {@code java.lang.String}
+     * @param targetRoleName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EdmRelationshipNavigationPropertyAttribute(java.lang.String relationshipNamespaceName, java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class EdmRelationshipNavigationPropertyAttribute extends system.data.obje
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RelationshipName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.RelationshipName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,13 @@ public class EdmRelationshipNavigationPropertyAttribute extends system.data.obje
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipNamespaceName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.RelationshipNamespaceName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipNamespaceName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +222,13 @@ public class EdmRelationshipNavigationPropertyAttribute extends system.data.obje
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetRoleName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.TargetRoleName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetRoleName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

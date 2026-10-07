@@ -99,7 +99,10 @@ public class ContainerFilterService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContainerFilterService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ContainerFilterService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FilterComponents.
+     *
+     * @param components the argument of type {@code ComponentCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ContainerFilterService.FilterComponents" target="_top">.NET documentation</a>
+     */
     public ComponentCollection FilterComponents(ComponentCollection components) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class DataGridViewElement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,15 @@ public class DataGridViewElement extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewElement.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewElement() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +177,13 @@ public class DataGridViewElement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataGridView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewElement.DataGridView" target="_top">.NET documentation</a>
+     */
     public DataGridView getDataGridView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,13 @@ public class DataGridViewElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataGridView.
+     *
+     * @param DataGridView the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewElement.DataGridView" target="_top">.NET documentation</a>
+     */
     public void setDataGridView(DataGridView DataGridView) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +216,13 @@ public class DataGridViewElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewElement.State" target="_top">.NET documentation</a>
+     */
     public DataGridViewElementStates getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +238,13 @@ public class DataGridViewElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property State.
+     *
+     * @param State the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewElement.State" target="_top">.NET documentation</a>
+     */
     public void setState(DataGridViewElementStates State) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class XmlSchemaObject extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +207,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumber.
+     *
+     * @param LineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.LineNumber" target="_top">.NET documentation</a>
+     */
     public void setLineNumber(int LineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +224,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.LinePosition" target="_top">.NET documentation</a>
+     */
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +271,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinePosition.
+     *
+     * @param LinePosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.LinePosition" target="_top">.NET documentation</a>
+     */
     public void setLinePosition(int LinePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +288,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.SourceUri" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +309,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceUri.
+     *
+     * @param SourceUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.SourceUri" target="_top">.NET documentation</a>
+     */
     public void setSourceUri(java.lang.String SourceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +326,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.Parent" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObject getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +348,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parent.
+     *
+     * @param Parent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.Parent" target="_top">.NET documentation</a>
+     */
     public void setParent(XmlSchemaObject Parent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +365,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.Namespaces" target="_top">.NET documentation</a>
+     */
     public XmlSerializerNamespaces getNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +387,13 @@ public class XmlSchemaObject extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespaces.
+     *
+     * @param Namespaces the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaObject.Namespaces" target="_top">.NET documentation</a>
+     */
     public void setNamespaces(XmlSerializerNamespaces Namespaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

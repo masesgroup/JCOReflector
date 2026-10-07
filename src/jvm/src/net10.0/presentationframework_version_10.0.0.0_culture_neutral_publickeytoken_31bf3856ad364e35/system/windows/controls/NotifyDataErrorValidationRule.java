@@ -101,7 +101,10 @@ public class NotifyDataErrorValidationRule extends system.windows.controls.Valid
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NotifyDataErrorValidationRule(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class NotifyDataErrorValidationRule extends system.windows.controls.Valid
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.NotifyDataErrorValidationRule.-ctor" target="_top">.NET documentation</a>
+     */
     public NotifyDataErrorValidationRule() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,15 @@ public class NotifyDataErrorValidationRule extends system.windows.controls.Valid
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param cultureInfo the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.NotifyDataErrorValidationRule.Validate" target="_top">.NET documentation</a>
+     */
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

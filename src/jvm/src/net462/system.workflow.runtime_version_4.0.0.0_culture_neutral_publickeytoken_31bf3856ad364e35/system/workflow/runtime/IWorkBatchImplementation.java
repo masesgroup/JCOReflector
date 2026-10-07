@@ -100,7 +100,10 @@ public class IWorkBatchImplementation extends NetObject implements IWorkBatch {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkBatchImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IWorkBatchImplementation extends NetObject implements IWorkBatch {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param work the argument of type {@code IPendingWork}
+     * @param workItem the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.IWorkBatch.Add" target="_top">.NET documentation</a>
+     */
     public void Add(IPendingWork work, NetObject workItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

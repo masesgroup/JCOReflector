@@ -99,7 +99,10 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,31 @@ public class EventDescriptor extends system.ValueType  {
     public EventDescriptor() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param id the argument of type {@code int}
+     * @param version the argument of type {@code byte}
+     * @param channel the argument of type {@code byte}
+     * @param level the argument of type {@code byte}
+     * @param opcode the argument of type {@code byte}
+     * @param task the argument of type {@code int}
+     * @param keywords the argument of type {@code long}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public EventDescriptor(int id, byte version, byte channel, byte level, byte opcode, int task, long keywords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +196,13 @@ public class EventDescriptor extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Channel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.Channel" target="_top">.NET documentation</a>
+     */
     public byte getChannel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +243,13 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.Level" target="_top">.NET documentation</a>
+     */
     public byte getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +290,13 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Opcode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.Opcode" target="_top">.NET documentation</a>
+     */
     public byte getOpcode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +337,13 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.Version" target="_top">.NET documentation</a>
+     */
     public byte getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +384,13 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.EventId" target="_top">.NET documentation</a>
+     */
     public int getEventId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +431,13 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Task.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.Task" target="_top">.NET documentation</a>
+     */
     public int getTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +478,13 @@ public class EventDescriptor extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keywords.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.EventDescriptor.Keywords" target="_top">.NET documentation</a>
+     */
     public long getKeywords() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

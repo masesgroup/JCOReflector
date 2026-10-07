@@ -98,7 +98,10 @@ public class SamlConstants extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SamlConstants(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class SamlConstants extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MajorVersionValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.MajorVersionValue" target="_top">.NET documentation</a>
+     */
     public static int getMajorVersionValue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +205,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersionValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.MinorVersionValue" target="_top">.NET documentation</a>
+     */
     public static int getMinorVersionValue() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +252,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EmailName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.EmailName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getEmailName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +273,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EmailNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.EmailNamespace" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getEmailNamespace() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -263,6 +294,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HolderOfKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.HolderOfKey" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getHolderOfKey() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +315,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.Namespace" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getNamespace() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +336,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SenderVouches.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.SenderVouches" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getSenderVouches() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -305,6 +357,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.UserName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUserName() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +378,13 @@ public class SamlConstants extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserNameNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConstants.UserNameNamespace" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getUserNameNamespace() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

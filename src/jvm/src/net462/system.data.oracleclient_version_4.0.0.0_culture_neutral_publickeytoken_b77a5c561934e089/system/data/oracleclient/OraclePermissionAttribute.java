@@ -103,7 +103,10 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OraclePermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
     public OraclePermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public OraclePermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeConnectionString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.ShouldSerializeConnectionString" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeConnectionString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeKeyRestrictions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.ShouldSerializeKeyRestrictions" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeKeyRestrictions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,25 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +258,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowBlankPassword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.AllowBlankPassword" target="_top">.NET documentation</a>
+     */
     public boolean getAllowBlankPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +279,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowBlankPassword.
+     *
+     * @param AllowBlankPassword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.AllowBlankPassword" target="_top">.NET documentation</a>
+     */
     public void setAllowBlankPassword(boolean AllowBlankPassword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +296,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyRestrictionBehavior.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior" target="_top">.NET documentation</a>
+     */
     public KeyRestrictionBehavior getKeyRestrictionBehavior() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +318,22 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyRestrictionBehavior.
+     *
+     * @param KeyRestrictionBehavior the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictionBehavior" target="_top">.NET documentation</a>
+     */
     public void setKeyRestrictionBehavior(KeyRestrictionBehavior KeyRestrictionBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +344,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.ConnectionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +365,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionString.
+     *
+     * @param ConnectionString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.ConnectionString" target="_top">.NET documentation</a>
+     */
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +382,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyRestrictions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictions" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyRestrictions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +403,13 @@ public class OraclePermissionAttribute extends system.security.permissions.CodeA
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyRestrictions.
+     *
+     * @param KeyRestrictions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OraclePermissionAttribute.KeyRestrictions" target="_top">.NET documentation</a>
+     */
     public void setKeyRestrictions(java.lang.String KeyRestrictions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

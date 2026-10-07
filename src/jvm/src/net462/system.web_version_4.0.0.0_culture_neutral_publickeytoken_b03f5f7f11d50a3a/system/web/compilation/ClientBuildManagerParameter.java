@@ -100,7 +100,10 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClientBuildManagerParameter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ClientBuildManagerParameter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public ClientBuildManagerParameter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class ClientBuildManagerParameter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExcludedVirtualPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.ExcludedVirtualPaths" target="_top">.NET documentation</a>
+     */
     public List_1 getExcludedVirtualPaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StrongNameKeyContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStrongNameKeyContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +217,13 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StrongNameKeyContainer.
+     *
+     * @param StrongNameKeyContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyContainer" target="_top">.NET documentation</a>
+     */
     public void setStrongNameKeyContainer(java.lang.String StrongNameKeyContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StrongNameKeyFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStrongNameKeyFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +255,13 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StrongNameKeyFile.
+     *
+     * @param StrongNameKeyFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.StrongNameKeyFile" target="_top">.NET documentation</a>
+     */
     public void setStrongNameKeyFile(java.lang.String StrongNameKeyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +272,13 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrecompilationFlags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags" target="_top">.NET documentation</a>
+     */
     public PrecompilationFlags getPrecompilationFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +294,13 @@ public class ClientBuildManagerParameter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrecompilationFlags.
+     *
+     * @param PrecompilationFlags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.ClientBuildManagerParameter.PrecompilationFlags" target="_top">.NET documentation</a>
+     */
     public void setPrecompilationFlags(PrecompilationFlags PrecompilationFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

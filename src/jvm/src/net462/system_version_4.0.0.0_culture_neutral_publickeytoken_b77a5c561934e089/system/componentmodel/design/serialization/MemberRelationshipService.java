@@ -99,7 +99,10 @@ public class MemberRelationshipService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemberRelationshipService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class MemberRelationshipService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SupportsRelationship.
+     *
+     * @param source the argument of type {@code MemberRelationship}
+     * @param relationship the argument of type {@code MemberRelationship}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.MemberRelationshipService.SupportsRelationship" target="_top">.NET documentation</a>
+     */
     public boolean SupportsRelationship(MemberRelationship source, MemberRelationship relationship) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

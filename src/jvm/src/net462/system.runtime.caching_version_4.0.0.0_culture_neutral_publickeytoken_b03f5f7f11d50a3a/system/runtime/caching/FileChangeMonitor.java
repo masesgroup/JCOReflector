@@ -101,7 +101,10 @@ public class FileChangeMonitor extends system.runtime.caching.ChangeMonitor  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileChangeMonitor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class FileChangeMonitor extends system.runtime.caching.ChangeMonitor  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FilePaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.FileChangeMonitor.FilePaths" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getFilePaths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class FileChangeMonitor extends system.runtime.caching.ChangeMonitor  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastModified.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.FileChangeMonitor.LastModified" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset getLastModified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

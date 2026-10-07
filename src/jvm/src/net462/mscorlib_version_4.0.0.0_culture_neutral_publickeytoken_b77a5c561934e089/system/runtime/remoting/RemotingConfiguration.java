@@ -104,7 +104,10 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemotingConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class RemotingConfiguration extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CustomErrorsEnabled.
+     *
+     * @param isLocalRequest the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.CustomErrorsEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean CustomErrorsEnabled(boolean isLocalRequest) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +182,17 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsActivationAllowed.
+     *
+     * @param svrType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.IsActivationAllowed" target="_top">.NET documentation</a>
+     */
     public static boolean IsActivationAllowed(NetType svrType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +207,23 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsRemotelyActivatedClientType.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.IsRemotelyActivatedClientType" target="_top">.NET documentation</a>
+     */
     public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +239,24 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsRemotelyActivatedClientType.
+     *
+     * @param svrType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.IsRemotelyActivatedClientType" target="_top">.NET documentation</a>
+     */
     public static ActivatedClientTypeEntry IsRemotelyActivatedClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -215,6 +272,14 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRegisteredActivatedClientTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.GetRegisteredActivatedClientTypes" target="_top">.NET documentation</a>
+     */
     public static ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +301,13 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRegisteredActivatedServiceTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.GetRegisteredActivatedServiceTypes" target="_top">.NET documentation</a>
+     */
     public static ActivatedServiceTypeEntry[] GetRegisteredActivatedServiceTypes() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +329,19 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWellKnownClientType.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.IsWellKnownClientType" target="_top">.NET documentation</a>
+     */
     public static WellKnownClientTypeEntry IsWellKnownClientType(java.lang.String typeName, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +357,19 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWellKnownClientType.
+     *
+     * @param svrType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.IsWellKnownClientType" target="_top">.NET documentation</a>
+     */
     public static WellKnownClientTypeEntry IsWellKnownClientType(NetType svrType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +385,14 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRegisteredWellKnownClientTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownClientTypes" target="_top">.NET documentation</a>
+     */
     public static WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -308,6 +414,14 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRegisteredWellKnownServiceTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownServiceTypes" target="_top">.NET documentation</a>
+     */
     public static WellKnownServiceTypeEntry[] GetRegisteredWellKnownServiceTypes() throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -329,6 +443,26 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Configure.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.Configure" target="_top">.NET documentation</a>
+     */
     public static void Configure(java.lang.String filename) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -339,6 +473,28 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Configure.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param ensureSecurity the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.Configure" target="_top">.NET documentation</a>
+     */
     public static void Configure(java.lang.String filename, boolean ensureSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.NotImplementedException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +505,20 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterActivatedClientType.
+     *
+     * @param entry the argument of type {@code ActivatedClientTypeEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType" target="_top">.NET documentation</a>
+     */
     public static void RegisterActivatedClientType(ActivatedClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -359,6 +529,24 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterActivatedClientType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param appUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType" target="_top">.NET documentation</a>
+     */
     public static void RegisterActivatedClientType(NetType type, java.lang.String appUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -369,6 +557,23 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterActivatedServiceType.
+     *
+     * @param entry the argument of type {@code ActivatedServiceTypeEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType" target="_top">.NET documentation</a>
+     */
     public static void RegisterActivatedServiceType(ActivatedServiceTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -379,6 +584,25 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterActivatedServiceType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType" target="_top">.NET documentation</a>
+     */
     public static void RegisterActivatedServiceType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -389,6 +613,20 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWellKnownClientType.
+     *
+     * @param entry the argument of type {@code WellKnownClientTypeEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType" target="_top">.NET documentation</a>
+     */
     public static void RegisterWellKnownClientType(WellKnownClientTypeEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -399,6 +637,24 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWellKnownClientType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param objectUrl the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType" target="_top">.NET documentation</a>
+     */
     public static void RegisterWellKnownClientType(NetType type, java.lang.String objectUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +665,23 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWellKnownServiceType.
+     *
+     * @param entry the argument of type {@code WellKnownServiceTypeEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownServiceType" target="_top">.NET documentation</a>
+     */
     public static void RegisterWellKnownServiceType(WellKnownServiceTypeEntry entry) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -419,6 +692,24 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterWellKnownServiceType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param objectUri the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code WellKnownObjectMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownServiceType" target="_top">.NET documentation</a>
+     */
     public static void RegisterWellKnownServiceType(NetType type, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.FormatException, system.runtime.remoting.RemotingException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -433,6 +724,13 @@ public class RemotingConfiguration extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CustomErrorsMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.CustomErrorsMode" target="_top">.NET documentation</a>
+     */
     public static CustomErrorsModes getCustomErrorsMode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -448,6 +746,14 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CustomErrorsMode.
+     *
+     * @param CustomErrorsMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.CustomErrorsMode" target="_top">.NET documentation</a>
+     */
     public static void setCustomErrorsMode(CustomErrorsModes CustomErrorsMode) throws Throwable, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -458,6 +764,13 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.ApplicationId" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getApplicationId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -472,6 +785,14 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.ApplicationName" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getApplicationName() throws Throwable, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -486,6 +807,25 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.ApplicationName" target="_top">.NET documentation</a>
+     */
     public static void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -496,6 +836,14 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProcessId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.RemotingConfiguration.ProcessId" target="_top">.NET documentation</a>
+     */
     public static java.lang.String getProcessId() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -104,7 +104,10 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaElement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAbstract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.IsAbstract" target="_top">.NET documentation</a>
+     */
     public boolean getIsAbstract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsAbstract.
+     *
+     * @param IsAbstract the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.IsAbstract" target="_top">.NET documentation</a>
+     */
     public void setIsAbstract(boolean IsAbstract) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNillable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.IsNillable" target="_top">.NET documentation</a>
+     */
     public boolean getIsNillable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNillable.
+     *
+     * @param IsNillable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.IsNillable" target="_top">.NET documentation</a>
+     */
     public void setIsNillable(boolean IsNillable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.ElementType" target="_top">.NET documentation</a>
+     */
     public NetObject getElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.DefaultValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +297,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultValue.
+     *
+     * @param DefaultValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.DefaultValue" target="_top">.NET documentation</a>
+     */
     public void setDefaultValue(java.lang.String DefaultValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +314,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.FixedValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFixedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +335,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FixedValue.
+     *
+     * @param FixedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.FixedValue" target="_top">.NET documentation</a>
+     */
     public void setFixedValue(java.lang.String FixedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +352,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +373,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +390,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Block.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Block" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDerivationMethod getBlock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +412,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Block.
+     *
+     * @param Block the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Block" target="_top">.NET documentation</a>
+     */
     public void setBlock(XmlSchemaDerivationMethod Block) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BlockResolved.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.BlockResolved" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDerivationMethod getBlockResolved() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +451,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Final.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Final" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDerivationMethod getFinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +473,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Final.
+     *
+     * @param Final the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Final" target="_top">.NET documentation</a>
+     */
     public void setFinal(XmlSchemaDerivationMethod Final) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +490,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FinalResolved.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.FinalResolved" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDerivationMethod getFinalResolved() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +512,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Form.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Form" target="_top">.NET documentation</a>
+     */
     public XmlSchemaForm getForm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +534,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Form.
+     *
+     * @param Form the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Form" target="_top">.NET documentation</a>
+     */
     public void setForm(XmlSchemaForm Form) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +551,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Constraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.Constraints" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +573,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementSchemaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.ElementSchemaType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaType getElementSchemaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +595,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.SchemaType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaType getSchemaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +617,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaType.
+     *
+     * @param SchemaType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.SchemaType" target="_top">.NET documentation</a>
+     */
     public void setSchemaType(XmlSchemaType SchemaType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +634,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.QualifiedName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +656,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RefName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.RefName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getRefName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +678,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RefName.
+     *
+     * @param RefName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.RefName" target="_top">.NET documentation</a>
+     */
     public void setRefName(XmlQualifiedName RefName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +695,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.SchemaTypeName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getSchemaTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +717,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaTypeName.
+     *
+     * @param SchemaTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.SchemaTypeName" target="_top">.NET documentation</a>
+     */
     public void setSchemaTypeName(XmlQualifiedName SchemaTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +734,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubstitutionGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.SubstitutionGroup" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getSubstitutionGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +756,13 @@ public class XmlSchemaElement extends system.xml.schema.XmlSchemaParticle  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubstitutionGroup.
+     *
+     * @param SubstitutionGroup the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaElement.SubstitutionGroup" target="_top">.NET documentation</a>
+     */
     public void setSubstitutionGroup(XmlQualifiedName SubstitutionGroup) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

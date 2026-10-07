@@ -100,7 +100,10 @@ public class ReferenceHandler_1<T extends IJCOBridgeReflected> extends system.te
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReferenceHandler_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ReferenceHandler_1<T extends IJCOBridgeReflected> extends system.te
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceHandler-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ReferenceHandler_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,24 @@ public class ReferenceHandler_1<T extends IJCOBridgeReflected> extends system.te
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateResolver.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceHandler-1.CreateResolver" target="_top">.NET documentation</a>
+     */
     public ReferenceResolver CreateResolver() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

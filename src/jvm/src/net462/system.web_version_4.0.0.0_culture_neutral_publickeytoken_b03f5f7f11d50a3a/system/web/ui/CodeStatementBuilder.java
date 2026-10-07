@@ -101,7 +101,10 @@ public class CodeStatementBuilder extends system.web.ui.ControlBuilder  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeStatementBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class CodeStatementBuilder extends system.web.ui.ControlBuilder  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildStatement.
+     *
+     * @param writerReferenceExpression the argument of type {@code CodeArgumentReferenceExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.CodeStatementBuilder.BuildStatement" target="_top">.NET documentation</a>
+     */
     public CodeStatement BuildStatement(CodeArgumentReferenceExpression writerReferenceExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

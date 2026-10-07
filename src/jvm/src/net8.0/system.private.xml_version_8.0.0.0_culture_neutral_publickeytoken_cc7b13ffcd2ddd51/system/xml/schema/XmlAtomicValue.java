@@ -104,7 +104,10 @@ public class XmlAtomicValue extends system.xml.xpath.XPathItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlAtomicValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class XmlAtomicValue extends system.xml.xpath.XPathItem  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ValueAs.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param nsResolver the argument of type {@code IXmlNamespaceResolver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlAtomicValue.ValueAs" target="_top">.NET documentation</a>
+     */
     public NetObject ValueAs(NetType type, IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +186,13 @@ public class XmlAtomicValue extends system.xml.xpath.XPathItem  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlAtomicValue.Clone" target="_top">.NET documentation</a>
+     */
     public XmlAtomicValue Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

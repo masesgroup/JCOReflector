@@ -107,7 +107,10 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public _FieldInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +175,14 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(NetObject obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +198,14 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValueDirect.
+     *
+     * @param obj the argument of type {@code TypedReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.GetValueDirect" target="_top">.NET documentation</a>
+     */
     public NetObject GetValueDirect(TypedReference obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,14 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +250,15 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +280,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoCount.
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.GetTypeInfoCount" target="_top">.NET documentation</a>
+     */
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +297,14 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +315,17 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param value the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(NetObject obj, NetObject value, BindingFlags invokeAttr, Binder binder, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +336,14 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValueDirect.
+     *
+     * @param obj the argument of type {@code TypedReference}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.SetValueDirect" target="_top">.NET documentation</a>
+     */
     public void SetValueDirect(TypedReference obj, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +358,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +379,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamily.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsFamily" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamily() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +400,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamilyAndAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsFamilyAndAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamilyAndAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +421,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFamilyOrAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsFamilyOrAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsFamilyOrAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +442,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInitOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsInitOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsInitOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +463,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLiteral.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsLiteral" target="_top">.NET documentation</a>
+     */
     public boolean getIsLiteral() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +484,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNotSerialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsNotSerialized" target="_top">.NET documentation</a>
+     */
     public boolean getIsNotSerialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +505,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPinvokeImpl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsPinvokeImpl" target="_top">.NET documentation</a>
+     */
     public boolean getIsPinvokeImpl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +526,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrivate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsPrivate" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrivate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +547,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPublic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsPublic" target="_top">.NET documentation</a>
+     */
     public boolean getIsPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +568,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSpecialName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsSpecialName" target="_top">.NET documentation</a>
+     */
     public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +589,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStatic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.IsStatic" target="_top">.NET documentation</a>
+     */
     public boolean getIsStatic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -447,6 +610,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.Attributes" target="_top">.NET documentation</a>
+     */
     public FieldAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +632,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.MemberType" target="_top">.NET documentation</a>
+     */
     public MemberTypes getMemberType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +654,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.FieldHandle" target="_top">.NET documentation</a>
+     */
     public RuntimeFieldHandle getFieldHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -492,6 +676,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +697,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclaringType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.DeclaringType" target="_top">.NET documentation</a>
+     */
     public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -521,6 +719,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.FieldType" target="_top">.NET documentation</a>
+     */
     public NetType getFieldType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +741,13 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReflectedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._FieldInfo.ReflectedType" target="_top">.NET documentation</a>
+     */
     public NetType getReflectedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

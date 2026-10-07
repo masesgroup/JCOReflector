@@ -102,7 +102,10 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowInstanceUnhandledExceptionRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,27 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
     public WorkflowInstanceUnhandledExceptionRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param faultSource the argument of type {@code ActivityInfo}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUnhandledExceptionRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, ActivityInfo faultSource, NetException exception) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +186,27 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param faultSource the argument of type {@code ActivityInfo}
+     * @param exception the argument of type {@code NetException}
+     * @param workflowDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUnhandledExceptionRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, ActivityInfo faultSource, NetException exception, WorkflowIdentity workflowDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +217,25 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param faultSource the argument of type {@code ActivityInfo}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUnhandledExceptionRecord(Guid instanceId, java.lang.String activityDefinitionId, ActivityInfo faultSource, NetException exception) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +246,27 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param faultSource the argument of type {@code ActivityInfo}
+     * @param exception the argument of type {@code NetException}
+     * @param workflowDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceUnhandledExceptionRecord(Guid instanceId, java.lang.String activityDefinitionId, ActivityInfo faultSource, NetException exception, WorkflowIdentity workflowDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -201,6 +286,13 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FaultSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.FaultSource" target="_top">.NET documentation</a>
+     */
     public ActivityInfo getFaultSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +308,13 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultSource.
+     *
+     * @param FaultSource the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.FaultSource" target="_top">.NET documentation</a>
+     */
     public void setFaultSource(ActivityInfo FaultSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +325,13 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnhandledException.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.UnhandledException" target="_top">.NET documentation</a>
+     */
     public NetException getUnhandledException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +347,13 @@ public class WorkflowInstanceUnhandledExceptionRecord extends system.activities.
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnhandledException.
+     *
+     * @param UnhandledException the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord.UnhandledException" target="_top">.NET documentation</a>
+     */
     public void setUnhandledException(NetException UnhandledException) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,9 @@ public class ArgumentNullException extends system.ArgumentException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ArgumentNullException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class ArgumentNullException extends system.ArgumentException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param paramName the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentNullException.-ctor" target="_top">.NET documentation</a>
+     */
     public ArgumentNullException(java.lang.String paramName, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file

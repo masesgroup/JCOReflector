@@ -99,7 +99,10 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebResourceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,25 @@ public class WebResourceAttribute extends system.Attribute  {
     public WebResourceAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param webResource the argument of type {@code java.lang.String}
+     * @param contentType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public WebResourceAttribute(java.lang.String webResource, java.lang.String contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +190,13 @@ public class WebResourceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CdnSupportsSecureConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.CdnSupportsSecureConnection" target="_top">.NET documentation</a>
+     */
     public boolean getCdnSupportsSecureConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +211,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CdnSupportsSecureConnection.
+     *
+     * @param CdnSupportsSecureConnection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.CdnSupportsSecureConnection" target="_top">.NET documentation</a>
+     */
     public void setCdnSupportsSecureConnection(boolean CdnSupportsSecureConnection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +228,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PerformSubstitution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.PerformSubstitution" target="_top">.NET documentation</a>
+     */
     public boolean getPerformSubstitution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +249,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PerformSubstitution.
+     *
+     * @param PerformSubstitution the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.PerformSubstitution" target="_top">.NET documentation</a>
+     */
     public void setPerformSubstitution(boolean PerformSubstitution) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +266,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CdnPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.CdnPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCdnPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +287,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CdnPath.
+     *
+     * @param CdnPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.CdnPath" target="_top">.NET documentation</a>
+     */
     public void setCdnPath(java.lang.String CdnPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +304,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.ContentType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +325,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoadSuccessExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.LoadSuccessExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLoadSuccessExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +346,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoadSuccessExpression.
+     *
+     * @param LoadSuccessExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.LoadSuccessExpression" target="_top">.NET documentation</a>
+     */
     public void setLoadSuccessExpression(java.lang.String LoadSuccessExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +363,13 @@ public class WebResourceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebResource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebResourceAttribute.WebResource" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWebResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

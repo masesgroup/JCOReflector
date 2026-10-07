@@ -102,7 +102,10 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Asn1Tag(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,24 @@ public class Asn1Tag extends system.ValueType  {
     public Asn1Tag() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tagClass the argument of type {@code TagClass}
+     * @param tagValue the argument of type {@code int}
+     * @param isConstructed the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.-ctor" target="_top">.NET documentation</a>
+     */
     public Asn1Tag(TagClass tagClass, int tagValue, boolean isConstructed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +183,23 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param universalTagNumber the argument of type {@code UniversalTagNumber}
+     * @param isConstructed the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.-ctor" target="_top">.NET documentation</a>
+     */
     public Asn1Tag(UniversalTagNumber universalTagNumber, boolean isConstructed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +215,14 @@ public class Asn1Tag extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Asn1Tag}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Asn1Tag other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +237,14 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member HasSameClassAndValue.
+     *
+     * @param other the argument of type {@code Asn1Tag}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.HasSameClassAndValue" target="_top">.NET documentation</a>
+     */
     public boolean HasSameClassAndValue(Asn1Tag other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +259,13 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CalculateEncodedSize.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.CalculateEncodedSize" target="_top">.NET documentation</a>
+     */
     public int CalculateEncodedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +306,13 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsConstructed.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.AsConstructed" target="_top">.NET documentation</a>
+     */
     public Asn1Tag AsConstructed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +328,13 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsPrimitive.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.AsPrimitive" target="_top">.NET documentation</a>
+     */
     public Asn1Tag AsPrimitive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +354,13 @@ public class Asn1Tag extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsConstructed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.IsConstructed" target="_top">.NET documentation</a>
+     */
     public boolean getIsConstructed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +375,13 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TagValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.TagValue" target="_top">.NET documentation</a>
+     */
     public int getTagValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +422,13 @@ public class Asn1Tag extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TagClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.Asn1Tag.TagClass" target="_top">.NET documentation</a>
+     */
     public TagClass getTagClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

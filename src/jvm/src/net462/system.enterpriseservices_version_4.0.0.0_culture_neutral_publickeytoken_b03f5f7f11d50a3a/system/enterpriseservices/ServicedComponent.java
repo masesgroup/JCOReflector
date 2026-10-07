@@ -100,7 +100,10 @@ public class ServicedComponent extends system.ContextBoundObject implements Auto
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServicedComponent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,20 @@ public class ServicedComponent extends system.ContextBoundObject implements Auto
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServicedComponent.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +180,19 @@ public class ServicedComponent extends system.ContextBoundObject implements Auto
         }
     }
 
+    /**
+     * Invokes the .NET member DisposeObject.
+     *
+     * @param sc the argument of type {@code ServicedComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ServicedComponent.DisposeObject" target="_top">.NET documentation</a>
+     */
     public static void DisposeObject(ServicedComponent sc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,8 +206,13 @@ public class ServicedComponent extends system.ContextBoundObject implements Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRemoteDispatch method available in IRemoteDispatch to obtain an object with an invocable method
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String RemoteDispatchAutoDone(java.lang.String s) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
     }
@@ -185,8 +220,13 @@ public class ServicedComponent extends system.ContextBoundObject implements Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRemoteDispatch method available in IRemoteDispatch to obtain an object with an invocable method
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String RemoteDispatchNotAutoDone(java.lang.String s) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
     }
@@ -194,8 +234,13 @@ public class ServicedComponent extends system.ContextBoundObject implements Auto
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServicedComponentInfo method available in IServicedComponentInfo to obtain an object with an invocable method
+     *
+     * @param infoMask the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param infoArray the argument of type {@code JCORefOut}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServicedComponentInfo to obtain the full interface.");
     }

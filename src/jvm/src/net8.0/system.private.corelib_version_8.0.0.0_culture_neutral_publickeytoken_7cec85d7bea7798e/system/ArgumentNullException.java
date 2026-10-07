@@ -103,7 +103,9 @@ public class ArgumentNullException extends system.ArgumentException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ArgumentNullException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class ArgumentNullException extends system.ArgumentException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param paramName the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentNullException.-ctor" target="_top">.NET documentation</a>
+     */
     public ArgumentNullException(java.lang.String paramName, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +188,24 @@ public class ArgumentNullException extends system.ArgumentException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ThrowIfNull.
+     *
+     * @param argument the argument of type {@code NetObject}
+     * @param paramName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArgumentNullException.ThrowIfNull" target="_top">.NET documentation</a>
+     */
     public static void ThrowIfNull(NetObject argument, java.lang.String paramName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

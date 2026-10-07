@@ -103,7 +103,9 @@ public class ServerTooBusyException extends system.servicemodel.CommunicationExc
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ServerTooBusyException(java.lang.Object instance) {
         super(instance);

@@ -103,7 +103,9 @@ public class PoisonMessageException extends system.servicemodel.CommunicationExc
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PoisonMessageException(java.lang.Object instance) {
         super(instance);

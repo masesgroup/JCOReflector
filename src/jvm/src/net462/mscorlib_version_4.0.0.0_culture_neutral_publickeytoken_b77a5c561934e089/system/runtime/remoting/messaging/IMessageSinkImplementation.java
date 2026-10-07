@@ -104,7 +104,10 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMessageSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SyncProcessMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMessageSink.SyncProcessMessage" target="_top">.NET documentation</a>
+     */
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,15 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
         }
     }
 
+    /**
+     * Invokes the .NET member AsyncProcessMessage.
+     *
+     * @param msg the argument of type {@code IMessage}
+     * @param replySink the argument of type {@code IMessageSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMessageSink.AsyncProcessMessage" target="_top">.NET documentation</a>
+     */
     public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +200,13 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NextSink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.IMessageSink.NextSink" target="_top">.NET documentation</a>
+     */
     public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

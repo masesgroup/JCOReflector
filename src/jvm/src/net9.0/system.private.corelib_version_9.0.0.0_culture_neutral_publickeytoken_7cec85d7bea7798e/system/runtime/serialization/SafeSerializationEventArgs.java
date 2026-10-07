@@ -102,7 +102,10 @@ public class SafeSerializationEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SafeSerializationEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class SafeSerializationEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddSerializedState.
+     *
+     * @param serializedState the argument of type {@code ISafeSerializationData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SafeSerializationEventArgs.AddSerializedState" target="_top">.NET documentation</a>
+     */
     public void AddSerializedState(ISafeSerializationData serializedState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class SafeSerializationEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StreamingContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.SafeSerializationEventArgs.StreamingContext" target="_top">.NET documentation</a>
+     */
     public StreamingContext getStreamingContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

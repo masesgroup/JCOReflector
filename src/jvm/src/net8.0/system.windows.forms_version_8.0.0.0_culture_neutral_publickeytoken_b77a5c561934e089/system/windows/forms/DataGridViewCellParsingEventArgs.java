@@ -100,7 +100,10 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewCellParsingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
     public DataGridViewCellParsingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rowIndex the argument of type {@code int}
+     * @param columnIndex the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @param desiredType the argument of type {@code NetType}
+     * @param inheritedCellStyle the argument of type {@code DataGridViewCellStyle}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellParsingEventArgs(int rowIndex, int columnIndex, NetObject value, NetType desiredType, DataGridViewCellStyle inheritedCellStyle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +183,13 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ParsingApplied.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.ParsingApplied" target="_top">.NET documentation</a>
+     */
     public boolean getParsingApplied() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +204,13 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParsingApplied.
+     *
+     * @param ParsingApplied the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.ParsingApplied" target="_top">.NET documentation</a>
+     */
     public void setParsingApplied(boolean ParsingApplied) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,13 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +268,13 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +315,13 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
         }
     }
 
+    /**
+     * Gets the value of the .NET property InheritedCellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.InheritedCellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getInheritedCellStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +337,13 @@ public class DataGridViewCellParsingEventArgs extends system.windows.forms.Conve
         }
     }
 
+    /**
+     * Sets the value of the .NET property InheritedCellStyle.
+     *
+     * @param InheritedCellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellParsingEventArgs.InheritedCellStyle" target="_top">.NET documentation</a>
+     */
     public void setInheritedCellStyle(DataGridViewCellStyle InheritedCellStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

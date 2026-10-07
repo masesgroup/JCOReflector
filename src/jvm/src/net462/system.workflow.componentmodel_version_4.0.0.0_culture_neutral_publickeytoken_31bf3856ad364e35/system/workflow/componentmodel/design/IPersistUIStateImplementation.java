@@ -100,7 +100,10 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPersistUIStateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
 
     // Methods section
     
+    /**
+     * Invokes the .NET member LoadViewState.
+     *
+     * @param reader the argument of type {@code BinaryReader}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IPersistUIState.LoadViewState" target="_top">.NET documentation</a>
+     */
     public void LoadViewState(BinaryReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
         }
     }
 
+    /**
+     * Invokes the .NET member SaveViewState.
+     *
+     * @param writer the argument of type {@code BinaryWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IPersistUIState.SaveViewState" target="_top">.NET documentation</a>
+     */
     public void SaveViewState(BinaryWriter writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

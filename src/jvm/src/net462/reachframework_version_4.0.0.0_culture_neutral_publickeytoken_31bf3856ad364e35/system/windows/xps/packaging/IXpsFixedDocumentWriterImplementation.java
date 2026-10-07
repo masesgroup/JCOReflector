@@ -107,7 +107,10 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXpsFixedDocumentWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddFixedPage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddFixedPage" target="_top">.NET documentation</a>
+     */
     public IXpsFixedPageWriter AddFixedPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +174,13 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member AddDocumentStructure.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddDocumentStructure" target="_top">.NET documentation</a>
+     */
     public XpsStructure AddDocumentStructure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,14 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member AddThumbnail.
+     *
+     * @param imageType the argument of type {@code XpsImageType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddThumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,12 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DocumentNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.DocumentNumber" target="_top">.NET documentation</a>
+     */
     public int getDocumentNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +286,13 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintTicket.
+     *
+     * @param PrintTicket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.PrintTicket" target="_top">.NET documentation</a>
+     */
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +303,13 @@ public class IXpsFixedDocumentWriterImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

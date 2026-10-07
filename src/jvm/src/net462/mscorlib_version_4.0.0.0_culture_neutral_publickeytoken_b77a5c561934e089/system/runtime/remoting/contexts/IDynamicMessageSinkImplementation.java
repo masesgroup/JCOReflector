@@ -100,7 +100,10 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDynamicMessageSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ProcessMessageFinish.
+     *
+     * @param replyMsg the argument of type {@code IMessage}
+     * @param bCliSide the argument of type {@code boolean}
+     * @param bAsync the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IDynamicMessageSink.ProcessMessageFinish" target="_top">.NET documentation</a>
+     */
     public void ProcessMessageFinish(IMessage replyMsg, boolean bCliSide, boolean bAsync) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +164,15 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessMessageStart.
+     *
+     * @param reqMsg the argument of type {@code IMessage}
+     * @param bCliSide the argument of type {@code boolean}
+     * @param bAsync the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IDynamicMessageSink.ProcessMessageStart" target="_top">.NET documentation</a>
+     */
     public void ProcessMessageStart(IMessage reqMsg, boolean bCliSide, boolean bAsync) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

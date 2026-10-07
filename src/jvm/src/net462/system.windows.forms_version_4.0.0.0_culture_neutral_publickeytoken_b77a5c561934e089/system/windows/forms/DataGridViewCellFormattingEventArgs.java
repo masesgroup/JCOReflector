@@ -100,7 +100,10 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewCellFormattingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,18 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
     public DataGridViewCellFormattingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param rowIndex the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @param desiredType the argument of type {@code NetType}
+     * @param cellStyle the argument of type {@code DataGridViewCellStyle}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellFormattingEventArgs(int columnIndex, int rowIndex, NetObject value, NetType desiredType, DataGridViewCellStyle cellStyle) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +184,13 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FormattingApplied.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied" target="_top">.NET documentation</a>
+     */
     public boolean getFormattingApplied() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +205,13 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormattingApplied.
+     *
+     * @param FormattingApplied the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied" target="_top">.NET documentation</a>
+     */
     public void setFormattingApplied(boolean FormattingApplied) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +222,13 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +269,13 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +316,13 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getCellStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +338,13 @@ public class DataGridViewCellFormattingEventArgs extends system.windows.forms.Co
         }
     }
 
+    /**
+     * Sets the value of the .NET property CellStyle.
+     *
+     * @param CellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle" target="_top">.NET documentation</a>
+     */
     public void setCellStyle(DataGridViewCellStyle CellStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

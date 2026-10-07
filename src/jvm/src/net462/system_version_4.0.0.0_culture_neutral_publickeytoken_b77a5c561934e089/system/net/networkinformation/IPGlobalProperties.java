@@ -112,7 +112,10 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPGlobalProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,25 @@ public class IPGlobalProperties extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginGetUnicastAddresses.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginGetUnicastAddresses(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +202,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetActiveTcpListeners.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetActiveTcpListeners" target="_top">.NET documentation</a>
+     */
     public IPEndPoint[] GetActiveTcpListeners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +230,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetActiveUdpListeners.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetActiveUdpListeners" target="_top">.NET documentation</a>
+     */
     public IPEndPoint[] GetActiveUdpListeners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +258,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIcmpV4Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetIcmpV4Statistics" target="_top">.NET documentation</a>
+     */
     public IcmpV4Statistics GetIcmpV4Statistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +280,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIcmpV6Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetIcmpV6Statistics" target="_top">.NET documentation</a>
+     */
     public IcmpV6Statistics GetIcmpV6Statistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +302,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPGlobalProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties" target="_top">.NET documentation</a>
+     */
     public static IPGlobalProperties GetIPGlobalProperties() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +324,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPv4GlobalStatistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetIPv4GlobalStatistics" target="_top">.NET documentation</a>
+     */
     public IPGlobalStatistics GetIPv4GlobalStatistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +346,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPv6GlobalStatistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetIPv6GlobalStatistics" target="_top">.NET documentation</a>
+     */
     public IPGlobalStatistics GetIPv6GlobalStatistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +368,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetActiveTcpConnections.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetActiveTcpConnections" target="_top">.NET documentation</a>
+     */
     public TcpConnectionInformation[] GetActiveTcpConnections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +396,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTcpIPv4Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetTcpIPv4Statistics" target="_top">.NET documentation</a>
+     */
     public TcpStatistics GetTcpIPv4Statistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +418,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTcpIPv6Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetTcpIPv6Statistics" target="_top">.NET documentation</a>
+     */
     public TcpStatistics GetTcpIPv6Statistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +440,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUdpIPv4Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetUdpIPv4Statistics" target="_top">.NET documentation</a>
+     */
     public UdpStatistics GetUdpIPv4Statistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +462,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUdpIPv6Statistics.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetUdpIPv6Statistics" target="_top">.NET documentation</a>
+     */
     public UdpStatistics GetUdpIPv6Statistics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +484,24 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndGetUnicastAddresses.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses" target="_top">.NET documentation</a>
+     */
     public UnicastIPAddressInformationCollection EndGetUnicastAddresses(IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +517,23 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnicastAddresses.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses" target="_top">.NET documentation</a>
+     */
     public UnicastIPAddressInformationCollection GetUnicastAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +549,27 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnicastAddressesAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddressesAsync" target="_top">.NET documentation</a>
+     */
     public Task_1 GetUnicastAddressesAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +589,13 @@ public class IPGlobalProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsWinsProxy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.IsWinsProxy" target="_top">.NET documentation</a>
+     */
     public boolean getIsWinsProxy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +610,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NodeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.NodeType" target="_top">.NET documentation</a>
+     */
     public NetBiosNodeType getNodeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +632,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DhcpScopeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.DhcpScopeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDhcpScopeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +653,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DomainName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.DomainName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDomainName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +674,13 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.HostName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHostName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

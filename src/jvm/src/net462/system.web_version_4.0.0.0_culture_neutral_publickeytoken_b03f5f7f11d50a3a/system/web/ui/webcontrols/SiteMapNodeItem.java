@@ -103,7 +103,10 @@ public class SiteMapNodeItem extends system.web.ui.webcontrols.WebControl implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SiteMapNodeItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class SiteMapNodeItem extends system.web.ui.webcontrols.WebControl implem
     public SiteMapNodeItem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @param itemType the argument of type {@code SiteMapNodeItemType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapNodeItem.-ctor" target="_top">.NET documentation</a>
+     */
     public SiteMapNodeItem(int itemIndex, SiteMapNodeItemType itemType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +183,13 @@ public class SiteMapNodeItem extends system.web.ui.webcontrols.WebControl implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ItemIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapNodeItem.ItemIndex" target="_top">.NET documentation</a>
+     */
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +230,13 @@ public class SiteMapNodeItem extends system.web.ui.webcontrols.WebControl implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property SiteMapNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapNodeItem.SiteMapNode" target="_top">.NET documentation</a>
+     */
     public SiteMapNode getSiteMapNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +252,13 @@ public class SiteMapNodeItem extends system.web.ui.webcontrols.WebControl implem
         }
     }
 
+    /**
+     * Sets the value of the .NET property SiteMapNode.
+     *
+     * @param SiteMapNode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapNodeItem.SiteMapNode" target="_top">.NET documentation</a>
+     */
     public void setSiteMapNode(SiteMapNode SiteMapNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +269,13 @@ public class SiteMapNodeItem extends system.web.ui.webcontrols.WebControl implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SiteMapNodeItem.ItemType" target="_top">.NET documentation</a>
+     */
     public SiteMapNodeItemType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

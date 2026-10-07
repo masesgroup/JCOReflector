@@ -101,7 +101,10 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CardSpacePolicyElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,39 @@ public class CardSpacePolicyElement extends NetObject  {
     public CardSpacePolicyElement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param target the argument of type {@code XmlElement}
+     * @param issuer the argument of type {@code XmlElement}
+     * @param parameters the argument of type {@code Collection_1}
+     * @param privacyNoticeLink the argument of type {@code Uri}
+     * @param privacyNoticeVersion the argument of type {@code int}
+     * @param isManagedIssuer the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.-ctor" target="_top">.NET documentation</a>
+     */
     public CardSpacePolicyElement(XmlElement target, XmlElement issuer, Collection_1 parameters, Uri privacyNoticeLink, int privacyNoticeVersion, boolean isManagedIssuer) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.security.SecurityException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +206,13 @@ public class CardSpacePolicyElement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsManagedIssuer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.IsManagedIssuer" target="_top">.NET documentation</a>
+     */
     public boolean getIsManagedIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +227,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsManagedIssuer.
+     *
+     * @param IsManagedIssuer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.IsManagedIssuer" target="_top">.NET documentation</a>
+     */
     public void setIsManagedIssuer(boolean IsManagedIssuer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +244,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PolicyNoticeVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.PolicyNoticeVersion" target="_top">.NET documentation</a>
+     */
     public int getPolicyNoticeVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +291,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PolicyNoticeVersion.
+     *
+     * @param PolicyNoticeVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.PolicyNoticeVersion" target="_top">.NET documentation</a>
+     */
     public void setPolicyNoticeVersion(int PolicyNoticeVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +308,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.Parameters" target="_top">.NET documentation</a>
+     */
     public Collection_1 getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +330,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PolicyNoticeLink.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.PolicyNoticeLink" target="_top">.NET documentation</a>
+     */
     public Uri getPolicyNoticeLink() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +352,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PolicyNoticeLink.
+     *
+     * @param PolicyNoticeLink the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.PolicyNoticeLink" target="_top">.NET documentation</a>
+     */
     public void setPolicyNoticeLink(Uri PolicyNoticeLink) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +369,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Issuer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.Issuer" target="_top">.NET documentation</a>
+     */
     public XmlElement getIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +391,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Issuer.
+     *
+     * @param Issuer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.Issuer" target="_top">.NET documentation</a>
+     */
     public void setIssuer(XmlElement Issuer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +408,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Target.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.Target" target="_top">.NET documentation</a>
+     */
     public XmlElement getTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +430,13 @@ public class CardSpacePolicyElement extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Target.
+     *
+     * @param Target the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.Target" target="_top">.NET documentation</a>
+     */
     public void setTarget(XmlElement Target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

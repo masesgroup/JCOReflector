@@ -103,7 +103,10 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITableProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,15 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetItem.
+     *
+     * @param row the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.GetItem" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +172,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
+    /**
+     * Invokes the .NET member GetColumnHeaders.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +200,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
+    /**
+     * Invokes the .NET member GetRowHeaders.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.GetRowHeaders" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +232,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.ColumnCount" target="_top">.NET documentation</a>
+     */
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +279,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.RowCount" target="_top">.NET documentation</a>
+     */
     public int getRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +326,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowOrColumnMajor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor" target="_top">.NET documentation</a>
+     */
     public RowOrColumnMajor getRowOrColumnMajor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowInstanceSuspendedRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,26 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
     public WorkflowInstanceSuspendedRecord() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceSuspendedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceSuspendedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, java.lang.String reason) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +184,26 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param recordNumber the argument of type {@code long}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param workflowDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceSuspendedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceSuspendedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, java.lang.String reason, WorkflowIdentity workflowDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +214,24 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceSuspendedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceSuspendedRecord(Guid instanceId, java.lang.String activityDefinitionId, java.lang.String reason) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +242,26 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param activityDefinitionId the argument of type {@code java.lang.String}
+     * @param reason the argument of type {@code java.lang.String}
+     * @param workflowDefinitionIdentity the argument of type {@code WorkflowIdentity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceSuspendedRecord.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowInstanceSuspendedRecord(Guid instanceId, java.lang.String activityDefinitionId, java.lang.String reason, WorkflowIdentity workflowDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +281,13 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Reason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceSuspendedRecord.Reason" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +302,13 @@ public class WorkflowInstanceSuspendedRecord extends system.activities.tracking.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reason.
+     *
+     * @param Reason the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceSuspendedRecord.Reason" target="_top">.NET documentation</a>
+     */
     public void setReason(java.lang.String Reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

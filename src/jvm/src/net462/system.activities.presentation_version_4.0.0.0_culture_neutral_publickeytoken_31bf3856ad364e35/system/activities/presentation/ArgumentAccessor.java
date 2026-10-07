@@ -100,7 +100,10 @@ public class ArgumentAccessor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArgumentAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ArgumentAccessor extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.-ctor" target="_top">.NET documentation</a>
+     */
     public ArgumentAccessor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class ArgumentAccessor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Setter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Setter" target="_top">.NET documentation</a>
+     */
     public Action_2 getSetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class ArgumentAccessor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Setter.
+     *
+     * @param Setter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Setter" target="_top">.NET documentation</a>
+     */
     public void setSetter(Action_2 Setter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class ArgumentAccessor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Getter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Getter" target="_top">.NET documentation</a>
+     */
     public Func_2 getGetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class ArgumentAccessor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Getter.
+     *
+     * @param Getter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Getter" target="_top">.NET documentation</a>
+     */
     public void setGetter(Func_2 Getter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

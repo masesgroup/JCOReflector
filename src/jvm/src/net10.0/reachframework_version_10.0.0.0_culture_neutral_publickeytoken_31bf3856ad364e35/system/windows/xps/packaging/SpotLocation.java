@@ -99,7 +99,10 @@ public class SpotLocation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SpotLocation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SpotLocation extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public SpotLocation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class SpotLocation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StartX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.StartX" target="_top">.NET documentation</a>
+     */
     public double getStartX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +220,13 @@ public class SpotLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartX.
+     *
+     * @param StartX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.StartX" target="_top">.NET documentation</a>
+     */
     public void setStartX(double StartX) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +237,13 @@ public class SpotLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.StartY" target="_top">.NET documentation</a>
+     */
     public double getStartY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +284,13 @@ public class SpotLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartY.
+     *
+     * @param StartY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.StartY" target="_top">.NET documentation</a>
+     */
     public void setStartY(double StartY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +301,13 @@ public class SpotLocation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PageUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.PageUri" target="_top">.NET documentation</a>
+     */
     public Uri getPageUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +323,13 @@ public class SpotLocation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PageUri.
+     *
+     * @param PageUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.SpotLocation.PageUri" target="_top">.NET documentation</a>
+     */
     public void setPageUri(Uri PageUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

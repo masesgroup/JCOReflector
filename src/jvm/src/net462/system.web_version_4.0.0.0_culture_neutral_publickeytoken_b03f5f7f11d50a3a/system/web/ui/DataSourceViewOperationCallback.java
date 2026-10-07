@@ -163,7 +163,10 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceViewOperationCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -185,6 +188,15 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param affectedRecords the argument of type {@code int}
+     * @param ex the argument of type {@code NetException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public boolean DynamicInvoke(int affectedRecords, NetException ex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,7 +212,11 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param affectedRecords the .NET argument of type {@code System.Int32}
+     * @param ex the .NET argument of type {@code System.Exception}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public boolean Invoke(int affectedRecords, NetException ex) {
         return false;

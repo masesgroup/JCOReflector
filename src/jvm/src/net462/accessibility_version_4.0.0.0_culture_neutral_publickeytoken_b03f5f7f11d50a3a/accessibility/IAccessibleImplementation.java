@@ -98,7 +98,10 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAccessibleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member accHitTest.
+     *
+     * @param xLeft the argument of type {@code int}
+     * @param yTop the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accHitTest" target="_top">.NET documentation</a>
+     */
     public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,15 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Invokes the .NET member accNavigate.
+     *
+     * @param navDir the argument of type {@code int}
+     * @param varStart the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accNavigate" target="_top">.NET documentation</a>
+     */
     public NetObject accNavigate(int navDir, NetObject varStart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +191,13 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Invokes the .NET member accDoDefaultAction.
+     *
+     * @param varChild the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accDoDefaultAction" target="_top">.NET documentation</a>
+     */
     public void accDoDefaultAction(NetObject varChild) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +208,17 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Invokes the .NET member accLocation.
+     *
+     * @param pxLeft the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pyTop the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pcxWidth the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pcyHeight the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param varChild the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accLocation" target="_top">.NET documentation</a>
+     */
     public void accLocation(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pxLeft, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pyTop, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcxWidth, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcyHeight, NetObject varChild) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +229,14 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Invokes the .NET member accSelect.
+     *
+     * @param flagsSelect the argument of type {@code int}
+     * @param varChild the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.accSelect" target="_top">.NET documentation</a>
+     */
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +251,13 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property accChildCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.getaccChildCount" target="_top">.NET documentation</a>
+     */
     public int getaccChildCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +298,13 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Gets the value of the .NET property accFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.getaccFocus" target="_top">.NET documentation</a>
+     */
     public NetObject getaccFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +320,13 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Gets the value of the .NET property accParent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.getaccParent" target="_top">.NET documentation</a>
+     */
     public NetObject getaccParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +342,13 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    /**
+     * Gets the value of the .NET property accSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Accessibility.IAccessible.getaccSelection" target="_top">.NET documentation</a>
+     */
     public NetObject getaccSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

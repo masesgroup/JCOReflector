@@ -99,7 +99,10 @@ public class BookmarkInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BookmarkInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class BookmarkInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ScopeInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkInfo.ScopeInfo" target="_top">.NET documentation</a>
+     */
     public BookmarkScopeInfo getScopeInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class BookmarkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ScopeInfo.
+     *
+     * @param ScopeInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkInfo.ScopeInfo" target="_top">.NET documentation</a>
+     */
     public void setScopeInfo(BookmarkScopeInfo ScopeInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class BookmarkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BookmarkName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkInfo.BookmarkName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBookmarkName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +221,13 @@ public class BookmarkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BookmarkName.
+     *
+     * @param BookmarkName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkInfo.BookmarkName" target="_top">.NET documentation</a>
+     */
     public void setBookmarkName(java.lang.String BookmarkName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class BookmarkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OwnerDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkInfo.OwnerDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class BookmarkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OwnerDisplayName.
+     *
+     * @param OwnerDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.BookmarkInfo.OwnerDisplayName" target="_top">.NET documentation</a>
+     */
     public void setOwnerDisplayName(java.lang.String OwnerDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ConvertBinder extends system.dynamic.DynamicMetaObjectBinder  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConvertBinder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,24 @@ public class ConvertBinder extends system.dynamic.DynamicMetaObjectBinder  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Bind.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param args the argument of type {@code DynamicMetaObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.ConvertBinder.Bind" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +189,15 @@ public class ConvertBinder extends system.dynamic.DynamicMetaObjectBinder  {
         }
     }
 
+    /**
+     * Invokes the .NET member FallbackConvert.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @param errorSuggestion the argument of type {@code DynamicMetaObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.ConvertBinder.FallbackConvert" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject FallbackConvert(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +213,14 @@ public class ConvertBinder extends system.dynamic.DynamicMetaObjectBinder  {
         }
     }
 
+    /**
+     * Invokes the .NET member FallbackConvert.
+     *
+     * @param target the argument of type {@code DynamicMetaObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.ConvertBinder.FallbackConvert" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject FallbackConvert(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +240,13 @@ public class ConvertBinder extends system.dynamic.DynamicMetaObjectBinder  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Explicit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.ConvertBinder.Explicit" target="_top">.NET documentation</a>
+     */
     public boolean getExplicit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,13 @@ public class ConvertBinder extends system.dynamic.DynamicMetaObjectBinder  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.ConvertBinder.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

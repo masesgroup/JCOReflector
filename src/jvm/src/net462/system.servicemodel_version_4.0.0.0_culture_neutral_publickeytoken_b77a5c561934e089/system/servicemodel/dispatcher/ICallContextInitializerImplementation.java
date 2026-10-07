@@ -102,7 +102,10 @@ public class ICallContextInitializerImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICallContextInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class ICallContextInitializerImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeforeInvoke.
+     *
+     * @param instanceContext the argument of type {@code InstanceContext}
+     * @param channel the argument of type {@code IClientChannel}
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ICallContextInitializer.BeforeInvoke" target="_top">.NET documentation</a>
+     */
     public NetObject BeforeInvoke(InstanceContext instanceContext, IClientChannel channel, Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,13 @@ public class ICallContextInitializerImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member AfterInvoke.
+     *
+     * @param correlationState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ICallContextInitializer.AfterInvoke" target="_top">.NET documentation</a>
+     */
     public void AfterInvoke(NetObject correlationState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class SoapOperationBinding extends system.web.services.description.Servic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapOperationBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SoapOperationBinding extends system.web.services.description.Servic
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapOperationBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapOperationBinding() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class SoapOperationBinding extends system.web.services.description.Servic
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SoapAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapOperationBinding.SoapAction" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSoapAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class SoapOperationBinding extends system.web.services.description.Servic
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapAction.
+     *
+     * @param SoapAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapOperationBinding.SoapAction" target="_top">.NET documentation</a>
+     */
     public void setSoapAction(java.lang.String SoapAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class SoapOperationBinding extends system.web.services.description.Servic
         }
     }
 
+    /**
+     * Gets the value of the .NET property Style.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapOperationBinding.Style" target="_top">.NET documentation</a>
+     */
     public SoapBindingStyle getStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class SoapOperationBinding extends system.web.services.description.Servic
         }
     }
 
+    /**
+     * Sets the value of the .NET property Style.
+     *
+     * @param Style the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapOperationBinding.Style" target="_top">.NET documentation</a>
+     */
     public void setStyle(SoapBindingStyle Style) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

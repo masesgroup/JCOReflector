@@ -98,7 +98,10 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IColumnMappingImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataSetColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IColumnMapping.DataSetColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSetColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSetColumn.
+     *
+     * @param DataSetColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IColumnMapping.DataSetColumn" target="_top">.NET documentation</a>
+     */
     public void setDataSetColumn(java.lang.String DataSetColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IColumnMapping.SourceColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class IColumnMappingImplementation extends NetObject implements IColumnMa
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceColumn.
+     *
+     * @param SourceColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IColumnMapping.SourceColumn" target="_top">.NET documentation</a>
+     */
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

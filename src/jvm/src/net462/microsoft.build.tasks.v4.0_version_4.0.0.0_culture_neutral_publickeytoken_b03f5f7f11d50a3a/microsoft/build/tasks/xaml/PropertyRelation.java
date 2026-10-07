@@ -98,7 +98,10 @@ public class PropertyRelation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyRelation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class PropertyRelation extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyRelation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,15 @@ public class PropertyRelation extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argument the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @param required the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyRelation(java.lang.String argument, java.lang.String value, boolean required) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +191,13 @@ public class PropertyRelation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Required.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.Required" target="_top">.NET documentation</a>
+     */
     public boolean getRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class PropertyRelation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Required.
+     *
+     * @param Required the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.Required" target="_top">.NET documentation</a>
+     */
     public void setRequired(boolean Required) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class PropertyRelation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.Argument" target="_top">.NET documentation</a>
+     */
     public java.lang.String getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,13 @@ public class PropertyRelation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument.
+     *
+     * @param Argument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.Argument" target="_top">.NET documentation</a>
+     */
     public void setArgument(java.lang.String Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +267,13 @@ public class PropertyRelation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +288,13 @@ public class PropertyRelation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.PropertyRelation.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(java.lang.String Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

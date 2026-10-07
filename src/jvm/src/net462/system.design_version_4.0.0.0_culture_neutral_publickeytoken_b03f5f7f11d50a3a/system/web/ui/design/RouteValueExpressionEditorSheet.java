@@ -101,7 +101,10 @@ public class RouteValueExpressionEditorSheet extends system.web.ui.design.Expres
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RouteValueExpressionEditorSheet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class RouteValueExpressionEditorSheet extends system.web.ui.design.Expres
     public RouteValueExpressionEditorSheet() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditorSheet.-ctor" target="_top">.NET documentation</a>
+     */
     public RouteValueExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,13 @@ public class RouteValueExpressionEditorSheet extends system.web.ui.design.Expres
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExpression.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditorSheet.GetExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class RouteValueExpressionEditorSheet extends system.web.ui.design.Expres
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RouteValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditorSheet.RouteValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRouteValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +223,13 @@ public class RouteValueExpressionEditorSheet extends system.web.ui.design.Expres
         }
     }
 
+    /**
+     * Sets the value of the .NET property RouteValue.
+     *
+     * @param RouteValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditorSheet.RouteValue" target="_top">.NET documentation</a>
+     */
     public void setRouteValue(java.lang.String RouteValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

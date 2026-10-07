@@ -109,7 +109,10 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBindingListViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,14 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Add" target="_top">.NET documentation</a>
+     */
     public int Add(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +224,15 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member Find.
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Find" target="_top">.NET documentation</a>
+     */
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +273,14 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +321,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member AddNew.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.AddNew" target="_top">.NET documentation</a>
+     */
     public NetObject AddNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +343,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member AddIndex.
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.AddIndex" target="_top">.NET documentation</a>
+     */
     public void AddIndex(PropertyDescriptor property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +360,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member ApplySort.
+     *
+     * @param sorts the argument of type {@code ListSortDescriptionCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.ApplySort" target="_top">.NET documentation</a>
+     */
     public void ApplySort(ListSortDescriptionCollection sorts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +377,14 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member ApplySort.
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param direction the argument of type {@code ListSortDirection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.ApplySort" target="_top">.NET documentation</a>
+     */
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +395,12 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +411,14 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Array array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +429,14 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +447,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +464,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +481,12 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveFilter.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.RemoveFilter" target="_top">.NET documentation</a>
+     */
     public void RemoveFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +497,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveIndex.
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.RemoveIndex" target="_top">.NET documentation</a>
+     */
     public void RemoveIndex(PropertyDescriptor property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +514,12 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveSort.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.RemoveSort" target="_top">.NET documentation</a>
+     */
     public void RemoveSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +534,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.AllowEdit" target="_top">.NET documentation</a>
+     */
     public boolean getAllowEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +555,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowNew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.AllowNew" target="_top">.NET documentation</a>
+     */
     public boolean getAllowNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +576,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowRemove.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.AllowRemove" target="_top">.NET documentation</a>
+     */
     public boolean getAllowRemove() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +597,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsFixedSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.IsFixedSize" target="_top">.NET documentation</a>
+     */
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +618,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +639,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSorted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.IsSorted" target="_top">.NET documentation</a>
+     */
     public boolean getIsSorted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +660,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSynchronized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.IsSynchronized" target="_top">.NET documentation</a>
+     */
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +681,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsAdvancedSorting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SupportsAdvancedSorting" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsAdvancedSorting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +702,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsChangeNotification.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SupportsChangeNotification" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsChangeNotification() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +723,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsFiltering.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SupportsFiltering" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsFiltering() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +744,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsSearching.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SupportsSearching" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsSearching() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +765,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsSorting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SupportsSorting" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsSorting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +786,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +833,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SortDescriptions" target="_top">.NET documentation</a>
+     */
     public ListSortDescriptionCollection getSortDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -637,6 +855,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SortDirection" target="_top">.NET documentation</a>
+     */
     public ListSortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -652,6 +877,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SortProperty" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getSortProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -667,6 +899,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.SyncRoot" target="_top">.NET documentation</a>
+     */
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +921,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Filter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +942,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingListView.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(java.lang.String Filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -711,6 +964,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -721,6 +981,13 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
         }
     }
 
+    /**
+     * Invokes the .NET member removeListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -106,7 +106,10 @@ public class Tuple extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Tuple(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class Tuple extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param item1 the argument of type {@code T1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected> Tuple_1 Create(T1 item1) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +186,17 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Tuple_2 Create(T1 item1, T2 item2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +212,19 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Tuple_3 Create(T1 item1, T2 item2, T3 item3) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +240,21 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @param item4 the argument of type {@code T4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> Tuple_4 Create(T1 item1, T2 item2, T3 item3, T4 item4) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +270,23 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @param item4 the argument of type {@code T4}
+     * @param item5 the argument of type {@code T5}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> Tuple_5 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +302,25 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @param item4 the argument of type {@code T4}
+     * @param item5 the argument of type {@code T5}
+     * @param item6 the argument of type {@code T6}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> Tuple_6 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +336,27 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @param item4 the argument of type {@code T4}
+     * @param item5 the argument of type {@code T5}
+     * @param item6 the argument of type {@code T6}
+     * @param item7 the argument of type {@code T7}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> Tuple_7 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -264,6 +372,38 @@ public class Tuple extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param <T1> the type of the generic argument T1
+     * @param <T2> the type of the generic argument T2
+     * @param <T3> the type of the generic argument T3
+     * @param <T4> the type of the generic argument T4
+     * @param <T5> the type of the generic argument T5
+     * @param <T6> the type of the generic argument T6
+     * @param <T7> the type of the generic argument T7
+     * @param <T8> the type of the generic argument T8
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @param item4 the argument of type {@code T4}
+     * @param item5 the argument of type {@code T5}
+     * @param item6 the argument of type {@code T6}
+     * @param item7 the argument of type {@code T7}
+     * @param item8 the argument of type {@code T8}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple.Create" target="_top">.NET documentation</a>
+     */
     public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> Tuple_8 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

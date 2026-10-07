@@ -99,7 +99,10 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LenientGlobalObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActiveXObjectNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ActiveXObjectNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getActiveXObjectNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActiveXObject.
+     *
+     * @param ActiveXObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ActiveXObject" target="_top">.NET documentation</a>
+     */
     public void setActiveXObject(NetObject ActiveXObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArrayNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ArrayNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getArrayNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Array.
+     *
+     * @param Array the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Array" target="_top">.NET documentation</a>
+     */
     public void setArray(NetObject Array) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BooleanNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.BooleanNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getBooleanNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +261,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Boolean.
+     *
+     * @param Boolean the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Boolean" target="_top">.NET documentation</a>
+     */
     public void setBoolean(NetObject Boolean) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +278,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DateNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.DateNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getDateNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +300,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Date.
+     *
+     * @param Date the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Date" target="_top">.NET documentation</a>
+     */
     public void setDate(NetObject Date) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +317,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnumeratorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.EnumeratorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getEnumeratorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +339,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enumerator.
+     *
+     * @param Enumerator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Enumerator" target="_top">.NET documentation</a>
+     */
     public void setEnumerator(NetObject Enumerator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +356,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +378,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Error.
+     *
+     * @param Error the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Error" target="_top">.NET documentation</a>
+     */
     public void setError(NetObject Error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +395,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EvalErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.EvalErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getEvalErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +417,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EvalError.
+     *
+     * @param EvalError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.EvalError" target="_top">.NET documentation</a>
+     */
     public void setEvalError(NetObject EvalError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +434,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FunctionNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.FunctionNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getFunctionNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +456,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Function.
+     *
+     * @param Function the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Function" target="_top">.NET documentation</a>
+     */
     public void setFunction(NetObject Function) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +473,22 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MathNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.MathNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getMathNewLenientGlobalObject() throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +504,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Math.
+     *
+     * @param Math the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Math" target="_top">.NET documentation</a>
+     */
     public void setMath(NetObject Math) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +521,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.NumberNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getNumberNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +543,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Number.
+     *
+     * @param Number the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Number" target="_top">.NET documentation</a>
+     */
     public void setNumber(NetObject Number) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +560,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ObjectNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getObjectNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +582,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Object.
+     *
+     * @param Object the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.Object" target="_top">.NET documentation</a>
+     */
     public void setObject(NetObject Object) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +599,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RangeErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.RangeErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getRangeErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +621,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RangeError.
+     *
+     * @param RangeError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.RangeError" target="_top">.NET documentation</a>
+     */
     public void setRangeError(NetObject RangeError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -458,6 +638,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ReferenceErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getReferenceErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +660,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferenceError.
+     *
+     * @param ReferenceError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.ReferenceError" target="_top">.NET documentation</a>
+     */
     public void setReferenceError(NetObject ReferenceError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +677,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegExpNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.RegExpNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getRegExpNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +699,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RegExp.
+     *
+     * @param RegExp the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.RegExp" target="_top">.NET documentation</a>
+     */
     public void setRegExp(NetObject RegExp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -508,6 +716,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.StringNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getStringNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +738,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property String.
+     *
+     * @param String the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.String" target="_top">.NET documentation</a>
+     */
     public void setString(NetObject String) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +755,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyntaxErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.SyntaxErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getSyntaxErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +777,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SyntaxError.
+     *
+     * @param SyntaxError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.SyntaxError" target="_top">.NET documentation</a>
+     */
     public void setSyntaxError(NetObject SyntaxError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +794,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.TypeErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getTypeErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -573,6 +816,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeError.
+     *
+     * @param TypeError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.TypeError" target="_top">.NET documentation</a>
+     */
     public void setTypeError(NetObject TypeError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +833,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property URIErrorNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.URIErrorNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getURIErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +855,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property URIError.
+     *
+     * @param URIError the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.URIError" target="_top">.NET documentation</a>
+     */
     public void setURIError(NetObject URIError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +872,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VBArrayNewLenientGlobalObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.VBArrayNewLenientGlobalObject" target="_top">.NET documentation</a>
+     */
     public NetObject getVBArrayNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +894,13 @@ public class LenientGlobalObject extends microsoft.jscript.GlobalObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VBArray.
+     *
+     * @param VBArray the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.LenientGlobalObject.VBArray" target="_top">.NET documentation</a>
+     */
     public void setVBArray(NetObject VBArray) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

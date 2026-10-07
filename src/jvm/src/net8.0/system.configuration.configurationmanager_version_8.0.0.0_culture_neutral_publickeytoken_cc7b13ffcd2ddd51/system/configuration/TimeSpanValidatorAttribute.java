@@ -101,7 +101,10 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TimeSpanValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TimeSpanValidatorAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExcludeRange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.ExcludeRange" target="_top">.NET documentation</a>
+     */
     public boolean getExcludeRange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExcludeRange.
+     *
+     * @param ExcludeRange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.ExcludeRange" target="_top">.NET documentation</a>
+     */
     public void setExcludeRange(boolean ExcludeRange) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxValueString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MaxValueString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMaxValueString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,26 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxValueString.
+     *
+     * @param MaxValueString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MaxValueString" target="_top">.NET documentation</a>
+     */
     public void setMaxValueString(java.lang.String MaxValueString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +264,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinValueString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MinValueString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMinValueString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +285,26 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinValueString.
+     *
+     * @param MinValueString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MinValueString" target="_top">.NET documentation</a>
+     */
     public void setMinValueString(java.lang.String MinValueString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +315,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MaxValue" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMaxValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +337,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxValue.
+     *
+     * @param MaxValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MaxValue" target="_top">.NET documentation</a>
+     */
     public void setMaxValue(TimeSpan MaxValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +354,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MinValue" target="_top">.NET documentation</a>
+     */
     public TimeSpan getMinValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +376,13 @@ public class TimeSpanValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinValue.
+     *
+     * @param MinValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.TimeSpanValidatorAttribute.MinValue" target="_top">.NET documentation</a>
+     */
     public void setMinValue(TimeSpan MinValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

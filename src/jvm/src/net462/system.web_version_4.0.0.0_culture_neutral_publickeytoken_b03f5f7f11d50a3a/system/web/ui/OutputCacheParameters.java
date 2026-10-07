@@ -99,7 +99,10 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OutputCacheParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class OutputCacheParameters extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public OutputCacheParameters() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class OutputCacheParameters extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enabled.
+     *
+     * @param Enabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.Enabled" target="_top">.NET documentation</a>
+     */
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NoStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.NoStore" target="_top">.NET documentation</a>
+     */
     public boolean getNoStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NoStore.
+     *
+     * @param NoStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.NoStore" target="_top">.NET documentation</a>
+     */
     public void setNoStore(boolean NoStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Duration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.Duration" target="_top">.NET documentation</a>
+     */
     public int getDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +296,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Duration.
+     *
+     * @param Duration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.Duration" target="_top">.NET documentation</a>
+     */
     public void setDuration(int Duration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +313,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheProfile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.CacheProfile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCacheProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +334,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheProfile.
+     *
+     * @param CacheProfile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.CacheProfile" target="_top">.NET documentation</a>
+     */
     public void setCacheProfile(java.lang.String CacheProfile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +351,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SqlDependency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.SqlDependency" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSqlDependency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +372,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SqlDependency.
+     *
+     * @param SqlDependency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.SqlDependency" target="_top">.NET documentation</a>
+     */
     public void setSqlDependency(java.lang.String SqlDependency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +389,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByContentEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByContentEncoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByContentEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +410,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByContentEncoding.
+     *
+     * @param VaryByContentEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByContentEncoding" target="_top">.NET documentation</a>
+     */
     public void setVaryByContentEncoding(java.lang.String VaryByContentEncoding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +427,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByControl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +448,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByControl.
+     *
+     * @param VaryByControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByControl" target="_top">.NET documentation</a>
+     */
     public void setVaryByControl(java.lang.String VaryByControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +465,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByCustom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByCustom" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByCustom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +486,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByCustom.
+     *
+     * @param VaryByCustom the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByCustom" target="_top">.NET documentation</a>
+     */
     public void setVaryByCustom(java.lang.String VaryByCustom) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +503,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByHeader" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +524,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByHeader.
+     *
+     * @param VaryByHeader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByHeader" target="_top">.NET documentation</a>
+     */
     public void setVaryByHeader(java.lang.String VaryByHeader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +541,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByParam.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByParam" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByParam() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +562,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByParam.
+     *
+     * @param VaryByParam the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.VaryByParam" target="_top">.NET documentation</a>
+     */
     public void setVaryByParam(java.lang.String VaryByParam) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +579,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.Location" target="_top">.NET documentation</a>
+     */
     public OutputCacheLocation getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +601,13 @@ public class OutputCacheParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Location.
+     *
+     * @param Location the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.OutputCacheParameters.Location" target="_top">.NET documentation</a>
+     */
     public void setLocation(OutputCacheLocation Location) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

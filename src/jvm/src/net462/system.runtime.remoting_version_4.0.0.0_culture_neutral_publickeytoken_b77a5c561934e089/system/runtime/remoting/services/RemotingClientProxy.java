@@ -99,7 +99,10 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemotingClientProxy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowAutoRedirect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.AllowAutoRedirect" target="_top">.NET documentation</a>
+     */
     public boolean getAllowAutoRedirect() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowAutoRedirect.
+     *
+     * @param AllowAutoRedirect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.AllowAutoRedirect" target="_top">.NET documentation</a>
+     */
     public void setAllowAutoRedirect(boolean AllowAutoRedirect) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,13 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableCookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.EnableCookies" target="_top">.NET documentation</a>
+     */
     public boolean getEnableCookies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +220,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableCookies.
+     *
+     * @param EnableCookies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.EnableCookies" target="_top">.NET documentation</a>
+     */
     public void setEnableCookies(boolean EnableCookies) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +238,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreAuthenticate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public boolean getPreAuthenticate() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +260,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreAuthenticate.
+     *
+     * @param PreAuthenticate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public void setPreAuthenticate(boolean PreAuthenticate) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +278,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyPort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.ProxyPort" target="_top">.NET documentation</a>
+     */
     public int getProxyPort() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +326,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyPort.
+     *
+     * @param ProxyPort the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.ProxyPort" target="_top">.NET documentation</a>
+     */
     public void setProxyPort(int ProxyPort) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +344,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Timeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Timeout" target="_top">.NET documentation</a>
+     */
     public int getTimeout() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +392,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Timeout.
+     *
+     * @param Timeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Timeout" target="_top">.NET documentation</a>
+     */
     public void setTimeout(int Timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +410,13 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Cookies" target="_top">.NET documentation</a>
+     */
     public NetObject getCookies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +432,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Domain.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Domain" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDomain() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +454,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Domain.
+     *
+     * @param Domain the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Domain" target="_top">.NET documentation</a>
+     */
     public void setDomain(java.lang.String Domain) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +472,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Password.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Password" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPassword() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +494,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Password.
+     *
+     * @param Password the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Password" target="_top">.NET documentation</a>
+     */
     public void setPassword(java.lang.String Password) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +512,13 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +533,18 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Path.
+     *
+     * @param Path the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Path" target="_top">.NET documentation</a>
+     */
     public void setPath(java.lang.String Path) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.FormatException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +555,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProxyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.ProxyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProxyName() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +577,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProxyName.
+     *
+     * @param ProxyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.ProxyName" target="_top">.NET documentation</a>
+     */
     public void setProxyName(java.lang.String ProxyName) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +595,13 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Url.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Url" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +616,22 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Url.
+     *
+     * @param Url the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.runtime.remoting.RemotingException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Url" target="_top">.NET documentation</a>
+     */
     public void setUrl(java.lang.String Url) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +642,13 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserAgent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.UserAgent" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserAgent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +663,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserAgent.
+     *
+     * @param UserAgent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.UserAgent" target="_top">.NET documentation</a>
+     */
     public void setUserAgent(java.lang.String UserAgent) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +681,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Username.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Username" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUsername() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +703,14 @@ public class RemotingClientProxy extends system.componentmodel.Component  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Username.
+     *
+     * @param Username the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Services.RemotingClientProxy.Username" target="_top">.NET documentation</a>
+     */
     public void setUsername(java.lang.String Username) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

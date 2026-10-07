@@ -99,7 +99,10 @@ public class ScaffoldTableAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ScaffoldTableAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ScaffoldTableAttribute extends system.Attribute  {
     public ScaffoldTableAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param scaffold the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ScaffoldTableAttribute(boolean scaffold) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ScaffoldTableAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Scaffold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold" target="_top">.NET documentation</a>
+     */
     public boolean getScaffold() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ScaffoldTableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scaffold.
+     *
+     * @param Scaffold the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold" target="_top">.NET documentation</a>
+     */
     public void setScaffold(boolean Scaffold) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

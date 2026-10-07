@@ -102,7 +102,10 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Matrix3x2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,18 @@ public class Matrix3x2 extends system.ValueType  {
     public Matrix3x2() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param m11 the argument of type {@code Single}
+     * @param m12 the argument of type {@code Single}
+     * @param m21 the argument of type {@code Single}
+     * @param m22 the argument of type {@code Single}
+     * @param m31 the argument of type {@code Single}
+     * @param m32 the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.-ctor" target="_top">.NET documentation</a>
+     */
     public Matrix3x2(Single m11, Single m12, Single m21, Single m22, Single m31, Single m32) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +182,14 @@ public class Matrix3x2 extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Matrix3x2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Matrix3x2 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +204,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invert.
+     *
+     * @param matrix the argument of type {@code Matrix3x2}
+     * @param result the argument of type {@code JCORefOut<Matrix3x2>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Invert" target="_top">.NET documentation</a>
+     */
     public static boolean Invert(Matrix3x2 matrix, JCORefOut<Matrix3x2> result) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +227,13 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDeterminant.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.GetDeterminant" target="_top">.NET documentation</a>
+     */
     public Single GetDeterminant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +249,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value1 the argument of type {@code Matrix3x2}
+     * @param value2 the argument of type {@code Matrix3x2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Add" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 Add(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +273,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotation.
+     *
+     * @param radians the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateRotation" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateRotation(Single radians) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -240,6 +297,16 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateRotation.
+     *
+     * @param radians the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateRotation" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -255,6 +322,14 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scale the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateScale(Single scale) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -270,6 +345,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param xScale the argument of type {@code Single}
+     * @param yScale the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateScale(Single xScale, Single yScale) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -285,6 +369,16 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param xScale the argument of type {@code Single}
+     * @param yScale the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +394,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scale the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -315,6 +418,14 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scales the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateScale(Vector2 scales) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +441,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateScale.
+     *
+     * @param scales the argument of type {@code Vector2}
+     * @param centerPoint the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateScale" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -345,6 +465,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSkew.
+     *
+     * @param radiansX the argument of type {@code Single}
+     * @param radiansY the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateSkew" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -360,6 +489,16 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateSkew.
+     *
+     * @param radiansX the argument of type {@code Single}
+     * @param radiansY the argument of type {@code Single}
+     * @param centerPoint the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateSkew" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -375,6 +514,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTranslation.
+     *
+     * @param xPosition the argument of type {@code Single}
+     * @param yPosition the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateTranslation" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateTranslation(Single xPosition, Single yPosition) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -390,6 +538,14 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTranslation.
+     *
+     * @param position the argument of type {@code Vector2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.CreateTranslation" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 CreateTranslation(Vector2 position) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -405,6 +561,16 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param matrix1 the argument of type {@code Matrix3x2}
+     * @param matrix2 the argument of type {@code Matrix3x2}
+     * @param amount the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Lerp" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 Lerp(Matrix3x2 matrix1, Matrix3x2 matrix2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +586,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param value1 the argument of type {@code Matrix3x2}
+     * @param value2 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Multiply" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 Multiply(Matrix3x2 value1, Single value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -435,6 +610,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param value1 the argument of type {@code Matrix3x2}
+     * @param value2 the argument of type {@code Matrix3x2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Multiply" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 Multiply(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -450,6 +634,14 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param value the argument of type {@code Matrix3x2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Negate" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 Negate(Matrix3x2 value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -465,6 +657,15 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param value1 the argument of type {@code Matrix3x2}
+     * @param value2 the argument of type {@code Matrix3x2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Subtract" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 Subtract(Matrix3x2 value1, Matrix3x2 value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -484,6 +685,13 @@ public class Matrix3x2 extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.IsIdentity" target="_top">.NET documentation</a>
+     */
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +706,13 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Identity" target="_top">.NET documentation</a>
+     */
     public static Matrix3x2 getIdentity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -513,6 +728,13 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Translation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Translation" target="_top">.NET documentation</a>
+     */
     public Vector2 getTranslation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -528,6 +750,13 @@ public class Matrix3x2 extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Translation.
+     *
+     * @param Translation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Matrix3x2.Translation" target="_top">.NET documentation</a>
+     */
     public void setTranslation(Vector2 Translation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

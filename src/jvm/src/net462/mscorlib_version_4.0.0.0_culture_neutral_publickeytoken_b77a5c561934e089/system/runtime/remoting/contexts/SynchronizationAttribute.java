@@ -104,7 +104,10 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SynchronizationAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SynchronizationAttribute() throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,14 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param reEntrant the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SynchronizationAttribute(boolean reEntrant) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +189,14 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flag the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SynchronizationAttribute(int flag) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +207,15 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flag the argument of type {@code int}
+     * @param reEntrant the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SynchronizationAttribute(int flag, boolean reEntrant) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +230,17 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsContextOK.
+     *
+     * @param ctx the argument of type {@code Context}
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.IsContextOK" target="_top">.NET documentation</a>
+     */
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +255,29 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Invokes the .NET member GetClientContextSink.
+     *
+     * @param nextSink the argument of type {@code IMessageSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.GetClientContextSink" target="_top">.NET documentation</a>
+     */
     public IMessageSink GetClientContextSink(IMessageSink nextSink) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +293,29 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Invokes the .NET member GetServerContextSink.
+     *
+     * @param nextSink the argument of type {@code IMessageSink}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.GetServerContextSink" target="_top">.NET documentation</a>
+     */
     public IMessageSink GetServerContextSink(IMessageSink nextSink) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +331,13 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesForNewContext.
+     *
+     * @param ctorMsg the argument of type {@code IConstructionCallMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.GetPropertiesForNewContext" target="_top">.NET documentation</a>
+     */
     public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +352,13 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReEntrant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.IsReEntrant" target="_top">.NET documentation</a>
+     */
     public boolean getIsReEntrant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +373,13 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property Locked.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.Locked" target="_top">.NET documentation</a>
+     */
     public boolean getLocked() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +394,13 @@ public class SynchronizationAttribute extends system.runtime.remoting.contexts.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property Locked.
+     *
+     * @param Locked the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.SynchronizationAttribute.Locked" target="_top">.NET documentation</a>
+     */
     public void setLocked(boolean Locked) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

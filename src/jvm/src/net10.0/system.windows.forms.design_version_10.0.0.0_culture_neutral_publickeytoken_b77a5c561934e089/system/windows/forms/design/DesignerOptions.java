@@ -99,7 +99,10 @@ public class DesignerOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DesignerOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class DesignerOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnableInSituEditing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.EnableInSituEditing" target="_top">.NET documentation</a>
+     */
     public boolean getEnableInSituEditing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableInSituEditing.
+     *
+     * @param EnableInSituEditing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.EnableInSituEditing" target="_top">.NET documentation</a>
+     */
     public void setEnableInSituEditing(boolean EnableInSituEditing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectBoundSmartTagAutoShow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.ObjectBoundSmartTagAutoShow" target="_top">.NET documentation</a>
+     */
     public boolean getObjectBoundSmartTagAutoShow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ObjectBoundSmartTagAutoShow.
+     *
+     * @param ObjectBoundSmartTagAutoShow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.ObjectBoundSmartTagAutoShow" target="_top">.NET documentation</a>
+     */
     public void setObjectBoundSmartTagAutoShow(boolean ObjectBoundSmartTagAutoShow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowGrid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.ShowGrid" target="_top">.NET documentation</a>
+     */
     public boolean getShowGrid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowGrid.
+     *
+     * @param ShowGrid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.ShowGrid" target="_top">.NET documentation</a>
+     */
     public void setShowGrid(boolean ShowGrid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +287,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SnapToGrid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.SnapToGrid" target="_top">.NET documentation</a>
+     */
     public boolean getSnapToGrid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +308,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SnapToGrid.
+     *
+     * @param SnapToGrid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.SnapToGrid" target="_top">.NET documentation</a>
+     */
     public void setSnapToGrid(boolean SnapToGrid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +325,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseOptimizedCodeGeneration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.UseOptimizedCodeGeneration" target="_top">.NET documentation</a>
+     */
     public boolean getUseOptimizedCodeGeneration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +346,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseOptimizedCodeGeneration.
+     *
+     * @param UseOptimizedCodeGeneration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.UseOptimizedCodeGeneration" target="_top">.NET documentation</a>
+     */
     public void setUseOptimizedCodeGeneration(boolean UseOptimizedCodeGeneration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +363,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSmartTags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.UseSmartTags" target="_top">.NET documentation</a>
+     */
     public boolean getUseSmartTags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +384,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSmartTags.
+     *
+     * @param UseSmartTags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.UseSmartTags" target="_top">.NET documentation</a>
+     */
     public void setUseSmartTags(boolean UseSmartTags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +401,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSnapLines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.UseSnapLines" target="_top">.NET documentation</a>
+     */
     public boolean getUseSnapLines() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +422,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSnapLines.
+     *
+     * @param UseSnapLines the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.UseSnapLines" target="_top">.NET documentation</a>
+     */
     public void setUseSnapLines(boolean UseSnapLines) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +439,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GridSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.GridSize" target="_top">.NET documentation</a>
+     */
     public Size getGridSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +461,13 @@ public class DesignerOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GridSize.
+     *
+     * @param GridSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.DesignerOptions.GridSize" target="_top">.NET documentation</a>
+     */
     public void setGridSize(Size GridSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

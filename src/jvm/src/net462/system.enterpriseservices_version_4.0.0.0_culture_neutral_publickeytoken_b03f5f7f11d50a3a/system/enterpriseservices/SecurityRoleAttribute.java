@@ -99,7 +99,10 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityRoleAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
     public SecurityRoleAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param role the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityRoleAttribute(java.lang.String role) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,14 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param role the argument of type {@code java.lang.String}
+     * @param everyone the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SecurityRoleAttribute(java.lang.String role, boolean everyone) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +196,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SetEveryoneAccess.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess" target="_top">.NET documentation</a>
+     */
     public boolean getSetEveryoneAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +217,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SetEveryoneAccess.
+     *
+     * @param SetEveryoneAccess the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess" target="_top">.NET documentation</a>
+     */
     public void setSetEveryoneAccess(boolean SetEveryoneAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +234,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +255,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +272,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Role.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.Role" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +293,13 @@ public class SecurityRoleAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Role.
+     *
+     * @param Role the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.SecurityRoleAttribute.Role" target="_top">.NET documentation</a>
+     */
     public void setRole(java.lang.String Role) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

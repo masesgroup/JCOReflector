@@ -103,7 +103,10 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISurrogateSelectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,16 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSurrogate.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code StreamingContext}
+     * @param selector the argument of type {@code JCORefOut<ISurrogateSelector>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISurrogateSelector.GetSurrogate" target="_top">.NET documentation</a>
+     */
     public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> selector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +173,13 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextSelector.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISurrogateSelector.GetNextSelector" target="_top">.NET documentation</a>
+     */
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +195,13 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
         }
     }
 
+    /**
+     * Invokes the .NET member ChainSelector.
+     *
+     * @param selector the argument of type {@code ISurrogateSelector}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ISurrogateSelector.ChainSelector" target="_top">.NET documentation</a>
+     */
     public void ChainSelector(ISurrogateSelector selector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpServerUtilityBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class HttpServerUtilityBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member UrlTokenDecode.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlTokenDecode" target="_top">.NET documentation</a>
+     */
     public byte[] UrlTokenDecode(java.lang.String input) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +190,14 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLastError.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.GetLastError" target="_top">.NET documentation</a>
+     */
     public NetException GetLastError() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +213,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObject.
+     *
+     * @param progID the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.CreateObject" target="_top">.NET documentation</a>
+     */
     public NetObject CreateObject(java.lang.String progID) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +237,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObject.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.CreateObject" target="_top">.NET documentation</a>
+     */
     public NetObject CreateObject(NetType type) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +261,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObjectFromClsid.
+     *
+     * @param clsid the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.CreateObjectFromClsid" target="_top">.NET documentation</a>
+     */
     public NetObject CreateObjectFromClsid(java.lang.String clsid) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +285,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HtmlDecode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.HtmlDecode" target="_top">.NET documentation</a>
+     */
     public java.lang.String HtmlDecode(java.lang.String s) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +308,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HtmlEncode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.HtmlEncode" target="_top">.NET documentation</a>
+     */
     public java.lang.String HtmlEncode(java.lang.String s) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +331,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MapPath.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.MapPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String MapPath(java.lang.String path) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +354,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlDecode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlDecode" target="_top">.NET documentation</a>
+     */
     public java.lang.String UrlDecode(java.lang.String s) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +377,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlEncode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlEncode" target="_top">.NET documentation</a>
+     */
     public java.lang.String UrlEncode(java.lang.String s) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +400,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlPathEncode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlPathEncode" target="_top">.NET documentation</a>
+     */
     public java.lang.String UrlPathEncode(java.lang.String s) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +423,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlTokenEncode.
+     *
+     * @param input the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlTokenEncode" target="_top">.NET documentation</a>
+     */
     public java.lang.String UrlTokenEncode(byte[] input) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +446,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlTokenEncode.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlTokenEncode" target="_top">.NET documentation</a>
+     */
     public java.lang.String UrlTokenEncode(JCORefOut dupParam0) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +469,13 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearError.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.ClearError" target="_top">.NET documentation</a>
+     */
     public void ClearError() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +486,14 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(java.lang.String path) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +504,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param preserveForm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(java.lang.String path, boolean preserveForm) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +523,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param writer the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(java.lang.String path, TextWriter writer) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +542,16 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param writer the argument of type {@code TextWriter}
+     * @param preserveForm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(java.lang.String path, TextWriter writer, boolean preserveForm) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +562,16 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param handler the argument of type {@code IHttpHandler}
+     * @param writer the argument of type {@code TextWriter}
+     * @param preserveForm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(IHttpHandler handler, TextWriter writer, boolean preserveForm) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +582,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HtmlDecode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.HtmlDecode" target="_top">.NET documentation</a>
+     */
     public void HtmlDecode(java.lang.String s, TextWriter output) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +601,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member HtmlEncode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.HtmlEncode" target="_top">.NET documentation</a>
+     */
     public void HtmlEncode(java.lang.String s, TextWriter output) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +620,14 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transfer.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Transfer" target="_top">.NET documentation</a>
+     */
     public void Transfer(java.lang.String path) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +638,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transfer.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param preserveForm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Transfer" target="_top">.NET documentation</a>
+     */
     public void Transfer(java.lang.String path, boolean preserveForm) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +657,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transfer.
+     *
+     * @param handler the argument of type {@code IHttpHandler}
+     * @param preserveForm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.Transfer" target="_top">.NET documentation</a>
+     */
     public void Transfer(IHttpHandler handler, boolean preserveForm) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +676,14 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransferRequest.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.TransferRequest" target="_top">.NET documentation</a>
+     */
     public void TransferRequest(java.lang.String path) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +694,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransferRequest.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param preserveForm the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.TransferRequest" target="_top">.NET documentation</a>
+     */
     public void TransferRequest(java.lang.String path, boolean preserveForm) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +713,17 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransferRequest.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param preserveForm the argument of type {@code boolean}
+     * @param method the argument of type {@code java.lang.String}
+     * @param headers the argument of type {@code NameValueCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.TransferRequest" target="_top">.NET documentation</a>
+     */
     public void TransferRequest(java.lang.String path, boolean preserveForm, java.lang.String method, NameValueCollection headers) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +734,18 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransferRequest.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param preserveForm the argument of type {@code boolean}
+     * @param method the argument of type {@code java.lang.String}
+     * @param headers the argument of type {@code NameValueCollection}
+     * @param preserveUser the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.TransferRequest" target="_top">.NET documentation</a>
+     */
     public void TransferRequest(java.lang.String path, boolean preserveForm, java.lang.String method, NameValueCollection headers, boolean preserveUser) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -500,6 +756,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlDecode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlDecode" target="_top">.NET documentation</a>
+     */
     public void UrlDecode(java.lang.String s, TextWriter output) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +775,15 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UrlEncode.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param output the argument of type {@code TextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.UrlEncode" target="_top">.NET documentation</a>
+     */
     public void UrlEncode(java.lang.String s, TextWriter output) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +798,14 @@ public class HttpServerUtilityBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ScriptTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.ScriptTimeout" target="_top">.NET documentation</a>
+     */
     public int getScriptTimeout() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +846,14 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ScriptTimeout.
+     *
+     * @param ScriptTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.ScriptTimeout" target="_top">.NET documentation</a>
+     */
     public void setScriptTimeout(int ScriptTimeout) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +864,14 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MachineName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpServerUtilityBase.MachineName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMachineName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class MaxLengthAttributeAdapter extends system.web.modelbinding.DataAnnot
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MaxLengthAttributeAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class MaxLengthAttributeAdapter extends system.web.modelbinding.DataAnnot
     public MaxLengthAttributeAdapter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code ModelMetadata}
+     * @param context the argument of type {@code ModelBindingExecutionContext}
+     * @param attribute the argument of type {@code MaxLengthAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.MaxLengthAttributeAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public MaxLengthAttributeAdapter(ModelMetadata metadata, ModelBindingExecutionContext context, MaxLengthAttribute attribute) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

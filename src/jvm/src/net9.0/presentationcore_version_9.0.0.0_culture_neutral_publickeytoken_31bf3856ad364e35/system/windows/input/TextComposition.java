@@ -103,7 +103,10 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextComposition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,30 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
     public TextComposition() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param inputManager the argument of type {@code InputManager}
+     * @param source the argument of type {@code IInputElement}
+     * @param resultText the argument of type {@code java.lang.String}
+     * @param autoComplete the argument of type {@code TextCompositionAutoComplete}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.-ctor" target="_top">.NET documentation</a>
+     */
     public TextComposition(InputManager inputManager, IInputElement source, java.lang.String resultText, TextCompositionAutoComplete autoComplete) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +190,26 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param inputManager the argument of type {@code InputManager}
+     * @param source the argument of type {@code IInputElement}
+     * @param resultText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.-ctor" target="_top">.NET documentation</a>
+     */
     public TextComposition(InputManager inputManager, IInputElement source, java.lang.String resultText) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +225,22 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +255,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompositionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.CompositionText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCompositionText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +276,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompositionText.
+     *
+     * @param CompositionText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.CompositionText" target="_top">.NET documentation</a>
+     */
     public void setCompositionText(java.lang.String CompositionText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +293,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property ControlText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.ControlText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getControlText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +314,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlText.
+     *
+     * @param ControlText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.ControlText" target="_top">.NET documentation</a>
+     */
     public void setControlText(java.lang.String ControlText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +331,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemCompositionText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.SystemCompositionText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSystemCompositionText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +352,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Sets the value of the .NET property SystemCompositionText.
+     *
+     * @param SystemCompositionText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.SystemCompositionText" target="_top">.NET documentation</a>
+     */
     public void setSystemCompositionText(java.lang.String SystemCompositionText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +369,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.SystemText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSystemText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +390,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Sets the value of the .NET property SystemText.
+     *
+     * @param SystemText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.SystemText" target="_top">.NET documentation</a>
+     */
     public void setSystemText(java.lang.String SystemText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +407,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +428,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +445,13 @@ public class TextComposition extends system.windows.threading.DispatcherObject  
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoComplete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TextComposition.AutoComplete" target="_top">.NET documentation</a>
+     */
     public TextCompositionAutoComplete getAutoComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewSortCompareEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
     public DataGridViewSortCompareEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataGridViewColumn the argument of type {@code DataGridViewColumn}
+     * @param cellValue1 the argument of type {@code NetObject}
+     * @param cellValue2 the argument of type {@code NetObject}
+     * @param rowIndex1 the argument of type {@code int}
+     * @param rowIndex2 the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewSortCompareEventArgs(DataGridViewColumn dataGridViewColumn, NetObject cellValue1, NetObject cellValue2, int rowIndex1, int rowIndex2) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +183,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RowIndex1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex1" target="_top">.NET documentation</a>
+     */
     public int getRowIndex1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +230,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.RowIndex2" target="_top">.NET documentation</a>
+     */
     public int getRowIndex2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +277,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.SortResult" target="_top">.NET documentation</a>
+     */
     public int getSortResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +324,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
 
+    /**
+     * Sets the value of the .NET property SortResult.
+     *
+     * @param SortResult the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.SortResult" target="_top">.NET documentation</a>
+     */
     public void setSortResult(int SortResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +341,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellValue1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue1" target="_top">.NET documentation</a>
+     */
     public NetObject getCellValue1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +363,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellValue2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.CellValue2" target="_top">.NET documentation</a>
+     */
     public NetObject getCellValue2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +385,13 @@ public class DataGridViewSortCompareEventArgs extends system.componentmodel.Hand
         }
     }
 
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewSortCompareEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public DataGridViewColumn getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class ITimerImplementation extends NetObject implements ITimer {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITimerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class ITimerImplementation extends NetObject implements ITimer {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Change.
+     *
+     * @param dueTime the argument of type {@code TimeSpan}
+     * @param period the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ITimer.Change" target="_top">.NET documentation</a>
+     */
     public boolean Change(TimeSpan dueTime, TimeSpan period) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +172,13 @@ public class ITimerImplementation extends NetObject implements ITimer {
         }
     }
 
+    /**
+     * Invokes the .NET member DisposeAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ITimer.DisposeAsync" target="_top">.NET documentation</a>
+     */
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,12 @@ public class ITimerImplementation extends NetObject implements ITimer {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ITimer.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRawElementProviderFragmentRootImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRuntimeId.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetRuntimeId" target="_top">.NET documentation</a>
+     */
     public int[] GetRuntimeId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetPatternProvider.
+     *
+     * @param patternId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetPatternProvider" target="_top">.NET documentation</a>
+     */
     public NetObject GetPatternProvider(int patternId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyValue.
+     *
+     * @param propertyId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetPropertyValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetPropertyValue(int propertyId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +228,15 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member ElementProviderFromPoint.
+     *
+     * @param x the argument of type {@code double}
+     * @param y the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.ElementProviderFromPoint" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderFragment ElementProviderFromPoint(double x, double y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +252,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetFocus.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetFocus" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderFragment GetFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +274,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member Navigate.
+     *
+     * @param direction the argument of type {@code NavigateDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.Navigate" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderFragment Navigate(NavigateDirection direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +297,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member GetEmbeddedFragmentRoots.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetEmbeddedFragmentRoots" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple[] GetEmbeddedFragmentRoots() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +325,12 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Invokes the .NET member SetFocus.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.SetFocus" target="_top">.NET documentation</a>
+     */
     public void SetFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +345,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FragmentRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.FragmentRoot" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderFragmentRoot getFragmentRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +367,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostRawElementProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.HostRawElementProvider" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +389,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.ProviderOptions" target="_top">.NET documentation</a>
+     */
     public ProviderOptions getProviderOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +411,13 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
+    /**
+     * Gets the value of the .NET property BoundingRectangle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.BoundingRectangle" target="_top">.NET documentation</a>
+     */
     public Rect getBoundingRectangle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

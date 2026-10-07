@@ -103,7 +103,10 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InvokeDelegate(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeDelegate.-ctor" target="_top">.NET documentation</a>
+     */
     public InvokeDelegate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeDelegate.Default" target="_top">.NET documentation</a>
+     */
     public Activity getDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,13 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Default.
+     *
+     * @param Default the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeDelegate.Default" target="_top">.NET documentation</a>
+     */
     public void setDefault(Activity Default) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Delegate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeDelegate.Delegate" target="_top">.NET documentation</a>
+     */
     public ActivityDelegate getDelegate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,13 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Delegate.
+     *
+     * @param Delegate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeDelegate.Delegate" target="_top">.NET documentation</a>
+     */
     public void setDelegate(ActivityDelegate Delegate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +257,13 @@ public class InvokeDelegate extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DelegateArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeDelegate.DelegateArguments" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getDelegateArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

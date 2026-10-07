@@ -98,7 +98,10 @@ public class IDesignerOptionServiceImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerOptionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IDesignerOptionServiceImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetOptionValue.
+     *
+     * @param pageName the argument of type {@code java.lang.String}
+     * @param valueName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerOptionService.GetOptionValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetOptionValue(java.lang.String pageName, java.lang.String valueName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,15 @@ public class IDesignerOptionServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptionValue.
+     *
+     * @param pageName the argument of type {@code java.lang.String}
+     * @param valueName the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerOptionService.SetOptionValue" target="_top">.NET documentation</a>
+     */
     public void SetOptionValue(java.lang.String pageName, java.lang.String valueName, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

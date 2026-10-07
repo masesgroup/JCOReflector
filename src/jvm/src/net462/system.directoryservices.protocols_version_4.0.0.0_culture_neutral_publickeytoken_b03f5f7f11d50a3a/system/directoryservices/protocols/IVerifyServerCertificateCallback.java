@@ -53,5 +53,12 @@ import system.security.cryptography.x509certificates.X509Certificate;
  * @version 2.0.0.0
  */
 public interface IVerifyServerCertificateCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param connection the .NET argument of type {@code System.DirectoryServices.Protocols.LdapConnection}
+     * @param certificate the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Certificate}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(LdapConnection connection, X509Certificate certificate);
 }

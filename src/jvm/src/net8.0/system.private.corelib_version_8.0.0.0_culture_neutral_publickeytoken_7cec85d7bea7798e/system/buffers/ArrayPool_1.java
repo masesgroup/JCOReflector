@@ -98,7 +98,10 @@ public class ArrayPool_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayPool_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ArrayPool_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Methods section
     
+/**
+ * Invokes the .NET member Rent.
+ *
+ * @param minimumLength the argument of type {@code int}
+ * @return the value returned by the .NET member
+ * @throws Throwable if the call fails in the bridge or in the CLR
+ * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ArrayPool-1.Rent" target="_top">.NET documentation</a>
+ */
 public T[] Rent(int minimumLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,14 @@ public T[] Rent(int minimumLength) throws Throwable {
             throw translateException(jcne);
         }
     }
+    /**
+     * Invokes the .NET member Return.
+     *
+     * @param array the argument of type {@code T[]}
+     * @param clearArray the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ArrayPool-1.Return" target="_top">.NET documentation</a>
+     */
     public void Return(T[] array, boolean clearArray) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

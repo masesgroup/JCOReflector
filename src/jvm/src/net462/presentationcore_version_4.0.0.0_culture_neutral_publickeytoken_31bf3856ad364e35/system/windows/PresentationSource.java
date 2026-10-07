@@ -107,7 +107,10 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PresentationSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,19 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member FromDependencyObject.
+     *
+     * @param dependencyObject the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.FromDependencyObject" target="_top">.NET documentation</a>
+     */
     public static PresentationSource FromDependencyObject(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +191,19 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Invokes the .NET member FromVisual.
+     *
+     * @param visual the argument of type {@code Visual}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.FromVisual" target="_top">.NET documentation</a>
+     */
     public static PresentationSource FromVisual(Visual visual) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +219,27 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Invokes the .NET member AddSourceChangedHandler.
+     *
+     * @param element the argument of type {@code IInputElement}
+     * @param handler the argument of type {@code SourceChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.AddSourceChangedHandler" target="_top">.NET documentation</a>
+     */
     public static void AddSourceChangedHandler(IInputElement element, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +250,27 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveSourceChangedHandler.
+     *
+     * @param e the argument of type {@code IInputElement}
+     * @param handler the argument of type {@code SourceChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.RemoveSourceChangedHandler" target="_top">.NET documentation</a>
+     */
     public static void RemoveSourceChangedHandler(IInputElement e, SourceChangedEventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +285,13 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDisposed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.IsDisposed" target="_top">.NET documentation</a>
+     */
     public boolean getIsDisposed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +306,17 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentSources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.CurrentSources" target="_top">.NET documentation</a>
+     */
     public static IEnumerable getCurrentSources() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +332,13 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompositionTarget.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.CompositionTarget" target="_top">.NET documentation</a>
+     */
     public CompositionTarget getCompositionTarget() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +354,13 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootVisual.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.RootVisual" target="_top">.NET documentation</a>
+     */
     public Visual getRootVisual() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +376,13 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootVisual.
+     *
+     * @param RootVisual the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PresentationSource.RootVisual" target="_top">.NET documentation</a>
+     */
     public void setRootVisual(Visual RootVisual) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +398,13 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addContentRendered.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +415,13 @@ public class PresentationSource extends system.windows.threading.DispatcherObjec
         }
     }
 
+    /**
+     * Invokes the .NET member removeContentRendered.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class ForestTrustRelationshipCollision extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ForestTrustRelationshipCollision(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class ForestTrustRelationshipCollision extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DomainCollisionOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.DomainCollisionOption" target="_top">.NET documentation</a>
+     */
     public DomainCollisionOptions getDomainCollisionOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class ForestTrustRelationshipCollision extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CollisionType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.CollisionType" target="_top">.NET documentation</a>
+     */
     public ForestTrustCollisionType getCollisionType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class ForestTrustRelationshipCollision extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopLevelNameCollisionOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.TopLevelNameCollisionOption" target="_top">.NET documentation</a>
+     */
     public TopLevelNameCollisionOptions getTopLevelNameCollisionOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class ForestTrustRelationshipCollision extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CollisionRecord.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.CollisionRecord" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCollisionRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -155,7 +155,10 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttributeCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -177,6 +180,13 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param builder the argument of type {@code AttributeCallbackBuilder}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(AttributeCallbackBuilder builder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,7 +198,9 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param builder the .NET argument of type {@code System.Activities.Presentation.Metadata.AttributeCallbackBuilder}
      */
     public void Invoke(AttributeCallbackBuilder builder) {
     }

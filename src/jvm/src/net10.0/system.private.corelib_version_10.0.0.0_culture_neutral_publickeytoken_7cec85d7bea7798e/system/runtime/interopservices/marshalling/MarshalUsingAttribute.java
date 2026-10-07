@@ -99,7 +99,10 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MarshalUsingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class MarshalUsingAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public MarshalUsingAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param nativeType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public MarshalUsingAttribute(NetType nativeType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConstantElementCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.ConstantElementCount" target="_top">.NET documentation</a>
+     */
     public int getConstantElementCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +237,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConstantElementCount.
+     *
+     * @param ConstantElementCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.ConstantElementCount" target="_top">.NET documentation</a>
+     */
     public void setConstantElementCount(int ConstantElementCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +254,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementIndirectionDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.ElementIndirectionDepth" target="_top">.NET documentation</a>
+     */
     public int getElementIndirectionDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +301,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ElementIndirectionDepth.
+     *
+     * @param ElementIndirectionDepth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.ElementIndirectionDepth" target="_top">.NET documentation</a>
+     */
     public void setElementIndirectionDepth(int ElementIndirectionDepth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +318,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CountElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.CountElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCountElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +339,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CountElementName.
+     *
+     * @param CountElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.CountElementName" target="_top">.NET documentation</a>
+     */
     public void setCountElementName(java.lang.String CountElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +356,13 @@ public class MarshalUsingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NativeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.MarshalUsingAttribute.NativeType" target="_top">.NET documentation</a>
+     */
     public NetType getNativeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

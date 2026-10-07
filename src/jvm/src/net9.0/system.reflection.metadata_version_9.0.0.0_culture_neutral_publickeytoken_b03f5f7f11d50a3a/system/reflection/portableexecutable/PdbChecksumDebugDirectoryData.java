@@ -100,7 +100,10 @@ public class PdbChecksumDebugDirectoryData extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PdbChecksumDebugDirectoryData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class PdbChecksumDebugDirectoryData extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Checksum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PdbChecksumDebugDirectoryData.Checksum" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getChecksum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class PdbChecksumDebugDirectoryData extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlgorithmName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PdbChecksumDebugDirectoryData.AlgorithmName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAlgorithmName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

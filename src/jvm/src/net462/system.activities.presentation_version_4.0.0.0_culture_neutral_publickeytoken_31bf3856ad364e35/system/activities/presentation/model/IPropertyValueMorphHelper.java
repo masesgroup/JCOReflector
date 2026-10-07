@@ -53,5 +53,12 @@ import system.activities.presentation.model.ModelProperty;
  * @version 2.0.0.0
  */
 public interface IPropertyValueMorphHelper {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param originalValue the .NET argument of type {@code System.Activities.Presentation.Model.ModelItem}
+     * @param newModelProperty the .NET argument of type {@code System.Activities.Presentation.Model.ModelProperty}
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke(ModelItem originalValue, ModelProperty newModelProperty);
 }

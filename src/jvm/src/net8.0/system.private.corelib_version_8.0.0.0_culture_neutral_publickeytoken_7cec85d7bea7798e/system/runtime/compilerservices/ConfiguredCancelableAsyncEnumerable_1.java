@@ -101,7 +101,10 @@ public class ConfiguredCancelableAsyncEnumerable_1<T extends IJCOBridgeReflected
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConfiguredCancelableAsyncEnumerable_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class ConfiguredCancelableAsyncEnumerable_1<T extends IJCOBridgeReflected
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ConfigureAwait.
+     *
+     * @param continueOnCapturedContext the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable-1.ConfigureAwait" target="_top">.NET documentation</a>
+     */
     public ConfiguredCancelableAsyncEnumerable_1 ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,14 @@ public class ConfiguredCancelableAsyncEnumerable_1<T extends IJCOBridgeReflected
         }
     }
 
+    /**
+     * Invokes the .NET member WithCancellation.
+     *
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable-1.WithCancellation" target="_top">.NET documentation</a>
+     */
     public ConfiguredCancelableAsyncEnumerable_1 WithCancellation(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

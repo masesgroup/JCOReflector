@@ -98,7 +98,10 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QuicReceiveWindowSizes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.-ctor" target="_top">.NET documentation</a>
+     */
     public QuicReceiveWindowSizes() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.Connection" target="_top">.NET documentation</a>
+     */
     public int getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +219,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Connection.
+     *
+     * @param Connection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.Connection" target="_top">.NET documentation</a>
+     */
     public void setConnection(int Connection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +236,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocallyInitiatedBidirectionalStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.LocallyInitiatedBidirectionalStream" target="_top">.NET documentation</a>
+     */
     public int getLocallyInitiatedBidirectionalStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +283,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocallyInitiatedBidirectionalStream.
+     *
+     * @param LocallyInitiatedBidirectionalStream the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.LocallyInitiatedBidirectionalStream" target="_top">.NET documentation</a>
+     */
     public void setLocallyInitiatedBidirectionalStream(int LocallyInitiatedBidirectionalStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +300,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemotelyInitiatedBidirectionalStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.RemotelyInitiatedBidirectionalStream" target="_top">.NET documentation</a>
+     */
     public int getRemotelyInitiatedBidirectionalStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +347,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemotelyInitiatedBidirectionalStream.
+     *
+     * @param RemotelyInitiatedBidirectionalStream the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.RemotelyInitiatedBidirectionalStream" target="_top">.NET documentation</a>
+     */
     public void setRemotelyInitiatedBidirectionalStream(int RemotelyInitiatedBidirectionalStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +364,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnidirectionalStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.UnidirectionalStream" target="_top">.NET documentation</a>
+     */
     public int getUnidirectionalStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +411,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnidirectionalStream.
+     *
+     * @param UnidirectionalStream the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicReceiveWindowSizes.UnidirectionalStream" target="_top">.NET documentation</a>
+     */
     public void setUnidirectionalStream(int UnidirectionalStream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

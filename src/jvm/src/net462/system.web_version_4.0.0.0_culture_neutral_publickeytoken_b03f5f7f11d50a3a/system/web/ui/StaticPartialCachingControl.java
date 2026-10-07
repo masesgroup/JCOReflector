@@ -101,7 +101,10 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StaticPartialCachingControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,30 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
     public StaticPartialCachingControl() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ctrlID the argument of type {@code java.lang.String}
+     * @param guid the argument of type {@code java.lang.String}
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param sqlDependency the argument of type {@code java.lang.String}
+     * @param buildMethod the argument of type {@code BuildMethod}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.StaticPartialCachingControl.-ctor" target="_top">.NET documentation</a>
+     */
     public StaticPartialCachingControl(java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +188,32 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ctrlID the argument of type {@code java.lang.String}
+     * @param guid the argument of type {@code java.lang.String}
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param sqlDependency the argument of type {@code java.lang.String}
+     * @param buildMethod the argument of type {@code BuildMethod}
+     * @param providerName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.StaticPartialCachingControl.-ctor" target="_top">.NET documentation</a>
+     */
     public StaticPartialCachingControl(java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod, java.lang.String providerName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +224,29 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ctrlID the argument of type {@code java.lang.String}
+     * @param guid the argument of type {@code java.lang.String}
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param buildMethod the argument of type {@code BuildMethod}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.StaticPartialCachingControl.-ctor" target="_top">.NET documentation</a>
+     */
     public StaticPartialCachingControl(java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +262,29 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildCachedControl.
+     *
+     * @param parent the argument of type {@code Control}
+     * @param ctrlID the argument of type {@code java.lang.String}
+     * @param guid the argument of type {@code java.lang.String}
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param sqlDependency the argument of type {@code java.lang.String}
+     * @param buildMethod the argument of type {@code BuildMethod}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.StaticPartialCachingControl.BuildCachedControl" target="_top">.NET documentation</a>
+     */
     public static void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +295,32 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
         }
     }
 
+    /**
+     * Invokes the .NET member BuildCachedControl.
+     *
+     * @param parent the argument of type {@code Control}
+     * @param ctrlID the argument of type {@code java.lang.String}
+     * @param guid the argument of type {@code java.lang.String}
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param sqlDependency the argument of type {@code java.lang.String}
+     * @param buildMethod the argument of type {@code BuildMethod}
+     * @param providerName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.StaticPartialCachingControl.BuildCachedControl" target="_top">.NET documentation</a>
+     */
     public static void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, BuildMethod buildMethod, java.lang.String providerName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +331,28 @@ public class StaticPartialCachingControl extends system.web.ui.BasePartialCachin
         }
     }
 
+    /**
+     * Invokes the .NET member BuildCachedControl.
+     *
+     * @param parent the argument of type {@code Control}
+     * @param ctrlID the argument of type {@code java.lang.String}
+     * @param guid the argument of type {@code java.lang.String}
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param buildMethod the argument of type {@code BuildMethod}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.StaticPartialCachingControl.BuildCachedControl" target="_top">.NET documentation</a>
+     */
     public static void BuildCachedControl(Control parent, java.lang.String ctrlID, java.lang.String guid, int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, BuildMethod buildMethod) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

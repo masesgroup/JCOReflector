@@ -99,7 +99,10 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapMethodAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapMethodAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,14 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResponseXmlElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.ResponseXmlElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResponseXmlElementName() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,13 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseXmlElementName.
+     *
+     * @param ResponseXmlElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.ResponseXmlElementName" target="_top">.NET documentation</a>
+     */
     public void setResponseXmlElementName(java.lang.String ResponseXmlElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseXmlNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.ResponseXmlNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResponseXmlNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +233,13 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseXmlNamespace.
+     *
+     * @param ResponseXmlNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.ResponseXmlNamespace" target="_top">.NET documentation</a>
+     */
     public void setResponseXmlNamespace(java.lang.String ResponseXmlNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +250,13 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReturnXmlElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.ReturnXmlElementName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getReturnXmlElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +271,13 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReturnXmlElementName.
+     *
+     * @param ReturnXmlElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.ReturnXmlElementName" target="_top">.NET documentation</a>
+     */
     public void setReturnXmlElementName(java.lang.String ReturnXmlElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +288,19 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.SoapAction" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSoapAction() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +315,13 @@ public class SoapMethodAttribute extends system.runtime.remoting.metadata.SoapAt
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapAction.
+     *
+     * @param SoapAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.SoapMethodAttribute.SoapAction" target="_top">.NET documentation</a>
+     */
     public void setSoapAction(java.lang.String SoapAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class DecoderExceptionFallbackBuffer extends system.text.DecoderFallbackB
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DecoderExceptionFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DecoderExceptionFallbackBuffer extends system.text.DecoderFallbackB
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderExceptionFallbackBuffer.-ctor" target="_top">.NET documentation</a>
+     */
     public DecoderExceptionFallbackBuffer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,20 @@ public class DecoderExceptionFallbackBuffer extends system.text.DecoderFallbackB
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param bytesUnknown the argument of type {@code byte[]}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.DecoderFallbackException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderExceptionFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(byte[] bytesUnknown, int index) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.text.DecoderFallbackException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +197,20 @@ public class DecoderExceptionFallbackBuffer extends system.text.DecoderFallbackB
         }
     }
 
+    /**
+     * Invokes the .NET member Fallback.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.text.DecoderFallbackException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderExceptionFallbackBuffer.Fallback" target="_top">.NET documentation</a>
+     */
     public boolean Fallback(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.text.DecoderFallbackException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +225,13 @@ public class DecoderExceptionFallbackBuffer extends system.text.DecoderFallbackB
         }
     }
 
+    /**
+     * Invokes the .NET member MovePrevious.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderExceptionFallbackBuffer.MovePrevious" target="_top">.NET documentation</a>
+     */
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +246,13 @@ public class DecoderExceptionFallbackBuffer extends system.text.DecoderFallbackB
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextChar.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.DecoderExceptionFallbackBuffer.GetNextChar" target="_top">.NET documentation</a>
+     */
     public char GetNextChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

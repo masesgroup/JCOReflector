@@ -108,7 +108,10 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMessageFilterTable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(KeyValuePair_2 item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +175,14 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsKey.
+     *
+     * @param key the argument of type {@code MessageFilter}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.ContainsKey" target="_top">.NET documentation</a>
+     */
     public boolean ContainsKey(MessageFilter key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +197,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingFilter.
+     *
+     * @param message the argument of type {@code Message}
+     * @param filter the argument of type {@code JCORefOut<MessageFilter>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingFilter" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingFilter(Message message, JCORefOut<MessageFilter> filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +220,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingFilter.
+     *
+     * @param messageBuffer the argument of type {@code MessageBuffer}
+     * @param filter the argument of type {@code JCORefOut<MessageFilter>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingFilter" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingFilter(MessageBuffer messageBuffer, JCORefOut<MessageFilter> filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +243,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingFilters.
+     *
+     * @param message the argument of type {@code Message}
+     * @param results the argument of type {@code ICollection_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingFilters" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingFilters(Message message, ICollection_1 results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +266,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingFilters.
+     *
+     * @param messageBuffer the argument of type {@code MessageBuffer}
+     * @param results the argument of type {@code ICollection_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingFilters" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingFilters(MessageBuffer messageBuffer, ICollection_1 results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +289,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingValue.
+     *
+     * @param message the argument of type {@code Message}
+     * @param value the argument of type {@code JCORefOut<TFilterData>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingValue" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingValue(Message message, JCORefOut<TFilterData> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +312,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingValue.
+     *
+     * @param messageBuffer the argument of type {@code MessageBuffer}
+     * @param value the argument of type {@code JCORefOut<TFilterData>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingValue" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingValue(MessageBuffer messageBuffer, JCORefOut<TFilterData> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +335,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingValues.
+     *
+     * @param message the argument of type {@code Message}
+     * @param results the argument of type {@code ICollection_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingValues" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingValues(Message message, ICollection_1 results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +358,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member GetMatchingValues.
+     *
+     * @param messageBuffer the argument of type {@code MessageBuffer}
+     * @param results the argument of type {@code ICollection_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.GetMatchingValues" target="_top">.NET documentation</a>
+     */
     public boolean GetMatchingValues(MessageBuffer messageBuffer, ICollection_1 results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +381,14 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(KeyValuePair_2 item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +403,14 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param key the argument of type {@code MessageFilter}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(MessageFilter key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +425,15 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetValue.
+     *
+     * @param key the argument of type {@code MessageFilter}
+     * @param value the argument of type {@code JCORefOut<TFilterData>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.TryGetValue" target="_top">.NET documentation</a>
+     */
     public boolean TryGetValue(MessageFilter key, JCORefOut<TFilterData> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +448,13 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param item the argument of type {@code KeyValuePair_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Add" target="_top">.NET documentation</a>
+     */
     public void Add(KeyValuePair_2 item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +465,14 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param key the argument of type {@code MessageFilter}
+     * @param value the argument of type {@code TFilterData}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Add" target="_top">.NET documentation</a>
+     */
     public void Add(MessageFilter key, TFilterData value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +483,12 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +499,14 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code KeyValuePair_2[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(KeyValuePair_2[] array, int arrayIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +521,13 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +542,13 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +589,13 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Keys" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +611,13 @@ public class IMessageFilterTable_1Implementation<TFilterData extends IJCOBridgeR
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IMessageFilterTable-1.Values" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

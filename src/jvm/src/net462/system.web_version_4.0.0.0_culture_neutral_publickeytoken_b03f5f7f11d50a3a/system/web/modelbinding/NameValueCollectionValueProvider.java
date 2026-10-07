@@ -101,7 +101,10 @@ public class NameValueCollectionValueProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NameValueCollectionValueProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,22 @@ public class NameValueCollectionValueProvider extends NetObject  {
     public NameValueCollectionValueProvider() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param collection the argument of type {@code NameValueCollection}
+     * @param unvalidatedCollection the argument of type {@code NameValueCollection}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.NameValueCollectionValueProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public NameValueCollectionValueProvider(NameValueCollection collection, NameValueCollection unvalidatedCollection, CultureInfo culture) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +180,19 @@ public class NameValueCollectionValueProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param collection the argument of type {@code NameValueCollection}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.NameValueCollectionValueProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public NameValueCollectionValueProvider(NameValueCollection collection, CultureInfo culture) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +208,19 @@ public class NameValueCollectionValueProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsPrefix.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.NameValueCollectionValueProvider.ContainsPrefix" target="_top">.NET documentation</a>
+     */
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +235,16 @@ public class NameValueCollectionValueProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.NameValueCollectionValueProvider.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +260,17 @@ public class NameValueCollectionValueProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @param skipValidation the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.NameValueCollectionValueProvider.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class VirtualStackFrame extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VirtualStackFrame(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class VirtualStackFrame extends NetObject  {
     public VirtualStackFrame() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code State}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.VirtualStackFrame.-ctor" target="_top">.NET documentation</a>
+     */
     public VirtualStackFrame(State state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,14 @@ public class VirtualStackFrame extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code State}
+     * @param locals the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.VirtualStackFrame.-ctor" target="_top">.NET documentation</a>
+     */
     public VirtualStackFrame(State state, IDictionary_2 locals) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +198,13 @@ public class VirtualStackFrame extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.VirtualStackFrame.State" target="_top">.NET documentation</a>
+     */
     public State getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +220,13 @@ public class VirtualStackFrame extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Locals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.VirtualStackFrame.Locals" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getLocals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDesignerOptionsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerOptionsAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowDrillIn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn" target="_top">.NET documentation</a>
+     */
     public boolean getAllowDrillIn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowDrillIn.
+     *
+     * @param AllowDrillIn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn" target="_top">.NET documentation</a>
+     */
     public void setAllowDrillIn(boolean AllowDrillIn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlwaysCollapseChildren.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren" target="_top">.NET documentation</a>
+     */
     public boolean getAlwaysCollapseChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlwaysCollapseChildren.
+     *
+     * @param AlwaysCollapseChildren the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren" target="_top">.NET documentation</a>
+     */
     public void setAlwaysCollapseChildren(boolean AlwaysCollapseChildren) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutlineViewIconProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.OutlineViewIconProvider" target="_top">.NET documentation</a>
+     */
     public Func_2 getOutlineViewIconProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,13 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OutlineViewIconProvider.
+     *
+     * @param OutlineViewIconProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.OutlineViewIconProvider" target="_top">.NET documentation</a>
+     */
     public void setOutlineViewIconProvider(Func_2 OutlineViewIconProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

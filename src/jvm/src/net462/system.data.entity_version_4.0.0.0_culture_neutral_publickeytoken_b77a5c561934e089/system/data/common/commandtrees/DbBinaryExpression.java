@@ -99,7 +99,10 @@ public class DbBinaryExpression extends system.data.common.commandtrees.DbExpres
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbBinaryExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class DbBinaryExpression extends system.data.common.commandtrees.DbExpres
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbBinaryExpression.Left" target="_top">.NET documentation</a>
+     */
     public DbExpression getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class DbBinaryExpression extends system.data.common.commandtrees.DbExpres
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbBinaryExpression.Right" target="_top">.NET documentation</a>
+     */
     public DbExpression getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITextRangeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param range the argument of type {@code ITextRangeProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.Compare" target="_top">.NET documentation</a>
+     */
     public boolean Compare(ITextRangeProvider range) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member GetBoundingRectangles.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.GetBoundingRectangles" target="_top">.NET documentation</a>
+     */
     public double[] GetBoundingRectangles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +201,16 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member CompareEndpoints.
+     *
+     * @param endpoint the argument of type {@code TextPatternRangeEndpoint}
+     * @param targetRange the argument of type {@code ITextRangeProvider}
+     * @param targetEndpoint the argument of type {@code TextPatternRangeEndpoint}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.CompareEndpoints" target="_top">.NET documentation</a>
+     */
     public int CompareEndpoints(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +251,15 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member Move.
+     *
+     * @param unit the argument of type {@code TextUnit}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.Move" target="_top">.NET documentation</a>
+     */
     public int Move(TextUnit unit, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +300,16 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member MoveEndpointByUnit.
+     *
+     * @param endpoint the argument of type {@code TextPatternRangeEndpoint}
+     * @param unit the argument of type {@code TextUnit}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.MoveEndpointByUnit" target="_top">.NET documentation</a>
+     */
     public int MoveEndpointByUnit(TextPatternRangeEndpoint endpoint, TextUnit unit, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +350,14 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member GetAttributeValue.
+     *
+     * @param attribute the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.GetAttributeValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetAttributeValue(int attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +373,14 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member GetText.
+     *
+     * @param maxLength the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.GetText" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetText(int maxLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +395,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnclosingElement.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.GetEnclosingElement" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple GetEnclosingElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +417,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member GetChildren.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.GetChildren" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple[] GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +445,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.Clone" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +467,16 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member FindAttribute.
+     *
+     * @param attribute the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @param backward the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.FindAttribute" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider FindAttribute(int attribute, NetObject value, boolean backward) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +492,16 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member FindText.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param backward the argument of type {@code boolean}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.FindText" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider FindText(java.lang.String text, boolean backward, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +517,12 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member AddToSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.AddToSelection" target="_top">.NET documentation</a>
+     */
     public void AddToSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +533,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member ExpandToEnclosingUnit.
+     *
+     * @param unit the argument of type {@code TextUnit}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.ExpandToEnclosingUnit" target="_top">.NET documentation</a>
+     */
     public void ExpandToEnclosingUnit(TextUnit unit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +550,15 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member MoveEndpointByRange.
+     *
+     * @param endpoint the argument of type {@code TextPatternRangeEndpoint}
+     * @param targetRange the argument of type {@code ITextRangeProvider}
+     * @param targetEndpoint the argument of type {@code TextPatternRangeEndpoint}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.MoveEndpointByRange" target="_top">.NET documentation</a>
+     */
     public void MoveEndpointByRange(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +569,12 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveFromSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.RemoveFromSelection" target="_top">.NET documentation</a>
+     */
     public void RemoveFromSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +585,13 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member ScrollIntoView.
+     *
+     * @param alignToTop the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.ScrollIntoView" target="_top">.NET documentation</a>
+     */
     public void ScrollIntoView(boolean alignToTop) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +602,12 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider.Select" target="_top">.NET documentation</a>
+     */
     public void Select() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

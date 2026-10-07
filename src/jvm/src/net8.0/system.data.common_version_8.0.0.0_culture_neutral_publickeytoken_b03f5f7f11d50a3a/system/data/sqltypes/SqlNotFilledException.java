@@ -103,7 +103,9 @@ public class SqlNotFilledException extends system.data.sqltypes.SqlTypeException
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SqlNotFilledException(java.lang.Object instance) {
         super(instance);

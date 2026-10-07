@@ -100,7 +100,10 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWindowProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
 
     // Methods section
     
+    /**
+     * Invokes the .NET member WaitForInputIdle.
+     *
+     * @param milliseconds the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle" target="_top">.NET documentation</a>
+     */
     public boolean WaitForInputIdle(int milliseconds) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,12 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +183,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Invokes the .NET member SetVisualState.
+     *
+     * @param state the argument of type {@code WindowVisualState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.SetVisualState" target="_top">.NET documentation</a>
+     */
     public void SetVisualState(WindowVisualState state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +204,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsModal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.IsModal" target="_top">.NET documentation</a>
+     */
     public boolean getIsModal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +225,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTopmost.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.IsTopmost" target="_top">.NET documentation</a>
+     */
     public boolean getIsTopmost() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Gets the value of the .NET property Maximizable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.Maximizable" target="_top">.NET documentation</a>
+     */
     public boolean getMaximizable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Gets the value of the .NET property Minimizable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.Minimizable" target="_top">.NET documentation</a>
+     */
     public boolean getMinimizable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +288,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Gets the value of the .NET property InteractionState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.InteractionState" target="_top">.NET documentation</a>
+     */
     public WindowInteractionState getInteractionState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +310,13 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
         }
     }
 
+    /**
+     * Gets the value of the .NET property VisualState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IWindowProvider.VisualState" target="_top">.NET documentation</a>
+     */
     public WindowVisualState getVisualState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

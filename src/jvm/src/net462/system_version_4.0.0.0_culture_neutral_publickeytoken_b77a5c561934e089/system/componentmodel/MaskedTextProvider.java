@@ -100,7 +100,10 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MaskedTextProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,26 @@ public class MaskedTextProvider extends NetObject  {
     public MaskedTextProvider() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +183,27 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @param restrictToAscii the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask, boolean restrictToAscii) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +214,28 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @param passwordChar the argument of type {@code char}
+     * @param allowPromptAsInput the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask, char passwordChar, boolean allowPromptAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +246,27 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @param culture the argument of type {@code CultureInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +277,28 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param restrictToAscii the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask, CultureInfo culture, boolean restrictToAscii) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +309,31 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param allowPromptAsInput the argument of type {@code boolean}
+     * @param promptChar the argument of type {@code char}
+     * @param passwordChar the argument of type {@code char}
+     * @param restrictToAscii the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask, CultureInfo culture, boolean allowPromptAsInput, char promptChar, char passwordChar, boolean restrictToAscii) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -210,6 +344,29 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mask the argument of type {@code java.lang.String}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param passwordChar the argument of type {@code char}
+     * @param allowPromptAsInput the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public MaskedTextProvider(java.lang.String mask, CultureInfo culture, char passwordChar, boolean allowPromptAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
@@ -225,6 +382,19 @@ public class MaskedTextProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param input the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Add" target="_top">.NET documentation</a>
+     */
     public boolean Add(char input) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +409,19 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param input the argument of type {@code char}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Add" target="_top">.NET documentation</a>
+     */
     public boolean Add(char input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +436,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Add" target="_top">.NET documentation</a>
+     */
     public boolean Add(java.lang.String input) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +464,21 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Add" target="_top">.NET documentation</a>
+     */
     public boolean Add(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +493,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOperationResultFromHint.
+     *
+     * @param hint the argument of type {@code MaskedTextResultHint}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.GetOperationResultFromHint" target="_top">.NET documentation</a>
+     */
     public static boolean GetOperationResultFromHint(MaskedTextResultHint hint) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +515,21 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertAt.
+     *
+     * @param input the argument of type {@code char}
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.InsertAt" target="_top">.NET documentation</a>
+     */
     public boolean InsertAt(char input, int position) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +544,22 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertAt.
+     *
+     * @param input the argument of type {@code char}
+     * @param position the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.InsertAt" target="_top">.NET documentation</a>
+     */
     public boolean InsertAt(char input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +574,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertAt.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.InsertAt" target="_top">.NET documentation</a>
+     */
     public boolean InsertAt(java.lang.String input, int position) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +602,21 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InsertAt.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param position the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.InsertAt" target="_top">.NET documentation</a>
+     */
     public boolean InsertAt(java.lang.String input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +631,15 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAvailablePosition.
+     *
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsAvailablePosition" target="_top">.NET documentation</a>
+     */
     public boolean IsAvailablePosition(int position) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +654,15 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsEditPosition.
+     *
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsEditPosition" target="_top">.NET documentation</a>
+     */
     public boolean IsEditPosition(int position) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +677,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidInputChar.
+     *
+     * @param c the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsValidInputChar" target="_top">.NET documentation</a>
+     */
     public static boolean IsValidInputChar(char c) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -393,6 +699,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidMaskChar.
+     *
+     * @param c the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsValidMaskChar" target="_top">.NET documentation</a>
+     */
     public static boolean IsValidMaskChar(char c) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -407,6 +721,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsValidPasswordChar.
+     *
+     * @param c the argument of type {@code char}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsValidPasswordChar" target="_top">.NET documentation</a>
+     */
     public static boolean IsValidPasswordChar(char c) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -421,6 +743,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +765,16 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Remove" target="_top">.NET documentation</a>
+     */
     public boolean Remove(JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +789,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.RemoveAt" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAt(int position) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +817,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.RemoveAt" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAt(int startPosition, int endPosition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -477,6 +845,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.RemoveAt" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAt(int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +873,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param input the argument of type {@code char}
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Replace" target="_top">.NET documentation</a>
+     */
     public boolean Replace(char input, int position) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +901,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param input the argument of type {@code char}
+     * @param position the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Replace" target="_top">.NET documentation</a>
+     */
     public boolean Replace(char input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +929,22 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param input the argument of type {@code char}
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Replace" target="_top">.NET documentation</a>
+     */
     public boolean Replace(char input, int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +959,21 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Replace" target="_top">.NET documentation</a>
+     */
     public boolean Replace(java.lang.String input, int position) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +988,22 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param position the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Replace" target="_top">.NET documentation</a>
+     */
     public boolean Replace(java.lang.String input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +1018,23 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Replace" target="_top">.NET documentation</a>
+     */
     public boolean Replace(java.lang.String input, int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +1049,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Set.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Set" target="_top">.NET documentation</a>
+     */
     public boolean Set(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +1077,21 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Set.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Set" target="_top">.NET documentation</a>
+     */
     public boolean Set(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +1106,18 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifyChar.
+     *
+     * @param input the argument of type {@code char}
+     * @param position the argument of type {@code int}
+     * @param hint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.VerifyChar" target="_top">.NET documentation</a>
+     */
     public boolean VerifyChar(char input, int position, JCORefOut<MaskedTextResultHint> hint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -617,6 +1132,17 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifyEscapeChar.
+     *
+     * @param input the argument of type {@code char}
+     * @param position the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.VerifyEscapeChar" target="_top">.NET documentation</a>
+     */
     public boolean VerifyEscapeChar(char input, int position) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -631,6 +1157,16 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifyString.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.VerifyString" target="_top">.NET documentation</a>
+     */
     public boolean VerifyString(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -645,6 +1181,18 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifyString.
+     *
+     * @param input the argument of type {@code java.lang.String}
+     * @param testPosition the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.VerifyString" target="_top">.NET documentation</a>
+     */
     public boolean VerifyString(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,6 +1207,16 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindAssignedEditPositionFrom.
+     *
+     * @param position the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindAssignedEditPositionFrom" target="_top">.NET documentation</a>
+     */
     public int FindAssignedEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +1257,17 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindAssignedEditPositionInRange.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindAssignedEditPositionInRange" target="_top">.NET documentation</a>
+     */
     public int FindAssignedEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -739,6 +1308,16 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindEditPositionFrom.
+     *
+     * @param position the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindEditPositionFrom" target="_top">.NET documentation</a>
+     */
     public int FindEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -779,6 +1358,17 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindEditPositionInRange.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindEditPositionInRange" target="_top">.NET documentation</a>
+     */
     public int FindEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -819,6 +1409,16 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindNonEditPositionFrom.
+     *
+     * @param position the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindNonEditPositionFrom" target="_top">.NET documentation</a>
+     */
     public int FindNonEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -859,6 +1459,17 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindNonEditPositionInRange.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindNonEditPositionInRange" target="_top">.NET documentation</a>
+     */
     public int FindNonEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -899,6 +1510,16 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindUnassignedEditPositionFrom.
+     *
+     * @param position the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindUnassignedEditPositionFrom" target="_top">.NET documentation</a>
+     */
     public int FindUnassignedEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -939,6 +1560,17 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FindUnassignedEditPositionInRange.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param endPosition the argument of type {@code int}
+     * @param direction the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.FindUnassignedEditPositionInRange" target="_top">.NET documentation</a>
+     */
     public int FindUnassignedEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -979,6 +1611,27 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.TypeInitializationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeInitializationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -994,6 +1647,18 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDisplayString.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToDisplayString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToDisplayString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1008,6 +1673,18 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param ignorePasswordChar the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(boolean ignorePasswordChar) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1022,6 +1699,19 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param includePrompt the argument of type {@code boolean}
+     * @param includeLiterals the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(boolean includePrompt, boolean includeLiterals) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1036,6 +1726,22 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param ignorePasswordChar the argument of type {@code boolean}
+     * @param includePrompt the argument of type {@code boolean}
+     * @param includeLiterals the argument of type {@code boolean}
+     * @param startPosition the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(boolean ignorePasswordChar, boolean includePrompt, boolean includeLiterals, int startPosition, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1050,6 +1756,21 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param includePrompt the argument of type {@code boolean}
+     * @param includeLiterals the argument of type {@code boolean}
+     * @param startPosition the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(boolean includePrompt, boolean includeLiterals, int startPosition, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1064,6 +1785,20 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param ignorePasswordChar the argument of type {@code boolean}
+     * @param startPosition the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(boolean ignorePasswordChar, int startPosition, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1078,6 +1813,19 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param startPosition the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(int startPosition, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1092,6 +1840,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1102,6 +1857,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @param resultHint the argument of type {@code JCORefOut<MaskedTextResultHint>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear(JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1116,6 +1879,13 @@ public class MaskedTextProvider extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowPromptAsInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.AllowPromptAsInput" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPromptAsInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1130,6 +1900,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsciiOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.AsciiOnly" target="_top">.NET documentation</a>
+     */
     public boolean getAsciiOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1144,6 +1921,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeLiterals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IncludeLiterals" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeLiterals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1158,6 +1942,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeLiterals.
+     *
+     * @param IncludeLiterals the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IncludeLiterals" target="_top">.NET documentation</a>
+     */
     public void setIncludeLiterals(boolean IncludeLiterals) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1168,6 +1959,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludePrompt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IncludePrompt" target="_top">.NET documentation</a>
+     */
     public boolean getIncludePrompt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1182,6 +1980,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludePrompt.
+     *
+     * @param IncludePrompt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IncludePrompt" target="_top">.NET documentation</a>
+     */
     public void setIncludePrompt(boolean IncludePrompt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1192,6 +1997,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPassword.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsPassword" target="_top">.NET documentation</a>
+     */
     public boolean getIsPassword() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1206,6 +2018,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsPassword.
+     *
+     * @param IsPassword the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.IsPassword" target="_top">.NET documentation</a>
+     */
     public void setIsPassword(boolean IsPassword) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1216,6 +2035,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaskCompleted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.MaskCompleted" target="_top">.NET documentation</a>
+     */
     public boolean getMaskCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1230,6 +2056,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaskFull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.MaskFull" target="_top">.NET documentation</a>
+     */
     public boolean getMaskFull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1244,6 +2077,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResetOnPrompt.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ResetOnPrompt" target="_top">.NET documentation</a>
+     */
     public boolean getResetOnPrompt() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1258,6 +2098,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResetOnPrompt.
+     *
+     * @param ResetOnPrompt the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ResetOnPrompt" target="_top">.NET documentation</a>
+     */
     public void setResetOnPrompt(boolean ResetOnPrompt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1268,6 +2115,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResetOnSpace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ResetOnSpace" target="_top">.NET documentation</a>
+     */
     public boolean getResetOnSpace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1282,6 +2136,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResetOnSpace.
+     *
+     * @param ResetOnSpace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.ResetOnSpace" target="_top">.NET documentation</a>
+     */
     public void setResetOnSpace(boolean ResetOnSpace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1292,6 +2153,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipLiterals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.SkipLiterals" target="_top">.NET documentation</a>
+     */
     public boolean getSkipLiterals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1306,6 +2174,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipLiterals.
+     *
+     * @param SkipLiterals the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.SkipLiterals" target="_top">.NET documentation</a>
+     */
     public void setSkipLiterals(boolean SkipLiterals) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1316,6 +2191,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultPasswordChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.DefaultPasswordChar" target="_top">.NET documentation</a>
+     */
     public static char getDefaultPasswordChar() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1330,6 +2212,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PasswordChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.PasswordChar" target="_top">.NET documentation</a>
+     */
     public char getPasswordChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1344,6 +2233,24 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PasswordChar.
+     *
+     * @param PasswordChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.PasswordChar" target="_top">.NET documentation</a>
+     */
     public void setPasswordChar(char PasswordChar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1354,6 +2261,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PromptChar.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.PromptChar" target="_top">.NET documentation</a>
+     */
     public char getPromptChar() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1368,6 +2282,24 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PromptChar.
+     *
+     * @param PromptChar the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.PromptChar" target="_top">.NET documentation</a>
+     */
     public void setPromptChar(char PromptChar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1378,6 +2310,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssignedEditPositionCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.AssignedEditPositionCount" target="_top">.NET documentation</a>
+     */
     public int getAssignedEditPositionCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1418,6 +2357,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AvailableEditPositionCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.AvailableEditPositionCount" target="_top">.NET documentation</a>
+     */
     public int getAvailableEditPositionCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1458,6 +2404,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditPositionCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.EditPositionCount" target="_top">.NET documentation</a>
+     */
     public int getEditPositionCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1498,6 +2451,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InvalidIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.InvalidIndex" target="_top">.NET documentation</a>
+     */
     public static int getInvalidIndex() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1538,6 +2498,14 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LastAssignedPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.LastAssignedPosition" target="_top">.NET documentation</a>
+     */
     public int getLastAssignedPosition() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1578,6 +2546,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1618,6 +2593,15 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditPositions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.EditPositions" target="_top">.NET documentation</a>
+     */
     public IEnumerator getEditPositions() throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1633,6 +2617,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Culture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Culture" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1648,6 +2639,13 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.MaskedTextProvider.Mask" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

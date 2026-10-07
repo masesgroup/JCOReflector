@@ -102,7 +102,10 @@ public class MetadataProperty extends system.data.metadata.edm.MetadataItem  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class MetadataProperty extends system.data.metadata.edm.MetadataItem  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PropertyKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataProperty.PropertyKind" target="_top">.NET documentation</a>
+     */
     public PropertyKind getPropertyKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class MetadataProperty extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeUsage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataProperty.TypeUsage" target="_top">.NET documentation</a>
+     */
     public TypeUsage getTypeUsage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class MetadataProperty extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataProperty.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +230,13 @@ public class MetadataProperty extends system.data.metadata.edm.MetadataItem  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataProperty.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

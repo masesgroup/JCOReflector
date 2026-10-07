@@ -102,7 +102,10 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReferentialConstraint(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FromProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ReferentialConstraint.FromProperties" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getFromProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ReferentialConstraint.ToProperties" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getToProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
         }
     }
 
+    /**
+     * Gets the value of the .NET property FromRole.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ReferentialConstraint.FromRole" target="_top">.NET documentation</a>
+     */
     public RelationshipEndMember getFromRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +230,13 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToRole.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ReferentialConstraint.ToRole" target="_top">.NET documentation</a>
+     */
     public RelationshipEndMember getToRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

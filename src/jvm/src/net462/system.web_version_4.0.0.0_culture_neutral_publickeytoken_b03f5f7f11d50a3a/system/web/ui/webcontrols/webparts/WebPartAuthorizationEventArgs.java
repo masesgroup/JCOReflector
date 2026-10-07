@@ -99,7 +99,10 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartAuthorizationEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
     public WebPartAuthorizationEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param path the argument of type {@code java.lang.String}
+     * @param authorizationFilter the argument of type {@code java.lang.String}
+     * @param isShared the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartAuthorizationEventArgs(NetType type, java.lang.String path, java.lang.String authorizationFilter, boolean isShared) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAuthorized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsAuthorized" target="_top">.NET documentation</a>
+     */
     public boolean getIsAuthorized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +202,13 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsAuthorized.
+     *
+     * @param IsAuthorized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsAuthorized" target="_top">.NET documentation</a>
+     */
     public void setIsAuthorized(boolean IsAuthorized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +219,13 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsShared.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsShared" target="_top">.NET documentation</a>
+     */
     public boolean getIsShared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +240,13 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthorizationFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.AuthorizationFilter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthorizationFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +261,13 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +282,13 @@ public class WebPartAuthorizationEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ResourceFileStringLocalizerProvider extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResourceFileStringLocalizerProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class ResourceFileStringLocalizerProvider extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Globalization.ResourceFileStringLocalizerProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public ResourceFileStringLocalizerProvider() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,25 @@ public class ResourceFileStringLocalizerProvider extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLocalizedString.
+     *
+     * @param culture the argument of type {@code CultureInfo}
+     * @param name the argument of type {@code java.lang.String}
+     * @param arguments the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Globalization.ResourceFileStringLocalizerProvider.GetLocalizedString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetLocalizedString(CultureInfo culture, java.lang.String name, NetObject... arguments) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

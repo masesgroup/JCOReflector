@@ -53,5 +53,15 @@ import system.security.cryptography.x509certificates.X509CertificateCollection;
  * @version 2.0.0.0
  */
 public interface ILocalCertificateSelectionCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param targetHost the .NET argument of type {@code System.String}
+     * @param localCertificates the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509CertificateCollection}
+     * @param remoteCertificate the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Certificate}
+     * @param acceptableIssuers the .NET argument of type {@code System.String[]}
+     * @return the value returned to the CLR
+     */
     public X509Certificate Invoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers);
 }

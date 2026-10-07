@@ -102,7 +102,10 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISelectionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetComponentSelected.
+     *
+     * @param component the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ISelectionService.GetComponentSelected" target="_top">.NET documentation</a>
+     */
     public boolean GetComponentSelected(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Invokes the .NET member GetSelectedComponents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ISelectionService.GetSelectedComponents" target="_top">.NET documentation</a>
+     */
     public ICollection GetSelectedComponents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +191,14 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Invokes the .NET member SetSelectedComponents.
+     *
+     * @param components the argument of type {@code ICollection}
+     * @param selectionType the argument of type {@code SelectionTypes}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ISelectionService.SetSelectedComponents" target="_top">.NET documentation</a>
+     */
     public void SetSelectedComponents(ICollection components, SelectionTypes selectionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Invokes the .NET member SetSelectedComponents.
+     *
+     * @param components the argument of type {@code ICollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ISelectionService.SetSelectedComponents" target="_top">.NET documentation</a>
+     */
     public void SetSelectedComponents(ICollection components) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +230,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SelectionCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ISelectionService.SelectionCount" target="_top">.NET documentation</a>
+     */
     public int getSelectionCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +277,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrimarySelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ISelectionService.PrimarySelection" target="_top">.NET documentation</a>
+     */
     public NetObject getPrimarySelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +304,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addSelectionChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +321,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +338,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Invokes the .NET member addSelectionChanging.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelectionChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +355,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelectionChanging.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelectionChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

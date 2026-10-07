@@ -98,7 +98,10 @@ public class SqlClientLogger extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlClientLogger(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class SqlClientLogger extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientLogger.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlClientLogger() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,21 @@ public class SqlClientLogger extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member LogAssert.
+     *
+     * @param value the argument of type {@code boolean}
+     * @param type the argument of type {@code java.lang.String}
+     * @param method the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientLogger.LogAssert" target="_top">.NET documentation</a>
+     */
     public boolean LogAssert(boolean value, java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +197,19 @@ public class SqlClientLogger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogError.
+     *
+     * @param type the argument of type {@code java.lang.String}
+     * @param method the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientLogger.LogError" target="_top">.NET documentation</a>
+     */
     public void LogError(java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +220,19 @@ public class SqlClientLogger extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LogInfo.
+     *
+     * @param type the argument of type {@code java.lang.String}
+     * @param method the argument of type {@code java.lang.String}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientLogger.LogInfo" target="_top">.NET documentation</a>
+     */
     public void LogInfo(java.lang.String type, java.lang.String method, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +247,13 @@ public class SqlClientLogger extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsLoggingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientLogger.IsLoggingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsLoggingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

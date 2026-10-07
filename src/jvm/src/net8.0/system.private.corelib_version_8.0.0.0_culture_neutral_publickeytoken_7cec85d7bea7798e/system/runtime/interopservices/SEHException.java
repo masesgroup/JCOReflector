@@ -103,7 +103,9 @@ public class SEHException extends system.runtime.interopservices.ExternalExcepti
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SEHException(java.lang.Object instance) {
         super(instance);
@@ -168,6 +170,13 @@ public class SEHException extends system.runtime.interopservices.ExternalExcepti
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanResume.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.SEHException.CanResume" target="_top">.NET documentation</a>
+     */
     public boolean CanResume() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

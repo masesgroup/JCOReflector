@@ -99,7 +99,10 @@ public class HMACSHA256 extends system.security.cryptography.HMAC  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HMACSHA256(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class HMACSHA256 extends system.security.cryptography.HMAC  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HMACSHA256.-ctor" target="_top">.NET documentation</a>
+     */
     public HMACSHA256() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +168,15 @@ public class HMACSHA256 extends system.security.cryptography.HMAC  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HMACSHA256.-ctor" target="_top">.NET documentation</a>
+     */
     public HMACSHA256(byte[] key) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

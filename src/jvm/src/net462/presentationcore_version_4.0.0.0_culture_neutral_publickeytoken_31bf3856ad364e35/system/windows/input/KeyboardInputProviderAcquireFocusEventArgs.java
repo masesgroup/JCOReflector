@@ -100,7 +100,10 @@ public class KeyboardInputProviderAcquireFocusEventArgs extends system.windows.i
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyboardInputProviderAcquireFocusEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class KeyboardInputProviderAcquireFocusEventArgs extends system.windows.i
     public KeyboardInputProviderAcquireFocusEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyboard the argument of type {@code KeyboardDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param focusAcquired the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyboardInputProviderAcquireFocusEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyboardInputProviderAcquireFocusEventArgs(KeyboardDevice keyboard, int timestamp, boolean focusAcquired) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class KeyboardInputProviderAcquireFocusEventArgs extends system.windows.i
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FocusAcquired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.KeyboardInputProviderAcquireFocusEventArgs.FocusAcquired" target="_top">.NET documentation</a>
+     */
     public boolean getFocusAcquired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

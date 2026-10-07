@@ -52,5 +52,11 @@ import system.windows.input.StylusButtonEventArgs;
  * @version 2.0.0.0
  */
 public interface IStylusButtonEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Input.StylusButtonEventArgs}
+     */
     public void Invoke(NetObject sender, StylusButtonEventArgs e);
 }

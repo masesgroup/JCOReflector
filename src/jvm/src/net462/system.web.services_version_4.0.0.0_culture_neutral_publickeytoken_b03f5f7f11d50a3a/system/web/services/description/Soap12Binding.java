@@ -99,7 +99,10 @@ public class Soap12Binding extends system.web.services.description.SoapBinding  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Soap12Binding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class Soap12Binding extends system.web.services.description.SoapBinding  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Soap12Binding.-ctor" target="_top">.NET documentation</a>
+     */
     public Soap12Binding() throws Throwable {
         try {
             // add reference to assemblyName.dll file

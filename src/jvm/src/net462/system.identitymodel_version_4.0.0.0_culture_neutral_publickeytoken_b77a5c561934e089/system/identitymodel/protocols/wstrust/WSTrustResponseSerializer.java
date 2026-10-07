@@ -102,7 +102,10 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WSTrustResponseSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class WSTrustResponseSerializer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanRead.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.CanRead" target="_top">.NET documentation</a>
+     */
     public boolean CanRead(XmlReader reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,15 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.CreateInstance" target="_top">.NET documentation</a>
+     */
     public RequestSecurityTokenResponse CreateInstance() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,15 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadXml.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param context the argument of type {@code WSTrustSerializationContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.ReadXml" target="_top">.NET documentation</a>
+     */
     public RequestSecurityTokenResponse ReadXml(XmlReader reader, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +228,15 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadXmlElement.
+     *
+     * @param reader the argument of type {@code XmlReader}
+     * @param requestSecurityTokenResponse the argument of type {@code RequestSecurityTokenResponse}
+     * @param context the argument of type {@code WSTrustSerializationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.ReadXmlElement" target="_top">.NET documentation</a>
+     */
     public void ReadXmlElement(XmlReader reader, RequestSecurityTokenResponse requestSecurityTokenResponse, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +247,24 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param requestSecurityTokenResponse the argument of type {@code RequestSecurityTokenResponse}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(RequestSecurityTokenResponse requestSecurityTokenResponse) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +275,15 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteKnownResponseElement.
+     *
+     * @param requestSecurityTokenResponse the argument of type {@code RequestSecurityTokenResponse}
+     * @param writer the argument of type {@code XmlWriter}
+     * @param context the argument of type {@code WSTrustSerializationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.WriteKnownResponseElement" target="_top">.NET documentation</a>
+     */
     public void WriteKnownResponseElement(RequestSecurityTokenResponse requestSecurityTokenResponse, XmlWriter writer, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +294,15 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXml.
+     *
+     * @param response the argument of type {@code RequestSecurityTokenResponse}
+     * @param writer the argument of type {@code XmlWriter}
+     * @param context the argument of type {@code WSTrustSerializationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.WriteXml" target="_top">.NET documentation</a>
+     */
     public void WriteXml(RequestSecurityTokenResponse response, XmlWriter writer, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +313,17 @@ public class WSTrustResponseSerializer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteXmlElement.
+     *
+     * @param writer the argument of type {@code XmlWriter}
+     * @param elementName the argument of type {@code java.lang.String}
+     * @param elementValue the argument of type {@code NetObject}
+     * @param requestSecurityTokenResponse the argument of type {@code RequestSecurityTokenResponse}
+     * @param context the argument of type {@code WSTrustSerializationContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.WSTrustResponseSerializer.WriteXmlElement" target="_top">.NET documentation</a>
+     */
     public void WriteXmlElement(XmlWriter writer, java.lang.String elementName, NetObject elementValue, RequestSecurityTokenResponse requestSecurityTokenResponse, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -106,7 +106,10 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IToolboxServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSupported.
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param filterAttributes the argument of type {@code ICollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +174,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member IsSupported.
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +197,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member IsToolboxItem.
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsToolboxItem" target="_top">.NET documentation</a>
+     */
     public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +220,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member IsToolboxItem.
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.IsToolboxItem" target="_top">.NET documentation</a>
+     */
     public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +242,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member SetCursor.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SetCursor" target="_top">.NET documentation</a>
+     */
     public boolean SetCursor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +263,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member DeserializeToolboxItem.
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.DeserializeToolboxItem" target="_top">.NET documentation</a>
+     */
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +287,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member DeserializeToolboxItem.
+     *
+     * @param serializedObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.DeserializeToolboxItem" target="_top">.NET documentation</a>
+     */
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +310,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member GetSelectedToolboxItem.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" target="_top">.NET documentation</a>
+     */
     public ToolboxItem GetSelectedToolboxItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +332,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member GetSelectedToolboxItem.
+     *
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" target="_top">.NET documentation</a>
+     */
     public ToolboxItem GetSelectedToolboxItem(IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +355,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public ToolboxItemCollection GetToolboxItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +377,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public ToolboxItemCollection GetToolboxItems(IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +400,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public ToolboxItemCollection GetToolboxItems(java.lang.String category, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +424,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member GetToolboxItems.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.GetToolboxItems" target="_top">.NET documentation</a>
+     */
     public ToolboxItemCollection GetToolboxItems(java.lang.String category) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +447,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member SerializeToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SerializeToolboxItem" target="_top">.NET documentation</a>
+     */
     public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +470,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member AddCreator.
+     *
+     * @param creator the argument of type {@code ToolboxItemCreatorCallback}
+     * @param format the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddCreator" target="_top">.NET documentation</a>
+     */
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +489,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member AddCreator.
+     *
+     * @param creator the argument of type {@code ToolboxItemCreatorCallback}
+     * @param format the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddCreator" target="_top">.NET documentation</a>
+     */
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +507,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member AddLinkedToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddLinkedToolboxItem" target="_top">.NET documentation</a>
+     */
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +525,15 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member AddLinkedToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param category the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddLinkedToolboxItem" target="_top">.NET documentation</a>
+     */
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +544,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member AddToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddToolboxItem" target="_top">.NET documentation</a>
+     */
     public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +562,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member AddToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.AddToolboxItem" target="_top">.NET documentation</a>
+     */
     public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +579,12 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.Refresh" target="_top">.NET documentation</a>
+     */
     public void Refresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +595,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveCreator.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param host the argument of type {@code IDesignerHost}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveCreator" target="_top">.NET documentation</a>
+     */
     public void RemoveCreator(java.lang.String format, IDesignerHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +613,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveCreator.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveCreator" target="_top">.NET documentation</a>
+     */
     public void RemoveCreator(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +630,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveToolboxItem" target="_top">.NET documentation</a>
+     */
     public void RemoveToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +648,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.RemoveToolboxItem" target="_top">.NET documentation</a>
+     */
     public void RemoveToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +665,12 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member SelectedToolboxItemUsed.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SelectedToolboxItemUsed" target="_top">.NET documentation</a>
+     */
     public void SelectedToolboxItemUsed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -473,6 +681,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Invokes the .NET member SetSelectedToolboxItem.
+     *
+     * @param toolboxItem the argument of type {@code ToolboxItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SetSelectedToolboxItem" target="_top">.NET documentation</a>
+     */
     public void SetSelectedToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +702,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CategoryNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.CategoryNames" target="_top">.NET documentation</a>
+     */
     public CategoryNameCollection getCategoryNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +724,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedCategory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SelectedCategory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectedCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +745,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectedCategory.
+     *
+     * @param SelectedCategory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxService.SelectedCategory" target="_top">.NET documentation</a>
+     */
     public void setSelectedCategory(java.lang.String SelectedCategory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

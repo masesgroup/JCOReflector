@@ -101,7 +101,10 @@ public class DbGeography extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbGeography(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class DbGeography extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Disjoint.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Disjoint" target="_top">.NET documentation</a>
+     */
     public boolean Disjoint(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersects.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Intersects" target="_top">.NET documentation</a>
+     */
     public boolean Intersects(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SpatialEquals.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.SpatialEquals" target="_top">.NET documentation</a>
+     */
     public boolean SpatialEquals(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +228,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsBinary.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.AsBinary" target="_top">.NET documentation</a>
+     */
     public byte[] AsBinary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Buffer.
+     *
+     * @param distance the argument of type {@code Nullable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Buffer" target="_top">.NET documentation</a>
+     */
     public DbGeography Buffer(Nullable_1 distance) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +283,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Difference.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Difference" target="_top">.NET documentation</a>
+     */
     public DbGeography Difference(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +307,14 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ElementAt.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.ElementAt" target="_top">.NET documentation</a>
+     */
     public DbGeography ElementAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +330,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param wellKnownBinary the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromBinary(byte[] wellKnownBinary) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +354,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromBinary(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +378,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param wellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +403,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -326,6 +428,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromGml.
+     *
+     * @param geographyMarkup the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromGml" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromGml(java.lang.String geographyMarkup) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +452,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromGml.
+     *
+     * @param geographyMarkup the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromGml" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromGml(java.lang.String geographyMarkup, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +477,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromText.
+     *
+     * @param wellKnownText the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromText(java.lang.String wellKnownText) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -371,6 +501,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromText.
+     *
+     * @param wellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.FromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography FromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -386,6 +526,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyCollectionFromBinary.
+     *
+     * @param geographyCollectionWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.GeographyCollectionFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -401,6 +551,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyCollectionFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.GeographyCollectionFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography GeographyCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -416,6 +576,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GeographyCollectionFromText.
+     *
+     * @param geographyCollectionWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.GeographyCollectionFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -431,6 +601,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersection.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Intersection" target="_top">.NET documentation</a>
+     */
     public DbGeography Intersection(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +625,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineFromBinary.
+     *
+     * @param lineWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.LineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography LineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -461,6 +650,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.LineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography LineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -476,6 +675,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LineFromText.
+     *
+     * @param lineWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.LineFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography LineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -491,6 +700,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiLineFromBinary.
+     *
+     * @param multiLineWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -506,6 +725,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiLineFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiLineFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -521,6 +750,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiLineFromText.
+     *
+     * @param multiLineWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiLineFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -536,6 +775,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPointFromBinary.
+     *
+     * @param multiPointWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -551,6 +800,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPointFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiPointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -566,6 +825,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPointFromText.
+     *
+     * @param multiPointWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiPointFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -581,6 +850,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPolygonFromBinary.
+     *
+     * @param multiPolygonWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -596,6 +875,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPolygonFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiPolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -611,6 +900,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MultiPolygonFromText.
+     *
+     * @param multiPolygonWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.MultiPolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography MultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -626,6 +925,14 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointAt.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PointAt" target="_top">.NET documentation</a>
+     */
     public DbGeography PointAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -641,6 +948,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointFromBinary.
+     *
+     * @param pointWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography PointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -656,6 +973,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PointFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography PointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -671,6 +998,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PointFromText.
+     *
+     * @param pointWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PointFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography PointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -686,6 +1023,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolygonFromBinary.
+     *
+     * @param polygonWellKnownBinary the argument of type {@code byte[]}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography PolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -701,6 +1048,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolygonFromBinary.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PolygonFromBinary" target="_top">.NET documentation</a>
+     */
     public static DbGeography PolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -716,6 +1073,16 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PolygonFromText.
+     *
+     * @param polygonWellKnownText the argument of type {@code java.lang.String}
+     * @param coordinateSystemId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PolygonFromText" target="_top">.NET documentation</a>
+     */
     public static DbGeography PolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -731,6 +1098,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SymmetricDifference.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.SymmetricDifference" target="_top">.NET documentation</a>
+     */
     public DbGeography SymmetricDifference(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +1122,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Union" target="_top">.NET documentation</a>
+     */
     public DbGeography Union(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -761,6 +1146,15 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Distance.
+     *
+     * @param other the argument of type {@code DbGeography}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Distance" target="_top">.NET documentation</a>
+     */
     public Nullable_1 Distance(DbGeography other) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -776,6 +1170,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsGml.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.AsGml" target="_top">.NET documentation</a>
+     */
     public java.lang.String AsGml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -790,6 +1191,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.AsText" target="_top">.NET documentation</a>
+     */
     public java.lang.String AsText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -808,6 +1216,13 @@ public class DbGeography extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -822,6 +1237,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CoordinateSystemId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.CoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public int getCoordinateSystemId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -862,6 +1284,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultCoordinateSystemId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.DefaultCoordinateSystemId" target="_top">.NET documentation</a>
+     */
     public static int getDefaultCoordinateSystemId() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -902,6 +1331,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Dimension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Dimension" target="_top">.NET documentation</a>
+     */
     public int getDimension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -942,6 +1378,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.EndPoint" target="_top">.NET documentation</a>
+     */
     public DbGeography getEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -957,6 +1400,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.StartPoint" target="_top">.NET documentation</a>
+     */
     public DbGeography getStartPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -972,6 +1422,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WellKnownValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.WellKnownValue" target="_top">.NET documentation</a>
+     */
     public DbGeographyWellKnownValue getWellKnownValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -987,6 +1444,22 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WellKnownValue.
+     *
+     * @param WellKnownValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.WellKnownValue" target="_top">.NET documentation</a>
+     */
     public void setWellKnownValue(DbGeographyWellKnownValue WellKnownValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -997,6 +1470,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClosed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.IsClosed" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1012,6 +1492,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Area.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Area" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getArea() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1027,6 +1514,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Elevation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Elevation" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getElevation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1042,6 +1536,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Latitude.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Latitude" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLatitude() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1057,6 +1558,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Length" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1072,6 +1580,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Longitude.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Longitude" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getLongitude() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1087,6 +1602,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Measure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.Measure" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getMeasure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1102,6 +1624,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.ElementCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getElementCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1117,6 +1646,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PointCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.PointCount" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getPointCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1132,6 +1668,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.ProviderValue" target="_top">.NET documentation</a>
+     */
     public NetObject getProviderValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1147,6 +1690,13 @@ public class DbGeography extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpatialTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Spatial.DbGeography.SpatialTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSpatialTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

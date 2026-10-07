@@ -100,7 +100,10 @@ public class AssemblyManifest extends microsoft.build.tasks.deployment.manifestu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyManifest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class AssemblyManifest extends microsoft.build.tasks.deployment.manifestu
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyManifest() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class AssemblyManifest extends microsoft.build.tasks.deployment.manifestu
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExternalProxyStubs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest.ExternalProxyStubs" target="_top">.NET documentation</a>
+     */
     public final ProxyStub[] getExternalProxyStubs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +202,13 @@ public class AssemblyManifest extends microsoft.build.tasks.deployment.manifestu
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlExternalProxyStubs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest.XmlExternalProxyStubs" target="_top">.NET documentation</a>
+     */
     public final ProxyStub[] getXmlExternalProxyStubs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +230,13 @@ public class AssemblyManifest extends microsoft.build.tasks.deployment.manifestu
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlExternalProxyStubs.
+     *
+     * @param XmlExternalProxyStubs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.AssemblyManifest.XmlExternalProxyStubs" target="_top">.NET documentation</a>
+     */
     public void setXmlExternalProxyStubs(ProxyStub[] XmlExternalProxyStubs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

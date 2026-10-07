@@ -99,7 +99,10 @@ public class ModelSearchService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelSearchService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ModelSearchService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member NavigateTo.
+     *
+     * @param location the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelSearchService.NavigateTo" target="_top">.NET documentation</a>
+     */
     public boolean NavigateTo(int location) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,17 @@ public class ModelSearchService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member NavigateTo.
+     *
+     * @param startLine the argument of type {@code int}
+     * @param startColumn the argument of type {@code int}
+     * @param endLine the argument of type {@code int}
+     * @param endColumn the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelSearchService.NavigateTo" target="_top">.NET documentation</a>
+     */
     public boolean NavigateTo(int startLine, int startColumn, int endLine, int endColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +202,13 @@ public class ModelSearchService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateTextImage.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelSearchService.GenerateTextImage" target="_top">.NET documentation</a>
+     */
     public TextImage GenerateTextImage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

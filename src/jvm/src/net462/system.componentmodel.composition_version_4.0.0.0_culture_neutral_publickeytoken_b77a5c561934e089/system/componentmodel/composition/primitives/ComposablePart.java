@@ -104,7 +104,10 @@ public class ComposablePart extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComposablePart(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class ComposablePart extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExportedValue.
+     *
+     * @param definition the argument of type {@code ExportDefinition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePart.GetExportedValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetExportedValue(ExportDefinition definition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,12 @@ public class ComposablePart extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Activate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePart.Activate" target="_top">.NET documentation</a>
+     */
     public void Activate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,14 @@ public class ComposablePart extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetImport.
+     *
+     * @param definition the argument of type {@code ImportDefinition}
+     * @param exports the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePart.SetImport" target="_top">.NET documentation</a>
+     */
     public void SetImport(ImportDefinition definition, IEnumerable_1 exports) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +221,13 @@ public class ComposablePart extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Metadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePart.Metadata" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +243,13 @@ public class ComposablePart extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExportDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePart.ExportDefinitions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getExportDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +265,13 @@ public class ComposablePart extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePart.ImportDefinitions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getImportDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

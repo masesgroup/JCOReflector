@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.webparts.WebPartAddingEventArgs;
  * @version 2.0.0.0
  */
 public interface IWebPartAddingEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs}
+     */
     public void Invoke(NetObject sender, WebPartAddingEventArgs e);
 }

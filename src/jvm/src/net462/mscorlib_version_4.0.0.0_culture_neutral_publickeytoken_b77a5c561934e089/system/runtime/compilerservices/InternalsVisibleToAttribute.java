@@ -99,7 +99,10 @@ public class InternalsVisibleToAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InternalsVisibleToAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class InternalsVisibleToAttribute extends system.Attribute  {
     public InternalsVisibleToAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.InternalsVisibleToAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public InternalsVisibleToAttribute(java.lang.String assemblyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class InternalsVisibleToAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllInternalsVisible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.InternalsVisibleToAttribute.AllInternalsVisible" target="_top">.NET documentation</a>
+     */
     public boolean getAllInternalsVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class InternalsVisibleToAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllInternalsVisible.
+     *
+     * @param AllInternalsVisible the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.InternalsVisibleToAttribute.AllInternalsVisible" target="_top">.NET documentation</a>
+     */
     public void setAllInternalsVisible(boolean AllInternalsVisible) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class InternalsVisibleToAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.InternalsVisibleToAttribute.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

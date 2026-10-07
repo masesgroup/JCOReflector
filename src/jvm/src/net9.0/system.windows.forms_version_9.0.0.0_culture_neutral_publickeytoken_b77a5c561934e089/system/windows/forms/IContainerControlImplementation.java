@@ -99,7 +99,10 @@ public class IContainerControlImplementation extends NetObject implements IConta
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContainerControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IContainerControlImplementation extends NetObject implements IConta
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ActivateControl.
+     *
+     * @param active the argument of type {@code Control}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IContainerControl.ActivateControl" target="_top">.NET documentation</a>
+     */
     public boolean ActivateControl(Control active) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,13 @@ public class IContainerControlImplementation extends NetObject implements IConta
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActiveControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IContainerControl.ActiveControl" target="_top">.NET documentation</a>
+     */
     public Control getActiveControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,13 @@ public class IContainerControlImplementation extends NetObject implements IConta
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActiveControl.
+     *
+     * @param ActiveControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IContainerControl.ActiveControl" target="_top">.NET documentation</a>
+     */
     public void setActiveControl(Control ActiveControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

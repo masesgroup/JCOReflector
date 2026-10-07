@@ -99,7 +99,10 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SyncFromAllServersErrorInformation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation.ErrorCode" target="_top">.NET documentation</a>
+     */
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorCategory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation.ErrorCategory" target="_top">.NET documentation</a>
+     */
     public SyncFromAllServersErrorCategory getErrorCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +230,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation.ErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +251,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation.SourceServer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +272,13 @@ public class SyncFromAllServersErrorInformation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetServer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation.TargetServer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

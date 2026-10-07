@@ -99,7 +99,10 @@ public class JsonDerivedType extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonDerivedType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class JsonDerivedType extends system.ValueType  {
     public JsonDerivedType() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param derivedType the argument of type {@code NetType}
+     * @param typeDiscriminator the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonDerivedType.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonDerivedType(NetType derivedType, int typeDiscriminator) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,14 @@ public class JsonDerivedType extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param derivedType the argument of type {@code NetType}
+     * @param typeDiscriminator the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonDerivedType.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonDerivedType(NetType derivedType, java.lang.String typeDiscriminator) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,13 @@ public class JsonDerivedType extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param derivedType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonDerivedType.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonDerivedType(NetType derivedType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +214,13 @@ public class JsonDerivedType extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TypeDiscriminator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonDerivedType.TypeDiscriminator" target="_top">.NET documentation</a>
+     */
     public NetObject getTypeDiscriminator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +236,13 @@ public class JsonDerivedType extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DerivedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonDerivedType.DerivedType" target="_top">.NET documentation</a>
+     */
     public NetType getDerivedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class LocalVariableInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocalVariableInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class LocalVariableInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsPinned.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.LocalVariableInfo.IsPinned" target="_top">.NET documentation</a>
+     */
     public boolean getIsPinned() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class LocalVariableInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.LocalVariableInfo.LocalIndex" target="_top">.NET documentation</a>
+     */
     public int getLocalIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +228,13 @@ public class LocalVariableInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.LocalVariableInfo.LocalType" target="_top">.NET documentation</a>
+     */
     public NetType getLocalType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

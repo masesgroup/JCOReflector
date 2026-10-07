@@ -99,7 +99,10 @@ public class Throw extends microsoft.jscript.AST  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Throw(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class Throw extends microsoft.jscript.AST  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member JScriptThrow.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.Throw.JScriptThrow" target="_top">.NET documentation</a>
+     */
     public static NetException JScriptThrow(NetObject value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

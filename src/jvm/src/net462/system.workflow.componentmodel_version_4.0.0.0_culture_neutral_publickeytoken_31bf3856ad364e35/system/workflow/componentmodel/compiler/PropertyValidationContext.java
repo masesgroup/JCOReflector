@@ -100,7 +100,10 @@ public class PropertyValidationContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyValidationContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class PropertyValidationContext extends NetObject  {
     public PropertyValidationContext() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyOwner the argument of type {@code NetObject}
+     * @param propertyInfo the argument of type {@code PropertyInfo}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.PropertyValidationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyValidationContext(NetObject propertyOwner, PropertyInfo propertyInfo, java.lang.String propertyName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +173,15 @@ public class PropertyValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param propertyOwner the argument of type {@code NetObject}
+     * @param dependencyProperty the argument of type {@code DependencyProperty}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.PropertyValidationContext.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyValidationContext(NetObject propertyOwner, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +201,13 @@ public class PropertyValidationContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Property.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.PropertyValidationContext.Property" target="_top">.NET documentation</a>
+     */
     public NetObject getProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +223,13 @@ public class PropertyValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyOwner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.PropertyValidationContext.PropertyOwner" target="_top">.NET documentation</a>
+     */
     public NetObject getPropertyOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +245,13 @@ public class PropertyValidationContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.PropertyValidationContext.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class AttributeUsageAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttributeUsageAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class AttributeUsageAttribute extends system.Attribute  {
     public AttributeUsageAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param validOn the argument of type {@code AttributeTargets}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AttributeUsageAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AttributeUsageAttribute(AttributeTargets validOn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class AttributeUsageAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowMultiple.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AttributeUsageAttribute.AllowMultiple" target="_top">.NET documentation</a>
+     */
     public boolean getAllowMultiple() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class AttributeUsageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowMultiple.
+     *
+     * @param AllowMultiple the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AttributeUsageAttribute.AllowMultiple" target="_top">.NET documentation</a>
+     */
     public void setAllowMultiple(boolean AllowMultiple) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class AttributeUsageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Inherited.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AttributeUsageAttribute.Inherited" target="_top">.NET documentation</a>
+     */
     public boolean getInherited() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class AttributeUsageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Inherited.
+     *
+     * @param Inherited the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AttributeUsageAttribute.Inherited" target="_top">.NET documentation</a>
+     */
     public void setInherited(boolean Inherited) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class AttributeUsageAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidOn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AttributeUsageAttribute.ValidOn" target="_top">.NET documentation</a>
+     */
     public AttributeTargets getValidOn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

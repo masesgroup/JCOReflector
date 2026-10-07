@@ -102,7 +102,10 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IApplicationSettingsProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,15 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPreviousVersion.
+     *
+     * @param context the argument of type {@code SettingsContext}
+     * @param property the argument of type {@code SettingsProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IApplicationSettingsProvider.GetPreviousVersion" target="_top">.NET documentation</a>
+     */
     public SettingsPropertyValue GetPreviousVersion(SettingsContext context, SettingsProperty property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +171,13 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @param context the argument of type {@code SettingsContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IApplicationSettingsProvider.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset(SettingsContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +188,14 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member Upgrade.
+     *
+     * @param context the argument of type {@code SettingsContext}
+     * @param properties the argument of type {@code SettingsPropertyCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IApplicationSettingsProvider.Upgrade" target="_top">.NET documentation</a>
+     */
     public void Upgrade(SettingsContext context, SettingsPropertyCollection properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

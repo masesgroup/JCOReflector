@@ -99,7 +99,10 @@ public class IDataGridEditingServiceImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataGridEditingServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IDataGridEditingServiceImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginEdit.
+     *
+     * @param gridColumn the argument of type {@code DataGridColumnStyle}
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridEditingService.BeginEdit" target="_top">.NET documentation</a>
+     */
     public boolean BeginEdit(DataGridColumnStyle gridColumn, int rowNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,16 @@ public class IDataGridEditingServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndEdit.
+     *
+     * @param gridColumn the argument of type {@code DataGridColumnStyle}
+     * @param rowNumber the argument of type {@code int}
+     * @param shouldAbort the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IDataGridEditingService.EndEdit" target="_top">.NET documentation</a>
+     */
     public boolean EndEdit(DataGridColumnStyle gridColumn, int rowNumber, boolean shouldAbort) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDictionaryEnumeratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
 
     // Methods section
     
+    /**
+     * Invokes the .NET member MoveNext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionaryEnumerator.MoveNext" target="_top">.NET documentation</a>
+     */
     public boolean MoveNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,12 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionaryEnumerator.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +185,13 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Entry.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionaryEnumerator.Entry" target="_top">.NET documentation</a>
+     */
     public DictionaryEntry getEntry() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,13 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionaryEnumerator.Current" target="_top">.NET documentation</a>
+     */
     public NetObject getCurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +229,13 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionaryEnumerator.Key" target="_top">.NET documentation</a>
+     */
     public NetObject getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IDictionaryEnumerator.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

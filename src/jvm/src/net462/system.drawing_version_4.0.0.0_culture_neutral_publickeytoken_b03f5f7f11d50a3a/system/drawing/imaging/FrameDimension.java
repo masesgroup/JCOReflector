@@ -100,7 +100,10 @@ public class FrameDimension extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FrameDimension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class FrameDimension extends NetObject  {
     public FrameDimension() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param guid the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.FrameDimension.-ctor" target="_top">.NET documentation</a>
+     */
     public FrameDimension(Guid guid) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class FrameDimension extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Page.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.FrameDimension.Page" target="_top">.NET documentation</a>
+     */
     public static FrameDimension getPage() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +201,13 @@ public class FrameDimension extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Resolution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.FrameDimension.Resolution" target="_top">.NET documentation</a>
+     */
     public static FrameDimension getResolution() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +223,13 @@ public class FrameDimension extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Time.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.FrameDimension.Time" target="_top">.NET documentation</a>
+     */
     public static FrameDimension getTime() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +245,13 @@ public class FrameDimension extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Guid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.FrameDimension.Guid" target="_top">.NET documentation</a>
+     */
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

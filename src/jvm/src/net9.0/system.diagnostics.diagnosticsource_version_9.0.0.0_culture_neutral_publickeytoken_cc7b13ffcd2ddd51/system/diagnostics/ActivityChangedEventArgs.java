@@ -100,7 +100,10 @@ public class ActivityChangedEventArgs extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class ActivityChangedEventArgs extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityChangedEventArgs.Current" target="_top">.NET documentation</a>
+     */
     public Activity getCurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class ActivityChangedEventArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityChangedEventArgs.Current" target="_top">.NET documentation</a>
+     */
     public void setCurrent(Activity Current) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class ActivityChangedEventArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Previous.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityChangedEventArgs.Previous" target="_top">.NET documentation</a>
+     */
     public Activity getPrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +223,13 @@ public class ActivityChangedEventArgs extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Previous.
+     *
+     * @param Previous the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityChangedEventArgs.Previous" target="_top">.NET documentation</a>
+     */
     public void setPrevious(Activity Previous) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

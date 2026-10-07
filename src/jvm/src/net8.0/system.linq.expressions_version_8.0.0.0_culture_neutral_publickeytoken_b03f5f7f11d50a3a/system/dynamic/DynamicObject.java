@@ -114,7 +114,10 @@ public class DynamicObject extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -169,6 +172,16 @@ public class DynamicObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryBinaryOperation.
+     *
+     * @param binder the argument of type {@code BinaryOperationBinder}
+     * @param arg the argument of type {@code NetObject}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryBinaryOperation" target="_top">.NET documentation</a>
+     */
     public boolean TryBinaryOperation(BinaryOperationBinder binder, NetObject arg, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +196,15 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryConvert.
+     *
+     * @param binder the argument of type {@code ConvertBinder}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryConvert" target="_top">.NET documentation</a>
+     */
     public boolean TryConvert(ConvertBinder binder, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +219,16 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryCreateInstance.
+     *
+     * @param binder the argument of type {@code CreateInstanceBinder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryCreateInstance" target="_top">.NET documentation</a>
+     */
     public boolean TryCreateInstance(CreateInstanceBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +243,15 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryDeleteIndex.
+     *
+     * @param binder the argument of type {@code DeleteIndexBinder}
+     * @param indexes the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryDeleteIndex" target="_top">.NET documentation</a>
+     */
     public boolean TryDeleteIndex(DeleteIndexBinder binder, NetObject[] indexes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +266,14 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryDeleteMember.
+     *
+     * @param binder the argument of type {@code DeleteMemberBinder}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryDeleteMember" target="_top">.NET documentation</a>
+     */
     public boolean TryDeleteMember(DeleteMemberBinder binder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +288,16 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetIndex.
+     *
+     * @param binder the argument of type {@code GetIndexBinder}
+     * @param indexes the argument of type {@code NetObject[]}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryGetIndex" target="_top">.NET documentation</a>
+     */
     public boolean TryGetIndex(GetIndexBinder binder, NetObject[] indexes, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +312,15 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetMember.
+     *
+     * @param binder the argument of type {@code GetMemberBinder}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryGetMember" target="_top">.NET documentation</a>
+     */
     public boolean TryGetMember(GetMemberBinder binder, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +335,16 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryInvoke.
+     *
+     * @param binder the argument of type {@code InvokeBinder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryInvoke" target="_top">.NET documentation</a>
+     */
     public boolean TryInvoke(InvokeBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +359,16 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryInvokeMember.
+     *
+     * @param binder the argument of type {@code InvokeMemberBinder}
+     * @param args the argument of type {@code NetObject[]}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryInvokeMember" target="_top">.NET documentation</a>
+     */
     public boolean TryInvokeMember(InvokeMemberBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +383,16 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrySetIndex.
+     *
+     * @param binder the argument of type {@code SetIndexBinder}
+     * @param indexes the argument of type {@code NetObject[]}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TrySetIndex" target="_top">.NET documentation</a>
+     */
     public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +407,15 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TrySetMember.
+     *
+     * @param binder the argument of type {@code SetMemberBinder}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TrySetMember" target="_top">.NET documentation</a>
+     */
     public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +430,15 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryUnaryOperation.
+     *
+     * @param binder the argument of type {@code UnaryOperationBinder}
+     * @param result the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.TryUnaryOperation" target="_top">.NET documentation</a>
+     */
     public boolean TryUnaryOperation(UnaryOperationBinder binder, JCORefOut<NetObject> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +453,13 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDynamicMemberNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.GetDynamicMemberNames" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetDynamicMemberNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +475,15 @@ public class DynamicObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMetaObject.
+     *
+     * @param parameter the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicObject.GetMetaObject" target="_top">.NET documentation</a>
+     */
     public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

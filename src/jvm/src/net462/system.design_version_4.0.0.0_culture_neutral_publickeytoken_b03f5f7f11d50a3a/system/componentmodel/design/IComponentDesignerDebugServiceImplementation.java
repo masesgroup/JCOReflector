@@ -99,7 +99,10 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComponentDesignerDebugServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Assert.
+     *
+     * @param condition the argument of type {@code boolean}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerDebugService.Assert" target="_top">.NET documentation</a>
+     */
     public void Assert(boolean condition, java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +162,13 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Invokes the .NET member Fail.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerDebugService.Fail" target="_top">.NET documentation</a>
+     */
     public void Fail(java.lang.String message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +179,14 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Invokes the .NET member Trace.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param category the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerDebugService.Trace" target="_top">.NET documentation</a>
+     */
     public void Trace(java.lang.String message, java.lang.String category) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +201,13 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IndentLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerDebugService.IndentLevel" target="_top">.NET documentation</a>
+     */
     public int getIndentLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +248,13 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentLevel.
+     *
+     * @param IndentLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerDebugService.IndentLevel" target="_top">.NET documentation</a>
+     */
     public void setIndentLevel(int IndentLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +265,13 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
         }
     }
 
+    /**
+     * Gets the value of the .NET property Listeners.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IComponentDesignerDebugService.Listeners" target="_top">.NET documentation</a>
+     */
     public TraceListenerCollection getListeners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

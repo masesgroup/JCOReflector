@@ -99,7 +99,10 @@ public class CollectionViewGroup extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CollectionViewGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class CollectionViewGroup extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBottomLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionViewGroup.IsBottomLevel" target="_top">.NET documentation</a>
+     */
     public boolean getIsBottomLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class CollectionViewGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionViewGroup.ItemCount" target="_top">.NET documentation</a>
+     */
     public int getItemCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +227,13 @@ public class CollectionViewGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionViewGroup.Items" target="_top">.NET documentation</a>
+     */
     public ReadOnlyObservableCollection_1 getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +249,13 @@ public class CollectionViewGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionViewGroup.Name" target="_top">.NET documentation</a>
+     */
     public NetObject getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

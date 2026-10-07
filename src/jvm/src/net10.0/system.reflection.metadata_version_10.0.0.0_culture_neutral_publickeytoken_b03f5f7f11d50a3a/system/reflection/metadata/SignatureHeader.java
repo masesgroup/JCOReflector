@@ -103,7 +103,10 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SignatureHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class SignatureHeader extends system.ValueType  {
     public SignatureHeader() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rawValue the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.-ctor" target="_top">.NET documentation</a>
+     */
     public SignatureHeader(byte rawValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +173,15 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param kind the argument of type {@code SignatureKind}
+     * @param convention the argument of type {@code SignatureCallingConvention}
+     * @param attributes the argument of type {@code SignatureAttributes}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.-ctor" target="_top">.NET documentation</a>
+     */
     public SignatureHeader(SignatureKind kind, SignatureCallingConvention convention, SignatureAttributes attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +197,14 @@ public class SignatureHeader extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code SignatureHeader}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(SignatureHeader other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,13 @@ public class SignatureHeader extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasExplicitThis.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.HasExplicitThis" target="_top">.NET documentation</a>
+     */
     public boolean getHasExplicitThis() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +244,13 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsGeneric.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.IsGeneric" target="_top">.NET documentation</a>
+     */
     public boolean getIsGeneric() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +265,13 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.IsInstance" target="_top">.NET documentation</a>
+     */
     public boolean getIsInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +286,13 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RawValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.RawValue" target="_top">.NET documentation</a>
+     */
     public byte getRawValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +333,13 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.Attributes" target="_top">.NET documentation</a>
+     */
     public SignatureAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +355,13 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CallingConvention.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.CallingConvention" target="_top">.NET documentation</a>
+     */
     public SignatureCallingConvention getCallingConvention() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +377,13 @@ public class SignatureHeader extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Kind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.SignatureHeader.Kind" target="_top">.NET documentation</a>
+     */
     public SignatureKind getKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IWebPartTableImplementation extends NetObject implements IWebPartTa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebPartTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IWebPartTableImplementation extends NetObject implements IWebPartTa
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTableData.
+     *
+     * @param callback the argument of type {@code TableCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartTable.GetTableData" target="_top">.NET documentation</a>
+     */
     public void GetTableData(TableCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IWebPartTableImplementation extends NetObject implements IWebPartTa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartTable.Schema" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

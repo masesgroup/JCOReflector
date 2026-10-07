@@ -98,7 +98,10 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPersistComponentSettingsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member LoadComponentSettings.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.LoadComponentSettings" target="_top">.NET documentation</a>
+     */
     public void LoadComponentSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +159,12 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member ResetComponentSettings.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.ResetComponentSettings" target="_top">.NET documentation</a>
+     */
     public void ResetComponentSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +175,12 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member SaveComponentSettings.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.SaveComponentSettings" target="_top">.NET documentation</a>
+     */
     public void SaveComponentSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +195,13 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SaveSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.SaveSettings" target="_top">.NET documentation</a>
+     */
     public boolean getSaveSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +216,13 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property SaveSettings.
+     *
+     * @param SaveSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.SaveSettings" target="_top">.NET documentation</a>
+     */
     public void setSaveSettings(boolean SaveSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +233,13 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property SettingsKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.SettingsKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSettingsKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +254,13 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property SettingsKey.
+     *
+     * @param SettingsKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.IPersistComponentSettings.SettingsKey" target="_top">.NET documentation</a>
+     */
     public void setSettingsKey(java.lang.String SettingsKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

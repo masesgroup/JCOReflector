@@ -103,7 +103,10 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SingleSignOnDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public SingleSignOnDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NameIdentifierFormats.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor.NameIdentifierFormats" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getNameIdentifierFormats() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
         }
     }
 
+    /**
+     * Gets the value of the .NET property SingleLogoutServices.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor.SingleLogoutServices" target="_top">.NET documentation</a>
+     */
     public Collection_1 getSingleLogoutServices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +221,13 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
         }
     }
 
+    /**
+     * Gets the value of the .NET property ArtifactResolutionServices.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor.ArtifactResolutionServices" target="_top">.NET documentation</a>
+     */
     public IndexedProtocolEndpointDictionary getArtifactResolutionServices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

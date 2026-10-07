@@ -100,7 +100,10 @@ public class IncrementalStrokeHitTester extends system.windows.ink.IncrementalHi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IncrementalStrokeHitTester(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class IncrementalStrokeHitTester extends system.windows.ink.IncrementalHi
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addStrokeHit.
+     *
+     * @param handler the argument of type {@code StrokeHitEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStrokeHit(StrokeHitEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class IncrementalStrokeHitTester extends system.windows.ink.IncrementalHi
         }
     }
 
+    /**
+     * Invokes the .NET member removeStrokeHit.
+     *
+     * @param handler the argument of type {@code StrokeHitEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStrokeHit(StrokeHitEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

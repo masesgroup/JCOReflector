@@ -104,7 +104,10 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemotingSurrogateSelector(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.-ctor" target="_top">.NET documentation</a>
+     */
     public RemotingSurrogateSelector() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class RemotingSurrogateSelector extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRootObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.GetRootObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetRootObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,18 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSurrogate.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code StreamingContext}
+     * @param ssout the argument of type {@code JCORefOut<ISurrogateSelector>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.GetSurrogate" target="_top">.NET documentation</a>
+     */
     public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> ssout) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +223,13 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextSelector.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.GetNextSelector" target="_top">.NET documentation</a>
+     */
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +245,13 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChainSelector.
+     *
+     * @param selector the argument of type {@code ISurrogateSelector}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.ChainSelector" target="_top">.NET documentation</a>
+     */
     public void ChainSelector(ISurrogateSelector selector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +262,14 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetRootObject.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.SetRootObject" target="_top">.NET documentation</a>
+     */
     public void SetRootObject(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +280,12 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UseSoapFormat.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.UseSoapFormat" target="_top">.NET documentation</a>
+     */
     public void UseSoapFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +300,13 @@ public class RemotingSurrogateSelector extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.Filter" target="_top">.NET documentation</a>
+     */
     public MessageSurrogateFilter getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +321,13 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Messaging.RemotingSurrogateSelector.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(MessageSurrogateFilter Filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

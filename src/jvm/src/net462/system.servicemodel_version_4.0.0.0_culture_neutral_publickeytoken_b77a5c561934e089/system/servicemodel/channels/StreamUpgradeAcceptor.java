@@ -102,7 +102,10 @@ public class StreamUpgradeAcceptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamUpgradeAcceptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class StreamUpgradeAcceptor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanUpgrade.
+     *
+     * @param contentType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade" target="_top">.NET documentation</a>
+     */
     public boolean CanUpgrade(java.lang.String contentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,16 @@ public class StreamUpgradeAcceptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginAcceptUpgrade.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeAcceptor.BeginAcceptUpgrade" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginAcceptUpgrade(Stream stream, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,14 @@ public class StreamUpgradeAcceptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AcceptUpgrade.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade" target="_top">.NET documentation</a>
+     */
     public Stream AcceptUpgrade(Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +228,14 @@ public class StreamUpgradeAcceptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndAcceptUpgrade.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeAcceptor.EndAcceptUpgrade" target="_top">.NET documentation</a>
+     */
     public Stream EndAcceptUpgrade(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

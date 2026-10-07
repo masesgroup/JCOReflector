@@ -101,7 +101,10 @@ public class TableLayoutCellPaintEventArgs extends system.windows.forms.PaintEve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TableLayoutCellPaintEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class TableLayoutCellPaintEventArgs extends system.windows.forms.PaintEve
     public TableLayoutCellPaintEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param g the argument of type {@code Graphics}
+     * @param clipRectangle the argument of type {@code Rectangle}
+     * @param cellBounds the argument of type {@code Rectangle}
+     * @param column the argument of type {@code int}
+     * @param row the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TableLayoutCellPaintEventArgs(Graphics g, Rectangle clipRectangle, Rectangle cellBounds, int column, int row) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +185,13 @@ public class TableLayoutCellPaintEventArgs extends system.windows.forms.PaintEve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventArgs.Column" target="_top">.NET documentation</a>
+     */
     public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +232,13 @@ public class TableLayoutCellPaintEventArgs extends system.windows.forms.PaintEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public int getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +279,13 @@ public class TableLayoutCellPaintEventArgs extends system.windows.forms.PaintEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventArgs.CellBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getCellBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

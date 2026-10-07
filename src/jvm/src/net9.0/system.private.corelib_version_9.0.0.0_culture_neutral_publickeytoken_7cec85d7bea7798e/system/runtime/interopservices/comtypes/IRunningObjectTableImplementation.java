@@ -103,7 +103,10 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRunningObjectTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,15 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param pmkObjectName the argument of type {@code IMoniker}
+     * @param ppunkObject the argument of type {@code JCORefOut<NetObject>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.GetObject" target="_top">.NET documentation</a>
+     */
     public int GetObject(IMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +197,15 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
+    /**
+     * Invokes the .NET member GetTimeOfLastChange.
+     *
+     * @param pmkObjectName the argument of type {@code IMoniker}
+     * @param pfiletime the argument of type {@code JCORefOut<FILETIME>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.GetTimeOfLastChange" target="_top">.NET documentation</a>
+     */
     public int GetTimeOfLastChange(IMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +246,14 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
+    /**
+     * Invokes the .NET member IsRunning.
+     *
+     * @param pmkObjectName the argument of type {@code IMoniker}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.IsRunning" target="_top">.NET documentation</a>
+     */
     public int IsRunning(IMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +294,16 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param grfFlags the argument of type {@code int}
+     * @param punkObject the argument of type {@code NetObject}
+     * @param pmkObjectName the argument of type {@code IMoniker}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Register" target="_top">.NET documentation</a>
+     */
     public int Register(int grfFlags, NetObject punkObject, IMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +344,13 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
+    /**
+     * Invokes the .NET member EnumRunning.
+     *
+     * @param ppenumMoniker the argument of type {@code JCORefOut<IEnumMoniker>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.EnumRunning" target="_top">.NET documentation</a>
+     */
     public void EnumRunning(JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +361,14 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
+    /**
+     * Invokes the .NET member NoteChangeTime.
+     *
+     * @param dwRegister the argument of type {@code int}
+     * @param pfiletime the argument of type {@code JCORefOut<FILETIME>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime" target="_top">.NET documentation</a>
+     */
     public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +379,13 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
+    /**
+     * Invokes the .NET member Revoke.
+     *
+     * @param dwRegister the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke" target="_top">.NET documentation</a>
+     */
     public void Revoke(int dwRegister) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

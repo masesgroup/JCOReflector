@@ -100,7 +100,10 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISelectionItemProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,12 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddToSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection" target="_top">.NET documentation</a>
+     */
     public void AddToSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +161,12 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveFromSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection" target="_top">.NET documentation</a>
+     */
     public void RemoveFromSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +177,12 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.Select" target="_top">.NET documentation</a>
+     */
     public void Select() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +197,13 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSelected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.IsSelected" target="_top">.NET documentation</a>
+     */
     public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +218,13 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectionContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple getSelectionContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

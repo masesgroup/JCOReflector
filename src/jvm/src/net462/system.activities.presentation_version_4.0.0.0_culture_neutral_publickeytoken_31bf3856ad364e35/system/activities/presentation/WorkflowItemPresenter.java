@@ -104,7 +104,10 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowItemPresenter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,19 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.-ctor" target="_top">.NET documentation</a>
+     */
     public WorkflowItemPresenter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,8 +184,13 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     *
+     * @param itemsToPaste the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.CanPasteItems" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
@@ -177,8 +198,13 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     *
+     * @param itemsToCopy the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsCopied" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
@@ -186,8 +212,13 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     *
+     * @param itemsToCut the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsCut" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
@@ -195,8 +226,12 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     *
+     * @param modelItem the argument of type {@code ModelItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemMoved" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void OnItemMoved(ModelItem modelItem) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
@@ -204,8 +239,12 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     *
+     * @param itemsToDelete the argument of type {@code List_1}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsDelete" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void OnItemsDelete(List_1 itemsToDelete) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
@@ -213,8 +252,15 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     *
+     * @param itemsToPaste the argument of type {@code List_1}
+     * @param metadata the argument of type {@code List_1}
+     * @param pastePoint the argument of type {@code Point}
+     * @param pastePointReference the argument of type {@code WorkflowViewElement}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsPasted" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void OnItemsPasted(List_1 itemsToPaste, List_1 metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
@@ -223,6 +269,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefaultContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.IsDefaultContainer" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefaultContainer() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +298,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDefaultContainer.
+     *
+     * @param IsDefaultContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.IsDefaultContainer" target="_top">.NET documentation</a>
+     */
     public void setIsDefaultContainer(boolean IsDefaultContainer) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +323,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property Item.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.Item" target="_top">.NET documentation</a>
+     */
     public ModelItem getItem() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +353,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property Item.
+     *
+     * @param Item the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.Item" target="_top">.NET documentation</a>
+     */
     public void setItem(ModelItem Item) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +378,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property DroppingTypeResolvingOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.DroppingTypeResolvingOptions" target="_top">.NET documentation</a>
+     */
     public TypeResolvingOptions getDroppingTypeResolvingOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +408,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property DroppingTypeResolvingOptions.
+     *
+     * @param DroppingTypeResolvingOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.DroppingTypeResolvingOptions" target="_top">.NET documentation</a>
+     */
     public void setDroppingTypeResolvingOptions(TypeResolvingOptions DroppingTypeResolvingOptions) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +433,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property HintText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.HintText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHintText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +462,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property HintText.
+     *
+     * @param HintText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.HintText" target="_top">.NET documentation</a>
+     */
     public void setHintText(java.lang.String HintText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +487,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowedItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.AllowedItemType" target="_top">.NET documentation</a>
+     */
     public NetType getAllowedItemType() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +517,21 @@ public class WorkflowItemPresenter extends system.windows.controls.ContentContro
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowedItemType.
+     *
+     * @param AllowedItemType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemPresenter.AllowedItemType" target="_top">.NET documentation</a>
+     */
     public void setAllowedItemType(NetType AllowedItemType) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IEntityWithKeyImplementation extends NetObject implements IEntityWi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEntityWithKeyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IEntityWithKeyImplementation extends NetObject implements IEntityWi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EntityKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityWithKey.EntityKey" target="_top">.NET documentation</a>
+     */
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IEntityWithKeyImplementation extends NetObject implements IEntityWi
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntityKey.
+     *
+     * @param EntityKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.IEntityWithKey.EntityKey" target="_top">.NET documentation</a>
+     */
     public void setEntityKey(EntityKey EntityKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

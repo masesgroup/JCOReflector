@@ -99,7 +99,10 @@ public class ElementLocalizability extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ElementLocalizability(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ElementLocalizability extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.ElementLocalizability.-ctor" target="_top">.NET documentation</a>
+     */
     public ElementLocalizability() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class ElementLocalizability extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param formattingTag the argument of type {@code java.lang.String}
+     * @param attribute the argument of type {@code LocalizabilityAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.ElementLocalizability.-ctor" target="_top">.NET documentation</a>
+     */
     public ElementLocalizability(java.lang.String formattingTag, LocalizabilityAttribute attribute) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class ElementLocalizability extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FormattingTag.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.ElementLocalizability.FormattingTag" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFormattingTag() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class ElementLocalizability extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormattingTag.
+     *
+     * @param FormattingTag the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.ElementLocalizability.FormattingTag" target="_top">.NET documentation</a>
+     */
     public void setFormattingTag(java.lang.String FormattingTag) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class ElementLocalizability extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.ElementLocalizability.Attribute" target="_top">.NET documentation</a>
+     */
     public LocalizabilityAttribute getAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class ElementLocalizability extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Attribute.
+     *
+     * @param Attribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Localizer.ElementLocalizability.Attribute" target="_top">.NET documentation</a>
+     */
     public void setAttribute(LocalizabilityAttribute Attribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

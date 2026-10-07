@@ -99,7 +99,10 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PartialCachingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class PartialCachingAttribute extends system.Attribute  {
     public PartialCachingAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param duration the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PartialCachingAttribute(int duration) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,16 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PartialCachingAttribute(int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,17 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param shared the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PartialCachingAttribute(int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, boolean shared) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +210,18 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param duration the argument of type {@code int}
+     * @param varyByParams the argument of type {@code java.lang.String}
+     * @param varyByControls the argument of type {@code java.lang.String}
+     * @param varyByCustom the argument of type {@code java.lang.String}
+     * @param sqlDependency the argument of type {@code java.lang.String}
+     * @param shared the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public PartialCachingAttribute(int duration, java.lang.String varyByParams, java.lang.String varyByControls, java.lang.String varyByCustom, java.lang.String sqlDependency, boolean shared) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +241,13 @@ public class PartialCachingAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Shared.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.Shared" target="_top">.NET documentation</a>
+     */
     public boolean getShared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +262,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Shared.
+     *
+     * @param Shared the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.Shared" target="_top">.NET documentation</a>
+     */
     public void setShared(boolean Shared) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +279,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Duration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.Duration" target="_top">.NET documentation</a>
+     */
     public int getDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +326,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Duration.
+     *
+     * @param Duration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.Duration" target="_top">.NET documentation</a>
+     */
     public void setDuration(int Duration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +343,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.ProviderName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +364,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderName.
+     *
+     * @param ProviderName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.ProviderName" target="_top">.NET documentation</a>
+     */
     public void setProviderName(java.lang.String ProviderName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +381,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SqlDependency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.SqlDependency" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSqlDependency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +402,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SqlDependency.
+     *
+     * @param SqlDependency the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.SqlDependency" target="_top">.NET documentation</a>
+     */
     public void setSqlDependency(java.lang.String SqlDependency) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +419,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByControls.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.VaryByControls" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByControls() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +440,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByControls.
+     *
+     * @param VaryByControls the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.VaryByControls" target="_top">.NET documentation</a>
+     */
     public void setVaryByControls(java.lang.String VaryByControls) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +457,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByCustom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.VaryByCustom" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByCustom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +478,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByCustom.
+     *
+     * @param VaryByCustom the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.VaryByCustom" target="_top">.NET documentation</a>
+     */
     public void setVaryByCustom(java.lang.String VaryByCustom) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +495,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VaryByParams.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.VaryByParams" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVaryByParams() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +516,13 @@ public class PartialCachingAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VaryByParams.
+     *
+     * @param VaryByParams the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PartialCachingAttribute.VaryByParams" target="_top">.NET documentation</a>
+     */
     public void setVaryByParams(java.lang.String VaryByParams) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

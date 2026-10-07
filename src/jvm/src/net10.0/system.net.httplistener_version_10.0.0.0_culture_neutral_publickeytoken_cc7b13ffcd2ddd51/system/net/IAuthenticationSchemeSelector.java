@@ -53,5 +53,11 @@ import system.net.HttpListenerRequest;
  * @version 2.0.0.0
  */
 public interface IAuthenticationSchemeSelector {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param httpRequest the .NET argument of type {@code System.Net.HttpListenerRequest}
+     * @return the value returned to the CLR
+     */
     public AuthenticationSchemes Invoke(HttpListenerRequest httpRequest);
 }

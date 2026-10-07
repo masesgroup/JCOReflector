@@ -105,7 +105,10 @@ public class ModelValidationNode extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelValidationNode(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,16 @@ public class ModelValidationNode extends NetObject  {
     public ModelValidationNode() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param modelMetadata the argument of type {@code ModelMetadata}
+     * @param modelStateKey the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelValidationNode(ModelMetadata modelMetadata, java.lang.String modelStateKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +178,17 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param modelMetadata the argument of type {@code ModelMetadata}
+     * @param modelStateKey the argument of type {@code java.lang.String}
+     * @param childNodes the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelValidationNode(ModelMetadata modelMetadata, java.lang.String modelStateKey, IEnumerable_1 childNodes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +204,14 @@ public class ModelValidationNode extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CombineWith.
+     *
+     * @param otherNode the argument of type {@code ModelValidationNode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.CombineWith" target="_top">.NET documentation</a>
+     */
     public void CombineWith(ModelValidationNode otherNode) throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +222,18 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +244,19 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @param parentNode the argument of type {@code ModelValidationNode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ModelBindingExecutionContext modelBindingExecutionContext, ModelValidationNode parentNode) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +271,13 @@ public class ModelValidationNode extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SuppressValidation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.SuppressValidation" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressValidation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +292,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressValidation.
+     *
+     * @param SuppressValidation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.SuppressValidation" target="_top">.NET documentation</a>
+     */
     public void setSuppressValidation(boolean SuppressValidation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +309,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateAllProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ValidateAllProperties" target="_top">.NET documentation</a>
+     */
     public boolean getValidateAllProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +330,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateAllProperties.
+     *
+     * @param ValidateAllProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ValidateAllProperties" target="_top">.NET documentation</a>
+     */
     public void setValidateAllProperties(boolean ValidateAllProperties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +347,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildNodes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ChildNodes" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getChildNodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +369,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChildNodes.
+     *
+     * @param ChildNodes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ChildNodes" target="_top">.NET documentation</a>
+     */
     public void setChildNodes(ICollection_1 ChildNodes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +386,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelStateKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ModelStateKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getModelStateKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +407,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelStateKey.
+     *
+     * @param ModelStateKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ModelStateKey" target="_top">.NET documentation</a>
+     */
     public void setModelStateKey(java.lang.String ModelStateKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +424,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ModelMetadata" target="_top">.NET documentation</a>
+     */
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +446,13 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelMetadata.
+     *
+     * @param ModelMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ModelMetadata" target="_top">.NET documentation</a>
+     */
     public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

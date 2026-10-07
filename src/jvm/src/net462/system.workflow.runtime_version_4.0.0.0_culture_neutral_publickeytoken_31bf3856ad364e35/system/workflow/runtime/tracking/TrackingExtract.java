@@ -99,7 +99,10 @@ public class TrackingExtract extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingExtract(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class TrackingExtract extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Member.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingExtract.Member" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class TrackingExtract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Member.
+     *
+     * @param Member the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingExtract.Member" target="_top">.NET documentation</a>
+     */
     public void setMember(java.lang.String Member) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,13 @@ public class TrackingExtract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Annotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingExtract.Annotations" target="_top">.NET documentation</a>
+     */
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

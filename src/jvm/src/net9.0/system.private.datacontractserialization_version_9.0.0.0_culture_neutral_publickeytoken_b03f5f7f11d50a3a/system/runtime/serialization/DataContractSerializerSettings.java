@@ -102,7 +102,10 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataContractSerializerSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class DataContractSerializerSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public DataContractSerializerSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class DataContractSerializerSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreExtensionDataObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.IgnoreExtensionDataObject" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreExtensionDataObject.
+     *
+     * @param IgnoreExtensionDataObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.IgnoreExtensionDataObject" target="_top">.NET documentation</a>
+     */
     public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreserveObjectReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.PreserveObjectReferences" target="_top">.NET documentation</a>
+     */
     public boolean getPreserveObjectReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +235,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreserveObjectReferences.
+     *
+     * @param PreserveObjectReferences the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.PreserveObjectReferences" target="_top">.NET documentation</a>
+     */
     public void setPreserveObjectReferences(boolean PreserveObjectReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializeReadOnlyTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes" target="_top">.NET documentation</a>
+     */
     public boolean getSerializeReadOnlyTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializeReadOnlyTypes.
+     *
+     * @param SerializeReadOnlyTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.SerializeReadOnlyTypes" target="_top">.NET documentation</a>
+     */
     public void setSerializeReadOnlyTypes(boolean SerializeReadOnlyTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +290,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxItemsInObjectGraph.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.MaxItemsInObjectGraph" target="_top">.NET documentation</a>
+     */
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +337,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxItemsInObjectGraph.
+     *
+     * @param MaxItemsInObjectGraph the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.MaxItemsInObjectGraph" target="_top">.NET documentation</a>
+     */
     public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +354,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +376,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KnownTypes.
+     *
+     * @param KnownTypes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes" target="_top">.NET documentation</a>
+     */
     public void setKnownTypes(IEnumerable_1 KnownTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +393,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataContractResolver.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.DataContractResolver" target="_top">.NET documentation</a>
+     */
     public DataContractResolver getDataContractResolver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +415,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataContractResolver.
+     *
+     * @param DataContractResolver the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.DataContractResolver" target="_top">.NET documentation</a>
+     */
     public void setDataContractResolver(DataContractResolver DataContractResolver) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +432,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.RootName" target="_top">.NET documentation</a>
+     */
     public XmlDictionaryString getRootName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +454,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootName.
+     *
+     * @param RootName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.RootName" target="_top">.NET documentation</a>
+     */
     public void setRootName(XmlDictionaryString RootName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +471,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace" target="_top">.NET documentation</a>
+     */
     public XmlDictionaryString getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +493,13 @@ public class DataContractSerializerSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootNamespace.
+     *
+     * @param RootNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.RootNamespace" target="_top">.NET documentation</a>
+     */
     public void setRootNamespace(XmlDictionaryString RootNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

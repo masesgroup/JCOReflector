@@ -100,7 +100,10 @@ public class DispatcherHooks extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DispatcherHooks(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -164,6 +167,13 @@ public class DispatcherHooks extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDispatcherInactive.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDispatcherInactive(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDispatcherInactive.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDispatcherInactive(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addOperationAborted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeOperationAborted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOperationAborted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +235,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addOperationCompleted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOperationCompleted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +252,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeOperationCompleted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOperationCompleted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +269,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addOperationPosted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +286,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeOperationPosted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOperationPosted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +303,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addOperationPriorityChanged.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOperationPriorityChanged(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +320,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeOperationPriorityChanged.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOperationPriorityChanged(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +337,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addOperationStarted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +354,13 @@ public class DispatcherHooks extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeOperationStarted.
+     *
+     * @param handler the argument of type {@code DispatcherHookEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeOperationStarted(DispatcherHookEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

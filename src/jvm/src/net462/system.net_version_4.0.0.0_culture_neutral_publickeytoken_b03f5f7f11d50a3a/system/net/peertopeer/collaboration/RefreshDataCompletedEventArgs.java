@@ -100,7 +100,10 @@ public class RefreshDataCompletedEventArgs extends system.componentmodel.AsyncCo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RefreshDataCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class RefreshDataCompletedEventArgs extends system.componentmodel.AsyncCo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeerEndPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.RefreshDataCompletedEventArgs.PeerEndPoint" target="_top">.NET documentation</a>
+     */
     public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

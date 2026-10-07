@@ -101,7 +101,10 @@ public class TabControlEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TabControlEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class TabControlEventArgs extends system.EventArgs  {
     public TabControlEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tabPage the argument of type {@code TabPage}
+     * @param tabPageIndex the argument of type {@code int}
+     * @param action the argument of type {@code TabControlAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TabControlEventArgs(TabPage tabPage, int tabPageIndex, TabControlAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,13 @@ public class TabControlEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TabPageIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlEventArgs.TabPageIndex" target="_top">.NET documentation</a>
+     */
     public int getTabPageIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +229,13 @@ public class TabControlEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public TabControlAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +251,13 @@ public class TabControlEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TabPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TabControlEventArgs.TabPage" target="_top">.NET documentation</a>
+     */
     public TabPage getTabPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

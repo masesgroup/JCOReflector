@@ -99,7 +99,10 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBindingConfigurationElementImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ApplyConfiguration.
+     *
+     * @param binding the argument of type {@code system.servicemodel.channels.Binding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.IBindingConfigurationElement.ApplyConfiguration" target="_top">.NET documentation</a>
+     */
     public void ApplyConfiguration(system.servicemodel.channels.Binding binding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +165,13 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.IBindingConfigurationElement.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +186,13 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property CloseTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.IBindingConfigurationElement.CloseTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getCloseTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,13 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property OpenTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.IBindingConfigurationElement.OpenTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getOpenTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getReceiveTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +252,13 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.IBindingConfigurationElement.SendTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getSendTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

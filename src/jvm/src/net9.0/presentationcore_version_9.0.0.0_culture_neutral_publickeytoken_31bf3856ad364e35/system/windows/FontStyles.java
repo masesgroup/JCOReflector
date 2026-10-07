@@ -99,7 +99,10 @@ public class FontStyles extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FontStyles(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class FontStyles extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Italic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStyles.Italic" target="_top">.NET documentation</a>
+     */
     public static FontStyle getItalic() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class FontStyles extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Normal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStyles.Normal" target="_top">.NET documentation</a>
+     */
     public static FontStyle getNormal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class FontStyles extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Oblique.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStyles.Oblique" target="_top">.NET documentation</a>
+     */
     public static FontStyle getOblique() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

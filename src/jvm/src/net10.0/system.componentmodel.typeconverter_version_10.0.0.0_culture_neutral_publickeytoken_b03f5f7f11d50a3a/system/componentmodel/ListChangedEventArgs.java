@@ -101,7 +101,10 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ListChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class ListChangedEventArgs extends system.EventArgs  {
     public ListChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param listChangedType the argument of type {@code ListChangedType}
+     * @param newIndex the argument of type {@code int}
+     * @param oldIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ListChangedEventArgs(ListChangedType listChangedType, int newIndex, int oldIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +173,15 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param listChangedType the argument of type {@code ListChangedType}
+     * @param newIndex the argument of type {@code int}
+     * @param propDesc the argument of type {@code PropertyDescriptor}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ListChangedEventArgs(ListChangedType listChangedType, int newIndex, PropertyDescriptor propDesc) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +192,14 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param listChangedType the argument of type {@code ListChangedType}
+     * @param newIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ListChangedEventArgs(ListChangedType listChangedType, int newIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +210,14 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param listChangedType the argument of type {@code ListChangedType}
+     * @param propDesc the argument of type {@code PropertyDescriptor}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ListChangedEventArgs(ListChangedType listChangedType, PropertyDescriptor propDesc) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +237,13 @@ public class ListChangedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.NewIndex" target="_top">.NET documentation</a>
+     */
     public int getNewIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +284,13 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.OldIndex" target="_top">.NET documentation</a>
+     */
     public int getOldIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +331,13 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ListChangedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.ListChangedType" target="_top">.NET documentation</a>
+     */
     public ListChangedType getListChangedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +353,13 @@ public class ListChangedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDescriptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ListChangedEventArgs.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

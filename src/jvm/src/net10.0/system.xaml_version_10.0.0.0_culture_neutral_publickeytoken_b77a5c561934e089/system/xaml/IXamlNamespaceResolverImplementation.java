@@ -100,7 +100,10 @@ public class IXamlNamespaceResolverImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXamlNamespaceResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IXamlNamespaceResolverImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNamespacePrefixes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetNamespacePrefixes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +167,14 @@ public class IXamlNamespaceResolverImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespace.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNamespaceResolver.GetNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

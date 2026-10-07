@@ -101,7 +101,10 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDynamicExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArgument.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.IDynamicExpression.GetArgument" target="_top">.NET documentation</a>
+     */
     public Expression GetArgument(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         }
     }
 
+    /**
+     * Invokes the .NET member Rewrite.
+     *
+     * @param args the argument of type {@code Expression[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.IDynamicExpression.Rewrite" target="_top">.NET documentation</a>
+     */
     public Expression Rewrite(Expression[] args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,13 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         }
     }
 
+    /**
+     * Invokes the .NET member CreateCallSite.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.IDynamicExpression.CreateCallSite" target="_top">.NET documentation</a>
+     */
     public NetObject CreateCallSite() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +218,13 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ArgumentCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.IDynamicExpression.ArgumentCount" target="_top">.NET documentation</a>
+     */
     public int getArgumentCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +265,13 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         }
     }
 
+    /**
+     * Gets the value of the .NET property DelegateType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.IDynamicExpression.DelegateType" target="_top">.NET documentation</a>
+     */
     public NetType getDelegateType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

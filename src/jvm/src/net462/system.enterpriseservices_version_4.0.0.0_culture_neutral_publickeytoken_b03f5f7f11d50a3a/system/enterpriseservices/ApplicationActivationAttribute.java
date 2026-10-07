@@ -100,7 +100,10 @@ public class ApplicationActivationAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ApplicationActivationAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class ApplicationActivationAttribute extends system.Attribute  {
     public ApplicationActivationAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param opt the argument of type {@code ActivationOption}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ApplicationActivationAttribute(ActivationOption opt) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class ApplicationActivationAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute.Value" target="_top">.NET documentation</a>
+     */
     public ActivationOption getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class ApplicationActivationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapMailbox.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute.SoapMailbox" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSoapMailbox() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +222,13 @@ public class ApplicationActivationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapMailbox.
+     *
+     * @param SoapMailbox the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute.SoapMailbox" target="_top">.NET documentation</a>
+     */
     public void setSoapMailbox(java.lang.String SoapMailbox) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class ApplicationActivationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapVRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute.SoapVRoot" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSoapVRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +260,13 @@ public class ApplicationActivationAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapVRoot.
+     *
+     * @param SoapVRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute.SoapVRoot" target="_top">.NET documentation</a>
+     */
     public void setSoapVRoot(java.lang.String SoapVRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class WindowsSecurityTokenAuthenticator extends system.identitymodel.sele
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WindowsSecurityTokenAuthenticator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class WindowsSecurityTokenAuthenticator extends system.identitymodel.sele
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.WindowsSecurityTokenAuthenticator.-ctor" target="_top">.NET documentation</a>
+     */
     public WindowsSecurityTokenAuthenticator() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class WindowsSecurityTokenAuthenticator extends system.identitymodel.sele
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param includeWindowsGroups the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.WindowsSecurityTokenAuthenticator.-ctor" target="_top">.NET documentation</a>
+     */
     public WindowsSecurityTokenAuthenticator(boolean includeWindowsGroups) throws Throwable {
         try {
             // add reference to assemblyName.dll file

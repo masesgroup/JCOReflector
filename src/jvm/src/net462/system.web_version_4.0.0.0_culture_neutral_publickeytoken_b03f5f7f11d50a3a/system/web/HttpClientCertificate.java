@@ -100,7 +100,10 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpClientCertificate(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,24 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param field the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.Get" target="_top">.NET documentation</a>
+     */
     public java.lang.String Get(java.lang.String field) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidTimeZoneException, system.OverflowException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +194,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsPresent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.IsPresent" target="_top">.NET documentation</a>
+     */
     public boolean getIsPresent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +215,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.IsValid" target="_top">.NET documentation</a>
+     */
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +236,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property BinaryIssuer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.BinaryIssuer" target="_top">.NET documentation</a>
+     */
     public byte[] getBinaryIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +266,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Certificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.Certificate" target="_top">.NET documentation</a>
+     */
     public byte[] getCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +296,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublicKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.PublicKey" target="_top">.NET documentation</a>
+     */
     public byte[] getPublicKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +326,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property CertEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.CertEncoding" target="_top">.NET documentation</a>
+     */
     public int getCertEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +373,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.Flags" target="_top">.NET documentation</a>
+     */
     public int getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +420,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.KeySize" target="_top">.NET documentation</a>
+     */
     public int getKeySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +467,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecretKeySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.SecretKeySize" target="_top">.NET documentation</a>
+     */
     public int getSecretKeySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +514,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidFrom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.ValidFrom" target="_top">.NET documentation</a>
+     */
     public DateTime getValidFrom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -445,6 +536,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidUntil.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.ValidUntil" target="_top">.NET documentation</a>
+     */
     public DateTime getValidUntil() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +558,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookie.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.Cookie" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCookie() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +579,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Issuer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.Issuer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +600,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerialNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.SerialNumber" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSerialNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +621,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerIssuer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.ServerIssuer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServerIssuer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +642,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerSubject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.ServerSubject" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServerSubject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +663,13 @@ public class HttpClientCertificate extends system.collections.specialized.NameVa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpClientCertificate.Subject" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ContentTextAutomationPeer extends system.windows.automation.peers.F
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContentTextAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,26 @@ public class ContentTextAutomationPeer extends system.windows.automation.peers.F
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RaiseActiveTextPositionChangedEvent.
+     *
+     * @param rangeStart the argument of type {@code TextPointer}
+     * @param rangeEnd the argument of type {@code TextPointer}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ContentTextAutomationPeer.RaiseActiveTextPositionChangedEvent" target="_top">.NET documentation</a>
+     */
     public void RaiseActiveTextPositionChangedEvent(TextPointer rangeStart, TextPointer rangeEnd) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class ICancelAddNewImplementation extends NetObject implements ICancelAdd
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICancelAddNewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class ICancelAddNewImplementation extends NetObject implements ICancelAdd
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CancelNew.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICancelAddNew.CancelNew" target="_top">.NET documentation</a>
+     */
     public void CancelNew(int itemIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +160,13 @@ public class ICancelAddNewImplementation extends NetObject implements ICancelAdd
         }
     }
 
+    /**
+     * Invokes the .NET member EndNew.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICancelAddNew.EndNew" target="_top">.NET documentation</a>
+     */
     public void EndNew(int itemIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

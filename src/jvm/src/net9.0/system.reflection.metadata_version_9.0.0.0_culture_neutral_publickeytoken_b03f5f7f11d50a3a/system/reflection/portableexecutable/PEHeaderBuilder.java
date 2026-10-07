@@ -105,7 +105,10 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PEHeaderBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,41 @@ public class PEHeaderBuilder extends NetObject  {
     public PEHeaderBuilder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param machine the argument of type {@code Machine}
+     * @param sectionAlignment the argument of type {@code int}
+     * @param fileAlignment the argument of type {@code int}
+     * @param imageBase the argument of type {@code UInt64}
+     * @param majorLinkerVersion the argument of type {@code byte}
+     * @param minorLinkerVersion the argument of type {@code byte}
+     * @param majorOperatingSystemVersion the argument of type {@code UInt16}
+     * @param minorOperatingSystemVersion the argument of type {@code UInt16}
+     * @param majorImageVersion the argument of type {@code UInt16}
+     * @param minorImageVersion the argument of type {@code UInt16}
+     * @param majorSubsystemVersion the argument of type {@code UInt16}
+     * @param minorSubsystemVersion the argument of type {@code UInt16}
+     * @param subsystem the argument of type {@code Subsystem}
+     * @param dllCharacteristics the argument of type {@code DllCharacteristics}
+     * @param imageCharacteristics the argument of type {@code Characteristics}
+     * @param sizeOfStackReserve the argument of type {@code UInt64}
+     * @param sizeOfStackCommit the argument of type {@code UInt64}
+     * @param sizeOfHeapReserve the argument of type {@code UInt64}
+     * @param sizeOfHeapCommit the argument of type {@code UInt64}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public PEHeaderBuilder(Machine machine, int sectionAlignment, int fileAlignment, UInt64 imageBase, byte majorLinkerVersion, byte minorLinkerVersion, UInt16 majorOperatingSystemVersion, UInt16 minorOperatingSystemVersion, UInt16 majorImageVersion, UInt16 minorImageVersion, UInt16 majorSubsystemVersion, UInt16 minorSubsystemVersion, Subsystem subsystem, DllCharacteristics dllCharacteristics, Characteristics imageCharacteristics, UInt64 sizeOfStackReserve, UInt64 sizeOfStackCommit, UInt64 sizeOfHeapReserve, UInt64 sizeOfHeapCommit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +208,21 @@ public class PEHeaderBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateExecutableHeader.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.CreateExecutableHeader" target="_top">.NET documentation</a>
+     */
     public static PEHeaderBuilder CreateExecutableHeader() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +238,21 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateLibraryHeader.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.CreateLibraryHeader" target="_top">.NET documentation</a>
+     */
     public static PEHeaderBuilder CreateLibraryHeader() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +272,13 @@ public class PEHeaderBuilder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MajorLinkerVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MajorLinkerVersion" target="_top">.NET documentation</a>
+     */
     public byte getMajorLinkerVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +319,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorLinkerVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MinorLinkerVersion" target="_top">.NET documentation</a>
+     */
     public byte getMinorLinkerVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +366,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileAlignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.FileAlignment" target="_top">.NET documentation</a>
+     */
     public int getFileAlignment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +413,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SectionAlignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.SectionAlignment" target="_top">.NET documentation</a>
+     */
     public int getSectionAlignment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +460,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageCharacteristics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.ImageCharacteristics" target="_top">.NET documentation</a>
+     */
     public Characteristics getImageCharacteristics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +482,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DllCharacteristics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.DllCharacteristics" target="_top">.NET documentation</a>
+     */
     public DllCharacteristics getDllCharacteristics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +504,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Machine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.Machine" target="_top">.NET documentation</a>
+     */
     public Machine getMachine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +526,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subsystem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.Subsystem" target="_top">.NET documentation</a>
+     */
     public Subsystem getSubsystem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +548,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorImageVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MajorImageVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMajorImageVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +570,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorOperatingSystemVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MajorOperatingSystemVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMajorOperatingSystemVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +592,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorSubsystemVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MajorSubsystemVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMajorSubsystemVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +614,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorImageVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MinorImageVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMinorImageVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +636,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorOperatingSystemVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MinorOperatingSystemVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMinorOperatingSystemVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +658,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorSubsystemVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.MinorSubsystemVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMinorSubsystemVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +680,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImageBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.ImageBase" target="_top">.NET documentation</a>
+     */
     public UInt64 getImageBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +702,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfHeapCommit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfHeapCommit" target="_top">.NET documentation</a>
+     */
     public UInt64 getSizeOfHeapCommit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +724,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfHeapReserve.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfHeapReserve" target="_top">.NET documentation</a>
+     */
     public UInt64 getSizeOfHeapReserve() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +746,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfStackCommit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfStackCommit" target="_top">.NET documentation</a>
+     */
     public UInt64 getSizeOfStackCommit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +768,13 @@ public class PEHeaderBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfStackReserve.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaderBuilder.SizeOfStackReserve" target="_top">.NET documentation</a>
+     */
     public UInt64 getSizeOfStackReserve() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

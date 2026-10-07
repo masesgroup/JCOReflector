@@ -99,7 +99,10 @@ public class TextElementEditingBehaviorAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextElementEditingBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class TextElementEditingBehaviorAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.TextElementEditingBehaviorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public TextElementEditingBehaviorAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class TextElementEditingBehaviorAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsMergeable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.TextElementEditingBehaviorAttribute.IsMergeable" target="_top">.NET documentation</a>
+     */
     public boolean getIsMergeable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class TextElementEditingBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsMergeable.
+     *
+     * @param IsMergeable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.TextElementEditingBehaviorAttribute.IsMergeable" target="_top">.NET documentation</a>
+     */
     public void setIsMergeable(boolean IsMergeable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class TextElementEditingBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTypographicOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.TextElementEditingBehaviorAttribute.IsTypographicOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsTypographicOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class TextElementEditingBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsTypographicOnly.
+     *
+     * @param IsTypographicOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.TextElementEditingBehaviorAttribute.IsTypographicOnly" target="_top">.NET documentation</a>
+     */
     public void setIsTypographicOnly(boolean IsTypographicOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

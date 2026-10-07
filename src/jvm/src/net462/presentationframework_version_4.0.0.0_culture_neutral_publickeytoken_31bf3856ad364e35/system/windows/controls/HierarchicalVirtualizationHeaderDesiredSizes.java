@@ -101,7 +101,10 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends system.ValueTy
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HierarchicalVirtualizationHeaderDesiredSizes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends system.ValueTy
     public HierarchicalVirtualizationHeaderDesiredSizes() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param logicalSize the argument of type {@code Size}
+     * @param pixelSize the argument of type {@code Size}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes.-ctor" target="_top">.NET documentation</a>
+     */
     public HierarchicalVirtualizationHeaderDesiredSizes(Size logicalSize, Size pixelSize) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,14 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends system.ValueTy
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param comparisonHeaderSizes the argument of type {@code HierarchicalVirtualizationHeaderDesiredSizes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(HierarchicalVirtualizationHeaderDesiredSizes comparisonHeaderSizes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends system.ValueTy
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LogicalSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes.LogicalSize" target="_top">.NET documentation</a>
+     */
     public Size getLogicalSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +225,13 @@ public class HierarchicalVirtualizationHeaderDesiredSizes extends system.ValueTy
         }
     }
 
+    /**
+     * Gets the value of the .NET property PixelSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes.PixelSize" target="_top">.NET documentation</a>
+     */
     public Size getPixelSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

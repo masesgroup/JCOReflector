@@ -99,7 +99,10 @@ public class FileVersionInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileVersionInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,24 @@ public class FileVersionInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetVersionInfo.
+     *
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.AccessViolationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.GetVersionInfo" target="_top">.NET documentation</a>
+     */
     public static FileVersionInfo GetVersionInfo(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +194,13 @@ public class FileVersionInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDebug.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.IsDebug" target="_top">.NET documentation</a>
+     */
     public boolean getIsDebug() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +215,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPatched.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.IsPatched" target="_top">.NET documentation</a>
+     */
     public boolean getIsPatched() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +236,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPreRelease.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.IsPreRelease" target="_top">.NET documentation</a>
+     */
     public boolean getIsPreRelease() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +257,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrivateBuild.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.IsPrivateBuild" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrivateBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +278,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSpecialBuild.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.IsSpecialBuild" target="_top">.NET documentation</a>
+     */
     public boolean getIsSpecialBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +299,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileBuildPart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FileBuildPart" target="_top">.NET documentation</a>
+     */
     public int getFileBuildPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +346,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileMajorPart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FileMajorPart" target="_top">.NET documentation</a>
+     */
     public int getFileMajorPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +393,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileMinorPart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FileMinorPart" target="_top">.NET documentation</a>
+     */
     public int getFileMinorPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +440,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilePrivatePart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FilePrivatePart" target="_top">.NET documentation</a>
+     */
     public int getFilePrivatePart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +487,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductBuildPart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.ProductBuildPart" target="_top">.NET documentation</a>
+     */
     public int getProductBuildPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +534,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductMajorPart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.ProductMajorPart" target="_top">.NET documentation</a>
+     */
     public int getProductMajorPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +581,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductMinorPart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.ProductMinorPart" target="_top">.NET documentation</a>
+     */
     public int getProductMinorPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +628,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductPrivatePart.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.ProductPrivatePart" target="_top">.NET documentation</a>
+     */
     public int getProductPrivatePart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +675,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Comments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.Comments" target="_top">.NET documentation</a>
+     */
     public java.lang.String getComments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +696,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompanyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.CompanyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCompanyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +717,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FileDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +738,23 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FileName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +769,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FileVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.FileVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFileVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -633,6 +790,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InternalName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.InternalName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInternalName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -647,6 +811,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Language.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.Language" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +832,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LegalCopyright.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.LegalCopyright" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLegalCopyright() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +853,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LegalTrademarks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.LegalTrademarks" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLegalTrademarks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -689,6 +874,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalFilename.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.OriginalFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOriginalFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -703,6 +895,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateBuild.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.PrivateBuild" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrivateBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -717,6 +916,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.ProductName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProductName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -731,6 +937,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProductVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.ProductVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProductVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -745,6 +958,13 @@ public class FileVersionInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SpecialBuild.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.FileVersionInfo.SpecialBuild" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSpecialBuild() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

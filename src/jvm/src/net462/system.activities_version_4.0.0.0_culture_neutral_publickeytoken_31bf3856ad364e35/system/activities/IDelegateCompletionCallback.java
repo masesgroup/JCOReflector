@@ -55,5 +55,12 @@ import system.collections.generic.IDictionary_2Implementation;
  * @version 2.0.0.0
  */
 public interface IDelegateCompletionCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Activities.NativeActivityContext}
+     * @param completedInstance the .NET argument of type {@code System.Activities.ActivityInstance}
+     * @param outArguments the .NET argument of type {@code System.Collections.Generic.IDictionary`2[System.String,System.Object]}
+     */
     public void Invoke(NativeActivityContext context, ActivityInstance completedInstance, IDictionary_2 outArguments);
 }

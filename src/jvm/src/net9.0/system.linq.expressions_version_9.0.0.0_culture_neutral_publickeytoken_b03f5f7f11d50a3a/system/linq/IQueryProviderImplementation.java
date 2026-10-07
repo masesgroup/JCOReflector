@@ -103,7 +103,10 @@ public class IQueryProviderImplementation extends NetObject implements IQueryPro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IQueryProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IQueryProviderImplementation extends NetObject implements IQueryPro
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateQuery.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IQueryProvider.CreateQuery" target="_top">.NET documentation</a>
+     */
     public IQueryable CreateQuery(Expression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,14 @@ public class IQueryProviderImplementation extends NetObject implements IQueryPro
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IQueryProvider.Execute" target="_top">.NET documentation</a>
+     */
     public NetObject Execute(Expression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

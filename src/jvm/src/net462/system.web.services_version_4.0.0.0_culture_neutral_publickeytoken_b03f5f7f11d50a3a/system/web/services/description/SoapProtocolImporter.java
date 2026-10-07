@@ -104,7 +104,10 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapProtocolImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,19 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapProtocolImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapProtocolImporter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,13 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SoapBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapProtocolImporter.SoapBinding" target="_top">.NET documentation</a>
+     */
     public SoapBinding getSoapBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,13 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapExporter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapProtocolImporter.SoapExporter" target="_top">.NET documentation</a>
+     */
     public SoapCodeExporter getSoapExporter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +229,13 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
         }
     }
 
+    /**
+     * Gets the value of the .NET property SoapImporter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapProtocolImporter.SoapImporter" target="_top">.NET documentation</a>
+     */
     public SoapSchemaImporter getSoapImporter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlExporter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapProtocolImporter.XmlExporter" target="_top">.NET documentation</a>
+     */
     public XmlCodeExporter getXmlExporter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class SoapProtocolImporter extends system.web.services.description.Protoc
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlImporter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.SoapProtocolImporter.XmlImporter" target="_top">.NET documentation</a>
+     */
     public XmlSchemaImporter getXmlImporter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RelatedObjectQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,34 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public RelatedObjectQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.management.ManagementException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +187,33 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isSchemaQuery the argument of type {@code boolean}
+     * @param sourceObject the argument of type {@code java.lang.String}
+     * @param relatedClass the argument of type {@code java.lang.String}
+     * @param relationshipClass the argument of type {@code java.lang.String}
+     * @param relatedQualifier the argument of type {@code java.lang.String}
+     * @param relationshipQualifier the argument of type {@code java.lang.String}
+     * @param relatedRole the argument of type {@code java.lang.String}
+     * @param thisRole the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public RelatedObjectQuery(boolean isSchemaQuery, java.lang.String sourceObject, java.lang.String relatedClass, java.lang.String relationshipClass, java.lang.String relatedQualifier, java.lang.String relationshipQualifier, java.lang.String relatedRole, java.lang.String thisRole) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +224,36 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param queryOrSourceObject the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.management.ManagementException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public RelatedObjectQuery(java.lang.String queryOrSourceObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.management.ManagementException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +264,18 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceObject the argument of type {@code java.lang.String}
+     * @param relatedClass the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public RelatedObjectQuery(java.lang.String sourceObject, java.lang.String relatedClass) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +286,24 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceObject the argument of type {@code java.lang.String}
+     * @param relatedClass the argument of type {@code java.lang.String}
+     * @param relationshipClass the argument of type {@code java.lang.String}
+     * @param relatedQualifier the argument of type {@code java.lang.String}
+     * @param relationshipQualifier the argument of type {@code java.lang.String}
+     * @param relatedRole the argument of type {@code java.lang.String}
+     * @param thisRole the argument of type {@code java.lang.String}
+     * @param classDefinitionsOnly the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public RelatedObjectQuery(java.lang.String sourceObject, java.lang.String relatedClass, java.lang.String relationshipClass, java.lang.String relatedQualifier, java.lang.String relationshipQualifier, java.lang.String relatedRole, java.lang.String thisRole, boolean classDefinitionsOnly) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +318,26 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +357,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClassDefinitionsOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.ClassDefinitionsOnly" target="_top">.NET documentation</a>
+     */
     public boolean getClassDefinitionsOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +378,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClassDefinitionsOnly.
+     *
+     * @param ClassDefinitionsOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.ClassDefinitionsOnly" target="_top">.NET documentation</a>
+     */
     public void setClassDefinitionsOnly(boolean ClassDefinitionsOnly) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +399,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSchemaQuery.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.IsSchemaQuery" target="_top">.NET documentation</a>
+     */
     public boolean getIsSchemaQuery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +420,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsSchemaQuery.
+     *
+     * @param IsSchemaQuery the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.IsSchemaQuery" target="_top">.NET documentation</a>
+     */
     public void setIsSchemaQuery(boolean IsSchemaQuery) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +441,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelatedClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelatedClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelatedClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +462,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelatedClass.
+     *
+     * @param RelatedClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelatedClass" target="_top">.NET documentation</a>
+     */
     public void setRelatedClass(java.lang.String RelatedClass) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +483,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelatedQualifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelatedQualifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelatedQualifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +504,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelatedQualifier.
+     *
+     * @param RelatedQualifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelatedQualifier" target="_top">.NET documentation</a>
+     */
     public void setRelatedQualifier(java.lang.String RelatedQualifier) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +525,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelatedRole.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelatedRole" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelatedRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +546,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelatedRole.
+     *
+     * @param RelatedRole the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelatedRole" target="_top">.NET documentation</a>
+     */
     public void setRelatedRole(java.lang.String RelatedRole) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +567,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelationshipClass" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +588,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelationshipClass.
+     *
+     * @param RelationshipClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelationshipClass" target="_top">.NET documentation</a>
+     */
     public void setRelationshipClass(java.lang.String RelationshipClass) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +609,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipQualifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelationshipQualifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRelationshipQualifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +630,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelationshipQualifier.
+     *
+     * @param RelationshipQualifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.RelationshipQualifier" target="_top">.NET documentation</a>
+     */
     public void setRelationshipQualifier(java.lang.String RelationshipQualifier) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +651,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.SourceObject" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +672,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceObject.
+     *
+     * @param SourceObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.SourceObject" target="_top">.NET documentation</a>
+     */
     public void setSourceObject(java.lang.String SourceObject) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +693,13 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThisRole.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.ThisRole" target="_top">.NET documentation</a>
+     */
     public java.lang.String getThisRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +714,17 @@ public class RelatedObjectQuery extends system.management.WqlObjectQuery  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ThisRole.
+     *
+     * @param ThisRole the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.RelatedObjectQuery.ThisRole" target="_top">.NET documentation</a>
+     */
     public void setThisRole(java.lang.String ThisRole) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

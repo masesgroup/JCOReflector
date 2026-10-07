@@ -102,7 +102,10 @@ public class ContextAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContextAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class ContextAttribute extends system.Attribute  {
     public ContextAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.ContextAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ContextAttribute(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,18 @@ public class ContextAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsContextOK.
+     *
+     * @param ctx the argument of type {@code Context}
+     * @param ctorMsg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.ContextAttribute.IsContextOK" target="_top">.NET documentation</a>
+     */
     public boolean IsContextOK(Context ctx, IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +203,14 @@ public class ContextAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsNewContextOK.
+     *
+     * @param newCtx the argument of type {@code Context}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.ContextAttribute.IsNewContextOK" target="_top">.NET documentation</a>
+     */
     public boolean IsNewContextOK(Context newCtx) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +225,13 @@ public class ContextAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member Freeze.
+     *
+     * @param newContext the argument of type {@code Context}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.ContextAttribute.Freeze" target="_top">.NET documentation</a>
+     */
     public void Freeze(Context newContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +242,14 @@ public class ContextAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesForNewContext.
+     *
+     * @param ctorMsg the argument of type {@code IConstructionCallMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.ContextAttribute.GetPropertiesForNewContext" target="_top">.NET documentation</a>
+     */
     public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +264,13 @@ public class ContextAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.ContextAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

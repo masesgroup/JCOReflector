@@ -99,7 +99,10 @@ public class SystemSounds extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SystemSounds(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class SystemSounds extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Asterisk.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Media.SystemSounds.Asterisk" target="_top">.NET documentation</a>
+     */
     public static SystemSound getAsterisk() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class SystemSounds extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Beep.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Media.SystemSounds.Beep" target="_top">.NET documentation</a>
+     */
     public static SystemSound getBeep() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class SystemSounds extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exclamation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Media.SystemSounds.Exclamation" target="_top">.NET documentation</a>
+     */
     public static SystemSound getExclamation() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +225,13 @@ public class SystemSounds extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Media.SystemSounds.Hand" target="_top">.NET documentation</a>
+     */
     public static SystemSound getHand() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +247,13 @@ public class SystemSounds extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Question.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Media.SystemSounds.Question" target="_top">.NET documentation</a>
+     */
     public static SystemSound getQuestion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

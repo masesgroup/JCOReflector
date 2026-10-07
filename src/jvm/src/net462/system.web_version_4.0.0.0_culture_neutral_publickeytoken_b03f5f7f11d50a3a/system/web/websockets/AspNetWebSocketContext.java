@@ -118,7 +118,10 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AspNetWebSocketContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -175,6 +178,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsClientConnected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.IsClientConnected" target="_top">.NET documentation</a>
+     */
     public boolean getIsClientConnected() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +200,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDebuggingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.IsDebuggingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsDebuggingEnabled() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +222,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.ConnectionCount" target="_top">.NET documentation</a>
+     */
     public static int getConnectionCount() throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +270,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Items" target="_top">.NET documentation</a>
+     */
     public IDictionary getItems() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +293,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueryString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.QueryString" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getQueryString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +316,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServerVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.ServerVariables" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getServerVariables() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +339,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Timestamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Timestamp" target="_top">.NET documentation</a>
+     */
     public DateTime getTimestamp() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +362,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property LogonUserIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.LogonUserIdentity" target="_top">.NET documentation</a>
+     */
     public WindowsIdentity getLogonUserIdentity() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +385,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnonymousID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.AnonymousID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAnonymousID() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +407,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.ApplicationPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +429,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.FilePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilePath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +451,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +473,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property PathInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.PathInfo" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPathInfo() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +495,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property RawUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.RawUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRawUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +517,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserAgent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.UserAgent" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserAgent() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +539,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserHostAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.UserHostAddress" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserHostAddress() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +561,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserHostName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.UserHostName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserHostName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +583,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserLanguages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.UserLanguages" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getUserLanguages() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +614,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property UrlReferrer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.UrlReferrer" target="_top">.NET documentation</a>
+     */
     public Uri getUrlReferrer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +637,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cache.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Cache" target="_top">.NET documentation</a>
+     */
     public Cache getCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +660,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Application.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Application" target="_top">.NET documentation</a>
+     */
     public HttpApplicationStateBase getApplication() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +683,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.ClientCertificate" target="_top">.NET documentation</a>
+     */
     public HttpClientCertificate getClientCertificate() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +706,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Cookies" target="_top">.NET documentation</a>
+     */
     public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -542,6 +729,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Server.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Server" target="_top">.NET documentation</a>
+     */
     public HttpServerUtilityBase getServer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -557,6 +752,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Profile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Profile" target="_top">.NET documentation</a>
+     */
     public ProfileBase getProfile() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +775,14 @@ public class AspNetWebSocketContext extends system.net.websockets.WebSocketConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property Unvalidated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketContext.Unvalidated" target="_top">.NET documentation</a>
+     */
     public UnvalidatedRequestValuesBase getUnvalidated() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

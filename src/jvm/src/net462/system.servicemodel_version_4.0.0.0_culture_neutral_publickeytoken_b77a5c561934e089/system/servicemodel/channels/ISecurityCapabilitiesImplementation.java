@@ -99,7 +99,10 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISecurityCapabilitiesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SupportsClientAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientAuthentication" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsClientAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsClientWindowsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities.SupportsClientWindowsIdentity" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsClientWindowsIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +190,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsServerAuthentication.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities.SupportsServerAuthentication" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsServerAuthentication() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +211,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportedRequestProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities.SupportedRequestProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getSupportedRequestProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +233,13 @@ public class ISecurityCapabilitiesImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportedResponseProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ISecurityCapabilities.SupportedResponseProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getSupportedResponseProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

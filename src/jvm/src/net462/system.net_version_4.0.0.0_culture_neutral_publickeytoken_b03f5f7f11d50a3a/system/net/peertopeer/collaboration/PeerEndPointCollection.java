@@ -101,7 +101,10 @@ public class PeerEndPointCollection extends system.collections.objectmodel.Colle
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerEndPointCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class PeerEndPointCollection extends system.collections.objectmodel.Colle
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code PeerEndPointCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerEndPointCollection.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(PeerEndPointCollection other) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ViewService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ViewService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class ViewService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetModel.
+     *
+     * @param view the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ViewService.GetModel" target="_top">.NET documentation</a>
+     */
     public ModelItem GetModel(DependencyObject view) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class ViewService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetView.
+     *
+     * @param model the argument of type {@code ModelItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ViewService.GetView" target="_top">.NET documentation</a>
+     */
     public DependencyObject GetView(ModelItem model) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

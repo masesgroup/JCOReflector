@@ -99,7 +99,10 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PersonalizationEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class PersonalizationEntry extends NetObject  {
     public PersonalizationEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param scope the argument of type {@code PersonalizationScope}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public PersonalizationEntry(NetObject value, PersonalizationScope scope) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,16 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param scope the argument of type {@code PersonalizationScope}
+     * @param isSensitive the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public PersonalizationEntry(NetObject value, PersonalizationScope scope, boolean isSensitive) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +200,13 @@ public class PersonalizationEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsSensitive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.IsSensitive" target="_top">.NET documentation</a>
+     */
     public boolean getIsSensitive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +221,13 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsSensitive.
+     *
+     * @param IsSensitive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.IsSensitive" target="_top">.NET documentation</a>
+     */
     public void setIsSensitive(boolean IsSensitive) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +238,13 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +260,13 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +277,13 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.Scope" target="_top">.NET documentation</a>
+     */
     public PersonalizationScope getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +299,14 @@ public class PersonalizationEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scope.
+     *
+     * @param Scope the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationEntry.Scope" target="_top">.NET documentation</a>
+     */
     public void setScope(PersonalizationScope Scope) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class NullableAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NullableAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class NullableAttribute extends system.Attribute  {
     public NullableAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.NullableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public NullableAttribute(byte value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,13 @@ public class NullableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.NullableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public NullableAttribute(byte[] value) throws Throwable {
         try {
             // add reference to assemblyName.dll file

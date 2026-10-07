@@ -51,5 +51,11 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IPredicate_1<T extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param obj the .NET argument of type {@code T}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(T obj);
 }

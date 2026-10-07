@@ -52,5 +52,11 @@ import system.data.odbc.OdbcRowUpdatedEventArgs;
  * @version 2.0.0.0
  */
 public interface IOdbcRowUpdatedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Data.Odbc.OdbcRowUpdatedEventArgs}
+     */
     public void Invoke(NetObject sender, OdbcRowUpdatedEventArgs e);
 }

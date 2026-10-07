@@ -104,7 +104,10 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeTypeDeclaration(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeDeclaration() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeDeclaration(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +195,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsClass" target="_top">.NET documentation</a>
+     */
     public boolean getIsClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsClass.
+     *
+     * @param IsClass the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsClass" target="_top">.NET documentation</a>
+     */
     public void setIsClass(boolean IsClass) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEnum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsEnum" target="_top">.NET documentation</a>
+     */
     public boolean getIsEnum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsEnum.
+     *
+     * @param IsEnum the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsEnum" target="_top">.NET documentation</a>
+     */
     public void setIsEnum(boolean IsEnum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInterface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsInterface" target="_top">.NET documentation</a>
+     */
     public boolean getIsInterface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +292,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInterface.
+     *
+     * @param IsInterface the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsInterface" target="_top">.NET documentation</a>
+     */
     public void setIsInterface(boolean IsInterface) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +309,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPartial.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsPartial" target="_top">.NET documentation</a>
+     */
     public boolean getIsPartial() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +330,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsPartial.
+     *
+     * @param IsPartial the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsPartial" target="_top">.NET documentation</a>
+     */
     public void setIsPartial(boolean IsPartial) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +347,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStruct.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsStruct" target="_top">.NET documentation</a>
+     */
     public boolean getIsStruct() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +368,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsStruct.
+     *
+     * @param IsStruct the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.IsStruct" target="_top">.NET documentation</a>
+     */
     public void setIsStruct(boolean IsStruct) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +385,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Members.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.Members" target="_top">.NET documentation</a>
+     */
     public CodeTypeMemberCollection getMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +407,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.TypeParameters" target="_top">.NET documentation</a>
+     */
     public CodeTypeParameterCollection getTypeParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.BaseTypes" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceCollection getBaseTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +451,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.TypeAttributes" target="_top">.NET documentation</a>
+     */
     public TypeAttributes getTypeAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +473,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeAttributes.
+     *
+     * @param TypeAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeDeclaration.TypeAttributes" target="_top">.NET documentation</a>
+     */
     public void setTypeAttributes(TypeAttributes TypeAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +495,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPopulateBaseTypes.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPopulateBaseTypes(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +512,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePopulateBaseTypes.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePopulateBaseTypes(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +529,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member addPopulateMembers.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPopulateMembers(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +546,13 @@ public class CodeTypeDeclaration extends system.codedom.CodeTypeMember  {
         }
     }
 
+    /**
+     * Invokes the .NET member removePopulateMembers.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePopulateMembers(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

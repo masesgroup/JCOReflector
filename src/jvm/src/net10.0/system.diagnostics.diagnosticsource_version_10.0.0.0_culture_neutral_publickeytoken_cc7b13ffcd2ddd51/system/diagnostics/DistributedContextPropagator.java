@@ -104,7 +104,10 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DistributedContextPropagator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class DistributedContextPropagator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateDefaultPropagator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.CreateDefaultPropagator" target="_top">.NET documentation</a>
+     */
     public static DistributedContextPropagator CreateDefaultPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +182,13 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateNoOutputPropagator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.CreateNoOutputPropagator" target="_top">.NET documentation</a>
+     */
     public static DistributedContextPropagator CreateNoOutputPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +204,13 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePassThroughPropagator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.CreatePassThroughPropagator" target="_top">.NET documentation</a>
+     */
     public static DistributedContextPropagator CreatePassThroughPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +226,13 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePreW3CPropagator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.CreatePreW3CPropagator" target="_top">.NET documentation</a>
+     */
     public static DistributedContextPropagator CreatePreW3CPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -217,6 +248,13 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateW3CPropagator.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.CreateW3CPropagator" target="_top">.NET documentation</a>
+     */
     public static DistributedContextPropagator CreateW3CPropagator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +274,13 @@ public class DistributedContextPropagator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Fields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.Fields" target="_top">.NET documentation</a>
+     */
     public IReadOnlyCollection_1 getFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +296,13 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.Current" target="_top">.NET documentation</a>
+     */
     public static DistributedContextPropagator getCurrent() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +318,22 @@ public class DistributedContextPropagator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Current.
+     *
+     * @param Current the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DistributedContextPropagator.Current" target="_top">.NET documentation</a>
+     */
     public static void setCurrent(DistributedContextPropagator Current) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

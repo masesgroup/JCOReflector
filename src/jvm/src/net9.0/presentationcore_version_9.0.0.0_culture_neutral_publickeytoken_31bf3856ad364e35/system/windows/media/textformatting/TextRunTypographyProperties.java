@@ -105,7 +105,10 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextRunTypographyProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class TextRunTypographyProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CapitalSpacing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.CapitalSpacing" target="_top">.NET documentation</a>
+     */
     public boolean getCapitalSpacing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaseSensitiveForms.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.CaseSensitiveForms" target="_top">.NET documentation</a>
+     */
     public boolean getCaseSensitiveForms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +207,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextualAlternates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualAlternates" target="_top">.NET documentation</a>
+     */
     public boolean getContextualAlternates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +228,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextualLigatures.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualLigatures" target="_top">.NET documentation</a>
+     */
     public boolean getContextualLigatures() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DiscretionaryLigatures.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.DiscretionaryLigatures" target="_top">.NET documentation</a>
+     */
     public boolean getDiscretionaryLigatures() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +270,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EastAsianExpertForms.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianExpertForms" target="_top">.NET documentation</a>
+     */
     public boolean getEastAsianExpertForms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +291,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HistoricalForms.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.HistoricalForms" target="_top">.NET documentation</a>
+     */
     public boolean getHistoricalForms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +312,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HistoricalLigatures.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.HistoricalLigatures" target="_top">.NET documentation</a>
+     */
     public boolean getHistoricalLigatures() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +333,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Kerning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.Kerning" target="_top">.NET documentation</a>
+     */
     public boolean getKerning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +354,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MathematicalGreek.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.MathematicalGreek" target="_top">.NET documentation</a>
+     */
     public boolean getMathematicalGreek() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +375,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SlashedZero.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.SlashedZero" target="_top">.NET documentation</a>
+     */
     public boolean getSlashedZero() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +396,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardLigatures.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardLigatures" target="_top">.NET documentation</a>
+     */
     public boolean getStandardLigatures() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +417,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet1" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +438,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet10" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet10() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +459,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet11" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet11() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +480,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet12" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +501,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet13.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet13" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet13() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +522,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet14.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet14" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet14() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +543,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet15" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet15() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +564,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet16.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet16" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet16() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +585,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet17.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet17" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet17() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +606,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet18.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet18" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet18() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +627,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet19.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet19" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet19() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +648,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet2" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +669,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet20.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet20" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet20() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +690,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet3" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +711,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet4.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet4" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -540,6 +732,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet5.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet5" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet5() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +753,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet6.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet6" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet6() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +774,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet7.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet7" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet7() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +795,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet8.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet8" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet8() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +816,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticSet9.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticSet9" target="_top">.NET documentation</a>
+     */
     public boolean getStylisticSet9() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -610,6 +837,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnnotationAlternates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.AnnotationAlternates" target="_top">.NET documentation</a>
+     */
     public int getAnnotationAlternates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +884,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContextualSwashes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.ContextualSwashes" target="_top">.NET documentation</a>
+     */
     public int getContextualSwashes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -690,6 +931,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StandardSwashes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StandardSwashes" target="_top">.NET documentation</a>
+     */
     public int getStandardSwashes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -730,6 +978,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylisticAlternates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.StylisticAlternates" target="_top">.NET documentation</a>
+     */
     public int getStylisticAlternates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -770,6 +1025,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Capitals.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.Capitals" target="_top">.NET documentation</a>
+     */
     public FontCapitals getCapitals() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -785,6 +1047,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EastAsianLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianLanguage" target="_top">.NET documentation</a>
+     */
     public FontEastAsianLanguage getEastAsianLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -800,6 +1069,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EastAsianWidths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.EastAsianWidths" target="_top">.NET documentation</a>
+     */
     public FontEastAsianWidths getEastAsianWidths() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1091,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Fraction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.Fraction" target="_top">.NET documentation</a>
+     */
     public FontFraction getFraction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -830,6 +1113,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumeralAlignment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.NumeralAlignment" target="_top">.NET documentation</a>
+     */
     public FontNumeralAlignment getNumeralAlignment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -845,6 +1135,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumeralStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.NumeralStyle" target="_top">.NET documentation</a>
+     */
     public FontNumeralStyle getNumeralStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -860,6 +1157,13 @@ public class TextRunTypographyProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variants.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextRunTypographyProperties.Variants" target="_top">.NET documentation</a>
+     */
     public FontVariants getVariants() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

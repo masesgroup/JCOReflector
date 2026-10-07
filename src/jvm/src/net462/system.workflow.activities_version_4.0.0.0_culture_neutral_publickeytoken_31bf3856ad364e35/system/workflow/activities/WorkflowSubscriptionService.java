@@ -100,7 +100,10 @@ public class WorkflowSubscriptionService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowSubscriptionService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class WorkflowSubscriptionService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSubscription.
+     *
+     * @param subscription the argument of type {@code MessageEventSubscription}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WorkflowSubscriptionService.CreateSubscription" target="_top">.NET documentation</a>
+     */
     public void CreateSubscription(MessageEventSubscription subscription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,13 @@ public class WorkflowSubscriptionService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteSubscription.
+     *
+     * @param subscriptionId the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WorkflowSubscriptionService.DeleteSubscription" target="_top">.NET documentation</a>
+     */
     public void DeleteSubscription(Guid subscriptionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

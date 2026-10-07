@@ -99,7 +99,10 @@ public class LogRecord extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LogRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class LogRecord extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Sequence.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecord.Sequence" target="_top">.NET documentation</a>
+     */
     public int getSequence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class LogRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecord.Flags" target="_top">.NET documentation</a>
+     */
     public LogRecordFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +230,13 @@ public class LogRecord extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Record.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.LogRecord.Record" target="_top">.NET documentation</a>
+     */
     public NetObject getRecord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

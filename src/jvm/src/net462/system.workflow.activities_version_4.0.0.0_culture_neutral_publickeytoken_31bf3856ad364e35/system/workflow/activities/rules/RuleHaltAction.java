@@ -103,7 +103,10 @@ public class RuleHaltAction extends system.workflow.activities.rules.RuleAction 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuleHaltAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class RuleHaltAction extends system.workflow.activities.rules.RuleAction 
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleHaltAction.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleHaltAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,14 @@ public class RuleHaltAction extends system.workflow.activities.rules.RuleAction 
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param validator the argument of type {@code RuleValidation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleHaltAction.Validate" target="_top">.NET documentation</a>
+     */
     public boolean Validate(RuleValidation validator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,14 @@ public class RuleHaltAction extends system.workflow.activities.rules.RuleAction 
         }
     }
 
+    /**
+     * Invokes the .NET member GetSideEffects.
+     *
+     * @param validation the argument of type {@code RuleValidation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleHaltAction.GetSideEffects" target="_top">.NET documentation</a>
+     */
     public ICollection_1 GetSideEffects(RuleValidation validation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class RuleHaltAction extends system.workflow.activities.rules.RuleAction 
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleHaltAction.Clone" target="_top">.NET documentation</a>
+     */
     public RuleAction Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +240,14 @@ public class RuleHaltAction extends system.workflow.activities.rules.RuleAction 
         }
     }
 
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @param context the argument of type {@code RuleExecution}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleHaltAction.Execute" target="_top">.NET documentation</a>
+     */
     public void Execute(RuleExecution context) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

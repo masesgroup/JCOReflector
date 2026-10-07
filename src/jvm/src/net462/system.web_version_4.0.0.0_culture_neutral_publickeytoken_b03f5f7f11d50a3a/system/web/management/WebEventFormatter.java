@@ -98,7 +98,10 @@ public class WebEventFormatter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebEventFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class WebEventFormatter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AppendLine.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventFormatter.AppendLine" target="_top">.NET documentation</a>
+     */
     public void AppendLine(java.lang.String s) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +180,13 @@ public class WebEventFormatter extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IndentationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventFormatter.IndentationLevel" target="_top">.NET documentation</a>
+     */
     public int getIndentationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +227,13 @@ public class WebEventFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentationLevel.
+     *
+     * @param IndentationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventFormatter.IndentationLevel" target="_top">.NET documentation</a>
+     */
     public void setIndentationLevel(int IndentationLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +244,13 @@ public class WebEventFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TabSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventFormatter.TabSize" target="_top">.NET documentation</a>
+     */
     public int getTabSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +291,13 @@ public class WebEventFormatter extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TabSize.
+     *
+     * @param TabSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventFormatter.TabSize" target="_top">.NET documentation</a>
+     */
     public void setTabSize(int TabSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

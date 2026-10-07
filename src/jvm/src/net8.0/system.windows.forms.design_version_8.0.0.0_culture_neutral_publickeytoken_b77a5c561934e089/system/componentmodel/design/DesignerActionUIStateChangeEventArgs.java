@@ -100,7 +100,10 @@ public class DesignerActionUIStateChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerActionUIStateChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class DesignerActionUIStateChangeEventArgs extends system.EventArgs  {
     public DesignerActionUIStateChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relatedObject the argument of type {@code NetObject}
+     * @param changeType the argument of type {@code DesignerActionUIStateChangeType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerActionUIStateChangeEventArgs(NetObject relatedObject, DesignerActionUIStateChangeType changeType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class DesignerActionUIStateChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChangeType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.ChangeType" target="_top">.NET documentation</a>
+     */
     public DesignerActionUIStateChangeType getChangeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class DesignerActionUIStateChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelatedObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeEventArgs.RelatedObject" target="_top">.NET documentation</a>
+     */
     public NetObject getRelatedObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class DrawingAttributesReplacedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DrawingAttributesReplacedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class DrawingAttributesReplacedEventArgs extends system.EventArgs  {
     public DrawingAttributesReplacedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param newDrawingAttributes the argument of type {@code DrawingAttributes}
+     * @param previousDrawingAttributes the argument of type {@code DrawingAttributes}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.DrawingAttributesReplacedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DrawingAttributesReplacedEventArgs(DrawingAttributes newDrawingAttributes, DrawingAttributes previousDrawingAttributes) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,13 @@ public class DrawingAttributesReplacedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewDrawingAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.DrawingAttributesReplacedEventArgs.NewDrawingAttributes" target="_top">.NET documentation</a>
+     */
     public DrawingAttributes getNewDrawingAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +203,13 @@ public class DrawingAttributesReplacedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreviousDrawingAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.DrawingAttributesReplacedEventArgs.PreviousDrawingAttributes" target="_top">.NET documentation</a>
+     */
     public DrawingAttributes getPreviousDrawingAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

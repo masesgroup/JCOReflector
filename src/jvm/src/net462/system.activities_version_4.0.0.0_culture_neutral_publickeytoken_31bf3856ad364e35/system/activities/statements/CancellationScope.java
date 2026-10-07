@@ -101,7 +101,10 @@ public class CancellationScope extends system.activities.NativeActivity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CancellationScope(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class CancellationScope extends system.activities.NativeActivity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CancellationScope.-ctor" target="_top">.NET documentation</a>
+     */
     public CancellationScope() throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +176,13 @@ public class CancellationScope extends system.activities.NativeActivity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CancellationScope.Body" target="_top">.NET documentation</a>
+     */
     public Activity getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +198,13 @@ public class CancellationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CancellationScope.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,13 @@ public class CancellationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CancellationHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CancellationScope.CancellationHandler" target="_top">.NET documentation</a>
+     */
     public Activity getCancellationHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class CancellationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CancellationHandler.
+     *
+     * @param CancellationHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CancellationScope.CancellationHandler" target="_top">.NET documentation</a>
+     */
     public void setCancellationHandler(Activity CancellationHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +254,17 @@ public class CancellationScope extends system.activities.NativeActivity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.CancellationScope.Variables" target="_top">.NET documentation</a>
+     */
     public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

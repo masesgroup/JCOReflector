@@ -52,5 +52,11 @@ import system.windows.input.PreProcessInputEventArgs;
  * @version 2.0.0.0
  */
 public interface IPreProcessInputEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Input.PreProcessInputEventArgs}
+     */
     public void Invoke(NetObject sender, PreProcessInputEventArgs e);
 }

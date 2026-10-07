@@ -99,7 +99,10 @@ public class IAnonymousUriPrefixMatcherImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAnonymousUriPrefixMatcherImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IAnonymousUriPrefixMatcherImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param anonymousUriPrefix the argument of type {@code Uri}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IAnonymousUriPrefixMatcher.Register" target="_top">.NET documentation</a>
+     */
     public void Register(Uri anonymousUriPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

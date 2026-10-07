@@ -99,7 +99,10 @@ public class FaultPropagationQuery extends system.activities.tracking.TrackingQu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FaultPropagationQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class FaultPropagationQuery extends system.activities.tracking.TrackingQu
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public FaultPropagationQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class FaultPropagationQuery extends system.activities.tracking.TrackingQu
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FaultHandlerActivityName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationQuery.FaultHandlerActivityName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFaultHandlerActivityName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class FaultPropagationQuery extends system.activities.tracking.TrackingQu
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultHandlerActivityName.
+     *
+     * @param FaultHandlerActivityName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationQuery.FaultHandlerActivityName" target="_top">.NET documentation</a>
+     */
     public void setFaultHandlerActivityName(java.lang.String FaultHandlerActivityName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class FaultPropagationQuery extends system.activities.tracking.TrackingQu
         }
     }
 
+    /**
+     * Gets the value of the .NET property FaultSourceActivityName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationQuery.FaultSourceActivityName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFaultSourceActivityName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class FaultPropagationQuery extends system.activities.tracking.TrackingQu
         }
     }
 
+    /**
+     * Sets the value of the .NET property FaultSourceActivityName.
+     *
+     * @param FaultSourceActivityName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.FaultPropagationQuery.FaultSourceActivityName" target="_top">.NET documentation</a>
+     */
     public void setFaultSourceActivityName(java.lang.String FaultSourceActivityName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

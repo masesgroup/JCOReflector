@@ -99,7 +99,10 @@ public class FormattableStringFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormattableStringFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class FormattableStringFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Create.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param arguments the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.FormattableStringFactory.Create" target="_top">.NET documentation</a>
+     */
     public static FormattableString Create(java.lang.String format, NetObject... arguments) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

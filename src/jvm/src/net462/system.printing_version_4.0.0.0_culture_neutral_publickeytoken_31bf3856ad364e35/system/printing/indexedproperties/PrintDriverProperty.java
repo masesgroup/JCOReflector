@@ -99,7 +99,10 @@ public class PrintDriverProperty extends system.printing.indexedproperties.Print
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintDriverProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class PrintDriverProperty extends system.printing.indexedproperties.Print
     public PrintDriverProperty() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.IndexedProperties.PrintDriverProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintDriverProperty(java.lang.String attributeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,14 @@ public class PrintDriverProperty extends system.printing.indexedproperties.Print
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @param attributeValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.IndexedProperties.PrintDriverProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintDriverProperty(java.lang.String attributeName, NetObject attributeValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file

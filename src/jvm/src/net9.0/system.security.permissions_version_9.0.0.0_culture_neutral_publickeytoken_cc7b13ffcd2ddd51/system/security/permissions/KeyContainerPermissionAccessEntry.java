@@ -100,7 +100,10 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyContainerPermissionAccessEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
     public KeyContainerPermissionAccessEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param parameters the argument of type {@code CspParameters}
+     * @param flags the argument of type {@code KeyContainerPermissionFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyContainerPermissionAccessEntry(CspParameters parameters, KeyContainerPermissionFlags flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,14 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyContainerName the argument of type {@code java.lang.String}
+     * @param flags the argument of type {@code KeyContainerPermissionFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyContainerPermissionAccessEntry(java.lang.String keyContainerName, KeyContainerPermissionFlags flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +189,18 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param keyStore the argument of type {@code java.lang.String}
+     * @param providerName the argument of type {@code java.lang.String}
+     * @param providerType the argument of type {@code int}
+     * @param keyContainerName the argument of type {@code java.lang.String}
+     * @param keySpec the argument of type {@code int}
+     * @param flags the argument of type {@code KeyContainerPermissionFlags}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyContainerPermissionAccessEntry(java.lang.String keyStore, java.lang.String providerName, int providerType, java.lang.String keyContainerName, int keySpec, KeyContainerPermissionFlags flags) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +220,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeySpec.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.KeySpec" target="_top">.NET documentation</a>
+     */
     public int getKeySpec() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +267,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeySpec.
+     *
+     * @param KeySpec the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.KeySpec" target="_top">.NET documentation</a>
+     */
     public void setKeySpec(int KeySpec) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +284,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderType" target="_top">.NET documentation</a>
+     */
     public int getProviderType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +331,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderType.
+     *
+     * @param ProviderType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderType" target="_top">.NET documentation</a>
+     */
     public void setProviderType(int ProviderType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +348,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.Flags" target="_top">.NET documentation</a>
+     */
     public KeyContainerPermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +370,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flags.
+     *
+     * @param Flags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.Flags" target="_top">.NET documentation</a>
+     */
     public void setFlags(KeyContainerPermissionFlags Flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +387,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyContainerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.KeyContainerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyContainerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +408,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyContainerName.
+     *
+     * @param KeyContainerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.KeyContainerName" target="_top">.NET documentation</a>
+     */
     public void setKeyContainerName(java.lang.String KeyContainerName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +425,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.KeyStore" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +446,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyStore.
+     *
+     * @param KeyStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.KeyStore" target="_top">.NET documentation</a>
+     */
     public void setKeyStore(java.lang.String KeyStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +463,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +484,13 @@ public class KeyContainerPermissionAccessEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProviderName.
+     *
+     * @param ProviderName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntry.ProviderName" target="_top">.NET documentation</a>
+     */
     public void setProviderName(java.lang.String ProviderName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

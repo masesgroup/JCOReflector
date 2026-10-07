@@ -114,7 +114,9 @@ public class DeviceFontSubstitution extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public DeviceFontSubstitution(java.lang.Object instance) {
         super(instance);

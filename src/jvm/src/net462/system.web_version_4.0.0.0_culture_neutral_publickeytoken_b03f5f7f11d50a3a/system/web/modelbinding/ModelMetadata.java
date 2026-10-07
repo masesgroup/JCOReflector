@@ -104,7 +104,10 @@ public class ModelMetadata extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,21 @@ public class ModelMetadata extends NetObject  {
     public ModelMetadata() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code ModelMetadataProvider}
+     * @param containerType the argument of type {@code NetType}
+     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelType the argument of type {@code NetType}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelMetadata(ModelMetadataProvider provider, NetType containerType, Func_1 modelAccessor, NetType modelType, java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +187,14 @@ public class ModelMetadata extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetValidators.
+     *
+     * @param context the argument of type {@code ModelBindingExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.GetValidators" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetValidators(ModelBindingExecutionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +210,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDisplayName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.GetDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +235,13 @@ public class ModelMetadata extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConvertEmptyStringToNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ConvertEmptyStringToNull" target="_top">.NET documentation</a>
+     */
     public boolean getConvertEmptyStringToNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +256,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConvertEmptyStringToNull.
+     *
+     * @param ConvertEmptyStringToNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ConvertEmptyStringToNull" target="_top">.NET documentation</a>
+     */
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +273,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HideSurroundingHtml.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.HideSurroundingHtml" target="_top">.NET documentation</a>
+     */
     public boolean getHideSurroundingHtml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +294,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HideSurroundingHtml.
+     *
+     * @param HideSurroundingHtml the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.HideSurroundingHtml" target="_top">.NET documentation</a>
+     */
     public void setHideSurroundingHtml(boolean HideSurroundingHtml) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +311,21 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsComplexType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.IsComplexType" target="_top">.NET documentation</a>
+     */
     public boolean getIsComplexType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +340,15 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNullableValueType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.IsNullableValueType" target="_top">.NET documentation</a>
+     */
     public boolean getIsNullableValueType() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +363,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +384,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnly.
+     *
+     * @param IsReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +401,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.IsRequired" target="_top">.NET documentation</a>
+     */
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +422,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsRequired.
+     *
+     * @param IsRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.IsRequired" target="_top">.NET documentation</a>
+     */
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +439,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestValidationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.RequestValidationEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getRequestValidationEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +460,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestValidationEnabled.
+     *
+     * @param RequestValidationEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.RequestValidationEnabled" target="_top">.NET documentation</a>
+     */
     public void setRequestValidationEnabled(boolean RequestValidationEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +477,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowForDisplay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ShowForDisplay" target="_top">.NET documentation</a>
+     */
     public boolean getShowForDisplay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +498,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowForDisplay.
+     *
+     * @param ShowForDisplay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ShowForDisplay" target="_top">.NET documentation</a>
+     */
     public void setShowForDisplay(boolean ShowForDisplay) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +515,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowForEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ShowForEdit" target="_top">.NET documentation</a>
+     */
     public boolean getShowForEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +536,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowForEdit.
+     *
+     * @param ShowForEdit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ShowForEdit" target="_top">.NET documentation</a>
+     */
     public void setShowForEdit(boolean ShowForEdit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +553,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Order.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Order" target="_top">.NET documentation</a>
+     */
     public int getOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +600,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Order.
+     *
+     * @param Order the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Order" target="_top">.NET documentation</a>
+     */
     public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +617,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdditionalValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.AdditionalValues" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getAdditionalValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +639,15 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Properties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Properties" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getProperties() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +663,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Model.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Model" target="_top">.NET documentation</a>
+     */
     public NetObject getModel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +685,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Model.
+     *
+     * @param Model the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Model" target="_top">.NET documentation</a>
+     */
     public void setModel(NetObject Model) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +702,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.DataTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -517,6 +723,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataTypeName.
+     *
+     * @param DataTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.DataTypeName" target="_top">.NET documentation</a>
+     */
     public void setDataTypeName(java.lang.String DataTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +740,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +761,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +778,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayFormatString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.DisplayFormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayFormatString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -565,6 +799,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayFormatString.
+     *
+     * @param DisplayFormatString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.DisplayFormatString" target="_top">.NET documentation</a>
+     */
     public void setDisplayFormatString(java.lang.String DisplayFormatString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +816,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +837,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +854,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditFormatString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.EditFormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEditFormatString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -613,6 +875,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditFormatString.
+     *
+     * @param EditFormatString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.EditFormatString" target="_top">.NET documentation</a>
+     */
     public void setEditFormatString(java.lang.String EditFormatString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -623,6 +892,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NullDisplayText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.NullDisplayText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNullDisplayText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -637,6 +913,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NullDisplayText.
+     *
+     * @param NullDisplayText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.NullDisplayText" target="_top">.NET documentation</a>
+     */
     public void setNullDisplayText(java.lang.String NullDisplayText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -647,6 +930,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +951,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShortDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ShortDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getShortDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +972,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShortDisplayName.
+     *
+     * @param ShortDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ShortDisplayName" target="_top">.NET documentation</a>
+     */
     public void setShortDisplayName(java.lang.String ShortDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -685,6 +989,21 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SimpleDisplayText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.SimpleDisplayText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSimpleDisplayText() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +1018,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SimpleDisplayText.
+     *
+     * @param SimpleDisplayText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.SimpleDisplayText" target="_top">.NET documentation</a>
+     */
     public void setSimpleDisplayText(java.lang.String SimpleDisplayText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1035,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemplateHint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.TemplateHint" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTemplateHint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -723,6 +1056,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TemplateHint.
+     *
+     * @param TemplateHint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.TemplateHint" target="_top">.NET documentation</a>
+     */
     public void setTemplateHint(java.lang.String TemplateHint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -733,6 +1073,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Watermark.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Watermark" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWatermark() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -747,6 +1094,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Watermark.
+     *
+     * @param Watermark the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Watermark" target="_top">.NET documentation</a>
+     */
     public void setWatermark(java.lang.String Watermark) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -757,6 +1111,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ContainerType" target="_top">.NET documentation</a>
+     */
     public NetType getContainerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -772,6 +1133,13 @@ public class ModelMetadata extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.ModelType" target="_top">.NET documentation</a>
+     */
     public NetType getModelType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

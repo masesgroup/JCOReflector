@@ -106,7 +106,10 @@ public class UITypeEditor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UITypeEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class UITypeEditor extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public UITypeEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class UITypeEditor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPaintValueSupported.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.GetPaintValueSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetPaintValueSupported() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,14 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPaintValueSupported.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.GetPaintValueSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +219,13 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEditStyle.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.GetEditStyle" target="_top">.NET documentation</a>
+     */
     public UITypeEditorEditStyle GetEditStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +241,14 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEditStyle.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.GetEditStyle" target="_top">.NET documentation</a>
+     */
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +264,16 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EditValue.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param provider the argument of type {@code IServiceProvider}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.EditValue" target="_top">.NET documentation</a>
+     */
     public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +289,15 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EditValue.
+     *
+     * @param provider the argument of type {@code IServiceProvider}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.EditValue" target="_top">.NET documentation</a>
+     */
     public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +313,13 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PaintValue.
+     *
+     * @param e the argument of type {@code PaintValueEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.PaintValue" target="_top">.NET documentation</a>
+     */
     public void PaintValue(PaintValueEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +330,18 @@ public class UITypeEditor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PaintValue.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param canvas the argument of type {@code Graphics}
+     * @param rectangle the argument of type {@code Rectangle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.PaintValue" target="_top">.NET documentation</a>
+     */
     public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +356,13 @@ public class UITypeEditor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDropDownResizable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.UITypeEditor.IsDropDownResizable" target="_top">.NET documentation</a>
+     */
     public boolean getIsDropDownResizable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

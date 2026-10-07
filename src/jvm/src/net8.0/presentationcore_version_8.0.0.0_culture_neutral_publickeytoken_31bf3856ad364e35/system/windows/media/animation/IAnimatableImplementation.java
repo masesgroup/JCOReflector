@@ -102,7 +102,10 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAnimatableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAnimationBaseValue.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,15 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyAnimationClock.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param clock the argument of type {@code AnimationClock}
+     * @param handoffBehavior the argument of type {@code HandoffBehavior}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimatable.ApplyAnimationClock" target="_top">.NET documentation</a>
+     */
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock, HandoffBehavior handoffBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +189,14 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyAnimationClock.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param clock the argument of type {@code AnimationClock}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimatable.ApplyAnimationClock" target="_top">.NET documentation</a>
+     */
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +207,15 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginAnimation.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param animation the argument of type {@code AnimationTimeline}
+     * @param handoffBehavior the argument of type {@code HandoffBehavior}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimatable.BeginAnimation" target="_top">.NET documentation</a>
+     */
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation, HandoffBehavior handoffBehavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +226,14 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginAnimation.
+     *
+     * @param dp the argument of type {@code DependencyProperty}
+     * @param animation the argument of type {@code AnimationTimeline}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimatable.BeginAnimation" target="_top">.NET documentation</a>
+     */
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +248,13 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasAnimatedProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.IAnimatable.HasAnimatedProperties" target="_top">.NET documentation</a>
+     */
     public boolean getHasAnimatedProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

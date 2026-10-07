@@ -108,7 +108,10 @@ public class SchemaImporterExtension extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,15 @@ public class SchemaImporterExtension extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ImportDefaultValue.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportDefaultValue" target="_top">.NET documentation</a>
+     */
     public CodeExpression ImportDefaultValue(java.lang.String value, java.lang.String type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +188,21 @@ public class SchemaImporterExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportAnyElement.
+     *
+     * @param any the argument of type {@code XmlSchemaAny}
+     * @param mixed the argument of type {@code boolean}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportAnyElement" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportAnyElement(XmlSchemaAny any, boolean mixed, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,22 @@ public class SchemaImporterExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code XmlSchemaObject}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportSchemaType(java.lang.String name, java.lang.String ns, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +247,21 @@ public class SchemaImporterExtension extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportSchemaType.
+     *
+     * @param type the argument of type {@code XmlSchemaType}
+     * @param context the argument of type {@code XmlSchemaObject}
+     * @param schemas the argument of type {@code XmlSchemas}
+     * @param importer the argument of type {@code XmlSchemaImporter}
+     * @param compileUnit the argument of type {@code CodeCompileUnit}
+     * @param mainNamespace the argument of type {@code CodeNamespace}
+     * @param options the argument of type {@code CodeGenerationOptions}
+     * @param codeProvider the argument of type {@code CodeDomProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.Advanced.SchemaImporterExtension.ImportSchemaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String ImportSchemaType(XmlSchemaType type, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

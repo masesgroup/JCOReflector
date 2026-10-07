@@ -102,7 +102,10 @@ public class SettingsProvider extends system.configuration.provider.ProviderBase
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SettingsProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class SettingsProvider extends system.configuration.provider.ProviderBase
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPropertyValues.
+     *
+     * @param context the argument of type {@code SettingsContext}
+     * @param collection the argument of type {@code SettingsPropertyCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProvider.GetPropertyValues" target="_top">.NET documentation</a>
+     */
     public SettingsPropertyValueCollection GetPropertyValues(SettingsContext context, SettingsPropertyCollection collection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,14 @@ public class SettingsProvider extends system.configuration.provider.ProviderBase
         }
     }
 
+    /**
+     * Invokes the .NET member SetPropertyValues.
+     *
+     * @param context the argument of type {@code SettingsContext}
+     * @param collection the argument of type {@code SettingsPropertyValueCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProvider.SetPropertyValues" target="_top">.NET documentation</a>
+     */
     public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection collection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +204,13 @@ public class SettingsProvider extends system.configuration.provider.ProviderBase
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProvider.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +225,13 @@ public class SettingsProvider extends system.configuration.provider.ProviderBase
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.SettingsProvider.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

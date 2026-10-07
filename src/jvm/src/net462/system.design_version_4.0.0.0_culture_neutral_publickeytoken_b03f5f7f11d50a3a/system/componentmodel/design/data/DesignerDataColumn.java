@@ -99,7 +99,10 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerDataColumn(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DesignerDataColumn extends NetObject  {
     public DesignerDataColumn() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dataType the argument of type {@code DbType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataColumn(java.lang.String name, DbType dataType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,15 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dataType the argument of type {@code DbType}
+     * @param defaultValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataColumn(java.lang.String name, DbType dataType, NetObject defaultValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,21 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param dataType the argument of type {@code DbType}
+     * @param defaultValue the argument of type {@code NetObject}
+     * @param identity the argument of type {@code boolean}
+     * @param nullable the argument of type {@code boolean}
+     * @param primaryKey the argument of type {@code boolean}
+     * @param precision the argument of type {@code int}
+     * @param scale the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerDataColumn(java.lang.String name, DbType dataType, NetObject defaultValue, boolean identity, boolean nullable, boolean primaryKey, int precision, int scale, int length) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +223,13 @@ public class DesignerDataColumn extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.Identity" target="_top">.NET documentation</a>
+     */
     public boolean getIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +244,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Nullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.Nullable" target="_top">.NET documentation</a>
+     */
     public boolean getNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +265,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrimaryKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.PrimaryKey" target="_top">.NET documentation</a>
+     */
     public boolean getPrimaryKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +286,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.Length" target="_top">.NET documentation</a>
+     */
     public int getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +333,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Precision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.Precision" target="_top">.NET documentation</a>
+     */
     public int getPrecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +380,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.Scale" target="_top">.NET documentation</a>
+     */
     public int getScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +427,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.DataType" target="_top">.NET documentation</a>
+     */
     public DbType getDataType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +449,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.DefaultValue" target="_top">.NET documentation</a>
+     */
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +471,13 @@ public class DesignerDataColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Data.DesignerDataColumn.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

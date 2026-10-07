@@ -99,7 +99,10 @@ public class TransactionProtocol extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TransactionProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class TransactionProtocol extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.TransactionProtocol.Default" target="_top">.NET documentation</a>
+     */
     public static TransactionProtocol getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class TransactionProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OleTransactions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.TransactionProtocol.OleTransactions" target="_top">.NET documentation</a>
+     */
     public static TransactionProtocol getOleTransactions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class TransactionProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSAtomicTransaction11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.TransactionProtocol.WSAtomicTransaction11" target="_top">.NET documentation</a>
+     */
     public static TransactionProtocol getWSAtomicTransaction11() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +225,13 @@ public class TransactionProtocol extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSAtomicTransactionOctober2004.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.TransactionProtocol.WSAtomicTransactionOctober2004" target="_top">.NET documentation</a>
+     */
     public static TransactionProtocol getWSAtomicTransactionOctober2004() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

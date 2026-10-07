@@ -102,7 +102,10 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WellKnownServiceTypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
     public WellKnownServiceTypeEntry() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param objectUri the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code WellKnownObjectMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public WellKnownServiceTypeEntry(java.lang.String typeName, java.lang.String assemblyName, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +176,18 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param objectUri the argument of type {@code java.lang.String}
+     * @param mode the argument of type {@code WellKnownObjectMode}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public WellKnownServiceTypeEntry(NetType type, java.lang.String objectUri, WellKnownObjectMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +207,13 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContextAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.ContextAttributes" target="_top">.NET documentation</a>
+     */
     public final IContextAttribute[] getContextAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +235,13 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContextAttributes.
+     *
+     * @param ContextAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.ContextAttributes" target="_top">.NET documentation</a>
+     */
     public void setContextAttributes(IContextAttribute[] ContextAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +252,13 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.Mode" target="_top">.NET documentation</a>
+     */
     public WellKnownObjectMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +274,13 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.ObjectUri" target="_top">.NET documentation</a>
+     */
     public java.lang.String getObjectUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +295,16 @@ public class WellKnownServiceTypeEntry extends system.runtime.remoting.TypeEntry
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.WellKnownServiceTypeEntry.ObjectType" target="_top">.NET documentation</a>
+     */
     public NetType getObjectType() throws Throwable, system.IndexOutOfRangeException, system.TypeLoadException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

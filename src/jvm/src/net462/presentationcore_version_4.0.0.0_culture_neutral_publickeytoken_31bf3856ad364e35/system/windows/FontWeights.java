@@ -99,7 +99,10 @@ public class FontWeights extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FontWeights(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class FontWeights extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Black.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Black" target="_top">.NET documentation</a>
+     */
     public static FontWeight getBlack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Bold" target="_top">.NET documentation</a>
+     */
     public static FontWeight getBold() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DemiBold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.DemiBold" target="_top">.NET documentation</a>
+     */
     public static FontWeight getDemiBold() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +225,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtraBlack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.ExtraBlack" target="_top">.NET documentation</a>
+     */
     public static FontWeight getExtraBlack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +247,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtraBold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.ExtraBold" target="_top">.NET documentation</a>
+     */
     public static FontWeight getExtraBold() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -231,6 +269,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtraLight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.ExtraLight" target="_top">.NET documentation</a>
+     */
     public static FontWeight getExtraLight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +291,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Heavy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Heavy" target="_top">.NET documentation</a>
+     */
     public static FontWeight getHeavy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +313,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Light.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Light" target="_top">.NET documentation</a>
+     */
     public static FontWeight getLight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +335,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Medium.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Medium" target="_top">.NET documentation</a>
+     */
     public static FontWeight getMedium() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +357,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Normal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Normal" target="_top">.NET documentation</a>
+     */
     public static FontWeight getNormal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -306,6 +379,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Regular.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Regular" target="_top">.NET documentation</a>
+     */
     public static FontWeight getRegular() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +401,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SemiBold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.SemiBold" target="_top">.NET documentation</a>
+     */
     public static FontWeight getSemiBold() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -336,6 +423,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Thin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.Thin" target="_top">.NET documentation</a>
+     */
     public static FontWeight getThin() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -351,6 +445,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UltraBlack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.UltraBlack" target="_top">.NET documentation</a>
+     */
     public static FontWeight getUltraBlack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -366,6 +467,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UltraBold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.UltraBold" target="_top">.NET documentation</a>
+     */
     public static FontWeight getUltraBold() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -381,6 +489,13 @@ public class FontWeights extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UltraLight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontWeights.UltraLight" target="_top">.NET documentation</a>
+     */
     public static FontWeight getUltraLight() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

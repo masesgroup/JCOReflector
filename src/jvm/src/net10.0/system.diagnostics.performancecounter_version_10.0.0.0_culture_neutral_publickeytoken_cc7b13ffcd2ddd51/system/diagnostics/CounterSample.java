@@ -102,7 +102,10 @@ public class CounterSample extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CounterSample(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,20 @@ public class CounterSample extends system.ValueType  {
     public CounterSample() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rawValue the argument of type {@code long}
+     * @param baseValue the argument of type {@code long}
+     * @param counterFrequency the argument of type {@code long}
+     * @param systemFrequency the argument of type {@code long}
+     * @param timeStamp the argument of type {@code long}
+     * @param timeStamp100nSec the argument of type {@code long}
+     * @param counterType the argument of type {@code PerformanceCounterType}
+     * @param counterTimeStamp the argument of type {@code long}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.-ctor" target="_top">.NET documentation</a>
+     */
     public CounterSample(long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, PerformanceCounterType counterType, long counterTimeStamp) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +179,19 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rawValue the argument of type {@code long}
+     * @param baseValue the argument of type {@code long}
+     * @param counterFrequency the argument of type {@code long}
+     * @param systemFrequency the argument of type {@code long}
+     * @param timeStamp the argument of type {@code long}
+     * @param timeStamp100nSec the argument of type {@code long}
+     * @param counterType the argument of type {@code PerformanceCounterType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.-ctor" target="_top">.NET documentation</a>
+     */
     public CounterSample(long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, PerformanceCounterType counterType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +207,14 @@ public class CounterSample extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param sample the argument of type {@code CounterSample}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CounterSample sample) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +229,26 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Calculate.
+     *
+     * @param counterSample the argument of type {@code CounterSample}
+     * @param nextCounterSample the argument of type {@code CounterSample}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.Calculate" target="_top">.NET documentation</a>
+     */
     public static Single Calculate(CounterSample counterSample, CounterSample nextCounterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +264,24 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Calculate.
+     *
+     * @param counterSample the argument of type {@code CounterSample}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.Calculate" target="_top">.NET documentation</a>
+     */
     public static Single Calculate(CounterSample counterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +301,13 @@ public class CounterSample extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.BaseValue" target="_top">.NET documentation</a>
+     */
     public long getBaseValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +348,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CounterFrequency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.CounterFrequency" target="_top">.NET documentation</a>
+     */
     public long getCounterFrequency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +395,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CounterTimeStamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.CounterTimeStamp" target="_top">.NET documentation</a>
+     */
     public long getCounterTimeStamp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +442,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RawValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.RawValue" target="_top">.NET documentation</a>
+     */
     public long getRawValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +489,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemFrequency.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.SystemFrequency" target="_top">.NET documentation</a>
+     */
     public long getSystemFrequency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +536,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeStamp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.TimeStamp" target="_top">.NET documentation</a>
+     */
     public long getTimeStamp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +583,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeStamp100nSec.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.TimeStamp100nSec" target="_top">.NET documentation</a>
+     */
     public long getTimeStamp100nSec() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +630,13 @@ public class CounterSample extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CounterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSample.CounterType" target="_top">.NET documentation</a>
+     */
     public PerformanceCounterType getCounterType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

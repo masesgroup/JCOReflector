@@ -99,7 +99,10 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSerializerAssemblyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSerializerAssemblyAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSerializerAssemblyAttribute(java.lang.String assemblyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param codeBase the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSerializerAssemblyAttribute(java.lang.String assemblyName, java.lang.String codeBase) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyName.
+     *
+     * @param AssemblyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName" target="_top">.NET documentation</a>
+     */
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +246,13 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCodeBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class XmlSerializerAssemblyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeBase.
+     *
+     * @param CodeBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase" target="_top">.NET documentation</a>
+     */
     public void setCodeBase(java.lang.String CodeBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

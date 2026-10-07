@@ -114,7 +114,9 @@ public class InputBin extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public InputBin(java.lang.Object instance) {
         super(instance);

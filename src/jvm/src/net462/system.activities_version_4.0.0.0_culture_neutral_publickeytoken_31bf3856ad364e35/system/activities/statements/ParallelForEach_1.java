@@ -102,7 +102,10 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ParallelForEach_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ParallelForEach_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CompletionCondition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.CompletionCondition" target="_top">.NET documentation</a>
+     */
     public Activity_1 getCompletionCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +200,13 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompletionCondition.
+     *
+     * @param CompletionCondition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.CompletionCondition" target="_top">.NET documentation</a>
+     */
     public void setCompletionCondition(Activity_1 CompletionCondition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +217,13 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
         }
     }
 
+    /**
+     * Gets the value of the .NET property Body.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Body" target="_top">.NET documentation</a>
+     */
     public ActivityAction_1 getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +239,13 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
         }
     }
 
+    /**
+     * Sets the value of the .NET property Body.
+     *
+     * @param Body the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Body" target="_top">.NET documentation</a>
+     */
     public void setBody(ActivityAction_1 Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +256,13 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
         }
     }
 
+    /**
+     * Gets the value of the .NET property Values.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Values" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +278,13 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
         }
     }
 
+    /**
+     * Sets the value of the .NET property Values.
+     *
+     * @param Values the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Values" target="_top">.NET documentation</a>
+     */
     public void setValues(InArgument_1 Values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

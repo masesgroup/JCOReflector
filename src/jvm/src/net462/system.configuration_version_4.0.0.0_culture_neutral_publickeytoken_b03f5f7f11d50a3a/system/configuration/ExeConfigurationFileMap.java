@@ -99,7 +99,10 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExeConfigurationFileMap(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,16 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.-ctor" target="_top">.NET documentation</a>
+     */
     public ExeConfigurationFileMap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +169,33 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param machineConfigFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.-ctor" target="_top">.NET documentation</a>
+     */
     public ExeConfigurationFileMap(java.lang.String machineConfigFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +210,24 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +247,13 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExeConfigFilename.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.ExeConfigFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExeConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +268,13 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExeConfigFilename.
+     *
+     * @param ExeConfigFilename the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.ExeConfigFilename" target="_top">.NET documentation</a>
+     */
     public void setExeConfigFilename(java.lang.String ExeConfigFilename) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +285,13 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalUserConfigFilename.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.LocalUserConfigFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocalUserConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +306,13 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocalUserConfigFilename.
+     *
+     * @param LocalUserConfigFilename the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.LocalUserConfigFilename" target="_top">.NET documentation</a>
+     */
     public void setLocalUserConfigFilename(java.lang.String LocalUserConfigFilename) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +323,13 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoamingUserConfigFilename.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.RoamingUserConfigFilename" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRoamingUserConfigFilename() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +344,13 @@ public class ExeConfigurationFileMap extends system.configuration.ConfigurationF
         }
     }
 
+    /**
+     * Sets the value of the .NET property RoamingUserConfigFilename.
+     *
+     * @param RoamingUserConfigFilename the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ExeConfigurationFileMap.RoamingUserConfigFilename" target="_top">.NET documentation</a>
+     */
     public void setRoamingUserConfigFilename(java.lang.String RoamingUserConfigFilename) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

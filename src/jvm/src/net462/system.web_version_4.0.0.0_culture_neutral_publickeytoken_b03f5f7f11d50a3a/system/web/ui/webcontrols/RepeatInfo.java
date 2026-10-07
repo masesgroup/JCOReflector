@@ -106,7 +106,10 @@ public class RepeatInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RepeatInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class RepeatInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public RepeatInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,33 @@ public class RepeatInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RenderRepeater.
+     *
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @param user the argument of type {@code IRepeatInfoUser}
+     * @param controlStyle the argument of type {@code Style}
+     * @param baseControl the argument of type {@code WebControl}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RenderRepeater" target="_top">.NET documentation</a>
+     */
     public void RenderRepeater(HtmlTextWriter writer, IRepeatInfoUser user, Style controlStyle, WebControl baseControl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +217,13 @@ public class RepeatInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OuterTableImplied.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.OuterTableImplied" target="_top">.NET documentation</a>
+     */
     public boolean getOuterTableImplied() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +238,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OuterTableImplied.
+     *
+     * @param OuterTableImplied the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.OuterTableImplied" target="_top">.NET documentation</a>
+     */
     public void setOuterTableImplied(boolean OuterTableImplied) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +255,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseAccessibleHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.UseAccessibleHeader" target="_top">.NET documentation</a>
+     */
     public boolean getUseAccessibleHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +276,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseAccessibleHeader.
+     *
+     * @param UseAccessibleHeader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.UseAccessibleHeader" target="_top">.NET documentation</a>
+     */
     public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +293,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RepeatColumns.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RepeatColumns" target="_top">.NET documentation</a>
+     */
     public int getRepeatColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +340,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RepeatColumns.
+     *
+     * @param RepeatColumns the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RepeatColumns" target="_top">.NET documentation</a>
+     */
     public void setRepeatColumns(int RepeatColumns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +357,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Caption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.Caption" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCaption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +378,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Caption.
+     *
+     * @param Caption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.Caption" target="_top">.NET documentation</a>
+     */
     public void setCaption(java.lang.String Caption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +395,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RepeatDirection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RepeatDirection" target="_top">.NET documentation</a>
+     */
     public RepeatDirection getRepeatDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +417,14 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RepeatDirection.
+     *
+     * @param RepeatDirection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RepeatDirection" target="_top">.NET documentation</a>
+     */
     public void setRepeatDirection(RepeatDirection RepeatDirection) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +435,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RepeatLayout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RepeatLayout" target="_top">.NET documentation</a>
+     */
     public RepeatLayout getRepeatLayout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +457,14 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RepeatLayout.
+     *
+     * @param RepeatLayout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.RepeatLayout" target="_top">.NET documentation</a>
+     */
     public void setRepeatLayout(RepeatLayout RepeatLayout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +475,13 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CaptionAlign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.CaptionAlign" target="_top">.NET documentation</a>
+     */
     public TableCaptionAlign getCaptionAlign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +497,14 @@ public class RepeatInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CaptionAlign.
+     *
+     * @param CaptionAlign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.RepeatInfo.CaptionAlign" target="_top">.NET documentation</a>
+     */
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

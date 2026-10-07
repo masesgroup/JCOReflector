@@ -101,7 +101,10 @@ public class ObjectAnimationBase extends system.windows.media.animation.Animatio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectAnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,19 @@ public class ObjectAnimationBase extends system.windows.media.animation.Animatio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCurrentValue.
+     *
+     * @param defaultOriginValue the argument of type {@code NetObject}
+     * @param defaultDestinationValue the argument of type {@code NetObject}
+     * @param animationClock the argument of type {@code AnimationClock}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ObjectAnimationBase.GetCurrentValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +185,17 @@ public class ObjectAnimationBase extends system.windows.media.animation.Animatio
         }
     }
 
+    /**
+     * Invokes the .NET member CloneNewObjectAnimationBase.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ObjectAnimationBase.CloneNewObjectAnimationBase" target="_top">.NET documentation</a>
+     */
     public ObjectAnimationBase CloneNewObjectAnimationBase() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

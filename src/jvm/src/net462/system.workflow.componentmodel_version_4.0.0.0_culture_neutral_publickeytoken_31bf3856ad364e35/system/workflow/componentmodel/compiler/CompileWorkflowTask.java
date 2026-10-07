@@ -101,7 +101,10 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompileWorkflowTask(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,27 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.-ctor" target="_top">.NET documentation</a>
+     */
     public CompileWorkflowTask() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +186,42 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.io.InvalidDataException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
+     * @throws system.io.EndOfStreamException if the .NET member raises it
+     * @throws system.CannotUnloadAppDomainException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.FormatException, system.MissingMethodException, system.io.PathTooLongException, system.NullReferenceException, system.io.InvalidDataException, system.xml.XmlException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +240,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuildingProject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.BuildingProject" target="_top">.NET documentation</a>
+     */
     public boolean getBuildingProject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +261,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BuildingProject.
+     *
+     * @param BuildingProject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.BuildingProject" target="_top">.NET documentation</a>
+     */
     public void setBuildingProject(boolean BuildingProject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +278,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DelaySign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.DelaySign" target="_top">.NET documentation</a>
+     */
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +299,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DelaySign.
+     *
+     * @param DelaySign the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.DelaySign" target="_top">.NET documentation</a>
+     */
     public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +316,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompilationOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.CompilationOptions" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getCompilationOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +344,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompilationOptions.
+     *
+     * @param CompilationOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.CompilationOptions" target="_top">.NET documentation</a>
+     */
     public void setCompilationOptions(ITaskItem[] CompilationOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +361,17 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.OutputFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getOutputFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +393,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ReferenceFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getReferenceFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +421,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReferenceFiles.
+     *
+     * @param ReferenceFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ReferenceFiles" target="_top">.NET documentation</a>
+     */
     public void setReferenceFiles(ITaskItem[] ReferenceFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +438,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ResourceFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResourceFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +466,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceFiles.
+     *
+     * @param ResourceFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ResourceFiles" target="_top">.NET documentation</a>
+     */
     public void setResourceFiles(ITaskItem[] ResourceFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +483,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceCodeFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.SourceCodeFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getSourceCodeFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +511,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceCodeFiles.
+     *
+     * @param SourceCodeFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.SourceCodeFiles" target="_top">.NET documentation</a>
+     */
     public void setSourceCodeFiles(ITaskItem[] SourceCodeFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +528,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WorkflowMarkupFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.WorkflowMarkupFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getWorkflowMarkupFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +556,22 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowMarkupFiles.
+     *
+     * @param WorkflowMarkupFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.WorkflowMarkupFiles" target="_top">.NET documentation</a>
+     */
     public void setWorkflowMarkupFiles(ITaskItem[] WorkflowMarkupFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +582,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostObjectNewCompileWorkflowTask.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.HostObjectNewCompileWorkflowTask" target="_top">.NET documentation</a>
+     */
     public NetObject getHostObjectNewCompileWorkflowTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +604,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +625,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyName.
+     *
+     * @param AssemblyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.AssemblyName" target="_top">.NET documentation</a>
+     */
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +642,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Imports.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.Imports" target="_top">.NET documentation</a>
+     */
     public java.lang.String getImports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +663,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Imports.
+     *
+     * @param Imports the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.Imports" target="_top">.NET documentation</a>
+     */
     public void setImports(java.lang.String Imports) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -467,6 +680,23 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepTemporaryFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.KeepTemporaryFiles" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeepTemporaryFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +711,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.KeyContainer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +732,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyContainer.
+     *
+     * @param KeyContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.KeyContainer" target="_top">.NET documentation</a>
+     */
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +749,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.KeyFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +770,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyFile.
+     *
+     * @param KeyFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.KeyFile" target="_top">.NET documentation</a>
+     */
     public void setKeyFile(java.lang.String KeyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +787,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ProjectDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProjectDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -543,6 +808,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProjectDirectory.
+     *
+     * @param ProjectDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ProjectDirectory" target="_top">.NET documentation</a>
+     */
     public void setProjectDirectory(java.lang.String ProjectDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +825,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProjectExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ProjectExtension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProjectExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -567,6 +846,21 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProjectExtension.
+     *
+     * @param ProjectExtension the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.ProjectExtension" target="_top">.NET documentation</a>
+     */
     public void setProjectExtension(java.lang.String ProjectExtension) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +871,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.RootNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -591,6 +892,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootNamespace.
+     *
+     * @param RootNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.RootNamespace" target="_top">.NET documentation</a>
+     */
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -601,6 +909,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFramework.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.TargetFramework" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFramework() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -615,6 +930,13 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFramework.
+     *
+     * @param TargetFramework the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.TargetFramework" target="_top">.NET documentation</a>
+     */
     public void setTargetFramework(java.lang.String TargetFramework) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +947,14 @@ public class CompileWorkflowTask extends microsoft.build.utilities.Task  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TemporaryFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.CompileWorkflowTask.TemporaryFiles" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getTemporaryFiles() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

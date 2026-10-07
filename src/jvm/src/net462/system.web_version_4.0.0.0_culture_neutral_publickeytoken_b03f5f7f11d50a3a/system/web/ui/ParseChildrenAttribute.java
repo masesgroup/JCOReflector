@@ -99,7 +99,10 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ParseChildrenAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ParseChildrenAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ParseChildrenAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param childrenAsProperties the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ParseChildrenAttribute(boolean childrenAsProperties) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param childrenAsProperties the argument of type {@code boolean}
+     * @param defaultProperty the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ParseChildrenAttribute(boolean childrenAsProperties, java.lang.String defaultProperty) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +200,14 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param childControlType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ParseChildrenAttribute(NetType childControlType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +222,13 @@ public class ParseChildrenAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefaultAttribute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.IsDefaultAttribute" target="_top">.NET documentation</a>
+     */
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +247,13 @@ public class ParseChildrenAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChildrenAsProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.ChildrenAsProperties" target="_top">.NET documentation</a>
+     */
     public boolean getChildrenAsProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +268,14 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChildrenAsProperties.
+     *
+     * @param ChildrenAsProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.ChildrenAsProperties" target="_top">.NET documentation</a>
+     */
     public void setChildrenAsProperties(boolean ChildrenAsProperties) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +286,13 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.DefaultProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +307,14 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultProperty.
+     *
+     * @param DefaultProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.DefaultProperty" target="_top">.NET documentation</a>
+     */
     public void setDefaultProperty(java.lang.String DefaultProperty) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +325,13 @@ public class ParseChildrenAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildControlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseChildrenAttribute.ChildControlType" target="_top">.NET documentation</a>
+     */
     public NetType getChildControlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

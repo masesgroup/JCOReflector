@@ -105,7 +105,10 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DebugDirectoryBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class DebugDirectoryBuilder extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public DebugDirectoryBuilder() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +179,26 @@ public class DebugDirectoryBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddCodeViewEntry.
+     *
+     * @param pdbPath the argument of type {@code java.lang.String}
+     * @param pdbContentId the argument of type {@code BlobContentId}
+     * @param portablePdbVersion the argument of type {@code UInt16}
+     * @param age the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddCodeViewEntry" target="_top">.NET documentation</a>
+     */
     public void AddCodeViewEntry(java.lang.String pdbPath, BlobContentId pdbContentId, UInt16 portablePdbVersion, int age) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +209,25 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCodeViewEntry.
+     *
+     * @param pdbPath the argument of type {@code java.lang.String}
+     * @param pdbContentId the argument of type {@code BlobContentId}
+     * @param portablePdbVersion the argument of type {@code UInt16}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddCodeViewEntry" target="_top">.NET documentation</a>
+     */
     public void AddCodeViewEntry(java.lang.String pdbPath, BlobContentId pdbContentId, UInt16 portablePdbVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +238,25 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddEmbeddedPortablePdbEntry.
+     *
+     * @param debugMetadata the argument of type {@code BlobBuilder}
+     * @param portablePdbVersion the argument of type {@code UInt16}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.compression.ZLibException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddEmbeddedPortablePdbEntry" target="_top">.NET documentation</a>
+     */
     public void AddEmbeddedPortablePdbEntry(BlobBuilder debugMetadata, UInt16 portablePdbVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.compression.ZLibException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +267,23 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddEntry.
+     *
+     * @param type the argument of type {@code DebugDirectoryEntryType}
+     * @param version the argument of type {@code UInt32}
+     * @param stamp the argument of type {@code UInt32}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddEntry" target="_top">.NET documentation</a>
+     */
     public void AddEntry(DebugDirectoryEntryType type, UInt32 version, UInt32 stamp) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +294,28 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddEntry.
+     *
+     * @param <TData> the type of the generic argument TData
+     * @param type the argument of type {@code DebugDirectoryEntryType}
+     * @param version the argument of type {@code UInt32}
+     * @param stamp the argument of type {@code UInt32}
+     * @param data the argument of type {@code TData}
+     * @param dataSerializer the argument of type {@code Action_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddEntry" target="_top">.NET documentation</a>
+     */
     public <TData extends IJCOBridgeReflected> void AddEntry(DebugDirectoryEntryType type, UInt32 version, UInt32 stamp, TData data, Action_2 dataSerializer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +326,24 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddPdbChecksumEntry.
+     *
+     * @param algorithmName the argument of type {@code java.lang.String}
+     * @param checksum the argument of type {@code ImmutableArray_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddPdbChecksumEntry" target="_top">.NET documentation</a>
+     */
     public void AddPdbChecksumEntry(java.lang.String algorithmName, ImmutableArray_1 checksum) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +354,18 @@ public class DebugDirectoryBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddReproducibleEntry.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddReproducibleEntry" target="_top">.NET documentation</a>
+     */
     public void AddReproducibleEntry() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

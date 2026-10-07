@@ -101,7 +101,10 @@ public class DataObjectSettingDataEventArgs extends system.windows.DataObjectEve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataObjectSettingDataEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class DataObjectSettingDataEventArgs extends system.windows.DataObjectEve
     public DataObjectSettingDataEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataObject the argument of type {@code IDataObject}
+     * @param format the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectSettingDataEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataObjectSettingDataEventArgs(IDataObject dataObject, java.lang.String format) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +185,13 @@ public class DataObjectSettingDataEventArgs extends system.windows.DataObjectEve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Format.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectSettingDataEventArgs.Format" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +206,13 @@ public class DataObjectSettingDataEventArgs extends system.windows.DataObjectEve
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectSettingDataEventArgs.DataObject" target="_top">.NET documentation</a>
+     */
     public IDataObject getDataObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class HMACSHA512 extends system.security.cryptography.HMAC  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HMACSHA512(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class HMACSHA512 extends system.security.cryptography.HMAC  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HMACSHA512.-ctor" target="_top">.NET documentation</a>
+     */
     public HMACSHA512() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +168,15 @@ public class HMACSHA512 extends system.security.cryptography.HMAC  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HMACSHA512.-ctor" target="_top">.NET documentation</a>
+     */
     public HMACSHA512(byte[] key) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +195,13 @@ public class HMACSHA512 extends system.security.cryptography.HMAC  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ProduceLegacyHmacValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HMACSHA512.ProduceLegacyHmacValues" target="_top">.NET documentation</a>
+     */
     public boolean getProduceLegacyHmacValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +216,16 @@ public class HMACSHA512 extends system.security.cryptography.HMAC  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProduceLegacyHmacValues.
+     *
+     * @param ProduceLegacyHmacValues the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.HMACSHA512.ProduceLegacyHmacValues" target="_top">.NET documentation</a>
+     */
     public void setProduceLegacyHmacValues(boolean ProduceLegacyHmacValues) throws Throwable, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

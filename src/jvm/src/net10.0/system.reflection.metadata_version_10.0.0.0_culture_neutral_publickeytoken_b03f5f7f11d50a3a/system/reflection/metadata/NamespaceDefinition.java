@@ -102,7 +102,10 @@ public class NamespaceDefinition extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamespaceDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,13 @@ public class NamespaceDefinition extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExportedTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.ExportedTypes" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getExportedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +186,13 @@ public class NamespaceDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NamespaceDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.NamespaceDefinitions" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getNamespaceDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class NamespaceDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.TypeDefinitions" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 getTypeDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +230,13 @@ public class NamespaceDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.Parent" target="_top">.NET documentation</a>
+     */
     public NamespaceDefinitionHandle getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +252,13 @@ public class NamespaceDefinition extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.Name" target="_top">.NET documentation</a>
+     */
     public StringHandle getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

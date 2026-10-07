@@ -98,7 +98,10 @@ public class RuntimeFeature extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuntimeFeature(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class RuntimeFeature extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSupported.
+     *
+     * @param feature the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.RuntimeFeature.IsSupported" target="_top">.NET documentation</a>
+     */
     public static boolean IsSupported(java.lang.String feature) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

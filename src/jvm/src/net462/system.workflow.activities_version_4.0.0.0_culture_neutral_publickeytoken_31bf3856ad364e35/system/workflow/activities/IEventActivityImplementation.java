@@ -103,7 +103,10 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEventActivityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Subscribe.
+     *
+     * @param parentContext the argument of type {@code ActivityExecutionContext}
+     * @param parentEventHandler the argument of type {@code IActivityEventListener_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IEventActivity.Subscribe" target="_top">.NET documentation</a>
+     */
     public void Subscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,14 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
         }
     }
 
+    /**
+     * Invokes the .NET member Unsubscribe.
+     *
+     * @param parentContext the argument of type {@code ActivityExecutionContext}
+     * @param parentEventHandler the argument of type {@code IActivityEventListener_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IEventActivity.Unsubscribe" target="_top">.NET documentation</a>
+     */
     public void Unsubscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +188,13 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property QueueName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IEventActivity.QueueName" target="_top">.NET documentation</a>
+     */
     public IComparable getQueueName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

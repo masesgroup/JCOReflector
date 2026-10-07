@@ -100,7 +100,10 @@ public class RenamedEventArgs extends system.io.FileSystemEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RenamedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,24 @@ public class RenamedEventArgs extends system.io.FileSystemEventArgs  {
     public RenamedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param changeType the argument of type {@code WatcherChangeTypes}
+     * @param directory the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @param oldName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.RenamedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public RenamedEventArgs(WatcherChangeTypes changeType, java.lang.String directory, java.lang.String name, java.lang.String oldName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +190,13 @@ public class RenamedEventArgs extends system.io.FileSystemEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OldFullPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.RenamedEventArgs.OldFullPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldFullPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +211,13 @@ public class RenamedEventArgs extends system.io.FileSystemEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.RenamedEventArgs.OldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

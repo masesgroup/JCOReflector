@@ -106,7 +106,10 @@ public class IServerFormatterSinkProviderImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IServerFormatterSinkProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class IServerFormatterSinkProviderImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSink.
+     *
+     * @param channel the argument of type {@code IChannelReceiver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerFormatterSinkProvider.CreateSink" target="_top">.NET documentation</a>
+     */
     public IServerChannelSink CreateSink(IChannelReceiver channel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +174,13 @@ public class IServerFormatterSinkProviderImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member GetChannelData.
+     *
+     * @param channelData the argument of type {@code IChannelDataStore}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerFormatterSinkProvider.GetChannelData" target="_top">.NET documentation</a>
+     */
     public void GetChannelData(IChannelDataStore channelData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,13 @@ public class IServerFormatterSinkProviderImplementation extends NetObject implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Next.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerFormatterSinkProvider.Next" target="_top">.NET documentation</a>
+     */
     public IServerChannelSinkProvider getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +217,13 @@ public class IServerFormatterSinkProviderImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Sets the value of the .NET property Next.
+     *
+     * @param Next the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IServerFormatterSinkProvider.Next" target="_top">.NET documentation</a>
+     */
     public void setNext(IServerChannelSinkProvider Next) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

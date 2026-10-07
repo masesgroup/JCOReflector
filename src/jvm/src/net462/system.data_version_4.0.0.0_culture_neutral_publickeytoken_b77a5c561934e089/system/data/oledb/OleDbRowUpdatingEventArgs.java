@@ -105,7 +105,10 @@ public class OleDbRowUpdatingEventArgs extends system.data.common.RowUpdatingEve
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OleDbRowUpdatingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,24 @@ public class OleDbRowUpdatingEventArgs extends system.data.common.RowUpdatingEve
     public OleDbRowUpdatingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataRow the argument of type {@code DataRow}
+     * @param command the argument of type {@code IDbCommand}
+     * @param statementType the argument of type {@code StatementType}
+     * @param tableMapping the argument of type {@code DataTableMapping}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public OleDbRowUpdatingEventArgs(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +195,13 @@ public class OleDbRowUpdatingEventArgs extends system.data.common.RowUpdatingEve
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CommandNewOleDbRowUpdatingEventArgs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventArgs.CommandNewOleDbRowUpdatingEventArgs" target="_top">.NET documentation</a>
+     */
     public OleDbCommand getCommandNewOleDbRowUpdatingEventArgs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +217,13 @@ public class OleDbRowUpdatingEventArgs extends system.data.common.RowUpdatingEve
         }
     }
 
+    /**
+     * Sets the value of the .NET property Command.
+     *
+     * @param Command the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.OleDb.OleDbRowUpdatingEventArgs.Command" target="_top">.NET documentation</a>
+     */
     public void setCommand(OleDbCommand Command) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

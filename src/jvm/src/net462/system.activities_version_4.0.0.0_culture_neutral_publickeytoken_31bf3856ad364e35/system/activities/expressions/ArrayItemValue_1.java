@@ -100,7 +100,10 @@ public class ArrayItemValue_1<TItem extends IJCOBridgeReflected> extends system.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ArrayItemValue_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ArrayItemValue_1<TItem extends IJCOBridgeReflected> extends system.
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ArrayItemValue-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ArrayItemValue_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class ArrayItemValue_1<TItem extends IJCOBridgeReflected> extends system.
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ArrayItemValue-1.Index" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class ArrayItemValue_1<TItem extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Index.
+     *
+     * @param Index the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ArrayItemValue-1.Index" target="_top">.NET documentation</a>
+     */
     public void setIndex(InArgument_1 Index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class ArrayItemValue_1<TItem extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Gets the value of the .NET property Array.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ArrayItemValue-1.Array" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class ArrayItemValue_1<TItem extends IJCOBridgeReflected> extends system.
         }
     }
 
+    /**
+     * Sets the value of the .NET property Array.
+     *
+     * @param Array the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.ArrayItemValue-1.Array" target="_top">.NET documentation</a>
+     */
     public void setArray(InArgument_1 Array) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

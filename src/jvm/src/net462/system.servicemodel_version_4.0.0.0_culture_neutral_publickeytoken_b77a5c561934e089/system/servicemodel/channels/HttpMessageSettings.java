@@ -99,7 +99,10 @@ public class HttpMessageSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpMessageSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class HttpMessageSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpMessageSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpMessageSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class HttpMessageSettings extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code HttpMessageSettings}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpMessageSettings.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(HttpMessageSettings other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,13 @@ public class HttpMessageSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HttpMessagesSupported.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpMessageSettings.HttpMessagesSupported" target="_top">.NET documentation</a>
+     */
     public boolean getHttpMessagesSupported() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class HttpMessageSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HttpMessagesSupported.
+     *
+     * @param HttpMessagesSupported the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpMessageSettings.HttpMessagesSupported" target="_top">.NET documentation</a>
+     */
     public void setHttpMessagesSupported(boolean HttpMessagesSupported) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

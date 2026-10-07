@@ -98,7 +98,10 @@ public class KeySizes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeySizes(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class KeySizes extends NetObject  {
     public KeySizes() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param minSize the argument of type {@code int}
+     * @param maxSize the argument of type {@code int}
+     * @param skipSize the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.-ctor" target="_top">.NET documentation</a>
+     */
     public KeySizes(int minSize, int maxSize, int skipSize) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,13 @@ public class KeySizes extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.MaxSize" target="_top">.NET documentation</a>
+     */
     public int getMaxSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +226,13 @@ public class KeySizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxSize.
+     *
+     * @param MaxSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.MaxSize" target="_top">.NET documentation</a>
+     */
     public void setMaxSize(int MaxSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +243,13 @@ public class KeySizes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.MinSize" target="_top">.NET documentation</a>
+     */
     public int getMinSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +290,13 @@ public class KeySizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinSize.
+     *
+     * @param MinSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.MinSize" target="_top">.NET documentation</a>
+     */
     public void setMinSize(int MinSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +307,13 @@ public class KeySizes extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SkipSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.SkipSize" target="_top">.NET documentation</a>
+     */
     public int getSkipSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +354,13 @@ public class KeySizes extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SkipSize.
+     *
+     * @param SkipSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.KeySizes.SkipSize" target="_top">.NET documentation</a>
+     */
     public void setSkipSize(int SkipSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,9 @@ public class EventLogReadingException extends system.diagnostics.eventing.reader
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public EventLogReadingException(java.lang.Object instance) {
         super(instance);

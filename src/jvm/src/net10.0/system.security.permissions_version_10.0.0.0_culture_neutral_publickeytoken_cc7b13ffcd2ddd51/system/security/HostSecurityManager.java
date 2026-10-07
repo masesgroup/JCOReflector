@@ -106,7 +106,10 @@ public class HostSecurityManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HostSecurityManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class HostSecurityManager extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.-ctor" target="_top">.NET documentation</a>
+     */
     public HostSecurityManager() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,14 @@ public class HostSecurityManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ResolvePolicy.
+     *
+     * @param evidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.ResolvePolicy" target="_top">.NET documentation</a>
+     */
     public PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,16 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DetermineApplicationTrust.
+     *
+     * @param applicationEvidence the argument of type {@code Evidence}
+     * @param activatorEvidence the argument of type {@code Evidence}
+     * @param context the argument of type {@code TrustManagerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.DetermineApplicationTrust" target="_top">.NET documentation</a>
+     */
     public ApplicationTrust DetermineApplicationTrust(Evidence applicationEvidence, Evidence activatorEvidence, TrustManagerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +224,14 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProvideAppDomainEvidence.
+     *
+     * @param inputEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.ProvideAppDomainEvidence" target="_top">.NET documentation</a>
+     */
     public Evidence ProvideAppDomainEvidence(Evidence inputEvidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +247,15 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ProvideAssemblyEvidence.
+     *
+     * @param loadedAssembly the argument of type {@code Assembly}
+     * @param inputEvidence the argument of type {@code Evidence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.ProvideAssemblyEvidence" target="_top">.NET documentation</a>
+     */
     public Evidence ProvideAssemblyEvidence(Assembly loadedAssembly, Evidence inputEvidence) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +271,14 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateAppDomainEvidence.
+     *
+     * @param evidenceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.GenerateAppDomainEvidence" target="_top">.NET documentation</a>
+     */
     public EvidenceBase GenerateAppDomainEvidence(NetType evidenceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +294,15 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateAssemblyEvidence.
+     *
+     * @param evidenceType the argument of type {@code NetType}
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.GenerateAssemblyEvidence" target="_top">.NET documentation</a>
+     */
     public EvidenceBase GenerateAssemblyEvidence(NetType evidenceType, Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +318,13 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHostSuppliedAppDomainEvidenceTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.GetHostSuppliedAppDomainEvidenceTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetHostSuppliedAppDomainEvidenceTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +346,14 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHostSuppliedAssemblyEvidenceTypes.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.GetHostSuppliedAssemblyEvidenceTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetHostSuppliedAssemblyEvidenceTypes(Assembly assembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +379,13 @@ public class HostSecurityManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.Flags" target="_top">.NET documentation</a>
+     */
     public HostSecurityManagerOptions getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +401,13 @@ public class HostSecurityManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DomainPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.HostSecurityManager.DomainPolicy" target="_top">.NET documentation</a>
+     */
     public PolicyLevel getDomainPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

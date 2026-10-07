@@ -99,7 +99,10 @@ public class MemoryResponseElement extends system.web.caching.ResponseElement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MemoryResponseElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class MemoryResponseElement extends system.web.caching.ResponseElement  {
     public MemoryResponseElement() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @param length the argument of type {@code long}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.MemoryResponseElement.-ctor" target="_top">.NET documentation</a>
+     */
     public MemoryResponseElement(byte[] buffer, long length) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class MemoryResponseElement extends system.web.caching.ResponseElement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Buffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.MemoryResponseElement.Buffer" target="_top">.NET documentation</a>
+     */
     public byte[] getBuffer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +211,13 @@ public class MemoryResponseElement extends system.web.caching.ResponseElement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Length.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.MemoryResponseElement.Length" target="_top">.NET documentation</a>
+     */
     public long getLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

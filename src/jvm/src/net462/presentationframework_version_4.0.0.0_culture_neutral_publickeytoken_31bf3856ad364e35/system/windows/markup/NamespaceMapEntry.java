@@ -98,7 +98,10 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NamespaceMapEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class NamespaceMapEntry extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public NamespaceMapEntry() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,16 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param xmlNamespace the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @param clrNamespace the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.-ctor" target="_top">.NET documentation</a>
+     */
     public NamespaceMapEntry(java.lang.String xmlNamespace, java.lang.String assemblyName, java.lang.String clrNamespace) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +192,13 @@ public class NamespaceMapEntry extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +213,14 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyName.
+     *
+     * @param AssemblyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.AssemblyName" target="_top">.NET documentation</a>
+     */
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +231,13 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClrNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.ClrNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClrNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +252,14 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClrNamespace.
+     *
+     * @param ClrNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.ClrNamespace" target="_top">.NET documentation</a>
+     */
     public void setClrNamespace(java.lang.String ClrNamespace) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +270,13 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.XmlNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +291,14 @@ public class NamespaceMapEntry extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlNamespace.
+     *
+     * @param XmlNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.NamespaceMapEntry.XmlNamespace" target="_top">.NET documentation</a>
+     */
     public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InternalRemotingServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class InternalRemotingServices extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.InternalRemotingServices.-ctor" target="_top">.NET documentation</a>
+     */
     public InternalRemotingServices() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,15 @@ public class InternalRemotingServices extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCachedSoapAttribute.
+     *
+     * @param reflectionObject the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.InternalRemotingServices.GetCachedSoapAttribute" target="_top">.NET documentation</a>
+     */
     public static SoapAttribute GetCachedSoapAttribute(NetObject reflectionObject) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +194,14 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DebugOutChnl.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.InternalRemotingServices.DebugOutChnl" target="_top">.NET documentation</a>
+     */
     public static void DebugOutChnl(java.lang.String s) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +212,14 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemotingAssert.
+     *
+     * @param condition the argument of type {@code boolean}
+     * @param message the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.InternalRemotingServices.RemotingAssert" target="_top">.NET documentation</a>
+     */
     public static void RemotingAssert(boolean condition, java.lang.String message) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +230,13 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemotingTrace.
+     *
+     * @param messages the argument of type {@code NetObject...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.InternalRemotingServices.RemotingTrace" target="_top">.NET documentation</a>
+     */
     public static void RemotingTrace(NetObject... messages) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +247,14 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetServerIdentity.
+     *
+     * @param m the argument of type {@code MethodCall}
+     * @param srvID the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.InternalRemotingServices.SetServerIdentity" target="_top">.NET documentation</a>
+     */
     public static void SetServerIdentity(MethodCall m, NetObject srvID) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

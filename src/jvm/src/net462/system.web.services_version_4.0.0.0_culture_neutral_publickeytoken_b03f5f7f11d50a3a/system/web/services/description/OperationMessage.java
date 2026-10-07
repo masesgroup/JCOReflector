@@ -101,7 +101,10 @@ public class OperationMessage extends system.web.services.description.NamedItem 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationMessage(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class OperationMessage extends system.web.services.description.NamedItem 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Operation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessage.Operation" target="_top">.NET documentation</a>
+     */
     public Operation getOperation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class OperationMessage extends system.web.services.description.NamedItem 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessage.Message" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class OperationMessage extends system.web.services.description.NamedItem 
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationMessage.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(XmlQualifiedName Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

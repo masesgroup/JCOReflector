@@ -100,7 +100,10 @@ public class ThemeInfoAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ThemeInfoAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ThemeInfoAttribute extends system.Attribute  {
     public ThemeInfoAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param themeDictionaryLocation the argument of type {@code ResourceDictionaryLocation}
+     * @param genericDictionaryLocation the argument of type {@code ResourceDictionaryLocation}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ThemeInfoAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ThemeInfoAttribute(ResourceDictionaryLocation themeDictionaryLocation, ResourceDictionaryLocation genericDictionaryLocation) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class ThemeInfoAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property GenericDictionaryLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ThemeInfoAttribute.GenericDictionaryLocation" target="_top">.NET documentation</a>
+     */
     public ResourceDictionaryLocation getGenericDictionaryLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class ThemeInfoAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ThemeDictionaryLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation" target="_top">.NET documentation</a>
+     */
     public ResourceDictionaryLocation getThemeDictionaryLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

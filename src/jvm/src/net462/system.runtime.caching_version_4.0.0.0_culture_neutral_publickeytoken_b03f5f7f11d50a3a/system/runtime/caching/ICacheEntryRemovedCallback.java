@@ -52,5 +52,10 @@ import system.runtime.caching.CacheEntryRemovedArguments;
  * @version 2.0.0.0
  */
 public interface ICacheEntryRemovedCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arguments the .NET argument of type {@code System.Runtime.Caching.CacheEntryRemovedArguments}
+     */
     public void Invoke(CacheEntryRemovedArguments arguments);
 }

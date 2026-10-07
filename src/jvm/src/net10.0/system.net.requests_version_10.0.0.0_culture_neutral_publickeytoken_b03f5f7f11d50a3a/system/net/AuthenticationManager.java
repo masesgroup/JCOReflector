@@ -107,7 +107,10 @@ public class AuthenticationManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AuthenticationManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,25 @@ public class AuthenticationManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Authenticate.
+     *
+     * @param challenge the argument of type {@code java.lang.String}
+     * @param request the argument of type {@code WebRequest}
+     * @param credentials the argument of type {@code ICredentials}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.Authenticate" target="_top">.NET documentation</a>
+     */
     public static Authorization Authenticate(java.lang.String challenge, WebRequest request, ICredentials credentials) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +199,24 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PreAuthenticate.
+     *
+     * @param request the argument of type {@code WebRequest}
+     * @param credentials the argument of type {@code ICredentials}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public static Authorization PreAuthenticate(WebRequest request, ICredentials credentials) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -192,6 +232,22 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param authenticationModule the argument of type {@code IAuthenticationModule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.Register" target="_top">.NET documentation</a>
+     */
     public static void Register(IAuthenticationModule authenticationModule) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +258,22 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param authenticationModule the argument of type {@code IAuthenticationModule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.Unregister" target="_top">.NET documentation</a>
+     */
     public static void Unregister(IAuthenticationModule authenticationModule) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +284,22 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param authenticationScheme the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.Unregister" target="_top">.NET documentation</a>
+     */
     public static void Unregister(java.lang.String authenticationScheme) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +314,13 @@ public class AuthenticationManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RegisteredModules.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.RegisteredModules" target="_top">.NET documentation</a>
+     */
     public static IEnumerator getRegisteredModules() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -241,6 +336,13 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomTargetNameDictionary.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.CustomTargetNameDictionary" target="_top">.NET documentation</a>
+     */
     public static StringDictionary getCustomTargetNameDictionary() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -256,6 +358,13 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CredentialPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.CredentialPolicy" target="_top">.NET documentation</a>
+     */
     public static ICredentialPolicy getCredentialPolicy() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -271,6 +380,13 @@ public class AuthenticationManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CredentialPolicy.
+     *
+     * @param CredentialPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.AuthenticationManager.CredentialPolicy" target="_top">.NET documentation</a>
+     */
     public static void setCredentialPolicy(ICredentialPolicy CredentialPolicy) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

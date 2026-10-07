@@ -100,7 +100,10 @@ public class ActivityDataTrackingExtract extends system.workflow.runtime.trackin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityDataTrackingExtract(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ActivityDataTrackingExtract extends system.workflow.runtime.trackin
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDataTrackingExtract() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class ActivityDataTrackingExtract extends system.workflow.runtime.trackin
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param member the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityDataTrackingExtract(java.lang.String member) throws Throwable {
         try {
             // add reference to assemblyName.dll file

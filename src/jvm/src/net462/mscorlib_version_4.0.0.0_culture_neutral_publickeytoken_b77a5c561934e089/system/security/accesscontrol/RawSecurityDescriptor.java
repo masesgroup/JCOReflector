@@ -102,7 +102,10 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RawSecurityDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,22 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
     public RawSecurityDescriptor() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param binaryForm the argument of type {@code byte[]}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public RawSecurityDescriptor(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.SystemException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +181,17 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param flags the argument of type {@code ControlFlags}
+     * @param owner the argument of type {@code SecurityIdentifier}
+     * @param group the argument of type {@code SecurityIdentifier}
+     * @param systemAcl the argument of type {@code RawAcl}
+     * @param discretionaryAcl the argument of type {@code RawAcl}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public RawSecurityDescriptor(ControlFlags flags, SecurityIdentifier owner, SecurityIdentifier group, RawAcl systemAcl, RawAcl discretionaryAcl) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +202,20 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sddlForm the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public RawSecurityDescriptor(java.lang.String sddlForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.SystemException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +231,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetFlags.
+     *
+     * @param flags the argument of type {@code ControlFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.SetFlags" target="_top">.NET documentation</a>
+     */
     public void SetFlags(ControlFlags flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +252,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResourceManagerControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.ResourceManagerControl" target="_top">.NET documentation</a>
+     */
     public byte getResourceManagerControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +299,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceManagerControl.
+     *
+     * @param ResourceManagerControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.ResourceManagerControl" target="_top">.NET documentation</a>
+     */
     public void setResourceManagerControl(byte ResourceManagerControl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +316,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Gets the value of the .NET property DiscretionaryAcl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.DiscretionaryAcl" target="_top">.NET documentation</a>
+     */
     public RawAcl getDiscretionaryAcl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +338,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Sets the value of the .NET property DiscretionaryAcl.
+     *
+     * @param DiscretionaryAcl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.DiscretionaryAcl" target="_top">.NET documentation</a>
+     */
     public void setDiscretionaryAcl(RawAcl DiscretionaryAcl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +355,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Gets the value of the .NET property SystemAcl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.SystemAcl" target="_top">.NET documentation</a>
+     */
     public RawAcl getSystemAcl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +377,13 @@ public class RawSecurityDescriptor extends system.security.accesscontrol.Generic
         }
     }
 
+    /**
+     * Sets the value of the .NET property SystemAcl.
+     *
+     * @param SystemAcl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.RawSecurityDescriptor.SystemAcl" target="_top">.NET documentation</a>
+     */
     public void setSystemAcl(RawAcl SystemAcl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

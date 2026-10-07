@@ -100,7 +100,10 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OpenFolderDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public OpenFolderDialog() throws Throwable, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,12 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +191,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Multiselect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.Multiselect" target="_top">.NET documentation</a>
+     */
     public boolean getMultiselect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Multiselect.
+     *
+     * @param Multiselect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.Multiselect" target="_top">.NET documentation</a>
+     */
     public void setMultiselect(boolean Multiselect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +229,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FolderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.FolderName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFolderName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FolderName.
+     *
+     * @param FolderName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.FolderName" target="_top">.NET documentation</a>
+     */
     public void setFolderName(java.lang.String FolderName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +267,18 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SafeFolderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.SafeFolderName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSafeFolderName() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +293,14 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FolderNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.FolderNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getFolderNames() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +324,18 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SafeFolderNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.OpenFolderDialog.SafeFolderNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getSafeFolderNames() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +364,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addFolderOk.
+     *
+     * @param handler the argument of type {@code CancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFolderOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +381,13 @@ public class OpenFolderDialog extends microsoft.win32.CommonItemDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFolderOk.
+     *
+     * @param handler the argument of type {@code CancelEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFolderOk(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

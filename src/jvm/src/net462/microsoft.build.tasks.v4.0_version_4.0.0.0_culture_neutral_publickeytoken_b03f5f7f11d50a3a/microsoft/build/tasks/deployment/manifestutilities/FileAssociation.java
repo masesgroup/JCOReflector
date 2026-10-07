@@ -98,7 +98,10 @@ public class FileAssociation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileAssociation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class FileAssociation extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.-ctor" target="_top">.NET documentation</a>
+     */
     public FileAssociation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class FileAssociation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DefaultIcon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.DefaultIcon" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDefaultIcon() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultIcon.
+     *
+     * @param DefaultIcon the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.DefaultIcon" target="_top">.NET documentation</a>
+     */
     public void setDefaultIcon(java.lang.String DefaultIcon) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +248,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Extension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.Extension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +269,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Extension.
+     *
+     * @param Extension the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.Extension" target="_top">.NET documentation</a>
+     */
     public void setExtension(java.lang.String Extension) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +286,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProgId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.ProgId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProgId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +307,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProgId.
+     *
+     * @param ProgId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.ProgId" target="_top">.NET documentation</a>
+     */
     public void setProgId(java.lang.String ProgId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +324,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlDefaultIcon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlDefaultIcon" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlDefaultIcon() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +345,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlDefaultIcon.
+     *
+     * @param XmlDefaultIcon the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlDefaultIcon" target="_top">.NET documentation</a>
+     */
     public void setXmlDefaultIcon(java.lang.String XmlDefaultIcon) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +362,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +383,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlDescription.
+     *
+     * @param XmlDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlDescription" target="_top">.NET documentation</a>
+     */
     public void setXmlDescription(java.lang.String XmlDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +400,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlExtension.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlExtension" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlExtension() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +421,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlExtension.
+     *
+     * @param XmlExtension the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlExtension" target="_top">.NET documentation</a>
+     */
     public void setXmlExtension(java.lang.String XmlExtension) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +438,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlProgId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlProgId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlProgId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +459,13 @@ public class FileAssociation extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlProgId.
+     *
+     * @param XmlProgId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.FileAssociation.XmlProgId" target="_top">.NET documentation</a>
+     */
     public void setXmlProgId(java.lang.String XmlProgId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

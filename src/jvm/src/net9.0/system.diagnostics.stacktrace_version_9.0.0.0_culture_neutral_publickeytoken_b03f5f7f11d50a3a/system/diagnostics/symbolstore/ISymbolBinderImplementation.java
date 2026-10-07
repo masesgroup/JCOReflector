@@ -100,7 +100,10 @@ public class ISymbolBinderImplementation extends NetObject implements ISymbolBin
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolBinderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,16 @@ public class ISymbolBinderImplementation extends NetObject implements ISymbolBin
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetReader.
+     *
+     * @param importer the argument of type {@code int}
+     * @param filename the argument of type {@code java.lang.String}
+     * @param searchPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolBinder.GetReader" target="_top">.NET documentation</a>
+     */
     public ISymbolReader GetReader(int importer, java.lang.String filename, java.lang.String searchPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

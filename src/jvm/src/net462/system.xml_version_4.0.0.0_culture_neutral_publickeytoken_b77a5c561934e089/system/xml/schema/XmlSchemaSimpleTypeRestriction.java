@@ -102,7 +102,10 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaSimpleTypeRestriction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeRestriction.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleTypeRestriction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Facets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getFacets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeRestriction.BaseType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getBaseType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +220,13 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseType.
+     *
+     * @param BaseType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeRestriction.BaseType" target="_top">.NET documentation</a>
+     */
     public void setBaseType(XmlSchemaSimpleType BaseType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeRestriction.BaseTypeName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getBaseTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +259,13 @@ public class XmlSchemaSimpleTypeRestriction extends system.xml.schema.XmlSchemaS
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseTypeName.
+     *
+     * @param BaseTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeRestriction.BaseTypeName" target="_top">.NET documentation</a>
+     */
     public void setBaseTypeName(XmlQualifiedName BaseTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

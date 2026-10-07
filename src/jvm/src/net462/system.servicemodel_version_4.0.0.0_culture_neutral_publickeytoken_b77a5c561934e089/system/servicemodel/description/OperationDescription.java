@@ -106,7 +106,10 @@ public class OperationDescription extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationDescription(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,25 @@ public class OperationDescription extends NetObject  {
     public OperationDescription() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param declaringContract the argument of type {@code ContractDescription}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.-ctor" target="_top">.NET documentation</a>
+     */
     public OperationDescription(java.lang.String name, ContractDescription declaringContract) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +193,13 @@ public class OperationDescription extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeProtectionLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.ShouldSerializeProtectionLevel" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +218,13 @@ public class OperationDescription extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.HasProtectionLevel" target="_top">.NET documentation</a>
+     */
     public boolean getHasProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +239,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInitiating.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.IsInitiating" target="_top">.NET documentation</a>
+     */
     public boolean getIsInitiating() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +260,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsInitiating.
+     *
+     * @param IsInitiating the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.IsInitiating" target="_top">.NET documentation</a>
+     */
     public void setIsInitiating(boolean IsInitiating) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +277,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsOneWay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.IsOneWay" target="_top">.NET documentation</a>
+     */
     public boolean getIsOneWay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +298,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsTerminating.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.IsTerminating" target="_top">.NET documentation</a>
+     */
     public boolean getIsTerminating() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +319,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsTerminating.
+     *
+     * @param IsTerminating the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.IsTerminating" target="_top">.NET documentation</a>
+     */
     public void setIsTerminating(boolean IsTerminating) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +336,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Behaviors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.Behaviors" target="_top">.NET documentation</a>
+     */
     public KeyedByTypeCollection_1 getBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +358,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.KnownTypes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +380,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationBehaviors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.OperationBehaviors" target="_top">.NET documentation</a>
+     */
     public KeyedCollection_2 getOperationBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +402,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +424,24 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionLevel.
+     *
+     * @param ProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +452,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BeginMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.BeginMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getBeginMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +474,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BeginMethod.
+     *
+     * @param BeginMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.BeginMethod" target="_top">.NET documentation</a>
+     */
     public void setBeginMethod(MethodInfo BeginMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +491,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EndMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.EndMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getEndMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +513,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndMethod.
+     *
+     * @param EndMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.EndMethod" target="_top">.NET documentation</a>
+     */
     public void setEndMethod(MethodInfo EndMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +530,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyncMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.SyncMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getSyncMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +552,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SyncMethod.
+     *
+     * @param SyncMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.SyncMethod" target="_top">.NET documentation</a>
+     */
     public void setSyncMethod(MethodInfo SyncMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +569,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.TaskMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo getTaskMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +591,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TaskMethod.
+     *
+     * @param TaskMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.TaskMethod" target="_top">.NET documentation</a>
+     */
     public void setTaskMethod(MethodInfo TaskMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -435,6 +608,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclaringContract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.DeclaringContract" target="_top">.NET documentation</a>
+     */
     public ContractDescription getDeclaringContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -450,6 +630,24 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeclaringContract.
+     *
+     * @param DeclaringContract the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.DeclaringContract" target="_top">.NET documentation</a>
+     */
     public void setDeclaringContract(ContractDescription DeclaringContract) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +658,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Faults.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.Faults" target="_top">.NET documentation</a>
+     */
     public FaultDescriptionCollection getFaults() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +680,13 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Messages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.Messages" target="_top">.NET documentation</a>
+     */
     public MessageDescriptionCollection getMessages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +702,21 @@ public class OperationDescription extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

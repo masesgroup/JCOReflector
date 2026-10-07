@@ -100,7 +100,10 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITableMappingImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnMappings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.ITableMapping.ColumnMappings" target="_top">.NET documentation</a>
+     */
     public IColumnMappingCollection getColumnMappings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSetTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.ITableMapping.DataSetTable" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataSetTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataSetTable.
+     *
+     * @param DataSetTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.ITableMapping.DataSetTable" target="_top">.NET documentation</a>
+     */
     public void setDataSetTable(java.lang.String DataSetTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +209,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceTable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.ITableMapping.SourceTable" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceTable.
+     *
+     * @param SourceTable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.ITableMapping.SourceTable" target="_top">.NET documentation</a>
+     */
     public void setSourceTable(java.lang.String SourceTable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

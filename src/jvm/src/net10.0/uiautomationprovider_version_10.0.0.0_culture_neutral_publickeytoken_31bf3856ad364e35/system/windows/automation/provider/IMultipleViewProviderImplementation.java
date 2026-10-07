@@ -98,7 +98,10 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMultipleViewProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSupportedViews.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews" target="_top">.NET documentation</a>
+     */
     public int[] GetSupportedViews() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,14 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
         }
     }
 
+    /**
+     * Invokes the .NET member GetViewName.
+     *
+     * @param viewId the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetViewName(int viewId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,13 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
         }
     }
 
+    /**
+     * Invokes the .NET member SetCurrentView.
+     *
+     * @param viewId the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView" target="_top">.NET documentation</a>
+     */
     public void SetCurrentView(int viewId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +216,13 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView" target="_top">.NET documentation</a>
+     */
     public int getCurrentView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

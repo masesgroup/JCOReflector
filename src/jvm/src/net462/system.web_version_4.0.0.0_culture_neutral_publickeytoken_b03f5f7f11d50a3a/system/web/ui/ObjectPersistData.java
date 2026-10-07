@@ -104,7 +104,10 @@ public class ObjectPersistData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectPersistData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,23 @@ public class ObjectPersistData extends NetObject  {
     public ObjectPersistData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param builder the argument of type {@code ControlBuilder}
+     * @param builtObjects the argument of type {@code IDictionary}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectPersistData(ControlBuilder builder, IDictionary builtObjects) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +189,14 @@ public class ObjectPersistData extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPropertyAllFilters.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.GetPropertyAllFilters" target="_top">.NET documentation</a>
+     */
     public ICollection GetPropertyAllFilters(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +212,14 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilteredProperties.
+     *
+     * @param filter the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.GetFilteredProperties" target="_top">.NET documentation</a>
+     */
     public IDictionary GetFilteredProperties(java.lang.String filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +235,15 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFilteredProperty.
+     *
+     * @param filter the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.GetFilteredProperty" target="_top">.NET documentation</a>
+     */
     public PropertyEntry GetFilteredProperty(java.lang.String filter, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +259,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddToObjectControlBuilderTable.
+     *
+     * @param table the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.AddToObjectControlBuilderTable" target="_top">.NET documentation</a>
+     */
     public void AddToObjectControlBuilderTable(IDictionary table) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +280,13 @@ public class ObjectPersistData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.IsCollection" target="_top">.NET documentation</a>
+     */
     public boolean getIsCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +301,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Localize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.Localize" target="_top">.NET documentation</a>
+     */
     public boolean getLocalize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +322,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllPropertyEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.AllPropertyEntries" target="_top">.NET documentation</a>
+     */
     public ICollection getAllPropertyEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +344,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CollectionItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.CollectionItems" target="_top">.NET documentation</a>
+     */
     public ICollection getCollectionItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +366,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.EventEntries" target="_top">.NET documentation</a>
+     */
     public ICollection getEventEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +388,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuiltObjects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.BuiltObjects" target="_top">.NET documentation</a>
+     */
     public IDictionary getBuiltObjects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +410,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.ResourceKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +431,13 @@ public class ObjectPersistData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ObjectPersistData.ObjectType" target="_top">.NET documentation</a>
+     */
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

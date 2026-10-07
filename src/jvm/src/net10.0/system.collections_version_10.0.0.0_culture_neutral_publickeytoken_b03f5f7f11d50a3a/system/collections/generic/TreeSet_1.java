@@ -101,7 +101,10 @@ public class TreeSet_1<T extends IJCOBridgeReflected> extends system.collections
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TreeSet_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class TreeSet_1<T extends IJCOBridgeReflected> extends system.collections
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.TreeSet-1.-ctor" target="_top">.NET documentation</a>
+     */
     public TreeSet_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class TreeSet_1<T extends IJCOBridgeReflected> extends system.collections
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param comparer the argument of type {@code IComparer_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.TreeSet-1.-ctor" target="_top">.NET documentation</a>
+     */
     public TreeSet_1(IComparer_1 comparer) throws Throwable {
         try {
             // add reference to assemblyName.dll file

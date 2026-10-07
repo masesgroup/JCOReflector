@@ -99,7 +99,10 @@ public class ICastableImplementation extends NetObject implements ICastable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICastableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class ICastableImplementation extends NetObject implements ICastable {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsInstanceOfInterface.
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @param castError the argument of type {@code JCORefOut<NetException>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ICastable.IsInstanceOfInterface" target="_top">.NET documentation</a>
+     */
     public boolean IsInstanceOfInterface(RuntimeTypeHandle interfaceType, JCORefOut<NetException> castError) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,14 @@ public class ICastableImplementation extends NetObject implements ICastable {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImplType.
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ICastable.GetImplType" target="_top">.NET documentation</a>
+     */
     public RuntimeTypeHandle GetImplType(RuntimeTypeHandle interfaceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

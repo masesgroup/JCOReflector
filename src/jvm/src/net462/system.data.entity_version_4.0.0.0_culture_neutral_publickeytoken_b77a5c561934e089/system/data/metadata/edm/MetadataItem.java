@@ -103,7 +103,10 @@ public class MetadataItem extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataItem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class MetadataItem extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetGeneralFacetDescriptions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.GetGeneralFacetDescriptions" target="_top">.NET documentation</a>
+     */
     public static ReadOnlyCollection_1 GetGeneralFacetDescriptions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,14 @@ public class MetadataItem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBuiltInType.
+     *
+     * @param builtInTypeKind the argument of type {@code BuiltInTypeKind}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.GetBuiltInType" target="_top">.NET documentation</a>
+     */
     public static EdmType GetBuiltInType(BuiltInTypeKind builtInTypeKind) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +208,13 @@ public class MetadataItem extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuiltInTypeKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.BuiltInTypeKind" target="_top">.NET documentation</a>
+     */
     public BuiltInTypeKind getBuiltInTypeKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +230,13 @@ public class MetadataItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Documentation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.Documentation" target="_top">.NET documentation</a>
+     */
     public Documentation getDocumentation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +252,13 @@ public class MetadataItem extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Documentation.
+     *
+     * @param Documentation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.Documentation" target="_top">.NET documentation</a>
+     */
     public void setDocumentation(Documentation Documentation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +269,25 @@ public class MetadataItem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.LockRecursionException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.MetadataProperties" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getMetadataProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

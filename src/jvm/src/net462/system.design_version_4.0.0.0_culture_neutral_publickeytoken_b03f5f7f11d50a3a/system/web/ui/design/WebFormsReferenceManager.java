@@ -100,7 +100,10 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebFormsReferenceManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class WebFormsReferenceManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRegisterDirectives.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsReferenceManager.GetRegisterDirectives" target="_top">.NET documentation</a>
+     */
     public ICollection GetRegisterDirectives() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +178,14 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTagPrefix.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsReferenceManager.GetTagPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetTagPrefix(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,15 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserControlPath.
+     *
+     * @param tagPrefix the argument of type {@code java.lang.String}
+     * @param tagName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsReferenceManager.GetUserControlPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetUserControlPath(java.lang.String tagPrefix, java.lang.String tagName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,14 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterTagPrefix.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsReferenceManager.RegisterTagPrefix" target="_top">.NET documentation</a>
+     */
     public java.lang.String RegisterTagPrefix(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +245,15 @@ public class WebFormsReferenceManager extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetType.
+     *
+     * @param tagPrefix the argument of type {@code java.lang.String}
+     * @param tagName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebFormsReferenceManager.GetType" target="_top">.NET documentation</a>
+     */
     public NetType GetType(java.lang.String tagPrefix, java.lang.String tagName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -106,7 +106,10 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlQueryNodeSequence(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryNodeSequence() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryNodeSequence(int capacity) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +189,14 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param list the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryNodeSequence(IList_1 list) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +207,14 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryNodeSequence(XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +225,14 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param array the argument of type {@code XPathNavigator[]}
+     * @param size the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlQueryNodeSequence(XPathNavigator[] array, int size) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -207,6 +247,17 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateOrReuse.
+     *
+     * @param seq the argument of type {@code XmlQueryNodeSequence}
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.CreateOrReuse" target="_top">.NET documentation</a>
+     */
     public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq, XPathNavigator navigator) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +273,14 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOrReuse.
+     *
+     * @param seq the argument of type {@code XmlQueryNodeSequence}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.CreateOrReuse" target="_top">.NET documentation</a>
+     */
     public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +296,24 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Invokes the .NET member DocOrderDistinct.
+     *
+     * @param comparer the argument of type {@code IComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.DocOrderDistinct" target="_top">.NET documentation</a>
+     */
     public XmlQueryNodeSequence DocOrderDistinct(IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +329,15 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Invokes the .NET member AddClone.
+     *
+     * @param navigator the argument of type {@code XPathNavigator}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.AddClone" target="_top">.NET documentation</a>
+     */
     public void AddClone(XPathNavigator navigator) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,8 +351,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList_1 method available in IList_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IList-1.IndexOf" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int IndexOf(XPathItem item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList_1 to obtain the full interface.");
     }
@@ -274,8 +365,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList_1 method available in IList_1 to obtain an object with an invocable method
+     *
+     * @param index the argument of type {@code int}
+     * @param item the argument of type {@code XPathItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IList-1.Insert" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Insert(int index, XPathItem item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList_1 to obtain the full interface.");
     }
@@ -283,8 +379,12 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIList_1 method available in IList_1 to obtain an object with an invocable method
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IList-1.RemoveAt" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveAt(int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList_1 to obtain the full interface.");
     }
@@ -292,8 +392,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Contains" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Contains(XPathItem item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -301,8 +406,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Remove(XPathItem item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -310,8 +420,12 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code XPathItem}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Add" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Add(XPathItem item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -319,8 +433,11 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.Clear" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Clear() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -328,8 +445,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code XPathItem[]}
+     * @param arrayIndex the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ICollection-1.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(XPathItem[] array, int arrayIndex) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
@@ -338,6 +460,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDocOrderDistinct.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.IsDocOrderDistinct" target="_top">.NET documentation</a>
+     */
     public boolean getIsDocOrderDistinct() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +481,13 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDocOrderDistinct.
+     *
+     * @param IsDocOrderDistinct the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.IsDocOrderDistinct" target="_top">.NET documentation</a>
+     */
     public void setIsDocOrderDistinct(boolean IsDocOrderDistinct) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

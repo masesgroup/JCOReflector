@@ -99,7 +99,10 @@ public class TreeNodeStyleCollectionEditor extends system.web.ui.design.webcontr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TreeNodeStyleCollectionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class TreeNodeStyleCollectionEditor extends system.web.ui.design.webcontr
     public TreeNodeStyleCollectionEditor() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.TreeNodeStyleCollectionEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public TreeNodeStyleCollectionEditor(NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file

@@ -99,7 +99,10 @@ public class PrintQueueStatusProperty extends system.printing.indexedproperties.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintQueueStatusProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class PrintQueueStatusProperty extends system.printing.indexedproperties.
     public PrintQueueStatusProperty() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.IndexedProperties.PrintQueueStatusProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintQueueStatusProperty(java.lang.String attributeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,15 @@ public class PrintQueueStatusProperty extends system.printing.indexedproperties.
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param attributeName the argument of type {@code java.lang.String}
+     * @param attributeValue the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.IndexedProperties.PrintQueueStatusProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintQueueStatusProperty(java.lang.String attributeName, NetObject attributeValue) throws Throwable, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file

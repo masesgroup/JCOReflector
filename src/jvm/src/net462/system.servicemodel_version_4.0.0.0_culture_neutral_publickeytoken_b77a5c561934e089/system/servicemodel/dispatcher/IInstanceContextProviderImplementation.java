@@ -103,7 +103,10 @@ public class IInstanceContextProviderImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IInstanceContextProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IInstanceContextProviderImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsIdle.
+     *
+     * @param instanceContext the argument of type {@code InstanceContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle" target="_top">.NET documentation</a>
+     */
     public boolean IsIdle(InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,15 @@ public class IInstanceContextProviderImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member GetExistingInstanceContext.
+     *
+     * @param message the argument of type {@code Message}
+     * @param channel the argument of type {@code IContextChannel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInstanceContextProvider.GetExistingInstanceContext" target="_top">.NET documentation</a>
+     */
     public InstanceContext GetExistingInstanceContext(Message message, IContextChannel channel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +194,15 @@ public class IInstanceContextProviderImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member InitializeInstanceContext.
+     *
+     * @param instanceContext the argument of type {@code InstanceContext}
+     * @param message the argument of type {@code Message}
+     * @param channel the argument of type {@code IContextChannel}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInstanceContextProvider.InitializeInstanceContext" target="_top">.NET documentation</a>
+     */
     public void InitializeInstanceContext(InstanceContext instanceContext, Message message, IContextChannel channel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +213,14 @@ public class IInstanceContextProviderImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member NotifyIdle.
+     *
+     * @param callback the argument of type {@code InstanceContextIdleCallback}
+     * @param instanceContext the argument of type {@code InstanceContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle" target="_top">.NET documentation</a>
+     */
     public void NotifyIdle(InstanceContextIdleCallback callback, InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

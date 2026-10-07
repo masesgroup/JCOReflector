@@ -102,7 +102,10 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExportsChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
     public ExportsChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param addedExports the argument of type {@code IEnumerable_1}
+     * @param removedExports the argument of type {@code IEnumerable_1}
+     * @param atomicComposition the argument of type {@code AtomicComposition}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ExportsChangeEventArgs(IEnumerable_1 addedExports, IEnumerable_1 removedExports, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +184,13 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddedExports.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.AddedExports" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getAddedExports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +206,13 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedExports.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.RemovedExports" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getRemovedExports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +228,15 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChangedContractNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.ChangedContractNames" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getChangedContractNames() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +252,13 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AtomicComposition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.AtomicComposition" target="_top">.NET documentation</a>
+     */
     public AtomicComposition getAtomicComposition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +274,13 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AtomicComposition.
+     *
+     * @param AtomicComposition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.AtomicComposition" target="_top">.NET documentation</a>
+     */
     public void setAtomicComposition(AtomicComposition AtomicComposition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

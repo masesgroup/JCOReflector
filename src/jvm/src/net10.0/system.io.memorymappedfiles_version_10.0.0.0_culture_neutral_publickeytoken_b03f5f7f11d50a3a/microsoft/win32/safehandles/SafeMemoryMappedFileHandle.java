@@ -99,7 +99,10 @@ public class SafeMemoryMappedFileHandle extends microsoft.win32.safehandles.Safe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SafeMemoryMappedFileHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class SafeMemoryMappedFileHandle extends microsoft.win32.safehandles.Safe
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle.-ctor" target="_top">.NET documentation</a>
+     */
     public SafeMemoryMappedFileHandle() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file

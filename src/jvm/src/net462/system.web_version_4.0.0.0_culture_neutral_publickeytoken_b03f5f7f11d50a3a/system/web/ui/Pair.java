@@ -98,7 +98,10 @@ public class Pair extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Pair(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class Pair extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Pair.-ctor" target="_top">.NET documentation</a>
+     */
     public Pair() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,14 @@ public class Pair extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @param y the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Pair.-ctor" target="_top">.NET documentation</a>
+     */
     public Pair(NetObject x, NetObject y) throws Throwable {
         try {
             // add reference to assemblyName.dll file

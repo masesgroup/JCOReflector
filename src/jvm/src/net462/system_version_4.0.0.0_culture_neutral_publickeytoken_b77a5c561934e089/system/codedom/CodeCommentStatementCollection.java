@@ -101,7 +101,10 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeCommentStatementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatementCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CodeCommentStatement[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatementCollection(CodeCommentStatement[] value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code CodeCommentStatementCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatementCollection(CodeCommentStatementCollection value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +207,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code CodeCommentStatement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(CodeCommentStatement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +229,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code CodeCommentStatement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(CodeCommentStatement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +277,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code CodeCommentStatement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(CodeCommentStatement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +325,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CodeCommentStatement[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CodeCommentStatement[] value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +343,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code CodeCommentStatementCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(CodeCommentStatementCollection value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +361,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code CodeCommentStatement[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(CodeCommentStatement[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +379,14 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code CodeCommentStatement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, CodeCommentStatement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +397,13 @@ public class CodeCommentStatementCollection extends system.collections.Collectio
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code CodeCommentStatement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatementCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(CodeCommentStatement value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

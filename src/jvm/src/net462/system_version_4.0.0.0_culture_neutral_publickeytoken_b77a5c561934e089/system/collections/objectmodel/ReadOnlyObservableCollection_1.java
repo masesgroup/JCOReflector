@@ -100,7 +100,10 @@ public class ReadOnlyObservableCollection_1<T extends IJCOBridgeReflected> exten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReadOnlyObservableCollection_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ReadOnlyObservableCollection_1<T extends IJCOBridgeReflected> exten
     public ReadOnlyObservableCollection_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param list the argument of type {@code ObservableCollection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlyObservableCollection-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ReadOnlyObservableCollection_1(ObservableCollection_1 list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

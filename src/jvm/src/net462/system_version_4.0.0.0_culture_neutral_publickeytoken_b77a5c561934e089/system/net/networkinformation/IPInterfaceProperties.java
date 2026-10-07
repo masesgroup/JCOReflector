@@ -105,7 +105,10 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPInterfaceProperties(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class IPInterfaceProperties extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetIPv4Properties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties" target="_top">.NET documentation</a>
+     */
     public IPv4InterfaceProperties GetIPv4Properties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIPv6Properties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.GetIPv6Properties" target="_top">.NET documentation</a>
+     */
     public IPv6InterfaceProperties GetIPv6Properties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +209,13 @@ public class IPInterfaceProperties extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDnsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.IsDnsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsDnsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +230,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsDynamicDnsEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.IsDynamicDnsEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsDynamicDnsEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +251,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GatewayAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.GatewayAddresses" target="_top">.NET documentation</a>
+     */
     public GatewayIPAddressInformationCollection getGatewayAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +273,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DhcpServerAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.DhcpServerAddresses" target="_top">.NET documentation</a>
+     */
     public IPAddressCollection getDhcpServerAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +295,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DnsAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.DnsAddresses" target="_top">.NET documentation</a>
+     */
     public IPAddressCollection getDnsAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +317,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WinsServersAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.WinsServersAddresses" target="_top">.NET documentation</a>
+     */
     public IPAddressCollection getWinsServersAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +339,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AnycastAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.AnycastAddresses" target="_top">.NET documentation</a>
+     */
     public IPAddressInformationCollection getAnycastAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +361,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MulticastAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.MulticastAddresses" target="_top">.NET documentation</a>
+     */
     public MulticastIPAddressInformationCollection getMulticastAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +383,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnicastAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.UnicastAddresses" target="_top">.NET documentation</a>
+     */
     public UnicastIPAddressInformationCollection getUnicastAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +405,13 @@ public class IPInterfaceProperties extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DnsSuffix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPInterfaceProperties.DnsSuffix" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDnsSuffix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

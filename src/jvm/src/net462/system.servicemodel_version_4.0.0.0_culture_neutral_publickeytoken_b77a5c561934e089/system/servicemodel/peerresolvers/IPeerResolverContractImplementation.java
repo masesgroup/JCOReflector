@@ -107,7 +107,10 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPeerResolverContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Refresh.
+     *
+     * @param refreshInfo the argument of type {@code RefreshInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract.Refresh" target="_top">.NET documentation</a>
+     */
     public RefreshResponseInfo Refresh(RefreshInfo refreshInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +175,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param registerInfo the argument of type {@code RegisterInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract.Register" target="_top">.NET documentation</a>
+     */
     public RegisterResponseInfo Register(RegisterInfo registerInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param updateInfo the argument of type {@code UpdateInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract.Update" target="_top">.NET documentation</a>
+     */
     public RegisterResponseInfo Update(UpdateInfo updateInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +221,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
 
+    /**
+     * Invokes the .NET member Resolve.
+     *
+     * @param resolveInfo the argument of type {@code ResolveInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract.Resolve" target="_top">.NET documentation</a>
+     */
     public ResolveResponseInfo Resolve(ResolveInfo resolveInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +244,13 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
 
+    /**
+     * Invokes the .NET member GetServiceSettings.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract.GetServiceSettings" target="_top">.NET documentation</a>
+     */
     public ServiceSettingsResponseInfo GetServiceSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +266,13 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param unregisterInfo the argument of type {@code UnregisterInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.IPeerResolverContract.Unregister" target="_top">.NET documentation</a>
+     */
     public void Unregister(UnregisterInfo unregisterInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

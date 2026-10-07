@@ -100,7 +100,10 @@ public class CipherSuitesPolicy extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CipherSuitesPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class CipherSuitesPolicy extends NetObject  {
     public CipherSuitesPolicy() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param allowedCipherSuites the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.CipherSuitesPolicy.-ctor" target="_top">.NET documentation</a>
+     */
     public CipherSuitesPolicy(IEnumerable_1 allowedCipherSuites) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,13 @@ public class CipherSuitesPolicy extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowedCipherSuites.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.CipherSuitesPolicy.AllowedCipherSuites" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 getAllowedCipherSuites() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

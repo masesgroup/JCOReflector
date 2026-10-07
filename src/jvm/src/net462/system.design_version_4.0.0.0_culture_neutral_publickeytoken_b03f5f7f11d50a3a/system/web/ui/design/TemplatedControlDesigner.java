@@ -106,7 +106,10 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplatedControlDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,14 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTemplateContainerDataSource.
+     *
+     * @param templateName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataSource" target="_top">.NET documentation</a>
+     */
     public IEnumerable GetTemplateContainerDataSource(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,14 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member GetTemplateContainerDataItemProperty.
+     *
+     * @param templateName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetTemplateContainerDataItemProperty(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +207,16 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member GetTemplateContent.
+     *
+     * @param editingFrame the argument of type {@code ITemplateEditingFrame}
+     * @param templateName the argument of type {@code java.lang.String}
+     * @param allowEditing the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContent" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> allowEditing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +231,14 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member GetTemplatePropertyParentType.
+     *
+     * @param templateName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.GetTemplatePropertyParentType" target="_top">.NET documentation</a>
+     */
     public NetType GetTemplatePropertyParentType(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,14 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member GetTemplateEditingVerbs.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.GetTemplateEditingVerbs" target="_top">.NET documentation</a>
+     */
     public TemplateEditingVerb[] GetTemplateEditingVerbs() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +283,23 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member EnterTemplateMode.
+     *
+     * @param newTemplateEditingFrame the argument of type {@code ITemplateEditingFrame}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode" target="_top">.NET documentation</a>
+     */
     public void EnterTemplateMode(ITemplateEditingFrame newTemplateEditingFrame) throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +310,28 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member ExitTemplateMode.
+     *
+     * @param fSwitchingTemplates the argument of type {@code boolean}
+     * @param fNested the argument of type {@code boolean}
+     * @param fSave the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode" target="_top">.NET documentation</a>
+     */
     public void ExitTemplateMode(boolean fSwitchingTemplates, boolean fNested, boolean fSave) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +342,31 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +377,34 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member OnComponentChanged.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param ce the argument of type {@code ComponentChangedEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.web.HttpParseException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.OnComponentChanged" target="_top">.NET documentation</a>
+     */
     public void OnComponentChanged(NetObject sender, ComponentChangedEventArgs ce) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.web.HttpParseException, system.IndexOutOfRangeException, system.RankException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +415,12 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member OnSetParent.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.OnSetParent" target="_top">.NET documentation</a>
+     */
     public void OnSetParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +431,15 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member SetTemplateContent.
+     *
+     * @param editingFrame the argument of type {@code ITemplateEditingFrame}
+     * @param templateName the argument of type {@code java.lang.String}
+     * @param templateContent the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent" target="_top">.NET documentation</a>
+     */
     public void SetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, java.lang.String templateContent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +450,27 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateDesignTimeHtml.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.UpdateDesignTimeHtml" target="_top">.NET documentation</a>
+     */
     public void UpdateDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +485,13 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanEnterTemplateMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.CanEnterTemplateMode" target="_top">.NET documentation</a>
+     */
     public boolean getCanEnterTemplateMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +506,13 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Gets the value of the .NET property InTemplateMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.InTemplateMode" target="_top">.NET documentation</a>
+     */
     public boolean getInTemplateMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +527,13 @@ public class TemplatedControlDesigner extends system.web.ui.design.ControlDesign
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActiveTemplateEditingFrame.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplatedControlDesigner.ActiveTemplateEditingFrame" target="_top">.NET documentation</a>
+     */
     public ITemplateEditingFrame getActiveTemplateEditingFrame() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

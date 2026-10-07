@@ -101,7 +101,10 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICodeCompilerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CompileAssemblyFromDom.
+     *
+     * @param options the argument of type {@code CompilerParameters}
+     * @param compilationUnit the argument of type {@code CodeCompileUnit}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDom" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromDom(CompilerParameters options, CodeCompileUnit compilationUnit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +170,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromDomBatch.
+     *
+     * @param options the argument of type {@code CompilerParameters}
+     * @param compilationUnits the argument of type {@code CodeCompileUnit[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromDomBatch" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromDomBatch(CompilerParameters options, CodeCompileUnit[] compilationUnits) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +194,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromFile.
+     *
+     * @param options the argument of type {@code CompilerParameters}
+     * @param fileName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFile" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromFile(CompilerParameters options, java.lang.String fileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +218,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromFileBatch.
+     *
+     * @param options the argument of type {@code CompilerParameters}
+     * @param fileNames the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFileBatch" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +242,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromFileBatch.
+     *
+     * @param dupParam0 the argument of type {@code CompilerParameters}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromFileBatch" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +266,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromSource.
+     *
+     * @param options the argument of type {@code CompilerParameters}
+     * @param source the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSource" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +290,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromSourceBatch.
+     *
+     * @param options the argument of type {@code CompilerParameters}
+     * @param sources the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSourceBatch" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +314,15 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
+    /**
+     * Invokes the .NET member CompileAssemblyFromSourceBatch.
+     *
+     * @param dupParam0 the argument of type {@code CompilerParameters}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.ICodeCompiler.CompileAssemblyFromSourceBatch" target="_top">.NET documentation</a>
+     */
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

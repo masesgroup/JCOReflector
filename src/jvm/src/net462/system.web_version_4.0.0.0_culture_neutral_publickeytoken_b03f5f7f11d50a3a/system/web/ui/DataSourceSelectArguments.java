@@ -101,7 +101,10 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceSelectArguments(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class DataSourceSelectArguments extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceSelectArguments() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param startRowIndex the argument of type {@code int}
+     * @param maximumRows the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceSelectArguments(int startRowIndex, int maximumRows) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sortExpression the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceSelectArguments(java.lang.String sortExpression) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,15 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sortExpression the argument of type {@code java.lang.String}
+     * @param startRowIndex the argument of type {@code int}
+     * @param maximumRows the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.-ctor" target="_top">.NET documentation</a>
+     */
     public DataSourceSelectArguments(java.lang.String sortExpression, int startRowIndex, int maximumRows) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +225,13 @@ public class DataSourceSelectArguments extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddSupportedCapabilities.
+     *
+     * @param capabilities the argument of type {@code DataSourceCapabilities}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.AddSupportedCapabilities" target="_top">.NET documentation</a>
+     */
     public void AddSupportedCapabilities(DataSourceCapabilities capabilities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +242,24 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RaiseUnsupportedCapabilitiesError.
+     *
+     * @param view the argument of type {@code DataSourceView}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.RaiseUnsupportedCapabilitiesError" target="_top">.NET documentation</a>
+     */
     public void RaiseUnsupportedCapabilitiesError(DataSourceView view) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +274,13 @@ public class DataSourceSelectArguments extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RetrieveTotalRowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount" target="_top">.NET documentation</a>
+     */
     public boolean getRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +295,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RetrieveTotalRowCount.
+     *
+     * @param RetrieveTotalRowCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount" target="_top">.NET documentation</a>
+     */
     public void setRetrieveTotalRowCount(boolean RetrieveTotalRowCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +312,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumRows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.MaximumRows" target="_top">.NET documentation</a>
+     */
     public int getMaximumRows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +359,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaximumRows.
+     *
+     * @param MaximumRows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.MaximumRows" target="_top">.NET documentation</a>
+     */
     public void setMaximumRows(int MaximumRows) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +376,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartRowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.StartRowIndex" target="_top">.NET documentation</a>
+     */
     public int getStartRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +423,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartRowIndex.
+     *
+     * @param StartRowIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.StartRowIndex" target="_top">.NET documentation</a>
+     */
     public void setStartRowIndex(int StartRowIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +440,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TotalRowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.TotalRowCount" target="_top">.NET documentation</a>
+     */
     public int getTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +487,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TotalRowCount.
+     *
+     * @param TotalRowCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.TotalRowCount" target="_top">.NET documentation</a>
+     */
     public void setTotalRowCount(int TotalRowCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +504,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.SortExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSortExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +525,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SortExpression.
+     *
+     * @param SortExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.SortExpression" target="_top">.NET documentation</a>
+     */
     public void setSortExpression(java.lang.String SortExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +542,13 @@ public class DataSourceSelectArguments extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Empty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceSelectArguments.Empty" target="_top">.NET documentation</a>
+     */
     public static DataSourceSelectArguments getEmpty() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -104,7 +104,10 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventSourceOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,13 @@ public class EventSourceOptions extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActivityOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.ActivityOptions" target="_top">.NET documentation</a>
+     */
     public EventActivityOptions getActivityOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +188,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityOptions.
+     *
+     * @param ActivityOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.ActivityOptions" target="_top">.NET documentation</a>
+     */
     public void setActivityOptions(EventActivityOptions ActivityOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keywords.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Keywords" target="_top">.NET documentation</a>
+     */
     public EventKeywords getKeywords() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Keywords.
+     *
+     * @param Keywords the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Keywords" target="_top">.NET documentation</a>
+     */
     public void setKeywords(EventKeywords Keywords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +244,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Level" target="_top">.NET documentation</a>
+     */
     public EventLevel getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +266,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Level.
+     *
+     * @param Level the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Level" target="_top">.NET documentation</a>
+     */
     public void setLevel(EventLevel Level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +283,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Opcode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Opcode" target="_top">.NET documentation</a>
+     */
     public EventOpcode getOpcode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +305,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Opcode.
+     *
+     * @param Opcode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Opcode" target="_top">.NET documentation</a>
+     */
     public void setOpcode(EventOpcode Opcode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +322,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Tags" target="_top">.NET documentation</a>
+     */
     public EventTags getTags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +344,13 @@ public class EventSourceOptions extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Tags.
+     *
+     * @param Tags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSourceOptions.Tags" target="_top">.NET documentation</a>
+     */
     public void setTags(EventTags Tags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

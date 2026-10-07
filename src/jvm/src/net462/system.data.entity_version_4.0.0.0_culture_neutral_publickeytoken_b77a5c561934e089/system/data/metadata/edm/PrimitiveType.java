@@ -104,7 +104,10 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrimitiveType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEdmPrimitiveTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.GetEdmPrimitiveTypes" target="_top">.NET documentation</a>
+     */
     public static ReadOnlyCollection_1 GetEdmPrimitiveTypes() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +184,17 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEdmPrimitiveType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.GetEdmPrimitiveType" target="_top">.NET documentation</a>
+     */
     public EdmType GetEdmPrimitiveType() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +210,18 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEdmPrimitiveType.
+     *
+     * @param primitiveTypeKind the argument of type {@code PrimitiveTypeKind}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.GetEdmPrimitiveType" target="_top">.NET documentation</a>
+     */
     public static PrimitiveType GetEdmPrimitiveType(PrimitiveTypeKind primitiveTypeKind) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +241,13 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FacetDescriptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.FacetDescriptions" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getFacetDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +263,13 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrimitiveTypeKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.PrimitiveTypeKind" target="_top">.NET documentation</a>
+     */
     public PrimitiveTypeKind getPrimitiveTypeKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +285,13 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrimitiveTypeKind.
+     *
+     * @param PrimitiveTypeKind the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.PrimitiveTypeKind" target="_top">.NET documentation</a>
+     */
     public void setPrimitiveTypeKind(PrimitiveTypeKind PrimitiveTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +302,13 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClrEquivalentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.ClrEquivalentType" target="_top">.NET documentation</a>
+     */
     public NetType getClrEquivalentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

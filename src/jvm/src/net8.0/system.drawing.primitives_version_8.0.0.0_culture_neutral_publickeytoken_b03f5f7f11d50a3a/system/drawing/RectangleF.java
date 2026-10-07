@@ -104,7 +104,10 @@ public class RectangleF extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RectangleF(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class RectangleF extends system.ValueType  {
     public RectangleF() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param width the argument of type {@code Single}
+     * @param height the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.-ctor" target="_top">.NET documentation</a>
+     */
     public RectangleF(Single x, Single y, Single width, Single height) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +177,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param location the argument of type {@code PointF}
+     * @param size the argument of type {@code SizeF}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.-ctor" target="_top">.NET documentation</a>
+     */
     public RectangleF(PointF location, SizeF size) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +195,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param vector the argument of type {@code Vector4}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.-ctor" target="_top">.NET documentation</a>
+     */
     public RectangleF(Vector4 vector) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +217,15 @@ public class RectangleF extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Single x, Single y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +240,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param pt the argument of type {@code PointF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(PointF pt) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +262,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param rect the argument of type {@code RectangleF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(RectangleF rect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +284,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code RectangleF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(RectangleF other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +306,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member IntersectsWith.
+     *
+     * @param rect the argument of type {@code RectangleF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.IntersectsWith" target="_top">.NET documentation</a>
+     */
     public boolean IntersectsWith(RectangleF rect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +328,17 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromLTRB.
+     *
+     * @param left the argument of type {@code Single}
+     * @param top the argument of type {@code Single}
+     * @param right the argument of type {@code Single}
+     * @param bottom the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.FromLTRB" target="_top">.NET documentation</a>
+     */
     public static RectangleF FromLTRB(Single left, Single top, Single right, Single bottom) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +354,16 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Inflate.
+     *
+     * @param rect the argument of type {@code RectangleF}
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Inflate" target="_top">.NET documentation</a>
+     */
     public static RectangleF Inflate(RectangleF rect, Single x, Single y) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +379,17 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param a the argument of type {@code RectangleF}
+     * @param b the argument of type {@code RectangleF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Intersect" target="_top">.NET documentation</a>
+     */
     public static RectangleF Intersect(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -304,6 +405,17 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Union.
+     *
+     * @param a the argument of type {@code RectangleF}
+     * @param b the argument of type {@code RectangleF}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Union" target="_top">.NET documentation</a>
+     */
     public static RectangleF Union(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +431,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToVector4.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.ToVector4" target="_top">.NET documentation</a>
+     */
     public Vector4 ToVector4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +453,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Inflate.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Inflate" target="_top">.NET documentation</a>
+     */
     public void Inflate(Single x, Single y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +471,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Inflate.
+     *
+     * @param size the argument of type {@code SizeF}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Inflate" target="_top">.NET documentation</a>
+     */
     public void Inflate(SizeF size) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +488,15 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Intersect.
+     *
+     * @param rect the argument of type {@code RectangleF}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Intersect" target="_top">.NET documentation</a>
+     */
     public void Intersect(RectangleF rect) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +507,14 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Offset.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Offset" target="_top">.NET documentation</a>
+     */
     public void Offset(Single x, Single y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +525,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Offset.
+     *
+     * @param pos the argument of type {@code PointF}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Offset" target="_top">.NET documentation</a>
+     */
     public void Offset(PointF pos) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +546,13 @@ public class RectangleF extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +567,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Bottom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Bottom" target="_top">.NET documentation</a>
+     */
     public Single getBottom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +589,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Height.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Height" target="_top">.NET documentation</a>
+     */
     public Single getHeight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +611,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Height.
+     *
+     * @param Height the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Height" target="_top">.NET documentation</a>
+     */
     public void setHeight(Single Height) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +628,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Left" target="_top">.NET documentation</a>
+     */
     public Single getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +650,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Right" target="_top">.NET documentation</a>
+     */
     public Single getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +672,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Top.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Top" target="_top">.NET documentation</a>
+     */
     public Single getTop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +694,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Width.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Width" target="_top">.NET documentation</a>
+     */
     public Single getWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +716,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Width.
+     *
+     * @param Width the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Width" target="_top">.NET documentation</a>
+     */
     public void setWidth(Single Width) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +733,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property X.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.X" target="_top">.NET documentation</a>
+     */
     public Single getX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -527,6 +755,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property X.
+     *
+     * @param X the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.X" target="_top">.NET documentation</a>
+     */
     public void setX(Single X) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +772,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Y.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Y" target="_top">.NET documentation</a>
+     */
     public Single getY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +794,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Y.
+     *
+     * @param Y the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Y" target="_top">.NET documentation</a>
+     */
     public void setY(Single Y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +811,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Location.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Location" target="_top">.NET documentation</a>
+     */
     public PointF getLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -577,6 +833,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Location.
+     *
+     * @param Location the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Location" target="_top">.NET documentation</a>
+     */
     public void setLocation(PointF Location) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -587,6 +850,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Size" target="_top">.NET documentation</a>
+     */
     public SizeF getSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +872,13 @@ public class RectangleF extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Size.
+     *
+     * @param Size the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.RectangleF.Size" target="_top">.NET documentation</a>
+     */
     public void setSize(SizeF Size) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IToolboxUserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetToolSupported.
+     *
+     * @param tool the argument of type {@code ToolboxItem}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxUser.GetToolSupported" target="_top">.NET documentation</a>
+     */
     public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,13 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
         }
     }
 
+    /**
+     * Invokes the .NET member ToolPicked.
+     *
+     * @param tool the argument of type {@code ToolboxItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IToolboxUser.ToolPicked" target="_top">.NET documentation</a>
+     */
     public void ToolPicked(ToolboxItem tool) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

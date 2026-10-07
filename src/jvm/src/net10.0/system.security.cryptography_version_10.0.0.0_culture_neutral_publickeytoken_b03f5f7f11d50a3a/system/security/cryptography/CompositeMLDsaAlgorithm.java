@@ -99,7 +99,10 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompositeMLDsaAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code CompositeMLDsaAlgorithm}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CompositeMLDsaAlgorithm other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +185,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxSignatureSizeInBytes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MaxSignatureSizeInBytes" target="_top">.NET documentation</a>
+     */
     public int getMaxSignatureSizeInBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +232,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa44WithECDsaP256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa44WithECDsaP256" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa44WithECDsaP256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +254,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa44WithEd25519.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa44WithEd25519" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa44WithEd25519() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +276,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa44WithRSA2048Pkcs15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa44WithRSA2048Pkcs15" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa44WithRSA2048Pkcs15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +298,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa44WithRSA2048Pss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa44WithRSA2048Pss" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa44WithRSA2048Pss() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +320,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithECDsaBrainpoolP256r1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithECDsaBrainpoolP256r1" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithECDsaBrainpoolP256r1() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +342,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithECDsaP256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithECDsaP256" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithECDsaP256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +364,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithECDsaP384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithECDsaP384" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithECDsaP384() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +386,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithEd25519.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithEd25519" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithEd25519() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -332,6 +408,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithRSA3072Pkcs15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithRSA3072Pkcs15" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithRSA3072Pkcs15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -347,6 +430,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithRSA3072Pss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithRSA3072Pss" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithRSA3072Pss() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +452,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithRSA4096Pkcs15.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithRSA4096Pkcs15" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithRSA4096Pkcs15() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +474,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa65WithRSA4096Pss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa65WithRSA4096Pss" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa65WithRSA4096Pss() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +496,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87WithECDsaBrainpoolP384r1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa87WithECDsaBrainpoolP384r1" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa87WithECDsaBrainpoolP384r1() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -407,6 +518,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87WithECDsaP384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa87WithECDsaP384" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa87WithECDsaP384() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -422,6 +540,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87WithECDsaP521.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa87WithECDsaP521" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa87WithECDsaP521() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -437,6 +562,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87WithEd448.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa87WithEd448" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa87WithEd448() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -452,6 +584,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87WithRSA3072Pss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa87WithRSA3072Pss" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa87WithRSA3072Pss() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -467,6 +606,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLDsa87WithRSA4096Pss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.MLDsa87WithRSA4096Pss" target="_top">.NET documentation</a>
+     */
     public static CompositeMLDsaAlgorithm getMLDsa87WithRSA4096Pss() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -482,6 +628,13 @@ public class CompositeMLDsaAlgorithm extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CompositeMLDsaAlgorithm.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

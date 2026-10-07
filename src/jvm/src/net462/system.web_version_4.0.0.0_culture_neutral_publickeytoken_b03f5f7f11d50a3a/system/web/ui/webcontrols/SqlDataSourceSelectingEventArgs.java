@@ -101,7 +101,10 @@ public class SqlDataSourceSelectingEventArgs extends system.web.ui.webcontrols.S
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlDataSourceSelectingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class SqlDataSourceSelectingEventArgs extends system.web.ui.webcontrols.S
     public SqlDataSourceSelectingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param command the argument of type {@code DbCommand}
+     * @param arguments the argument of type {@code DataSourceSelectArguments}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlDataSourceSelectingEventArgs(DbCommand command, DataSourceSelectArguments arguments) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class SqlDataSourceSelectingEventArgs extends system.web.ui.webcontrols.S
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.Arguments" target="_top">.NET documentation</a>
+     */
     public DataSourceSelectArguments getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

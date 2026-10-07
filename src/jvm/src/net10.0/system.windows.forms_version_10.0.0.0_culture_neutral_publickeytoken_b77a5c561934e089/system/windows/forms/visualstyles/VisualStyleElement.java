@@ -99,7 +99,10 @@ public class VisualStyleElement extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualStyleElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,19 @@ public class VisualStyleElement extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateElement.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param part the argument of type {@code int}
+     * @param state the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.VisualStyleElement.CreateElement" target="_top">.NET documentation</a>
+     */
     public static VisualStyleElement CreateElement(java.lang.String className, int part, int state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +189,13 @@ public class VisualStyleElement extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Part.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.VisualStyleElement.Part" target="_top">.NET documentation</a>
+     */
     public int getPart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +236,13 @@ public class VisualStyleElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.VisualStyleElement.State" target="_top">.NET documentation</a>
+     */
     public int getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +283,13 @@ public class VisualStyleElement extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClassName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.VisualStyles.VisualStyleElement.ClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

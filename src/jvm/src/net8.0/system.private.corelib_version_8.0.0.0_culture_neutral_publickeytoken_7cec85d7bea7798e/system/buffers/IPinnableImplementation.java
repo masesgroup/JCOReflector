@@ -99,7 +99,10 @@ public class IPinnableImplementation extends NetObject implements IPinnable {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPinnableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IPinnableImplementation extends NetObject implements IPinnable {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Pin.
+     *
+     * @param elementIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.IPinnable.Pin" target="_top">.NET documentation</a>
+     */
     public MemoryHandle Pin(int elementIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,12 @@ public class IPinnableImplementation extends NetObject implements IPinnable {
         }
     }
 
+    /**
+     * Invokes the .NET member Unpin.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.IPinnable.Unpin" target="_top">.NET documentation</a>
+     */
     public void Unpin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

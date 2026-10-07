@@ -108,7 +108,10 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonMetadataServices(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,27 @@ public class JsonMetadataServices extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNullableConverter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.GetNullableConverter" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonConverter_1 GetNullableConverter(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -176,6 +200,26 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNullableConverter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param underlyingTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.GetNullableConverter" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonConverter_1 GetNullableConverter(JsonTypeInfo_1 underlyingTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +235,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEnumConverter.
+     *
+     * @param <T> the type of the generic argument T
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.GetEnumConverter" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonConverter_1 GetEnumConverter(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +271,14 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUnsupportedTypeConverter.
+     *
+     * @param <T> the type of the generic argument T
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.GetUnsupportedTypeConverter" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonConverter_1 GetUnsupportedTypeConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -221,6 +294,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePropertyInfo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param propertyInfo the argument of type {@code JsonPropertyInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreatePropertyInfo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonPropertyInfo CreatePropertyInfo(JsonSerializerOptions options, JsonPropertyInfoValues_1 propertyInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +330,26 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMemoryInfo.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateMemoryInfo" target="_top">.NET documentation</a>
+     */
     public static <TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateMemoryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +365,26 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateReadOnlyMemoryInfo.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateReadOnlyMemoryInfo" target="_top">.NET documentation</a>
+     */
     public static <TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateReadOnlyMemoryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -266,6 +400,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateObjectInfo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param objectInfo the argument of type {@code JsonObjectInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateObjectInfo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonTypeInfo_1 CreateObjectInfo(JsonSerializerOptions options, JsonObjectInfoValues_1 objectInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -281,6 +436,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateValueInfo.
+     *
+     * @param <T> the type of the generic argument T
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param converter the argument of type {@code JsonConverter}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateValueInfo" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> JsonTypeInfo_1 CreateValueInfo(JsonSerializerOptions options, JsonConverter converter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -296,6 +472,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConcurrentQueueInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateConcurrentQueueInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateConcurrentQueueInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -311,6 +508,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConcurrentStackInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateConcurrentStackInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateConcurrentStackInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -326,6 +544,28 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDictionaryInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateDictionaryInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -341,6 +581,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIAsyncEnumerableInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateIAsyncEnumerableInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIAsyncEnumerableInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -356,6 +617,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateICollectionInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateICollectionInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateICollectionInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -371,6 +653,28 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIDictionaryInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateIDictionaryInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -386,6 +690,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIEnumerableInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateIEnumerableInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIEnumerableInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -401,6 +726,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIListInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateIListInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIListInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -416,6 +762,30 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImmutableDictionaryInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @param createRangeFunc the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateImmutableDictionaryInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateImmutableDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Func_2 createRangeFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -431,6 +801,29 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateImmutableEnumerableInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @param createRangeFunc the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateImmutableEnumerableInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateImmutableEnumerableInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Func_2 createRangeFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -446,6 +839,28 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateIReadOnlyDictionaryInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TValue> the type of the generic argument TValue
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateIReadOnlyDictionaryInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIReadOnlyDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -461,6 +876,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateISetInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateISetInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateISetInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -476,6 +912,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateListInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateListInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateListInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -491,6 +948,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateQueueInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateQueueInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateQueueInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -506,6 +984,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateQueueInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @param addFunc the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateQueueInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected> JsonTypeInfo_1 CreateQueueInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Action_2 addFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -521,6 +1020,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateStackInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateStackInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateStackInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -536,6 +1056,27 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateStackInfo.
+     *
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @param addFunc the argument of type {@code Action_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateStackInfo" target="_top">.NET documentation</a>
+     */
     public static <TCollection extends IJCOBridgeReflected> JsonTypeInfo_1 CreateStackInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Action_2 addFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -551,6 +1092,26 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateArrayInfo.
+     *
+     * @param <TElement> the type of the generic argument TElement
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param collectionInfo the argument of type {@code JsonCollectionInfoValues_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.reflection.AmbiguousMatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CreateArrayInfo" target="_top">.NET documentation</a>
+     */
     public static <TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateArrayInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -570,6 +1131,13 @@ public class JsonMetadataServices extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BooleanConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.BooleanConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getBooleanConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -585,6 +1153,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ByteArrayConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.ByteArrayConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getByteArrayConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -600,6 +1175,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ByteConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.ByteConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getByteConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -615,6 +1197,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CharConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.CharConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getCharConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -630,6 +1219,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DateOnlyConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DateOnlyConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getDateOnlyConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -645,6 +1241,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DateTimeConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DateTimeConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getDateTimeConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -660,6 +1263,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DateTimeOffsetConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DateTimeOffsetConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getDateTimeOffsetConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -675,6 +1285,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DecimalConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DecimalConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getDecimalConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -690,6 +1307,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DoubleConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DoubleConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getDoubleConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -705,6 +1329,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GuidConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.GuidConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getGuidConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -720,6 +1351,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HalfConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.HalfConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getHalfConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -735,6 +1373,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Int128Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Int128Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getInt128Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -750,6 +1395,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Int16Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Int16Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getInt16Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -765,6 +1417,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Int32Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Int32Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getInt32Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -780,6 +1439,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Int64Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Int64Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getInt64Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -795,6 +1461,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemoryByteConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.MemoryByteConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getMemoryByteConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -810,6 +1483,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ObjectConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.ObjectConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getObjectConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -825,6 +1505,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadOnlyMemoryByteConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.ReadOnlyMemoryByteConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getReadOnlyMemoryByteConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -840,6 +1527,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SByteConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.SByteConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getSByteConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -855,6 +1549,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SingleConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.SingleConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getSingleConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -870,6 +1571,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.StringConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getStringConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -885,6 +1593,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JsonDocumentConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonDocumentConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getJsonDocumentConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -900,6 +1615,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JsonElementConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonElementConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getJsonElementConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -915,6 +1637,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JsonArrayConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonArrayConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getJsonArrayConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -930,6 +1659,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JsonNodeConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonNodeConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getJsonNodeConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -945,6 +1681,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JsonObjectConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonObjectConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getJsonObjectConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -960,6 +1703,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JsonValueConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonValueConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getJsonValueConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -975,6 +1725,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeOnlyConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.TimeOnlyConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getTimeOnlyConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -990,6 +1747,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimeSpanConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.TimeSpanConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getTimeSpanConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1005,6 +1769,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UInt128Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UInt128Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getUInt128Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1020,6 +1791,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UInt16Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UInt16Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getUInt16Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1035,6 +1813,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UInt32Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UInt32Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getUInt32Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1050,6 +1835,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UInt64Converter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UInt64Converter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getUInt64Converter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1065,6 +1857,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UriConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UriConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getUriConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1080,6 +1879,13 @@ public class JsonMetadataServices extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VersionConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.VersionConverter" target="_top">.NET documentation</a>
+     */
     public static JsonConverter_1 getVersionConverter() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

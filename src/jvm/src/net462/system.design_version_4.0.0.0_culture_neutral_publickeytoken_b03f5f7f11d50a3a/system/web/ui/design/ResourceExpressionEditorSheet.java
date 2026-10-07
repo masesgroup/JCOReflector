@@ -101,7 +101,10 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResourceExpressionEditorSheet(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,18 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
     public ResourceExpressionEditorSheet() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ResourceExpressionEditorSheet.-ctor" target="_top">.NET documentation</a>
+     */
     public ResourceExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +181,14 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetExpression.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ResourceExpressionEditorSheet.GetExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetExpression() throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +207,13 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClassKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ResourceExpressionEditorSheet.ClassKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClassKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +228,13 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClassKey.
+     *
+     * @param ClassKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ResourceExpressionEditorSheet.ClassKey" target="_top">.NET documentation</a>
+     */
     public void setClassKey(java.lang.String ClassKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +245,13 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +266,13 @@ public class ResourceExpressionEditorSheet extends system.web.ui.design.Expressi
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceKey.
+     *
+     * @param ResourceKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ResourceExpressionEditorSheet.ResourceKey" target="_top">.NET documentation</a>
+     */
     public void setResourceKey(java.lang.String ResourceKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

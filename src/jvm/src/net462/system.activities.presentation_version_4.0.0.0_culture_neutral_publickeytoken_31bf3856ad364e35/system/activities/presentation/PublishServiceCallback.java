@@ -160,7 +160,10 @@ public class PublishServiceCallback extends JCDelegate implements IJCEventEmit, 
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PublishServiceCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -182,6 +185,14 @@ public class PublishServiceCallback extends JCDelegate implements IJCEventEmit, 
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public NetObject DynamicInvoke(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,7 +209,10 @@ public class PublishServiceCallback extends JCDelegate implements IJCEventEmit, 
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param serviceType the .NET argument of type {@code System.Type}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public NetObject Invoke(NetType serviceType) {
         return null;

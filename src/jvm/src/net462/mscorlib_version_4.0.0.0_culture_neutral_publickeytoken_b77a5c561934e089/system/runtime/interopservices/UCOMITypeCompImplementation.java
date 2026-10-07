@@ -103,7 +103,10 @@ public class UCOMITypeCompImplementation extends NetObject implements UCOMITypeC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMITypeCompImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,16 @@ public class UCOMITypeCompImplementation extends NetObject implements UCOMITypeC
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BindType.
+     *
+     * @param szName the argument of type {@code java.lang.String}
+     * @param lHashVal the argument of type {@code int}
+     * @param ppTInfo the argument of type {@code JCORefOut<UCOMITypeInfo>}
+     * @param ppTComp the argument of type {@code JCORefOut<UCOMITypeComp>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMITypeComp.BindType" target="_top">.NET documentation</a>
+     */
     public void BindType(java.lang.String szName, int lHashVal, JCORefOut<UCOMITypeInfo> ppTInfo, JCORefOut<UCOMITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

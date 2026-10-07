@@ -100,7 +100,10 @@ public class CallbackValidatorAttribute extends system.configuration.Configurati
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CallbackValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CallbackValidatorAttribute extends system.configuration.Configurati
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.CallbackValidatorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public CallbackValidatorAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class CallbackValidatorAttribute extends system.configuration.Configurati
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CallbackMethodName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.CallbackValidatorAttribute.CallbackMethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCallbackMethodName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class CallbackValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property CallbackMethodName.
+     *
+     * @param CallbackMethodName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.CallbackValidatorAttribute.CallbackMethodName" target="_top">.NET documentation</a>
+     */
     public void setCallbackMethodName(java.lang.String CallbackMethodName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class CallbackValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.CallbackValidatorAttribute.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class CallbackValidatorAttribute extends system.configuration.Configurati
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.CallbackValidatorAttribute.Type" target="_top">.NET documentation</a>
+     */
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

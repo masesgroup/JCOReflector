@@ -197,7 +197,10 @@ public class MetadataReader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataReader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -252,6 +255,19 @@ public class MetadataReader extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBlobBytes.
+     *
+     * @param handle the argument of type {@code BlobHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetBlobBytes" target="_top">.NET documentation</a>
+     */
     public byte[] GetBlobBytes(BlobHandle handle) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +291,17 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBlobContent.
+     *
+     * @param handle the argument of type {@code BlobHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetBlobContent" target="_top">.NET documentation</a>
+     */
     public ImmutableArray_1 GetBlobContent(BlobHandle handle) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +317,18 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGuid.
+     *
+     * @param handle the argument of type {@code GuidHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetGuid" target="_top">.NET documentation</a>
+     */
     public Guid GetGuid(GuidHandle handle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +344,32 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblyName.
+     *
+     * @param assemblyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetAssemblyName" target="_top">.NET documentation</a>
+     */
     public static AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.BadImageFormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -320,6 +385,21 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblyDefinition.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetAssemblyDefinition" target="_top">.NET documentation</a>
+     */
     public AssemblyDefinition GetAssemblyDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +415,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblyFile.
+     *
+     * @param handle the argument of type {@code AssemblyFileHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetAssemblyFile" target="_top">.NET documentation</a>
+     */
     public AssemblyFile GetAssemblyFile(AssemblyFileHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +438,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAssemblyReference.
+     *
+     * @param handle the argument of type {@code AssemblyReferenceHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetAssemblyReference" target="_top">.NET documentation</a>
+     */
     public AssemblyReference GetAssemblyReference(AssemblyReferenceHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +461,23 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBlobReader.
+     *
+     * @param handle the argument of type {@code BlobHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetBlobReader" target="_top">.NET documentation</a>
+     */
     public BlobReader GetBlobReader(BlobHandle handle) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +493,24 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBlobReader.
+     *
+     * @param handle the argument of type {@code StringHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetBlobReader" target="_top">.NET documentation</a>
+     */
     public BlobReader GetBlobReader(StringHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +526,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstant.
+     *
+     * @param handle the argument of type {@code ConstantHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetConstant" target="_top">.NET documentation</a>
+     */
     public Constant GetConstant(ConstantHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +549,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttribute.
+     *
+     * @param handle the argument of type {@code CustomAttributeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetCustomAttribute" target="_top">.NET documentation</a>
+     */
     public CustomAttribute GetCustomAttribute(CustomAttributeHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +572,16 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param handle the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public CustomAttributeHandleCollection GetCustomAttributes(EntityHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +597,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomDebugInformation.
+     *
+     * @param handle the argument of type {@code CustomDebugInformationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetCustomDebugInformation" target="_top">.NET documentation</a>
+     */
     public CustomDebugInformation GetCustomDebugInformation(CustomDebugInformationHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +620,16 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomDebugInformation.
+     *
+     * @param handle the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetCustomDebugInformation" target="_top">.NET documentation</a>
+     */
     public CustomDebugInformationHandleCollection GetCustomDebugInformation(EntityHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -470,6 +645,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDeclarativeSecurityAttribute.
+     *
+     * @param handle the argument of type {@code DeclarativeSecurityAttributeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetDeclarativeSecurityAttribute" target="_top">.NET documentation</a>
+     */
     public DeclarativeSecurityAttribute GetDeclarativeSecurityAttribute(DeclarativeSecurityAttributeHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +668,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocument.
+     *
+     * @param handle the argument of type {@code DocumentHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetDocument" target="_top">.NET documentation</a>
+     */
     public Document GetDocument(DocumentHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -500,6 +691,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEventDefinition.
+     *
+     * @param handle the argument of type {@code EventDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetEventDefinition" target="_top">.NET documentation</a>
+     */
     public EventDefinition GetEventDefinition(EventDefinitionHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -515,6 +714,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetExportedType.
+     *
+     * @param handle the argument of type {@code ExportedTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetExportedType" target="_top">.NET documentation</a>
+     */
     public ExportedType GetExportedType(ExportedTypeHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +737,18 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldDefinition.
+     *
+     * @param handle the argument of type {@code FieldDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetFieldDefinition" target="_top">.NET documentation</a>
+     */
     public FieldDefinition GetFieldDefinition(FieldDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -545,6 +764,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericParameter.
+     *
+     * @param handle the argument of type {@code GenericParameterHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetGenericParameter" target="_top">.NET documentation</a>
+     */
     public GenericParameter GetGenericParameter(GenericParameterHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +787,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericParameterConstraint.
+     *
+     * @param handle the argument of type {@code GenericParameterConstraintHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetGenericParameterConstraint" target="_top">.NET documentation</a>
+     */
     public GenericParameterConstraint GetGenericParameterConstraint(GenericParameterConstraintHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -575,6 +810,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImportScope.
+     *
+     * @param handle the argument of type {@code ImportScopeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetImportScope" target="_top">.NET documentation</a>
+     */
     public ImportScope GetImportScope(ImportScopeHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -590,6 +833,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaceImplementation.
+     *
+     * @param handle the argument of type {@code InterfaceImplementationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetInterfaceImplementation" target="_top">.NET documentation</a>
+     */
     public InterfaceImplementation GetInterfaceImplementation(InterfaceImplementationHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -605,6 +856,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalConstant.
+     *
+     * @param handle the argument of type {@code LocalConstantHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetLocalConstant" target="_top">.NET documentation</a>
+     */
     public LocalConstant GetLocalConstant(LocalConstantHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +879,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalScope.
+     *
+     * @param handle the argument of type {@code LocalScopeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetLocalScope" target="_top">.NET documentation</a>
+     */
     public LocalScope GetLocalScope(LocalScopeHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +902,16 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalScopes.
+     *
+     * @param handle the argument of type {@code MethodDebugInformationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetLocalScopes" target="_top">.NET documentation</a>
+     */
     public LocalScopeHandleCollection GetLocalScopes(MethodDebugInformationHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +927,16 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalScopes.
+     *
+     * @param handle the argument of type {@code MethodDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetLocalScopes" target="_top">.NET documentation</a>
+     */
     public LocalScopeHandleCollection GetLocalScopes(MethodDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -665,6 +952,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocalVariable.
+     *
+     * @param handle the argument of type {@code LocalVariableHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetLocalVariable" target="_top">.NET documentation</a>
+     */
     public LocalVariable GetLocalVariable(LocalVariableHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +975,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetManifestResource.
+     *
+     * @param handle the argument of type {@code ManifestResourceHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetManifestResource" target="_top">.NET documentation</a>
+     */
     public ManifestResource GetManifestResource(ManifestResourceHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -695,6 +998,25 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMemberReference.
+     *
+     * @param handle the argument of type {@code MemberReferenceHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetMemberReference" target="_top">.NET documentation</a>
+     */
     public MemberReference GetMemberReference(MemberReferenceHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.InvalidCastException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -710,6 +1032,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodDebugInformation.
+     *
+     * @param handle the argument of type {@code MethodDebugInformationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetMethodDebugInformation" target="_top">.NET documentation</a>
+     */
     public MethodDebugInformation GetMethodDebugInformation(MethodDebugInformationHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +1055,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodDebugInformation.
+     *
+     * @param handle the argument of type {@code MethodDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetMethodDebugInformation" target="_top">.NET documentation</a>
+     */
     public MethodDebugInformation GetMethodDebugInformation(MethodDefinitionHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1078,25 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodDefinition.
+     *
+     * @param handle the argument of type {@code MethodDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetMethodDefinition" target="_top">.NET documentation</a>
+     */
     public MethodDefinition GetMethodDefinition(MethodDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +1112,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodImplementation.
+     *
+     * @param handle the argument of type {@code MethodImplementationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetMethodImplementation" target="_top">.NET documentation</a>
+     */
     public MethodImplementation GetMethodImplementation(MethodImplementationHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -770,6 +1135,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethodSpecification.
+     *
+     * @param handle the argument of type {@code MethodSpecificationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetMethodSpecification" target="_top">.NET documentation</a>
+     */
     public MethodSpecification GetMethodSpecification(MethodSpecificationHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -785,6 +1158,21 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModuleDefinition.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetModuleDefinition" target="_top">.NET documentation</a>
+     */
     public ModuleDefinition GetModuleDefinition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -800,6 +1188,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetModuleReference.
+     *
+     * @param handle the argument of type {@code ModuleReferenceHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetModuleReference" target="_top">.NET documentation</a>
+     */
     public ModuleReference GetModuleReference(ModuleReferenceHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1211,26 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespaceDefinition.
+     *
+     * @param handle the argument of type {@code NamespaceDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetNamespaceDefinition" target="_top">.NET documentation</a>
+     */
     public NamespaceDefinition GetNamespaceDefinition(NamespaceDefinitionHandle handle) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -830,6 +1246,25 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespaceDefinitionRoot.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetNamespaceDefinitionRoot" target="_top">.NET documentation</a>
+     */
     public NamespaceDefinition GetNamespaceDefinitionRoot() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -845,6 +1280,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetParameter.
+     *
+     * @param handle the argument of type {@code ParameterHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetParameter" target="_top">.NET documentation</a>
+     */
     public Parameter GetParameter(ParameterHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -860,6 +1303,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyDefinition.
+     *
+     * @param handle the argument of type {@code PropertyDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetPropertyDefinition" target="_top">.NET documentation</a>
+     */
     public PropertyDefinition GetPropertyDefinition(PropertyDefinitionHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -875,6 +1326,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStandaloneSignature.
+     *
+     * @param handle the argument of type {@code StandaloneSignatureHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetStandaloneSignature" target="_top">.NET documentation</a>
+     */
     public StandaloneSignature GetStandaloneSignature(StandaloneSignatureHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -890,6 +1349,18 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeDefinition.
+     *
+     * @param handle the argument of type {@code TypeDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetTypeDefinition" target="_top">.NET documentation</a>
+     */
     public TypeDefinition GetTypeDefinition(TypeDefinitionHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -905,6 +1376,17 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeReference.
+     *
+     * @param handle the argument of type {@code TypeReferenceHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetTypeReference" target="_top">.NET documentation</a>
+     */
     public TypeReference GetTypeReference(TypeReferenceHandle handle) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -920,6 +1402,14 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeSpecification.
+     *
+     * @param handle the argument of type {@code TypeSpecificationHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetTypeSpecification" target="_top">.NET documentation</a>
+     */
     public TypeSpecification GetTypeSpecification(TypeSpecificationHandle handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -935,6 +1425,25 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param handle the argument of type {@code DocumentNameBlobHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(DocumentNameBlobHandle handle) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.BadImageFormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -949,6 +1458,25 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param handle the argument of type {@code NamespaceDefinitionHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(NamespaceDefinitionHandle handle) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -963,6 +1491,24 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param handle the argument of type {@code StringHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(StringHandle handle) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -977,6 +1523,19 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUserString.
+     *
+     * @param handle the argument of type {@code UserStringHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.GetUserString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetUserString(UserStringHandle handle) throws Throwable, system.ArgumentException, system.BadImageFormatException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -995,6 +1554,13 @@ public class MetadataReader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.IsAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1009,6 +1575,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.MetadataLength" target="_top">.NET documentation</a>
+     */
     public int getMetadataLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1049,6 +1622,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.AssemblyFiles" target="_top">.NET documentation</a>
+     */
     public AssemblyFileHandleCollection getAssemblyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1064,6 +1644,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.AssemblyReferences" target="_top">.NET documentation</a>
+     */
     public AssemblyReferenceHandleCollection getAssemblyReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1079,6 +1666,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.CustomAttributes" target="_top">.NET documentation</a>
+     */
     public CustomAttributeHandleCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1094,6 +1688,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomDebugInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.CustomDebugInformation" target="_top">.NET documentation</a>
+     */
     public CustomDebugInformationHandleCollection getCustomDebugInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1109,6 +1710,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DebugMetadataHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.DebugMetadataHeader" target="_top">.NET documentation</a>
+     */
     public DebugMetadataHeader getDebugMetadataHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1124,6 +1732,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclarativeSecurityAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.DeclarativeSecurityAttributes" target="_top">.NET documentation</a>
+     */
     public DeclarativeSecurityAttributeHandleCollection getDeclarativeSecurityAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1139,6 +1754,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Documents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.Documents" target="_top">.NET documentation</a>
+     */
     public DocumentHandleCollection getDocuments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1154,6 +1776,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.EventDefinitions" target="_top">.NET documentation</a>
+     */
     public EventDefinitionHandleCollection getEventDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1169,6 +1798,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExportedTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.ExportedTypes" target="_top">.NET documentation</a>
+     */
     public ExportedTypeHandleCollection getExportedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1184,6 +1820,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.FieldDefinitions" target="_top">.NET documentation</a>
+     */
     public FieldDefinitionHandleCollection getFieldDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1199,6 +1842,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportScopes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.ImportScopes" target="_top">.NET documentation</a>
+     */
     public ImportScopeCollection getImportScopes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1214,6 +1864,15 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalConstants.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.LocalConstants" target="_top">.NET documentation</a>
+     */
     public LocalConstantHandleCollection getLocalConstants() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1229,6 +1888,15 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalScopes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.LocalScopes" target="_top">.NET documentation</a>
+     */
     public LocalScopeHandleCollection getLocalScopes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1244,6 +1912,15 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalVariables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.LocalVariables" target="_top">.NET documentation</a>
+     */
     public LocalVariableHandleCollection getLocalVariables() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1259,6 +1936,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManifestResources.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.ManifestResources" target="_top">.NET documentation</a>
+     */
     public ManifestResourceHandleCollection getManifestResources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1274,6 +1958,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.MemberReferences" target="_top">.NET documentation</a>
+     */
     public MemberReferenceHandleCollection getMemberReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1289,6 +1980,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataKind.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.MetadataKind" target="_top">.NET documentation</a>
+     */
     public MetadataKind getMetadataKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1304,6 +2002,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.Options" target="_top">.NET documentation</a>
+     */
     public MetadataReaderOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1319,6 +2024,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringComparer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.StringComparer" target="_top">.NET documentation</a>
+     */
     public MetadataStringComparer getStringComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1334,6 +2046,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UTF8Decoder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.UTF8Decoder" target="_top">.NET documentation</a>
+     */
     public MetadataStringDecoder getUTF8Decoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1349,6 +2068,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodDebugInformation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.MethodDebugInformation" target="_top">.NET documentation</a>
+     */
     public MethodDebugInformationHandleCollection getMethodDebugInformation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1364,6 +2090,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.MethodDefinitions" target="_top">.NET documentation</a>
+     */
     public MethodDefinitionHandleCollection getMethodDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1379,6 +2112,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.PropertyDefinitions" target="_top">.NET documentation</a>
+     */
     public PropertyDefinitionHandleCollection getPropertyDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1394,6 +2134,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeDefinitions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.TypeDefinitions" target="_top">.NET documentation</a>
+     */
     public TypeDefinitionHandleCollection getTypeDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1409,6 +2156,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeReferences.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.TypeReferences" target="_top">.NET documentation</a>
+     */
     public TypeReferenceHandleCollection getTypeReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1424,6 +2178,13 @@ public class MetadataReader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MetadataReader.MetadataVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMetadataVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

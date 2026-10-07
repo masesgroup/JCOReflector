@@ -103,7 +103,10 @@ public class IOrderedQueryableImplementation extends IEnumerableImplementation i
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IOrderedQueryableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IOrderedQueryableImplementation extends IEnumerableImplementation i
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Expression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedQueryable.Expression" target="_top">.NET documentation</a>
+     */
     public Expression getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +174,13 @@ public class IOrderedQueryableImplementation extends IEnumerableImplementation i
         }
     }
 
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedQueryable.Provider" target="_top">.NET documentation</a>
+     */
     public IQueryProvider getProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,13 @@ public class IOrderedQueryableImplementation extends IEnumerableImplementation i
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedQueryable.ElementType" target="_top">.NET documentation</a>
+     */
     public NetType getElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

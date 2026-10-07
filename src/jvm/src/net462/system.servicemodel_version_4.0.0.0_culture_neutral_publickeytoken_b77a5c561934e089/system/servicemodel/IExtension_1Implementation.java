@@ -98,7 +98,10 @@ public class IExtension_1Implementation<T extends IJCOBridgeReflected> extends N
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtension_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IExtension_1Implementation<T extends IJCOBridgeReflected> extends N
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Attach.
+     *
+     * @param owner the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtension-1.Attach" target="_top">.NET documentation</a>
+     */
     public void Attach(T owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +160,13 @@ public class IExtension_1Implementation<T extends IJCOBridgeReflected> extends N
         }
     }
 
+    /**
+     * Invokes the .NET member Detach.
+     *
+     * @param owner the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtension-1.Detach" target="_top">.NET documentation</a>
+     */
     public void Detach(T owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

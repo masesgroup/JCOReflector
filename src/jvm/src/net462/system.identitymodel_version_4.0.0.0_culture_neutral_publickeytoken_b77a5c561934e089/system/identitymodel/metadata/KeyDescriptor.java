@@ -102,7 +102,10 @@ public class KeyDescriptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class KeyDescriptor extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class KeyDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param ski the argument of type {@code SecurityKeyIdentifier}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyDescriptor(SecurityKeyIdentifier ski) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +193,13 @@ public class KeyDescriptor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EncryptionMethods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.EncryptionMethods" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getEncryptionMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class KeyDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Use.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.Use" target="_top">.NET documentation</a>
+     */
     public KeyType getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class KeyDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Use.
+     *
+     * @param Use the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.Use" target="_top">.NET documentation</a>
+     */
     public void setUse(KeyType Use) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class KeyDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.KeyInfo" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifier getKeyInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class KeyDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyInfo.
+     *
+     * @param KeyInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.KeyInfo" target="_top">.NET documentation</a>
+     */
     public void setKeyInfo(SecurityKeyIdentifier KeyInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

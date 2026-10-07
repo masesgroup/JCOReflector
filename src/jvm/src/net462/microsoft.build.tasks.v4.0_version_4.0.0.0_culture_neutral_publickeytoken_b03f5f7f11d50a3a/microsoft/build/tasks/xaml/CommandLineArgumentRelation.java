@@ -99,7 +99,10 @@ public class CommandLineArgumentRelation extends microsoft.build.tasks.xaml.Prop
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CommandLineArgumentRelation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class CommandLineArgumentRelation extends microsoft.build.tasks.xaml.Prop
     public CommandLineArgumentRelation() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param argument the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @param required the argument of type {@code boolean}
+     * @param separator the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation.-ctor" target="_top">.NET documentation</a>
+     */
     public CommandLineArgumentRelation(java.lang.String argument, java.lang.String value, boolean required, java.lang.String separator) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class CommandLineArgumentRelation extends microsoft.build.tasks.xaml.Prop
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Separator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation.Separator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +202,13 @@ public class CommandLineArgumentRelation extends microsoft.build.tasks.xaml.Prop
         }
     }
 
+    /**
+     * Sets the value of the .NET property Separator.
+     *
+     * @param Separator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineArgumentRelation.Separator" target="_top">.NET documentation</a>
+     */
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

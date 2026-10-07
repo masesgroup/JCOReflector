@@ -101,7 +101,10 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeTypeParameter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeParameter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeTypeParameter(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +192,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasConstructorConstraint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.HasConstructorConstraint" target="_top">.NET documentation</a>
+     */
     public boolean getHasConstructorConstraint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +213,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasConstructorConstraint.
+     *
+     * @param HasConstructorConstraint the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.HasConstructorConstraint" target="_top">.NET documentation</a>
+     */
     public void setHasConstructorConstraint(boolean HasConstructorConstraint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +230,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CustomAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.CustomAttributes" target="_top">.NET documentation</a>
+     */
     public CodeAttributeDeclarationCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +252,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Constraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.Constraints" target="_top">.NET documentation</a>
+     */
     public CodeTypeReferenceCollection getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +274,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +295,13 @@ public class CodeTypeParameter extends system.codedom.CodeObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeTypeParameter.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

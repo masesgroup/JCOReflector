@@ -101,7 +101,10 @@ public class TaskCommandLineEventArgs extends microsoft.build.framework.BuildMes
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskCommandLineEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class TaskCommandLineEventArgs extends microsoft.build.framework.BuildMes
     public TaskCommandLineEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandLine the argument of type {@code java.lang.String}
+     * @param taskName the argument of type {@code java.lang.String}
+     * @param importance the argument of type {@code MessageImportance}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.TaskCommandLineEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskCommandLineEventArgs(java.lang.String commandLine, java.lang.String taskName, MessageImportance importance) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +174,18 @@ public class TaskCommandLineEventArgs extends microsoft.build.framework.BuildMes
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandLine the argument of type {@code java.lang.String}
+     * @param taskName the argument of type {@code java.lang.String}
+     * @param importance the argument of type {@code MessageImportance}
+     * @param eventTimestamp the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.TaskCommandLineEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskCommandLineEventArgs(java.lang.String commandLine, java.lang.String taskName, MessageImportance importance, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +205,13 @@ public class TaskCommandLineEventArgs extends microsoft.build.framework.BuildMes
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CommandLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.TaskCommandLineEventArgs.CommandLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +226,13 @@ public class TaskCommandLineEventArgs extends microsoft.build.framework.BuildMes
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.TaskCommandLineEventArgs.TaskName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTaskName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICustomMarshalerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetNativeDataSize.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ICustomMarshaler.GetNativeDataSize" target="_top">.NET documentation</a>
+     */
     public int GetNativeDataSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +190,13 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
         }
     }
 
+    /**
+     * Invokes the .NET member CleanUpManagedData.
+     *
+     * @param ManagedObj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ICustomMarshaler.CleanUpManagedData" target="_top">.NET documentation</a>
+     */
     public void CleanUpManagedData(NetObject ManagedObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

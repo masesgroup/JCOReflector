@@ -52,5 +52,11 @@ import system.windows.xps.serialization.XpsSerializationProgressChangedEventArgs
  * @version 2.0.0.0
  */
 public interface IXpsSerializationProgressChangedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventArgs}
+     */
     public void Invoke(NetObject sender, XpsSerializationProgressChangedEventArgs e);
 }

@@ -101,7 +101,10 @@ public class CorHeader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CorHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class CorHeader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EntryPointTokenOrRelativeVirtualAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.EntryPointTokenOrRelativeVirtualAddress" target="_top">.NET documentation</a>
+     */
     public int getEntryPointTokenOrRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.Flags" target="_top">.NET documentation</a>
+     */
     public CorFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +232,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeManagerTableDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.CodeManagerTableDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getCodeManagerTableDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +254,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExportAddressTableJumpsDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.ExportAddressTableJumpsDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getExportAddressTableJumpsDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +276,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManagedNativeHeaderDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.ManagedNativeHeaderDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getManagedNativeHeaderDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +298,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MetadataDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.MetadataDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getMetadataDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +320,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourcesDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.ResourcesDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getResourcesDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +342,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StrongNameSignatureDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.StrongNameSignatureDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getStrongNameSignatureDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +364,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VtableFixupsDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.VtableFixupsDirectory" target="_top">.NET documentation</a>
+     */
     public DirectoryEntry getVtableFixupsDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +386,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorRuntimeVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.MajorRuntimeVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMajorRuntimeVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +408,13 @@ public class CorHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorRuntimeVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.CorHeader.MinorRuntimeVersion" target="_top">.NET documentation</a>
+     */
     public UInt16 getMinorRuntimeVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

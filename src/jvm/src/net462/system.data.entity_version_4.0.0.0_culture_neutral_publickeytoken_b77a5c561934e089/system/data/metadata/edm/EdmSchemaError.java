@@ -100,7 +100,10 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EdmSchemaError(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.Column" target="_top">.NET documentation</a>
+     */
     public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.ErrorCode" target="_top">.NET documentation</a>
+     */
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +256,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Line.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.Line" target="_top">.NET documentation</a>
+     */
     public int getLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +303,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Severity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.Severity" target="_top">.NET documentation</a>
+     */
     public EdmSchemaErrorSeverity getSeverity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +325,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Severity.
+     *
+     * @param Severity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.Severity" target="_top">.NET documentation</a>
+     */
     public void setSeverity(EdmSchemaErrorSeverity Severity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +342,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.SchemaLocation" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSchemaLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +363,14 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.SchemaName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSchemaName() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +385,13 @@ public class EdmSchemaError extends system.data.metadata.edm.EdmError  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StackTrace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmSchemaError.StackTrace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

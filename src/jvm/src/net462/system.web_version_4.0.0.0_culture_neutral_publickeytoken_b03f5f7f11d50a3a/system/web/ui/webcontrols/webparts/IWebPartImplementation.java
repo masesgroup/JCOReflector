@@ -98,7 +98,10 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebPartImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CatalogIconImageUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCatalogIconImageUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CatalogIconImageUrl.
+     *
+     * @param CatalogIconImageUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.CatalogIconImageUrl" target="_top">.NET documentation</a>
+     */
     public void setCatalogIconImageUrl(java.lang.String CatalogIconImageUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +223,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subtitle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.Subtitle" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubtitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +244,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Title.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.Title" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +265,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Title.
+     *
+     * @param Title the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.Title" target="_top">.NET documentation</a>
+     */
     public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +282,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TitleIconImageUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitleIconImageUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +303,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TitleIconImageUrl.
+     *
+     * @param TitleIconImageUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.TitleIconImageUrl" target="_top">.NET documentation</a>
+     */
     public void setTitleIconImageUrl(java.lang.String TitleIconImageUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +320,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TitleUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitleUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +341,13 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TitleUrl.
+     *
+     * @param TitleUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPart.TitleUrl" target="_top">.NET documentation</a>
+     */
     public void setTitleUrl(java.lang.String TitleUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

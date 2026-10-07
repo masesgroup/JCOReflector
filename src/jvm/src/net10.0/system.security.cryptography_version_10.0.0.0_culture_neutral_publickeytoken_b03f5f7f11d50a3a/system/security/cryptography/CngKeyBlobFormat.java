@@ -99,7 +99,10 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CngKeyBlobFormat(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class CngKeyBlobFormat extends NetObject  {
     public CngKeyBlobFormat() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.-ctor" target="_top">.NET documentation</a>
+     */
     public CngKeyBlobFormat(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +177,17 @@ public class CngKeyBlobFormat extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code CngKeyBlobFormat}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CngKeyBlobFormat other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,15 @@ public class CngKeyBlobFormat extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EccFullPrivateBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.EccFullPrivateBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getEccFullPrivateBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +230,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EccFullPublicBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.EccFullPublicBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getEccFullPublicBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +254,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EccPrivateBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.EccPrivateBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getEccPrivateBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +278,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EccPublicBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.EccPublicBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getEccPublicBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +302,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenericPrivateBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.GenericPrivateBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getGenericPrivateBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -257,6 +326,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenericPublicBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.GenericPublicBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getGenericPublicBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +350,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLKemPrivateBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.MLKemPrivateBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getMLKemPrivateBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -287,6 +374,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLKemPrivateSeedBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.MLKemPrivateSeedBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getMLKemPrivateSeedBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -302,6 +398,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MLKemPublicBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.MLKemPublicBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getMLKemPublicBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -317,6 +422,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OpaqueTransportBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.OpaqueTransportBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getOpaqueTransportBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -332,6 +446,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pkcs8PrivateBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.Pkcs8PrivateBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getPkcs8PrivateBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -347,6 +470,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PQDsaPrivateBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.PQDsaPrivateBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getPQDsaPrivateBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -362,6 +494,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PQDsaPrivateSeedBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.PQDsaPrivateSeedBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getPQDsaPrivateSeedBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +518,15 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PQDsaPublicBlob.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.PQDsaPublicBlob" target="_top">.NET documentation</a>
+     */
     public static CngKeyBlobFormat getPQDsaPublicBlob() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -392,6 +542,13 @@ public class CngKeyBlobFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Format.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyBlobFormat.Format" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

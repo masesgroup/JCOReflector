@@ -107,7 +107,10 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ServiceBehaviorAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeConfigurationName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ShouldSerializeConfigurationName" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeReleaseServiceInstanceOnTransactionComplete.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ShouldSerializeReleaseServiceInstanceOnTransactionComplete" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeReleaseServiceInstanceOnTransactionComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeTransactionAutoCompleteOnSessionClose.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ShouldSerializeTransactionAutoCompleteOnSessionClose" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeTransactionAutoCompleteOnSessionClose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +240,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeTransactionIsolationLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ShouldSerializeTransactionIsolationLevel" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeTransactionIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +261,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShouldSerializeTransactionTimeout.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ShouldSerializeTransactionTimeout" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeTransactionTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +282,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetWellKnownSingleton.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.GetWellKnownSingleton" target="_top">.NET documentation</a>
+     */
     public NetObject GetWellKnownSingleton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +304,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetWellKnownSingleton.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.SetWellKnownSingleton" target="_top">.NET documentation</a>
+     */
     public void SetWellKnownSingleton(NetObject value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,8 +335,15 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @param endpoints the argument of type {@code Collection_1}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -275,8 +351,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -284,8 +365,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     *
+     * @param serviceDescription the argument of type {@code ServiceDescription}
+     * @param serviceHostBase the argument of type {@code ServiceHostBase}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IServiceBehavior.Validate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -294,6 +380,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AutomaticSessionShutdown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown" target="_top">.NET documentation</a>
+     */
     public boolean getAutomaticSessionShutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +401,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutomaticSessionShutdown.
+     *
+     * @param AutomaticSessionShutdown the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown" target="_top">.NET documentation</a>
+     */
     public void setAutomaticSessionShutdown(boolean AutomaticSessionShutdown) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +418,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnsureOrderedDispatch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch" target="_top">.NET documentation</a>
+     */
     public boolean getEnsureOrderedDispatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +439,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnsureOrderedDispatch.
+     *
+     * @param EnsureOrderedDispatch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch" target="_top">.NET documentation</a>
+     */
     public void setEnsureOrderedDispatch(boolean EnsureOrderedDispatch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +456,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreExtensionDataObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreExtensionDataObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +477,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreExtensionDataObject.
+     *
+     * @param IgnoreExtensionDataObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject" target="_top">.NET documentation</a>
+     */
     public void setIgnoreExtensionDataObject(boolean IgnoreExtensionDataObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +494,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeExceptionDetailInFaults.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeExceptionDetailInFaults() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +515,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeExceptionDetailInFaults.
+     *
+     * @param IncludeExceptionDetailInFaults the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults" target="_top">.NET documentation</a>
+     */
     public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +532,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReleaseServiceInstanceOnTransactionComplete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete" target="_top">.NET documentation</a>
+     */
     public boolean getReleaseServiceInstanceOnTransactionComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +553,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReleaseServiceInstanceOnTransactionComplete.
+     *
+     * @param ReleaseServiceInstanceOnTransactionComplete the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete" target="_top">.NET documentation</a>
+     */
     public void setReleaseServiceInstanceOnTransactionComplete(boolean ReleaseServiceInstanceOnTransactionComplete) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +570,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionAutoCompleteOnSessionClose.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.TransactionAutoCompleteOnSessionClose" target="_top">.NET documentation</a>
+     */
     public boolean getTransactionAutoCompleteOnSessionClose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +591,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionAutoCompleteOnSessionClose.
+     *
+     * @param TransactionAutoCompleteOnSessionClose the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.TransactionAutoCompleteOnSessionClose" target="_top">.NET documentation</a>
+     */
     public void setTransactionAutoCompleteOnSessionClose(boolean TransactionAutoCompleteOnSessionClose) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +608,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseSynchronizationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext" target="_top">.NET documentation</a>
+     */
     public boolean getUseSynchronizationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +629,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseSynchronizationContext.
+     *
+     * @param UseSynchronizationContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext" target="_top">.NET documentation</a>
+     */
     public void setUseSynchronizationContext(boolean UseSynchronizationContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +646,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidateMustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getValidateMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +667,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateMustUnderstand.
+     *
+     * @param ValidateMustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setValidateMustUnderstand(boolean ValidateMustUnderstand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +684,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxItemsInObjectGraph.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph" target="_top">.NET documentation</a>
+     */
     public int getMaxItemsInObjectGraph() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +731,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxItemsInObjectGraph.
+     *
+     * @param MaxItemsInObjectGraph the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph" target="_top">.NET documentation</a>
+     */
     public void setMaxItemsInObjectGraph(int MaxItemsInObjectGraph) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +748,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddressFilterMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.AddressFilterMode" target="_top">.NET documentation</a>
+     */
     public AddressFilterMode getAddressFilterMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -551,6 +770,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddressFilterMode.
+     *
+     * @param AddressFilterMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.AddressFilterMode" target="_top">.NET documentation</a>
+     */
     public void setAddressFilterMode(AddressFilterMode AddressFilterMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +798,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConcurrencyMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode" target="_top">.NET documentation</a>
+     */
     public ConcurrencyMode getConcurrencyMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -576,6 +820,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConcurrencyMode.
+     *
+     * @param ConcurrencyMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode" target="_top">.NET documentation</a>
+     */
     public void setConcurrencyMode(ConcurrencyMode ConcurrencyMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -586,6 +848,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceContextMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode" target="_top">.NET documentation</a>
+     */
     public InstanceContextMode getInstanceContextMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -601,6 +870,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceContextMode.
+     *
+     * @param InstanceContextMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode" target="_top">.NET documentation</a>
+     */
     public void setInstanceContextMode(InstanceContextMode InstanceContextMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -611,6 +898,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConfigurationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ConfigurationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConfigurationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -625,6 +919,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConfigurationName.
+     *
+     * @param ConfigurationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.ConfigurationName" target="_top">.NET documentation</a>
+     */
     public void setConfigurationName(java.lang.String ConfigurationName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -635,6 +947,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -649,6 +968,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,6 +985,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -673,6 +1006,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Namespace.
+     *
+     * @param Namespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.Namespace" target="_top">.NET documentation</a>
+     */
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -683,6 +1023,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTransactionTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -697,6 +1044,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionTimeout.
+     *
+     * @param TransactionTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout" target="_top">.NET documentation</a>
+     */
     public void setTransactionTimeout(java.lang.String TransactionTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -707,6 +1072,13 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionIsolationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel" target="_top">.NET documentation</a>
+     */
     public IsolationLevel getTransactionIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -722,6 +1094,24 @@ public class ServiceBehaviorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransactionIsolationLevel.
+     *
+     * @param TransactionIsolationLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel" target="_top">.NET documentation</a>
+     */
     public void setTransactionIsolationLevel(IsolationLevel TransactionIsolationLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

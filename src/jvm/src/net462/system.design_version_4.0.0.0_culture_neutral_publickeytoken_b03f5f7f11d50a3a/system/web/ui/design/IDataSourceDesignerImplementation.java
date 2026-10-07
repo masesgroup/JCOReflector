@@ -100,7 +100,10 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataSourceDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetViewNames.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.GetViewNames" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetViewNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +175,14 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member GetView.
+     *
+     * @param viewName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.GetView" target="_top">.NET documentation</a>
+     */
     public DesignerDataSourceView GetView(java.lang.String viewName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +198,12 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member Configure.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.Configure" target="_top">.NET documentation</a>
+     */
     public void Configure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member RefreshSchema.
+     *
+     * @param preferSilent the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.RefreshSchema" target="_top">.NET documentation</a>
+     */
     public void RefreshSchema(boolean preferSilent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,12 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member ResumeDataSourceEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.ResumeDataSourceEvents" target="_top">.NET documentation</a>
+     */
     public void ResumeDataSourceEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +247,12 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member SuppressDataSourceEvents.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.SuppressDataSourceEvents" target="_top">.NET documentation</a>
+     */
     public void SuppressDataSourceEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +267,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanConfigure.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.CanConfigure" target="_top">.NET documentation</a>
+     */
     public boolean getCanConfigure() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +288,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRefreshSchema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IDataSourceDesigner.CanRefreshSchema" target="_top">.NET documentation</a>
+     */
     public boolean getCanRefreshSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +314,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +331,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataSourceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +348,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member addSchemaRefreshed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +365,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
         }
     }
 
+    /**
+     * Invokes the .NET member removeSchemaRefreshed.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

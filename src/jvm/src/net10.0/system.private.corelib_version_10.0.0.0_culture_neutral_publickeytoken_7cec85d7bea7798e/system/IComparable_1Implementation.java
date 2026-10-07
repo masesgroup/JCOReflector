@@ -98,7 +98,10 @@ public class IComparable_1Implementation<T extends IJCOBridgeReflected> extends 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComparable_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IComparable_1Implementation<T extends IJCOBridgeReflected> extends 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareTo.
+     *
+     * @param other the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IComparable-1.CompareTo" target="_top">.NET documentation</a>
+     */
     public int CompareTo(T other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

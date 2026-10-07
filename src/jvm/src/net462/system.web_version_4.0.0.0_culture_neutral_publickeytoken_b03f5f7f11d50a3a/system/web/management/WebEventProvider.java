@@ -100,7 +100,10 @@ public class WebEventProvider extends system.configuration.provider.ProviderBase
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebEventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class WebEventProvider extends system.configuration.provider.ProviderBase
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventProvider.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +172,13 @@ public class WebEventProvider extends system.configuration.provider.ProviderBase
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessEvent.
+     *
+     * @param raisedEvent the argument of type {@code WebBaseEvent}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventProvider.ProcessEvent" target="_top">.NET documentation</a>
+     */
     public void ProcessEvent(WebBaseEvent raisedEvent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +189,12 @@ public class WebEventProvider extends system.configuration.provider.ProviderBase
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.WebEventProvider.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

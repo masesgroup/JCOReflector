@@ -99,7 +99,10 @@ public class ICompositionServiceImplementation extends NetObject implements ICom
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICompositionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class ICompositionServiceImplementation extends NetObject implements ICom
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SatisfyImportsOnce.
+     *
+     * @param part the argument of type {@code ComposablePart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ICompositionService.SatisfyImportsOnce" target="_top">.NET documentation</a>
+     */
     public void SatisfyImportsOnce(ComposablePart part) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

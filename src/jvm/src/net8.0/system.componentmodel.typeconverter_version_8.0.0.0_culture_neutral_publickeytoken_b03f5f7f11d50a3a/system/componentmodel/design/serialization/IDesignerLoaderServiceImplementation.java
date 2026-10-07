@@ -100,7 +100,10 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerLoaderServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Reload.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload" target="_top">.NET documentation</a>
+     */
     public boolean Reload() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,12 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member AddLoadDependency.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency" target="_top">.NET documentation</a>
+     */
     public void AddLoadDependency() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +182,14 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
         }
     }
 
+    /**
+     * Invokes the .NET member DependentLoadComplete.
+     *
+     * @param successful the argument of type {@code boolean}
+     * @param errorCollection the argument of type {@code ICollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete" target="_top">.NET documentation</a>
+     */
     public void DependentLoadComplete(boolean successful, ICollection errorCollection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

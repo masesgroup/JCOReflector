@@ -101,7 +101,10 @@ public class IResourceProviderImplementation extends NetObject implements IResou
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IResourceProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class IResourceProviderImplementation extends NetObject implements IResou
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param resourceKey the argument of type {@code java.lang.String}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.IResourceProvider.GetObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetObject(java.lang.String resourceKey, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +174,13 @@ public class IResourceProviderImplementation extends NetObject implements IResou
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResourceReader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.IResourceProvider.ResourceReader" target="_top">.NET documentation</a>
+     */
     public IResourceReader getResourceReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

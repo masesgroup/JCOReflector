@@ -100,7 +100,10 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MimeTextMatchCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public MimeTextMatchCollection() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,14 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param match the argument of type {@code MimeTextMatch}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,14 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param match the argument of type {@code MimeTextMatch}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +240,14 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param match the argument of type {@code MimeTextMatch}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +288,14 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code MimeTextMatch[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(MimeTextMatch[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +306,14 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param match the argument of type {@code MimeTextMatch}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +324,13 @@ public class MimeTextMatchCollection extends system.collections.CollectionBase  
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param match the argument of type {@code MimeTextMatch}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.MimeTextMatchCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(MimeTextMatch match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

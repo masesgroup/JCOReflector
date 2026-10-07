@@ -100,7 +100,10 @@ public class FaultBindingCollection extends system.web.services.description.Serv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FaultBindingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class FaultBindingCollection extends system.web.services.description.Serv
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param bindingOperationFault the argument of type {@code FaultBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.FaultBindingCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class FaultBindingCollection extends system.web.services.description.Serv
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param bindingOperationFault the argument of type {@code FaultBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.FaultBindingCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class FaultBindingCollection extends system.web.services.description.Serv
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param bindingOperationFault the argument of type {@code FaultBinding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.FaultBindingCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class FaultBindingCollection extends system.web.services.description.Serv
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code FaultBinding[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.FaultBindingCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(FaultBinding[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class FaultBindingCollection extends system.web.services.description.Serv
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param bindingOperationFault the argument of type {@code FaultBinding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.FaultBindingCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class FaultBindingCollection extends system.web.services.description.Serv
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param bindingOperationFault the argument of type {@code FaultBinding}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.FaultBindingCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(FaultBinding bindingOperationFault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

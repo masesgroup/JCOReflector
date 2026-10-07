@@ -103,7 +103,10 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReadOnlySet_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,22 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
     public ReadOnlySet_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param set the argument of type {@code ISet_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.-ctor" target="_top">.NET documentation</a>
+     */
     public ReadOnlySet_1(ISet_1 set) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +189,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param item the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(T item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +211,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
 
+    /**
+     * Invokes the .NET member IsProperSubsetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +233,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
 
+    /**
+     * Invokes the .NET member IsProperSupersetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +255,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubsetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.IsSubsetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +277,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
 
+    /**
+     * Invokes the .NET member IsSupersetOf.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.IsSupersetOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +299,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
 
+    /**
+     * Invokes the .NET member Overlaps.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.Overlaps" target="_top">.NET documentation</a>
+     */
     public boolean Overlaps(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +321,14 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
         }
     }
 
+    /**
+     * Invokes the .NET member SetEquals.
+     *
+     * @param other the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.SetEquals" target="_top">.NET documentation</a>
+     */
     public boolean SetEquals(IEnumerable_1 other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,8 +346,13 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     *
+     * @param array the argument of type {@code Array}
+     * @param index the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ICollection.CopyTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void CopyTo(Array array, int index) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
@@ -281,6 +361,13 @@ public class ReadOnlySet_1<T extends IJCOBridgeReflected> extends NetObjectEnume
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ReadOnlySet-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXmlDictionaryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
 
     // Methods section
     
+    /**
+     * Invokes the .NET member TryLookup.
+     *
+     * @param key the argument of type {@code int}
+     * @param result the argument of type {@code JCORefOut<XmlDictionaryString>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlDictionary.TryLookup" target="_top">.NET documentation</a>
+     */
     public boolean TryLookup(int key, JCORefOut<XmlDictionaryString> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,15 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
         }
     }
 
+    /**
+     * Invokes the .NET member TryLookup.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param result the argument of type {@code JCORefOut<XmlDictionaryString>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlDictionary.TryLookup" target="_top">.NET documentation</a>
+     */
     public boolean TryLookup(java.lang.String value, JCORefOut<XmlDictionaryString> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +190,15 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
         }
     }
 
+    /**
+     * Invokes the .NET member TryLookup.
+     *
+     * @param value the argument of type {@code XmlDictionaryString}
+     * @param result the argument of type {@code JCORefOut<XmlDictionaryString>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IXmlDictionary.TryLookup" target="_top">.NET documentation</a>
+     */
     public boolean TryLookup(XmlDictionaryString value, JCORefOut<XmlDictionaryString> result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

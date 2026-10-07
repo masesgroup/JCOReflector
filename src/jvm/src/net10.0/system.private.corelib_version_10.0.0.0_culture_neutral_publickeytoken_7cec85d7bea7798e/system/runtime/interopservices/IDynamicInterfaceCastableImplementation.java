@@ -99,7 +99,10 @@ public class IDynamicInterfaceCastableImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDynamicInterfaceCastableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,15 @@ public class IDynamicInterfaceCastableImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsInterfaceImplemented.
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @param throwIfNotImplemented the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IDynamicInterfaceCastable.IsInterfaceImplemented" target="_top">.NET documentation</a>
+     */
     public boolean IsInterfaceImplemented(RuntimeTypeHandle interfaceType, boolean throwIfNotImplemented) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +167,14 @@ public class IDynamicInterfaceCastableImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaceImplementation.
+     *
+     * @param interfaceType the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.IDynamicInterfaceCastable.GetInterfaceImplementation" target="_top">.NET documentation</a>
+     */
     public RuntimeTypeHandle GetInterfaceImplementation(RuntimeTypeHandle interfaceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

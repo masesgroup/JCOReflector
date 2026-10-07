@@ -99,7 +99,10 @@ public class ContractOptionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContractOptionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ContractOptionAttribute extends system.Attribute  {
     public ContractOptionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @param setting the argument of type {@code java.lang.String}
+     * @param enabled the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ContractOptionAttribute(java.lang.String category, java.lang.String setting, boolean enabled) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,15 @@ public class ContractOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param category the argument of type {@code java.lang.String}
+     * @param setting the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ContractOptionAttribute(java.lang.String category, java.lang.String setting, java.lang.String value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +199,13 @@ public class ContractOptionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +220,13 @@ public class ContractOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Category.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute.Category" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +241,13 @@ public class ContractOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Setting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute.Setting" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSetting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +262,13 @@ public class ContractOptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Contracts.ContractOptionAttribute.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

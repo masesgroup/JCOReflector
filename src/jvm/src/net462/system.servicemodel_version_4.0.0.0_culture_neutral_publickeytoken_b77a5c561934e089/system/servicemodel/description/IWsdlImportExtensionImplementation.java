@@ -105,7 +105,10 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWsdlImportExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,15 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeforeImport.
+     *
+     * @param wsdlDocuments the argument of type {@code ServiceDescriptionCollection}
+     * @param xmlSchemas the argument of type {@code XmlSchemaSet}
+     * @param policy the argument of type {@code ICollection_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlImportExtension.BeforeImport" target="_top">.NET documentation</a>
+     */
     public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1 policy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,14 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
         }
     }
 
+    /**
+     * Invokes the .NET member ImportContract.
+     *
+     * @param importer the argument of type {@code WsdlImporter}
+     * @param context the argument of type {@code WsdlContractConversionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlImportExtension.ImportContract" target="_top">.NET documentation</a>
+     */
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +187,14 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
         }
     }
 
+    /**
+     * Invokes the .NET member ImportEndpoint.
+     *
+     * @param importer the argument of type {@code WsdlImporter}
+     * @param context the argument of type {@code WsdlEndpointConversionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint" target="_top">.NET documentation</a>
+     */
     public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

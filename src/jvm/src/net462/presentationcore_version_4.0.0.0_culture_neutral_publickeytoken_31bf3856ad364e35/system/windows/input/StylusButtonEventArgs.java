@@ -101,7 +101,10 @@ public class StylusButtonEventArgs extends system.windows.input.StylusEventArgs 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StylusButtonEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class StylusButtonEventArgs extends system.windows.input.StylusEventArgs 
     public StylusButtonEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param stylusDevice the argument of type {@code StylusDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param button the argument of type {@code StylusButton}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusButtonEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public StylusButtonEventArgs(StylusDevice stylusDevice, int timestamp, StylusButton button) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +183,13 @@ public class StylusButtonEventArgs extends system.windows.input.StylusEventArgs 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StylusButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusButtonEventArgs.StylusButton" target="_top">.NET documentation</a>
+     */
     public StylusButton getStylusButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

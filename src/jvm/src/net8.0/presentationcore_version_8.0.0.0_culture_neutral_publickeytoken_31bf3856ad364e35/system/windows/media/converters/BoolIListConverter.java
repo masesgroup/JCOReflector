@@ -99,7 +99,10 @@ public class BoolIListConverter extends system.windows.media.converters.BaseILis
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BoolIListConverter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class BoolIListConverter extends system.windows.media.converters.BaseILis
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Converters.BoolIListConverter.-ctor" target="_top">.NET documentation</a>
+     */
     public BoolIListConverter() throws Throwable {
         try {
             // add reference to assemblyName.dll file

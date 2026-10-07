@@ -101,7 +101,10 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReaderWriterLock(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.-ctor" target="_top">.NET documentation</a>
+     */
     public ReaderWriterLock() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AnyWritersSince.
+     *
+     * @param seqNum the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.AnyWritersSince" target="_top">.NET documentation</a>
+     */
     public boolean AnyWritersSince(int seqNum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseLock.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.ReleaseLock" target="_top">.NET documentation</a>
+     */
     public LockCookie ReleaseLock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +215,14 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member UpgradeToWriterLock.
+     *
+     * @param millisecondsTimeout the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.UpgradeToWriterLock" target="_top">.NET documentation</a>
+     */
     public LockCookie UpgradeToWriterLock(int millisecondsTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +238,15 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member UpgradeToWriterLock.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.UpgradeToWriterLock" target="_top">.NET documentation</a>
+     */
     public LockCookie UpgradeToWriterLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +262,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireReaderLock.
+     *
+     * @param millisecondsTimeout the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.AcquireReaderLock" target="_top">.NET documentation</a>
+     */
     public void AcquireReaderLock(int millisecondsTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +279,14 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireReaderLock.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.AcquireReaderLock" target="_top">.NET documentation</a>
+     */
     public void AcquireReaderLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +297,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireWriterLock.
+     *
+     * @param millisecondsTimeout the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.AcquireWriterLock" target="_top">.NET documentation</a>
+     */
     public void AcquireWriterLock(int millisecondsTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +314,14 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member AcquireWriterLock.
+     *
+     * @param timeout the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.AcquireWriterLock" target="_top">.NET documentation</a>
+     */
     public void AcquireWriterLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +332,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member DowngradeFromWriterLock.
+     *
+     * @param lockCookie the argument of type {@code JCORefOut<LockCookie>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.DowngradeFromWriterLock" target="_top">.NET documentation</a>
+     */
     public void DowngradeFromWriterLock(JCORefOut<LockCookie> lockCookie) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +349,12 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseReaderLock.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.ReleaseReaderLock" target="_top">.NET documentation</a>
+     */
     public void ReleaseReaderLock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +365,12 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member ReleaseWriterLock.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.ReleaseWriterLock" target="_top">.NET documentation</a>
+     */
     public void ReleaseWriterLock() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +381,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Invokes the .NET member RestoreLock.
+     *
+     * @param lockCookie the argument of type {@code JCORefOut<LockCookie>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.RestoreLock" target="_top">.NET documentation</a>
+     */
     public void RestoreLock(JCORefOut<LockCookie> lockCookie) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +402,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsReaderLockHeld.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.IsReaderLockHeld" target="_top">.NET documentation</a>
+     */
     public boolean getIsReaderLockHeld() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +423,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsWriterLockHeld.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.IsWriterLockHeld" target="_top">.NET documentation</a>
+     */
     public boolean getIsWriterLockHeld() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +444,13 @@ public class ReaderWriterLock extends system.runtime.constrainedexecution.Critic
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriterSeqNum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ReaderWriterLock.WriterSeqNum" target="_top">.NET documentation</a>
+     */
     public int getWriterSeqNum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMetadataExchangeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginGet.
+     *
+     * @param request the argument of type {@code Message}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IMetadataExchange.BeginGet" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginGet(Message request, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,14 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
         }
     }
 
+    /**
+     * Invokes the .NET member EndGet.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IMetadataExchange.EndGet" target="_top">.NET documentation</a>
+     */
     public Message EndGet(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +195,14 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
         }
     }
 
+    /**
+     * Invokes the .NET member Get.
+     *
+     * @param request the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IMetadataExchange.Get" target="_top">.NET documentation</a>
+     */
     public Message Get(Message request) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAppDomainSetupImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ApplicationBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ApplicationBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationBase.
+     *
+     * @param ApplicationBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ApplicationBase" target="_top">.NET documentation</a>
+     */
     public void setApplicationBase(java.lang.String ApplicationBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +223,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property CachePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.CachePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCachePath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +244,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property CachePath.
+     *
+     * @param CachePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.CachePath" target="_top">.NET documentation</a>
+     */
     public void setCachePath(java.lang.String CachePath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +261,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConfigurationFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ConfigurationFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConfigurationFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +282,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConfigurationFile.
+     *
+     * @param ConfigurationFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ConfigurationFile" target="_top">.NET documentation</a>
+     */
     public void setConfigurationFile(java.lang.String ConfigurationFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +299,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property DynamicBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.DynamicBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDynamicBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +320,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property DynamicBase.
+     *
+     * @param DynamicBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.DynamicBase" target="_top">.NET documentation</a>
+     */
     public void setDynamicBase(java.lang.String DynamicBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +337,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property LicenseFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.LicenseFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLicenseFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +358,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property LicenseFile.
+     *
+     * @param LicenseFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.LicenseFile" target="_top">.NET documentation</a>
+     */
     public void setLicenseFile(java.lang.String LicenseFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +375,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateBinPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.PrivateBinPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrivateBinPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +396,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateBinPath.
+     *
+     * @param PrivateBinPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.PrivateBinPath" target="_top">.NET documentation</a>
+     */
     public void setPrivateBinPath(java.lang.String PrivateBinPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +413,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateBinPathProbe.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.PrivateBinPathProbe" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrivateBinPathProbe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +434,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateBinPathProbe.
+     *
+     * @param PrivateBinPathProbe the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.PrivateBinPathProbe" target="_top">.NET documentation</a>
+     */
     public void setPrivateBinPathProbe(java.lang.String PrivateBinPathProbe) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +451,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShadowCopyDirectories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ShadowCopyDirectories" target="_top">.NET documentation</a>
+     */
     public java.lang.String getShadowCopyDirectories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +472,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShadowCopyDirectories.
+     *
+     * @param ShadowCopyDirectories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ShadowCopyDirectories" target="_top">.NET documentation</a>
+     */
     public void setShadowCopyDirectories(java.lang.String ShadowCopyDirectories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +489,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShadowCopyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ShadowCopyFiles" target="_top">.NET documentation</a>
+     */
     public java.lang.String getShadowCopyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +510,13 @@ public class IAppDomainSetupImplementation extends NetObject implements IAppDoma
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShadowCopyFiles.
+     *
+     * @param ShadowCopyFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IAppDomainSetup.ShadowCopyFiles" target="_top">.NET documentation</a>
+     */
     public void setShadowCopyFiles(java.lang.String ShadowCopyFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

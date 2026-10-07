@@ -102,7 +102,10 @@ public class CompilerResults extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompilerResults(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class CompilerResults extends NetObject  {
     public CompilerResults() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param tempFiles the argument of type {@code TempFileCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.-ctor" target="_top">.NET documentation</a>
+     */
     public CompilerResults(TempFileCollection tempFiles) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +181,13 @@ public class CompilerResults extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NativeCompilerReturnValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.NativeCompilerReturnValue" target="_top">.NET documentation</a>
+     */
     public int getNativeCompilerReturnValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +228,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NativeCompilerReturnValue.
+     *
+     * @param NativeCompilerReturnValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.NativeCompilerReturnValue" target="_top">.NET documentation</a>
+     */
     public void setNativeCompilerReturnValue(int NativeCompilerReturnValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +245,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Errors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.Errors" target="_top">.NET documentation</a>
+     */
     public CompilerErrorCollection getErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +267,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TempFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.TempFiles" target="_top">.NET documentation</a>
+     */
     public TempFileCollection getTempFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +289,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TempFiles.
+     *
+     * @param TempFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.TempFiles" target="_top">.NET documentation</a>
+     */
     public void setTempFiles(TempFileCollection TempFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +306,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Output.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.Output" target="_top">.NET documentation</a>
+     */
     public StringCollection getOutput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +328,24 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompiledAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.CompiledAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly getCompiledAssembly() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +361,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CompiledAssembly.
+     *
+     * @param CompiledAssembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.CompiledAssembly" target="_top">.NET documentation</a>
+     */
     public void setCompiledAssembly(Assembly CompiledAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +378,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PathToAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.PathToAssembly" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPathToAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +399,13 @@ public class CompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PathToAssembly.
+     *
+     * @param PathToAssembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CompilerResults.PathToAssembly" target="_top">.NET documentation</a>
+     */
     public void setPathToAssembly(java.lang.String PathToAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

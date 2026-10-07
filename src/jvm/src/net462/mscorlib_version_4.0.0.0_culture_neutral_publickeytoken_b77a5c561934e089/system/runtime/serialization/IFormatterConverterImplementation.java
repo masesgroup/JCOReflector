@@ -106,7 +106,10 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFormatterConverterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ToBoolean.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToBoolean" target="_top">.NET documentation</a>
+     */
     public boolean ToBoolean(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +173,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToByte.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToByte" target="_top">.NET documentation</a>
+     */
     public byte ToByte(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +221,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToChar.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToChar" target="_top">.NET documentation</a>
+     */
     public char ToChar(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +243,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToDouble.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToDouble" target="_top">.NET documentation</a>
+     */
     public double ToDouble(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +291,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt16.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToInt16" target="_top">.NET documentation</a>
+     */
     public short ToInt16(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +339,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt32.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToInt32" target="_top">.NET documentation</a>
+     */
     public int ToInt32(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +387,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToInt64.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToInt64" target="_top">.NET documentation</a>
+     */
     public long ToInt64(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +435,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToSByte.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToSByte" target="_top">.NET documentation</a>
+     */
     public SByte ToSByte(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -391,6 +458,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToSingle.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToSingle" target="_top">.NET documentation</a>
+     */
     public Single ToSingle(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +481,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToDateTime.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime ToDateTime(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +504,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToDecimal.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToDecimal" target="_top">.NET documentation</a>
+     */
     public Decimal ToDecimal(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -436,6 +527,15 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.Convert" target="_top">.NET documentation</a>
+     */
     public NetObject Convert(NetObject value, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +551,15 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member Convert.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param typeCode the argument of type {@code TypeCode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.Convert" target="_top">.NET documentation</a>
+     */
     public NetObject Convert(NetObject value, TypeCode typeCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +575,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +597,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt16.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToUInt16" target="_top">.NET documentation</a>
+     */
     public UInt16 ToUInt16(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -495,6 +620,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt32.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToUInt32" target="_top">.NET documentation</a>
+     */
     public UInt32 ToUInt32(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +643,14 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
         }
     }
 
+    /**
+     * Invokes the .NET member ToUInt64.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IFormatterConverter.ToUInt64" target="_top">.NET documentation</a>
+     */
     public UInt64 ToUInt64(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

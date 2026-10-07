@@ -100,7 +100,10 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICollectionViewLiveShapingImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanChangeLiveFiltering.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering" target="_top">.NET documentation</a>
+     */
     public boolean getCanChangeLiveFiltering() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanChangeLiveGrouping.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping" target="_top">.NET documentation</a>
+     */
     public boolean getCanChangeLiveGrouping() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +191,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanChangeLiveSorting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting" target="_top">.NET documentation</a>
+     */
     public boolean getCanChangeLiveSorting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +212,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property LiveFilteringProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.LiveFilteringProperties" target="_top">.NET documentation</a>
+     */
     public ObservableCollection_1 getLiveFilteringProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property LiveGroupingProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.LiveGroupingProperties" target="_top">.NET documentation</a>
+     */
     public ObservableCollection_1 getLiveGroupingProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +256,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property LiveSortingProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.LiveSortingProperties" target="_top">.NET documentation</a>
+     */
     public ObservableCollection_1 getLiveSortingProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +278,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLiveFiltering.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsLiveFiltering() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +300,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsLiveFiltering.
+     *
+     * @param IsLiveFiltering the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering" target="_top">.NET documentation</a>
+     */
     public void setIsLiveFiltering(Nullable_1 IsLiveFiltering) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +317,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLiveGrouping.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsLiveGrouping() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +339,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsLiveGrouping.
+     *
+     * @param IsLiveGrouping the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping" target="_top">.NET documentation</a>
+     */
     public void setIsLiveGrouping(Nullable_1 IsLiveGrouping) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +356,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLiveSorting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsLiveSorting() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +378,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsLiveSorting.
+     *
+     * @param IsLiveSorting the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting" target="_top">.NET documentation</a>
+     */
     public void setIsLiveSorting(Nullable_1 IsLiveSorting) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

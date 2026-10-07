@@ -98,7 +98,10 @@ public class CompatibilitySwitch extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompatibilitySwitch(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class CompatibilitySwitch extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsEnabled.
+     *
+     * @param compatibilitySwitchName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.CompatibilitySwitch.IsEnabled" target="_top">.NET documentation</a>
+     */
     public static boolean IsEnabled(java.lang.String compatibilitySwitchName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -165,6 +176,14 @@ public class CompatibilitySwitch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param compatibilitySwitchName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.CompatibilitySwitch.GetValue" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetValue(java.lang.String compatibilitySwitchName) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

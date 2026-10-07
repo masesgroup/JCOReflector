@@ -53,5 +53,12 @@ import system.windows.data.CollectionViewGroup;
  * @version 2.0.0.0
  */
 public interface IGroupDescriptionSelectorCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param group the .NET argument of type {@code System.Windows.Data.CollectionViewGroup}
+     * @param level the .NET argument of type {@code System.Int32}
+     * @return the value returned to the CLR
+     */
     public GroupDescription Invoke(CollectionViewGroup group, int level);
 }

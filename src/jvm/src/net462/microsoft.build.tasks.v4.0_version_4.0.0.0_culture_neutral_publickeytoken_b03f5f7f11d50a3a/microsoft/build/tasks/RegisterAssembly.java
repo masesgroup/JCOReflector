@@ -103,7 +103,10 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegisterAssembly(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.-ctor" target="_top">.NET documentation</a>
+     */
     public RegisterAssembly() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +174,36 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.InvalidCastException, system.MissingMethodException, system.FormatException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +218,22 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveRef.
+     *
+     * @param assemblyToResolve the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.ResolveRef" target="_top">.NET documentation</a>
+     */
     public NetObject ResolveRef(Assembly assemblyToResolve) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +249,20 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Invokes the .NET member ReportEvent.
+     *
+     * @param kind the argument of type {@code ExporterEventKind}
+     * @param code the argument of type {@code int}
+     * @param msg the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.ReportEvent" target="_top">.NET documentation</a>
+     */
     public void ReportEvent(ExporterEventKind kind, int code, java.lang.String msg) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +277,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CreateCodeBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase" target="_top">.NET documentation</a>
+     */
     public boolean getCreateCodeBase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +298,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateCodeBase.
+     *
+     * @param CreateCodeBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.CreateCodeBase" target="_top">.NET documentation</a>
+     */
     public void setCreateCodeBase(boolean CreateCodeBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +315,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyListFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile" target="_top">.NET documentation</a>
+     */
     public ITaskItem getAssemblyListFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +337,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyListFile.
+     *
+     * @param AssemblyListFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.AssemblyListFile" target="_top">.NET documentation</a>
+     */
     public void setAssemblyListFile(ITaskItem AssemblyListFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +354,19 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Gets the value of the .NET property Assemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.Assemblies" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAssemblies() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +388,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assemblies.
+     *
+     * @param Assemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.Assemblies" target="_top">.NET documentation</a>
+     */
     public void setAssemblies(ITaskItem[] Assemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +405,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLibFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.TypeLibFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTypeLibFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +433,13 @@ public class RegisterAssembly extends microsoft.build.tasks.AppDomainIsolatedTas
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeLibFiles.
+     *
+     * @param TypeLibFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.RegisterAssembly.TypeLibFiles" target="_top">.NET documentation</a>
+     */
     public void setTypeLibFiles(ITaskItem[] TypeLibFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

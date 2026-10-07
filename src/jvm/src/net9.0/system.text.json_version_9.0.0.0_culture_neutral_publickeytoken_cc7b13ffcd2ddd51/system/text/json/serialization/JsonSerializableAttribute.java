@@ -100,7 +100,10 @@ public class JsonSerializableAttribute extends system.text.json.serialization.Js
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonSerializableAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class JsonSerializableAttribute extends system.text.json.serialization.Js
     public JsonSerializableAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSerializableAttribute(NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class JsonSerializableAttribute extends system.text.json.serialization.Js
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TypeInfoPropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializableAttribute.TypeInfoPropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeInfoPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class JsonSerializableAttribute extends system.text.json.serialization.Js
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeInfoPropertyName.
+     *
+     * @param TypeInfoPropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializableAttribute.TypeInfoPropertyName" target="_top">.NET documentation</a>
+     */
     public void setTypeInfoPropertyName(java.lang.String TypeInfoPropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class JsonSerializableAttribute extends system.text.json.serialization.Js
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerationMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializableAttribute.GenerationMode" target="_top">.NET documentation</a>
+     */
     public JsonSourceGenerationMode getGenerationMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +239,13 @@ public class JsonSerializableAttribute extends system.text.json.serialization.Js
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerationMode.
+     *
+     * @param GenerationMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializableAttribute.GenerationMode" target="_top">.NET documentation</a>
+     */
     public void setGenerationMode(JsonSourceGenerationMode GenerationMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

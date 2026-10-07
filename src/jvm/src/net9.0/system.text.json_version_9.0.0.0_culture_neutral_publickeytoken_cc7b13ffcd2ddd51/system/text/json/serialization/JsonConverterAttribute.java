@@ -100,7 +100,10 @@ public class JsonConverterAttribute extends system.text.json.serialization.JsonA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonConverterAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class JsonConverterAttribute extends system.text.json.serialization.JsonA
     public JsonConverterAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param converterType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonConverterAttribute(NetType converterType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,14 @@ public class JsonConverterAttribute extends system.text.json.serialization.JsonA
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateConverter.
+     *
+     * @param typeToConvert the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute.CreateConverter" target="_top">.NET documentation</a>
+     */
     public JsonConverter CreateConverter(NetType typeToConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +202,13 @@ public class JsonConverterAttribute extends system.text.json.serialization.JsonA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConverterType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute.ConverterType" target="_top">.NET documentation</a>
+     */
     public NetType getConverterType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

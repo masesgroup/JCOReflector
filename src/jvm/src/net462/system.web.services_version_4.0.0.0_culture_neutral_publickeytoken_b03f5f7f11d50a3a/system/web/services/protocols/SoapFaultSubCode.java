@@ -100,7 +100,10 @@ public class SoapFaultSubCode extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SoapFaultSubCode(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class SoapFaultSubCode extends NetObject  {
     public SoapFaultSubCode() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapFaultSubCode.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFaultSubCode(XmlQualifiedName code) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class SoapFaultSubCode extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param code the argument of type {@code XmlQualifiedName}
+     * @param subCode the argument of type {@code SoapFaultSubCode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapFaultSubCode.-ctor" target="_top">.NET documentation</a>
+     */
     public SoapFaultSubCode(XmlQualifiedName code, SoapFaultSubCode subCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +197,13 @@ public class SoapFaultSubCode extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SubCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapFaultSubCode.SubCode" target="_top">.NET documentation</a>
+     */
     public SoapFaultSubCode getSubCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class SoapFaultSubCode extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Code.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.SoapFaultSubCode.Code" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

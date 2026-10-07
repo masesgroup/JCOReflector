@@ -103,7 +103,10 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDbDataParameterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.IsNullable" target="_top">.NET documentation</a>
+     */
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property Precision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Precision" target="_top">.NET documentation</a>
+     */
     public byte getPrecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +220,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property Precision.
+     *
+     * @param Precision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Precision" target="_top">.NET documentation</a>
+     */
     public void setPrecision(byte Precision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +237,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property Scale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Scale" target="_top">.NET documentation</a>
+     */
     public byte getScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +284,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property Scale.
+     *
+     * @param Scale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Scale" target="_top">.NET documentation</a>
+     */
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +301,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property Size.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Size" target="_top">.NET documentation</a>
+     */
     public int getSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +348,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property Size.
+     *
+     * @param Size the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Size" target="_top">.NET documentation</a>
+     */
     public void setSize(int Size) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +365,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.SourceVersion" target="_top">.NET documentation</a>
+     */
     public DataRowVersion getSourceVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +387,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceVersion.
+     *
+     * @param SourceVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.SourceVersion" target="_top">.NET documentation</a>
+     */
     public void setSourceVersion(DataRowVersion SourceVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +404,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property DbType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.DbType" target="_top">.NET documentation</a>
+     */
     public DbType getDbType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +426,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property DbType.
+     *
+     * @param DbType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.DbType" target="_top">.NET documentation</a>
+     */
     public void setDbType(DbType DbType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +443,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property Direction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Direction" target="_top">.NET documentation</a>
+     */
     public ParameterDirection getDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +465,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property Direction.
+     *
+     * @param Direction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Direction" target="_top">.NET documentation</a>
+     */
     public void setDirection(ParameterDirection Direction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +482,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +504,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +521,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.ParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameterName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +542,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParameterName.
+     *
+     * @param ParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.ParameterName" target="_top">.NET documentation</a>
+     */
     public void setParameterName(java.lang.String ParameterName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +559,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.SourceColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +580,13 @@ public class IDbDataParameterImplementation extends NetObject implements IDbData
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceColumn.
+     *
+     * @param SourceColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbDataParameter.SourceColumn" target="_top">.NET documentation</a>
+     */
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

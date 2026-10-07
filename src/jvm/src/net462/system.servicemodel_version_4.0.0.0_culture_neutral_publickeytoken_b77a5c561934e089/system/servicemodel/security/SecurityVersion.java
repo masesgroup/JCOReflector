@@ -99,7 +99,10 @@ public class SecurityVersion extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityVersion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class SecurityVersion extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WSSecurity10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityVersion.WSSecurity10" target="_top">.NET documentation</a>
+     */
     public static SecurityVersion getWSSecurity10() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class SecurityVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSSecurity11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityVersion.WSSecurity11" target="_top">.NET documentation</a>
+     */
     public static SecurityVersion getWSSecurity11() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

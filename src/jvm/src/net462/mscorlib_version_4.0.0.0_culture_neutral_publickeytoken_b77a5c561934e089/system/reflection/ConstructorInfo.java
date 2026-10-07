@@ -107,7 +107,10 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ConstructorInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,14 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ConstructorInfo.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +186,17 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ConstructorInfo.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,8 +215,14 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.IsDefined" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -202,8 +230,17 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.Invoke_2" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Invoke_2(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -211,8 +248,14 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.Invoke_3" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Invoke_3(NetObject obj, NetObject[] parameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -220,8 +263,16 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.Invoke_4" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Invoke_4(BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -229,8 +280,13 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.Invoke_5" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject Invoke_5(NetObject[] parameters) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -238,8 +294,13 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -247,8 +308,14 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -256,8 +323,12 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.GetMethodImplementationFlags" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -265,8 +336,12 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.GetParameters" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ParameterInfo[] GetParameters() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
@@ -274,8 +349,12 @@ public class ConstructorInfo extends system.reflection.MethodBase  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._ConstructorInfo.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }

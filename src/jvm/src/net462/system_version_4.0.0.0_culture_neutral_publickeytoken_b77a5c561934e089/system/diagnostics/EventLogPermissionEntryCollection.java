@@ -101,7 +101,10 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventLogPermissionEntryCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code EventLogPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(EventLogPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code EventLogPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(EventLogPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +229,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code EventLogPermissionEntry}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(EventLogPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +277,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code EventLogPermissionEntry[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(EventLogPermissionEntry[] value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +295,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code EventLogPermissionEntryCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(EventLogPermissionEntryCollection value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +313,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code EventLogPermissionEntry[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(EventLogPermissionEntry[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +331,14 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code EventLogPermissionEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, EventLogPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +349,13 @@ public class EventLogPermissionEntryCollection extends system.collections.Collec
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code EventLogPermissionEntry}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(EventLogPermissionEntry value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

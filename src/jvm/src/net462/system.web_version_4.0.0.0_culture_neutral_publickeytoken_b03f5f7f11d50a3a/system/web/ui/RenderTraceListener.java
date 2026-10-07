@@ -102,7 +102,10 @@ public class RenderTraceListener extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RenderTraceListener(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class RenderTraceListener extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginRendering.
+     *
+     * @param writer the argument of type {@code TextWriter}
+     * @param renderedObject the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.BeginRendering" target="_top">.NET documentation</a>
+     */
     public void BeginRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,14 @@ public class RenderTraceListener extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndRendering.
+     *
+     * @param writer the argument of type {@code TextWriter}
+     * @param renderedObject the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.EndRendering" target="_top">.NET documentation</a>
+     */
     public void EndRendering(TextWriter writer, NetObject renderedObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +194,13 @@ public class RenderTraceListener extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(HttpContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +211,15 @@ public class RenderTraceListener extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetTraceData.
+     *
+     * @param tracedObject the argument of type {@code NetObject}
+     * @param traceDataKey the argument of type {@code NetObject}
+     * @param traceDataValue the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.SetTraceData" target="_top">.NET documentation</a>
+     */
     public void SetTraceData(NetObject tracedObject, NetObject traceDataKey, NetObject traceDataValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +230,14 @@ public class RenderTraceListener extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ShareTraceData.
+     *
+     * @param source the argument of type {@code NetObject}
+     * @param destination the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.ShareTraceData" target="_top">.NET documentation</a>
+     */
     public void ShareTraceData(NetObject source, NetObject destination) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +252,13 @@ public class RenderTraceListener extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ListenerFactories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.ListenerFactories" target="_top">.NET documentation</a>
+     */
     public static IList_1 getListenerFactories() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

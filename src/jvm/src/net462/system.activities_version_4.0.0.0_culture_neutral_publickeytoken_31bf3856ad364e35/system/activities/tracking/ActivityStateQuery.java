@@ -100,7 +100,10 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityStateQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityStateQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityStateQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Arguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityStateQuery.Arguments" target="_top">.NET documentation</a>
+     */
     public Collection_1 getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +196,13 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
         }
     }
 
+    /**
+     * Gets the value of the .NET property States.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityStateQuery.States" target="_top">.NET documentation</a>
+     */
     public Collection_1 getStates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +218,13 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityStateQuery.Variables" target="_top">.NET documentation</a>
+     */
     public Collection_1 getVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +240,13 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityStateQuery.ActivityName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +261,13 @@ public class ActivityStateQuery extends system.activities.tracking.TrackingQuery
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityName.
+     *
+     * @param ActivityName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityStateQuery.ActivityName" target="_top">.NET documentation</a>
+     */
     public void setActivityName(java.lang.String ActivityName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

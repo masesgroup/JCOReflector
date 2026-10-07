@@ -100,7 +100,10 @@ public class ReferenceHandler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReferenceHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class ReferenceHandler extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateResolver.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceHandler.CreateResolver" target="_top">.NET documentation</a>
+     */
     public ReferenceResolver CreateResolver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class ReferenceHandler extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreCycles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles" target="_top">.NET documentation</a>
+     */
     public static ReferenceHandler getIgnoreCycles() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +204,13 @@ public class ReferenceHandler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Preserve.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceHandler.Preserve" target="_top">.NET documentation</a>
+     */
     public static ReferenceHandler getPreserve() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

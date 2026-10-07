@@ -101,7 +101,10 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PrintDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public PrintDialog() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,12 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +191,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowCurrentPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowCurrentPage" target="_top">.NET documentation</a>
+     */
     public boolean getAllowCurrentPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +212,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowCurrentPage.
+     *
+     * @param AllowCurrentPage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowCurrentPage" target="_top">.NET documentation</a>
+     */
     public void setAllowCurrentPage(boolean AllowCurrentPage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +229,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowPrintToFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowPrintToFile" target="_top">.NET documentation</a>
+     */
     public boolean getAllowPrintToFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +250,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowPrintToFile.
+     *
+     * @param AllowPrintToFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowPrintToFile" target="_top">.NET documentation</a>
+     */
     public void setAllowPrintToFile(boolean AllowPrintToFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +267,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowSelection" target="_top">.NET documentation</a>
+     */
     public boolean getAllowSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +288,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowSelection.
+     *
+     * @param AllowSelection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowSelection" target="_top">.NET documentation</a>
+     */
     public void setAllowSelection(boolean AllowSelection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +305,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowSomePages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowSomePages" target="_top">.NET documentation</a>
+     */
     public boolean getAllowSomePages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +326,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowSomePages.
+     *
+     * @param AllowSomePages the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.AllowSomePages" target="_top">.NET documentation</a>
+     */
     public void setAllowSomePages(boolean AllowSomePages) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +343,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrintToFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.PrintToFile" target="_top">.NET documentation</a>
+     */
     public boolean getPrintToFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +364,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintToFile.
+     *
+     * @param PrintToFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.PrintToFile" target="_top">.NET documentation</a>
+     */
     public void setPrintToFile(boolean PrintToFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +381,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHelp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.ShowHelp" target="_top">.NET documentation</a>
+     */
     public boolean getShowHelp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +402,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHelp.
+     *
+     * @param ShowHelp the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.ShowHelp" target="_top">.NET documentation</a>
+     */
     public void setShowHelp(boolean ShowHelp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +419,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowNetwork.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.ShowNetwork" target="_top">.NET documentation</a>
+     */
     public boolean getShowNetwork() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +440,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowNetwork.
+     *
+     * @param ShowNetwork the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.ShowNetwork" target="_top">.NET documentation</a>
+     */
     public void setShowNetwork(boolean ShowNetwork) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +457,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseEXDialog.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.UseEXDialog" target="_top">.NET documentation</a>
+     */
     public boolean getUseEXDialog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +478,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseEXDialog.
+     *
+     * @param UseEXDialog the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.UseEXDialog" target="_top">.NET documentation</a>
+     */
     public void setUseEXDialog(boolean UseEXDialog) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +495,13 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Document.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.Document" target="_top">.NET documentation</a>
+     */
     public PrintDocument getDocument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +517,17 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Document.
+     *
+     * @param Document the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.Document" target="_top">.NET documentation</a>
+     */
     public void setDocument(PrintDocument Document) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +538,17 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrinterSettings.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.PrinterSettings" target="_top">.NET documentation</a>
+     */
     public PrinterSettings getPrinterSettings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +564,14 @@ public class PrintDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrinterSettings.
+     *
+     * @param PrinterSettings the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PrintDialog.PrinterSettings" target="_top">.NET documentation</a>
+     */
     public void setPrinterSettings(PrinterSettings PrinterSettings) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

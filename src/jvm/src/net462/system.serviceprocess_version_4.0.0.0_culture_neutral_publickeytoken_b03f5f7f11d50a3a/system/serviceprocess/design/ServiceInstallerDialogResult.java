@@ -114,7 +114,9 @@ public class ServiceInstallerDialogResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ServiceInstallerDialogResult(java.lang.Object instance) {
         super(instance);

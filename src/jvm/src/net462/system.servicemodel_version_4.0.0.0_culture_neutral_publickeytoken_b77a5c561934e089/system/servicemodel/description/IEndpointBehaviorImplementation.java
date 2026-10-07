@@ -102,7 +102,10 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEndpointBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddBindingParameters.
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param bindingParameters the argument of type {@code BindingParameterCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters" target="_top">.NET documentation</a>
+     */
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +165,14 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyClientBehavior.
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param clientRuntime the argument of type {@code ClientRuntime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +183,14 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyDispatchBehavior.
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @param endpointDispatcher the argument of type {@code EndpointDispatcher}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior" target="_top">.NET documentation</a>
+     */
     public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +201,13 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param endpoint the argument of type {@code ServiceEndpoint}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IEndpointBehavior.Validate" target="_top">.NET documentation</a>
+     */
     public void Validate(ServiceEndpoint endpoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -54,5 +54,14 @@ import system.net.security.SslPolicyErrors;
  * @version 2.0.0.0
  */
 public interface IRemoteCertificateValidationCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param certificate the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Certificate}
+     * @param chain the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Chain}
+     * @param sslPolicyErrors the .NET argument of type {@code System.Net.Security.SslPolicyErrors}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors);
 }

@@ -103,7 +103,9 @@ public class DbException extends system.runtime.interopservices.ExternalExceptio
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public DbException(java.lang.Object instance) {
         super(instance);

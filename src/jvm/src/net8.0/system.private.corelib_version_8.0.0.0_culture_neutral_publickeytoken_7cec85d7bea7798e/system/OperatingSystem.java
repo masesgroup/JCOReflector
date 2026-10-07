@@ -102,7 +102,10 @@ public class OperatingSystem extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperatingSystem(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,23 @@ public class OperatingSystem extends NetObject  {
     public OperatingSystem() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param platform the argument of type {@code PlatformID}
+     * @param version the argument of type {@code Version}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.-ctor" target="_top">.NET documentation</a>
+     */
     public OperatingSystem(PlatformID platform, Version version) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +187,13 @@ public class OperatingSystem extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAndroid.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsAndroid" target="_top">.NET documentation</a>
+     */
     public static boolean IsAndroid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -181,6 +208,17 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAndroidVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @param revision the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsAndroidVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsAndroidVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -195,6 +233,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsBrowser.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsBrowser" target="_top">.NET documentation</a>
+     */
     public static boolean IsBrowser() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -209,6 +254,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFreeBSD.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsFreeBSD" target="_top">.NET documentation</a>
+     */
     public static boolean IsFreeBSD() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +275,17 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsFreeBSDVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @param revision the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsFreeBSDVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsFreeBSDVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +300,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsIOS.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsIOS" target="_top">.NET documentation</a>
+     */
     public static boolean IsIOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +321,16 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsIOSVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsIOSVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsIOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -265,6 +345,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsLinux.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsLinux" target="_top">.NET documentation</a>
+     */
     public static boolean IsLinux() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +366,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsMacCatalyst.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsMacCatalyst" target="_top">.NET documentation</a>
+     */
     public static boolean IsMacCatalyst() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -293,6 +387,16 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsMacCatalystVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsMacCatalystVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsMacCatalystVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +411,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsMacOS.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsMacOS" target="_top">.NET documentation</a>
+     */
     public static boolean IsMacOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -321,6 +432,16 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsMacOSVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsMacOSVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsMacOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -335,6 +456,26 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOSPlatform.
+     *
+     * @param platform the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsOSPlatform" target="_top">.NET documentation</a>
+     */
     public static boolean IsOSPlatform(java.lang.String platform) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +490,28 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOSPlatformVersionAtLeast.
+     *
+     * @param platform the argument of type {@code java.lang.String}
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @param revision the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsOSPlatformVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsOSPlatformVersionAtLeast(java.lang.String platform, int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -363,6 +526,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsTvOS.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsTvOS" target="_top">.NET documentation</a>
+     */
     public static boolean IsTvOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -377,6 +547,16 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsTvOSVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsTvOSVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsTvOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -391,6 +571,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWasi.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsWasi" target="_top">.NET documentation</a>
+     */
     public static boolean IsWasi() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -405,6 +592,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWatchOS.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsWatchOS" target="_top">.NET documentation</a>
+     */
     public static boolean IsWatchOS() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -419,6 +613,16 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWatchOSVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsWatchOSVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsWatchOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -433,6 +637,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWindows.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsWindows" target="_top">.NET documentation</a>
+     */
     public static boolean IsWindows() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -447,6 +658,25 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsWindowsVersionAtLeast.
+     *
+     * @param major the argument of type {@code int}
+     * @param minor the argument of type {@code int}
+     * @param build the argument of type {@code int}
+     * @param revision the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.IsWindowsVersionAtLeast" target="_top">.NET documentation</a>
+     */
     public static boolean IsWindowsVersionAtLeast(int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -461,6 +691,22 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +722,23 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +753,13 @@ public class OperatingSystem extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Platform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.Platform" target="_top">.NET documentation</a>
+     */
     public PlatformID getPlatform() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -505,6 +775,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServicePack.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.ServicePack" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServicePack() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +796,23 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VersionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.VersionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersionString() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -533,6 +827,13 @@ public class OperatingSystem extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.OperatingSystem.Version" target="_top">.NET documentation</a>
+     */
     public Version getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

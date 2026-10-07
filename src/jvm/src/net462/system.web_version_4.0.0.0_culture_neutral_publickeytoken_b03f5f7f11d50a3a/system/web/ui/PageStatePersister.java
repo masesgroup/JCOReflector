@@ -98,7 +98,10 @@ public class PageStatePersister extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PageStatePersister(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class PageStatePersister extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageStatePersister.Load" target="_top">.NET documentation</a>
+     */
     public void Load() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +170,12 @@ public class PageStatePersister extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageStatePersister.Save" target="_top">.NET documentation</a>
+     */
     public void Save() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +190,13 @@ public class PageStatePersister extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ControlState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageStatePersister.ControlState" target="_top">.NET documentation</a>
+     */
     public NetObject getControlState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +212,13 @@ public class PageStatePersister extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ControlState.
+     *
+     * @param ControlState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageStatePersister.ControlState" target="_top">.NET documentation</a>
+     */
     public void setControlState(NetObject ControlState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +229,13 @@ public class PageStatePersister extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ViewState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageStatePersister.ViewState" target="_top">.NET documentation</a>
+     */
     public NetObject getViewState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +251,13 @@ public class PageStatePersister extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ViewState.
+     *
+     * @param ViewState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageStatePersister.ViewState" target="_top">.NET documentation</a>
+     */
     public void setViewState(NetObject ViewState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

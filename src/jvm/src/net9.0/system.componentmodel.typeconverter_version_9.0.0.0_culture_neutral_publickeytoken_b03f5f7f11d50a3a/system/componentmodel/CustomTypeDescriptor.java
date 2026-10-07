@@ -106,7 +106,10 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomTypeDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class CustomTypeDescriptor extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttributes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetAttributes" target="_top">.NET documentation</a>
+     */
     public AttributeCollection GetAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDefaultEvent.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetDefaultEvent" target="_top">.NET documentation</a>
+     */
     public EventDescriptor GetDefaultEvent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +206,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventDescriptorCollection GetEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +228,14 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +251,19 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEventsFromRegisteredType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetEventsFromRegisteredType" target="_top">.NET documentation</a>
+     */
     public EventDescriptorCollection GetEventsFromRegisteredType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +279,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDefaultProperty.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetDefaultProperty" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor GetDefaultProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +301,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +323,14 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param attributes the argument of type {@code Attribute[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +346,19 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesFromRegisteredType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetPropertiesFromRegisteredType" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetPropertiesFromRegisteredType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +374,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConverter.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetConverter" target="_top">.NET documentation</a>
+     */
     public TypeConverter GetConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +396,19 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConverterFromRegisteredType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetConverterFromRegisteredType" target="_top">.NET documentation</a>
+     */
     public TypeConverter GetConverterFromRegisteredType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -324,6 +424,14 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEditor.
+     *
+     * @param editorBaseType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetEditor" target="_top">.NET documentation</a>
+     */
     public NetObject GetEditor(NetType editorBaseType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +447,14 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertyOwner.
+     *
+     * @param pd the argument of type {@code PropertyDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetPropertyOwner" target="_top">.NET documentation</a>
+     */
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +470,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClassName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +491,13 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetComponentName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.GetComponentName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetComponentName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -386,6 +516,13 @@ public class CustomTypeDescriptor extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireRegisteredTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CustomTypeDescriptor.RequireRegisteredTypes" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getRequireRegisteredTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

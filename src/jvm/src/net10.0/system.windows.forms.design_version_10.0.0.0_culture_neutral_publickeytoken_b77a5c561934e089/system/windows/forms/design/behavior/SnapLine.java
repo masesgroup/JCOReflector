@@ -101,7 +101,10 @@ public class SnapLine extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SnapLine(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class SnapLine extends NetObject  {
     public SnapLine() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code SnapLineType}
+     * @param offset the argument of type {@code int}
+     * @param filter the argument of type {@code java.lang.String}
+     * @param priority the argument of type {@code SnapLinePriority}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.-ctor" target="_top">.NET documentation</a>
+     */
     public SnapLine(SnapLineType type, int offset, java.lang.String filter, SnapLinePriority priority) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +174,15 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code SnapLineType}
+     * @param offset the argument of type {@code int}
+     * @param filter the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.-ctor" target="_top">.NET documentation</a>
+     */
     public SnapLine(SnapLineType type, int offset, java.lang.String filter) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +193,15 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code SnapLineType}
+     * @param offset the argument of type {@code int}
+     * @param priority the argument of type {@code SnapLinePriority}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.-ctor" target="_top">.NET documentation</a>
+     */
     public SnapLine(SnapLineType type, int offset, SnapLinePriority priority) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +212,14 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code SnapLineType}
+     * @param offset the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.-ctor" target="_top">.NET documentation</a>
+     */
     public SnapLine(SnapLineType type, int offset) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +235,25 @@ public class SnapLine extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSnap.
+     *
+     * @param line1 the argument of type {@code SnapLine}
+     * @param line2 the argument of type {@code SnapLine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.ShouldSnap" target="_top">.NET documentation</a>
+     */
     public static boolean ShouldSnap(SnapLine line1, SnapLine line2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +268,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AdjustOffset.
+     *
+     * @param adjustment the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.AdjustOffset" target="_top">.NET documentation</a>
+     */
     public void AdjustOffset(int adjustment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +289,13 @@ public class SnapLine extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsHorizontal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.IsHorizontal" target="_top">.NET documentation</a>
+     */
     public boolean getIsHorizontal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +310,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsVertical.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.IsVertical" target="_top">.NET documentation</a>
+     */
     public boolean getIsVertical() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +331,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Offset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.Offset" target="_top">.NET documentation</a>
+     */
     public int getOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +378,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Offset.
+     *
+     * @param Offset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.Offset" target="_top">.NET documentation</a>
+     */
     public void setOffset(int Offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +395,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.Filter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +416,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Priority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.Priority" target="_top">.NET documentation</a>
+     */
     public SnapLinePriority getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +438,13 @@ public class SnapLine extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SnapLineType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType" target="_top">.NET documentation</a>
+     */
     public SnapLineType getSnapLineType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

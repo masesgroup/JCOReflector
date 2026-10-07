@@ -106,7 +106,10 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDbConnectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateCommand.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.CreateCommand" target="_top">.NET documentation</a>
+     */
     public IDbCommand CreateCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransaction.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.BeginTransaction" target="_top">.NET documentation</a>
+     */
     public IDbTransaction BeginTransaction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +195,14 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Invokes the .NET member BeginTransaction.
+     *
+     * @param il the argument of type {@code IsolationLevel}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.BeginTransaction" target="_top">.NET documentation</a>
+     */
     public IDbTransaction BeginTransaction(IsolationLevel il) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +218,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeDatabase.
+     *
+     * @param databaseName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.ChangeDatabase" target="_top">.NET documentation</a>
+     */
     public void ChangeDatabase(java.lang.String databaseName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +235,12 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,12 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +267,12 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Invokes the .NET member Open.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.Open" target="_top">.NET documentation</a>
+     */
     public void Open() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +287,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConnectionTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.ConnectionTimeout" target="_top">.NET documentation</a>
+     */
     public int getConnectionTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +334,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.State" target="_top">.NET documentation</a>
+     */
     public ConnectionState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +356,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.ConnectionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +377,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConnectionString.
+     *
+     * @param ConnectionString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.ConnectionString" target="_top">.NET documentation</a>
+     */
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +394,13 @@ public class IDbConnectionImplementation extends NetObject implements IDbConnect
         }
     }
 
+    /**
+     * Gets the value of the .NET property Database.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDbConnection.Database" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDatabase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

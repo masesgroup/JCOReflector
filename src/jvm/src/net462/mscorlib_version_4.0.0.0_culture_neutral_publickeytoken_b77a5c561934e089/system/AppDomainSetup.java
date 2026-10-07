@@ -105,7 +105,10 @@ public class AppDomainSetup extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AppDomainSetup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class AppDomainSetup extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.-ctor" target="_top">.NET documentation</a>
+     */
     public AppDomainSetup() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,22 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activationContext the argument of type {@code ActivationContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.-ctor" target="_top">.NET documentation</a>
+     */
     public AppDomainSetup(ActivationContext activationContext) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.MemberAccessException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +197,28 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param activationArguments the argument of type {@code ActivationArguments}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.-ctor" target="_top">.NET documentation</a>
+     */
     public AppDomainSetup(ActivationArguments activationArguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException, system.MemberAccessException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +233,13 @@ public class AppDomainSetup extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetConfigurationBytes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.GetConfigurationBytes" target="_top">.NET documentation</a>
+     */
     public byte[] GetConfigurationBytes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +263,16 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCompatibilitySwitches.
+     *
+     * @param switches the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.SetCompatibilitySwitches" target="_top">.NET documentation</a>
+     */
     public void SetCompatibilitySwitches(IEnumerable_1 switches) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +283,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetConfigurationBytes.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.SetConfigurationBytes" target="_top">.NET documentation</a>
+     */
     public void SetConfigurationBytes(byte[] value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +300,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetConfigurationBytes.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.SetConfigurationBytes" target="_top">.NET documentation</a>
+     */
     public void SetConfigurationBytes(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +321,13 @@ public class AppDomainSetup extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DisallowApplicationBaseProbing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowApplicationBaseProbing" target="_top">.NET documentation</a>
+     */
     public boolean getDisallowApplicationBaseProbing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +342,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisallowApplicationBaseProbing.
+     *
+     * @param DisallowApplicationBaseProbing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowApplicationBaseProbing" target="_top">.NET documentation</a>
+     */
     public void setDisallowApplicationBaseProbing(boolean DisallowApplicationBaseProbing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +359,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisallowBindingRedirects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowBindingRedirects" target="_top">.NET documentation</a>
+     */
     public boolean getDisallowBindingRedirects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +380,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisallowBindingRedirects.
+     *
+     * @param DisallowBindingRedirects the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowBindingRedirects" target="_top">.NET documentation</a>
+     */
     public void setDisallowBindingRedirects(boolean DisallowBindingRedirects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +397,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisallowCodeDownload.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowCodeDownload" target="_top">.NET documentation</a>
+     */
     public boolean getDisallowCodeDownload() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +418,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisallowCodeDownload.
+     *
+     * @param DisallowCodeDownload the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowCodeDownload" target="_top">.NET documentation</a>
+     */
     public void setDisallowCodeDownload(boolean DisallowCodeDownload) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +435,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisallowPublisherPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowPublisherPolicy" target="_top">.NET documentation</a>
+     */
     public boolean getDisallowPublisherPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +456,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisallowPublisherPolicy.
+     *
+     * @param DisallowPublisherPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DisallowPublisherPolicy" target="_top">.NET documentation</a>
+     */
     public void setDisallowPublisherPolicy(boolean DisallowPublisherPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +473,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SandboxInterop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.SandboxInterop" target="_top">.NET documentation</a>
+     */
     public boolean getSandboxInterop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +494,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SandboxInterop.
+     *
+     * @param SandboxInterop the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.SandboxInterop" target="_top">.NET documentation</a>
+     */
     public void setSandboxInterop(boolean SandboxInterop) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +511,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppDomainInitializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainInitializer" target="_top">.NET documentation</a>
+     */
     public AppDomainInitializer getAppDomainInitializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +532,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppDomainInitializer.
+     *
+     * @param AppDomainInitializer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainInitializer" target="_top">.NET documentation</a>
+     */
     public void setAppDomainInitializer(AppDomainInitializer AppDomainInitializer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +549,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LoaderOptimization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.LoaderOptimization" target="_top">.NET documentation</a>
+     */
     public LoaderOptimization getLoaderOptimization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +571,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LoaderOptimization.
+     *
+     * @param LoaderOptimization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.LoaderOptimization" target="_top">.NET documentation</a>
+     */
     public void setLoaderOptimization(LoaderOptimization LoaderOptimization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +588,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivationArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ActivationArguments" target="_top">.NET documentation</a>
+     */
     public ActivationArguments getActivationArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -427,6 +610,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivationArguments.
+     *
+     * @param ActivationArguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ActivationArguments" target="_top">.NET documentation</a>
+     */
     public void setActivationArguments(ActivationArguments ActivationArguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +627,23 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationTrust.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.XmlSyntaxException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ApplicationTrust" target="_top">.NET documentation</a>
+     */
     public ApplicationTrust getApplicationTrust() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +659,24 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationTrust.
+     *
+     * @param ApplicationTrust the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ApplicationTrust" target="_top">.NET documentation</a>
+     */
     public void setApplicationTrust(ApplicationTrust ApplicationTrust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +687,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppDomainManagerAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainManagerAssembly" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppDomainManagerAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -476,6 +708,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppDomainManagerAssembly.
+     *
+     * @param AppDomainManagerAssembly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainManagerAssembly" target="_top">.NET documentation</a>
+     */
     public void setAppDomainManagerAssembly(java.lang.String AppDomainManagerAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -486,6 +725,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppDomainManagerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainManagerType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAppDomainManagerType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -500,6 +746,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppDomainManagerType.
+     *
+     * @param AppDomainManagerType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainManagerType" target="_top">.NET documentation</a>
+     */
     public void setAppDomainManagerType(java.lang.String AppDomainManagerType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +763,28 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ApplicationBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +799,29 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationBase.
+     *
+     * @param ApplicationBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ApplicationBase" target="_top">.NET documentation</a>
+     */
     public void setApplicationBase(java.lang.String ApplicationBase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.MemberAccessException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +832,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ApplicationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ApplicationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -548,6 +853,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ApplicationName.
+     *
+     * @param ApplicationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ApplicationName" target="_top">.NET documentation</a>
+     */
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +870,28 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CachePath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.CachePath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCachePath() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +906,29 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CachePath.
+     *
+     * @param CachePath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.CachePath" target="_top">.NET documentation</a>
+     */
     public void setCachePath(java.lang.String CachePath) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.MemberAccessException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -582,6 +939,28 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConfigurationFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ConfigurationFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConfigurationFile() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +975,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConfigurationFile.
+     *
+     * @param ConfigurationFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ConfigurationFile" target="_top">.NET documentation</a>
+     */
     public void setConfigurationFile(java.lang.String ConfigurationFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +992,28 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DynamicBase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DynamicBase" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDynamicBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +1028,29 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DynamicBase.
+     *
+     * @param DynamicBase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.DynamicBase" target="_top">.NET documentation</a>
+     */
     public void setDynamicBase(java.lang.String DynamicBase) throws Throwable, system.MemberAccessException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -630,6 +1061,28 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LicenseFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.LicenseFile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLicenseFile() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -644,6 +1097,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LicenseFile.
+     *
+     * @param LicenseFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.LicenseFile" target="_top">.NET documentation</a>
+     */
     public void setLicenseFile(java.lang.String LicenseFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -654,6 +1114,29 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateBinPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.PrivateBinPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrivateBinPath() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -668,6 +1151,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateBinPath.
+     *
+     * @param PrivateBinPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.PrivateBinPath" target="_top">.NET documentation</a>
+     */
     public void setPrivateBinPath(java.lang.String PrivateBinPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -678,6 +1168,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PrivateBinPathProbe.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.PrivateBinPathProbe" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPrivateBinPathProbe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -692,6 +1189,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrivateBinPathProbe.
+     *
+     * @param PrivateBinPathProbe the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.PrivateBinPathProbe" target="_top">.NET documentation</a>
+     */
     public void setPrivateBinPathProbe(java.lang.String PrivateBinPathProbe) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -702,6 +1206,29 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShadowCopyDirectories.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ShadowCopyDirectories" target="_top">.NET documentation</a>
+     */
     public java.lang.String getShadowCopyDirectories() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -716,6 +1243,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShadowCopyDirectories.
+     *
+     * @param ShadowCopyDirectories the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ShadowCopyDirectories" target="_top">.NET documentation</a>
+     */
     public void setShadowCopyDirectories(java.lang.String ShadowCopyDirectories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -726,6 +1260,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShadowCopyFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ShadowCopyFiles" target="_top">.NET documentation</a>
+     */
     public java.lang.String getShadowCopyFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1281,21 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShadowCopyFiles.
+     *
+     * @param ShadowCopyFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.ShadowCopyFiles" target="_top">.NET documentation</a>
+     */
     public void setShadowCopyFiles(java.lang.String ShadowCopyFiles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -750,6 +1306,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetFrameworkName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.TargetFrameworkName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetFrameworkName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -764,6 +1327,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetFrameworkName.
+     *
+     * @param TargetFrameworkName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.TargetFrameworkName" target="_top">.NET documentation</a>
+     */
     public void setTargetFrameworkName(java.lang.String TargetFrameworkName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -774,6 +1344,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AppDomainInitializerArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainInitializerArguments" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getAppDomainInitializerArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -797,6 +1374,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AppDomainInitializerArguments.
+     *
+     * @param AppDomainInitializerArguments the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.AppDomainInitializerArguments" target="_top">.NET documentation</a>
+     */
     public void setAppDomainInitializerArguments(java.lang.String[] AppDomainInitializerArguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -807,6 +1391,13 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PartialTrustVisibleAssemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.PartialTrustVisibleAssemblies" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getPartialTrustVisibleAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -830,6 +1421,18 @@ public class AppDomainSetup extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PartialTrustVisibleAssemblies.
+     *
+     * @param PartialTrustVisibleAssemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomainSetup.PartialTrustVisibleAssemblies" target="_top">.NET documentation</a>
+     */
     public void setPartialTrustVisibleAssemblies(java.lang.String[] PartialTrustVisibleAssemblies) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

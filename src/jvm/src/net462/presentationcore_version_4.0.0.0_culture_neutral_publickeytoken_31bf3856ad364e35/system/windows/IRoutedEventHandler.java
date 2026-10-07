@@ -52,5 +52,11 @@ import system.windows.RoutedEventArgs;
  * @version 2.0.0.0
  */
 public interface IRoutedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.RoutedEventArgs}
+     */
     public void Invoke(NetObject sender, RoutedEventArgs e);
 }

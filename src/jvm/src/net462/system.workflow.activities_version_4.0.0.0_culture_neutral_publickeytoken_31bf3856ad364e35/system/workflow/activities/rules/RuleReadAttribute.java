@@ -100,7 +100,10 @@ public class RuleReadAttribute extends system.workflow.activities.rules.RuleRead
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RuleReadAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class RuleReadAttribute extends system.workflow.activities.rules.RuleRead
     public RuleReadAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleReadAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleReadAttribute(java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class RuleReadAttribute extends system.workflow.activities.rules.RuleRead
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param target the argument of type {@code RuleAttributeTarget}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleReadAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleReadAttribute(java.lang.String path, RuleAttributeTarget target) throws Throwable {
         try {
             // add reference to assemblyName.dll file

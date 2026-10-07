@@ -98,7 +98,10 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WmfPlaceableFileHeader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.-ctor" target="_top">.NET documentation</a>
+     */
     public WmfPlaceableFileHeader() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BboxBottom.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxBottom" target="_top">.NET documentation</a>
+     */
     public short getBboxBottom() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +219,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BboxBottom.
+     *
+     * @param BboxBottom the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxBottom" target="_top">.NET documentation</a>
+     */
     public void setBboxBottom(short BboxBottom) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +236,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BboxLeft.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxLeft" target="_top">.NET documentation</a>
+     */
     public short getBboxLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +283,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BboxLeft.
+     *
+     * @param BboxLeft the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxLeft" target="_top">.NET documentation</a>
+     */
     public void setBboxLeft(short BboxLeft) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +300,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BboxRight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxRight" target="_top">.NET documentation</a>
+     */
     public short getBboxRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +347,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BboxRight.
+     *
+     * @param BboxRight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxRight" target="_top">.NET documentation</a>
+     */
     public void setBboxRight(short BboxRight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -313,6 +364,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BboxTop.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxTop" target="_top">.NET documentation</a>
+     */
     public short getBboxTop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +411,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BboxTop.
+     *
+     * @param BboxTop the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.BboxTop" target="_top">.NET documentation</a>
+     */
     public void setBboxTop(short BboxTop) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +428,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Checksum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Checksum" target="_top">.NET documentation</a>
+     */
     public short getChecksum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +475,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Checksum.
+     *
+     * @param Checksum the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Checksum" target="_top">.NET documentation</a>
+     */
     public void setChecksum(short Checksum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +492,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hmf.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Hmf" target="_top">.NET documentation</a>
+     */
     public short getHmf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -453,6 +539,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Hmf.
+     *
+     * @param Hmf the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Hmf" target="_top">.NET documentation</a>
+     */
     public void setHmf(short Hmf) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -463,6 +556,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Inch.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Inch" target="_top">.NET documentation</a>
+     */
     public short getInch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +603,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Inch.
+     *
+     * @param Inch the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Inch" target="_top">.NET documentation</a>
+     */
     public void setInch(short Inch) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +620,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Key" target="_top">.NET documentation</a>
+     */
     public int getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +667,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Key.
+     *
+     * @param Key the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Key" target="_top">.NET documentation</a>
+     */
     public void setKey(int Key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -563,6 +684,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Reserved.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Reserved" target="_top">.NET documentation</a>
+     */
     public int getReserved() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +731,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reserved.
+     *
+     * @param Reserved the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.WmfPlaceableFileHeader.Reserved" target="_top">.NET documentation</a>
+     */
     public void setReserved(int Reserved) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

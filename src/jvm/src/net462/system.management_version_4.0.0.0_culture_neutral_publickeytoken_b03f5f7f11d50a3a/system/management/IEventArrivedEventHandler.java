@@ -52,5 +52,11 @@ import system.management.EventArrivedEventArgs;
  * @version 2.0.0.0
  */
 public interface IEventArrivedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Management.EventArrivedEventArgs}
+     */
     public void Invoke(NetObject sender, EventArrivedEventArgs e);
 }

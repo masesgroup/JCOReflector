@@ -100,7 +100,10 @@ public class PointHitTestParameters extends system.windows.media.HitTestParamete
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PointHitTestParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class PointHitTestParameters extends system.windows.media.HitTestParamete
     public PointHitTestParameters() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param point the argument of type {@code Point}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PointHitTestParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public PointHitTestParameters(Point point) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class PointHitTestParameters extends system.windows.media.HitTestParamete
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HitPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PointHitTestParameters.HitPoint" target="_top">.NET documentation</a>
+     */
     public Point getHitPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

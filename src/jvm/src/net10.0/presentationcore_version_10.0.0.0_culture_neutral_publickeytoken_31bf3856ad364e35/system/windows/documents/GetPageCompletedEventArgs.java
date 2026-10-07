@@ -100,7 +100,10 @@ public class GetPageCompletedEventArgs extends system.componentmodel.AsyncComple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GetPageCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,17 @@ public class GetPageCompletedEventArgs extends system.componentmodel.AsyncComple
     public GetPageCompletedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param page the argument of type {@code DocumentPage}
+     * @param pageNumber the argument of type {@code int}
+     * @param error the argument of type {@code NetException}
+     * @param cancelled the argument of type {@code boolean}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.GetPageCompletedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public GetPageCompletedEventArgs(DocumentPage page, int pageNumber, NetException error, boolean cancelled, NetObject userState) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +183,22 @@ public class GetPageCompletedEventArgs extends system.componentmodel.AsyncComple
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PageNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.GetPageCompletedEventArgs.PageNumber" target="_top">.NET documentation</a>
+     */
     public int getPageNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +239,22 @@ public class GetPageCompletedEventArgs extends system.componentmodel.AsyncComple
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.GetPageCompletedEventArgs.DocumentPage" target="_top">.NET documentation</a>
+     */
     public DocumentPage getDocumentPage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

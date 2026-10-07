@@ -103,7 +103,9 @@ public class MissingMethodException extends system.MissingMemberException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public MissingMethodException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class MissingMethodException extends system.MissingMemberException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param className the argument of type {@code java.lang.String}
+     * @param methodName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.MissingMethodException.-ctor" target="_top">.NET documentation</a>
+     */
     public MissingMethodException(java.lang.String className, java.lang.String methodName) throws Throwable {
         try {
             // add reference to assemblyName.dll file

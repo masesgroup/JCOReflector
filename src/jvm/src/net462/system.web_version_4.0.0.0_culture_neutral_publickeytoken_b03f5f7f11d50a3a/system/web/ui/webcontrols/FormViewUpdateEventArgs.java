@@ -101,7 +101,10 @@ public class FormViewUpdateEventArgs extends system.componentmodel.CancelEventAr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FormViewUpdateEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class FormViewUpdateEventArgs extends system.componentmodel.CancelEventAr
     public FormViewUpdateEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param commandArgument the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewUpdateEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public FormViewUpdateEventArgs(NetObject commandArgument) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +180,13 @@ public class FormViewUpdateEventArgs extends system.componentmodel.CancelEventAr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Keys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class FormViewUpdateEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary getNewValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,13 @@ public class FormViewUpdateEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewUpdateEventArgs.OldValues" target="_top">.NET documentation</a>
+     */
     public IOrderedDictionary getOldValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class FormViewUpdateEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandArgument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FormViewUpdateEventArgs.CommandArgument" target="_top">.NET documentation</a>
+     */
     public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

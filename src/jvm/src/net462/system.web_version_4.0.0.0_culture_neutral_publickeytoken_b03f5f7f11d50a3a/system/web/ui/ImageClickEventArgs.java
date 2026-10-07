@@ -99,7 +99,10 @@ public class ImageClickEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImageClickEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class ImageClickEventArgs extends system.EventArgs  {
     public ImageClickEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ImageClickEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ImageClickEventArgs(int x, int y) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,16 @@ public class ImageClickEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @param xRaw the argument of type {@code double}
+     * @param yRaw the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ImageClickEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ImageClickEventArgs(int x, int y, double xRaw, double yRaw) throws Throwable {
         try {
             // add reference to assemblyName.dll file

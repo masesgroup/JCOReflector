@@ -102,7 +102,10 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Tuple_3(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,15 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
     public Tuple_3() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param item1 the argument of type {@code T1}
+     * @param item2 the argument of type {@code T2}
+     * @param item3 the argument of type {@code T3}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple-3.-ctor" target="_top">.NET documentation</a>
+     */
     public Tuple_3(T1 item1, T2 item2, T3 item3) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,8 +184,14 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     *
+     * @param other the argument of type {@code NetObject}
+     * @param comparer the argument of type {@code IEqualityComparer}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IStructuralEquatable.Equals" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean Equals(NetObject other, IEqualityComparer comparer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
@@ -181,8 +199,13 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     *
+     * @param comparer the argument of type {@code IEqualityComparer}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IStructuralEquatable.GetHashCode" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int GetHashCode(IEqualityComparer comparer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
@@ -190,8 +213,14 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStructuralComparable method available in IStructuralComparable to obtain an object with an invocable method
+     *
+     * @param other the argument of type {@code NetObject}
+     * @param comparer the argument of type {@code IComparer}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.IStructuralComparable.CompareTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int CompareTo(NetObject other, IComparer comparer) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralComparable to obtain the full interface.");
     }
@@ -199,8 +228,13 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIComparable method available in IComparable to obtain an object with an invocable method
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IComparable.CompareTo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int CompareTo(NetObject obj) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
     }
@@ -209,6 +243,13 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Item1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple-3.Item1" target="_top">.NET documentation</a>
+     */
     public T1 getItem1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +264,13 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
         }
     }
 
+    /**
+     * Gets the value of the .NET property Item2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple-3.Item2" target="_top">.NET documentation</a>
+     */
     public T2 getItem2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +285,13 @@ public class Tuple_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflec
         }
     }
 
+    /**
+     * Gets the value of the .NET property Item3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Tuple-3.Item3" target="_top">.NET documentation</a>
+     */
     public T3 getItem3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

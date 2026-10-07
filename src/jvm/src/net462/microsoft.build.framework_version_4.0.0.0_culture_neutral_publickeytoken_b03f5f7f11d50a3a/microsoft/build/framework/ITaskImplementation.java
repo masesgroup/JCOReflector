@@ -102,7 +102,10 @@ public class ITaskImplementation extends NetObject implements ITask {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITaskImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class ITaskImplementation extends NetObject implements ITask {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITask.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,13 @@ public class ITaskImplementation extends NetObject implements ITask {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuildEngine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITask.BuildEngine" target="_top">.NET documentation</a>
+     */
     public IBuildEngine getBuildEngine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,13 @@ public class ITaskImplementation extends NetObject implements ITask {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BuildEngine.
+     *
+     * @param BuildEngine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITask.BuildEngine" target="_top">.NET documentation</a>
+     */
     public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +211,13 @@ public class ITaskImplementation extends NetObject implements ITask {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITask.HostObject" target="_top">.NET documentation</a>
+     */
     public ITaskHost getHostObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +233,13 @@ public class ITaskImplementation extends NetObject implements ITask {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostObject.
+     *
+     * @param HostObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.ITask.HostObject" target="_top">.NET documentation</a>
+     */
     public void setHostObject(ITaskHost HostObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

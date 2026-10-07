@@ -53,5 +53,12 @@ import system.ResolveEventArgs;
  * @version 2.0.0.0
  */
 public interface IResolveEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param args the .NET argument of type {@code System.ResolveEventArgs}
+     * @return the value returned to the CLR
+     */
     public Assembly Invoke(NetObject sender, ResolveEventArgs args);
 }

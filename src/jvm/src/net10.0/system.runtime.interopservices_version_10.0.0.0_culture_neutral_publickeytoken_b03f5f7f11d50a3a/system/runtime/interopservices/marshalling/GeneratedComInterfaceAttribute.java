@@ -101,7 +101,10 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GeneratedComInterfaceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public GeneratedComInterfaceAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.Options" target="_top">.NET documentation</a>
+     */
     public ComInterfaceOptions getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Options.
+     *
+     * @param Options the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.Options" target="_top">.NET documentation</a>
+     */
     public void setOptions(ComInterfaceOptions Options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringMarshalling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.StringMarshalling" target="_top">.NET documentation</a>
+     */
     public StringMarshalling getStringMarshalling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StringMarshalling.
+     *
+     * @param StringMarshalling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.StringMarshalling" target="_top">.NET documentation</a>
+     */
     public void setStringMarshalling(StringMarshalling StringMarshalling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +253,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExceptionToUnmanagedMarshaller.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.ExceptionToUnmanagedMarshaller" target="_top">.NET documentation</a>
+     */
     public NetType getExceptionToUnmanagedMarshaller() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExceptionToUnmanagedMarshaller.
+     *
+     * @param ExceptionToUnmanagedMarshaller the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.ExceptionToUnmanagedMarshaller" target="_top">.NET documentation</a>
+     */
     public void setExceptionToUnmanagedMarshaller(NetType ExceptionToUnmanagedMarshaller) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +292,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StringMarshallingCustomType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.StringMarshallingCustomType" target="_top">.NET documentation</a>
+     */
     public NetType getStringMarshallingCustomType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +314,13 @@ public class GeneratedComInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StringMarshallingCustomType.
+     *
+     * @param StringMarshallingCustomType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.GeneratedComInterfaceAttribute.StringMarshallingCustomType" target="_top">.NET documentation</a>
+     */
     public void setStringMarshallingCustomType(NetType StringMarshallingCustomType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

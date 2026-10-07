@@ -99,7 +99,10 @@ public class FileDialogCustomPlace extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FileDialogCustomPlace(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class FileDialogCustomPlace extends NetObject  {
     public FileDialogCustomPlace() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param knownFolder the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialogCustomPlace.-ctor" target="_top">.NET documentation</a>
+     */
     public FileDialogCustomPlace(Guid knownFolder) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,13 @@ public class FileDialogCustomPlace extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialogCustomPlace.-ctor" target="_top">.NET documentation</a>
+     */
     public FileDialogCustomPlace(java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +195,13 @@ public class FileDialogCustomPlace extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KnownFolder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialogCustomPlace.KnownFolder" target="_top">.NET documentation</a>
+     */
     public Guid getKnownFolder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class FileDialogCustomPlace extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KnownFolder.
+     *
+     * @param KnownFolder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialogCustomPlace.KnownFolder" target="_top">.NET documentation</a>
+     */
     public void setKnownFolder(Guid KnownFolder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class FileDialogCustomPlace extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Path.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialogCustomPlace.Path" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class FileDialogCustomPlace extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Path.
+     *
+     * @param Path the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialogCustomPlace.Path" target="_top">.NET documentation</a>
+     */
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

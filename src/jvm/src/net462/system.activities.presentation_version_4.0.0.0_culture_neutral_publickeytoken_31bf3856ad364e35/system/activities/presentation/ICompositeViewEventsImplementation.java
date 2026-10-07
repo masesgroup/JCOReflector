@@ -100,7 +100,10 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICompositeViewEventsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RegisterCompositeView.
+     *
+     * @param container the argument of type {@code ICompositeView}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeViewEvents.RegisterCompositeView" target="_top">.NET documentation</a>
+     */
     public void RegisterCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterDefaultCompositeView.
+     *
+     * @param container the argument of type {@code ICompositeView}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeViewEvents.RegisterDefaultCompositeView" target="_top">.NET documentation</a>
+     */
     public void RegisterDefaultCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +179,13 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member UnregisterCompositeView.
+     *
+     * @param container the argument of type {@code ICompositeView}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeViewEvents.UnregisterCompositeView" target="_top">.NET documentation</a>
+     */
     public void UnregisterCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +196,13 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
         }
     }
 
+    /**
+     * Invokes the .NET member UnregisterDefaultCompositeView.
+     *
+     * @param container the argument of type {@code ICompositeView}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeViewEvents.UnregisterDefaultCompositeView" target="_top">.NET documentation</a>
+     */
     public void UnregisterDefaultCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

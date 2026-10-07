@@ -100,7 +100,10 @@ public class IExtensibleObject_1Implementation<T extends IJCOBridgeReflected> ex
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtensibleObject_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IExtensibleObject_1Implementation<T extends IJCOBridgeReflected> ex
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Extensions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensibleObject-1.Extensions" target="_top">.NET documentation</a>
+     */
     public IExtensionCollection_1 getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

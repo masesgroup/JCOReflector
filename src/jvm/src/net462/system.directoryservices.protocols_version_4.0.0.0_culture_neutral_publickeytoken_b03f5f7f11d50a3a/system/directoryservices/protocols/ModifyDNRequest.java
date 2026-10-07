@@ -99,7 +99,10 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModifyDNRequest(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,22 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public ModifyDNRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +175,25 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param distinguishedName the argument of type {@code java.lang.String}
+     * @param newParentDistinguishedName the argument of type {@code java.lang.String}
+     * @param newName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.-ctor" target="_top">.NET documentation</a>
+     */
     public ModifyDNRequest(java.lang.String distinguishedName, java.lang.String newParentDistinguishedName, java.lang.String newName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +212,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeleteOldRdn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.DeleteOldRdn" target="_top">.NET documentation</a>
+     */
     public boolean getDeleteOldRdn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +233,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteOldRdn.
+     *
+     * @param DeleteOldRdn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.DeleteOldRdn" target="_top">.NET documentation</a>
+     */
     public void setDeleteOldRdn(boolean DeleteOldRdn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +250,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Gets the value of the .NET property DistinguishedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.DistinguishedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDistinguishedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +271,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Sets the value of the .NET property DistinguishedName.
+     *
+     * @param DistinguishedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.DistinguishedName" target="_top">.NET documentation</a>
+     */
     public void setDistinguishedName(java.lang.String DistinguishedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +288,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.NewName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +309,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewName.
+     *
+     * @param NewName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.NewName" target="_top">.NET documentation</a>
+     */
     public void setNewName(java.lang.String NewName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +326,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewParentDistinguishedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.NewParentDistinguishedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewParentDistinguishedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +347,13 @@ public class ModifyDNRequest extends system.directoryservices.protocols.Director
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewParentDistinguishedName.
+     *
+     * @param NewParentDistinguishedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.ModifyDNRequest.NewParentDistinguishedName" target="_top">.NET documentation</a>
+     */
     public void setNewParentDistinguishedName(java.lang.String NewParentDistinguishedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

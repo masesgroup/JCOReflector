@@ -102,7 +102,10 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FontDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public FontDialog() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,15 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowScriptChange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowScriptChange" target="_top">.NET documentation</a>
+     */
     public boolean getAllowScriptChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +216,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowScriptChange.
+     *
+     * @param AllowScriptChange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowScriptChange" target="_top">.NET documentation</a>
+     */
     public void setAllowScriptChange(boolean AllowScriptChange) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +233,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowSimulations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowSimulations" target="_top">.NET documentation</a>
+     */
     public boolean getAllowSimulations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +254,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowSimulations.
+     *
+     * @param AllowSimulations the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowSimulations" target="_top">.NET documentation</a>
+     */
     public void setAllowSimulations(boolean AllowSimulations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +271,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowVectorFonts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowVectorFonts" target="_top">.NET documentation</a>
+     */
     public boolean getAllowVectorFonts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +292,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowVectorFonts.
+     *
+     * @param AllowVectorFonts the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowVectorFonts" target="_top">.NET documentation</a>
+     */
     public void setAllowVectorFonts(boolean AllowVectorFonts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +309,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowVerticalFonts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowVerticalFonts" target="_top">.NET documentation</a>
+     */
     public boolean getAllowVerticalFonts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +330,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowVerticalFonts.
+     *
+     * @param AllowVerticalFonts the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.AllowVerticalFonts" target="_top">.NET documentation</a>
+     */
     public void setAllowVerticalFonts(boolean AllowVerticalFonts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +347,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FixedPitchOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.FixedPitchOnly" target="_top">.NET documentation</a>
+     */
     public boolean getFixedPitchOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +368,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FixedPitchOnly.
+     *
+     * @param FixedPitchOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.FixedPitchOnly" target="_top">.NET documentation</a>
+     */
     public void setFixedPitchOnly(boolean FixedPitchOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +385,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FontMustExist.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.FontMustExist" target="_top">.NET documentation</a>
+     */
     public boolean getFontMustExist() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +406,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FontMustExist.
+     *
+     * @param FontMustExist the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.FontMustExist" target="_top">.NET documentation</a>
+     */
     public void setFontMustExist(boolean FontMustExist) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +423,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScriptsOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ScriptsOnly" target="_top">.NET documentation</a>
+     */
     public boolean getScriptsOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +444,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ScriptsOnly.
+     *
+     * @param ScriptsOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ScriptsOnly" target="_top">.NET documentation</a>
+     */
     public void setScriptsOnly(boolean ScriptsOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +461,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowApply.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowApply" target="_top">.NET documentation</a>
+     */
     public boolean getShowApply() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +482,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowApply.
+     *
+     * @param ShowApply the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowApply" target="_top">.NET documentation</a>
+     */
     public void setShowApply(boolean ShowApply) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +499,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowColor" target="_top">.NET documentation</a>
+     */
     public boolean getShowColor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +520,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowColor.
+     *
+     * @param ShowColor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowColor" target="_top">.NET documentation</a>
+     */
     public void setShowColor(boolean ShowColor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +537,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowEffects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowEffects" target="_top">.NET documentation</a>
+     */
     public boolean getShowEffects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +558,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowEffects.
+     *
+     * @param ShowEffects the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowEffects" target="_top">.NET documentation</a>
+     */
     public void setShowEffects(boolean ShowEffects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +575,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHelp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowHelp" target="_top">.NET documentation</a>
+     */
     public boolean getShowHelp() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +596,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHelp.
+     *
+     * @param ShowHelp the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.ShowHelp" target="_top">.NET documentation</a>
+     */
     public void setShowHelp(boolean ShowHelp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +613,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.MaxSize" target="_top">.NET documentation</a>
+     */
     public int getMaxSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +660,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxSize.
+     *
+     * @param MaxSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.MaxSize" target="_top">.NET documentation</a>
+     */
     public void setMaxSize(int MaxSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -491,6 +677,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.MinSize" target="_top">.NET documentation</a>
+     */
     public int getMinSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -531,6 +724,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinSize.
+     *
+     * @param MinSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.MinSize" target="_top">.NET documentation</a>
+     */
     public void setMinSize(int MinSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +741,20 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Color.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.Color" target="_top">.NET documentation</a>
+     */
     public Color getColor() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -556,6 +770,16 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Color.
+     *
+     * @param Color the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.Color" target="_top">.NET documentation</a>
+     */
     public void setColor(Color Color) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +790,20 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Font.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.Font" target="_top">.NET documentation</a>
+     */
     public Font getFont() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +819,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Font.
+     *
+     * @param Font the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FontDialog.Font" target="_top">.NET documentation</a>
+     */
     public void setFont(Font Font) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -596,6 +841,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addApply.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addApply(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +858,13 @@ public class FontDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeApply.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeApply(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

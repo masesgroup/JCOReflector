@@ -102,7 +102,10 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbCaseExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Accept.
+     *
+     * @param visitor the argument of type {@code DbExpressionVisitor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCaseExpression.Accept" target="_top">.NET documentation</a>
+     */
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,13 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Then.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCaseExpression.Then" target="_top">.NET documentation</a>
+     */
     public IList_1 getThen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +204,13 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
         }
     }
 
+    /**
+     * Gets the value of the .NET property When.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCaseExpression.When" target="_top">.NET documentation</a>
+     */
     public IList_1 getWhen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +226,13 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
         }
     }
 
+    /**
+     * Gets the value of the .NET property Else.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCaseExpression.Else" target="_top">.NET documentation</a>
+     */
     public DbExpression getElse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

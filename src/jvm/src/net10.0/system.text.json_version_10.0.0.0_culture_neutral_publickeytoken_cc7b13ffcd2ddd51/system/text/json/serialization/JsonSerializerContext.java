@@ -100,7 +100,10 @@ public class JsonSerializerContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonSerializerContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class JsonSerializerContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTypeInfo.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializerContext.GetTypeInfo" target="_top">.NET documentation</a>
+     */
     public JsonTypeInfo GetTypeInfo(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,8 +182,14 @@ public class JsonSerializerContext extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIJsonTypeInfoResolver method available in IJsonTypeInfoResolver to obtain an object with an invocable method
+     *
+     * @param type the argument of type {@code NetType}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver.GetTypeInfo" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public JsonTypeInfo GetTypeInfo(NetType type, JsonSerializerOptions options) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIJsonTypeInfoResolver to obtain the full interface.");
     }
@@ -181,6 +198,18 @@ public class JsonSerializerContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Options.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSerializerContext.Options" target="_top">.NET documentation</a>
+     */
     public JsonSerializerOptions getOptions() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

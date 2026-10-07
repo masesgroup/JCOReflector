@@ -103,7 +103,10 @@ public class ZoneIdentityPermissionAttribute extends system.security.permissions
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ZoneIdentityPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class ZoneIdentityPermissionAttribute extends system.security.permissions
     public ZoneIdentityPermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ZoneIdentityPermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ZoneIdentityPermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,14 @@ public class ZoneIdentityPermissionAttribute extends system.security.permissions
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ZoneIdentityPermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,13 @@ public class ZoneIdentityPermissionAttribute extends system.security.permissions
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Zone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ZoneIdentityPermissionAttribute.Zone" target="_top">.NET documentation</a>
+     */
     public SecurityZone getZone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +227,13 @@ public class ZoneIdentityPermissionAttribute extends system.security.permissions
         }
     }
 
+    /**
+     * Sets the value of the .NET property Zone.
+     *
+     * @param Zone the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.ZoneIdentityPermissionAttribute.Zone" target="_top">.NET documentation</a>
+     */
     public void setZone(SecurityZone Zone) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

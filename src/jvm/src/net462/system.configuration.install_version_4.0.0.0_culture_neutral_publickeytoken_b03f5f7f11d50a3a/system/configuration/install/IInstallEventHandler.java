@@ -52,5 +52,11 @@ import system.configuration.install.InstallEventArgs;
  * @version 2.0.0.0
  */
 public interface IInstallEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Configuration.Install.InstallEventArgs}
+     */
     public void Invoke(NetObject sender, InstallEventArgs e);
 }

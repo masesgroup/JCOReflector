@@ -98,7 +98,10 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IListenerChannelCallbackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBlobLength.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IListenerChannelCallback.GetBlobLength" target="_top">.NET documentation</a>
+     */
     public int GetBlobLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +190,13 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member GetId.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IListenerChannelCallback.GetId" target="_top">.NET documentation</a>
+     */
     public int GetId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +237,14 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member GetBlob.
+     *
+     * @param buffer the argument of type {@code JCORefOut}
+     * @param bufferSize the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IListenerChannelCallback.GetBlob" target="_top">.NET documentation</a>
+     */
     public void GetBlob(JCORefOut buffer, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bufferSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +255,12 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member ReportMessageReceived.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IListenerChannelCallback.ReportMessageReceived" target="_top">.NET documentation</a>
+     */
     public void ReportMessageReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +271,12 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member ReportStarted.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IListenerChannelCallback.ReportStarted" target="_top">.NET documentation</a>
+     */
     public void ReportStarted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +287,13 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member ReportStopped.
+     *
+     * @param hr the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IListenerChannelCallback.ReportStopped" target="_top">.NET documentation</a>
+     */
     public void ReportStopped(int hr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

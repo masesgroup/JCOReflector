@@ -99,7 +99,10 @@ public class StreamResourceInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamResourceInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class StreamResourceInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Resources.StreamResourceInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamResourceInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class StreamResourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param contentType the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Resources.StreamResourceInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public StreamResourceInfo(Stream stream, java.lang.String contentType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class StreamResourceInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Stream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Resources.StreamResourceInfo.Stream" target="_top">.NET documentation</a>
+     */
     public Stream getStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,13 @@ public class StreamResourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Resources.StreamResourceInfo.ContentType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

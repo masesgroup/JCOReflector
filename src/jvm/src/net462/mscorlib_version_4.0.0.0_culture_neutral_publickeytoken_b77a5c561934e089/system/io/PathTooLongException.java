@@ -103,7 +103,9 @@ public class PathTooLongException extends system.io.IOException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public PathTooLongException(java.lang.Object instance) {
         super(instance);

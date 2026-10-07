@@ -100,7 +100,10 @@ public class AssemblyHash extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssemblyHash(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class AssemblyHash extends system.ValueType  {
     public AssemblyHash() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyHash(byte[] value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,15 @@ public class AssemblyHash extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param algorithm the argument of type {@code AssemblyHashAlgorithm}
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.-ctor" target="_top">.NET documentation</a>
+     */
     public AssemblyHash(AssemblyHashAlgorithm algorithm, byte[] value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +195,13 @@ public class AssemblyHash extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.GetValue" target="_top">.NET documentation</a>
+     */
     public byte[] GetValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +225,14 @@ public class AssemblyHash extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.Clone" target="_top">.NET documentation</a>
+     */
     public NetObject Clone() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +248,13 @@ public class AssemblyHash extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(byte[] value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +265,13 @@ public class AssemblyHash extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +286,13 @@ public class AssemblyHash extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Algorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.Algorithm" target="_top">.NET documentation</a>
+     */
     public AssemblyHashAlgorithm getAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +308,13 @@ public class AssemblyHash extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Algorithm.
+     *
+     * @param Algorithm the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.Assemblies.AssemblyHash.Algorithm" target="_top">.NET documentation</a>
+     */
     public void setAlgorithm(AssemblyHashAlgorithm Algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

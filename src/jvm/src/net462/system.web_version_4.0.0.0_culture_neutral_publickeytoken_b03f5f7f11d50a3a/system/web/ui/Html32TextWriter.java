@@ -101,7 +101,10 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Html32TextWriter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
     public Html32TextWriter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param writer the argument of type {@code TextWriter}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.-ctor" target="_top">.NET documentation</a>
+     */
     public Html32TextWriter(TextWriter writer) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +174,18 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param writer the argument of type {@code TextWriter}
+     * @param tabString the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.-ctor" target="_top">.NET documentation</a>
+     */
     public Html32TextWriter(TextWriter writer, java.lang.String tabString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +201,26 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RenderBeginTag.
+     *
+     * @param tagKey the argument of type {@code HtmlTextWriterTag}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.RenderBeginTag" target="_top">.NET documentation</a>
+     */
     public void RenderBeginTag(HtmlTextWriterTag tagKey) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +231,21 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Invokes the .NET member RenderEndTag.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.RenderEndTag" target="_top">.NET documentation</a>
+     */
     public void RenderEndTag() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +260,13 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ShouldPerformDivTableSubstitution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.ShouldPerformDivTableSubstitution" target="_top">.NET documentation</a>
+     */
     public boolean getShouldPerformDivTableSubstitution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +281,13 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShouldPerformDivTableSubstitution.
+     *
+     * @param ShouldPerformDivTableSubstitution the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.ShouldPerformDivTableSubstitution" target="_top">.NET documentation</a>
+     */
     public void setShouldPerformDivTableSubstitution(boolean ShouldPerformDivTableSubstitution) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +298,13 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsBold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.SupportsBold" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsBold() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +319,13 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportsBold.
+     *
+     * @param SupportsBold the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.SupportsBold" target="_top">.NET documentation</a>
+     */
     public void setSupportsBold(boolean SupportsBold) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +336,13 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsItalic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.SupportsItalic" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsItalic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +357,13 @@ public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportsItalic.
+     *
+     * @param SupportsItalic the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Html32TextWriter.SupportsItalic" target="_top">.NET documentation</a>
+     */
     public void setSupportsItalic(boolean SupportsItalic) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

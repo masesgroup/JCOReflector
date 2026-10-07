@@ -104,7 +104,10 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPropertyValueUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,15 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPropertyUIValueItems.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param propDesc the argument of type {@code PropertyDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IPropertyValueUIService.GetPropertyUIValueItems" target="_top">.NET documentation</a>
+     */
     public PropertyValueUIItem[] GetPropertyUIValueItems(ITypeDescriptorContext context, PropertyDescriptor propDesc) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +179,13 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member AddPropertyValueUIHandler.
+     *
+     * @param newHandler the argument of type {@code PropertyValueUIHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IPropertyValueUIService.AddPropertyValueUIHandler" target="_top">.NET documentation</a>
+     */
     public void AddPropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +196,12 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member NotifyPropertyValueUIItemsChanged.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IPropertyValueUIService.NotifyPropertyValueUIItemsChanged" target="_top">.NET documentation</a>
+     */
     public void NotifyPropertyValueUIItemsChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member RemovePropertyValueUIHandler.
+     *
+     * @param newHandler the argument of type {@code PropertyValueUIHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.IPropertyValueUIService.RemovePropertyValueUIHandler" target="_top">.NET documentation</a>
+     */
     public void RemovePropertyValueUIHandler(PropertyValueUIHandler newHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +238,13 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPropertyUIValueItemsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPropertyUIValueItemsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +255,13 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member removePropertyUIValueItemsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePropertyUIValueItemsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class DataGridColumnCollectionEditor extends system.drawing.design.UIType
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridColumnCollectionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class DataGridColumnCollectionEditor extends system.drawing.design.UIType
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataGridColumnCollectionEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridColumnCollectionEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,14 @@ public class DataGridColumnCollectionEditor extends system.drawing.design.UIType
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEditStyle.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataGridColumnCollectionEditor.GetEditStyle" target="_top">.NET documentation</a>
+     */
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +197,16 @@ public class DataGridColumnCollectionEditor extends system.drawing.design.UIType
         }
     }
 
+    /**
+     * Invokes the .NET member EditValue.
+     *
+     * @param context the argument of type {@code ITypeDescriptorContext}
+     * @param provider the argument of type {@code IServiceProvider}
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.DataGridColumnCollectionEditor.EditValue" target="_top">.NET documentation</a>
+     */
     public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

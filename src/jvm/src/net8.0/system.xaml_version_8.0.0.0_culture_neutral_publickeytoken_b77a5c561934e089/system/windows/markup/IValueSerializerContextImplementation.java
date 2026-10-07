@@ -106,7 +106,10 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValueSerializerContextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IValueSerializerContextImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member OnComponentChanging.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.OnComponentChanging" target="_top">.NET documentation</a>
+     */
     public boolean OnComponentChanging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetService.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.GetService" target="_top">.NET documentation</a>
+     */
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetValueSerializerFor.
+     *
+     * @param descriptor the argument of type {@code PropertyDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor" target="_top">.NET documentation</a>
+     */
     public ValueSerializer GetValueSerializerFor(PropertyDescriptor descriptor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +218,14 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetValueSerializerFor.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.GetValueSerializerFor" target="_top">.NET documentation</a>
+     */
     public ValueSerializer GetValueSerializerFor(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +241,12 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member OnComponentChanged.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.OnComponentChanged" target="_top">.NET documentation</a>
+     */
     public void OnComponentChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +261,13 @@ public class IValueSerializerContextImplementation extends NetObject implements 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Container.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.Container" target="_top">.NET documentation</a>
+     */
     public IContainer getContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +283,13 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyDescriptor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.PropertyDescriptor" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +305,13 @@ public class IValueSerializerContextImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Instance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.IValueSerializerContext.Instance" target="_top">.NET documentation</a>
+     */
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

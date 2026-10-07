@@ -100,7 +100,10 @@ public class DeploymentProgressChangedEventArgs extends system.componentmodel.Pr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DeploymentProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class DeploymentProgressChangedEventArgs extends system.componentmodel.Pr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BytesCompleted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesCompleted" target="_top">.NET documentation</a>
+     */
     public long getBytesCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +209,13 @@ public class DeploymentProgressChangedEventArgs extends system.componentmodel.Pr
         }
     }
 
+    /**
+     * Gets the value of the .NET property BytesTotal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DeploymentProgressChangedEventArgs.BytesTotal" target="_top">.NET documentation</a>
+     */
     public long getBytesTotal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +256,13 @@ public class DeploymentProgressChangedEventArgs extends system.componentmodel.Pr
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DeploymentProgressChangedEventArgs.State" target="_top">.NET documentation</a>
+     */
     public DeploymentProgressState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +278,13 @@ public class DeploymentProgressChangedEventArgs extends system.componentmodel.Pr
         }
     }
 
+    /**
+     * Gets the value of the .NET property Group.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.DeploymentProgressChangedEventArgs.Group" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

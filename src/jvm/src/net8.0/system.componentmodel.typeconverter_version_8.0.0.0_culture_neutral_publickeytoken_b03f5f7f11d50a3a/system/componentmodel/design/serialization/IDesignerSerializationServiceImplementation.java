@@ -100,7 +100,10 @@ public class IDesignerSerializationServiceImplementation extends NetObject imple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerSerializationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IDesignerSerializationServiceImplementation extends NetObject imple
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Deserialize.
+     *
+     * @param serializationData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationService.Deserialize" target="_top">.NET documentation</a>
+     */
     public ICollection Deserialize(NetObject serializationData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,14 @@ public class IDesignerSerializationServiceImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param objects the argument of type {@code ICollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerSerializationService.Serialize" target="_top">.NET documentation</a>
+     */
     public NetObject Serialize(ICollection objects) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

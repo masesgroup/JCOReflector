@@ -103,7 +103,10 @@ public class SqlClientPermission extends system.data.common.DBDataPermission  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlClientPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class SqlClientPermission extends system.data.common.DBDataPermission  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlClientPermission() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class SqlClientPermission extends system.data.common.DBDataPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @param allowBlankPassword the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlClientPermission(PermissionState state, boolean allowBlankPassword) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +187,13 @@ public class SqlClientPermission extends system.data.common.DBDataPermission  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlClientPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class SqlClientPermission extends system.data.common.DBDataPermission  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientPermission.Copy" target="_top">.NET documentation</a>
+     */
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,15 @@ public class SqlClientPermission extends system.data.common.DBDataPermission  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param connectionString the argument of type {@code java.lang.String}
+     * @param restrictions the argument of type {@code java.lang.String}
+     * @param behavior the argument of type {@code KeyRestrictionBehavior}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlClientPermission.Add" target="_top">.NET documentation</a>
+     */
     public void Add(java.lang.String connectionString, java.lang.String restrictions, KeyRestrictionBehavior behavior) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

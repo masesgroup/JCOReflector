@@ -99,7 +99,10 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIPersistFileImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDirty.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIPersistFile.IsDirty" target="_top">.NET documentation</a>
+     */
     public int IsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +191,13 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
         }
     }
 
+    /**
+     * Invokes the .NET member GetClassID.
+     *
+     * @param pClassID the argument of type {@code JCORefOut<Guid>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIPersistFile.GetClassID" target="_top">.NET documentation</a>
+     */
     public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +208,13 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurFile.
+     *
+     * @param ppszFileName the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIPersistFile.GetCurFile" target="_top">.NET documentation</a>
+     */
     public void GetCurFile(JCORefOut ppszFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,14 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
         }
     }
 
+    /**
+     * Invokes the .NET member Load.
+     *
+     * @param pszFileName the argument of type {@code java.lang.String}
+     * @param dwMode the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIPersistFile.Load" target="_top">.NET documentation</a>
+     */
     public void Load(java.lang.String pszFileName, int dwMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +243,14 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
         }
     }
 
+    /**
+     * Invokes the .NET member Save.
+     *
+     * @param pszFileName the argument of type {@code java.lang.String}
+     * @param fRemember the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIPersistFile.Save" target="_top">.NET documentation</a>
+     */
     public void Save(java.lang.String pszFileName, boolean fRemember) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +261,13 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
         }
     }
 
+    /**
+     * Invokes the .NET member SaveCompleted.
+     *
+     * @param pszFileName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIPersistFile.SaveCompleted" target="_top">.NET documentation</a>
+     */
     public void SaveCompleted(java.lang.String pszFileName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -117,7 +117,10 @@ public class HttpResponseBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpResponseBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,16 @@ public class HttpResponseBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginFlush.
+     *
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.BeginFlush" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginFlush(AsyncCallback callback, NetObject state) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +198,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyAppPathModifier.
+     *
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ApplyAppPathModifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String ApplyAppPathModifier(java.lang.String virtualPath) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +221,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FlushAsync.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.FlushAsync" target="_top">.NET documentation</a>
+     */
     public Task FlushAsync() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +244,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddOnSendingHeaders.
+     *
+     * @param callback the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddOnSendingHeaders" target="_top">.NET documentation</a>
+     */
     public ISubscriptionToken AddOnSendingHeaders(Action_1 callback) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +268,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCacheDependency.
+     *
+     * @param dependencies the argument of type {@code CacheDependency...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddCacheDependency" target="_top">.NET documentation</a>
+     */
     public void AddCacheDependency(CacheDependency... dependencies) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +286,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCacheItemDependencies.
+     *
+     * @param cacheKeys the argument of type {@code NetArrayList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddCacheItemDependencies" target="_top">.NET documentation</a>
+     */
     public void AddCacheItemDependencies(NetArrayList cacheKeys) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +304,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCacheItemDependencies.
+     *
+     * @param cacheKeys the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddCacheItemDependencies" target="_top">.NET documentation</a>
+     */
     public void AddCacheItemDependencies(java.lang.String[] cacheKeys) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +322,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCacheItemDependencies.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddCacheItemDependencies" target="_top">.NET documentation</a>
+     */
     public void AddCacheItemDependencies(JCORefOut dupParam0) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +340,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddCacheItemDependency.
+     *
+     * @param cacheKey the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddCacheItemDependency" target="_top">.NET documentation</a>
+     */
     public void AddCacheItemDependency(java.lang.String cacheKey) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +358,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFileDependencies.
+     *
+     * @param filenames the argument of type {@code NetArrayList}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddFileDependencies" target="_top">.NET documentation</a>
+     */
     public void AddFileDependencies(NetArrayList filenames) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +376,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFileDependencies.
+     *
+     * @param filenames the argument of type {@code java.lang.String[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddFileDependencies" target="_top">.NET documentation</a>
+     */
     public void AddFileDependencies(java.lang.String[] filenames) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +394,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFileDependencies.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddFileDependencies" target="_top">.NET documentation</a>
+     */
     public void AddFileDependencies(JCORefOut dupParam0) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +412,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddFileDependency.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddFileDependency" target="_top">.NET documentation</a>
+     */
     public void AddFileDependency(java.lang.String filename) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +430,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddHeader.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddHeader" target="_top">.NET documentation</a>
+     */
     public void AddHeader(java.lang.String name, java.lang.String value) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +449,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendCookie.
+     *
+     * @param cookie the argument of type {@code HttpCookie}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AppendCookie" target="_top">.NET documentation</a>
+     */
     public void AppendCookie(HttpCookie cookie) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +467,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendHeader.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AppendHeader" target="_top">.NET documentation</a>
+     */
     public void AppendHeader(java.lang.String name, java.lang.String value) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +486,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AppendToLog.
+     *
+     * @param param the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AppendToLog" target="_top">.NET documentation</a>
+     */
     public void AppendToLog(java.lang.String param) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +504,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BinaryWrite.
+     *
+     * @param buffer the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.BinaryWrite" target="_top">.NET documentation</a>
+     */
     public void BinaryWrite(byte[] buffer) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +522,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BinaryWrite.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.BinaryWrite" target="_top">.NET documentation</a>
+     */
     public void BinaryWrite(JCORefOut dupParam0) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +540,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +557,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearContent.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ClearContent" target="_top">.NET documentation</a>
+     */
     public void ClearContent() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +574,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearHeaders.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ClearHeaders" target="_top">.NET documentation</a>
+     */
     public void ClearHeaders() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +591,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +608,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisableKernelCache.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.DisableKernelCache" target="_top">.NET documentation</a>
+     */
     public void DisableKernelCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +625,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisableUserCache.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.DisableUserCache" target="_top">.NET documentation</a>
+     */
     public void DisableUserCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +642,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member End.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.End" target="_top">.NET documentation</a>
+     */
     public void End() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -449,6 +659,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndFlush.
+     *
+     * @param asyncResult the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.EndFlush" target="_top">.NET documentation</a>
+     */
     public void EndFlush(IAsyncResult asyncResult) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -459,6 +677,13 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +694,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Pics.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Pics" target="_top">.NET documentation</a>
+     */
     public void Pics(java.lang.String value) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +712,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PushPromise.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.PushPromise" target="_top">.NET documentation</a>
+     */
     public void PushPromise(java.lang.String path) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +730,16 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PushPromise.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param method the argument of type {@code java.lang.String}
+     * @param headers the argument of type {@code NameValueCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.PushPromise" target="_top">.NET documentation</a>
+     */
     public void PushPromise(java.lang.String path, java.lang.String method, NameValueCollection headers) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +750,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Redirect.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Redirect" target="_top">.NET documentation</a>
+     */
     public void Redirect(java.lang.String url) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -509,6 +768,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Redirect.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param endResponse the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Redirect" target="_top">.NET documentation</a>
+     */
     public void Redirect(java.lang.String url, boolean endResponse) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +787,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectPermanent.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectPermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectPermanent(java.lang.String url) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +805,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectPermanent.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param endResponse the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectPermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectPermanent(java.lang.String url, boolean endResponse) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -539,6 +824,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoute.
+     *
+     * @param routeValues the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoute" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoute(NetObject routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -549,6 +842,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoute.
+     *
+     * @param routeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoute" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoute(java.lang.String routeName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -559,6 +860,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoute.
+     *
+     * @param routeName the argument of type {@code java.lang.String}
+     * @param routeValues the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoute" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoute(java.lang.String routeName, NetObject routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -569,6 +879,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoute.
+     *
+     * @param routeName the argument of type {@code java.lang.String}
+     * @param routeValues the argument of type {@code RouteValueDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoute" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoute(java.lang.String routeName, RouteValueDictionary routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +898,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoute.
+     *
+     * @param routeValues the argument of type {@code RouteValueDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoute" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoute(RouteValueDictionary routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +916,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoutePermanent.
+     *
+     * @param routeValues the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoutePermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoutePermanent(NetObject routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +934,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoutePermanent.
+     *
+     * @param routeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoutePermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoutePermanent(java.lang.String routeName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -609,6 +952,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoutePermanent.
+     *
+     * @param routeName the argument of type {@code java.lang.String}
+     * @param routeValues the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoutePermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoutePermanent(java.lang.String routeName, NetObject routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +971,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoutePermanent.
+     *
+     * @param routeName the argument of type {@code java.lang.String}
+     * @param routeValues the argument of type {@code RouteValueDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoutePermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoutePermanent(java.lang.String routeName, RouteValueDictionary routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +990,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RedirectToRoutePermanent.
+     *
+     * @param routeValues the argument of type {@code RouteValueDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectToRoutePermanent" target="_top">.NET documentation</a>
+     */
     public void RedirectToRoutePermanent(RouteValueDictionary routeValues) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -639,6 +1008,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveOutputCacheItem.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RemoveOutputCacheItem" target="_top">.NET documentation</a>
+     */
     public void RemoveOutputCacheItem(java.lang.String path) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -649,6 +1026,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveOutputCacheItem.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param providerName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RemoveOutputCacheItem" target="_top">.NET documentation</a>
+     */
     public void RemoveOutputCacheItem(java.lang.String path, java.lang.String providerName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -659,6 +1045,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCookie.
+     *
+     * @param cookie the argument of type {@code HttpCookie}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SetCookie" target="_top">.NET documentation</a>
+     */
     public void SetCookie(HttpCookie cookie) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -669,6 +1063,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransmitFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.TransmitFile" target="_top">.NET documentation</a>
+     */
     public void TransmitFile(java.lang.String filename) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -679,6 +1081,16 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TransmitFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code long}
+     * @param length the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.TransmitFile" target="_top">.NET documentation</a>
+     */
     public void TransmitFile(java.lang.String filename, long offset, long length) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -689,6 +1101,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param ch the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Write" target="_top">.NET documentation</a>
+     */
     public void Write(char ch) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +1119,16 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param buffer the argument of type {@code char[]}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Write" target="_top">.NET documentation</a>
+     */
     public void Write(char[] buffer, int index, int count) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1139,16 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code int}
+     * @param dupParam2 the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Write" target="_top">.NET documentation</a>
+     */
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -719,6 +1159,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Write" target="_top">.NET documentation</a>
+     */
     public void Write(NetObject obj) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -729,6 +1177,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Write.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Write" target="_top">.NET documentation</a>
+     */
     public void Write(java.lang.String s) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -739,6 +1195,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.WriteFile" target="_top">.NET documentation</a>
+     */
     public void WriteFile(java.lang.String filename) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -749,6 +1213,15 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param readIntoMemory the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.WriteFile" target="_top">.NET documentation</a>
+     */
     public void WriteFile(java.lang.String filename, boolean readIntoMemory) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -759,6 +1232,16 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteFile.
+     *
+     * @param filename the argument of type {@code java.lang.String}
+     * @param offset the argument of type {@code long}
+     * @param size the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.WriteFile" target="_top">.NET documentation</a>
+     */
     public void WriteFile(java.lang.String filename, long offset, long size) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -769,6 +1252,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteSubstitution.
+     *
+     * @param callback the argument of type {@code HttpResponseSubstitutionCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.WriteSubstitution" target="_top">.NET documentation</a>
+     */
     public void WriteSubstitution(HttpResponseSubstitutionCallback callback) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -783,6 +1274,14 @@ public class HttpResponseBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Buffer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Buffer" target="_top">.NET documentation</a>
+     */
     public boolean getBuffer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -797,6 +1296,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Buffer.
+     *
+     * @param Buffer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Buffer" target="_top">.NET documentation</a>
+     */
     public void setBuffer(boolean Buffer) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -807,6 +1314,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BufferOutput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.BufferOutput" target="_top">.NET documentation</a>
+     */
     public boolean getBufferOutput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -821,6 +1336,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BufferOutput.
+     *
+     * @param BufferOutput the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.BufferOutput" target="_top">.NET documentation</a>
+     */
     public void setBufferOutput(boolean BufferOutput) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -831,6 +1354,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeadersWritten.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.HeadersWritten" target="_top">.NET documentation</a>
+     */
     public boolean getHeadersWritten() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -845,6 +1376,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClientConnected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.IsClientConnected" target="_top">.NET documentation</a>
+     */
     public boolean getIsClientConnected() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -859,6 +1398,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsRequestBeingRedirected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.IsRequestBeingRedirected" target="_top">.NET documentation</a>
+     */
     public boolean getIsRequestBeingRedirected() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -873,6 +1420,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsAsyncFlush.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SupportsAsyncFlush" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsAsyncFlush() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -887,6 +1442,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuppressContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SuppressContent" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressContent() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1464,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressContent.
+     *
+     * @param SuppressContent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SuppressContent" target="_top">.NET documentation</a>
+     */
     public void setSuppressContent(boolean SuppressContent) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -911,6 +1482,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuppressDefaultCacheControlHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SuppressDefaultCacheControlHeader" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressDefaultCacheControlHeader() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -925,6 +1504,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressDefaultCacheControlHeader.
+     *
+     * @param SuppressDefaultCacheControlHeader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SuppressDefaultCacheControlHeader" target="_top">.NET documentation</a>
+     */
     public void setSuppressDefaultCacheControlHeader(boolean SuppressDefaultCacheControlHeader) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -935,6 +1522,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SuppressFormsAuthenticationRedirect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SuppressFormsAuthenticationRedirect" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressFormsAuthenticationRedirect() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -949,6 +1544,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressFormsAuthenticationRedirect.
+     *
+     * @param SuppressFormsAuthenticationRedirect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SuppressFormsAuthenticationRedirect" target="_top">.NET documentation</a>
+     */
     public void setSuppressFormsAuthenticationRedirect(boolean SuppressFormsAuthenticationRedirect) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -959,6 +1562,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrySkipIisCustomErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.TrySkipIisCustomErrors" target="_top">.NET documentation</a>
+     */
     public boolean getTrySkipIisCustomErrors() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -973,6 +1584,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrySkipIisCustomErrors.
+     *
+     * @param TrySkipIisCustomErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.TrySkipIisCustomErrors" target="_top">.NET documentation</a>
+     */
     public void setTrySkipIisCustomErrors(boolean TrySkipIisCustomErrors) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -983,6 +1602,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expires.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Expires" target="_top">.NET documentation</a>
+     */
     public int getExpires() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1023,6 +1650,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Expires.
+     *
+     * @param Expires the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Expires" target="_top">.NET documentation</a>
+     */
     public void setExpires(int Expires) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1033,6 +1668,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.StatusCode" target="_top">.NET documentation</a>
+     */
     public int getStatusCode() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1073,6 +1716,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StatusCode.
+     *
+     * @param StatusCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.StatusCode" target="_top">.NET documentation</a>
+     */
     public void setStatusCode(int StatusCode) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1083,6 +1734,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubStatusCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SubStatusCode" target="_top">.NET documentation</a>
+     */
     public int getSubStatusCode() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1123,6 +1782,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubStatusCode.
+     *
+     * @param SubStatusCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.SubStatusCode" target="_top">.NET documentation</a>
+     */
     public void setSubStatusCode(int SubStatusCode) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1133,6 +1800,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Headers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Headers" target="_top">.NET documentation</a>
+     */
     public NameValueCollection getHeaders() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1148,6 +1823,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExpiresAbsolute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ExpiresAbsolute" target="_top">.NET documentation</a>
+     */
     public DateTime getExpiresAbsolute() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1163,6 +1846,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExpiresAbsolute.
+     *
+     * @param ExpiresAbsolute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ExpiresAbsolute" target="_top">.NET documentation</a>
+     */
     public void setExpiresAbsolute(DateTime ExpiresAbsolute) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1173,6 +1864,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Filter" target="_top">.NET documentation</a>
+     */
     public Stream getFilter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1188,6 +1887,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Filter.
+     *
+     * @param Filter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Filter" target="_top">.NET documentation</a>
+     */
     public void setFilter(Stream Filter) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1198,6 +1905,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OutputStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.OutputStream" target="_top">.NET documentation</a>
+     */
     public Stream getOutputStream() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1213,6 +1928,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Output.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Output" target="_top">.NET documentation</a>
+     */
     public TextWriter getOutput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1228,6 +1951,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Output.
+     *
+     * @param Output the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Output" target="_top">.NET documentation</a>
+     */
     public void setOutput(TextWriter Output) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1238,6 +1969,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.CacheControl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCacheControl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1252,6 +1991,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CacheControl.
+     *
+     * @param CacheControl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.CacheControl" target="_top">.NET documentation</a>
+     */
     public void setCacheControl(java.lang.String CacheControl) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1262,6 +2009,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Charset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Charset" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCharset() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1276,6 +2031,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Charset.
+     *
+     * @param Charset the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Charset" target="_top">.NET documentation</a>
+     */
     public void setCharset(java.lang.String Charset) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1286,6 +2049,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ContentType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1300,6 +2071,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentType.
+     *
+     * @param ContentType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ContentType" target="_top">.NET documentation</a>
+     */
     public void setContentType(java.lang.String ContentType) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1310,6 +2089,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RedirectLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectLocation" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRedirectLocation() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1324,6 +2111,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RedirectLocation.
+     *
+     * @param RedirectLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.RedirectLocation" target="_top">.NET documentation</a>
+     */
     public void setRedirectLocation(java.lang.String RedirectLocation) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1334,6 +2129,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Status" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStatus() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1348,6 +2151,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Status.
+     *
+     * @param Status the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Status" target="_top">.NET documentation</a>
+     */
     public void setStatus(java.lang.String Status) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1358,6 +2169,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.StatusDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStatusDescription() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1372,6 +2191,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StatusDescription.
+     *
+     * @param StatusDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.StatusDescription" target="_top">.NET documentation</a>
+     */
     public void setStatusDescription(java.lang.String StatusDescription) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1382,6 +2209,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ContentEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getContentEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1397,6 +2232,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentEncoding.
+     *
+     * @param ContentEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ContentEncoding" target="_top">.NET documentation</a>
+     */
     public void setContentEncoding(Encoding ContentEncoding) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1407,6 +2250,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.HeaderEncoding" target="_top">.NET documentation</a>
+     */
     public Encoding getHeaderEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1422,6 +2273,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderEncoding.
+     *
+     * @param HeaderEncoding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.HeaderEncoding" target="_top">.NET documentation</a>
+     */
     public void setHeaderEncoding(Encoding HeaderEncoding) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1432,6 +2291,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientDisconnectedToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.ClientDisconnectedToken" target="_top">.NET documentation</a>
+     */
     public CancellationToken getClientDisconnectedToken() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1447,6 +2314,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cache.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Cache" target="_top">.NET documentation</a>
+     */
     public HttpCachePolicyBase getCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1462,6 +2337,14 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.Cookies" target="_top">.NET documentation</a>
+     */
     public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

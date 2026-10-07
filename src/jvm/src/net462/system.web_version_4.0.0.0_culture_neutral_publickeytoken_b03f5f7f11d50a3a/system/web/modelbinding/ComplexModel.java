@@ -104,7 +104,10 @@ public class ComplexModel extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComplexModel(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,17 @@ public class ComplexModel extends NetObject  {
     public ComplexModel() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param modelMetadata the argument of type {@code ModelMetadata}
+     * @param propertyMetadata the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.-ctor" target="_top">.NET documentation</a>
+     */
     public ComplexModel(ModelMetadata modelMetadata, IEnumerable_1 propertyMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +187,13 @@ public class ComplexModel extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Results.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.Results" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getResults() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +209,13 @@ public class ComplexModel extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Results.
+     *
+     * @param Results the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.Results" target="_top">.NET documentation</a>
+     */
     public void setResults(IDictionary_2 Results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +226,13 @@ public class ComplexModel extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.PropertyMetadata" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getPropertyMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +248,13 @@ public class ComplexModel extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyMetadata.
+     *
+     * @param PropertyMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.PropertyMetadata" target="_top">.NET documentation</a>
+     */
     public void setPropertyMetadata(ReadOnlyCollection_1 PropertyMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +265,13 @@ public class ComplexModel extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.ModelMetadata" target="_top">.NET documentation</a>
+     */
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +287,13 @@ public class ComplexModel extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelMetadata.
+     *
+     * @param ModelMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.ModelMetadata" target="_top">.NET documentation</a>
+     */
     public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

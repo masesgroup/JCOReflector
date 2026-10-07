@@ -100,7 +100,10 @@ public class ExpressionMorphHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExpressionMorphHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class ExpressionMorphHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryInferReturnType.
+     *
+     * @param expression the argument of type {@code ActivityWithResult}
+     * @param context the argument of type {@code EditingContext}
+     * @param returnType the argument of type {@code JCORefOut<NetType>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Expressions.ExpressionMorphHelper.TryInferReturnType" target="_top">.NET documentation</a>
+     */
     public boolean TryInferReturnType(ActivityWithResult expression, EditingContext context, JCORefOut<NetType> returnType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +180,18 @@ public class ExpressionMorphHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryMorphExpression.
+     *
+     * @param expression the argument of type {@code ActivityWithResult}
+     * @param isLocationExpression the argument of type {@code boolean}
+     * @param newType the argument of type {@code NetType}
+     * @param context the argument of type {@code EditingContext}
+     * @param newExpression the argument of type {@code JCORefOut<ActivityWithResult>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Expressions.ExpressionMorphHelper.TryMorphExpression" target="_top">.NET documentation</a>
+     */
     public boolean TryMorphExpression(ActivityWithResult expression, boolean isLocationExpression, NetType newType, EditingContext context, JCORefOut<ActivityWithResult> newExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -103,7 +103,9 @@ public class EncoderFallbackException extends system.ArgumentException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public EncoderFallbackException(java.lang.Object instance) {
         super(instance);
@@ -168,6 +170,13 @@ public class EncoderFallbackException extends system.ArgumentException {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsUnknownSurrogate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackException.IsUnknownSurrogate" target="_top">.NET documentation</a>
+     */
     public boolean IsUnknownSurrogate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +195,13 @@ public class EncoderFallbackException extends system.ArgumentException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CharUnknown.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackException.CharUnknown" target="_top">.NET documentation</a>
+     */
     public char getCharUnknown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +216,13 @@ public class EncoderFallbackException extends system.ArgumentException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CharUnknownHigh.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackException.CharUnknownHigh" target="_top">.NET documentation</a>
+     */
     public char getCharUnknownHigh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +237,13 @@ public class EncoderFallbackException extends system.ArgumentException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CharUnknownLow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackException.CharUnknownLow" target="_top">.NET documentation</a>
+     */
     public char getCharUnknownLow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +258,13 @@ public class EncoderFallbackException extends system.ArgumentException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncoderFallbackException.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

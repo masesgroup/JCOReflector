@@ -102,7 +102,10 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMenuCommandServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GlobalInvoke.
+     *
+     * @param commandID the argument of type {@code CommandID}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.GlobalInvoke" target="_top">.NET documentation</a>
+     */
     public boolean GlobalInvoke(CommandID commandID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,14 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
+    /**
+     * Invokes the .NET member FindCommand.
+     *
+     * @param commandID the argument of type {@code CommandID}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.FindCommand" target="_top">.NET documentation</a>
+     */
     public MenuCommand FindCommand(CommandID commandID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,13 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
+    /**
+     * Invokes the .NET member AddCommand.
+     *
+     * @param command the argument of type {@code MenuCommand}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.AddCommand" target="_top">.NET documentation</a>
+     */
     public void AddCommand(MenuCommand command) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,13 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
+    /**
+     * Invokes the .NET member AddVerb.
+     *
+     * @param verb the argument of type {@code DesignerVerb}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.AddVerb" target="_top">.NET documentation</a>
+     */
     public void AddVerb(DesignerVerb verb) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveCommand.
+     *
+     * @param command the argument of type {@code MenuCommand}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.RemoveCommand" target="_top">.NET documentation</a>
+     */
     public void RemoveCommand(MenuCommand command) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +243,13 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveVerb.
+     *
+     * @param verb the argument of type {@code DesignerVerb}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.RemoveVerb" target="_top">.NET documentation</a>
+     */
     public void RemoveVerb(DesignerVerb verb) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +260,15 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
         }
     }
 
+    /**
+     * Invokes the .NET member ShowContextMenu.
+     *
+     * @param menuID the argument of type {@code CommandID}
+     * @param x the argument of type {@code int}
+     * @param y the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.ShowContextMenu" target="_top">.NET documentation</a>
+     */
     public void ShowContextMenu(CommandID menuID, int x, int y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +283,13 @@ public class IMenuCommandServiceImplementation extends NetObject implements IMen
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IMenuCommandService.Verbs" target="_top">.NET documentation</a>
+     */
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

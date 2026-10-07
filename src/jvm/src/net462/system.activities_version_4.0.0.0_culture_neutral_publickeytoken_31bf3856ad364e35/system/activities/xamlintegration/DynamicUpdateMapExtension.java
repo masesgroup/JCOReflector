@@ -104,7 +104,10 @@ public class DynamicUpdateMapExtension extends system.windows.markup.MarkupExten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicUpdateMapExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class DynamicUpdateMapExtension extends system.windows.markup.MarkupExten
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMapExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class DynamicUpdateMapExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param updateMap the argument of type {@code DynamicUpdateMap}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMapExtension(DynamicUpdateMap updateMap) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,14 @@ public class DynamicUpdateMapExtension extends system.windows.markup.MarkupExten
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ProvideValue.
+     *
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension.ProvideValue" target="_top">.NET documentation</a>
+     */
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +218,13 @@ public class DynamicUpdateMapExtension extends system.windows.markup.MarkupExten
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UpdateMap.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension.UpdateMap" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMap getUpdateMap() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +240,13 @@ public class DynamicUpdateMapExtension extends system.windows.markup.MarkupExten
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlContent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.DynamicUpdateMapExtension.XmlContent" target="_top">.NET documentation</a>
+     */
     public IXmlSerializable getXmlContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

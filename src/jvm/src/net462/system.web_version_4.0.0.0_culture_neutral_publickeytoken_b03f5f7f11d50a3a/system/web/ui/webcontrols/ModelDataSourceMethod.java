@@ -100,7 +100,10 @@ public class ModelDataSourceMethod extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelDataSourceMethod(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class ModelDataSourceMethod extends NetObject  {
     public ModelDataSourceMethod() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instance the argument of type {@code NetObject}
+     * @param methodInfo the argument of type {@code MethodInfo}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceMethod.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelDataSourceMethod(NetObject instance, MethodInfo methodInfo) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,20 @@ public class ModelDataSourceMethod extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceMethod.Parameters" target="_top">.NET documentation</a>
+     */
     public OrderedDictionary getParameters() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +211,13 @@ public class ModelDataSourceMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Instance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceMethod.Instance" target="_top">.NET documentation</a>
+     */
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +233,13 @@ public class ModelDataSourceMethod extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Instance.
+     *
+     * @param Instance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceMethod.Instance" target="_top">.NET documentation</a>
+     */
     public void setInstance(NetObject Instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +250,13 @@ public class ModelDataSourceMethod extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MethodInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceMethod.MethodInfo" target="_top">.NET documentation</a>
+     */
     public MethodInfo getMethodInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +272,13 @@ public class ModelDataSourceMethod extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MethodInfo.
+     *
+     * @param MethodInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ModelDataSourceMethod.MethodInfo" target="_top">.NET documentation</a>
+     */
     public void setMethodInfo(MethodInfo MethodInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

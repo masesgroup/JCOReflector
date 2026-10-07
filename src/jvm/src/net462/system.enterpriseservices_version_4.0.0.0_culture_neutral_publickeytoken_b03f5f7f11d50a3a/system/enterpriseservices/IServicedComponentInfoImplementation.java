@@ -98,7 +98,10 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IServicedComponentInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetComponentInfo.
+     *
+     * @param infoMask the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param infoArray the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo" target="_top">.NET documentation</a>
+     */
     public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

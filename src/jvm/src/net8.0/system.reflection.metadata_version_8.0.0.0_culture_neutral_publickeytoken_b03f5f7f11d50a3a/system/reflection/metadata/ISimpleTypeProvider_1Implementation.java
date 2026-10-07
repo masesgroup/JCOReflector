@@ -102,7 +102,10 @@ public class ISimpleTypeProvider_1Implementation<TType extends IJCOBridgeReflect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISimpleTypeProvider_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class ISimpleTypeProvider_1Implementation<TType extends IJCOBridgeReflect
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPrimitiveType.
+     *
+     * @param typeCode the argument of type {@code PrimitiveTypeCode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISimpleTypeProvider-1.GetPrimitiveType" target="_top">.NET documentation</a>
+     */
     public TType GetPrimitiveType(PrimitiveTypeCode typeCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +169,16 @@ public class ISimpleTypeProvider_1Implementation<TType extends IJCOBridgeReflect
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFromDefinition.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code TypeDefinitionHandle}
+     * @param rawTypeKind the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISimpleTypeProvider-1.GetTypeFromDefinition" target="_top">.NET documentation</a>
+     */
     public TType GetTypeFromDefinition(MetadataReader reader, TypeDefinitionHandle handle, byte rawTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +193,16 @@ public class ISimpleTypeProvider_1Implementation<TType extends IJCOBridgeReflect
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFromReference.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code TypeReferenceHandle}
+     * @param rawTypeKind the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISimpleTypeProvider-1.GetTypeFromReference" target="_top">.NET documentation</a>
+     */
     public TType GetTypeFromReference(MetadataReader reader, TypeReferenceHandle handle, byte rawTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

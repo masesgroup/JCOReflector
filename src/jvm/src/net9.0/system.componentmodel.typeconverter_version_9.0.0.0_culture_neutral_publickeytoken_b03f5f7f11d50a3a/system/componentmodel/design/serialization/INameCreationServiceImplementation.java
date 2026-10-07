@@ -100,7 +100,10 @@ public class INameCreationServiceImplementation extends NetObject implements INa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public INameCreationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class INameCreationServiceImplementation extends NetObject implements INa
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsValidName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.INameCreationService.IsValidName" target="_top">.NET documentation</a>
+     */
     public boolean IsValidName(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,15 @@ public class INameCreationServiceImplementation extends NetObject implements INa
         }
     }
 
+    /**
+     * Invokes the .NET member CreateName.
+     *
+     * @param container the argument of type {@code IContainer}
+     * @param dataType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.INameCreationService.CreateName" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +190,13 @@ public class INameCreationServiceImplementation extends NetObject implements INa
         }
     }
 
+    /**
+     * Invokes the .NET member ValidateName.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.INameCreationService.ValidateName" target="_top">.NET documentation</a>
+     */
     public void ValidateName(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

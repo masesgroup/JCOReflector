@@ -100,7 +100,10 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebSocketReceiveResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class WebSocketReceiveResult extends NetObject  {
     public WebSocketReceiveResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param count the argument of type {@code int}
+     * @param messageType the argument of type {@code WebSocketMessageType}
+     * @param endOfMessage the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.-ctor" target="_top">.NET documentation</a>
+     */
     public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +173,18 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param count the argument of type {@code int}
+     * @param messageType the argument of type {@code WebSocketMessageType}
+     * @param endOfMessage the argument of type {@code boolean}
+     * @param closeStatus the argument of type {@code Nullable_1}
+     * @param closeStatusDescription the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.-ctor" target="_top">.NET documentation</a>
+     */
     public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage, Nullable_1 closeStatus, java.lang.String closeStatusDescription) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +204,13 @@ public class WebSocketReceiveResult extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EndOfMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.EndOfMessage" target="_top">.NET documentation</a>
+     */
     public boolean getEndOfMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +225,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EndOfMessage.
+     *
+     * @param EndOfMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.EndOfMessage" target="_top">.NET documentation</a>
+     */
     public void setEndOfMessage(boolean EndOfMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +242,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +289,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Count.
+     *
+     * @param Count the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.Count" target="_top">.NET documentation</a>
+     */
     public void setCount(int Count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +306,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.MessageType" target="_top">.NET documentation</a>
+     */
     public WebSocketMessageType getMessageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +328,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MessageType.
+     *
+     * @param MessageType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.MessageType" target="_top">.NET documentation</a>
+     */
     public void setMessageType(WebSocketMessageType MessageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +345,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CloseStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.CloseStatus" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getCloseStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +367,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CloseStatus.
+     *
+     * @param CloseStatus the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.CloseStatus" target="_top">.NET documentation</a>
+     */
     public void setCloseStatus(Nullable_1 CloseStatus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +384,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CloseStatusDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.CloseStatusDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCloseStatusDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +405,13 @@ public class WebSocketReceiveResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CloseStatusDescription.
+     *
+     * @param CloseStatusDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.CloseStatusDescription" target="_top">.NET documentation</a>
+     */
     public void setCloseStatusDescription(java.lang.String CloseStatusDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

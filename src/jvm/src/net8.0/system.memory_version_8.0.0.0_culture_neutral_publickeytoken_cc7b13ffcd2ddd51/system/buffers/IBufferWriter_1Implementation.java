@@ -99,7 +99,10 @@ public class IBufferWriter_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBufferWriter_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IBufferWriter_1Implementation<T extends IJCOBridgeReflected> extend
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetMemory.
+     *
+     * @param sizeHint the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.IBufferWriter-1.GetMemory" target="_top">.NET documentation</a>
+     */
     public Memory_1 GetMemory(int sizeHint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,13 @@ public class IBufferWriter_1Implementation<T extends IJCOBridgeReflected> extend
         }
     }
 
+    /**
+     * Invokes the .NET member Advance.
+     *
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.IBufferWriter-1.Advance" target="_top">.NET documentation</a>
+     */
     public void Advance(int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPromotableSinglePhaseNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Promote.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification.Promote" target="_top">.NET documentation</a>
+     */
     public byte[] Promote() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +176,12 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +192,13 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member Rollback.
+     *
+     * @param singlePhaseEnlistment the argument of type {@code SinglePhaseEnlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification.Rollback" target="_top">.NET documentation</a>
+     */
     public void Rollback(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +209,13 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
         }
     }
 
+    /**
+     * Invokes the .NET member SinglePhaseCommit.
+     *
+     * @param singlePhaseEnlistment the argument of type {@code SinglePhaseEnlistment}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit" target="_top">.NET documentation</a>
+     */
     public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

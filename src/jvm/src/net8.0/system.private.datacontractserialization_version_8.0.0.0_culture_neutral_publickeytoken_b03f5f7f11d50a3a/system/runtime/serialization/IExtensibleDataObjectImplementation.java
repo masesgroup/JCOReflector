@@ -99,7 +99,10 @@ public class IExtensibleDataObjectImplementation extends NetObject implements IE
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExtensibleDataObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IExtensibleDataObjectImplementation extends NetObject implements IE
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExtensionData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IExtensibleDataObject.ExtensionData" target="_top">.NET documentation</a>
+     */
     public ExtensionDataObject getExtensionData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IExtensibleDataObjectImplementation extends NetObject implements IE
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExtensionData.
+     *
+     * @param ExtensionData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IExtensibleDataObject.ExtensionData" target="_top">.NET documentation</a>
+     */
     public void setExtensionData(ExtensionDataObject ExtensionData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -52,5 +52,10 @@ import system.componentmodel.RefreshEventArgs;
  * @version 2.0.0.0
  */
 public interface IRefreshEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param e the .NET argument of type {@code System.ComponentModel.RefreshEventArgs}
+     */
     public void Invoke(RefreshEventArgs e);
 }

@@ -99,7 +99,10 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXmlTextParserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Normalized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlTextParser.Normalized" target="_top">.NET documentation</a>
+     */
     public boolean getNormalized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,13 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
         }
     }
 
+    /**
+     * Sets the value of the .NET property Normalized.
+     *
+     * @param Normalized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlTextParser.Normalized" target="_top">.NET documentation</a>
+     */
     public void setNormalized(boolean Normalized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +186,13 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
         }
     }
 
+    /**
+     * Gets the value of the .NET property WhitespaceHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlTextParser.WhitespaceHandling" target="_top">.NET documentation</a>
+     */
     public WhitespaceHandling getWhitespaceHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,13 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
         }
     }
 
+    /**
+     * Sets the value of the .NET property WhitespaceHandling.
+     *
+     * @param WhitespaceHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.IXmlTextParser.WhitespaceHandling" target="_top">.NET documentation</a>
+     */
     public void setWhitespaceHandling(WhitespaceHandling WhitespaceHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

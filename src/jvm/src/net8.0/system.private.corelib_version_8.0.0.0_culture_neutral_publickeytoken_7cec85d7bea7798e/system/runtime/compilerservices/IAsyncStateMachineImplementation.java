@@ -100,7 +100,10 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAsyncStateMachineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,12 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member MoveNext.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" target="_top">.NET documentation</a>
+     */
     public void MoveNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +161,13 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
         }
     }
 
+    /**
+     * Invokes the .NET member SetStateMachine.
+     *
+     * @param stateMachine the argument of type {@code IAsyncStateMachine}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" target="_top">.NET documentation</a>
+     */
     public void SetStateMachine(IAsyncStateMachine stateMachine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

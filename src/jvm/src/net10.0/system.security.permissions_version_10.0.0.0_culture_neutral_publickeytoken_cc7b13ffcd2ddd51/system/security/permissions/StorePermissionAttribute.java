@@ -103,7 +103,10 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StorePermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
     public StorePermissionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param action the argument of type {@code SecurityAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public StorePermissionAttribute(SecurityAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePermission.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.CreatePermission" target="_top">.NET documentation</a>
+     */
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddToStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.AddToStore" target="_top">.NET documentation</a>
+     */
     public boolean getAddToStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddToStore.
+     *
+     * @param AddToStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.AddToStore" target="_top">.NET documentation</a>
+     */
     public void setAddToStore(boolean AddToStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +242,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property CreateStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.CreateStore" target="_top">.NET documentation</a>
+     */
     public boolean getCreateStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +263,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property CreateStore.
+     *
+     * @param CreateStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.CreateStore" target="_top">.NET documentation</a>
+     */
     public void setCreateStore(boolean CreateStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +280,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.DeleteStore" target="_top">.NET documentation</a>
+     */
     public boolean getDeleteStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +301,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteStore.
+     *
+     * @param DeleteStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.DeleteStore" target="_top">.NET documentation</a>
+     */
     public void setDeleteStore(boolean DeleteStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +318,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnumerateCertificates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.EnumerateCertificates" target="_top">.NET documentation</a>
+     */
     public boolean getEnumerateCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +339,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnumerateCertificates.
+     *
+     * @param EnumerateCertificates the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.EnumerateCertificates" target="_top">.NET documentation</a>
+     */
     public void setEnumerateCertificates(boolean EnumerateCertificates) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +356,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnumerateStores.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.EnumerateStores" target="_top">.NET documentation</a>
+     */
     public boolean getEnumerateStores() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +377,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnumerateStores.
+     *
+     * @param EnumerateStores the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.EnumerateStores" target="_top">.NET documentation</a>
+     */
     public void setEnumerateStores(boolean EnumerateStores) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +394,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property OpenStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.OpenStore" target="_top">.NET documentation</a>
+     */
     public boolean getOpenStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +415,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property OpenStore.
+     *
+     * @param OpenStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.OpenStore" target="_top">.NET documentation</a>
+     */
     public void setOpenStore(boolean OpenStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +432,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemoveFromStore.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.RemoveFromStore" target="_top">.NET documentation</a>
+     */
     public boolean getRemoveFromStore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +453,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property RemoveFromStore.
+     *
+     * @param RemoveFromStore the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.RemoveFromStore" target="_top">.NET documentation</a>
+     */
     public void setRemoveFromStore(boolean RemoveFromStore) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +470,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Flags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public StorePermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +492,13 @@ public class StorePermissionAttribute extends system.security.permissions.CodeAc
         }
     }
 
+    /**
+     * Sets the value of the .NET property Flags.
+     *
+     * @param Flags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StorePermissionAttribute.Flags" target="_top">.NET documentation</a>
+     */
     public void setFlags(StorePermissionFlags Flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

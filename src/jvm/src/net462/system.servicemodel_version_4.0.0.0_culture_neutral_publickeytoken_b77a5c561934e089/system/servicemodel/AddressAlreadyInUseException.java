@@ -103,7 +103,9 @@ public class AddressAlreadyInUseException extends system.servicemodel.Communicat
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public AddressAlreadyInUseException(java.lang.Object instance) {
         super(instance);

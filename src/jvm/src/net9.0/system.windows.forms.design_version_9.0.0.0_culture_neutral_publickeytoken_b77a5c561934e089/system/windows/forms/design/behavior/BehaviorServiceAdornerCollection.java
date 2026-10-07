@@ -102,7 +102,10 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BehaviorServiceAdornerCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
     public BehaviorServiceAdornerCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code Adorner[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public BehaviorServiceAdornerCollection(Adorner[] value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,13 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param behaviorService the argument of type {@code BehaviorService}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public BehaviorServiceAdornerCollection(BehaviorService behaviorService) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +189,13 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code BehaviorServiceAdornerCollection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public BehaviorServiceAdornerCollection(BehaviorServiceAdornerCollection value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +211,14 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param value the argument of type {@code Adorner}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Adorner value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +233,14 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code Adorner}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(Adorner value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +281,14 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param value the argument of type {@code Adorner}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(Adorner value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +329,13 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code Adorner...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(Adorner... value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +346,13 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param value the argument of type {@code BehaviorServiceAdornerCollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.AddRange" target="_top">.NET documentation</a>
+     */
     public void AddRange(BehaviorServiceAdornerCollection value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +363,14 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Adorner[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Adorner[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +381,14 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code Adorner}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, Adorner value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +399,13 @@ public class BehaviorServiceAdornerCollection extends system.collections.Collect
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code Adorner}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(Adorner value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

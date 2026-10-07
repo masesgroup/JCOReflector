@@ -100,7 +100,10 @@ public class BuilderPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BuilderPropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class BuilderPropertyEntry extends system.web.ui.PropertyEntry  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Builder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BuilderPropertyEntry.Builder" target="_top">.NET documentation</a>
+     */
     public ControlBuilder getBuilder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class BuilderPropertyEntry extends system.web.ui.PropertyEntry  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Builder.
+     *
+     * @param Builder the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.BuilderPropertyEntry.Builder" target="_top">.NET documentation</a>
+     */
     public void setBuilder(ControlBuilder Builder) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

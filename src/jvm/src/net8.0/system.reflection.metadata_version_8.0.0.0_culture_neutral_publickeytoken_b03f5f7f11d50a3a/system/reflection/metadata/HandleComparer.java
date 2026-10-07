@@ -101,7 +101,10 @@ public class HandleComparer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HandleComparer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class HandleComparer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code EntityHandle}
+     * @param y the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(EntityHandle x, EntityHandle y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,15 @@ public class HandleComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param x the argument of type {@code Handle}
+     * @param y the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Handle x, Handle y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,15 @@ public class HandleComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param x the argument of type {@code EntityHandle}
+     * @param y the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.Compare" target="_top">.NET documentation</a>
+     */
     public int Compare(EntityHandle x, EntityHandle y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +254,15 @@ public class HandleComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Compare.
+     *
+     * @param x the argument of type {@code Handle}
+     * @param y the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.Compare" target="_top">.NET documentation</a>
+     */
     public int Compare(Handle x, Handle y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +303,14 @@ public class HandleComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(EntityHandle obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +351,14 @@ public class HandleComparer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(Handle obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +403,13 @@ public class HandleComparer extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.HandleComparer.Default" target="_top">.NET documentation</a>
+     */
     public static HandleComparer getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

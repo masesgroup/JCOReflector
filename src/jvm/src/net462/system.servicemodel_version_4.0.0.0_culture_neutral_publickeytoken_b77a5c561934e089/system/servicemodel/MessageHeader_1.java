@@ -99,7 +99,10 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageHeader_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeader_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param content the argument of type {@code T}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeader_1(T content) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,16 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param content the argument of type {@code T}
+     * @param mustUnderstand the argument of type {@code boolean}
+     * @param actor the argument of type {@code java.lang.String}
+     * @param relay the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeader_1(T content, boolean mustUnderstand, java.lang.String actor, boolean relay) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +212,24 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetUntypedHeader.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.GetUntypedHeader" target="_top">.NET documentation</a>
+     */
     public MessageHeader GetUntypedHeader(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +249,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MustUnderstand.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public boolean getMustUnderstand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +270,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MustUnderstand.
+     *
+     * @param MustUnderstand the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.MustUnderstand" target="_top">.NET documentation</a>
+     */
     public void setMustUnderstand(boolean MustUnderstand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +287,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Relay.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.Relay" target="_top">.NET documentation</a>
+     */
     public boolean getRelay() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +308,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Relay.
+     *
+     * @param Relay the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.Relay" target="_top">.NET documentation</a>
+     */
     public void setRelay(boolean Relay) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +325,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Actor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.Actor" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +346,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Actor.
+     *
+     * @param Actor the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.Actor" target="_top">.NET documentation</a>
+     */
     public void setActor(java.lang.String Actor) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +363,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.Content" target="_top">.NET documentation</a>
+     */
     public T getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +384,13 @@ public class MessageHeader_1<T extends IJCOBridgeReflected> extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeader-1.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(T Content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

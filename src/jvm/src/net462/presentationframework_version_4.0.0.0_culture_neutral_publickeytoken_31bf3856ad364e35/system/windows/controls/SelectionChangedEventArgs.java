@@ -102,7 +102,10 @@ public class SelectionChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SelectionChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,18 @@ public class SelectionChangedEventArgs extends system.windows.RoutedEventArgs  {
     public SelectionChangedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param id the argument of type {@code RoutedEvent}
+     * @param removedItems the argument of type {@code IList}
+     * @param addedItems the argument of type {@code IList}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectionChangedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectionChangedEventArgs(RoutedEvent id, IList removedItems, IList addedItems) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +186,13 @@ public class SelectionChangedEventArgs extends system.windows.RoutedEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddedItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectionChangedEventArgs.AddedItems" target="_top">.NET documentation</a>
+     */
     public IList getAddedItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +208,13 @@ public class SelectionChangedEventArgs extends system.windows.RoutedEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectionChangedEventArgs.RemovedItems" target="_top">.NET documentation</a>
+     */
     public IList getRemovedItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

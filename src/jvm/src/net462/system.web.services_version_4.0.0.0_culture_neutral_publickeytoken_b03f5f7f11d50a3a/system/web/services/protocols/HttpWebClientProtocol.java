@@ -104,7 +104,10 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpWebClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,31 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateXmlMappings.
+     *
+     * @param type the argument of type {@code NetType}
+     * @param mappings the argument of type {@code NetArrayList}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.GenerateXmlMappings" target="_top">.NET documentation</a>
+     */
     public static boolean GenerateXmlMappings(NetType type, NetArrayList mappings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +199,29 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateXmlMappings.
+     *
+     * @param types the argument of type {@code NetType[]}
+     * @param mappings the argument of type {@code NetArrayList}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.GenerateXmlMappings" target="_top">.NET documentation</a>
+     */
     public static Hashtable GenerateXmlMappings(NetType[] types, NetArrayList mappings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +241,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowAutoRedirect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.AllowAutoRedirect" target="_top">.NET documentation</a>
+     */
     public boolean getAllowAutoRedirect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +262,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowAutoRedirect.
+     *
+     * @param AllowAutoRedirect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.AllowAutoRedirect" target="_top">.NET documentation</a>
+     */
     public void setAllowAutoRedirect(boolean AllowAutoRedirect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +279,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnableDecompression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.EnableDecompression" target="_top">.NET documentation</a>
+     */
     public boolean getEnableDecompression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +300,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableDecompression.
+     *
+     * @param EnableDecompression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.EnableDecompression" target="_top">.NET documentation</a>
+     */
     public void setEnableDecompression(boolean EnableDecompression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +317,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnsafeAuthenticatedConnectionSharing.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.UnsafeAuthenticatedConnectionSharing" target="_top">.NET documentation</a>
+     */
     public boolean getUnsafeAuthenticatedConnectionSharing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +338,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnsafeAuthenticatedConnectionSharing.
+     *
+     * @param UnsafeAuthenticatedConnectionSharing the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.UnsafeAuthenticatedConnectionSharing" target="_top">.NET documentation</a>
+     */
     public void setUnsafeAuthenticatedConnectionSharing(boolean UnsafeAuthenticatedConnectionSharing) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +355,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property CookieContainer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.CookieContainer" target="_top">.NET documentation</a>
+     */
     public CookieContainer getCookieContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +377,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Sets the value of the .NET property CookieContainer.
+     *
+     * @param CookieContainer the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.CookieContainer" target="_top">.NET documentation</a>
+     */
     public void setCookieContainer(CookieContainer CookieContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +394,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property Proxy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.Proxy" target="_top">.NET documentation</a>
+     */
     public IWebProxy getProxy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +416,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Sets the value of the .NET property Proxy.
+     *
+     * @param Proxy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.Proxy" target="_top">.NET documentation</a>
+     */
     public void setProxy(IWebProxy Proxy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +433,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientCertificates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.ClientCertificates" target="_top">.NET documentation</a>
+     */
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +455,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserAgent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.UserAgent" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUserAgent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +476,13 @@ public class HttpWebClientProtocol extends system.web.services.protocols.WebClie
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserAgent.
+     *
+     * @param UserAgent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.HttpWebClientProtocol.UserAgent" target="_top">.NET documentation</a>
+     */
     public void setUserAgent(java.lang.String UserAgent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

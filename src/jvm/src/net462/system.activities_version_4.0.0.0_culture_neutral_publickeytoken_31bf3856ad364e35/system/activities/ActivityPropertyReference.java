@@ -98,7 +98,10 @@ public class ActivityPropertyReference extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityPropertyReference(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class ActivityPropertyReference extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityPropertyReference.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityPropertyReference() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class ActivityPropertyReference extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SourceProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityPropertyReference.SourceProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class ActivityPropertyReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceProperty.
+     *
+     * @param SourceProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityPropertyReference.SourceProperty" target="_top">.NET documentation</a>
+     */
     public void setSourceProperty(java.lang.String SourceProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class ActivityPropertyReference extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityPropertyReference.TargetProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class ActivityPropertyReference extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetProperty.
+     *
+     * @param TargetProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityPropertyReference.TargetProperty" target="_top">.NET documentation</a>
+     */
     public void setTargetProperty(java.lang.String TargetProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

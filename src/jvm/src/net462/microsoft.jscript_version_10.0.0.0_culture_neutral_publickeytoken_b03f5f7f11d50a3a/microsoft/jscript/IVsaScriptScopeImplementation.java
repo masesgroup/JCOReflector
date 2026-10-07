@@ -103,7 +103,10 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IVsaScriptScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetItemCount.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.GetItemCount" target="_top">.NET documentation</a>
+     */
     public int GetItemCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +195,15 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member AddItem.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code JSVsaItemType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.AddItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem AddItem(java.lang.String itemName, JSVsaItemType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +219,15 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member CreateDynamicItem.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code JSVsaItemType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.CreateDynamicItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem CreateDynamicItem(java.lang.String itemName, JSVsaItemType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +243,14 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member GetItem.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.GetItem" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +266,14 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member GetItemAtIndex.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.GetItemAtIndex" target="_top">.NET documentation</a>
+     */
     public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +289,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.GetObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +311,14 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member GetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.GetOption" target="_top">.NET documentation</a>
+     */
     public NetObject GetOption(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +334,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveItem.
+     *
+     * @param item the argument of type {@code IJSVsaItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.RemoveItem" target="_top">.NET documentation</a>
+     */
     public void RemoveItem(IJSVsaItem item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +351,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveItem.
+     *
+     * @param itemName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.RemoveItem" target="_top">.NET documentation</a>
+     */
     public void RemoveItem(java.lang.String itemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +368,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveItemAtIndex.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.RemoveItemAtIndex" target="_top">.NET documentation</a>
+     */
     public void RemoveItemAtIndex(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +385,14 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Invokes the .NET member SetOption.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.SetOption" target="_top">.NET documentation</a>
+     */
     public void SetOption(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +407,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +428,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.Parent" target="_top">.NET documentation</a>
+     */
     public IVsaScriptScope getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +450,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.ItemType" target="_top">.NET documentation</a>
+     */
     public JSVsaItemType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +472,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +493,13 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IVsaScriptScope.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

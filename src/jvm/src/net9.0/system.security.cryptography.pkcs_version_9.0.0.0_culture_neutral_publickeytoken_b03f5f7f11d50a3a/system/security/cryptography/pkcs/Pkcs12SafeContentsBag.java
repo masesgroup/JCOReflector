@@ -100,7 +100,10 @@ public class Pkcs12SafeContentsBag extends system.security.cryptography.pkcs.Pkc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Pkcs12SafeContentsBag(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class Pkcs12SafeContentsBag extends system.security.cryptography.pkcs.Pkc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SafeContents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12SafeContentsBag.SafeContents" target="_top">.NET documentation</a>
+     */
     public Pkcs12SafeContents getSafeContents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class Pkcs12SafeContentsBag extends system.security.cryptography.pkcs.Pkc
         }
     }
 
+    /**
+     * Sets the value of the .NET property SafeContents.
+     *
+     * @param SafeContents the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12SafeContentsBag.SafeContents" target="_top">.NET documentation</a>
+     */
     public void setSafeContents(Pkcs12SafeContents SafeContents) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

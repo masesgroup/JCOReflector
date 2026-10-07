@@ -99,7 +99,10 @@ public class StringProperty extends microsoft.build.framework.xamltypes.BaseProp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StringProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class StringProperty extends microsoft.build.framework.xamltypes.BaseProp
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringProperty.-ctor" target="_top">.NET documentation</a>
+     */
     public StringProperty() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class StringProperty extends microsoft.build.framework.xamltypes.BaseProp
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Subtype.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubtype() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class StringProperty extends microsoft.build.framework.xamltypes.BaseProp
         }
     }
 
+    /**
+     * Sets the value of the .NET property Subtype.
+     *
+     * @param Subtype the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringProperty.Subtype" target="_top">.NET documentation</a>
+     */
     public void setSubtype(java.lang.String Subtype) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

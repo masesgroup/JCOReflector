@@ -109,7 +109,10 @@ public class Task extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Task(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class Task extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +190,13 @@ public class Task extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuildEngine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.BuildEngine" target="_top">.NET documentation</a>
+     */
     public IBuildEngine getBuildEngine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +212,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BuildEngine.
+     *
+     * @param BuildEngine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.BuildEngine" target="_top">.NET documentation</a>
+     */
     public void setBuildEngine(IBuildEngine BuildEngine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +229,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuildEngine2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.BuildEngine2" target="_top">.NET documentation</a>
+     */
     public IBuildEngine2 getBuildEngine2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +251,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuildEngine3.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.BuildEngine3" target="_top">.NET documentation</a>
+     */
     public IBuildEngine3 getBuildEngine3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +273,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuildEngine4.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.BuildEngine4" target="_top">.NET documentation</a>
+     */
     public IBuildEngine4 getBuildEngine4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +295,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.HostObject" target="_top">.NET documentation</a>
+     */
     public ITaskHost getHostObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +317,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostObject.
+     *
+     * @param HostObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.HostObject" target="_top">.NET documentation</a>
+     */
     public void setHostObject(ITaskHost HostObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +334,13 @@ public class Task extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Log.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.Task.Log" target="_top">.NET documentation</a>
+     */
     public TaskLoggingHelper getLog() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

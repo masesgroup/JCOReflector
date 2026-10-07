@@ -113,7 +113,10 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IXpsFixedPageWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddColorContext.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddColorContext" target="_top">.NET documentation</a>
+     */
     public XpsColorContext AddColorContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +180,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddFont.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont" target="_top">.NET documentation</a>
+     */
     public XpsFont AddFont() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,15 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddFont.
+     *
+     * @param obfuscate the argument of type {@code boolean}
+     * @param addRestrictedRelationship the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont" target="_top">.NET documentation</a>
+     */
     public XpsFont AddFont(boolean obfuscate, boolean addRestrictedRelationship) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +226,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddFont.
+     *
+     * @param obfuscate the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddFont" target="_top">.NET documentation</a>
+     */
     public XpsFont AddFont(boolean obfuscate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +249,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddImage.
+     *
+     * @param mimeType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage" target="_top">.NET documentation</a>
+     */
     public XpsImage AddImage(java.lang.String mimeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +272,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddImage.
+     *
+     * @param imageType the argument of type {@code XpsImageType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage" target="_top">.NET documentation</a>
+     */
     public XpsImage AddImage(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +295,15 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param resourceType the argument of type {@code NetType}
+     * @param resourceUri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public XpsResource AddResource(NetType resourceType, Uri resourceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +319,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddResourceDictionary.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddResourceDictionary" target="_top">.NET documentation</a>
+     */
     public XpsResourceDictionary AddResourceDictionary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +341,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddStoryFragment.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddStoryFragment" target="_top">.NET documentation</a>
+     */
     public XpsStructure AddStoryFragment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +363,14 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member AddThumbnail.
+     *
+     * @param imageType the argument of type {@code XpsImageType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddThumbnail" target="_top">.NET documentation</a>
+     */
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +386,12 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -319,6 +406,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PageNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.PageNumber" target="_top">.NET documentation</a>
+     */
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -359,6 +453,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinkTargetStream.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.LinkTargetStream" target="_top">.NET documentation</a>
+     */
     public IList_1 getLinkTargetStream() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +475,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrintTicket.
+     *
+     * @param PrintTicket the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.PrintTicket" target="_top">.NET documentation</a>
+     */
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +492,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property Uri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.Uri" target="_top">.NET documentation</a>
+     */
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +514,13 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageWriter.XmlWriter" target="_top">.NET documentation</a>
+     */
     public XmlWriter getXmlWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

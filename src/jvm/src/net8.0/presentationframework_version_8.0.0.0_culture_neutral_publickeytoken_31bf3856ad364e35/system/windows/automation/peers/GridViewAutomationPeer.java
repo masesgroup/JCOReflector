@@ -107,7 +107,10 @@ public class GridViewAutomationPeer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GridViewAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,30 @@ public class GridViewAutomationPeer extends NetObject  {
     public GridViewAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code GridView}
+     * @param listview the argument of type {@code ListView}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.GridViewAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public GridViewAutomationPeer(GridView owner, ListView listview) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -175,8 +202,13 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     *
+     * @param children the argument of type {@code List_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetChildren" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public List_1 GetChildren(List_1 children) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
@@ -184,8 +216,13 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetPattern" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
@@ -193,8 +230,12 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetAutomationControlType" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public AutomationControlType GetAutomationControlType() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
@@ -202,8 +243,13 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     *
+     * @param item the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.CreateItemAutomationPeer" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ItemAutomationPeer CreateItemAutomationPeer(NetObject item) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
@@ -211,8 +257,12 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     *
+     * @param e the argument of type {@code NotifyCollectionChangedEventArgs}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.ItemsChanged" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ItemsChanged(NotifyCollectionChangedEventArgs e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
@@ -220,8 +270,11 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.ViewDetached" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ViewDetached() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
     }
@@ -229,8 +282,12 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
@@ -238,8 +295,12 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITableProvider.GetRowHeaders" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
@@ -247,8 +308,14 @@ public class GridViewAutomationPeer extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIGridProvider method available in IGridProvider to obtain an object with an invocable method
+     *
+     * @param row the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IGridProvider.GetItem" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
     }

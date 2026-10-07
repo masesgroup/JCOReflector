@@ -101,7 +101,10 @@ public class ReliabilityContractAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReliabilityContractAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ReliabilityContractAttribute extends system.Attribute  {
     public ReliabilityContractAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param consistencyGuarantee the argument of type {@code Consistency}
+     * @param cer the argument of type {@code Cer}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ReliabilityContractAttribute(Consistency consistencyGuarantee, Cer cer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class ReliabilityContractAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Cer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.Cer" target="_top">.NET documentation</a>
+     */
     public Cer getCer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class ReliabilityContractAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConsistencyGuarantee.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.ConsistencyGuarantee" target="_top">.NET documentation</a>
+     */
     public Consistency getConsistencyGuarantee() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

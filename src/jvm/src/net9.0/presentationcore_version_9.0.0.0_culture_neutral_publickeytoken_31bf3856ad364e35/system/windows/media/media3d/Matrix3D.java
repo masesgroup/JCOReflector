@@ -106,7 +106,10 @@ public class Matrix3D extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Matrix3D(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,28 @@ public class Matrix3D extends system.ValueType  {
     public Matrix3D() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param m11 the argument of type {@code double}
+     * @param m12 the argument of type {@code double}
+     * @param m13 the argument of type {@code double}
+     * @param m14 the argument of type {@code double}
+     * @param m21 the argument of type {@code double}
+     * @param m22 the argument of type {@code double}
+     * @param m23 the argument of type {@code double}
+     * @param m24 the argument of type {@code double}
+     * @param m31 the argument of type {@code double}
+     * @param m32 the argument of type {@code double}
+     * @param m33 the argument of type {@code double}
+     * @param m34 the argument of type {@code double}
+     * @param offsetX the argument of type {@code double}
+     * @param offsetY the argument of type {@code double}
+     * @param offsetZ the argument of type {@code double}
+     * @param m44 the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.-ctor" target="_top">.NET documentation</a>
+     */
     public Matrix3D(double m11, double m12, double m13, double m14, double m21, double m22, double m23, double m24, double m31, double m32, double m33, double m34, double offsetX, double offsetY, double offsetZ, double m44) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +196,15 @@ public class Matrix3D extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param matrix1 the argument of type {@code Matrix3D}
+     * @param matrix2 the argument of type {@code Matrix3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Equals" target="_top">.NET documentation</a>
+     */
     public static boolean Equals(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +219,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param value the argument of type {@code Matrix3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Matrix3D value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +241,23 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToString.
+     *
+     * @param provider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.ToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +272,15 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param matrix1 the argument of type {@code Matrix3D}
+     * @param matrix2 the argument of type {@code Matrix3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Multiply" target="_top">.NET documentation</a>
+     */
     public static Matrix3D Multiply(Matrix3D matrix1, Matrix3D matrix2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -228,6 +296,23 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Parse" target="_top">.NET documentation</a>
+     */
     public static Matrix3D Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +328,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param point the argument of type {@code Point3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Transform" target="_top">.NET documentation</a>
+     */
     public Point3D Transform(Point3D point) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +351,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param point the argument of type {@code Point4D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Transform" target="_top">.NET documentation</a>
+     */
     public Point4D Transform(Point4D point) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +374,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vector the argument of type {@code Vector3D}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Transform" target="_top">.NET documentation</a>
+     */
     public Vector3D Transform(Vector3D vector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +397,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Append.
+     *
+     * @param matrix the argument of type {@code Matrix3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Append" target="_top">.NET documentation</a>
+     */
     public void Append(Matrix3D matrix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +414,20 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Invert.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Invert" target="_top">.NET documentation</a>
+     */
     public void Invert() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +438,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Prepend.
+     *
+     * @param matrix the argument of type {@code Matrix3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Prepend" target="_top">.NET documentation</a>
+     */
     public void Prepend(Matrix3D matrix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -318,6 +455,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Rotate.
+     *
+     * @param quaternion the argument of type {@code Quaternion}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Rotate" target="_top">.NET documentation</a>
+     */
     public void Rotate(Quaternion quaternion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +472,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateAt.
+     *
+     * @param quaternion the argument of type {@code Quaternion}
+     * @param center the argument of type {@code Point3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.RotateAt" target="_top">.NET documentation</a>
+     */
     public void RotateAt(Quaternion quaternion, Point3D center) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +490,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotateAtPrepend.
+     *
+     * @param quaternion the argument of type {@code Quaternion}
+     * @param center the argument of type {@code Point3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.RotateAtPrepend" target="_top">.NET documentation</a>
+     */
     public void RotateAtPrepend(Quaternion quaternion, Point3D center) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +508,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member RotatePrepend.
+     *
+     * @param quaternion the argument of type {@code Quaternion}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.RotatePrepend" target="_top">.NET documentation</a>
+     */
     public void RotatePrepend(Quaternion quaternion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +525,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Scale.
+     *
+     * @param scale the argument of type {@code Vector3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Scale" target="_top">.NET documentation</a>
+     */
     public void Scale(Vector3D scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +542,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleAt.
+     *
+     * @param scale the argument of type {@code Vector3D}
+     * @param center the argument of type {@code Point3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.ScaleAt" target="_top">.NET documentation</a>
+     */
     public void ScaleAt(Vector3D scale, Point3D center) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +560,14 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScaleAtPrepend.
+     *
+     * @param scale the argument of type {@code Vector3D}
+     * @param center the argument of type {@code Point3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.ScaleAtPrepend" target="_top">.NET documentation</a>
+     */
     public void ScaleAtPrepend(Vector3D scale, Point3D center) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +578,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScalePrepend.
+     *
+     * @param scale the argument of type {@code Vector3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.ScalePrepend" target="_top">.NET documentation</a>
+     */
     public void ScalePrepend(Vector3D scale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +595,12 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetIdentity.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.SetIdentity" target="_top">.NET documentation</a>
+     */
     public void SetIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -408,6 +611,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param points the argument of type {@code Point3D[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Point3D[] points) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +628,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param points the argument of type {@code Point4D[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Point4D[] points) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +645,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param vectors the argument of type {@code Vector3D[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Transform" target="_top">.NET documentation</a>
+     */
     public void Transform(Vector3D[] vectors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +662,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Translate.
+     *
+     * @param offset the argument of type {@code Vector3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Translate" target="_top">.NET documentation</a>
+     */
     public void Translate(Vector3D offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -448,6 +679,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member TranslatePrepend.
+     *
+     * @param offset the argument of type {@code Vector3D}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.TranslatePrepend" target="_top">.NET documentation</a>
+     */
     public void TranslatePrepend(Vector3D offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,8 +699,14 @@ public class Matrix3D extends system.ValueType  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IFormattable.ToString" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
@@ -471,6 +715,15 @@ public class Matrix3D extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasInverse.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.HasInverse" target="_top">.NET documentation</a>
+     */
     public boolean getHasInverse() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +738,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAffine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.IsAffine" target="_top">.NET documentation</a>
+     */
     public boolean getIsAffine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +759,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.IsIdentity" target="_top">.NET documentation</a>
+     */
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +780,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Determinant.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Determinant" target="_top">.NET documentation</a>
+     */
     public double getDeterminant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -553,6 +827,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M11" target="_top">.NET documentation</a>
+     */
     public double getM11() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -593,6 +874,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M11.
+     *
+     * @param M11 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M11" target="_top">.NET documentation</a>
+     */
     public void setM11(double M11) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -603,6 +891,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M12" target="_top">.NET documentation</a>
+     */
     public double getM12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -643,6 +938,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M12.
+     *
+     * @param M12 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M12" target="_top">.NET documentation</a>
+     */
     public void setM12(double M12) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -653,6 +955,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M13.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M13" target="_top">.NET documentation</a>
+     */
     public double getM13() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -693,6 +1002,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M13.
+     *
+     * @param M13 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M13" target="_top">.NET documentation</a>
+     */
     public void setM13(double M13) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -703,6 +1019,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M14.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M14" target="_top">.NET documentation</a>
+     */
     public double getM14() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -743,6 +1066,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M14.
+     *
+     * @param M14 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M14" target="_top">.NET documentation</a>
+     */
     public void setM14(double M14) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -753,6 +1083,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M21.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M21" target="_top">.NET documentation</a>
+     */
     public double getM21() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -793,6 +1130,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M21.
+     *
+     * @param M21 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M21" target="_top">.NET documentation</a>
+     */
     public void setM21(double M21) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -803,6 +1147,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M22.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M22" target="_top">.NET documentation</a>
+     */
     public double getM22() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -843,6 +1194,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M22.
+     *
+     * @param M22 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M22" target="_top">.NET documentation</a>
+     */
     public void setM22(double M22) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -853,6 +1211,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M23.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M23" target="_top">.NET documentation</a>
+     */
     public double getM23() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -893,6 +1258,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M23.
+     *
+     * @param M23 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M23" target="_top">.NET documentation</a>
+     */
     public void setM23(double M23) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -903,6 +1275,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M24.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M24" target="_top">.NET documentation</a>
+     */
     public double getM24() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -943,6 +1322,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M24.
+     *
+     * @param M24 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M24" target="_top">.NET documentation</a>
+     */
     public void setM24(double M24) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -953,6 +1339,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M31.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M31" target="_top">.NET documentation</a>
+     */
     public double getM31() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -993,6 +1386,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M31.
+     *
+     * @param M31 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M31" target="_top">.NET documentation</a>
+     */
     public void setM31(double M31) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1003,6 +1403,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M32.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M32" target="_top">.NET documentation</a>
+     */
     public double getM32() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1043,6 +1450,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M32.
+     *
+     * @param M32 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M32" target="_top">.NET documentation</a>
+     */
     public void setM32(double M32) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1053,6 +1467,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M33.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M33" target="_top">.NET documentation</a>
+     */
     public double getM33() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1093,6 +1514,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M33.
+     *
+     * @param M33 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M33" target="_top">.NET documentation</a>
+     */
     public void setM33(double M33) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1103,6 +1531,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M34.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M34" target="_top">.NET documentation</a>
+     */
     public double getM34() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1143,6 +1578,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M34.
+     *
+     * @param M34 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M34" target="_top">.NET documentation</a>
+     */
     public void setM34(double M34) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1153,6 +1595,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property M44.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M44" target="_top">.NET documentation</a>
+     */
     public double getM44() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1193,6 +1642,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property M44.
+     *
+     * @param M44 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.M44" target="_top">.NET documentation</a>
+     */
     public void setM44(double M44) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1203,6 +1659,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.OffsetX" target="_top">.NET documentation</a>
+     */
     public double getOffsetX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1243,6 +1706,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetX.
+     *
+     * @param OffsetX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.OffsetX" target="_top">.NET documentation</a>
+     */
     public void setOffsetX(double OffsetX) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1253,6 +1723,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.OffsetY" target="_top">.NET documentation</a>
+     */
     public double getOffsetY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1293,6 +1770,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetY.
+     *
+     * @param OffsetY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.OffsetY" target="_top">.NET documentation</a>
+     */
     public void setOffsetY(double OffsetY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1303,6 +1787,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetZ.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.OffsetZ" target="_top">.NET documentation</a>
+     */
     public double getOffsetZ() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1343,6 +1834,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetZ.
+     *
+     * @param OffsetZ the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.OffsetZ" target="_top">.NET documentation</a>
+     */
     public void setOffsetZ(double OffsetZ) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1353,6 +1851,13 @@ public class Matrix3D extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Media3D.Matrix3D.Identity" target="_top">.NET documentation</a>
+     */
     public static Matrix3D getIdentity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

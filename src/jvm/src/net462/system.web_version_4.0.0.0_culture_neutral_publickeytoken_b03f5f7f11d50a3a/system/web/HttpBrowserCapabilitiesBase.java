@@ -103,7 +103,10 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpBrowserCapabilitiesBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,15 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EvaluateFilter.
+     *
+     * @param filterName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.EvaluateFilter" target="_top">.NET documentation</a>
+     */
     public boolean EvaluateFilter(java.lang.String filterName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +182,15 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsBrowser.
+     *
+     * @param browserName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.IsBrowser" target="_top">.NET documentation</a>
+     */
     public boolean IsBrowser(java.lang.String browserName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +205,16 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareFilters.
+     *
+     * @param filter1 the argument of type {@code java.lang.String}
+     * @param filter2 the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CompareFilters" target="_top">.NET documentation</a>
+     */
     public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +255,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetClrVersions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.GetClrVersions" target="_top">.NET documentation</a>
+     */
     public Version[] GetClrVersions() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +284,15 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateHtmlTextWriter.
+     *
+     * @param w the argument of type {@code TextWriter}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CreateHtmlTextWriter" target="_top">.NET documentation</a>
+     */
     public HtmlTextWriter CreateHtmlTextWriter(TextWriter w) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +308,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddBrowser.
+     *
+     * @param browserName the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.AddBrowser" target="_top">.NET documentation</a>
+     */
     public void AddBrowser(java.lang.String browserName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +326,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DisableOptimizedCacheKey.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.DisableOptimizedCacheKey" target="_top">.NET documentation</a>
+     */
     public void DisableOptimizedCacheKey() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +347,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActiveXControls.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ActiveXControls" target="_top">.NET documentation</a>
+     */
     public boolean getActiveXControls() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +369,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AOL.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.AOL" target="_top">.NET documentation</a>
+     */
     public boolean getAOL() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +391,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BackgroundSounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.BackgroundSounds" target="_top">.NET documentation</a>
+     */
     public boolean getBackgroundSounds() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +413,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Beta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Beta" target="_top">.NET documentation</a>
+     */
     public boolean getBeta() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +435,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanCombineFormsInDeck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanCombineFormsInDeck" target="_top">.NET documentation</a>
+     */
     public boolean getCanCombineFormsInDeck() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +457,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanInitiateVoiceCall.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanInitiateVoiceCall" target="_top">.NET documentation</a>
+     */
     public boolean getCanInitiateVoiceCall() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +479,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderAfterInputOrSelectElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderAfterInputOrSelectElement" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderAfterInputOrSelectElement() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +501,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderEmptySelects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderEmptySelects" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderEmptySelects() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +523,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderInputAndSelectElementsTogether.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderInputAndSelectElementsTogether" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderInputAndSelectElementsTogether() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -410,6 +545,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderMixedSelects.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderMixedSelects" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderMixedSelects() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +567,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderOneventAndPrevElementsTogether.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderOneventAndPrevElementsTogether" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderOneventAndPrevElementsTogether() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -438,6 +589,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderPostBackCards.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderPostBackCards" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderPostBackCards() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +611,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRenderSetvarZeroWithMultiSelectionList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanRenderSetvarZeroWithMultiSelectionList" target="_top">.NET documentation</a>
+     */
     public boolean getCanRenderSetvarZeroWithMultiSelectionList() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -466,6 +633,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanSendMail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CanSendMail" target="_top">.NET documentation</a>
+     */
     public boolean getCanSendMail() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +655,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CDF.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.CDF" target="_top">.NET documentation</a>
+     */
     public boolean getCDF() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +677,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Cookies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Cookies" target="_top">.NET documentation</a>
+     */
     public boolean getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -508,6 +699,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Crawler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Crawler" target="_top">.NET documentation</a>
+     */
     public boolean getCrawler() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +721,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Frames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Frames" target="_top">.NET documentation</a>
+     */
     public boolean getFrames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +743,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasBackButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.HasBackButton" target="_top">.NET documentation</a>
+     */
     public boolean getHasBackButton() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -550,6 +765,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HidesRightAlignedMultiselectScrollbars.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.HidesRightAlignedMultiselectScrollbars" target="_top">.NET documentation</a>
+     */
     public boolean getHidesRightAlignedMultiselectScrollbars() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +787,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.IsColor" target="_top">.NET documentation</a>
+     */
     public boolean getIsColor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +809,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMobileDevice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.IsMobileDevice" target="_top">.NET documentation</a>
+     */
     public boolean getIsMobileDevice() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -592,6 +831,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JavaApplets.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.JavaApplets" target="_top">.NET documentation</a>
+     */
     public boolean getJavaApplets() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -606,6 +853,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendersBreakBeforeWmlSelectAndInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RendersBreakBeforeWmlSelectAndInput" target="_top">.NET documentation</a>
+     */
     public boolean getRendersBreakBeforeWmlSelectAndInput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -620,6 +875,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendersBreaksAfterHtmlLists.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RendersBreaksAfterHtmlLists" target="_top">.NET documentation</a>
+     */
     public boolean getRendersBreaksAfterHtmlLists() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +897,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendersBreaksAfterWmlAnchor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RendersBreaksAfterWmlAnchor" target="_top">.NET documentation</a>
+     */
     public boolean getRendersBreaksAfterWmlAnchor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -648,6 +919,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendersBreaksAfterWmlInput.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RendersBreaksAfterWmlInput" target="_top">.NET documentation</a>
+     */
     public boolean getRendersBreaksAfterWmlInput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -662,6 +941,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendersWmlDoAcceptsInline.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RendersWmlDoAcceptsInline" target="_top">.NET documentation</a>
+     */
     public boolean getRendersWmlDoAcceptsInline() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -676,6 +963,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RendersWmlSelectsAsMenuCards.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RendersWmlSelectsAsMenuCards" target="_top">.NET documentation</a>
+     */
     public boolean getRendersWmlSelectsAsMenuCards() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -690,6 +985,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresAttributeColonSubstitution.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresAttributeColonSubstitution" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresAttributeColonSubstitution() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -704,6 +1007,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresContentTypeMetaTag.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresContentTypeMetaTag" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresContentTypeMetaTag() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -718,6 +1029,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresControlStateInSession.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresControlStateInSession" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresControlStateInSession() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -732,6 +1051,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresDBCSCharacter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresDBCSCharacter" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresDBCSCharacter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +1073,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresHtmlAdaptiveErrorReporting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresHtmlAdaptiveErrorReporting" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresHtmlAdaptiveErrorReporting() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -760,6 +1095,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresLeadingPageBreak.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresLeadingPageBreak" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresLeadingPageBreak() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -774,6 +1117,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresNoBreakInFormatting.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresNoBreakInFormatting" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresNoBreakInFormatting() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -788,6 +1139,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresOutputOptimization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresOutputOptimization" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresOutputOptimization() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -802,6 +1161,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresPhoneNumbersAsPlainText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresPhoneNumbersAsPlainText" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresPhoneNumbersAsPlainText() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -816,6 +1183,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresSpecialViewStateEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresSpecialViewStateEncoding" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresSpecialViewStateEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -830,6 +1205,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresUniqueFilePathSuffix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresUniqueFilePathSuffix" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresUniqueFilePathSuffix() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -844,6 +1227,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresUniqueHtmlCheckboxNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresUniqueHtmlCheckboxNames" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresUniqueHtmlCheckboxNames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -858,6 +1249,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresUniqueHtmlInputNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresUniqueHtmlInputNames" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresUniqueHtmlInputNames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -872,6 +1271,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiresUrlEncodedPostfieldValues.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiresUrlEncodedPostfieldValues" target="_top">.NET documentation</a>
+     */
     public boolean getRequiresUrlEncodedPostfieldValues() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -886,6 +1293,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsAccesskeyAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsAccesskeyAttribute" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsAccesskeyAttribute() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -900,6 +1315,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsBodyColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsBodyColor" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsBodyColor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -914,6 +1337,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsBold.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsBold" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsBold() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -928,6 +1359,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsCacheControlMetaTag.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsCacheControlMetaTag" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsCacheControlMetaTag() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -942,6 +1381,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsCallback" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsCallback() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -956,6 +1403,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsCss.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsCss" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsCss() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -970,6 +1425,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsDivAlign.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsDivAlign" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsDivAlign() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -984,6 +1447,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsDivNoWrap.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsDivNoWrap" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsDivNoWrap() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -998,6 +1469,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsEmptyStringInCookieValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsEmptyStringInCookieValue" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsEmptyStringInCookieValue() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1012,6 +1491,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsFontColor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsFontColor" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsFontColor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1026,6 +1513,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsFontName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsFontName" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsFontName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1040,6 +1535,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsFontSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsFontSize" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsFontSize() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1054,6 +1557,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsImageSubmit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsImageSubmit" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsImageSubmit() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1068,6 +1579,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsIModeSymbols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsIModeSymbols" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsIModeSymbols() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1082,6 +1601,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsInputIStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsInputIStyle" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsInputIStyle() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1096,6 +1623,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsInputMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsInputMode" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsInputMode() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1110,6 +1645,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsItalic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsItalic" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsItalic() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1124,6 +1667,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsJPhoneMultiMediaAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsJPhoneMultiMediaAttributes" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsJPhoneMultiMediaAttributes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1138,6 +1689,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsJPhoneSymbols.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsJPhoneSymbols" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsJPhoneSymbols() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1152,6 +1711,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsQueryStringInFormAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsQueryStringInFormAction" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsQueryStringInFormAction() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1166,6 +1733,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsRedirectWithCookie.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsRedirectWithCookie" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsRedirectWithCookie() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1180,6 +1755,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsSelectMultiple.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsSelectMultiple" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsSelectMultiple() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1194,6 +1777,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsUncheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsUncheck" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsUncheck() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1208,6 +1799,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportsXmlHttp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.SupportsXmlHttp" target="_top">.NET documentation</a>
+     */
     public boolean getSupportsXmlHttp() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1222,6 +1821,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tables.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Tables" target="_top">.NET documentation</a>
+     */
     public boolean getTables() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1236,6 +1843,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseOptimizedCacheKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.UseOptimizedCacheKey" target="_top">.NET documentation</a>
+     */
     public boolean getUseOptimizedCacheKey() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1250,6 +1865,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VBScript.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.VBScript" target="_top">.NET documentation</a>
+     */
     public boolean getVBScript() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1264,6 +1887,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Win16.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Win16" target="_top">.NET documentation</a>
+     */
     public boolean getWin16() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1278,6 +1909,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Win32.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Win32" target="_top">.NET documentation</a>
+     */
     public boolean getWin32() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1292,6 +1931,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GatewayMinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.GatewayMinorVersion" target="_top">.NET documentation</a>
+     */
     public double getGatewayMinorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1332,6 +1979,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MinorVersion" target="_top">.NET documentation</a>
+     */
     public double getMinorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1372,6 +2027,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultSubmitButtonLimit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.DefaultSubmitButtonLimit" target="_top">.NET documentation</a>
+     */
     public int getDefaultSubmitButtonLimit() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1412,6 +2075,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GatewayMajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.GatewayMajorVersion" target="_top">.NET documentation</a>
+     */
     public int getGatewayMajorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1452,6 +2123,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MajorVersion" target="_top">.NET documentation</a>
+     */
     public int getMajorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1492,6 +2171,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumHrefLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MaximumHrefLength" target="_top">.NET documentation</a>
+     */
     public int getMaximumHrefLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1532,6 +2219,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumRenderedPageSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MaximumRenderedPageSize" target="_top">.NET documentation</a>
+     */
     public int getMaximumRenderedPageSize() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1572,6 +2267,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumSoftkeyLabelLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MaximumSoftkeyLabelLength" target="_top">.NET documentation</a>
+     */
     public int getMaximumSoftkeyLabelLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1612,6 +2315,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberOfSoftkeys.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.NumberOfSoftkeys" target="_top">.NET documentation</a>
+     */
     public int getNumberOfSoftkeys() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1652,6 +2363,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScreenBitDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ScreenBitDepth" target="_top">.NET documentation</a>
+     */
     public int getScreenBitDepth() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1692,6 +2411,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScreenCharactersHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ScreenCharactersHeight" target="_top">.NET documentation</a>
+     */
     public int getScreenCharactersHeight() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1732,6 +2459,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScreenCharactersWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ScreenCharactersWidth" target="_top">.NET documentation</a>
+     */
     public int getScreenCharactersWidth() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1772,6 +2507,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScreenPixelsHeight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ScreenPixelsHeight" target="_top">.NET documentation</a>
+     */
     public int getScreenPixelsHeight() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1812,6 +2555,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ScreenPixelsWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ScreenPixelsWidth" target="_top">.NET documentation</a>
+     */
     public int getScreenPixelsWidth() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1852,6 +2603,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Browsers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Browsers" target="_top">.NET documentation</a>
+     */
     public NetArrayList getBrowsers() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1867,6 +2626,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Adapters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Adapters" target="_top">.NET documentation</a>
+     */
     public IDictionary getAdapters() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1882,6 +2649,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Capabilities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Capabilities" target="_top">.NET documentation</a>
+     */
     public IDictionary getCapabilities() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1897,6 +2672,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Capabilities.
+     *
+     * @param Capabilities the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Capabilities" target="_top">.NET documentation</a>
+     */
     public void setCapabilities(IDictionary Capabilities) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1907,6 +2690,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Browser.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Browser" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBrowser() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1921,6 +2712,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GatewayVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.GatewayVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGatewayVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1935,6 +2734,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HtmlTextWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.HtmlTextWriter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHtmlTextWriter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1949,6 +2756,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HtmlTextWriter.
+     *
+     * @param HtmlTextWriter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.HtmlTextWriter" target="_top">.NET documentation</a>
+     */
     public void setHtmlTextWriter(java.lang.String HtmlTextWriter) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1959,6 +2774,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1973,6 +2796,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InputType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.InputType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInputType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1987,6 +2818,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersionString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MinorVersionString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMinorVersionString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2001,6 +2840,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MobileDeviceManufacturer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MobileDeviceManufacturer" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMobileDeviceManufacturer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2015,6 +2862,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MobileDeviceModel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MobileDeviceModel" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMobileDeviceModel() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2029,6 +2884,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Platform.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Platform" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPlatform() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2043,6 +2906,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredImageMime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.PreferredImageMime" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreferredImageMime() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2057,6 +2928,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredRenderingMime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.PreferredRenderingMime" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreferredRenderingMime() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2071,6 +2950,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredRenderingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.PreferredRenderingType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreferredRenderingType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2085,6 +2972,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredRequestEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.PreferredRequestEncoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreferredRequestEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2099,6 +2994,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredResponseEncoding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.PreferredResponseEncoding" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPreferredResponseEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2113,6 +3016,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequiredMetaTagNameValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.RequiredMetaTagNameValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequiredMetaTagNameValue() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2127,6 +3038,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Type" target="_top">.NET documentation</a>
+     */
     public java.lang.String getType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2141,6 +3060,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2155,6 +3082,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TagWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.TagWriter" target="_top">.NET documentation</a>
+     */
     public NetType getTagWriter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2170,6 +3105,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClrVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.ClrVersion" target="_top">.NET documentation</a>
+     */
     public Version getClrVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2185,6 +3128,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EcmaScriptVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.EcmaScriptVersion" target="_top">.NET documentation</a>
+     */
     public Version getEcmaScriptVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2200,6 +3151,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property JScriptVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.JScriptVersion" target="_top">.NET documentation</a>
+     */
     public Version getJScriptVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2215,6 +3174,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MSDomVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.MSDomVersion" target="_top">.NET documentation</a>
+     */
     public Version getMSDomVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2230,6 +3197,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property W3CDomVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpBrowserCapabilitiesBase.W3CDomVersion" target="_top">.NET documentation</a>
+     */
     public Version getW3CDomVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

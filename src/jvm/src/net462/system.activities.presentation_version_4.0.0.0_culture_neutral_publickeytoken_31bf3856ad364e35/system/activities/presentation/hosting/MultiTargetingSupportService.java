@@ -100,7 +100,10 @@ public class MultiTargetingSupportService extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MultiTargetingSupportService(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class MultiTargetingSupportService extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSupportedType.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.MultiTargetingSupportService.IsSupportedType" target="_top">.NET documentation</a>
+     */
     public boolean IsSupportedType(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +178,14 @@ public class MultiTargetingSupportService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReflectionAssembly.
+     *
+     * @param targetAssemblyName the argument of type {@code AssemblyName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.MultiTargetingSupportService.GetReflectionAssembly" target="_top">.NET documentation</a>
+     */
     public Assembly GetReflectionAssembly(AssemblyName targetAssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +201,14 @@ public class MultiTargetingSupportService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReflectionType.
+     *
+     * @param objectType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.MultiTargetingSupportService.GetReflectionType" target="_top">.NET documentation</a>
+     */
     public NetType GetReflectionType(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +224,14 @@ public class MultiTargetingSupportService extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuntimeType.
+     *
+     * @param reflectionType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.MultiTargetingSupportService.GetRuntimeType" target="_top">.NET documentation</a>
+     */
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

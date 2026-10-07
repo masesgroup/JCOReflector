@@ -100,7 +100,10 @@ public class PackWebRequestFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PackWebRequestFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class PackWebRequestFactory extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackWebRequestFactory.-ctor" target="_top">.NET documentation</a>
+     */
     public PackWebRequestFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,8 +173,13 @@ public class PackWebRequestFactory extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWebRequestCreate method available in IWebRequestCreate to obtain an object with an invocable method
+     *
+     * @param uri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IWebRequestCreate.Create" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public WebRequest Create(Uri uri) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebRequestCreate to obtain the full interface.");
     }

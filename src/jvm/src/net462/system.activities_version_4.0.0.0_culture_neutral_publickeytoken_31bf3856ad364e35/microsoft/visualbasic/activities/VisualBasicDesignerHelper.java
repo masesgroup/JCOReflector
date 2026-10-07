@@ -106,7 +106,10 @@ public class VisualBasicDesignerHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VisualBasicDesignerHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,33 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreatePrecompiledVisualBasicReference.
+     *
+     * @param targetType the argument of type {@code NetType}
+     * @param expressionText the argument of type {@code java.lang.String}
+     * @param namespaces the argument of type {@code IEnumerable_1}
+     * @param referencedAssemblies the argument of type {@code IEnumerable_1}
+     * @param environment the argument of type {@code LocationReferenceEnvironment}
+     * @param returnType the argument of type {@code JCORefOut<NetType>}
+     * @param compileError the argument of type {@code JCORefOut<SourceExpressionException>}
+     * @param vbSettings the argument of type {@code JCORefOut<VisualBasicSettings>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicDesignerHelper.CreatePrecompiledVisualBasicReference" target="_top">.NET documentation</a>
+     */
     public static Activity CreatePrecompiledVisualBasicReference(NetType targetType, java.lang.String expressionText, IEnumerable_1 namespaces, IEnumerable_1 referencedAssemblies, LocationReferenceEnvironment environment, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +204,33 @@ public class VisualBasicDesignerHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreatePrecompiledVisualBasicValue.
+     *
+     * @param targetType the argument of type {@code NetType}
+     * @param expressionText the argument of type {@code java.lang.String}
+     * @param namespaces the argument of type {@code IEnumerable_1}
+     * @param referencedAssemblies the argument of type {@code IEnumerable_1}
+     * @param environment the argument of type {@code LocationReferenceEnvironment}
+     * @param returnType the argument of type {@code JCORefOut<NetType>}
+     * @param compileError the argument of type {@code JCORefOut<SourceExpressionException>}
+     * @param vbSettings the argument of type {@code JCORefOut<VisualBasicSettings>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicDesignerHelper.CreatePrecompiledVisualBasicValue" target="_top">.NET documentation</a>
+     */
     public static Activity CreatePrecompiledVisualBasicValue(NetType targetType, java.lang.String expressionText, IEnumerable_1 namespaces, IEnumerable_1 referencedAssemblies, LocationReferenceEnvironment environment, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +246,31 @@ public class VisualBasicDesignerHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RecompileVisualBasicReference.
+     *
+     * @param visualBasicReference the argument of type {@code ActivityWithResult}
+     * @param returnType the argument of type {@code JCORefOut<NetType>}
+     * @param compileError the argument of type {@code JCORefOut<SourceExpressionException>}
+     * @param vbSettings the argument of type {@code JCORefOut<VisualBasicSettings>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicDesignerHelper.RecompileVisualBasicReference" target="_top">.NET documentation</a>
+     */
     public static Activity RecompileVisualBasicReference(ActivityWithResult visualBasicReference, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -204,6 +286,31 @@ public class VisualBasicDesignerHelper extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RecompileVisualBasicValue.
+     *
+     * @param visualBasicValue the argument of type {@code ActivityWithResult}
+     * @param returnType the argument of type {@code JCORefOut<NetType>}
+     * @param compileError the argument of type {@code JCORefOut<SourceExpressionException>}
+     * @param vbSettings the argument of type {@code JCORefOut<VisualBasicSettings>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicDesignerHelper.RecompileVisualBasicValue" target="_top">.NET documentation</a>
+     */
     public static Activity RecompileVisualBasicValue(ActivityWithResult visualBasicValue, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +330,13 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NameShadowingConstraint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicDesignerHelper.NameShadowingConstraint" target="_top">.NET documentation</a>
+     */
     public static Constraint getNameShadowingConstraint() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

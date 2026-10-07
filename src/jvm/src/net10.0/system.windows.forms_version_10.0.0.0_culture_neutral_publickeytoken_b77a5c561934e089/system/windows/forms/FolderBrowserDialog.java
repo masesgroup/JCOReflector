@@ -101,7 +101,10 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FolderBrowserDialog(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.-ctor" target="_top">.NET documentation</a>
+     */
     public FolderBrowserDialog() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +173,12 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +193,19 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AddToRecent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.AddToRecent" target="_top">.NET documentation</a>
+     */
     public boolean getAddToRecent() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +220,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddToRecent.
+     *
+     * @param AddToRecent the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.AddToRecent" target="_top">.NET documentation</a>
+     */
     public void setAddToRecent(boolean AddToRecent) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +237,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AutoUpgradeEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getAutoUpgradeEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +258,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AutoUpgradeEnabled.
+     *
+     * @param AutoUpgradeEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled" target="_top">.NET documentation</a>
+     */
     public void setAutoUpgradeEnabled(boolean AutoUpgradeEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +275,19 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Multiselect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.Multiselect" target="_top">.NET documentation</a>
+     */
     public boolean getMultiselect() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +302,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Multiselect.
+     *
+     * @param Multiselect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.Multiselect" target="_top">.NET documentation</a>
+     */
     public void setMultiselect(boolean Multiselect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +319,19 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OkRequiresInteraction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.OkRequiresInteraction" target="_top">.NET documentation</a>
+     */
     public boolean getOkRequiresInteraction() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +346,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OkRequiresInteraction.
+     *
+     * @param OkRequiresInteraction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.OkRequiresInteraction" target="_top">.NET documentation</a>
+     */
     public void setOkRequiresInteraction(boolean OkRequiresInteraction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +363,19 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowHiddenFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ShowHiddenFiles" target="_top">.NET documentation</a>
+     */
     public boolean getShowHiddenFiles() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +390,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowHiddenFiles.
+     *
+     * @param ShowHiddenFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ShowHiddenFiles" target="_top">.NET documentation</a>
+     */
     public void setShowHiddenFiles(boolean ShowHiddenFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +407,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowNewFolderButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton" target="_top">.NET documentation</a>
+     */
     public boolean getShowNewFolderButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +428,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowNewFolderButton.
+     *
+     * @param ShowNewFolderButton the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ShowNewFolderButton" target="_top">.NET documentation</a>
+     */
     public void setShowNewFolderButton(boolean ShowNewFolderButton) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +445,19 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ShowPinnedPlaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ShowPinnedPlaces" target="_top">.NET documentation</a>
+     */
     public boolean getShowPinnedPlaces() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +472,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShowPinnedPlaces.
+     *
+     * @param ShowPinnedPlaces the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ShowPinnedPlaces" target="_top">.NET documentation</a>
+     */
     public void setShowPinnedPlaces(boolean ShowPinnedPlaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +489,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseDescriptionForTitle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.UseDescriptionForTitle" target="_top">.NET documentation</a>
+     */
     public boolean getUseDescriptionForTitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +510,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseDescriptionForTitle.
+     *
+     * @param UseDescriptionForTitle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.UseDescriptionForTitle" target="_top">.NET documentation</a>
+     */
     public void setUseDescriptionForTitle(boolean UseDescriptionForTitle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +527,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ClientGuid" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getClientGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +549,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClientGuid.
+     *
+     * @param ClientGuid the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ClientGuid" target="_top">.NET documentation</a>
+     */
     public void setClientGuid(Nullable_1 ClientGuid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -393,6 +566,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +587,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -417,6 +604,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.InitialDirectory" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInitialDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +625,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialDirectory.
+     *
+     * @param InitialDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.InitialDirectory" target="_top">.NET documentation</a>
+     */
     public void setInitialDirectory(java.lang.String InitialDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +642,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.SelectedPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectedPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -455,6 +663,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectedPath.
+     *
+     * @param SelectedPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.SelectedPath" target="_top">.NET documentation</a>
+     */
     public void setSelectedPath(java.lang.String SelectedPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +680,16 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectedPaths.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.SelectedPaths" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getSelectedPaths() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -493,6 +718,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addHelpRequest.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -503,6 +735,13 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeHelpRequest.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

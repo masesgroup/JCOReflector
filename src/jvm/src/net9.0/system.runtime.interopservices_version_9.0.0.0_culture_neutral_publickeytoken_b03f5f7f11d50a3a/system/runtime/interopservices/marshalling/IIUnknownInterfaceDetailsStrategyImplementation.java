@@ -103,7 +103,10 @@ public class IIUnknownInterfaceDetailsStrategyImplementation extends NetObject i
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IIUnknownInterfaceDetailsStrategyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,14 @@ public class IIUnknownInterfaceDetailsStrategyImplementation extends NetObject i
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetComExposedTypeDetails.
+     *
+     * @param type the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy.GetComExposedTypeDetails" target="_top">.NET documentation</a>
+     */
     public IComExposedDetails GetComExposedTypeDetails(RuntimeTypeHandle type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +171,14 @@ public class IIUnknownInterfaceDetailsStrategyImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member GetIUnknownDerivedDetails.
+     *
+     * @param type the argument of type {@code RuntimeTypeHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy.GetIUnknownDerivedDetails" target="_top">.NET documentation</a>
+     */
     public IIUnknownDerivedDetails GetIUnknownDerivedDetails(RuntimeTypeHandle type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

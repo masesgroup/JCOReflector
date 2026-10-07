@@ -98,7 +98,10 @@ public class ChannelOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ChannelOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,13 @@ public class ChannelOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowSynchronousContinuations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelOptions.AllowSynchronousContinuations" target="_top">.NET documentation</a>
+     */
     public boolean getAllowSynchronousContinuations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +179,13 @@ public class ChannelOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowSynchronousContinuations.
+     *
+     * @param AllowSynchronousContinuations the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelOptions.AllowSynchronousContinuations" target="_top">.NET documentation</a>
+     */
     public void setAllowSynchronousContinuations(boolean AllowSynchronousContinuations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +196,13 @@ public class ChannelOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SingleReader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelOptions.SingleReader" target="_top">.NET documentation</a>
+     */
     public boolean getSingleReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class ChannelOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SingleReader.
+     *
+     * @param SingleReader the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelOptions.SingleReader" target="_top">.NET documentation</a>
+     */
     public void setSingleReader(boolean SingleReader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +234,13 @@ public class ChannelOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SingleWriter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelOptions.SingleWriter" target="_top">.NET documentation</a>
+     */
     public boolean getSingleWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class ChannelOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SingleWriter.
+     *
+     * @param SingleWriter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelOptions.SingleWriter" target="_top">.NET documentation</a>
+     */
     public void setSingleWriter(boolean SingleWriter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

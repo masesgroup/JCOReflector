@@ -101,7 +101,10 @@ public class StreamUpgradeBindingElement extends system.servicemodel.channels.Bi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StreamUpgradeBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class StreamUpgradeBindingElement extends system.servicemodel.channels.Bi
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildClientStreamUpgradeProvider.
+     *
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider" target="_top">.NET documentation</a>
+     */
     public StreamUpgradeProvider BuildClientStreamUpgradeProvider(BindingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class StreamUpgradeBindingElement extends system.servicemodel.channels.Bi
         }
     }
 
+    /**
+     * Invokes the .NET member BuildServerStreamUpgradeProvider.
+     *
+     * @param context the argument of type {@code BindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider" target="_top">.NET documentation</a>
+     */
     public StreamUpgradeProvider BuildServerStreamUpgradeProvider(BindingContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

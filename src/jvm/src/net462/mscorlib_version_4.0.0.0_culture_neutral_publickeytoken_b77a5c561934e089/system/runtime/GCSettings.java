@@ -100,7 +100,10 @@ public class GCSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GCSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class GCSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsServerGC.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.GCSettings.IsServerGC" target="_top">.NET documentation</a>
+     */
     public static boolean getIsServerGC() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class GCSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LargeObjectHeapCompactionMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.GCSettings.LargeObjectHeapCompactionMode" target="_top">.NET documentation</a>
+     */
     public static GCLargeObjectHeapCompactionMode getLargeObjectHeapCompactionMode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,14 @@ public class GCSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LargeObjectHeapCompactionMode.
+     *
+     * @param LargeObjectHeapCompactionMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.GCSettings.LargeObjectHeapCompactionMode" target="_top">.NET documentation</a>
+     */
     public static void setLargeObjectHeapCompactionMode(GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +221,13 @@ public class GCSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LatencyMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.GCSettings.LatencyMode" target="_top">.NET documentation</a>
+     */
     public static GCLatencyMode getLatencyMode() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -211,6 +243,15 @@ public class GCSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LatencyMode.
+     *
+     * @param LatencyMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.GCSettings.LatencyMode" target="_top">.NET documentation</a>
+     */
     public static void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

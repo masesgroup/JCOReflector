@@ -98,7 +98,10 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IUserControlDesignerAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InnerText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IUserControlDesignerAccessor.InnerText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInnerText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Sets the value of the .NET property InnerText.
+     *
+     * @param InnerText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IUserControlDesignerAccessor.InnerText" target="_top">.NET documentation</a>
+     */
     public void setInnerText(java.lang.String InnerText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property TagName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IUserControlDesignerAccessor.TagName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTagName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Sets the value of the .NET property TagName.
+     *
+     * @param TagName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IUserControlDesignerAccessor.TagName" target="_top">.NET documentation</a>
+     */
     public void setTagName(java.lang.String TagName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

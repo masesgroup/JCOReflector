@@ -101,7 +101,10 @@ public class StylusButtonCollection extends system.collections.objectmodel.ReadO
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StylusButtonCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,17 @@ public class StylusButtonCollection extends system.collections.objectmodel.ReadO
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStylusButtonByGuid.
+     *
+     * @param guid the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusButtonCollection.GetStylusButtonByGuid" target="_top">.NET documentation</a>
+     */
     public StylusButton GetStylusButtonByGuid(Guid guid) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ActiveDirectoryMembershipUser extends system.web.security.Membershi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActiveDirectoryMembershipUser(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,41 @@ public class ActiveDirectoryMembershipUser extends system.web.security.Membershi
     public ActiveDirectoryMembershipUser() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param providerName the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @param providerUserKey the argument of type {@code NetObject}
+     * @param email the argument of type {@code java.lang.String}
+     * @param passwordQuestion the argument of type {@code java.lang.String}
+     * @param comment the argument of type {@code java.lang.String}
+     * @param isApproved the argument of type {@code boolean}
+     * @param isLockedOut the argument of type {@code boolean}
+     * @param creationDate the argument of type {@code DateTime}
+     * @param lastLoginDate the argument of type {@code DateTime}
+     * @param lastActivityDate the argument of type {@code DateTime}
+     * @param lastPasswordChangedDate the argument of type {@code DateTime}
+     * @param lastLockoutDate the argument of type {@code DateTime}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Security.ActiveDirectoryMembershipUser.-ctor" target="_top">.NET documentation</a>
+     */
     public ActiveDirectoryMembershipUser(java.lang.String providerName, java.lang.String name, NetObject providerUserKey, java.lang.String email, java.lang.String passwordQuestion, java.lang.String comment, boolean isApproved, boolean isLockedOut, DateTime creationDate, DateTime lastLoginDate, DateTime lastActivityDate, DateTime lastPasswordChangedDate, DateTime lastLockoutDate) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file

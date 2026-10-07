@@ -100,7 +100,10 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProfileUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileUpdatedEventArgs() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,14 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param workflowType the argument of type {@code NetType}
+     * @param profile the argument of type {@code TrackingProfile}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ProfileUpdatedEventArgs(NetType workflowType, TrackingProfile profile) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +192,13 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WorkflowType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.WorkflowType" target="_top">.NET documentation</a>
+     */
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowType.
+     *
+     * @param WorkflowType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.WorkflowType" target="_top">.NET documentation</a>
+     */
     public void setWorkflowType(NetType WorkflowType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +231,13 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrackingProfile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.TrackingProfile" target="_top">.NET documentation</a>
+     */
     public TrackingProfile getTrackingProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +253,13 @@ public class ProfileUpdatedEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrackingProfile.
+     *
+     * @param TrackingProfile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs.TrackingProfile" target="_top">.NET documentation</a>
+     */
     public void setTrackingProfile(TrackingProfile TrackingProfile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpRequestMessageExtensionMethods(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,21 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetUserPrincipal.
+     *
+     * @param httpRequestMessage the argument of type {@code HttpRequestMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpRequestMessageExtensionMethods.GetUserPrincipal" target="_top">.NET documentation</a>
+     */
     public static IPrincipal GetUserPrincipal(HttpRequestMessage httpRequestMessage) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +187,21 @@ public class HttpRequestMessageExtensionMethods extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetUserPrincipal.
+     *
+     * @param httpRequestMessage the argument of type {@code HttpRequestMessage}
+     * @param user the argument of type {@code IPrincipal}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpRequestMessageExtensionMethods.SetUserPrincipal" target="_top">.NET documentation</a>
+     */
     public static void SetUserPrincipal(HttpRequestMessage httpRequestMessage, IPrincipal user) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

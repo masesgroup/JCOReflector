@@ -99,7 +99,10 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MatchAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class MatchAttribute extends system.Attribute  {
     public MatchAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param pattern the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public MatchAttribute(java.lang.String pattern) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class MatchAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IgnoreCase.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.IgnoreCase" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreCase() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreCase.
+     *
+     * @param IgnoreCase the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.IgnoreCase" target="_top">.NET documentation</a>
+     */
     public void setIgnoreCase(boolean IgnoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Capture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.Capture" target="_top">.NET documentation</a>
+     */
     public int getCapture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +263,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Capture.
+     *
+     * @param Capture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.Capture" target="_top">.NET documentation</a>
+     */
     public void setCapture(int Capture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +280,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Group.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.Group" target="_top">.NET documentation</a>
+     */
     public int getGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +327,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Group.
+     *
+     * @param Group the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.Group" target="_top">.NET documentation</a>
+     */
     public void setGroup(int Group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +344,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxRepeats.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.MaxRepeats" target="_top">.NET documentation</a>
+     */
     public int getMaxRepeats() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +391,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxRepeats.
+     *
+     * @param MaxRepeats the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.MaxRepeats" target="_top">.NET documentation</a>
+     */
     public void setMaxRepeats(int MaxRepeats) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +408,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pattern.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.Pattern" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +429,13 @@ public class MatchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Pattern.
+     *
+     * @param Pattern the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Protocols.MatchAttribute.Pattern" target="_top">.NET documentation</a>
+     */
     public void setPattern(java.lang.String Pattern) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

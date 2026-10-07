@@ -98,7 +98,10 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrackingDataItemValue(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class TrackingDataItemValue extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.-ctor" target="_top">.NET documentation</a>
+     */
     public TrackingDataItemValue() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,15 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param qualifiedName the argument of type {@code java.lang.String}
+     * @param fieldName the argument of type {@code java.lang.String}
+     * @param dataValue the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.-ctor" target="_top">.NET documentation</a>
+     */
     public TrackingDataItemValue(java.lang.String qualifiedName, java.lang.String fieldName, java.lang.String dataValue) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +191,13 @@ public class TrackingDataItemValue extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.DataValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +212,13 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataValue.
+     *
+     * @param DataValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.DataValue" target="_top">.NET documentation</a>
+     */
     public void setDataValue(java.lang.String DataValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +250,13 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldName.
+     *
+     * @param FieldName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.FieldName" target="_top">.NET documentation</a>
+     */
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +267,13 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property QualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.QualifiedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +288,13 @@ public class TrackingDataItemValue extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property QualifiedName.
+     *
+     * @param QualifiedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingDataItemValue.QualifiedName" target="_top">.NET documentation</a>
+     */
     public void setQualifiedName(java.lang.String QualifiedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

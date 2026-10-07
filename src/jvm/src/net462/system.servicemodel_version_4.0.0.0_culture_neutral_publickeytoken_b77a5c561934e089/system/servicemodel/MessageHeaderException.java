@@ -103,7 +103,9 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public MessageHeaderException(java.lang.Object instance) {
         super(instance);
@@ -164,6 +166,14 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param isDuplicate the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeaderException(java.lang.String message, boolean isDuplicate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +184,15 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param headerName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeaderException(java.lang.String message, java.lang.String headerName, java.lang.String ns) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +203,16 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param headerName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param isDuplicate the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeaderException(java.lang.String message, java.lang.String headerName, java.lang.String ns, boolean isDuplicate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +223,17 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param headerName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param isDuplicate the argument of type {@code boolean}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeaderException(java.lang.String message, java.lang.String headerName, java.lang.String ns, boolean isDuplicate, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -204,6 +244,16 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param headerName the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.-ctor" target="_top">.NET documentation</a>
+     */
     public MessageHeaderException(java.lang.String message, java.lang.String headerName, java.lang.String ns, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -222,6 +272,13 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDuplicate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.IsDuplicate" target="_top">.NET documentation</a>
+     */
     public boolean getIsDuplicate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +293,13 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.HeaderName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHeaderName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +314,13 @@ public class MessageHeaderException extends system.servicemodel.ProtocolExceptio
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MessageHeaderException.HeaderNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHeaderNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CommandLineGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,26 @@ public class CommandLineGenerator extends NetObject  {
     public CommandLineGenerator() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param rule the argument of type {@code Rule}
+     * @param parameterValues the argument of type {@code Dictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.-ctor" target="_top">.NET documentation</a>
+     */
     public CommandLineGenerator(Rule rule, Dictionary_2 parameterValues) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.FormatException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +188,28 @@ public class CommandLineGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GenerateCommandLine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.GenerateCommandLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String GenerateCommandLine() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.ObjectDisposedException, system.RankException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +228,13 @@ public class CommandLineGenerator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AdditionalOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.AdditionalOptions" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAdditionalOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +249,13 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdditionalOptions.
+     *
+     * @param AdditionalOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.AdditionalOptions" target="_top">.NET documentation</a>
+     */
     public void setAdditionalOptions(java.lang.String AdditionalOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +266,13 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlwaysAppend.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.AlwaysAppend" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAlwaysAppend() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +287,13 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlwaysAppend.
+     *
+     * @param AlwaysAppend the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.AlwaysAppend" target="_top">.NET documentation</a>
+     */
     public void setAlwaysAppend(java.lang.String AlwaysAppend) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +304,13 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CommandLineTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.CommandLineTemplate" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCommandLineTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +325,13 @@ public class CommandLineGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CommandLineTemplate.
+     *
+     * @param CommandLineTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Xaml.CommandLineGenerator.CommandLineTemplate" target="_top">.NET documentation</a>
+     */
     public void setCommandLineTemplate(java.lang.String CommandLineTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

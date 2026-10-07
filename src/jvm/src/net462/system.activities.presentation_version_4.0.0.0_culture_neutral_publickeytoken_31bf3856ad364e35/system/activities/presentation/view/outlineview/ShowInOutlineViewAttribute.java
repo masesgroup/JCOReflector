@@ -99,7 +99,10 @@ public class ShowInOutlineViewAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ShowInOutlineViewAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ShowInOutlineViewAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowInOutlineViewAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ShowInOutlineViewAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ShowInOutlineViewAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PromotedProperty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowInOutlineViewAttribute.PromotedProperty" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPromotedProperty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class ShowInOutlineViewAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PromotedProperty.
+     *
+     * @param PromotedProperty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.OutlineView.ShowInOutlineViewAttribute.PromotedProperty" target="_top">.NET documentation</a>
+     */
     public void setPromotedProperty(java.lang.String PromotedProperty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

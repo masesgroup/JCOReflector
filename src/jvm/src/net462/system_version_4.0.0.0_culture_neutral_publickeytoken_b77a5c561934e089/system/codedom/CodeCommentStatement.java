@@ -100,7 +100,10 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeCommentStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param comment the argument of type {@code CodeComment}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatement(CodeComment comment) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,13 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatement(java.lang.String text) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +200,14 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param text the argument of type {@code java.lang.String}
+     * @param docComment the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCommentStatement(java.lang.String text, boolean docComment) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -195,6 +226,13 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Comment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatement.Comment" target="_top">.NET documentation</a>
+     */
     public CodeComment getComment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +248,13 @@ public class CodeCommentStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Comment.
+     *
+     * @param Comment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCommentStatement.Comment" target="_top">.NET documentation</a>
+     */
     public void setComment(CodeComment Comment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

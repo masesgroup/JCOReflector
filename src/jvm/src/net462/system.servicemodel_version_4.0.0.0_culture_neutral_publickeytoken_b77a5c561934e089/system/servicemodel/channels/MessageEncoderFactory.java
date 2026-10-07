@@ -100,7 +100,10 @@ public class MessageEncoderFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageEncoderFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class MessageEncoderFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateSessionEncoder.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoderFactory.CreateSessionEncoder" target="_top">.NET documentation</a>
+     */
     public MessageEncoder CreateSessionEncoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class MessageEncoderFactory extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Encoder.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoderFactory.Encoder" target="_top">.NET documentation</a>
+     */
     public MessageEncoder getEncoder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class MessageEncoderFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MessageVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoderFactory.MessageVersion" target="_top">.NET documentation</a>
+     */
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

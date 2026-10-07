@@ -105,7 +105,10 @@ public class ImportOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImportOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class ImportOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public ImportOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +179,13 @@ public class ImportOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnableDataBinding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.EnableDataBinding" target="_top">.NET documentation</a>
+     */
     public boolean getEnableDataBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +200,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnableDataBinding.
+     *
+     * @param EnableDataBinding the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.EnableDataBinding" target="_top">.NET documentation</a>
+     */
     public void setEnableDataBinding(boolean EnableDataBinding) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +217,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerateInternal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.GenerateInternal" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateInternal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateInternal.
+     *
+     * @param GenerateInternal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.GenerateInternal" target="_top">.NET documentation</a>
+     */
     public void setGenerateInternal(boolean GenerateInternal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +255,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerateSerializable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.GenerateSerializable" target="_top">.NET documentation</a>
+     */
     public boolean getGenerateSerializable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerateSerializable.
+     *
+     * @param GenerateSerializable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.GenerateSerializable" target="_top">.NET documentation</a>
+     */
     public void setGenerateSerializable(boolean GenerateSerializable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +293,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportXmlType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.ImportXmlType" target="_top">.NET documentation</a>
+     */
     public boolean getImportXmlType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +314,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImportXmlType.
+     *
+     * @param ImportXmlType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.ImportXmlType" target="_top">.NET documentation</a>
+     */
     public void setImportXmlType(boolean ImportXmlType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +331,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CodeProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.CodeProvider" target="_top">.NET documentation</a>
+     */
     public CodeDomProvider getCodeProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +353,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CodeProvider.
+     *
+     * @param CodeProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.CodeProvider" target="_top">.NET documentation</a>
+     */
     public void setCodeProvider(CodeDomProvider CodeProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +370,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferencedCollectionTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getReferencedCollectionTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +392,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferencedTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.ReferencedTypes" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getReferencedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +414,15 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.Namespaces" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getNamespaces() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +438,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataContractSurrogate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.DataContractSurrogate" target="_top">.NET documentation</a>
+     */
     public IDataContractSurrogate getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +460,13 @@ public class ImportOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataContractSurrogate.
+     *
+     * @param DataContractSurrogate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.DataContractSurrogate" target="_top">.NET documentation</a>
+     */
     public void setDataContractSurrogate(IDataContractSurrogate DataContractSurrogate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

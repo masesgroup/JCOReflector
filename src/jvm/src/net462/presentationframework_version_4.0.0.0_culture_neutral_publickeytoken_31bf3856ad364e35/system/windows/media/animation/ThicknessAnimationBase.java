@@ -102,7 +102,10 @@ public class ThicknessAnimationBase extends system.windows.media.animation.Anima
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ThicknessAnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,20 @@ public class ThicknessAnimationBase extends system.windows.media.animation.Anima
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCurrentValue.
+     *
+     * @param defaultOriginValue the argument of type {@code NetObject}
+     * @param defaultDestinationValue the argument of type {@code NetObject}
+     * @param animationClock the argument of type {@code AnimationClock}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ThicknessAnimationBase.GetCurrentValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,18 @@ public class ThicknessAnimationBase extends system.windows.media.animation.Anima
         }
     }
 
+    /**
+     * Invokes the .NET member CloneNewThicknessAnimationBase.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ThicknessAnimationBase.CloneNewThicknessAnimationBase" target="_top">.NET documentation</a>
+     */
     public ThicknessAnimationBase CloneNewThicknessAnimationBase() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +214,22 @@ public class ThicknessAnimationBase extends system.windows.media.animation.Anima
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentValue.
+     *
+     * @param defaultOriginValue the argument of type {@code Thickness}
+     * @param defaultDestinationValue the argument of type {@code Thickness}
+     * @param animationClock the argument of type {@code AnimationClock}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ThicknessAnimationBase.GetCurrentValue" target="_top">.NET documentation</a>
+     */
     public Thickness GetCurrentValue(Thickness defaultOriginValue, Thickness defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

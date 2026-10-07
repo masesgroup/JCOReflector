@@ -101,7 +101,10 @@ public class GeometryHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GeometryHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class GeometryHitTestResult extends system.windows.media.HitTestResult  {
     public GeometryHitTestResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visualHit the argument of type {@code Visual}
+     * @param intersectionDetail the argument of type {@code IntersectionDetail}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GeometryHitTestResult.-ctor" target="_top">.NET documentation</a>
+     */
     public GeometryHitTestResult(Visual visualHit, IntersectionDetail intersectionDetail) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class GeometryHitTestResult extends system.windows.media.HitTestResult  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IntersectionDetail.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GeometryHitTestResult.IntersectionDetail" target="_top">.NET documentation</a>
+     */
     public IntersectionDetail getIntersectionDetail() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class GeometryHitTestResult extends system.windows.media.HitTestResult  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VisualHitNewGeometryHitTestResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GeometryHitTestResult.VisualHitNewGeometryHitTestResult" target="_top">.NET documentation</a>
+     */
     public Visual getVisualHitNewGeometryHitTestResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

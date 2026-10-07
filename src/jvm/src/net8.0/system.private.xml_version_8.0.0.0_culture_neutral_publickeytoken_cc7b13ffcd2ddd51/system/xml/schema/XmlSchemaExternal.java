@@ -101,7 +101,10 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaExternal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.Id" target="_top">.NET documentation</a>
+     */
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Id.
+     *
+     * @param Id the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.Id" target="_top">.NET documentation</a>
+     */
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaLocation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.SchemaLocation" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSchemaLocation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaLocation.
+     *
+     * @param SchemaLocation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.SchemaLocation" target="_top">.NET documentation</a>
+     */
     public void setSchemaLocation(java.lang.String SchemaLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Schema.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.Schema" target="_top">.NET documentation</a>
+     */
     public XmlSchema getSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Schema.
+     *
+     * @param Schema the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.Schema" target="_top">.NET documentation</a>
+     */
     public void setSchema(XmlSchema Schema) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnhandledAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.UnhandledAttributes" target="_top">.NET documentation</a>
+     */
     public final XmlAttribute[] getUnhandledAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +304,13 @@ public class XmlSchemaExternal extends system.xml.schema.XmlSchemaObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnhandledAttributes.
+     *
+     * @param UnhandledAttributes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaExternal.UnhandledAttributes" target="_top">.NET documentation</a>
+     */
     public void setUnhandledAttributes(XmlAttribute[] UnhandledAttributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

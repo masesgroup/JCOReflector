@@ -98,7 +98,10 @@ public class LingerOption extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LingerOption(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class LingerOption extends NetObject  {
     public LingerOption() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param enable the argument of type {@code boolean}
+     * @param seconds the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.LingerOption.-ctor" target="_top">.NET documentation</a>
+     */
     public LingerOption(boolean enable, int seconds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,13 @@ public class LingerOption extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Enabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.LingerOption.Enabled" target="_top">.NET documentation</a>
+     */
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +199,13 @@ public class LingerOption extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Enabled.
+     *
+     * @param Enabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.LingerOption.Enabled" target="_top">.NET documentation</a>
+     */
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +216,13 @@ public class LingerOption extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LingerTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.LingerOption.LingerTime" target="_top">.NET documentation</a>
+     */
     public int getLingerTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +263,13 @@ public class LingerOption extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LingerTime.
+     *
+     * @param LingerTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.LingerOption.LingerTime" target="_top">.NET documentation</a>
+     */
     public void setLingerTime(int LingerTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

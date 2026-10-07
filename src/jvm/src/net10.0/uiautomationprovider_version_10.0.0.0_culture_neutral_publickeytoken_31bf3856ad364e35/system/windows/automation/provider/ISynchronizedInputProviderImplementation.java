@@ -99,7 +99,10 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISynchronizedInputProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,12 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Cancel.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISynchronizedInputProvider.Cancel" target="_top">.NET documentation</a>
+     */
     public void Cancel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +160,13 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member StartListening.
+     *
+     * @param inputType the argument of type {@code SynchronizedInputType}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ISynchronizedInputProvider.StartListening" target="_top">.NET documentation</a>
+     */
     public void StartListening(SynchronizedInputType inputType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

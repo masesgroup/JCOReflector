@@ -103,7 +103,10 @@ public class DataContract extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataContract(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class DataContract extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDictionaryLike.
+     *
+     * @param keyName the argument of type {@code JCORefOut}
+     * @param valueName the argument of type {@code JCORefOut}
+     * @param itemName the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsDictionaryLike" target="_top">.NET documentation</a>
+     */
     public boolean IsDictionaryLike(JCORefOut keyName, JCORefOut valueName, JCORefOut itemName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +183,25 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBuiltInDataContract.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ns the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.GetBuiltInDataContract" target="_top">.NET documentation</a>
+     */
     public static DataContract GetBuiltInDataContract(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.runtime.serialization.InvalidDataContractException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +217,28 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArrayTypeName.
+     *
+     * @param isNullable the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.text.regularexpressions.RegexMatchTimeoutException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.GetArrayTypeName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName GetArrayTypeName(boolean isNullable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.runtime.serialization.InvalidDataContractException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +254,24 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetXmlName.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.GetXmlName" target="_top">.NET documentation</a>
+     */
     public static XmlQualifiedName GetXmlName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.InvalidDataContractException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +291,13 @@ public class DataContract extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBuiltInDataContract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsBuiltInDataContract" target="_top">.NET documentation</a>
+     */
     public boolean getIsBuiltInDataContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +312,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsISerializable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsISerializable" target="_top">.NET documentation</a>
+     */
     public boolean getIsISerializable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +333,22 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsISerializable.
+     *
+     * @param IsISerializable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsISerializable" target="_top">.NET documentation</a>
+     */
     public void setIsISerializable(boolean IsISerializable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +359,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReference.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsReference" target="_top">.NET documentation</a>
+     */
     public boolean getIsReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +380,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReference.
+     *
+     * @param IsReference the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsReference" target="_top">.NET documentation</a>
+     */
     public void setIsReference(boolean IsReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +397,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValueType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsValueType" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +418,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsValueType.
+     *
+     * @param IsValueType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.IsValueType" target="_top">.NET documentation</a>
+     */
     public void setIsValueType(boolean IsValueType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +435,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownDataContracts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.KnownDataContracts" target="_top">.NET documentation</a>
+     */
     public Dictionary_2 getKnownDataContracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +457,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KnownDataContracts.
+     *
+     * @param KnownDataContracts the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.KnownDataContracts" target="_top">.NET documentation</a>
+     */
     public void setKnownDataContracts(Dictionary_2 KnownDataContracts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +474,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataMembers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.DataMembers" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getDataMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +496,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseContract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.BaseContract" target="_top">.NET documentation</a>
+     */
     public DataContract getBaseContract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +518,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContractType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.ContractType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContractType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -374,6 +539,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalUnderlyingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.OriginalUnderlyingType" target="_top">.NET documentation</a>
+     */
     public NetType getOriginalUnderlyingType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +561,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnderlyingType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.UnderlyingType" target="_top">.NET documentation</a>
+     */
     public NetType getUnderlyingType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +583,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopLevelElementName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.TopLevelElementName" target="_top">.NET documentation</a>
+     */
     public XmlDictionaryString getTopLevelElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +605,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TopLevelElementName.
+     *
+     * @param TopLevelElementName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.TopLevelElementName" target="_top">.NET documentation</a>
+     */
     public void setTopLevelElementName(XmlDictionaryString TopLevelElementName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +622,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopLevelElementNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.TopLevelElementNamespace" target="_top">.NET documentation</a>
+     */
     public XmlDictionaryString getTopLevelElementNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +644,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TopLevelElementNamespace.
+     *
+     * @param TopLevelElementNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.TopLevelElementNamespace" target="_top">.NET documentation</a>
+     */
     public void setTopLevelElementNamespace(XmlDictionaryString TopLevelElementNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +661,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.XmlName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getXmlName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +683,13 @@ public class DataContract extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlName.
+     *
+     * @param XmlName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.XmlName" target="_top">.NET documentation</a>
+     */
     public void setXmlName(XmlQualifiedName XmlName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

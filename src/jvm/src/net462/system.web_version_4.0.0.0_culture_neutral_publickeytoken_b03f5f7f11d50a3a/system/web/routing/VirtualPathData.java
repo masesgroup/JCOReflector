@@ -100,7 +100,10 @@ public class VirtualPathData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VirtualPathData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class VirtualPathData extends NetObject  {
     public VirtualPathData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param route the argument of type {@code RouteBase}
+     * @param virtualPath the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.VirtualPathData.-ctor" target="_top">.NET documentation</a>
+     */
     public VirtualPathData(RouteBase route, java.lang.String virtualPath) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,13 @@ public class VirtualPathData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property VirtualPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.VirtualPathData.VirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +203,13 @@ public class VirtualPathData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property VirtualPath.
+     *
+     * @param VirtualPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.VirtualPathData.VirtualPath" target="_top">.NET documentation</a>
+     */
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,13 @@ public class VirtualPathData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Route.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.VirtualPathData.Route" target="_top">.NET documentation</a>
+     */
     public RouteBase getRoute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +242,13 @@ public class VirtualPathData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Route.
+     *
+     * @param Route the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.VirtualPathData.Route" target="_top">.NET documentation</a>
+     */
     public void setRoute(RouteBase Route) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +259,13 @@ public class VirtualPathData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataTokens.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Routing.VirtualPathData.DataTokens" target="_top">.NET documentation</a>
+     */
     public RouteValueDictionary getDataTokens() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

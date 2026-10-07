@@ -109,7 +109,10 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IImmutableList_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(T item, int index, int count, IEqualityComparer_1 equalityComparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +205,17 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member LastIndexOf.
+     *
+     * @param item the argument of type {@code T}
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.LastIndexOf" target="_top">.NET documentation</a>
+     */
     public int LastIndexOf(T item, int index, int count, IEqualityComparer_1 equalityComparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +256,14 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.Add" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 Add(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +279,14 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member AddRange.
+     *
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.AddRange" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 AddRange(IEnumerable_1 items) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +302,13 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.Clear" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +324,15 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param element the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.Insert" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 Insert(int index, T element) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +348,15 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member InsertRange.
+     *
+     * @param index the argument of type {@code int}
+     * @param items the argument of type {@code IEnumerable_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.InsertRange" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 InsertRange(int index, IEnumerable_1 items) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +372,15 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param value the argument of type {@code T}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.Remove" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 Remove(T value, IEqualityComparer_1 equalityComparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +396,14 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAll.
+     *
+     * @param match the argument of type {@code Predicate_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.RemoveAll" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 RemoveAll(Predicate_1 match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +419,14 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.RemoveAt" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +442,15 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveRange.
+     *
+     * @param index the argument of type {@code int}
+     * @param count the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.RemoveRange" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 RemoveRange(int index, int count) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -366,6 +466,15 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveRange.
+     *
+     * @param items the argument of type {@code IEnumerable_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.RemoveRange" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 RemoveRange(IEnumerable_1 items, IEqualityComparer_1 equalityComparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +490,16 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member Replace.
+     *
+     * @param oldValue the argument of type {@code T}
+     * @param newValue the argument of type {@code T}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.Replace" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 Replace(T oldValue, T newValue, IEqualityComparer_1 equalityComparer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +515,15 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
         }
     }
 
+    /**
+     * Invokes the .NET member SetItem.
+     *
+     * @param index the argument of type {@code int}
+     * @param value the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.SetItem" target="_top">.NET documentation</a>
+     */
     public IImmutableList_1 SetItem(int index, T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +543,13 @@ public class IImmutableList_1Implementation<T extends IJCOBridgeReflected> exten
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Count.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.IImmutableList-1.Count" target="_top">.NET documentation</a>
+     */
     public int getCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

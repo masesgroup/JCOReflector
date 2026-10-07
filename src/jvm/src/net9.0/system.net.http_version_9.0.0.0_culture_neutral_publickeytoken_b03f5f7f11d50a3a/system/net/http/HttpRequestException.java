@@ -104,7 +104,9 @@ public class HttpRequestException extends NetException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public HttpRequestException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,16 @@ public class HttpRequestException extends NetException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param httpRequestError the argument of type {@code HttpRequestError}
+     * @param message the argument of type {@code java.lang.String}
+     * @param inner the argument of type {@code NetException}
+     * @param statusCode the argument of type {@code Nullable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpRequestException.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestException(HttpRequestError httpRequestError, java.lang.String message, NetException inner, Nullable_1 statusCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +187,15 @@ public class HttpRequestException extends NetException {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param inner the argument of type {@code NetException}
+     * @param statusCode the argument of type {@code Nullable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpRequestException.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpRequestException(java.lang.String message, NetException inner, Nullable_1 statusCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -193,6 +214,13 @@ public class HttpRequestException extends NetException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HttpRequestError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpRequestException.HttpRequestError" target="_top">.NET documentation</a>
+     */
     public HttpRequestError getHttpRequestError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +236,13 @@ public class HttpRequestException extends NetException {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StatusCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpRequestException.StatusCode" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getStatusCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

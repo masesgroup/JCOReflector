@@ -100,7 +100,10 @@ public class PersonalizationState extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PersonalizationState(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class PersonalizationState extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAuthorizationFilter.
+     *
+     * @param webPartID the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.GetAuthorizationFilter" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetAuthorizationFilter(java.lang.String webPartID) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +178,12 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyWebPartManagerPersonalization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.ApplyWebPartManagerPersonalization" target="_top">.NET documentation</a>
+     */
     public void ApplyWebPartManagerPersonalization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,13 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyWebPartPersonalization.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.ApplyWebPartPersonalization" target="_top">.NET documentation</a>
+     */
     public void ApplyWebPartPersonalization(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +211,12 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractWebPartManagerPersonalization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.ExtractWebPartManagerPersonalization" target="_top">.NET documentation</a>
+     */
     public void ExtractWebPartManagerPersonalization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +227,13 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExtractWebPartPersonalization.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.ExtractWebPartPersonalization" target="_top">.NET documentation</a>
+     */
     public void ExtractWebPartPersonalization(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +244,13 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetWebPartDirty.
+     *
+     * @param webPart the argument of type {@code WebPart}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.SetWebPartDirty" target="_top">.NET documentation</a>
+     */
     public void SetWebPartDirty(WebPart webPart) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +261,12 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetWebPartManagerDirty.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.SetWebPartManagerDirty" target="_top">.NET documentation</a>
+     */
     public void SetWebPartManagerDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +281,13 @@ public class PersonalizationState extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDirty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.IsDirty" target="_top">.NET documentation</a>
+     */
     public boolean getIsDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +302,13 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +323,13 @@ public class PersonalizationState extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebPartManager.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationState.WebPartManager" target="_top">.NET documentation</a>
+     */
     public WebPartManager getWebPartManager() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

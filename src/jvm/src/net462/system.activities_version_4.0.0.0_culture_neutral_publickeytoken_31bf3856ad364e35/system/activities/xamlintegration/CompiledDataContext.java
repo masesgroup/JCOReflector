@@ -103,7 +103,10 @@ public class CompiledDataContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompiledDataContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class CompiledDataContext extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetLocation.
+     *
+     * @param <T> the type of the generic argument T
+     * @param getMethod the argument of type {@code Func_1}
+     * @param setMethod the argument of type {@code Action_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.CompiledDataContext.GetLocation" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Location_1 GetLocation(Func_1 getMethod, Action_1 setMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +184,19 @@ public class CompiledDataContext extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetLocation.
+     *
+     * @param <T> the type of the generic argument T
+     * @param getMethod the argument of type {@code Func_1}
+     * @param setMethod the argument of type {@code Action_1}
+     * @param expressionId the argument of type {@code int}
+     * @param compiledRootActivity the argument of type {@code Activity}
+     * @param activityContext the argument of type {@code ActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.CompiledDataContext.GetLocation" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> Location_1 GetLocation(Func_1 getMethod, Action_1 setMethod, int expressionId, Activity compiledRootActivity, ActivityContext activityContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

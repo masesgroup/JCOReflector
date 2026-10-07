@@ -99,7 +99,10 @@ public class ActivityValidatorAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ActivityValidatorAttribute extends system.Attribute  {
     public ActivityValidatorAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param validatorTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityValidatorAttribute(java.lang.String validatorTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,13 @@ public class ActivityValidatorAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param validatorType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityValidatorAttribute(NetType validatorType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +195,13 @@ public class ActivityValidatorAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidatorTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.ValidatorTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValidatorTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

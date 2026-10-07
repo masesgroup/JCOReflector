@@ -100,7 +100,10 @@ public class TextImage extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextImage(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class TextImage extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.TextImage.-ctor" target="_top">.NET documentation</a>
+     */
     public TextImage() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class TextImage extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property StartLineIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.TextImage.StartLineIndex" target="_top">.NET documentation</a>
+     */
     public int getStartLineIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +221,13 @@ public class TextImage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartLineIndex.
+     *
+     * @param StartLineIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.TextImage.StartLineIndex" target="_top">.NET documentation</a>
+     */
     public void setStartLineIndex(int StartLineIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +238,13 @@ public class TextImage extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Lines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.TextImage.Lines" target="_top">.NET documentation</a>
+     */
     public IList_1 getLines() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +260,13 @@ public class TextImage extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Lines.
+     *
+     * @param Lines the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.TextImage.Lines" target="_top">.NET documentation</a>
+     */
     public void setLines(IList_1 Lines) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

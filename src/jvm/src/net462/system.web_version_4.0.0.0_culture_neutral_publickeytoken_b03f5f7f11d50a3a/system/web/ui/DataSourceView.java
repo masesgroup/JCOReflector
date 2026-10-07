@@ -104,7 +104,10 @@ public class DataSourceView extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class DataSourceView extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanExecute.
+     *
+     * @param commandName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanExecute" target="_top">.NET documentation</a>
+     */
     public boolean CanExecute(java.lang.String commandName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +182,17 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Delete.
+     *
+     * @param keys the argument of type {@code IDictionary}
+     * @param oldValues the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.Delete" target="_top">.NET documentation</a>
+     */
     public void Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +203,18 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExecuteCommand.
+     *
+     * @param commandName the argument of type {@code java.lang.String}
+     * @param keys the argument of type {@code IDictionary}
+     * @param values the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.ExecuteCommand" target="_top">.NET documentation</a>
+     */
     public void ExecuteCommand(java.lang.String commandName, IDictionary keys, IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +225,16 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param values the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +245,15 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param arguments the argument of type {@code DataSourceSelectArguments}
+     * @param callback the argument of type {@code DataSourceViewSelectCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.Select" target="_top">.NET documentation</a>
+     */
     public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +264,18 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param keys the argument of type {@code IDictionary}
+     * @param values the argument of type {@code IDictionary}
+     * @param oldValues the argument of type {@code IDictionary}
+     * @param callback the argument of type {@code DataSourceViewOperationCallback}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.Update" target="_top">.NET documentation</a>
+     */
     public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +290,13 @@ public class DataSourceView extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanDelete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanDelete" target="_top">.NET documentation</a>
+     */
     public boolean getCanDelete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +311,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanInsert.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanInsert" target="_top">.NET documentation</a>
+     */
     public boolean getCanInsert() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +332,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanPage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanPage" target="_top">.NET documentation</a>
+     */
     public boolean getCanPage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +353,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRetrieveTotalRowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanRetrieveTotalRowCount" target="_top">.NET documentation</a>
+     */
     public boolean getCanRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +374,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanSort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanSort" target="_top">.NET documentation</a>
+     */
     public boolean getCanSort() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +395,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanUpdate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.CanUpdate" target="_top">.NET documentation</a>
+     */
     public boolean getCanUpdate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +416,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DataSourceView.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +442,13 @@ public class DataSourceView extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addDataSourceViewChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +459,13 @@ public class DataSourceView extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDataSourceViewChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDataSourceViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -110,7 +110,10 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ItemContainerGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -165,6 +168,24 @@ public class ItemContainerGenerator extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IndexFromContainer.
+     *
+     * @param container the argument of type {@code DependencyObject}
+     * @param returnLocalIndex the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.IndexFromContainer" target="_top">.NET documentation</a>
+     */
     public int IndexFromContainer(DependencyObject container, boolean returnLocalIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +226,19 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IndexFromContainer.
+     *
+     * @param container the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.IndexFromContainer" target="_top">.NET documentation</a>
+     */
     public int IndexFromContainer(DependencyObject container) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +279,25 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenerateBatches.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.GenerateBatches" target="_top">.NET documentation</a>
+     */
     public IDisposable GenerateBatches() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +313,23 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ItemFromContainer.
+     *
+     * @param container the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.ItemFromContainer" target="_top">.NET documentation</a>
+     */
     public NetObject ItemFromContainer(DependencyObject container) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +345,14 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainerFromIndex.
+     *
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.ContainerFromIndex" target="_top">.NET documentation</a>
+     */
     public DependencyObject ContainerFromIndex(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +368,15 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ContainerFromItem.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.ContainerFromItem" target="_top">.NET documentation</a>
+     */
     public DependencyObject ContainerFromItem(NetObject item) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,8 +395,13 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIRecyclingItemContainerGenerator method available in IRecyclingItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param count the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator.Recycle" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Recycle(GeneratorPosition position, int count) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRecyclingItemContainerGenerator to obtain the full interface.");
     }
@@ -317,8 +409,13 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.IndexFromGeneratorPosition" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -326,8 +423,15 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param direction the argument of type {@code GeneratorDirection}
+     * @param allowStartAtRealizedItem the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -335,8 +439,14 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param direction the argument of type {@code GeneratorDirection}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -344,8 +454,13 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param panel the argument of type {@code Panel}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GetItemContainerGeneratorForPanel" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -353,8 +468,13 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GeneratorPositionFromIndex" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -362,8 +482,12 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public DependencyObject GenerateNext() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -371,8 +495,13 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param isNewlyRealized the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -380,8 +509,12 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param container the argument of type {@code DependencyObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void PrepareItemContainer(DependencyObject container) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -389,8 +522,13 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @param position the argument of type {@code GeneratorPosition}
+     * @param count the argument of type {@code int}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.Remove" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Remove(GeneratorPosition position, int count) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -398,8 +536,11 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.IItemContainerGenerator.RemoveAll" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveAll() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
@@ -407,8 +548,15 @@ public class ItemContainerGenerator extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     *
+     * @param managerType the argument of type {@code NetType}
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code EventArgs}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IWeakEventListener.ReceiveWeakEvent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
@@ -417,6 +565,18 @@ public class ItemContainerGenerator extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Items.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.Items" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getItems() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +592,13 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Status.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.Status" target="_top">.NET documentation</a>
+     */
     public GeneratorStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -452,6 +619,13 @@ public class ItemContainerGenerator extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addStatusChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addStatusChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +636,13 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeStatusChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeStatusChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +653,13 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addItemsChanged.
+     *
+     * @param handler the argument of type {@code ItemsChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +670,13 @@ public class ItemContainerGenerator extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeItemsChanged.
+     *
+     * @param handler the argument of type {@code ItemsChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeItemsChanged(ItemsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class AspNetWebSocketOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AspNetWebSocketOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class AspNetWebSocketOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public AspNetWebSocketOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class AspNetWebSocketOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RequireSameOrigin.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketOptions.RequireSameOrigin" target="_top">.NET documentation</a>
+     */
     public boolean getRequireSameOrigin() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class AspNetWebSocketOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequireSameOrigin.
+     *
+     * @param RequireSameOrigin the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketOptions.RequireSameOrigin" target="_top">.NET documentation</a>
+     */
     public void setRequireSameOrigin(boolean RequireSameOrigin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class AspNetWebSocketOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SubProtocol.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketOptions.SubProtocol" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,14 @@ public class AspNetWebSocketOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SubProtocol.
+     *
+     * @param SubProtocol the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocketOptions.SubProtocol" target="_top">.NET documentation</a>
+     */
     public void setSubProtocol(java.lang.String SubProtocol) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

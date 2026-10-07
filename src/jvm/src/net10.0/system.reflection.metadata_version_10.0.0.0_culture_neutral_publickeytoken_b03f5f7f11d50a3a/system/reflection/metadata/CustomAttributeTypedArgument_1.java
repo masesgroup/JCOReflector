@@ -99,7 +99,10 @@ public class CustomAttributeTypedArgument_1<TType extends IJCOBridgeReflected> e
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CustomAttributeTypedArgument_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class CustomAttributeTypedArgument_1<TType extends IJCOBridgeReflected> e
     public CustomAttributeTypedArgument_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param type the argument of type {@code TType}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeTypedArgument-1.-ctor" target="_top">.NET documentation</a>
+     */
     public CustomAttributeTypedArgument_1(TType type, NetObject value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class CustomAttributeTypedArgument_1<TType extends IJCOBridgeReflected> e
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeTypedArgument-1.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class CustomAttributeTypedArgument_1<TType extends IJCOBridgeReflected> e
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.CustomAttributeTypedArgument-1.Type" target="_top">.NET documentation</a>
+     */
     public TType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

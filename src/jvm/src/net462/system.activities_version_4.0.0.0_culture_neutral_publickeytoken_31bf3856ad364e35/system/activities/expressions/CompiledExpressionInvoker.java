@@ -104,7 +104,10 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompiledExpressionInvoker(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,25 @@ public class CompiledExpressionInvoker extends NetObject  {
     public CompiledExpressionInvoker() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code ITextExpression}
+     * @param isReference the argument of type {@code boolean}
+     * @param metadata the argument of type {@code CodeActivityMetadata}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.-ctor" target="_top">.NET documentation</a>
+     */
     public CompiledExpressionInvoker(ITextExpression expression, boolean isReference, CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +191,20 @@ public class CompiledExpressionInvoker extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetCompiledExpressionRoot.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.GetCompiledExpressionRoot" target="_top">.NET documentation</a>
+     */
     public static NetObject GetCompiledExpressionRoot(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +220,20 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompiledExpressionRootForImplementation.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.GetCompiledExpressionRootForImplementation" target="_top">.NET documentation</a>
+     */
     public static NetObject GetCompiledExpressionRootForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +249,22 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeExpression.
+     *
+     * @param activityContext the argument of type {@code ActivityContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.InvokeExpression" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeExpression(ActivityContext activityContext) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +280,24 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCompiledExpressionRoot.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param compiledExpressionRoot the argument of type {@code ICompiledExpressionRoot}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.SetCompiledExpressionRoot" target="_top">.NET documentation</a>
+     */
     public static void SetCompiledExpressionRoot(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -224,6 +308,24 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetCompiledExpressionRootForImplementation.
+     *
+     * @param target the argument of type {@code NetObject}
+     * @param compiledExpressionRoot the argument of type {@code ICompiledExpressionRoot}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.threading.ThreadAbortException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation" target="_top">.NET documentation</a>
+     */
     public static void SetCompiledExpressionRootForImplementation(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -238,6 +340,13 @@ public class CompiledExpressionInvoker extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsStaticallyCompiled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.IsStaticallyCompiled" target="_top">.NET documentation</a>
+     */
     public boolean getIsStaticallyCompiled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +361,13 @@ public class CompiledExpressionInvoker extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsStaticallyCompiled.
+     *
+     * @param IsStaticallyCompiled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.CompiledExpressionInvoker.IsStaticallyCompiled" target="_top">.NET documentation</a>
+     */
     public void setIsStaticallyCompiled(boolean IsStaticallyCompiled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

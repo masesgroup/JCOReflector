@@ -107,7 +107,10 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbUpdatableDataRecord(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBoolean.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetBoolean" target="_top">.NET documentation</a>
+     */
     public boolean GetBoolean(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +185,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsDBNull.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.IsDBNull" target="_top">.NET documentation</a>
+     */
     public boolean IsDBNull(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +207,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetByte.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetByte" target="_top">.NET documentation</a>
+     */
     public byte GetByte(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +255,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChar.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetChar" target="_top">.NET documentation</a>
+     */
     public char GetChar(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +277,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDouble.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetDouble" target="_top">.NET documentation</a>
+     */
     public double GetDouble(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +325,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt16.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetInt16" target="_top">.NET documentation</a>
+     */
     public short GetInt16(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +373,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt32.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetInt32" target="_top">.NET documentation</a>
+     */
     public int GetInt32(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +421,15 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetOrdinal.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetOrdinal" target="_top">.NET documentation</a>
+     */
     public int GetOrdinal(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -402,6 +470,15 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValues.
+     *
+     * @param values the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetValues" target="_top">.NET documentation</a>
+     */
     public int GetValues(NetObject[] values) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -442,6 +519,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValues.
+     *
+     * @param values the argument of type {@code NetObject...}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetValues" target="_top">.NET documentation</a>
+     */
     public int SetValues(NetObject... values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +567,28 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param dataIndex the argument of type {@code long}
+     * @param buffer the argument of type {@code byte[]}
+     * @param bufferIndex the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetBytes" target="_top">.NET documentation</a>
+     */
     public long GetBytes(int ordinal, long dataIndex, byte[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +629,28 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code long}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetBytes" target="_top">.NET documentation</a>
+     */
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +691,28 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param dataIndex the argument of type {@code long}
+     * @param buffer the argument of type {@code char[]}
+     * @param bufferIndex the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetChars" target="_top">.NET documentation</a>
+     */
     public long GetChars(int ordinal, long dataIndex, char[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +753,28 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code long}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetChars" target="_top">.NET documentation</a>
+     */
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +815,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt64.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetInt64" target="_top">.NET documentation</a>
+     */
     public long GetInt64(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +863,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFloat.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetFloat" target="_top">.NET documentation</a>
+     */
     public Single GetFloat(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -697,6 +886,15 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataReader.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetDataReader" target="_top">.NET documentation</a>
+     */
     public DbDataReader GetDataReader(int i) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -712,6 +910,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataRecord.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetDataRecord" target="_top">.NET documentation</a>
+     */
     public DbDataRecord GetDataRecord(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -727,6 +933,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDateTime.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime GetDateTime(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -742,6 +956,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecimal.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetDecimal" target="_top">.NET documentation</a>
+     */
     public Decimal GetDecimal(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -757,6 +979,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGuid.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetGuid" target="_top">.NET documentation</a>
+     */
     public Guid GetGuid(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -772,6 +1002,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -787,6 +1025,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataTypeName.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetDataTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetDataTypeName(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -801,6 +1047,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1069,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -829,6 +1091,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldType.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.GetFieldType" target="_top">.NET documentation</a>
+     */
     public NetType GetFieldType(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -844,6 +1114,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetBoolean.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetBoolean" target="_top">.NET documentation</a>
+     */
     public void SetBoolean(int ordinal, boolean value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -854,6 +1132,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetByte.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code byte}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetByte" target="_top">.NET documentation</a>
+     */
     public void SetByte(int ordinal, byte value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -864,6 +1150,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetChar.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetChar" target="_top">.NET documentation</a>
+     */
     public void SetChar(int ordinal, char value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -874,6 +1168,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDataRecord.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code IDataRecord}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetDataRecord" target="_top">.NET documentation</a>
+     */
     public void SetDataRecord(int ordinal, IDataRecord value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -884,6 +1186,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDateTime.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code DateTime}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetDateTime" target="_top">.NET documentation</a>
+     */
     public void SetDateTime(int ordinal, DateTime value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -894,6 +1204,13 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDBNull.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetDBNull" target="_top">.NET documentation</a>
+     */
     public void SetDBNull(int ordinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -904,6 +1221,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDecimal.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code Decimal}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetDecimal" target="_top">.NET documentation</a>
+     */
     public void SetDecimal(int ordinal, Decimal value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -914,6 +1239,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetDouble.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code double}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetDouble" target="_top">.NET documentation</a>
+     */
     public void SetDouble(int ordinal, double value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -924,6 +1257,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetFloat.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code Single}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetFloat" target="_top">.NET documentation</a>
+     */
     public void SetFloat(int ordinal, Single value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -934,6 +1275,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetGuid.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetGuid" target="_top">.NET documentation</a>
+     */
     public void SetGuid(int ordinal, Guid value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -944,6 +1293,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetInt16.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code short}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetInt16" target="_top">.NET documentation</a>
+     */
     public void SetInt16(int ordinal, short value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -954,6 +1311,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetInt32.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetInt32" target="_top">.NET documentation</a>
+     */
     public void SetInt32(int ordinal, int value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -964,6 +1329,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetInt64.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetInt64" target="_top">.NET documentation</a>
+     */
     public void SetInt64(int ordinal, long value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -974,6 +1347,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetString.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetString" target="_top">.NET documentation</a>
+     */
     public void SetString(int ordinal, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -984,6 +1365,14 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetValue.
+     *
+     * @param ordinal the argument of type {@code int}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.SetValue" target="_top">.NET documentation</a>
+     */
     public void SetValue(int ordinal, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -998,6 +1387,13 @@ public class DbUpdatableDataRecord extends system.data.common.DbDataRecord  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DataRecordInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DbUpdatableDataRecord.DataRecordInfo" target="_top">.NET documentation</a>
+     */
     public DataRecordInfo getDataRecordInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

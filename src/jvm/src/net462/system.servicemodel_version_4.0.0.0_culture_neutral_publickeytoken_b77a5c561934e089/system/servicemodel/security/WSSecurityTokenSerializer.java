@@ -110,7 +110,10 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WSSecurityTokenSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,18 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +182,18 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(boolean emitBspRequiredAttributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +204,18 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +226,21 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -197,6 +251,23 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -207,6 +278,28 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
+     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -217,6 +310,35 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
+     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param maximumKeyDerivationOffset the argument of type {@code int}
+     * @param maximumKeyDerivationLabelLength the argument of type {@code int}
+     * @param maximumKeyDerivationNonceLength the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -227,6 +349,34 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @param trustVersion the argument of type {@code TrustVersion}
+     * @param secureConversationVersion the argument of type {@code SecureConversationVersion}
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
+     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -237,6 +387,34 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param securityVersion the argument of type {@code SecurityVersion}
+     * @param trustVersion the argument of type {@code TrustVersion}
+     * @param secureConversationVersion the argument of type {@code SecureConversationVersion}
+     * @param emitBspRequiredAttributes the argument of type {@code boolean}
+     * @param samlSerializer the argument of type {@code SamlSerializer}
+     * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
+     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param maximumKeyDerivationOffset the argument of type {@code int}
+     * @param maximumKeyDerivationLabelLength the argument of type {@code int}
+     * @param maximumKeyDerivationNonceLength the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -251,6 +429,29 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryCreateKeyIdentifierClauseFromTokenXml.
+     *
+     * @param element the argument of type {@code XmlElement}
+     * @param tokenReferenceStyle the argument of type {@code SecurityTokenReferenceStyle}
+     * @param securityKeyIdentifierClause the argument of type {@code JCORefOut<SecurityKeyIdentifierClause>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.TryCreateKeyIdentifierClauseFromTokenXml" target="_top">.NET documentation</a>
+     */
     public boolean TryCreateKeyIdentifierClauseFromTokenXml(XmlElement element, SecurityTokenReferenceStyle tokenReferenceStyle, JCORefOut<SecurityKeyIdentifierClause> securityKeyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +466,26 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CreateKeyIdentifierClauseFromTokenXml.
+     *
+     * @param element the argument of type {@code XmlElement}
+     * @param tokenReferenceStyle the argument of type {@code SecurityTokenReferenceStyle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.CreateKeyIdentifierClauseFromTokenXml" target="_top">.NET documentation</a>
+     */
     public SecurityKeyIdentifierClause CreateKeyIdentifierClauseFromTokenXml(XmlElement element, SecurityTokenReferenceStyle tokenReferenceStyle) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +505,13 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EmitBspRequiredAttributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.EmitBspRequiredAttributes" target="_top">.NET documentation</a>
+     */
     public boolean getEmitBspRequiredAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +526,13 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumKeyDerivationLabelLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.MaximumKeyDerivationLabelLength" target="_top">.NET documentation</a>
+     */
     public int getMaximumKeyDerivationLabelLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +573,13 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumKeyDerivationNonceLength.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.MaximumKeyDerivationNonceLength" target="_top">.NET documentation</a>
+     */
     public int getMaximumKeyDerivationNonceLength() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +620,13 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumKeyDerivationOffset.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.MaximumKeyDerivationOffset" target="_top">.NET documentation</a>
+     */
     public int getMaximumKeyDerivationOffset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +667,13 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.SecurityVersion" target="_top">.NET documentation</a>
+     */
     public SecurityVersion getSecurityVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -433,6 +689,18 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.DefaultInstance" target="_top">.NET documentation</a>
+     */
     public static WSSecurityTokenSerializer getDefaultInstance() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

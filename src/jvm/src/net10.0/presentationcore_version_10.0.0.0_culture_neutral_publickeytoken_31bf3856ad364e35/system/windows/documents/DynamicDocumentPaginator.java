@@ -104,7 +104,10 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicDocumentPaginator(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,14 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPageNumber.
+     *
+     * @param contentPosition the argument of type {@code ContentPosition}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.GetPageNumber" target="_top">.NET documentation</a>
+     */
     public int GetPageNumber(ContentPosition contentPosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +208,14 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member GetObjectPosition.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.GetObjectPosition" target="_top">.NET documentation</a>
+     */
     public ContentPosition GetObjectPosition(NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +231,14 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member GetPagePosition.
+     *
+     * @param page the argument of type {@code DocumentPage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.GetPagePosition" target="_top">.NET documentation</a>
+     */
     public ContentPosition GetPagePosition(DocumentPage page) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +254,23 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageNumberAsync.
+     *
+     * @param contentPosition the argument of type {@code ContentPosition}
+     * @param userState the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" target="_top">.NET documentation</a>
+     */
     public void GetPageNumberAsync(ContentPosition contentPosition, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +281,18 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member GetPageNumberAsync.
+     *
+     * @param contentPosition the argument of type {@code ContentPosition}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" target="_top">.NET documentation</a>
+     */
     public void GetPageNumberAsync(ContentPosition contentPosition) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +307,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBackgroundPaginationEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsBackgroundPaginationEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +328,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsBackgroundPaginationEnabled.
+     *
+     * @param IsBackgroundPaginationEnabled the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled" target="_top">.NET documentation</a>
+     */
     public void setIsBackgroundPaginationEnabled(boolean IsBackgroundPaginationEnabled) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +350,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addPaginationCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPaginationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +367,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member removePaginationCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePaginationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +384,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member addGetPageNumberCompleted.
+     *
+     * @param handler the argument of type {@code GetPageNumberCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +401,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member removeGetPageNumberCompleted.
+     *
+     * @param handler the argument of type {@code GetPageNumberCompletedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +418,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member addPaginationProgress.
+     *
+     * @param handler the argument of type {@code PaginationProgressEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addPaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +435,13 @@ public class DynamicDocumentPaginator extends system.windows.documents.DocumentP
         }
     }
 
+    /**
+     * Invokes the .NET member removePaginationProgress.
+     *
+     * @param handler the argument of type {@code PaginationProgressEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removePaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class PeerPresenceInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PeerPresenceInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class PeerPresenceInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public PeerPresenceInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class PeerPresenceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param presenceStatus the argument of type {@code PeerPresenceStatus}
+     * @param description the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public PeerPresenceInfo(PeerPresenceStatus presenceStatus, java.lang.String description) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class PeerPresenceInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PresenceStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.PresenceStatus" target="_top">.NET documentation</a>
+     */
     public PeerPresenceStatus getPresenceStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,13 @@ public class PeerPresenceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PresenceStatus.
+     *
+     * @param PresenceStatus the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.PresenceStatus" target="_top">.NET documentation</a>
+     */
     public void setPresenceStatus(PeerPresenceStatus PresenceStatus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class PeerPresenceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DescriptiveText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.DescriptiveText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescriptiveText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class PeerPresenceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DescriptiveText.
+     *
+     * @param DescriptiveText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.Collaboration.PeerPresenceInfo.DescriptiveText" target="_top">.NET documentation</a>
+     */
     public void setDescriptiveText(java.lang.String DescriptiveText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

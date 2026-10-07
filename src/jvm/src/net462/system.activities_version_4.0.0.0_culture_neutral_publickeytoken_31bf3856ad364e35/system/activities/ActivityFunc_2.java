@@ -101,7 +101,10 @@ public class ActivityFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOB
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityFunc_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ActivityFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOB
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-2.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityFunc_2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class ActivityFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOB
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-2.Argument" target="_top">.NET documentation</a>
+     */
     public DelegateInArgument_1 getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class ActivityFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOB
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument.
+     *
+     * @param Argument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-2.Argument" target="_top">.NET documentation</a>
+     */
     public void setArgument(DelegateInArgument_1 Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class ActivityFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOB
         }
     }
 
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-2.Result" target="_top">.NET documentation</a>
+     */
     public DelegateOutArgument_1 getResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class ActivityFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOB
         }
     }
 
+    /**
+     * Sets the value of the .NET property Result.
+     *
+     * @param Result the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-2.Result" target="_top">.NET documentation</a>
+     */
     public void setResult(DelegateOutArgument_1 Result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

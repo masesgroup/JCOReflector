@@ -99,7 +99,10 @@ public class GenericComparer_1<T extends IJCOBridgeReflected> extends system.col
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GenericComparer_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class GenericComparer_1<T extends IJCOBridgeReflected> extends system.col
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.GenericComparer-1.-ctor" target="_top">.NET documentation</a>
+     */
     public GenericComparer_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,15 @@ public class GenericComparer_1<T extends IJCOBridgeReflected> extends system.col
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CompareByKey.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.GenericComparer-1.CompareByKey" target="_top">.NET documentation</a>
+     */
     public int CompareByKey(T x, T y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class AssociationType extends system.data.metadata.edm.RelationshipType  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AssociationType(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class AssociationType extends system.data.metadata.edm.RelationshipType  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsForeignKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationType.IsForeignKey" target="_top">.NET documentation</a>
+     */
     public boolean getIsForeignKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,15 @@ public class AssociationType extends system.data.metadata.edm.RelationshipType  
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssociationEndMembers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationType.AssociationEndMembers" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getAssociationEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +208,13 @@ public class AssociationType extends system.data.metadata.edm.RelationshipType  
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferentialConstraints.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationType.ReferentialConstraints" target="_top">.NET documentation</a>
+     */
     public ReadOnlyMetadataCollection_1 getReferentialConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

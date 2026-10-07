@@ -106,7 +106,10 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImmutableArrayExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,25 @@ public class ImmutableArrayExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member All.
+     *
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.All" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean All(ImmutableArray_1 immutableArray, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -173,6 +195,25 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.Any" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Any(ImmutableArray_1 immutableArray, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +228,15 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Any.
+     *
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.Any" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> boolean Any(ImmutableArray_1 immutableArray) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +251,27 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TDerived> the type of the generic argument TDerived
+     * @param <TBase> the type of the generic argument TBase
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param items the argument of type {@code IEnumerable_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TDerived extends IJCOBridgeReflected, TBase extends IJCOBridgeReflected> boolean SequenceEqual(ImmutableArray_1 immutableArray, IEnumerable_1 items, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -215,6 +286,18 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TDerived> the type of the generic argument TDerived
+     * @param <TBase> the type of the generic argument TBase
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param items the argument of type {@code ImmutableArray_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TDerived extends IJCOBridgeReflected, TBase extends IJCOBridgeReflected> boolean SequenceEqual(ImmutableArray_1 immutableArray, ImmutableArray_1 items, IEqualityComparer_1 comparer) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +312,27 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SequenceEqual.
+     *
+     * @param <TDerived> the type of the generic argument TDerived
+     * @param <TBase> the type of the generic argument TBase
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param items the argument of type {@code ImmutableArray_1}
+     * @param predicate the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.SequenceEqual" target="_top">.NET documentation</a>
+     */
     public static <TDerived extends IJCOBridgeReflected, TBase extends IJCOBridgeReflected> boolean SequenceEqual(ImmutableArray_1 immutableArray, ImmutableArray_1 items, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -243,6 +347,29 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, T extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ImmutableArray_1 immutableArray, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -258,6 +385,24 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, T extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ImmutableArray_1 immutableArray, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -273,6 +418,31 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, T extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ImmutableArray_1 immutableArray, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -288,6 +458,26 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ToDictionary.
+     *
+     * @param <TKey> the type of the generic argument TKey
+     * @param <TElement> the type of the generic argument TElement
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param keySelector the argument of type {@code Func_2}
+     * @param elementSelector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.ToDictionary" target="_top">.NET documentation</a>
+     */
     public static <TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, T extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ImmutableArray_1 immutableArray, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -303,6 +493,25 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Where.
+     *
+     * @param <T> the type of the generic argument T
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param predicate the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.Where" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> IEnumerable_1 Where(ImmutableArray_1 immutableArray, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -318,6 +527,26 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param <T> the type of the generic argument T
+     * @param <TResult> the type of the generic argument TResult
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param selector the argument of type {@code Func_2}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.Select" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 Select(ImmutableArray_1 immutableArray, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -333,6 +562,28 @@ public class ImmutableArrayExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SelectMany.
+     *
+     * @param <TSource> the type of the generic argument TSource
+     * @param <TCollection> the type of the generic argument TCollection
+     * @param <TResult> the type of the generic argument TResult
+     * @param immutableArray the argument of type {@code ImmutableArray_1}
+     * @param collectionSelector the argument of type {@code Func_2}
+     * @param resultSelector the argument of type {@code Func_3}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.ImmutableArrayExtensions.SelectMany" target="_top">.NET documentation</a>
+     */
     public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IEnumerable_1 SelectMany(ImmutableArray_1 immutableArray, Func_2 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

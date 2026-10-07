@@ -52,5 +52,11 @@ import system.windows.forms.StatusBarDrawItemEventArgs;
  * @version 2.0.0.0
  */
 public interface IStatusBarDrawItemEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param sbdevent the .NET argument of type {@code System.Windows.Forms.StatusBarDrawItemEventArgs}
+     */
     public void Invoke(NetObject sender, StatusBarDrawItemEventArgs sbdevent);
 }

@@ -107,7 +107,10 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolMethodImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetSourceStartEnd.
+     *
+     * @param docs the argument of type {@code ISymbolDocument[]}
+     * @param lines the argument of type {@code int[]}
+     * @param columns the argument of type {@code int[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetSourceStartEnd" target="_top">.NET documentation</a>
+     */
     public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +176,16 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetSourceStartEnd.
+     *
+     * @param dupParam0 the argument of type {@code ISymbolDocument[]}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetSourceStartEnd" target="_top">.NET documentation</a>
+     */
     public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +200,16 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetOffset.
+     *
+     * @param document the argument of type {@code ISymbolDocument}
+     * @param line the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetOffset" target="_top">.NET documentation</a>
+     */
     public int GetOffset(ISymbolDocument document, int line, int column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +250,16 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetRanges.
+     *
+     * @param document the argument of type {@code ISymbolDocument}
+     * @param line the argument of type {@code int}
+     * @param column the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetRanges" target="_top">.NET documentation</a>
+     */
     public int[] GetRanges(ISymbolDocument document, int line, int column) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +283,13 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetNamespace.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetNamespace" target="_top">.NET documentation</a>
+     */
     public ISymbolNamespace GetNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +305,14 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetScope.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetScope" target="_top">.NET documentation</a>
+     */
     public ISymbolScope GetScope(int offset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +328,13 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetParameters" target="_top">.NET documentation</a>
+     */
     public ISymbolVariable[] GetParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +356,18 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetSequencePoints.
+     *
+     * @param offsets the argument of type {@code int[]}
+     * @param documents the argument of type {@code ISymbolDocument[]}
+     * @param lines the argument of type {@code int[]}
+     * @param columns the argument of type {@code int[]}
+     * @param endLines the argument of type {@code int[]}
+     * @param endColumns the argument of type {@code int[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetSequencePoints" target="_top">.NET documentation</a>
+     */
     public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +378,18 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Invokes the .NET member GetSequencePoints.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @param dupParam1 the argument of type {@code ISymbolDocument[]}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code JCORefOut}
+     * @param dupParam4 the argument of type {@code JCORefOut}
+     * @param dupParam5 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.GetSequencePoints" target="_top">.NET documentation</a>
+     */
     public void GetSequencePoints(JCORefOut dupParam0, ISymbolDocument[] dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +404,13 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SequencePointCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.SequencePointCount" target="_top">.NET documentation</a>
+     */
     public int getSequencePointCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +451,13 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.RootScope" target="_top">.NET documentation</a>
+     */
     public ISymbolScope getRootScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +473,13 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
+    /**
+     * Gets the value of the .NET property Token.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolMethod.Token" target="_top">.NET documentation</a>
+     */
     public SymbolToken getToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IInputLanguageSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,12 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.IInputLanguageSource.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +160,12 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
         }
     }
 
+    /**
+     * Invokes the .NET member Uninitialize.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.IInputLanguageSource.Uninitialize" target="_top">.NET documentation</a>
+     */
     public void Uninitialize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +180,13 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InputLanguageList.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.IInputLanguageSource.InputLanguageList" target="_top">.NET documentation</a>
+     */
     public IEnumerable getInputLanguageList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +202,13 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentInputLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.IInputLanguageSource.CurrentInputLanguage" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCurrentInputLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +224,13 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentInputLanguage.
+     *
+     * @param CurrentInputLanguage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.IInputLanguageSource.CurrentInputLanguage" target="_top">.NET documentation</a>
+     */
     public void setCurrentInputLanguage(CultureInfo CurrentInputLanguage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

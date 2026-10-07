@@ -99,7 +99,10 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDefaultCommunicationTimeoutsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,13 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CloseTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IDefaultCommunicationTimeouts.CloseTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getCloseTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,13 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Gets the value of the .NET property OpenTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IDefaultCommunicationTimeouts.OpenTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getOpenTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +192,13 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReceiveTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IDefaultCommunicationTimeouts.ReceiveTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getReceiveTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +214,13 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
         }
     }
 
+    /**
+     * Gets the value of the .NET property SendTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IDefaultCommunicationTimeouts.SendTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getSendTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

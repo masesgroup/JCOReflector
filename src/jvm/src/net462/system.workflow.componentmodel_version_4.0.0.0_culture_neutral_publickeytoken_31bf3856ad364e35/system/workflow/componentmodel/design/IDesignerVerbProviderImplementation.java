@@ -100,7 +100,10 @@ public class IDesignerVerbProviderImplementation extends NetObject implements ID
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerVerbProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IDesignerVerbProviderImplementation extends NetObject implements ID
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetVerbs.
+     *
+     * @param activityDesigner the argument of type {@code ActivityDesigner}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerVerbProvider.GetVerbs" target="_top">.NET documentation</a>
+     */
     public ActivityDesignerVerbCollection GetVerbs(ActivityDesigner activityDesigner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

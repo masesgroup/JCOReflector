@@ -103,7 +103,10 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignTimeParseData(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,15 @@ public class DesignTimeParseData extends NetObject  {
     public DesignTimeParseData() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designerHost the argument of type {@code IDesignerHost}
+     * @param parseText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignTimeParseData(IDesignerHost designerHost, java.lang.String parseText) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +175,16 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designerHost the argument of type {@code IDesignerHost}
+     * @param parseText the argument of type {@code java.lang.String}
+     * @param filter the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignTimeParseData(IDesignerHost designerHost, java.lang.String parseText, java.lang.String filter) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +204,13 @@ public class DesignTimeParseData extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ShouldApplyTheme.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.ShouldApplyTheme" target="_top">.NET documentation</a>
+     */
     public boolean getShouldApplyTheme() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +225,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ShouldApplyTheme.
+     *
+     * @param ShouldApplyTheme the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.ShouldApplyTheme" target="_top">.NET documentation</a>
+     */
     public void setShouldApplyTheme(boolean ShouldApplyTheme) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +242,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserControlRegisterEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.UserControlRegisterEntries" target="_top">.NET documentation</a>
+     */
     public ICollection getUserControlRegisterEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +264,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesignerHost.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.DesignerHost" target="_top">.NET documentation</a>
+     */
     public IDesignerHost getDesignerHost() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +286,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataBindingHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.DataBindingHandler" target="_top">.NET documentation</a>
+     */
     public EventHandler getDataBindingHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +307,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataBindingHandler.
+     *
+     * @param DataBindingHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.DataBindingHandler" target="_top">.NET documentation</a>
+     */
     public void setDataBindingHandler(EventHandler DataBindingHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +324,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DocumentUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.DocumentUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDocumentUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +345,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DocumentUrl.
+     *
+     * @param DocumentUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.DocumentUrl" target="_top">.NET documentation</a>
+     */
     public void setDocumentUrl(java.lang.String DocumentUrl) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +362,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Filter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.Filter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +383,13 @@ public class DesignTimeParseData extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParseText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.DesignTimeParseData.ParseText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParseText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

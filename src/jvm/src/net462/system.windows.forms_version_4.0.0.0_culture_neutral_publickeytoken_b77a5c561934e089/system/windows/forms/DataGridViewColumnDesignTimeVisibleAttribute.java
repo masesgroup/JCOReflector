@@ -99,7 +99,10 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends system.Attribu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewColumnDesignTimeVisibleAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends system.Attribu
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewColumnDesignTimeVisibleAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends system.Attribu
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param visible the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewColumnDesignTimeVisibleAttribute(boolean visible) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +186,13 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends system.Attribu
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDefaultAttribute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.IsDefaultAttribute" target="_top">.NET documentation</a>
+     */
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class DataGridViewColumnDesignTimeVisibleAttribute extends system.Attribu
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Visible.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewColumnDesignTimeVisibleAttribute.Visible" target="_top">.NET documentation</a>
+     */
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

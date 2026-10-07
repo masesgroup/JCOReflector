@@ -100,7 +100,10 @@ public class ForestTrustDomainInfoCollection extends system.collections.ReadOnly
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ForestTrustDomainInfoCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class ForestTrustDomainInfoCollection extends system.collections.ReadOnly
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param information the argument of type {@code ForestTrustDomainInformation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustDomainInfoCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(ForestTrustDomainInformation information) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,18 @@ public class ForestTrustDomainInfoCollection extends system.collections.ReadOnly
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param information the argument of type {@code ForestTrustDomainInformation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustDomainInfoCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(ForestTrustDomainInformation information) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +233,15 @@ public class ForestTrustDomainInfoCollection extends system.collections.ReadOnly
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code ForestTrustDomainInformation[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ForestTrustDomainInfoCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(ForestTrustDomainInformation[] array, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

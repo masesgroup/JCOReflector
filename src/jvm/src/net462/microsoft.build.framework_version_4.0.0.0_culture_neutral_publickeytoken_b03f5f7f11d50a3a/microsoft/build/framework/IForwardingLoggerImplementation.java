@@ -107,7 +107,10 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IForwardingLoggerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +169,14 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param eventSource the argument of type {@code IEventSource}
+     * @param nodeCount the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Initialize" target="_top">.NET documentation</a>
+     */
     public void Initialize(IEventSource eventSource, int nodeCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +187,12 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Invokes the .NET member Shutdown.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Shutdown" target="_top">.NET documentation</a>
+     */
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +207,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NodeId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.NodeId" target="_top">.NET documentation</a>
+     */
     public int getNodeId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +254,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Sets the value of the .NET property NodeId.
+     *
+     * @param NodeId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.NodeId" target="_top">.NET documentation</a>
+     */
     public void setNodeId(int NodeId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +271,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Gets the value of the .NET property BuildEventRedirector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector" target="_top">.NET documentation</a>
+     */
     public IEventRedirector getBuildEventRedirector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +293,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Sets the value of the .NET property BuildEventRedirector.
+     *
+     * @param BuildEventRedirector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector" target="_top">.NET documentation</a>
+     */
     public void setBuildEventRedirector(IEventRedirector BuildEventRedirector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +310,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verbosity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public LoggerVerbosity getVerbosity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +332,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Verbosity.
+     *
+     * @param Verbosity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Verbosity" target="_top">.NET documentation</a>
+     */
     public void setVerbosity(LoggerVerbosity Verbosity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +349,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Parameters" target="_top">.NET documentation</a>
+     */
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +370,13 @@ public class IForwardingLoggerImplementation extends NetObject implements IForwa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Parameters.
+     *
+     * @param Parameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.IForwardingLogger.Parameters" target="_top">.NET documentation</a>
+     */
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class UrlAttribute extends system.runtime.remoting.contexts.ContextAttrib
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UrlAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class UrlAttribute extends system.runtime.remoting.contexts.ContextAttrib
     public UrlAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param callsiteURL the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.UrlAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public UrlAttribute(java.lang.String callsiteURL) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +178,15 @@ public class UrlAttribute extends system.runtime.remoting.contexts.ContextAttrib
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsContextOK.
+     *
+     * @param ctx the argument of type {@code Context}
+     * @param msg the argument of type {@code IConstructionCallMessage}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.UrlAttribute.IsContextOK" target="_top">.NET documentation</a>
+     */
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +201,13 @@ public class UrlAttribute extends system.runtime.remoting.contexts.ContextAttrib
         }
     }
 
+    /**
+     * Invokes the .NET member GetPropertiesForNewContext.
+     *
+     * @param ctorMsg the argument of type {@code IConstructionCallMessage}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.UrlAttribute.GetPropertiesForNewContext" target="_top">.NET documentation</a>
+     */
     public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +222,13 @@ public class UrlAttribute extends system.runtime.remoting.contexts.ContextAttrib
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UrlValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Activation.UrlAttribute.UrlValue" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUrlValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

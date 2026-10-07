@@ -52,5 +52,11 @@ import system.net.WebHeaderCollection;
  * @version 2.0.0.0
  */
 public interface IHttpContinueDelegate {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param StatusCode the .NET argument of type {@code System.Int32}
+     * @param httpHeaders the .NET argument of type {@code System.Net.WebHeaderCollection}
+     */
     public void Invoke(int StatusCode, WebHeaderCollection httpHeaders);
 }

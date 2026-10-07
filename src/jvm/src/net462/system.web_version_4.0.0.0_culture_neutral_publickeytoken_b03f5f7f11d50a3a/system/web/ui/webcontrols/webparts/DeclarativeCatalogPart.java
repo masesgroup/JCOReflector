@@ -111,7 +111,10 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DeclarativeCatalogPart(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,12 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.-ctor" target="_top">.NET documentation</a>
+     */
     public DeclarativeCatalogPart() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +181,25 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetWebPart.
+     *
+     * @param description the argument of type {@code WebPartDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetWebPart" target="_top">.NET documentation</a>
+     */
     public WebPart GetWebPart(WebPartDescription description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +215,31 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
         }
     }
 
+    /**
+     * Invokes the .NET member GetAvailableWebPartDescriptions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.web.HttpRequestValidationException if the .NET member raises it
+     * @throws system.web.HttpCompileException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.GetAvailableWebPartDescriptions" target="_top">.NET documentation</a>
+     */
     public WebPartDescriptionCollection GetAvailableWebPartDescriptions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.FormatException, system.OutOfMemoryException, system.web.HttpRequestValidationException, system.web.HttpCompileException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +259,13 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WebPartsListUserControlPath.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String getWebPartsListUserControlPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +280,13 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property WebPartsListUserControlPath.
+     *
+     * @param WebPartsListUserControlPath the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsListUserControlPath" target="_top">.NET documentation</a>
+     */
     public void setWebPartsListUserControlPath(java.lang.String WebPartsListUserControlPath) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +297,13 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebPartsTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate" target="_top">.NET documentation</a>
+     */
     public ITemplate getWebPartsTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +319,13 @@ public class DeclarativeCatalogPart extends system.web.ui.webcontrols.webparts.C
         }
     }
 
+    /**
+     * Sets the value of the .NET property WebPartsTemplate.
+     *
+     * @param WebPartsTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate" target="_top">.NET documentation</a>
+     */
     public void setWebPartsTemplate(ITemplate WebPartsTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

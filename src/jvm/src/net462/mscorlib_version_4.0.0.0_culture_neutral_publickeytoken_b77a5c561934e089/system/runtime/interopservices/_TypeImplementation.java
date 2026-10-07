@@ -119,7 +119,10 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public _TypeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -161,6 +164,14 @@ public class _TypeImplementation extends NetObject implements _Type {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param o the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(NetType o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +186,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member IsAssignableFrom.
+     *
+     * @param c the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsAssignableFrom" target="_top">.NET documentation</a>
+     */
     public boolean IsAssignableFrom(NetType c) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +208,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member IsDefined.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsDefined" target="_top">.NET documentation</a>
+     */
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +231,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member IsInstanceOfType.
+     *
+     * @param o the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsInstanceOfType" target="_top">.NET documentation</a>
+     */
     public boolean IsInstanceOfType(NetObject o) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +253,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSubclassOf.
+     *
+     * @param c the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsSubclassOf" target="_top">.NET documentation</a>
+     */
     public boolean IsSubclassOf(NetType c) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetArrayRank.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetArrayRank" target="_top">.NET documentation</a>
+     */
     public int GetArrayRank() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +322,18 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +349,19 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +377,21 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param invokeAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param target the argument of type {@code NetObject}
+     * @param args the argument of type {@code NetObject[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @param culture the argument of type {@code CultureInfo}
+     * @param namedParameters the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +407,21 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member InvokeMember.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code BindingFlags}
+     * @param dupParam2 the argument of type {@code Binder}
+     * @param dupParam3 the argument of type {@code NetObject}
+     * @param dupParam4 the argument of type {@code NetObject[]}
+     * @param dupParam5 the argument of type {@code ParameterModifier[]}
+     * @param dupParam6 the argument of type {@code CultureInfo}
+     * @param dupParam7 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.InvokeMember" target="_top">.NET documentation</a>
+     */
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +437,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +466,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustomAttributes.
+     *
+     * @param attributeType the argument of type {@code NetType}
+     * @param inherit the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetCustomAttributes" target="_top">.NET documentation</a>
+     */
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +496,18 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructor.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param callConvention the argument of type {@code CallingConventions}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetConstructor" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo GetConstructor(BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -388,6 +523,17 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructor.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetConstructor" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo GetConstructor(BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -403,6 +549,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructor.
+     *
+     * @param types the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetConstructor" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo GetConstructor(NetType[] types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +572,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructors.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetConstructors" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo[] GetConstructors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +600,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetConstructors.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetConstructors" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo[] GetConstructors(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +629,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvent.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetEvent" target="_top">.NET documentation</a>
+     */
     public EventInfo GetEvent(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +652,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvent.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetEvent" target="_top">.NET documentation</a>
+     */
     public EventInfo GetEvent(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -490,6 +676,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventInfo[] GetEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -511,6 +704,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvents.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetEvents" target="_top">.NET documentation</a>
+     */
     public EventInfo[] GetEvents(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +733,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +756,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetField.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetField" target="_top">.NET documentation</a>
+     */
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -562,6 +780,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldInfo[] GetFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -583,6 +808,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFields.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetFields" target="_top">.NET documentation</a>
+     */
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +837,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaceMap.
+     *
+     * @param interfaceType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetInterfaceMap" target="_top">.NET documentation</a>
+     */
     public InterfaceMapping GetInterfaceMap(NetType interfaceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -619,6 +860,17 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member FindMembers.
+     *
+     * @param memberType the argument of type {@code MemberTypes}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param filter the argument of type {@code MemberFilter}
+     * @param filterCriteria the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.FindMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] FindMembers(MemberTypes memberType, BindingFlags bindingAttr, MemberFilter filter, NetObject filterCriteria) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +892,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDefaultMembers.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetDefaultMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetDefaultMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +920,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -682,6 +949,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -703,6 +979,16 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMember.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code MemberTypes}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMember" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMember(java.lang.String name, MemberTypes type, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -724,6 +1010,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMembers.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -745,6 +1038,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMembers.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMembers" target="_top">.NET documentation</a>
+     */
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +1067,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -781,6 +1090,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -796,6 +1114,19 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param callConvention the argument of type {@code CallingConventions}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -811,6 +1142,18 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -826,6 +1169,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param types the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, NetType[] types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -841,6 +1193,16 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethod.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethod" target="_top">.NET documentation</a>
+     */
     public MethodInfo GetMethod(java.lang.String name, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -856,6 +1218,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -877,6 +1246,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMethods.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetMethods" target="_top">.NET documentation</a>
+     */
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -898,6 +1275,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -913,6 +1298,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -928,6 +1322,19 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @param binder the argument of type {@code Binder}
+     * @param returnType the argument of type {@code NetType}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -943,6 +1350,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param returnType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, NetType returnType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -958,6 +1374,16 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param returnType the argument of type {@code NetType}
+     * @param types the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, NetType returnType, NetType[] types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -973,6 +1399,17 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param returnType the argument of type {@code NetType}
+     * @param types the argument of type {@code NetType[]}
+     * @param modifiers the argument of type {@code ParameterModifier[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -988,6 +1425,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperty.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param types the argument of type {@code NetType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperty" target="_top">.NET documentation</a>
+     */
     public PropertyInfo GetProperty(java.lang.String name, NetType[] types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1003,6 +1449,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyInfo[] GetProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1024,6 +1477,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetProperties.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetProperties" target="_top">.NET documentation</a>
+     */
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1045,6 +1506,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElementType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetElementType" target="_top">.NET documentation</a>
+     */
     public NetType GetElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1060,6 +1528,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterface.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetInterface" target="_top">.NET documentation</a>
+     */
     public NetType GetInterface(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1075,6 +1551,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterface.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param ignoreCase the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetInterface" target="_top">.NET documentation</a>
+     */
     public NetType GetInterface(java.lang.String name, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1090,6 +1575,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetNestedType" target="_top">.NET documentation</a>
+     */
     public NetType GetNestedType(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1105,6 +1598,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedType.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetNestedType" target="_top">.NET documentation</a>
+     */
     public NetType GetNestedType(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1120,6 +1622,15 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member FindInterfaces.
+     *
+     * @param filter the argument of type {@code TypeFilter}
+     * @param filterCriteria the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.FindInterfaces" target="_top">.NET documentation</a>
+     */
     public NetType[] FindInterfaces(TypeFilter filter, NetObject filterCriteria) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1141,6 +1652,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetInterfaces.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetInterfaces" target="_top">.NET documentation</a>
+     */
     public NetType[] GetInterfaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1162,6 +1680,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedTypes.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetNestedTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetNestedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1183,6 +1708,14 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNestedTypes.
+     *
+     * @param bindingAttr the argument of type {@code BindingFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetNestedTypes" target="_top">.NET documentation</a>
+     */
     public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1204,6 +1737,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeInfoCount.
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GetTypeInfoCount" target="_top">.NET documentation</a>
+     */
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1218,6 +1758,13 @@ public class _TypeImplementation extends NetObject implements _Type {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasElementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.HasElementType" target="_top">.NET documentation</a>
+     */
     public boolean getHasElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1232,6 +1779,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAbstract.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsAbstract" target="_top">.NET documentation</a>
+     */
     public boolean getIsAbstract() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1246,6 +1800,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAnsiClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsAnsiClass" target="_top">.NET documentation</a>
+     */
     public boolean getIsAnsiClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1260,6 +1821,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsArray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsArray" target="_top">.NET documentation</a>
+     */
     public boolean getIsArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1274,6 +1842,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAutoClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsAutoClass" target="_top">.NET documentation</a>
+     */
     public boolean getIsAutoClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1288,6 +1863,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAutoLayout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsAutoLayout" target="_top">.NET documentation</a>
+     */
     public boolean getIsAutoLayout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1302,6 +1884,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsByRef.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsByRef" target="_top">.NET documentation</a>
+     */
     public boolean getIsByRef() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1316,6 +1905,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsClass" target="_top">.NET documentation</a>
+     */
     public boolean getIsClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1330,6 +1926,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCOMObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsCOMObject" target="_top">.NET documentation</a>
+     */
     public boolean getIsCOMObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1344,6 +1947,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsContextful.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsContextful" target="_top">.NET documentation</a>
+     */
     public boolean getIsContextful() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1358,6 +1968,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEnum.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsEnum" target="_top">.NET documentation</a>
+     */
     public boolean getIsEnum() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1372,6 +1989,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsExplicitLayout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsExplicitLayout" target="_top">.NET documentation</a>
+     */
     public boolean getIsExplicitLayout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1386,6 +2010,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsImport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsImport" target="_top">.NET documentation</a>
+     */
     public boolean getIsImport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1400,6 +2031,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsInterface.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsInterface" target="_top">.NET documentation</a>
+     */
     public boolean getIsInterface() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1414,6 +2052,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLayoutSequential.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsLayoutSequential" target="_top">.NET documentation</a>
+     */
     public boolean getIsLayoutSequential() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1428,6 +2073,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsMarshalByRef.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsMarshalByRef" target="_top">.NET documentation</a>
+     */
     public boolean getIsMarshalByRef() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1442,6 +2094,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNestedAssembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNestedAssembly" target="_top">.NET documentation</a>
+     */
     public boolean getIsNestedAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1456,6 +2115,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNestedFamANDAssem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNestedFamANDAssem" target="_top">.NET documentation</a>
+     */
     public boolean getIsNestedFamANDAssem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1470,6 +2136,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNestedFamily.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNestedFamily" target="_top">.NET documentation</a>
+     */
     public boolean getIsNestedFamily() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1484,6 +2157,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNestedFamORAssem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNestedFamORAssem" target="_top">.NET documentation</a>
+     */
     public boolean getIsNestedFamORAssem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1498,6 +2178,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNestedPrivate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNestedPrivate" target="_top">.NET documentation</a>
+     */
     public boolean getIsNestedPrivate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1512,6 +2199,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNestedPublic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNestedPublic" target="_top">.NET documentation</a>
+     */
     public boolean getIsNestedPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1526,6 +2220,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNotPublic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsNotPublic" target="_top">.NET documentation</a>
+     */
     public boolean getIsNotPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1540,6 +2241,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPointer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsPointer" target="_top">.NET documentation</a>
+     */
     public boolean getIsPointer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1554,6 +2262,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPrimitive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsPrimitive" target="_top">.NET documentation</a>
+     */
     public boolean getIsPrimitive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1568,6 +2283,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsPublic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsPublic" target="_top">.NET documentation</a>
+     */
     public boolean getIsPublic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1582,6 +2304,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSealed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsSealed" target="_top">.NET documentation</a>
+     */
     public boolean getIsSealed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1596,6 +2325,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSerializable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsSerializable" target="_top">.NET documentation</a>
+     */
     public boolean getIsSerializable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1610,6 +2346,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsSpecialName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsSpecialName" target="_top">.NET documentation</a>
+     */
     public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1624,6 +2367,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsUnicodeClass.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsUnicodeClass" target="_top">.NET documentation</a>
+     */
     public boolean getIsUnicodeClass() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1638,6 +2388,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsValueType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.IsValueType" target="_top">.NET documentation</a>
+     */
     public boolean getIsValueType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1652,6 +2409,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GUID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.GUID" target="_top">.NET documentation</a>
+     */
     public Guid getGUID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1667,6 +2431,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Assembly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.Assembly" target="_top">.NET documentation</a>
+     */
     public Assembly getAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1682,6 +2453,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeInitializer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.TypeInitializer" target="_top">.NET documentation</a>
+     */
     public ConstructorInfo getTypeInitializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1697,6 +2475,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.MemberType" target="_top">.NET documentation</a>
+     */
     public MemberTypes getMemberType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1712,6 +2497,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Module.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.Module" target="_top">.NET documentation</a>
+     */
     public Module getModule() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1727,6 +2519,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.Attributes" target="_top">.NET documentation</a>
+     */
     public TypeAttributes getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1742,6 +2541,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.TypeHandle" target="_top">.NET documentation</a>
+     */
     public RuntimeTypeHandle getTypeHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1757,6 +2563,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyQualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.AssemblyQualifiedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1771,6 +2584,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FullName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.FullName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFullName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1785,6 +2605,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1799,6 +2626,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.Namespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1813,6 +2647,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.BaseType" target="_top">.NET documentation</a>
+     */
     public NetType getBaseType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1828,6 +2669,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclaringType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.DeclaringType" target="_top">.NET documentation</a>
+     */
     public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1843,6 +2691,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReflectedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.ReflectedType" target="_top">.NET documentation</a>
+     */
     public NetType getReflectedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1858,6 +2713,13 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnderlyingSystemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._Type.UnderlyingSystemType" target="_top">.NET documentation</a>
+     */
     public NetType getUnderlyingSystemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

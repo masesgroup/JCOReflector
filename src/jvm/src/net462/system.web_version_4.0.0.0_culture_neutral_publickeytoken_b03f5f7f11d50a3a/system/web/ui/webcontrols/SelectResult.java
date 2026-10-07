@@ -98,7 +98,10 @@ public class SelectResult extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SelectResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,15 @@ public class SelectResult extends NetObject  {
     public SelectResult() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param totalRowCount the argument of type {@code int}
+     * @param results the argument of type {@code IEnumerable}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SelectResult.-ctor" target="_top">.NET documentation</a>
+     */
     public SelectResult(int totalRowCount, IEnumerable results) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +179,13 @@ public class SelectResult extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TotalRowCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SelectResult.TotalRowCount" target="_top">.NET documentation</a>
+     */
     public int getTotalRowCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +226,13 @@ public class SelectResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TotalRowCount.
+     *
+     * @param TotalRowCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SelectResult.TotalRowCount" target="_top">.NET documentation</a>
+     */
     public void setTotalRowCount(int TotalRowCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +243,13 @@ public class SelectResult extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Results.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SelectResult.Results" target="_top">.NET documentation</a>
+     */
     public IEnumerable getResults() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +265,13 @@ public class SelectResult extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Results.
+     *
+     * @param Results the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.SelectResult.Results" target="_top">.NET documentation</a>
+     */
     public void setResults(IEnumerable Results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

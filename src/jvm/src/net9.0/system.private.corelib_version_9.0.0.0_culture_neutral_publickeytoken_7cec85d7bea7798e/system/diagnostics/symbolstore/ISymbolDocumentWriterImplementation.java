@@ -99,7 +99,10 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISymbolDocumentWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
 
     // Methods section
     
+    /**
+     * Invokes the .NET member SetCheckSum.
+     *
+     * @param algorithmId the argument of type {@code Guid}
+     * @param checkSum the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocumentWriter.SetCheckSum" target="_top">.NET documentation</a>
+     */
     public void SetCheckSum(Guid algorithmId, byte[] checkSum) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -151,6 +162,14 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Invokes the .NET member SetCheckSum.
+     *
+     * @param dupParam0 the argument of type {@code Guid}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocumentWriter.SetCheckSum" target="_top">.NET documentation</a>
+     */
     public void SetCheckSum(Guid dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +180,13 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Invokes the .NET member SetSource.
+     *
+     * @param source the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocumentWriter.SetSource" target="_top">.NET documentation</a>
+     */
     public void SetSource(byte[] source) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +197,13 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
 
+    /**
+     * Invokes the .NET member SetSource.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SymbolStore.ISymbolDocumentWriter.SetSource" target="_top">.NET documentation</a>
+     */
     public void SetSource(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

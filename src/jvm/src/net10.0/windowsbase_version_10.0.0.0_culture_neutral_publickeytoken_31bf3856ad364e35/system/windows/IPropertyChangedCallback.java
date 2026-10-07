@@ -53,5 +53,11 @@ import system.windows.DependencyPropertyChangedEventArgs;
  * @version 2.0.0.0
  */
 public interface IPropertyChangedCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param d the .NET argument of type {@code System.Windows.DependencyObject}
+     * @param e the .NET argument of type {@code System.Windows.DependencyPropertyChangedEventArgs}
+     */
     public void Invoke(DependencyObject d, DependencyPropertyChangedEventArgs e);
 }

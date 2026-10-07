@@ -103,7 +103,10 @@ public class Quaternion extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Quaternion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class Quaternion extends system.ValueType  {
     public Quaternion() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param x the argument of type {@code Single}
+     * @param y the argument of type {@code Single}
+     * @param z the argument of type {@code Single}
+     * @param w the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.-ctor" target="_top">.NET documentation</a>
+     */
     public Quaternion(Single x, Single y, Single z, Single w) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +176,14 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param vectorPart the argument of type {@code Vector3}
+     * @param scalarPart the argument of type {@code Single}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.-ctor" target="_top">.NET documentation</a>
+     */
     public Quaternion(Vector3 vectorPart, Single scalarPart) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +199,14 @@ public class Quaternion extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(Quaternion other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +221,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Dot.
+     *
+     * @param quaternion1 the argument of type {@code Quaternion}
+     * @param quaternion2 the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Dot" target="_top">.NET documentation</a>
+     */
     public static Single Dot(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -207,6 +245,13 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Length.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Length" target="_top">.NET documentation</a>
+     */
     public Single Length() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +267,13 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member LengthSquared.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.LengthSquared" target="_top">.NET documentation</a>
+     */
     public Single LengthSquared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +289,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param value1 the argument of type {@code Quaternion}
+     * @param value2 the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Add" target="_top">.NET documentation</a>
+     */
     public static Quaternion Add(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -252,6 +313,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Concatenate.
+     *
+     * @param value1 the argument of type {@code Quaternion}
+     * @param value2 the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Concatenate" target="_top">.NET documentation</a>
+     */
     public static Quaternion Concatenate(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -267,6 +337,14 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Conjugate.
+     *
+     * @param value the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Conjugate" target="_top">.NET documentation</a>
+     */
     public static Quaternion Conjugate(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -282,6 +360,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromAxisAngle.
+     *
+     * @param axis the argument of type {@code Vector3}
+     * @param angle the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.CreateFromAxisAngle" target="_top">.NET documentation</a>
+     */
     public static Quaternion CreateFromAxisAngle(Vector3 axis, Single angle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -297,6 +384,14 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromRotationMatrix.
+     *
+     * @param matrix the argument of type {@code Matrix4x4}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.CreateFromRotationMatrix" target="_top">.NET documentation</a>
+     */
     public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -312,6 +407,16 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateFromYawPitchRoll.
+     *
+     * @param yaw the argument of type {@code Single}
+     * @param pitch the argument of type {@code Single}
+     * @param roll the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.CreateFromYawPitchRoll" target="_top">.NET documentation</a>
+     */
     public static Quaternion CreateFromYawPitchRoll(Single yaw, Single pitch, Single roll) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -327,6 +432,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Divide.
+     *
+     * @param value1 the argument of type {@code Quaternion}
+     * @param value2 the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Divide" target="_top">.NET documentation</a>
+     */
     public static Quaternion Divide(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -342,6 +456,14 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Inverse.
+     *
+     * @param value the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Inverse" target="_top">.NET documentation</a>
+     */
     public static Quaternion Inverse(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -357,6 +479,16 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Lerp.
+     *
+     * @param quaternion1 the argument of type {@code Quaternion}
+     * @param quaternion2 the argument of type {@code Quaternion}
+     * @param amount the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Lerp" target="_top">.NET documentation</a>
+     */
     public static Quaternion Lerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -372,6 +504,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param value1 the argument of type {@code Quaternion}
+     * @param value2 the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Multiply" target="_top">.NET documentation</a>
+     */
     public static Quaternion Multiply(Quaternion value1, Single value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -387,6 +528,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Multiply.
+     *
+     * @param value1 the argument of type {@code Quaternion}
+     * @param value2 the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Multiply" target="_top">.NET documentation</a>
+     */
     public static Quaternion Multiply(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -402,6 +552,14 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Negate.
+     *
+     * @param value the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Negate" target="_top">.NET documentation</a>
+     */
     public static Quaternion Negate(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -417,6 +575,14 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Normalize.
+     *
+     * @param value the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Normalize" target="_top">.NET documentation</a>
+     */
     public static Quaternion Normalize(Quaternion value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -432,6 +598,16 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Slerp.
+     *
+     * @param quaternion1 the argument of type {@code Quaternion}
+     * @param quaternion2 the argument of type {@code Quaternion}
+     * @param amount the argument of type {@code Single}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Slerp" target="_top">.NET documentation</a>
+     */
     public static Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, Single amount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -447,6 +623,15 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Invokes the .NET member Subtract.
+     *
+     * @param value1 the argument of type {@code Quaternion}
+     * @param value2 the argument of type {@code Quaternion}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Subtract" target="_top">.NET documentation</a>
+     */
     public static Quaternion Subtract(Quaternion value1, Quaternion value2) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -466,6 +651,13 @@ public class Quaternion extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.IsIdentity" target="_top">.NET documentation</a>
+     */
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -480,6 +672,13 @@ public class Quaternion extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Identity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Quaternion.Identity" target="_top">.NET documentation</a>
+     */
     public static Quaternion getIdentity() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

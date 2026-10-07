@@ -102,7 +102,10 @@ public class IImplicitResourceProviderImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IImplicitResourceProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class IImplicitResourceProviderImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetImplicitResourceKeys.
+     *
+     * @param keyPrefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.IImplicitResourceProvider.GetImplicitResourceKeys" target="_top">.NET documentation</a>
+     */
     public ICollection GetImplicitResourceKeys(java.lang.String keyPrefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,15 @@ public class IImplicitResourceProviderImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param key the argument of type {@code ImplicitResourceKey}
+     * @param culture the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Compilation.IImplicitResourceProvider.GetObject" target="_top">.NET documentation</a>
+     */
     public NetObject GetObject(ImplicitResourceKey key, CultureInfo culture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

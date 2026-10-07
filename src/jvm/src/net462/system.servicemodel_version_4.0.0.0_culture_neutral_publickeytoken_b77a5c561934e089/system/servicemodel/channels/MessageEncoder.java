@@ -106,7 +106,10 @@ public class MessageEncoder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MessageEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,25 @@ public class MessageEncoder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsContentTypeSupported.
+     *
+     * @param contentType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.IsContentTypeSupported" target="_top">.NET documentation</a>
+     */
     public boolean IsContentTypeSupported(java.lang.String contentType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +195,16 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteMessage.
+     *
+     * @param message the argument of type {@code Message}
+     * @param maxMessageSize the argument of type {@code int}
+     * @param bufferManager the argument of type {@code BufferManager}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.WriteMessage" target="_top">.NET documentation</a>
+     */
     public ArraySegment_1 WriteMessage(Message message, int maxMessageSize, BufferManager bufferManager) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +220,17 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteMessage.
+     *
+     * @param message the argument of type {@code Message}
+     * @param maxMessageSize the argument of type {@code int}
+     * @param bufferManager the argument of type {@code BufferManager}
+     * @param messageOffset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.WriteMessage" target="_top">.NET documentation</a>
+     */
     public ArraySegment_1 WriteMessage(Message message, int maxMessageSize, BufferManager bufferManager, int messageOffset) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +246,23 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BeginWriteMessage.
+     *
+     * @param message the argument of type {@code Message}
+     * @param stream the argument of type {@code Stream}
+     * @param callback the argument of type {@code AsyncCallback}
+     * @param state the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.BeginWriteMessage" target="_top">.NET documentation</a>
+     */
     public IAsyncResult BeginWriteMessage(Message message, Stream stream, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +278,15 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadMessage.
+     *
+     * @param buffer the argument of type {@code ArraySegment_1}
+     * @param bufferManager the argument of type {@code BufferManager}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.ReadMessage" target="_top">.NET documentation</a>
+     */
     public Message ReadMessage(ArraySegment_1 buffer, BufferManager bufferManager) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +302,16 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadMessage.
+     *
+     * @param buffer the argument of type {@code ArraySegment_1}
+     * @param bufferManager the argument of type {@code BufferManager}
+     * @param contentType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.ReadMessage" target="_top">.NET documentation</a>
+     */
     public Message ReadMessage(ArraySegment_1 buffer, BufferManager bufferManager, java.lang.String contentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +327,15 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadMessage.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param maxSizeOfHeaders the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.ReadMessage" target="_top">.NET documentation</a>
+     */
     public Message ReadMessage(Stream stream, int maxSizeOfHeaders) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +351,16 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReadMessage.
+     *
+     * @param stream the argument of type {@code Stream}
+     * @param maxSizeOfHeaders the argument of type {@code int}
+     * @param contentType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.ReadMessage" target="_top">.NET documentation</a>
+     */
     public Message ReadMessage(Stream stream, int maxSizeOfHeaders, java.lang.String contentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +376,32 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndWriteMessage.
+     *
+     * @param result the argument of type {@code IAsyncResult}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.threading.WaitHandleCannotBeOpenedException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.EndWriteMessage" target="_top">.NET documentation</a>
+     */
     public void EndWriteMessage(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +412,14 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WriteMessage.
+     *
+     * @param message the argument of type {@code Message}
+     * @param stream the argument of type {@code Stream}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.WriteMessage" target="_top">.NET documentation</a>
+     */
     public void WriteMessage(Message message, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +434,13 @@ public class MessageEncoder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MessageVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.MessageVersion" target="_top">.NET documentation</a>
+     */
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +456,13 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.ContentType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getContentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +477,13 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MediaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.MessageEncoder.MediaType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMediaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

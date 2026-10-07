@@ -156,7 +156,10 @@ public class SubscribeServiceCallback extends JCVoidDelegate implements IJCVoidE
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SubscribeServiceCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -178,6 +181,14 @@ public class SubscribeServiceCallback extends JCVoidDelegate implements IJCVoidE
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param serviceType the argument of type {@code NetType}
+     * @param serviceInstance the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(NetType serviceType, NetObject serviceInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,7 +200,10 @@ public class SubscribeServiceCallback extends JCVoidDelegate implements IJCVoidE
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param serviceType the .NET argument of type {@code System.Type}
+     * @param serviceInstance the .NET argument of type {@code System.Object}
      */
     public void Invoke(NetType serviceType, NetObject serviceInstance) {
     }

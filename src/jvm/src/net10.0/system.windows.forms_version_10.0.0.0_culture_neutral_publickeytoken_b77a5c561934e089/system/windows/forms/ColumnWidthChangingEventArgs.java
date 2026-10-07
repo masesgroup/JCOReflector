@@ -99,7 +99,10 @@ public class ColumnWidthChangingEventArgs extends system.componentmodel.CancelEv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColumnWidthChangingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class ColumnWidthChangingEventArgs extends system.componentmodel.CancelEv
     public ColumnWidthChangingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param newWidth the argument of type {@code int}
+     * @param cancel the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ColumnWidthChangingEventArgs(int columnIndex, int newWidth, boolean cancel) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +171,14 @@ public class ColumnWidthChangingEventArgs extends system.componentmodel.CancelEv
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param columnIndex the argument of type {@code int}
+     * @param newWidth the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ColumnWidthChangingEventArgs(int columnIndex, int newWidth) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +198,13 @@ public class ColumnWidthChangingEventArgs extends system.componentmodel.CancelEv
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +245,13 @@ public class ColumnWidthChangingEventArgs extends system.componentmodel.CancelEv
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewWidth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventArgs.NewWidth" target="_top">.NET documentation</a>
+     */
     public int getNewWidth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +292,13 @@ public class ColumnWidthChangingEventArgs extends system.componentmodel.CancelEv
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewWidth.
+     *
+     * @param NewWidth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventArgs.NewWidth" target="_top">.NET documentation</a>
+     */
     public void setNewWidth(int NewWidth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

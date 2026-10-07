@@ -99,7 +99,10 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComSourceInterfacesAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
     public ComSourceInterfacesAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceInterfaces the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComSourceInterfacesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComSourceInterfacesAttribute(java.lang.String sourceInterfaces) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,13 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceInterface the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComSourceInterfacesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComSourceInterfacesAttribute(NetType sourceInterface) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +186,15 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceInterface1 the argument of type {@code NetType}
+     * @param sourceInterface2 the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComSourceInterfacesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComSourceInterfacesAttribute(NetType sourceInterface1, NetType sourceInterface2) throws Throwable, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +205,19 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceInterface1 the argument of type {@code NetType}
+     * @param sourceInterface2 the argument of type {@code NetType}
+     * @param sourceInterface3 the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComSourceInterfacesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComSourceInterfacesAttribute(NetType sourceInterface1, NetType sourceInterface2, NetType sourceInterface3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +228,20 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceInterface1 the argument of type {@code NetType}
+     * @param sourceInterface2 the argument of type {@code NetType}
+     * @param sourceInterface3 the argument of type {@code NetType}
+     * @param sourceInterface4 the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComSourceInterfacesAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComSourceInterfacesAttribute(NetType sourceInterface1, NetType sourceInterface2, NetType sourceInterface3, NetType sourceInterface4) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -208,6 +261,13 @@ public class ComSourceInterfacesAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComSourceInterfacesAttribute.Value" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

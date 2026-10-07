@@ -101,7 +101,10 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GetInstalledSDKLocations(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.-ctor" target="_top">.NET documentation</a>
+     */
     public GetInstalledSDKLocations() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,32 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.OverflowException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +216,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstalledSDKs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.InstalledSDKs" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getInstalledSDKs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +244,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstalledSDKs.
+     *
+     * @param InstalledSDKs the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.InstalledSDKs" target="_top">.NET documentation</a>
+     */
     public void setInstalledSDKs(ITaskItem[] InstalledSDKs) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +261,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SDKRegistryRoot.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.SDKRegistryRoot" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSDKRegistryRoot() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +282,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property SDKRegistryRoot.
+     *
+     * @param SDKRegistryRoot the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.SDKRegistryRoot" target="_top">.NET documentation</a>
+     */
     public void setSDKRegistryRoot(java.lang.String SDKRegistryRoot) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +299,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPlatformIdentifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.TargetPlatformIdentifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetPlatformIdentifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +320,19 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetPlatformIdentifier.
+     *
+     * @param TargetPlatformIdentifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.TargetPlatformIdentifier" target="_top">.NET documentation</a>
+     */
     public void setTargetPlatformIdentifier(java.lang.String TargetPlatformIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +343,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPlatformVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.TargetPlatformVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTargetPlatformVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +364,19 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetPlatformVersion.
+     *
+     * @param TargetPlatformVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.TargetPlatformVersion" target="_top">.NET documentation</a>
+     */
     public void setTargetPlatformVersion(java.lang.String TargetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +387,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Gets the value of the .NET property SDKDirectoryRoots.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.SDKDirectoryRoots" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] getSDKDirectoryRoots() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +417,13 @@ public class GetInstalledSDKLocations extends microsoft.build.tasks.TaskExtensio
         }
     }
 
+    /**
+     * Sets the value of the .NET property SDKDirectoryRoots.
+     *
+     * @param SDKDirectoryRoots the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.GetInstalledSDKLocations.SDKDirectoryRoots" target="_top">.NET documentation</a>
+     */
     public void setSDKDirectoryRoots(java.lang.String[] SDKDirectoryRoots) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

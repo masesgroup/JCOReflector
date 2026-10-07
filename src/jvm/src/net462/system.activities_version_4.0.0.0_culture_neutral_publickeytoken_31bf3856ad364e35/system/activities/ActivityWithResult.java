@@ -100,7 +100,10 @@ public class ActivityWithResult extends system.activities.Activity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityWithResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class ActivityWithResult extends system.activities.Activity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityWithResult.Result" target="_top">.NET documentation</a>
+     */
     public OutArgument getResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class ActivityWithResult extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Result.
+     *
+     * @param Result the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityWithResult.Result" target="_top">.NET documentation</a>
+     */
     public void setResult(OutArgument Result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ActivityWithResult extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityWithResult.ResultType" target="_top">.NET documentation</a>
+     */
     public NetType getResultType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CompensatableSequenceActivity extends system.workflow.activities.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompensatableSequenceActivity(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,21 @@ public class CompensatableSequenceActivity extends system.workflow.activities.Se
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.CompensatableSequenceActivity.-ctor" target="_top">.NET documentation</a>
+     */
     public CompensatableSequenceActivity() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +176,22 @@ public class CompensatableSequenceActivity extends system.workflow.activities.Se
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.CompensatableSequenceActivity.-ctor" target="_top">.NET documentation</a>
+     */
     public CompensatableSequenceActivity(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
@@ -175,8 +209,13 @@ public class CompensatableSequenceActivity extends system.workflow.activities.Se
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompensatableActivity method available in ICompensatableActivity to obtain an object with an invocable method
+     *
+     * @param executionContext the argument of type {@code ActivityExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ICompensatableActivity.Compensate" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
     }

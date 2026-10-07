@@ -101,7 +101,10 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public QuicConnectionOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class QuicConnectionOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxInboundBidirectionalStreams.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.MaxInboundBidirectionalStreams" target="_top">.NET documentation</a>
+     */
     public int getMaxInboundBidirectionalStreams() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxInboundBidirectionalStreams.
+     *
+     * @param MaxInboundBidirectionalStreams the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.MaxInboundBidirectionalStreams" target="_top">.NET documentation</a>
+     */
     public void setMaxInboundBidirectionalStreams(int MaxInboundBidirectionalStreams) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +225,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxInboundUnidirectionalStreams.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.MaxInboundUnidirectionalStreams" target="_top">.NET documentation</a>
+     */
     public int getMaxInboundUnidirectionalStreams() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +272,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxInboundUnidirectionalStreams.
+     *
+     * @param MaxInboundUnidirectionalStreams the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.MaxInboundUnidirectionalStreams" target="_top">.NET documentation</a>
+     */
     public void setMaxInboundUnidirectionalStreams(int MaxInboundUnidirectionalStreams) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +289,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultCloseErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.DefaultCloseErrorCode" target="_top">.NET documentation</a>
+     */
     public long getDefaultCloseErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +336,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultCloseErrorCode.
+     *
+     * @param DefaultCloseErrorCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.DefaultCloseErrorCode" target="_top">.NET documentation</a>
+     */
     public void setDefaultCloseErrorCode(long DefaultCloseErrorCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +353,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultStreamErrorCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.DefaultStreamErrorCode" target="_top">.NET documentation</a>
+     */
     public long getDefaultStreamErrorCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +400,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultStreamErrorCode.
+     *
+     * @param DefaultStreamErrorCode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.DefaultStreamErrorCode" target="_top">.NET documentation</a>
+     */
     public void setDefaultStreamErrorCode(long DefaultStreamErrorCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +417,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StreamCapacityCallback.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.StreamCapacityCallback" target="_top">.NET documentation</a>
+     */
     public Action_2 getStreamCapacityCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +438,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StreamCapacityCallback.
+     *
+     * @param StreamCapacityCallback the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.StreamCapacityCallback" target="_top">.NET documentation</a>
+     */
     public void setStreamCapacityCallback(Action_2 StreamCapacityCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +455,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialReceiveWindowSizes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.InitialReceiveWindowSizes" target="_top">.NET documentation</a>
+     */
     public QuicReceiveWindowSizes getInitialReceiveWindowSizes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +477,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialReceiveWindowSizes.
+     *
+     * @param InitialReceiveWindowSizes the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.InitialReceiveWindowSizes" target="_top">.NET documentation</a>
+     */
     public void setInitialReceiveWindowSizes(QuicReceiveWindowSizes InitialReceiveWindowSizes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -407,6 +494,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HandshakeTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.HandshakeTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getHandshakeTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -422,6 +516,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HandshakeTimeout.
+     *
+     * @param HandshakeTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.HandshakeTimeout" target="_top">.NET documentation</a>
+     */
     public void setHandshakeTimeout(TimeSpan HandshakeTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +533,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IdleTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.IdleTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getIdleTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -447,6 +555,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IdleTimeout.
+     *
+     * @param IdleTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.IdleTimeout" target="_top">.NET documentation</a>
+     */
     public void setIdleTimeout(TimeSpan IdleTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -457,6 +572,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeepAliveInterval.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.KeepAliveInterval" target="_top">.NET documentation</a>
+     */
     public TimeSpan getKeepAliveInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -472,6 +594,13 @@ public class QuicConnectionOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeepAliveInterval.
+     *
+     * @param KeepAliveInterval the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.KeepAliveInterval" target="_top">.NET documentation</a>
+     */
     public void setKeepAliveInterval(TimeSpan KeepAliveInterval) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

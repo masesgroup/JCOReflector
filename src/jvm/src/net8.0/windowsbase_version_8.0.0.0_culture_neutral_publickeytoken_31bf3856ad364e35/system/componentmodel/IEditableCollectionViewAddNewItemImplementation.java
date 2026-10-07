@@ -101,7 +101,10 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEditableCollectionViewAddNewItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddNew.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.AddNew" target="_top">.NET documentation</a>
+     */
     public NetObject AddNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,14 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member AddNewItem.
+     *
+     * @param newItem the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.AddNewItem" target="_top">.NET documentation</a>
+     */
     public NetObject AddNewItem(NetObject newItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +191,12 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member CancelEdit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CancelEdit" target="_top">.NET documentation</a>
+     */
     public void CancelEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +207,12 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member CancelNew.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CancelNew" target="_top">.NET documentation</a>
+     */
     public void CancelNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +223,12 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member CommitEdit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CommitEdit" target="_top">.NET documentation</a>
+     */
     public void CommitEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +239,12 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member CommitNew.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CommitNew" target="_top">.NET documentation</a>
+     */
     public void CommitNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +255,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member EditItem.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.EditItem" target="_top">.NET documentation</a>
+     */
     public void EditItem(NetObject item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +272,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param item the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(NetObject item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +289,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAt.
+     *
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.RemoveAt" target="_top">.NET documentation</a>
+     */
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +310,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanAddNew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNew" target="_top">.NET documentation</a>
+     */
     public boolean getCanAddNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +331,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanAddNewItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem" target="_top">.NET documentation</a>
+     */
     public boolean getCanAddNewItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +352,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanCancelEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CanCancelEdit" target="_top">.NET documentation</a>
+     */
     public boolean getCanCancelEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +373,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property CanRemove.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CanRemove" target="_top">.NET documentation</a>
+     */
     public boolean getCanRemove() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +394,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAddingNew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.IsAddingNew" target="_top">.NET documentation</a>
+     */
     public boolean getIsAddingNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +415,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsEditingItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.IsEditingItem" target="_top">.NET documentation</a>
+     */
     public boolean getIsEditingItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +436,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewItemPlaceholderPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.NewItemPlaceholderPosition" target="_top">.NET documentation</a>
+     */
     public NewItemPlaceholderPosition getNewItemPlaceholderPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +458,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewItemPlaceholderPosition.
+     *
+     * @param NewItemPlaceholderPosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.NewItemPlaceholderPosition" target="_top">.NET documentation</a>
+     */
     public void setNewItemPlaceholderPosition(NewItemPlaceholderPosition NewItemPlaceholderPosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +475,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentAddItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CurrentAddItem" target="_top">.NET documentation</a>
+     */
     public NetObject getCurrentAddItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +497,13 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentEditItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IEditableCollectionViewAddNewItem.CurrentEditItem" target="_top">.NET documentation</a>
+     */
     public NetObject getCurrentEditItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

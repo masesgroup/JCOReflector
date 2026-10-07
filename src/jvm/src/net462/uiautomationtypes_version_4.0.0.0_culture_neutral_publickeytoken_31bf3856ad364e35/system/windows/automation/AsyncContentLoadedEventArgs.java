@@ -100,7 +100,10 @@ public class AsyncContentLoadedEventArgs extends system.windows.automation.Autom
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AsyncContentLoadedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class AsyncContentLoadedEventArgs extends system.windows.automation.Autom
     public AsyncContentLoadedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param asyncContentState the argument of type {@code AsyncContentLoadedState}
+     * @param percentComplete the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AsyncContentLoadedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public AsyncContentLoadedEventArgs(AsyncContentLoadedState asyncContentState, double percentComplete) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +180,13 @@ public class AsyncContentLoadedEventArgs extends system.windows.automation.Autom
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PercentComplete.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AsyncContentLoadedEventArgs.PercentComplete" target="_top">.NET documentation</a>
+     */
     public double getPercentComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +227,13 @@ public class AsyncContentLoadedEventArgs extends system.windows.automation.Autom
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncContentLoadedState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.AsyncContentLoadedEventArgs.AsyncContentLoadedState" target="_top">.NET documentation</a>
+     */
     public AsyncContentLoadedState getAsyncContentLoadedState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -105,7 +105,10 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityCollectionChangeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,17 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
     public ActivityCollectionChangeEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param index the argument of type {@code int}
+     * @param removedItems the argument of type {@code ICollection_1}
+     * @param addedItems the argument of type {@code ICollection_1}
+     * @param owner the argument of type {@code NetObject}
+     * @param action the argument of type {@code ActivityCollectionChangeAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityCollectionChangeEventArgs(int index, ICollection_1 removedItems, ICollection_1 addedItems, NetObject owner, ActivityCollectionChangeAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +179,18 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param index the argument of type {@code int}
+     * @param removedActivity the argument of type {@code Activity}
+     * @param addedActivity the argument of type {@code Activity}
+     * @param owner the argument of type {@code NetObject}
+     * @param action the argument of type {@code ActivityCollectionChangeAction}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityCollectionChangeEventArgs(int index, Activity removedActivity, Activity addedActivity, NetObject owner, ActivityCollectionChangeAction action) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +210,13 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +257,15 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddedItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.AddedItems" target="_top">.NET documentation</a>
+     */
     public IList_1 getAddedItems() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +281,15 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RemovedItems.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.RemovedItems" target="_top">.NET documentation</a>
+     */
     public IList_1 getRemovedItems() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +305,13 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Owner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.Owner" target="_top">.NET documentation</a>
+     */
     public NetObject getOwner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +327,13 @@ public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public ActivityCollectionChangeAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

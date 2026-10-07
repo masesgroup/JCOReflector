@@ -100,7 +100,10 @@ public class ICompensatableActivityImplementation extends NetObject implements I
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICompensatableActivityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class ICompensatableActivityImplementation extends NetObject implements I
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Compensate.
+     *
+     * @param executionContext the argument of type {@code ActivityExecutionContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ICompensatableActivity.Compensate" target="_top">.NET documentation</a>
+     */
     public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class DesigntimeLicenseContextSerializer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesigntimeLicenseContextSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class DesigntimeLicenseContextSerializer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Serialize.
+     *
+     * @param o the argument of type {@code Stream}
+     * @param cryptoKey the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code DesigntimeLicenseContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.DesigntimeLicenseContextSerializer.Serialize" target="_top">.NET documentation</a>
+     */
     public static void Serialize(Stream o, java.lang.String cryptoKey, DesigntimeLicenseContext context) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

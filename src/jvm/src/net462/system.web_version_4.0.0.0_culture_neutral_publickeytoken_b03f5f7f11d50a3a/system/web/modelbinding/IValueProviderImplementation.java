@@ -99,7 +99,10 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IValueProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ContainsPrefix.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.IValueProvider.ContainsPrefix" target="_top">.NET documentation</a>
+     */
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,14 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param key the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.IValueProvider.GetValue" target="_top">.NET documentation</a>
+     */
     public ValueProviderResult GetValue(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

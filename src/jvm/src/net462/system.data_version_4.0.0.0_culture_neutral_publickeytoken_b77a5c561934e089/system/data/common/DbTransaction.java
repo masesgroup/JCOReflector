@@ -101,7 +101,10 @@ public class DbTransaction extends system.MarshalByRefObject implements AutoClos
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class DbTransaction extends system.MarshalByRefObject implements AutoClos
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbTransaction.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -164,6 +173,12 @@ public class DbTransaction extends system.MarshalByRefObject implements AutoClos
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbTransaction.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +189,12 @@ public class DbTransaction extends system.MarshalByRefObject implements AutoClos
         }
     }
 
+    /**
+     * Invokes the .NET member Rollback.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbTransaction.Rollback" target="_top">.NET documentation</a>
+     */
     public void Rollback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +222,13 @@ public class DbTransaction extends system.MarshalByRefObject implements AutoClos
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbTransaction.Connection" target="_top">.NET documentation</a>
+     */
     public DbConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +244,13 @@ public class DbTransaction extends system.MarshalByRefObject implements AutoClos
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsolationLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbTransaction.IsolationLevel" target="_top">.NET documentation</a>
+     */
     public IsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ValueSource extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueSource(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class ValueSource extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsAnimated.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ValueSource.IsAnimated" target="_top">.NET documentation</a>
+     */
     public boolean getIsAnimated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class ValueSource extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCoerced.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ValueSource.IsCoerced" target="_top">.NET documentation</a>
+     */
     public boolean getIsCoerced() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +204,13 @@ public class ValueSource extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsCurrent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ValueSource.IsCurrent" target="_top">.NET documentation</a>
+     */
     public boolean getIsCurrent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +225,13 @@ public class ValueSource extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ValueSource.IsExpression" target="_top">.NET documentation</a>
+     */
     public boolean getIsExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +246,13 @@ public class ValueSource extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseValueSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ValueSource.BaseValueSource" target="_top">.NET documentation</a>
+     */
     public BaseValueSource getBaseValueSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

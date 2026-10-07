@@ -101,7 +101,10 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebWorkflowRole(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
     public WebWorkflowRole() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WebWorkflowRole.-ctor" target="_top">.NET documentation</a>
+     */
     public WebWorkflowRole(java.lang.String roleName) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +172,15 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param roleName the argument of type {@code java.lang.String}
+     * @param provider the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WebWorkflowRole.-ctor" target="_top">.NET documentation</a>
+     */
     public WebWorkflowRole(java.lang.String roleName, java.lang.String provider) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +196,25 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IncludesIdentity.
+     *
+     * @param identity the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WebWorkflowRole.IncludesIdentity" target="_top">.NET documentation</a>
+     */
     public boolean IncludesIdentity(java.lang.String identity) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +229,25 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIdentities.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.configuration.provider.ProviderException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WebWorkflowRole.GetIdentities" target="_top">.NET documentation</a>
+     */
     public IList_1 GetIdentities() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +267,13 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property RoleProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WebWorkflowRole.RoleProvider" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRoleProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +288,13 @@ public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RoleProvider.
+     *
+     * @param RoleProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.WebWorkflowRole.RoleProvider" target="_top">.NET documentation</a>
+     */
     public void setRoleProvider(java.lang.String RoleProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

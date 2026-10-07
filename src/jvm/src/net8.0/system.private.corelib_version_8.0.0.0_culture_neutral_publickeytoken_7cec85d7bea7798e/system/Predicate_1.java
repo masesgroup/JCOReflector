@@ -177,7 +177,10 @@ public class Predicate_1<T extends IJCOBridgeReflected> extends JCDelegate imple
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     @SuppressWarnings("unchecked")
     public Predicate_1(java.lang.Object instance) throws Throwable {
@@ -200,6 +203,14 @@ public class Predicate_1<T extends IJCOBridgeReflected> extends JCDelegate imple
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param obj the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public boolean DynamicInvoke(T obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,7 +226,10 @@ public class Predicate_1<T extends IJCOBridgeReflected> extends JCDelegate imple
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param obj the .NET argument of type {@code T}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public boolean Invoke(T obj) {
         return false;

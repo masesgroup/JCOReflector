@@ -107,7 +107,10 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpClientJsonExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,27 @@ public class HttpClientJsonExtensions extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetFromJsonAsAsyncEnumerable.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, java.lang.String requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -175,6 +199,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsAsyncEnumerable.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, java.lang.String requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -190,6 +235,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsAsyncEnumerable.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -205,6 +271,26 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsAsyncEnumerable.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, Uri requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +306,28 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsAsyncEnumerable.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, Uri requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +343,23 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsAsyncEnumerable.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsAsyncEnumerable" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +375,32 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PatchAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -265,6 +416,32 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PatchAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -280,6 +457,30 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PatchAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -295,6 +496,31 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PatchAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -310,6 +536,31 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PatchAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -325,6 +576,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PatchAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +614,32 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PostAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -355,6 +655,32 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PostAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -370,6 +696,30 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PostAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -385,6 +735,31 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PostAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -400,6 +775,31 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PostAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -415,6 +815,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PostAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -430,6 +853,32 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PutAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -445,6 +894,32 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PutAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,6 +935,30 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PutAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code TValue}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -475,6 +974,31 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PutAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -490,6 +1014,31 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PutAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -505,6 +1054,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PutAsJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param value the argument of type {@code TValue}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -520,6 +1092,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -535,6 +1130,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code JsonSerializerContext}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -550,6 +1168,28 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -565,6 +1205,26 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param type the argument of type {@code NetType}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +1240,26 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code JsonSerializerContext}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -595,6 +1275,25 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param type the argument of type {@code NetType}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -610,6 +1309,28 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -625,6 +1346,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code JsonSerializerContext}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -640,6 +1384,28 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -655,6 +1421,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param type the argument of type {@code NetType}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -670,6 +1457,26 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param type the argument of type {@code NetType}
+     * @param context the argument of type {@code JsonSerializerContext}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -685,6 +1492,24 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param type the argument of type {@code NetType}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -700,6 +1525,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -715,6 +1563,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -730,6 +1601,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -745,6 +1637,26 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -760,6 +1672,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -775,6 +1708,25 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeleteFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -790,6 +1742,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -805,6 +1780,29 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -820,6 +1818,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code java.lang.String}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -835,6 +1854,26 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param options the argument of type {@code JsonSerializerOptions}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -850,6 +1889,27 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -865,6 +1925,25 @@ public class HttpClientJsonExtensions extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFromJsonAsync.
+     *
+     * @param <TValue> the type of the generic argument TValue
+     * @param client the argument of type {@code HttpClient}
+     * @param requestUri the argument of type {@code Uri}
+     * @param cancellationToken the argument of type {@code CancellationToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
+     */
     public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

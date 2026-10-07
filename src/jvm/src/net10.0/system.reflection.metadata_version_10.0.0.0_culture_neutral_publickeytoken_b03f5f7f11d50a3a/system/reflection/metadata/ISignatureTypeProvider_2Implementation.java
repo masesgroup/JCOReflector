@@ -112,7 +112,10 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ISignatureTypeProvider_2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetArrayType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @param shape the argument of type {@code ArrayShape}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetArrayType" target="_top">.NET documentation</a>
+     */
     public TType GetArrayType(TType elementType, ArrayShape shape) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +180,14 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetByReferenceType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetByReferenceType" target="_top">.NET documentation</a>
+     */
     public TType GetByReferenceType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +202,14 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetFunctionPointerType.
+     *
+     * @param signature the argument of type {@code MethodSignature_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetFunctionPointerType" target="_top">.NET documentation</a>
+     */
     public TType GetFunctionPointerType(MethodSignature_1 signature) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +224,15 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericInstantiation.
+     *
+     * @param genericType the argument of type {@code TType}
+     * @param typeArguments the argument of type {@code ImmutableArray_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetGenericInstantiation" target="_top">.NET documentation</a>
+     */
     public TType GetGenericInstantiation(TType genericType, ImmutableArray_1 typeArguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +247,15 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericMethodParameter.
+     *
+     * @param genericContext the argument of type {@code TGenericContext}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetGenericMethodParameter" target="_top">.NET documentation</a>
+     */
     public TType GetGenericMethodParameter(TGenericContext genericContext, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +270,15 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetGenericTypeParameter.
+     *
+     * @param genericContext the argument of type {@code TGenericContext}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetGenericTypeParameter" target="_top">.NET documentation</a>
+     */
     public TType GetGenericTypeParameter(TGenericContext genericContext, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +293,16 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetModifiedType.
+     *
+     * @param modifier the argument of type {@code TType}
+     * @param unmodifiedType the argument of type {@code TType}
+     * @param isRequired the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetModifiedType" target="_top">.NET documentation</a>
+     */
     public TType GetModifiedType(TType modifier, TType unmodifiedType, boolean isRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +317,14 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetPinnedType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetPinnedType" target="_top">.NET documentation</a>
+     */
     public TType GetPinnedType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +339,14 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetPointerType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetPointerType" target="_top">.NET documentation</a>
+     */
     public TType GetPointerType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +361,14 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetPrimitiveType.
+     *
+     * @param typeCode the argument of type {@code PrimitiveTypeCode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetPrimitiveType" target="_top">.NET documentation</a>
+     */
     public TType GetPrimitiveType(PrimitiveTypeCode typeCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +383,14 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetSZArrayType.
+     *
+     * @param elementType the argument of type {@code TType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetSZArrayType" target="_top">.NET documentation</a>
+     */
     public TType GetSZArrayType(TType elementType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +405,16 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFromDefinition.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code TypeDefinitionHandle}
+     * @param rawTypeKind the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetTypeFromDefinition" target="_top">.NET documentation</a>
+     */
     public TType GetTypeFromDefinition(MetadataReader reader, TypeDefinitionHandle handle, byte rawTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +429,16 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFromReference.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code TypeReferenceHandle}
+     * @param rawTypeKind the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetTypeFromReference" target="_top">.NET documentation</a>
+     */
     public TType GetTypeFromReference(MetadataReader reader, TypeReferenceHandle handle, byte rawTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -336,6 +453,17 @@ public class ISignatureTypeProvider_2Implementation<TType extends IJCOBridgeRefl
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFromSpecification.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param genericContext the argument of type {@code TGenericContext}
+     * @param handle the argument of type {@code TypeSpecificationHandle}
+     * @param rawTypeKind the argument of type {@code byte}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.ISignatureTypeProvider-2.GetTypeFromSpecification" target="_top">.NET documentation</a>
+     */
     public TType GetTypeFromSpecification(MetadataReader reader, TGenericContext genericContext, TypeSpecificationHandle handle, byte rawTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

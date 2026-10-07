@@ -106,7 +106,9 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public RuleEvaluationIncompatibleTypesException(java.lang.Object instance) {
         super(instance);
@@ -167,6 +169,16 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param left the argument of type {@code NetType}
+     * @param op the argument of type {@code CodeBinaryOperatorType}
+     * @param right the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleEvaluationIncompatibleTypesException(java.lang.String message, NetType left, CodeBinaryOperatorType op, NetType right) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +189,17 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code java.lang.String}
+     * @param left the argument of type {@code NetType}
+     * @param op the argument of type {@code CodeBinaryOperatorType}
+     * @param right the argument of type {@code NetType}
+     * @param ex the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.-ctor" target="_top">.NET documentation</a>
+     */
     public RuleEvaluationIncompatibleTypesException(java.lang.String message, NetType left, CodeBinaryOperatorType op, NetType right, NetException ex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +214,29 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetObjectData.
+     *
+     * @param info the argument of type {@code SerializationInfo}
+     * @param context the argument of type {@code StreamingContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.GetObjectData" target="_top">.NET documentation</a>
+     */
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +251,13 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Operator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Operator" target="_top">.NET documentation</a>
+     */
     public CodeBinaryOperatorType getOperator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +273,13 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         }
     }
 
+    /**
+     * Sets the value of the .NET property Operator.
+     *
+     * @param Operator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Operator" target="_top">.NET documentation</a>
+     */
     public void setOperator(CodeBinaryOperatorType Operator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +290,13 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         }
     }
 
+    /**
+     * Gets the value of the .NET property Left.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Left" target="_top">.NET documentation</a>
+     */
     public NetType getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +312,13 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         }
     }
 
+    /**
+     * Sets the value of the .NET property Left.
+     *
+     * @param Left the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Left" target="_top">.NET documentation</a>
+     */
     public void setLeft(NetType Left) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +329,13 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         }
     }
 
+    /**
+     * Gets the value of the .NET property Right.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Right" target="_top">.NET documentation</a>
+     */
     public NetType getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +351,13 @@ public class RuleEvaluationIncompatibleTypesException extends system.workflow.ac
         }
     }
 
+    /**
+     * Sets the value of the .NET property Right.
+     *
+     * @param Right the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Right" target="_top">.NET documentation</a>
+     */
     public void setRight(NetType Right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

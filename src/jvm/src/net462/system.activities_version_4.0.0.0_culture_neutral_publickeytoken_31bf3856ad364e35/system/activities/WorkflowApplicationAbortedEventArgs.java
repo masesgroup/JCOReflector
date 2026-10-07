@@ -99,7 +99,10 @@ public class WorkflowApplicationAbortedEventArgs extends system.activities.Workf
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowApplicationAbortedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class WorkflowApplicationAbortedEventArgs extends system.activities.Workf
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Reason.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationAbortedEventArgs.Reason" target="_top">.NET documentation</a>
+     */
     public NetException getReason() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class WorkflowApplicationAbortedEventArgs extends system.activities.Workf
         }
     }
 
+    /**
+     * Sets the value of the .NET property Reason.
+     *
+     * @param Reason the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationAbortedEventArgs.Reason" target="_top">.NET documentation</a>
+     */
     public void setReason(NetException Reason) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

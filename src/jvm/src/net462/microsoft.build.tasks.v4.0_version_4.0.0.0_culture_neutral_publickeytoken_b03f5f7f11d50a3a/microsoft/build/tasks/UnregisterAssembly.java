@@ -101,7 +101,10 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnregisterAssembly(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.-ctor" target="_top">.NET documentation</a>
+     */
     public UnregisterAssembly() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +172,37 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.io.FileNotFoundException if the .NET member raises it
+     * @throws system.io.DirectoryNotFoundException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.io.DriveNotFoundException if the .NET member raises it
+     * @throws system.OperationCanceledException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.runtime.serialization.SerializationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ApplicationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidCastException, system.MissingMethodException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ApplicationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +221,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssemblyListFile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.AssemblyListFile" target="_top">.NET documentation</a>
+     */
     public ITaskItem getAssemblyListFile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +243,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
         }
     }
 
+    /**
+     * Sets the value of the .NET property AssemblyListFile.
+     *
+     * @param AssemblyListFile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.AssemblyListFile" target="_top">.NET documentation</a>
+     */
     public void setAssemblyListFile(ITaskItem AssemblyListFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +260,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
         }
     }
 
+    /**
+     * Gets the value of the .NET property Assemblies.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.Assemblies" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +288,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
         }
     }
 
+    /**
+     * Sets the value of the .NET property Assemblies.
+     *
+     * @param Assemblies the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.Assemblies" target="_top">.NET documentation</a>
+     */
     public void setAssemblies(ITaskItem[] Assemblies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +305,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeLibFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getTypeLibFiles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +333,13 @@ public class UnregisterAssembly extends microsoft.build.tasks.AppDomainIsolatedT
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeLibFiles.
+     *
+     * @param TypeLibFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.UnregisterAssembly.TypeLibFiles" target="_top">.NET documentation</a>
+     */
     public void setTypeLibFiles(ITaskItem[] TypeLibFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

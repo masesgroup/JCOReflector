@@ -99,7 +99,10 @@ public class ActivityScheduledQuery extends system.activities.tracking.TrackingQ
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ActivityScheduledQuery(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ActivityScheduledQuery extends system.activities.tracking.TrackingQ
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityScheduledQuery.-ctor" target="_top">.NET documentation</a>
+     */
     public ActivityScheduledQuery() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ActivityScheduledQuery extends system.activities.tracking.TrackingQ
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActivityName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityScheduledQuery.ActivityName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class ActivityScheduledQuery extends system.activities.tracking.TrackingQ
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityName.
+     *
+     * @param ActivityName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityScheduledQuery.ActivityName" target="_top">.NET documentation</a>
+     */
     public void setActivityName(java.lang.String ActivityName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class ActivityScheduledQuery extends system.activities.tracking.TrackingQ
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildActivityName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityScheduledQuery.ChildActivityName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getChildActivityName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class ActivityScheduledQuery extends system.activities.tracking.TrackingQ
         }
     }
 
+    /**
+     * Sets the value of the .NET property ChildActivityName.
+     *
+     * @param ChildActivityName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.ActivityScheduledQuery.ChildActivityName" target="_top">.NET documentation</a>
+     */
     public void setChildActivityName(java.lang.String ChildActivityName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

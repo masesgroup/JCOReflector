@@ -99,7 +99,10 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextExpressionCompilerResults(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class TextExpressionCompilerResults extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.HasErrors" target="_top">.NET documentation</a>
+     */
     public boolean getHasErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,13 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasErrors.
+     *
+     * @param HasErrors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.HasErrors" target="_top">.NET documentation</a>
+     */
     public void setHasErrors(boolean HasErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasSourceInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.HasSourceInfo" target="_top">.NET documentation</a>
+     */
     public boolean getHasSourceInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HasSourceInfo.
+     *
+     * @param HasSourceInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.HasSourceInfo" target="_top">.NET documentation</a>
+     */
     public void setHasSourceInfo(boolean HasSourceInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CompilerMessages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.CompilerMessages" target="_top">.NET documentation</a>
+     */
     public ReadOnlyCollection_1 getCompilerMessages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResultType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.ResultType" target="_top">.NET documentation</a>
+     */
     public NetType getResultType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +281,13 @@ public class TextExpressionCompilerResults extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResultType.
+     *
+     * @param ResultType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerResults.ResultType" target="_top">.NET documentation</a>
+     */
     public void setResultType(NetType ResultType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

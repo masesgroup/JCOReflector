@@ -101,7 +101,10 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IExpressionEditorInstanceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CanCompleteWord.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanCompleteWord" target="_top">.NET documentation</a>
+     */
     public boolean CanCompleteWord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +167,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanCopy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanCopy" target="_top">.NET documentation</a>
+     */
     public boolean CanCopy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +188,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanCut.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanCut" target="_top">.NET documentation</a>
+     */
     public boolean CanCut() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +209,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanDecreaseFilterLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanDecreaseFilterLevel" target="_top">.NET documentation</a>
+     */
     public boolean CanDecreaseFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanGlobalIntellisense.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanGlobalIntellisense" target="_top">.NET documentation</a>
+     */
     public boolean CanGlobalIntellisense() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanIncreaseFilterLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanIncreaseFilterLevel" target="_top">.NET documentation</a>
+     */
     public boolean CanIncreaseFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +272,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanParameterInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanParameterInfo" target="_top">.NET documentation</a>
+     */
     public boolean CanParameterInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +293,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanPaste.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanPaste" target="_top">.NET documentation</a>
+     */
     public boolean CanPaste() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +314,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanQuickInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanQuickInfo" target="_top">.NET documentation</a>
+     */
     public boolean CanQuickInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +335,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanRedo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanRedo" target="_top">.NET documentation</a>
+     */
     public boolean CanRedo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +356,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CanUndo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CanUndo" target="_top">.NET documentation</a>
+     */
     public boolean CanUndo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +377,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member CompleteWord.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.CompleteWord" target="_top">.NET documentation</a>
+     */
     public boolean CompleteWord() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +398,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Copy" target="_top">.NET documentation</a>
+     */
     public boolean Copy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +419,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Cut.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Cut" target="_top">.NET documentation</a>
+     */
     public boolean Cut() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +440,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member DecreaseFilterLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.DecreaseFilterLevel" target="_top">.NET documentation</a>
+     */
     public boolean DecreaseFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +461,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GlobalIntellisense.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.GlobalIntellisense" target="_top">.NET documentation</a>
+     */
     public boolean GlobalIntellisense() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -367,6 +482,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member IncreaseFilterLevel.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.IncreaseFilterLevel" target="_top">.NET documentation</a>
+     */
     public boolean IncreaseFilterLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +503,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member ParameterInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.ParameterInfo" target="_top">.NET documentation</a>
+     */
     public boolean ParameterInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +524,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Paste.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Paste" target="_top">.NET documentation</a>
+     */
     public boolean Paste() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -409,6 +545,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member QuickInfo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.QuickInfo" target="_top">.NET documentation</a>
+     */
     public boolean QuickInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +566,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Redo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Redo" target="_top">.NET documentation</a>
+     */
     public boolean Redo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +587,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Undo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Undo" target="_top">.NET documentation</a>
+     */
     public boolean Undo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -451,6 +608,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member GetCommittedText.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.GetCommittedText" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetCommittedText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -465,6 +629,12 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member ClearSelection.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.ClearSelection" target="_top">.NET documentation</a>
+     */
     public void ClearSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -475,6 +645,12 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -485,6 +661,12 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member Focus.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Focus" target="_top">.NET documentation</a>
+     */
     public void Focus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -499,6 +681,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AcceptsReturn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.AcceptsReturn" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptsReturn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -513,6 +702,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptsReturn.
+     *
+     * @param AcceptsReturn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.AcceptsReturn" target="_top">.NET documentation</a>
+     */
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -523,6 +719,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property AcceptsTab.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.AcceptsTab" target="_top">.NET documentation</a>
+     */
     public boolean getAcceptsTab() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +740,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property AcceptsTab.
+     *
+     * @param AcceptsTab the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.AcceptsTab" target="_top">.NET documentation</a>
+     */
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +757,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasAggregateFocus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.HasAggregateFocus" target="_top">.NET documentation</a>
+     */
     public boolean getHasAggregateFocus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -561,6 +778,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxLines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.MaxLines" target="_top">.NET documentation</a>
+     */
     public int getMaxLines() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -601,6 +825,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxLines.
+     *
+     * @param MaxLines the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.MaxLines" target="_top">.NET documentation</a>
+     */
     public void setMaxLines(int MaxLines) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -611,6 +842,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinLines.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.MinLines" target="_top">.NET documentation</a>
+     */
     public int getMinLines() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +889,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinLines.
+     *
+     * @param MinLines the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.MinLines" target="_top">.NET documentation</a>
+     */
     public void setMinLines(int MinLines) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +906,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property Text.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Text" target="_top">.NET documentation</a>
+     */
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -675,6 +927,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property Text.
+     *
+     * @param Text the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.Text" target="_top">.NET documentation</a>
+     */
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -685,6 +944,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostControl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.HostControl" target="_top">.NET documentation</a>
+     */
     public Control getHostControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -700,6 +966,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property HorizontalScrollBarVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.HorizontalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -715,6 +988,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property HorizontalScrollBarVisibility.
+     *
+     * @param HorizontalScrollBarVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.HorizontalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -725,6 +1005,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Gets the value of the .NET property VerticalScrollBarVisibility.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.VerticalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1027,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Sets the value of the .NET property VerticalScrollBarVisibility.
+     *
+     * @param VerticalScrollBarVisibility the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance.VerticalScrollBarVisibility" target="_top">.NET documentation</a>
+     */
     public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -755,6 +1049,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addClosing.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -765,6 +1066,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member removeClosing.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -775,6 +1083,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member addGotAggregateFocus.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addGotAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -785,6 +1100,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member removeGotAggregateFocus.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeGotAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -795,6 +1117,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member addLostAggregateFocus.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addLostAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -805,6 +1134,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member removeLostAggregateFocus.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeLostAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -815,6 +1151,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member addTextChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -825,6 +1168,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
         }
     }
 
+    /**
+     * Invokes the .NET member removeTextChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class RegisteredWaitHandle extends system.MarshalByRefObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RegisteredWaitHandle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class RegisteredWaitHandle extends system.MarshalByRefObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param waitObject the argument of type {@code WaitHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.RegisteredWaitHandle.Unregister" target="_top">.NET documentation</a>
+     */
     public boolean Unregister(WaitHandle waitObject) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class DataGridRowDetailsEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridRowDetailsEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class DataGridRowDetailsEventArgs extends system.EventArgs  {
     public DataGridRowDetailsEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param row the argument of type {@code DataGridRow}
+     * @param detailsElement the argument of type {@code FrameworkElement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowDetailsEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridRowDetailsEventArgs(DataGridRow row, FrameworkElement detailsElement) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +181,13 @@ public class DataGridRowDetailsEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowDetailsEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public DataGridRow getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +203,13 @@ public class DataGridRowDetailsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Row.
+     *
+     * @param Row the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowDetailsEventArgs.Row" target="_top">.NET documentation</a>
+     */
     public void setRow(DataGridRow Row) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +220,13 @@ public class DataGridRowDetailsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DetailsElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowDetailsEventArgs.DetailsElement" target="_top">.NET documentation</a>
+     */
     public FrameworkElement getDetailsElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +242,13 @@ public class DataGridRowDetailsEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DetailsElement.
+     *
+     * @param DetailsElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowDetailsEventArgs.DetailsElement" target="_top">.NET documentation</a>
+     */
     public void setDetailsElement(FrameworkElement DetailsElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IParseTextImplementation extends NetObject implements IParseText {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IParseTextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IParseTextImplementation extends NetObject implements IParseText {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param code the argument of type {@code java.lang.String}
+     * @param error the argument of type {@code IErrorHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IParseText.Parse" target="_top">.NET documentation</a>
+     */
     public void Parse(java.lang.String code, IErrorHandler error) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

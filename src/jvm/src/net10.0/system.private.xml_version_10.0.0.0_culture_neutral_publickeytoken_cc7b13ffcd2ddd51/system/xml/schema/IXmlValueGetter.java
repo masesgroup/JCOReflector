@@ -51,5 +51,11 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IXmlValueGetter {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * 
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke();
 }

@@ -98,7 +98,10 @@ public class IEqualityComparer_1Implementation<T extends IJCOBridgeReflected> ex
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEqualityComparer_1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,15 @@ public class IEqualityComparer_1Implementation<T extends IJCOBridgeReflected> ex
 
     // Methods section
     
+    /**
+     * Invokes the .NET member EqualsGeneric.
+     *
+     * @param x the argument of type {@code T}
+     * @param y the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IEqualityComparer-1.EqualsGeneric" target="_top">.NET documentation</a>
+     */
     public boolean EqualsGeneric(T x, T y) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +166,14 @@ public class IEqualityComparer_1Implementation<T extends IJCOBridgeReflected> ex
         }
     }
 
+    /**
+     * Invokes the .NET member GetHashCode.
+     *
+     * @param obj the argument of type {@code T}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IEqualityComparer-1.GetHashCode" target="_top">.NET documentation</a>
+     */
     public int GetHashCode(T obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

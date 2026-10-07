@@ -170,7 +170,10 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RemoteCertificateValidationCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -192,6 +195,17 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param certificate the argument of type {@code X509Certificate}
+     * @param chain the argument of type {@code X509Chain}
+     * @param sslPolicyErrors the argument of type {@code SslPolicyErrors}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public boolean DynamicInvoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,7 +221,13 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param certificate the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Certificate}
+     * @param chain the .NET argument of type {@code System.Security.Cryptography.X509Certificates.X509Chain}
+     * @param sslPolicyErrors the .NET argument of type {@code System.Net.Security.SslPolicyErrors}
+     * @return the value returned to the CLR; this default implementation returns {@code null}
      */
     public boolean Invoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) {
         return false;

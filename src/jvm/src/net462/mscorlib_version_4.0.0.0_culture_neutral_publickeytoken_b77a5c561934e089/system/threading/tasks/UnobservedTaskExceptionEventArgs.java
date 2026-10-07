@@ -100,7 +100,10 @@ public class UnobservedTaskExceptionEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnobservedTaskExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class UnobservedTaskExceptionEventArgs extends system.EventArgs  {
     public UnobservedTaskExceptionEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param exception the argument of type {@code AggregateException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.UnobservedTaskExceptionEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public UnobservedTaskExceptionEventArgs(AggregateException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +175,12 @@ public class UnobservedTaskExceptionEventArgs extends system.EventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetObserved.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.UnobservedTaskExceptionEventArgs.SetObserved" target="_top">.NET documentation</a>
+     */
     public void SetObserved() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class UnobservedTaskExceptionEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Observed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Observed" target="_top">.NET documentation</a>
+     */
     public boolean getObserved() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class UnobservedTaskExceptionEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.UnobservedTaskExceptionEventArgs.Exception" target="_top">.NET documentation</a>
+     */
     public AggregateException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

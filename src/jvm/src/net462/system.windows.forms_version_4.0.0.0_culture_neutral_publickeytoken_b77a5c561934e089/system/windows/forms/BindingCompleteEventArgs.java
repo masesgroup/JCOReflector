@@ -101,7 +101,10 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingCompleteEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
     public BindingCompleteEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param binding the argument of type {@code system.windows.forms.Binding}
+     * @param state the argument of type {@code BindingCompleteState}
+     * @param context the argument of type {@code BindingCompleteContext}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +173,16 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param binding the argument of type {@code system.windows.forms.Binding}
+     * @param state the argument of type {@code BindingCompleteState}
+     * @param context the argument of type {@code BindingCompleteContext}
+     * @param errorText the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +193,17 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param binding the argument of type {@code system.windows.forms.Binding}
+     * @param state the argument of type {@code BindingCompleteState}
+     * @param context the argument of type {@code BindingCompleteContext}
+     * @param errorText the argument of type {@code java.lang.String}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +214,18 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param binding the argument of type {@code system.windows.forms.Binding}
+     * @param state the argument of type {@code BindingCompleteState}
+     * @param context the argument of type {@code BindingCompleteContext}
+     * @param errorText the argument of type {@code java.lang.String}
+     * @param exception the argument of type {@code NetException}
+     * @param cancel the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception, boolean cancel) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -200,6 +245,13 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Exception.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.Exception" target="_top">.NET documentation</a>
+     */
     public NetException getException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +267,13 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.ErrorText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +288,13 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property Binding.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.Binding" target="_top">.NET documentation</a>
+     */
     public system.windows.forms.Binding getBinding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +310,13 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingCompleteContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteContext" target="_top">.NET documentation</a>
+     */
     public BindingCompleteContext getBindingCompleteContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +332,13 @@ public class BindingCompleteEventArgs extends system.componentmodel.CancelEventA
         }
     }
 
+    /**
+     * Gets the value of the .NET property BindingCompleteState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs.BindingCompleteState" target="_top">.NET documentation</a>
+     */
     public BindingCompleteState getBindingCompleteState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -104,7 +104,10 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICscHostObject2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Compile.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.Compile" target="_top">.NET documentation</a>
+     */
     public boolean Compile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +170,15 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member EndInitialization.
+     *
+     * @param errorMessage the argument of type {@code JCORefOut}
+     * @param errorCode the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.EndInitialization" target="_top">.NET documentation</a>
+     */
     public boolean EndInitialization(JCORefOut errorMessage, JCORefOut<java.util.concurrent.atomic.AtomicInteger> errorCode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +193,13 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member IsDesignTime.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.IsDesignTime" target="_top">.NET documentation</a>
+     */
     public boolean IsDesignTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +214,13 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member IsUpToDate.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.IsUpToDate" target="_top">.NET documentation</a>
+     */
     public boolean IsUpToDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +235,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAdditionalLibPaths.
+     *
+     * @param additionalLibPaths the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetAdditionalLibPaths" target="_top">.NET documentation</a>
+     */
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +257,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAdditionalLibPaths.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetAdditionalLibPaths" target="_top">.NET documentation</a>
+     */
     public boolean SetAdditionalLibPaths(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +279,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAddModules.
+     *
+     * @param addModules the argument of type {@code java.lang.String[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetAddModules" target="_top">.NET documentation</a>
+     */
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +301,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAddModules.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetAddModules" target="_top">.NET documentation</a>
+     */
     public boolean SetAddModules(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +323,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetAllowUnsafeBlocks.
+     *
+     * @param allowUnsafeBlocks the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetAllowUnsafeBlocks" target="_top">.NET documentation</a>
+     */
     public boolean SetAllowUnsafeBlocks(boolean allowUnsafeBlocks) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +345,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetBaseAddress.
+     *
+     * @param baseAddress the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetBaseAddress" target="_top">.NET documentation</a>
+     */
     public boolean SetBaseAddress(java.lang.String baseAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +367,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetCheckForOverflowUnderflow.
+     *
+     * @param checkForOverflowUnderflow the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetCheckForOverflowUnderflow" target="_top">.NET documentation</a>
+     */
     public boolean SetCheckForOverflowUnderflow(boolean checkForOverflowUnderflow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +389,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetCodePage.
+     *
+     * @param codePage the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetCodePage" target="_top">.NET documentation</a>
+     */
     public boolean SetCodePage(int codePage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +411,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDebugType.
+     *
+     * @param debugType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetDebugType" target="_top">.NET documentation</a>
+     */
     public boolean SetDebugType(java.lang.String debugType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +433,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDefineConstants.
+     *
+     * @param defineConstants the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetDefineConstants" target="_top">.NET documentation</a>
+     */
     public boolean SetDefineConstants(java.lang.String defineConstants) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +455,15 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDelaySign.
+     *
+     * @param delaySignExplicitlySet the argument of type {@code boolean}
+     * @param delaySign the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetDelaySign" target="_top">.NET documentation</a>
+     */
     public boolean SetDelaySign(boolean delaySignExplicitlySet, boolean delaySign) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +478,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDisabledWarnings.
+     *
+     * @param disabledWarnings the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetDisabledWarnings" target="_top">.NET documentation</a>
+     */
     public boolean SetDisabledWarnings(java.lang.String disabledWarnings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +500,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetDocumentationFile.
+     *
+     * @param documentationFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetDocumentationFile" target="_top">.NET documentation</a>
+     */
     public boolean SetDocumentationFile(java.lang.String documentationFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +522,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetEmitDebugInformation.
+     *
+     * @param emitDebugInformation the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetEmitDebugInformation" target="_top">.NET documentation</a>
+     */
     public boolean SetEmitDebugInformation(boolean emitDebugInformation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -398,6 +544,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetErrorReport.
+     *
+     * @param errorReport the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetErrorReport" target="_top">.NET documentation</a>
+     */
     public boolean SetErrorReport(java.lang.String errorReport) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -412,6 +566,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetFileAlignment.
+     *
+     * @param fileAlignment the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetFileAlignment" target="_top">.NET documentation</a>
+     */
     public boolean SetFileAlignment(int fileAlignment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -426,6 +588,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetGenerateFullPaths.
+     *
+     * @param generateFullPaths the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetGenerateFullPaths" target="_top">.NET documentation</a>
+     */
     public boolean SetGenerateFullPaths(boolean generateFullPaths) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +610,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetKeyContainer.
+     *
+     * @param keyContainer the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetKeyContainer" target="_top">.NET documentation</a>
+     */
     public boolean SetKeyContainer(java.lang.String keyContainer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +632,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetKeyFile.
+     *
+     * @param keyFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetKeyFile" target="_top">.NET documentation</a>
+     */
     public boolean SetKeyFile(java.lang.String keyFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -468,6 +654,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetLangVersion.
+     *
+     * @param langVersion the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetLangVersion" target="_top">.NET documentation</a>
+     */
     public boolean SetLangVersion(java.lang.String langVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -482,6 +676,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetLinkResources.
+     *
+     * @param linkResources the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetLinkResources" target="_top">.NET documentation</a>
+     */
     public boolean SetLinkResources(ITaskItem[] linkResources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +698,15 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetMainEntryPoint.
+     *
+     * @param targetType the argument of type {@code java.lang.String}
+     * @param mainEntryPoint the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetMainEntryPoint" target="_top">.NET documentation</a>
+     */
     public boolean SetMainEntryPoint(java.lang.String targetType, java.lang.String mainEntryPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -510,6 +721,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetModuleAssemblyName.
+     *
+     * @param moduleAssemblyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetModuleAssemblyName" target="_top">.NET documentation</a>
+     */
     public boolean SetModuleAssemblyName(java.lang.String moduleAssemblyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +743,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoConfig.
+     *
+     * @param noConfig the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetNoConfig" target="_top">.NET documentation</a>
+     */
     public boolean SetNoConfig(boolean noConfig) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -538,6 +765,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetNoStandardLib.
+     *
+     * @param noStandardLib the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetNoStandardLib" target="_top">.NET documentation</a>
+     */
     public boolean SetNoStandardLib(boolean noStandardLib) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -552,6 +787,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOptimize.
+     *
+     * @param optimize the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetOptimize" target="_top">.NET documentation</a>
+     */
     public boolean SetOptimize(boolean optimize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -566,6 +809,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetOutputAssembly.
+     *
+     * @param outputAssembly the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetOutputAssembly" target="_top">.NET documentation</a>
+     */
     public boolean SetOutputAssembly(java.lang.String outputAssembly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -580,6 +831,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetPdbFile.
+     *
+     * @param pdbFile the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetPdbFile" target="_top">.NET documentation</a>
+     */
     public boolean SetPdbFile(java.lang.String pdbFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +853,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetPlatform.
+     *
+     * @param platform the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetPlatform" target="_top">.NET documentation</a>
+     */
     public boolean SetPlatform(java.lang.String platform) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +875,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetReferences.
+     *
+     * @param references the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetReferences" target="_top">.NET documentation</a>
+     */
     public boolean SetReferences(ITaskItem[] references) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +897,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetResources.
+     *
+     * @param resources the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetResources" target="_top">.NET documentation</a>
+     */
     public boolean SetResources(ITaskItem[] resources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +919,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetResponseFiles.
+     *
+     * @param responseFiles the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetResponseFiles" target="_top">.NET documentation</a>
+     */
     public boolean SetResponseFiles(ITaskItem[] responseFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +941,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetSources.
+     *
+     * @param sources the argument of type {@code ITaskItem[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetSources" target="_top">.NET documentation</a>
+     */
     public boolean SetSources(ITaskItem[] sources) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -664,6 +963,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetTargetType.
+     *
+     * @param targetType the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetTargetType" target="_top">.NET documentation</a>
+     */
     public boolean SetTargetType(java.lang.String targetType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -678,6 +985,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetTreatWarningsAsErrors.
+     *
+     * @param treatWarningsAsErrors the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetTreatWarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean SetTreatWarningsAsErrors(boolean treatWarningsAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -692,6 +1007,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWarningLevel.
+     *
+     * @param warningLevel the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetWarningLevel" target="_top">.NET documentation</a>
+     */
     public boolean SetWarningLevel(int warningLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +1029,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWarningsAsErrors.
+     *
+     * @param warningsAsErrors the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetWarningsAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean SetWarningsAsErrors(java.lang.String warningsAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -720,6 +1051,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWarningsNotAsErrors.
+     *
+     * @param warningsNotAsErrors the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetWarningsNotAsErrors" target="_top">.NET documentation</a>
+     */
     public boolean SetWarningsNotAsErrors(java.lang.String warningsNotAsErrors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -734,6 +1073,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWin32Icon.
+     *
+     * @param win32Icon the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetWin32Icon" target="_top">.NET documentation</a>
+     */
     public boolean SetWin32Icon(java.lang.String win32Icon) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -748,6 +1095,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWin32Manifest.
+     *
+     * @param win32Manifest the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetWin32Manifest" target="_top">.NET documentation</a>
+     */
     public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -762,6 +1117,14 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member SetWin32Resource.
+     *
+     * @param win32Resource the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.SetWin32Resource" target="_top">.NET documentation</a>
+     */
     public boolean SetWin32Resource(java.lang.String win32Resource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -776,6 +1139,12 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
         }
     }
 
+    /**
+     * Invokes the .NET member BeginInitialization.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.ICscHostObject2.BeginInitialization" target="_top">.NET documentation</a>
+     */
     public void BeginInitialization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

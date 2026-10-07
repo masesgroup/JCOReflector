@@ -139,7 +139,10 @@ public class MetadataTokens extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MetadataTokens(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -192,6 +195,15 @@ public class MetadataTokens extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryGetHeapIndex.
+     *
+     * @param type the argument of type {@code HandleKind}
+     * @param index the argument of type {@code JCORefOut<HeapIndex>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.TryGetHeapIndex" target="_top">.NET documentation</a>
+     */
     public static boolean TryGetHeapIndex(HandleKind type, JCORefOut<HeapIndex> index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +218,15 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetTableIndex.
+     *
+     * @param type the argument of type {@code HandleKind}
+     * @param index the argument of type {@code JCORefOut<TableIndex>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.TryGetTableIndex" target="_top">.NET documentation</a>
+     */
     public static boolean TryGetTableIndex(HandleKind type, JCORefOut<TableIndex> index) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -220,6 +241,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeapOffset.
+     *
+     * @param handle the argument of type {@code BlobHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetHeapOffset" target="_top">.NET documentation</a>
+     */
     public static int GetHeapOffset(BlobHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -260,6 +289,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeapOffset.
+     *
+     * @param handle the argument of type {@code GuidHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetHeapOffset" target="_top">.NET documentation</a>
+     */
     public static int GetHeapOffset(GuidHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +337,21 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeapOffset.
+     *
+     * @param handle the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetHeapOffset" target="_top">.NET documentation</a>
+     */
     public static int GetHeapOffset(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -340,6 +392,23 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeapOffset.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetHeapOffset" target="_top">.NET documentation</a>
+     */
     public static int GetHeapOffset(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -380,6 +449,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeapOffset.
+     *
+     * @param handle the argument of type {@code StringHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetHeapOffset" target="_top">.NET documentation</a>
+     */
     public static int GetHeapOffset(StringHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -420,6 +497,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHeapOffset.
+     *
+     * @param handle the argument of type {@code UserStringHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetHeapOffset" target="_top">.NET documentation</a>
+     */
     public static int GetHeapOffset(UserStringHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -460,6 +545,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRowNumber.
+     *
+     * @param handle the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetRowNumber" target="_top">.NET documentation</a>
+     */
     public static int GetRowNumber(EntityHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -500,6 +593,23 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRowNumber.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetRowNumber" target="_top">.NET documentation</a>
+     */
     public static int GetRowNumber(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -540,6 +650,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToken.
+     *
+     * @param handle the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetToken" target="_top">.NET documentation</a>
+     */
     public static int GetToken(EntityHandle handle) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +698,21 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToken.
+     *
+     * @param handle the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetToken" target="_top">.NET documentation</a>
+     */
     public static int GetToken(Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -620,6 +753,23 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToken.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code EntityHandle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetToken" target="_top">.NET documentation</a>
+     */
     public static int GetToken(MetadataReader reader, EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -660,6 +810,23 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetToken.
+     *
+     * @param reader the argument of type {@code MetadataReader}
+     * @param handle the argument of type {@code Handle}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GetToken" target="_top">.NET documentation</a>
+     */
     public static int GetToken(MetadataReader reader, Handle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -700,6 +867,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AssemblyFileHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.AssemblyFileHandle" target="_top">.NET documentation</a>
+     */
     public static AssemblyFileHandle AssemblyFileHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -715,6 +890,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AssemblyReferenceHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.AssemblyReferenceHandle" target="_top">.NET documentation</a>
+     */
     public static AssemblyReferenceHandle AssemblyReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -730,6 +913,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member BlobHandle.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.BlobHandle" target="_top">.NET documentation</a>
+     */
     public static BlobHandle BlobHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -745,6 +936,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ConstantHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.ConstantHandle" target="_top">.NET documentation</a>
+     */
     public static ConstantHandle ConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -760,6 +959,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CustomAttributeHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.CustomAttributeHandle" target="_top">.NET documentation</a>
+     */
     public static CustomAttributeHandle CustomAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -775,6 +982,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CustomDebugInformationHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.CustomDebugInformationHandle" target="_top">.NET documentation</a>
+     */
     public static CustomDebugInformationHandle CustomDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -790,6 +1005,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DeclarativeSecurityAttributeHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.DeclarativeSecurityAttributeHandle" target="_top">.NET documentation</a>
+     */
     public static DeclarativeSecurityAttributeHandle DeclarativeSecurityAttributeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -805,6 +1028,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DocumentHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.DocumentHandle" target="_top">.NET documentation</a>
+     */
     public static DocumentHandle DocumentHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -820,6 +1051,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DocumentNameBlobHandle.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.DocumentNameBlobHandle" target="_top">.NET documentation</a>
+     */
     public static DocumentNameBlobHandle DocumentNameBlobHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -835,6 +1074,21 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EntityHandle.
+     *
+     * @param token the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.EntityHandle" target="_top">.NET documentation</a>
+     */
     public static EntityHandle EntityHandle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -850,6 +1104,23 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EntityHandle.
+     *
+     * @param tableIndex the argument of type {@code TableIndex}
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.EntityHandle" target="_top">.NET documentation</a>
+     */
     public static EntityHandle EntityHandle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -865,6 +1136,25 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Handle.
+     *
+     * @param tableIndex the argument of type {@code TableIndex}
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.Handle" target="_top">.NET documentation</a>
+     */
     public static EntityHandle Handle(TableIndex tableIndex, int rowNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -880,6 +1170,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EventDefinitionHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.EventDefinitionHandle" target="_top">.NET documentation</a>
+     */
     public static EventDefinitionHandle EventDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -895,6 +1193,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ExportedTypeHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.ExportedTypeHandle" target="_top">.NET documentation</a>
+     */
     public static ExportedTypeHandle ExportedTypeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -910,6 +1216,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member FieldDefinitionHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.FieldDefinitionHandle" target="_top">.NET documentation</a>
+     */
     public static FieldDefinitionHandle FieldDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -925,6 +1239,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenericParameterConstraintHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GenericParameterConstraintHandle" target="_top">.NET documentation</a>
+     */
     public static GenericParameterConstraintHandle GenericParameterConstraintHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -940,6 +1262,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GenericParameterHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GenericParameterHandle" target="_top">.NET documentation</a>
+     */
     public static GenericParameterHandle GenericParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -955,6 +1285,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GuidHandle.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.GuidHandle" target="_top">.NET documentation</a>
+     */
     public static GuidHandle GuidHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -970,6 +1308,21 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Handle.
+     *
+     * @param token the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.Handle" target="_top">.NET documentation</a>
+     */
     public static Handle Handle(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -985,6 +1338,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportScopeHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.ImportScopeHandle" target="_top">.NET documentation</a>
+     */
     public static ImportScopeHandle ImportScopeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1000,6 +1361,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member InterfaceImplementationHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.InterfaceImplementationHandle" target="_top">.NET documentation</a>
+     */
     public static InterfaceImplementationHandle InterfaceImplementationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1015,6 +1384,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LocalConstantHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.LocalConstantHandle" target="_top">.NET documentation</a>
+     */
     public static LocalConstantHandle LocalConstantHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1030,6 +1407,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LocalScopeHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.LocalScopeHandle" target="_top">.NET documentation</a>
+     */
     public static LocalScopeHandle LocalScopeHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1045,6 +1430,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member LocalVariableHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.LocalVariableHandle" target="_top">.NET documentation</a>
+     */
     public static LocalVariableHandle LocalVariableHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1060,6 +1453,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ManifestResourceHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.ManifestResourceHandle" target="_top">.NET documentation</a>
+     */
     public static ManifestResourceHandle ManifestResourceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1075,6 +1476,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MemberReferenceHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.MemberReferenceHandle" target="_top">.NET documentation</a>
+     */
     public static MemberReferenceHandle MemberReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1090,6 +1499,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MethodDebugInformationHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.MethodDebugInformationHandle" target="_top">.NET documentation</a>
+     */
     public static MethodDebugInformationHandle MethodDebugInformationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1105,6 +1522,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MethodDefinitionHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.MethodDefinitionHandle" target="_top">.NET documentation</a>
+     */
     public static MethodDefinitionHandle MethodDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1120,6 +1545,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MethodImplementationHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.MethodImplementationHandle" target="_top">.NET documentation</a>
+     */
     public static MethodImplementationHandle MethodImplementationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1135,6 +1568,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MethodSpecificationHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.MethodSpecificationHandle" target="_top">.NET documentation</a>
+     */
     public static MethodSpecificationHandle MethodSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1150,6 +1591,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ModuleReferenceHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.ModuleReferenceHandle" target="_top">.NET documentation</a>
+     */
     public static ModuleReferenceHandle ModuleReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1165,6 +1614,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParameterHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.ParameterHandle" target="_top">.NET documentation</a>
+     */
     public static ParameterHandle ParameterHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1180,6 +1637,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member PropertyDefinitionHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.PropertyDefinitionHandle" target="_top">.NET documentation</a>
+     */
     public static PropertyDefinitionHandle PropertyDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1195,6 +1660,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StandaloneSignatureHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.StandaloneSignatureHandle" target="_top">.NET documentation</a>
+     */
     public static StandaloneSignatureHandle StandaloneSignatureHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1210,6 +1683,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StringHandle.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.StringHandle" target="_top">.NET documentation</a>
+     */
     public static StringHandle StringHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1225,6 +1706,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TypeDefinitionHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.TypeDefinitionHandle" target="_top">.NET documentation</a>
+     */
     public static TypeDefinitionHandle TypeDefinitionHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1240,6 +1729,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TypeReferenceHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.TypeReferenceHandle" target="_top">.NET documentation</a>
+     */
     public static TypeReferenceHandle TypeReferenceHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1255,6 +1752,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TypeSpecificationHandle.
+     *
+     * @param rowNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.TypeSpecificationHandle" target="_top">.NET documentation</a>
+     */
     public static TypeSpecificationHandle TypeSpecificationHandle(int rowNumber) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1270,6 +1775,14 @@ public class MetadataTokens extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UserStringHandle.
+     *
+     * @param offset the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataTokens.UserStringHandle" target="_top">.NET documentation</a>
+     */
     public static UserStringHandle UserStringHandle(int offset) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -52,5 +52,11 @@ import system.componentmodel.design.DesignSurfaceEventArgs;
  * @version 2.0.0.0
  */
 public interface IDesignSurfaceEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.ComponentModel.Design.DesignSurfaceEventArgs}
+     */
     public void Invoke(NetObject sender, DesignSurfaceEventArgs e);
 }

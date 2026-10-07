@@ -101,7 +101,10 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RowToFieldTransformer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToFieldTransformer.-ctor" target="_top">.NET documentation</a>
+     */
     public RowToFieldTransformer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,14 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Transform.
+     *
+     * @param providerData the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToFieldTransformer.Transform" target="_top">.NET documentation</a>
+     */
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +194,13 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
         }
     }
 
+    /**
+     * Invokes the .NET member CreateConfigurationControl.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToFieldTransformer.CreateConfigurationControl" target="_top">.NET documentation</a>
+     */
     public Control CreateConfigurationControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,8 +219,12 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWebPartField method available in IWebPartField to obtain an object with an invocable method
+     *
+     * @param callback the argument of type {@code FieldCallback}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.IWebPartField.GetFieldValue" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetFieldValue(FieldCallback callback) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartField to obtain the full interface.");
     }
@@ -205,6 +233,13 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FieldName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToFieldTransformer.FieldName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +254,13 @@ public class RowToFieldTransformer extends system.web.ui.webcontrols.webparts.We
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldName.
+     *
+     * @param FieldName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.RowToFieldTransformer.FieldName" target="_top">.NET documentation</a>
+     */
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

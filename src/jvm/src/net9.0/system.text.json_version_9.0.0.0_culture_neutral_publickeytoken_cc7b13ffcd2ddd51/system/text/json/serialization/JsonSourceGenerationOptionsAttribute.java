@@ -108,7 +108,10 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonSourceGenerationOptionsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,12 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSourceGenerationOptionsAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,22 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param defaults the argument of type {@code JsonSerializerDefaults}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSourceGenerationOptionsAttribute(JsonSerializerDefaults defaults) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +208,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowOutOfOrderMetadataProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.AllowOutOfOrderMetadataProperties" target="_top">.NET documentation</a>
+     */
     public boolean getAllowOutOfOrderMetadataProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +229,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowOutOfOrderMetadataProperties.
+     *
+     * @param AllowOutOfOrderMetadataProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.AllowOutOfOrderMetadataProperties" target="_top">.NET documentation</a>
+     */
     public void setAllowOutOfOrderMetadataProperties(boolean AllowOutOfOrderMetadataProperties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +246,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowTrailingCommas.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.AllowTrailingCommas" target="_top">.NET documentation</a>
+     */
     public boolean getAllowTrailingCommas() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +267,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowTrailingCommas.
+     *
+     * @param AllowTrailingCommas the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.AllowTrailingCommas" target="_top">.NET documentation</a>
+     */
     public void setAllowTrailingCommas(boolean AllowTrailingCommas) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +284,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreReadOnlyFields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IgnoreReadOnlyFields" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreReadOnlyFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +305,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreReadOnlyFields.
+     *
+     * @param IgnoreReadOnlyFields the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IgnoreReadOnlyFields" target="_top">.NET documentation</a>
+     */
     public void setIgnoreReadOnlyFields(boolean IgnoreReadOnlyFields) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +322,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property IgnoreReadOnlyProperties.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IgnoreReadOnlyProperties" target="_top">.NET documentation</a>
+     */
     public boolean getIgnoreReadOnlyProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +343,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property IgnoreReadOnlyProperties.
+     *
+     * @param IgnoreReadOnlyProperties the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IgnoreReadOnlyProperties" target="_top">.NET documentation</a>
+     */
     public void setIgnoreReadOnlyProperties(boolean IgnoreReadOnlyProperties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +360,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncludeFields.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IncludeFields" target="_top">.NET documentation</a>
+     */
     public boolean getIncludeFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +381,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncludeFields.
+     *
+     * @param IncludeFields the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IncludeFields" target="_top">.NET documentation</a>
+     */
     public void setIncludeFields(boolean IncludeFields) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +398,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyNameCaseInsensitive.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.PropertyNameCaseInsensitive" target="_top">.NET documentation</a>
+     */
     public boolean getPropertyNameCaseInsensitive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +419,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyNameCaseInsensitive.
+     *
+     * @param PropertyNameCaseInsensitive the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.PropertyNameCaseInsensitive" target="_top">.NET documentation</a>
+     */
     public void setPropertyNameCaseInsensitive(boolean PropertyNameCaseInsensitive) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +436,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property RespectNullableAnnotations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.RespectNullableAnnotations" target="_top">.NET documentation</a>
+     */
     public boolean getRespectNullableAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +457,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property RespectNullableAnnotations.
+     *
+     * @param RespectNullableAnnotations the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.RespectNullableAnnotations" target="_top">.NET documentation</a>
+     */
     public void setRespectNullableAnnotations(boolean RespectNullableAnnotations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -351,6 +474,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property RespectRequiredConstructorParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.RespectRequiredConstructorParameters" target="_top">.NET documentation</a>
+     */
     public boolean getRespectRequiredConstructorParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +495,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property RespectRequiredConstructorParameters.
+     *
+     * @param RespectRequiredConstructorParameters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.RespectRequiredConstructorParameters" target="_top">.NET documentation</a>
+     */
     public void setRespectRequiredConstructorParameters(boolean RespectRequiredConstructorParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +512,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property UseStringEnumConverter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.UseStringEnumConverter" target="_top">.NET documentation</a>
+     */
     public boolean getUseStringEnumConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +533,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property UseStringEnumConverter.
+     *
+     * @param UseStringEnumConverter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.UseStringEnumConverter" target="_top">.NET documentation</a>
+     */
     public void setUseStringEnumConverter(boolean UseStringEnumConverter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -399,6 +550,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteIndented.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.WriteIndented" target="_top">.NET documentation</a>
+     */
     public boolean getWriteIndented() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +571,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property WriteIndented.
+     *
+     * @param WriteIndented the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.WriteIndented" target="_top">.NET documentation</a>
+     */
     public void setWriteIndented(boolean WriteIndented) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -423,6 +588,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentCharacter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IndentCharacter" target="_top">.NET documentation</a>
+     */
     public char getIndentCharacter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -437,6 +609,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentCharacter.
+     *
+     * @param IndentCharacter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IndentCharacter" target="_top">.NET documentation</a>
+     */
     public void setIndentCharacter(char IndentCharacter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -447,6 +626,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultBufferSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.DefaultBufferSize" target="_top">.NET documentation</a>
+     */
     public int getDefaultBufferSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -487,6 +673,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultBufferSize.
+     *
+     * @param DefaultBufferSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.DefaultBufferSize" target="_top">.NET documentation</a>
+     */
     public void setDefaultBufferSize(int DefaultBufferSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -497,6 +690,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property IndentSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IndentSize" target="_top">.NET documentation</a>
+     */
     public int getIndentSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -537,6 +737,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property IndentSize.
+     *
+     * @param IndentSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.IndentSize" target="_top">.NET documentation</a>
+     */
     public void setIndentSize(int IndentSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -547,6 +754,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaxDepth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.MaxDepth" target="_top">.NET documentation</a>
+     */
     public int getMaxDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -587,6 +801,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaxDepth.
+     *
+     * @param MaxDepth the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.MaxDepth" target="_top">.NET documentation</a>
+     */
     public void setMaxDepth(int MaxDepth) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -597,6 +818,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property NewLine.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.NewLine" target="_top">.NET documentation</a>
+     */
     public java.lang.String getNewLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -611,6 +839,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewLine.
+     *
+     * @param NewLine the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.NewLine" target="_top">.NET documentation</a>
+     */
     public void setNewLine(java.lang.String NewLine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +856,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadCommentHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.ReadCommentHandling" target="_top">.NET documentation</a>
+     */
     public JsonCommentHandling getReadCommentHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +878,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadCommentHandling.
+     *
+     * @param ReadCommentHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.ReadCommentHandling" target="_top">.NET documentation</a>
+     */
     public void setReadCommentHandling(JsonCommentHandling ReadCommentHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +895,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefaultIgnoreCondition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.DefaultIgnoreCondition" target="_top">.NET documentation</a>
+     */
     public JsonIgnoreCondition getDefaultIgnoreCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +917,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefaultIgnoreCondition.
+     *
+     * @param DefaultIgnoreCondition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.DefaultIgnoreCondition" target="_top">.NET documentation</a>
+     */
     public void setDefaultIgnoreCondition(JsonIgnoreCondition DefaultIgnoreCondition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -671,6 +934,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property DictionaryKeyPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.DictionaryKeyPolicy" target="_top">.NET documentation</a>
+     */
     public JsonKnownNamingPolicy getDictionaryKeyPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -686,6 +956,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property DictionaryKeyPolicy.
+     *
+     * @param DictionaryKeyPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.DictionaryKeyPolicy" target="_top">.NET documentation</a>
+     */
     public void setDictionaryKeyPolicy(JsonKnownNamingPolicy DictionaryKeyPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -696,6 +973,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyNamingPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.PropertyNamingPolicy" target="_top">.NET documentation</a>
+     */
     public JsonKnownNamingPolicy getPropertyNamingPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -711,6 +995,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyNamingPolicy.
+     *
+     * @param PropertyNamingPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.PropertyNamingPolicy" target="_top">.NET documentation</a>
+     */
     public void setPropertyNamingPolicy(JsonKnownNamingPolicy PropertyNamingPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -721,6 +1012,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.NumberHandling" target="_top">.NET documentation</a>
+     */
     public JsonNumberHandling getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +1034,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumberHandling.
+     *
+     * @param NumberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.NumberHandling" target="_top">.NET documentation</a>
+     */
     public void setNumberHandling(JsonNumberHandling NumberHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -746,6 +1051,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property PreferredObjectCreationHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.PreferredObjectCreationHandling" target="_top">.NET documentation</a>
+     */
     public JsonObjectCreationHandling getPreferredObjectCreationHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -761,6 +1073,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property PreferredObjectCreationHandling.
+     *
+     * @param PreferredObjectCreationHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.PreferredObjectCreationHandling" target="_top">.NET documentation</a>
+     */
     public void setPreferredObjectCreationHandling(JsonObjectCreationHandling PreferredObjectCreationHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -771,6 +1090,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenerationMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.GenerationMode" target="_top">.NET documentation</a>
+     */
     public JsonSourceGenerationMode getGenerationMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -786,6 +1112,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property GenerationMode.
+     *
+     * @param GenerationMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.GenerationMode" target="_top">.NET documentation</a>
+     */
     public void setGenerationMode(JsonSourceGenerationMode GenerationMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -796,6 +1129,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnknownTypeHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.UnknownTypeHandling" target="_top">.NET documentation</a>
+     */
     public JsonUnknownTypeHandling getUnknownTypeHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -811,6 +1151,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnknownTypeHandling.
+     *
+     * @param UnknownTypeHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.UnknownTypeHandling" target="_top">.NET documentation</a>
+     */
     public void setUnknownTypeHandling(JsonUnknownTypeHandling UnknownTypeHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -821,6 +1168,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property UnmappedMemberHandling.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.UnmappedMemberHandling" target="_top">.NET documentation</a>
+     */
     public JsonUnmappedMemberHandling getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -836,6 +1190,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property UnmappedMemberHandling.
+     *
+     * @param UnmappedMemberHandling the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.UnmappedMemberHandling" target="_top">.NET documentation</a>
+     */
     public void setUnmappedMemberHandling(JsonUnmappedMemberHandling UnmappedMemberHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -846,6 +1207,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Gets the value of the .NET property Converters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.Converters" target="_top">.NET documentation</a>
+     */
     public final NetType[] getConverters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -867,6 +1235,13 @@ public class JsonSourceGenerationOptionsAttribute extends system.text.json.seria
         }
     }
 
+    /**
+     * Sets the value of the .NET property Converters.
+     *
+     * @param Converters the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonSourceGenerationOptionsAttribute.Converters" target="_top">.NET documentation</a>
+     */
     public void setConverters(NetType[] Converters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

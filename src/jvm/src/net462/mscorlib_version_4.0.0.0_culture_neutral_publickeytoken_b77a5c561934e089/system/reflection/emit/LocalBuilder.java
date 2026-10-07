@@ -101,7 +101,10 @@ public class LocalBuilder extends system.reflection.LocalVariableInfo  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocalBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,18 @@ public class LocalBuilder extends system.reflection.LocalVariableInfo  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member SetLocalSymInfo.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.LocalBuilder.SetLocalSymInfo" target="_top">.NET documentation</a>
+     */
     public void SetLocalSymInfo(java.lang.String name) throws Throwable, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +181,20 @@ public class LocalBuilder extends system.reflection.LocalVariableInfo  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetLocalSymInfo.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param startOffset the argument of type {@code int}
+     * @param endOffset the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.LocalBuilder.SetLocalSymInfo" target="_top">.NET documentation</a>
+     */
     public void SetLocalSymInfo(java.lang.String name, int startOffset, int endOffset) throws Throwable, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,8 +208,12 @@ public class LocalBuilder extends system.reflection.LocalVariableInfo  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static To_LocalBuilder method available in _LocalBuilder to obtain an object with an invocable method
+     *
+     * @param pcTInfo the argument of type {@code JCORefOut<UInt32>}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices._LocalBuilder.GetTypeInfoCount" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_LocalBuilder to obtain the full interface.");
     }

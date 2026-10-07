@@ -52,5 +52,11 @@ import system.web.ui.webcontrols.DataGridCommandEventArgs;
  * @version 2.0.0.0
  */
 public interface IDataGridCommandEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param source the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Web.UI.WebControls.DataGridCommandEventArgs}
+     */
     public void Invoke(NetObject source, DataGridCommandEventArgs e);
 }

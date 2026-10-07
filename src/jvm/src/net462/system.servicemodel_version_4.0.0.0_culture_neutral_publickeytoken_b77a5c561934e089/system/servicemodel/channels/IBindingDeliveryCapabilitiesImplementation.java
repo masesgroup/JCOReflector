@@ -98,7 +98,10 @@ public class IBindingDeliveryCapabilitiesImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IBindingDeliveryCapabilitiesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,13 @@ public class IBindingDeliveryCapabilitiesImplementation extends NetObject implem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AssuresOrderedDelivery.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IBindingDeliveryCapabilities.AssuresOrderedDelivery" target="_top">.NET documentation</a>
+     */
     public boolean getAssuresOrderedDelivery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IBindingDeliveryCapabilitiesImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Gets the value of the .NET property QueuedDelivery.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.IBindingDeliveryCapabilities.QueuedDelivery" target="_top">.NET documentation</a>
+     */
     public boolean getQueuedDelivery() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

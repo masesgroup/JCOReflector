@@ -52,5 +52,11 @@ import system.management.ObjectPutEventArgs;
  * @version 2.0.0.0
  */
 public interface IObjectPutEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Management.ObjectPutEventArgs}
+     */
     public void Invoke(NetObject sender, ObjectPutEventArgs e);
 }

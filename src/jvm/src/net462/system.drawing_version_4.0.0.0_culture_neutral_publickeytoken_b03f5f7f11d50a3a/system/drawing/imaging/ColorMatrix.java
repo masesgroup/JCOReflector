@@ -99,7 +99,10 @@ public class ColorMatrix extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColorMatrix(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ColorMatrix extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.-ctor" target="_top">.NET documentation</a>
+     */
     public ColorMatrix() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class ColorMatrix extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Matrix00.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix00" target="_top">.NET documentation</a>
+     */
     public Single getMatrix00() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix00.
+     *
+     * @param Matrix00 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix00" target="_top">.NET documentation</a>
+     */
     public void setMatrix00(Single Matrix00) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix01.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix01" target="_top">.NET documentation</a>
+     */
     public Single getMatrix01() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +234,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix01.
+     *
+     * @param Matrix01 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix01" target="_top">.NET documentation</a>
+     */
     public void setMatrix01(Single Matrix01) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +251,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix02.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix02" target="_top">.NET documentation</a>
+     */
     public Single getMatrix02() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +273,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix02.
+     *
+     * @param Matrix02 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix02" target="_top">.NET documentation</a>
+     */
     public void setMatrix02(Single Matrix02) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +290,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix03.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix03" target="_top">.NET documentation</a>
+     */
     public Single getMatrix03() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +312,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix03.
+     *
+     * @param Matrix03 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix03" target="_top">.NET documentation</a>
+     */
     public void setMatrix03(Single Matrix03) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +329,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix04.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix04" target="_top">.NET documentation</a>
+     */
     public Single getMatrix04() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +351,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix04.
+     *
+     * @param Matrix04 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix04" target="_top">.NET documentation</a>
+     */
     public void setMatrix04(Single Matrix04) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +368,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix10.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix10" target="_top">.NET documentation</a>
+     */
     public Single getMatrix10() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +390,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix10.
+     *
+     * @param Matrix10 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix10" target="_top">.NET documentation</a>
+     */
     public void setMatrix10(Single Matrix10) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +407,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix11.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix11" target="_top">.NET documentation</a>
+     */
     public Single getMatrix11() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix11.
+     *
+     * @param Matrix11 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix11" target="_top">.NET documentation</a>
+     */
     public void setMatrix11(Single Matrix11) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -339,6 +446,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix12.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix12" target="_top">.NET documentation</a>
+     */
     public Single getMatrix12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +468,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix12.
+     *
+     * @param Matrix12 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix12" target="_top">.NET documentation</a>
+     */
     public void setMatrix12(Single Matrix12) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +485,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix13.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix13" target="_top">.NET documentation</a>
+     */
     public Single getMatrix13() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -379,6 +507,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix13.
+     *
+     * @param Matrix13 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix13" target="_top">.NET documentation</a>
+     */
     public void setMatrix13(Single Matrix13) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -389,6 +524,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix14.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix14" target="_top">.NET documentation</a>
+     */
     public Single getMatrix14() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +546,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix14.
+     *
+     * @param Matrix14 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix14" target="_top">.NET documentation</a>
+     */
     public void setMatrix14(Single Matrix14) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +563,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix20.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix20" target="_top">.NET documentation</a>
+     */
     public Single getMatrix20() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +585,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix20.
+     *
+     * @param Matrix20 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix20" target="_top">.NET documentation</a>
+     */
     public void setMatrix20(Single Matrix20) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -439,6 +602,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix21.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix21" target="_top">.NET documentation</a>
+     */
     public Single getMatrix21() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +624,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix21.
+     *
+     * @param Matrix21 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix21" target="_top">.NET documentation</a>
+     */
     public void setMatrix21(Single Matrix21) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +641,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix22.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix22" target="_top">.NET documentation</a>
+     */
     public Single getMatrix22() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +663,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix22.
+     *
+     * @param Matrix22 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix22" target="_top">.NET documentation</a>
+     */
     public void setMatrix22(Single Matrix22) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -489,6 +680,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix23.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix23" target="_top">.NET documentation</a>
+     */
     public Single getMatrix23() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +702,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix23.
+     *
+     * @param Matrix23 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix23" target="_top">.NET documentation</a>
+     */
     public void setMatrix23(Single Matrix23) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +719,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix24.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix24" target="_top">.NET documentation</a>
+     */
     public Single getMatrix24() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +741,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix24.
+     *
+     * @param Matrix24 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix24" target="_top">.NET documentation</a>
+     */
     public void setMatrix24(Single Matrix24) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -539,6 +758,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix30.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix30" target="_top">.NET documentation</a>
+     */
     public Single getMatrix30() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +780,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix30.
+     *
+     * @param Matrix30 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix30" target="_top">.NET documentation</a>
+     */
     public void setMatrix30(Single Matrix30) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +797,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix31.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix31" target="_top">.NET documentation</a>
+     */
     public Single getMatrix31() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -579,6 +819,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix31.
+     *
+     * @param Matrix31 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix31" target="_top">.NET documentation</a>
+     */
     public void setMatrix31(Single Matrix31) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -589,6 +836,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix32.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix32" target="_top">.NET documentation</a>
+     */
     public Single getMatrix32() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +858,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix32.
+     *
+     * @param Matrix32 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix32" target="_top">.NET documentation</a>
+     */
     public void setMatrix32(Single Matrix32) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -614,6 +875,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix33.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix33" target="_top">.NET documentation</a>
+     */
     public Single getMatrix33() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -629,6 +897,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix33.
+     *
+     * @param Matrix33 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix33" target="_top">.NET documentation</a>
+     */
     public void setMatrix33(Single Matrix33) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -639,6 +914,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix34.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix34" target="_top">.NET documentation</a>
+     */
     public Single getMatrix34() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -654,6 +936,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix34.
+     *
+     * @param Matrix34 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix34" target="_top">.NET documentation</a>
+     */
     public void setMatrix34(Single Matrix34) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -664,6 +953,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix40.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix40" target="_top">.NET documentation</a>
+     */
     public Single getMatrix40() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -679,6 +975,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix40.
+     *
+     * @param Matrix40 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix40" target="_top">.NET documentation</a>
+     */
     public void setMatrix40(Single Matrix40) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -689,6 +992,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix41.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix41" target="_top">.NET documentation</a>
+     */
     public Single getMatrix41() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -704,6 +1014,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix41.
+     *
+     * @param Matrix41 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix41" target="_top">.NET documentation</a>
+     */
     public void setMatrix41(Single Matrix41) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -714,6 +1031,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix42.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix42" target="_top">.NET documentation</a>
+     */
     public Single getMatrix42() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -729,6 +1053,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix42.
+     *
+     * @param Matrix42 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix42" target="_top">.NET documentation</a>
+     */
     public void setMatrix42(Single Matrix42) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -739,6 +1070,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix43.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix43" target="_top">.NET documentation</a>
+     */
     public Single getMatrix43() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -754,6 +1092,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix43.
+     *
+     * @param Matrix43 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix43" target="_top">.NET documentation</a>
+     */
     public void setMatrix43(Single Matrix43) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -764,6 +1109,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Matrix44.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix44" target="_top">.NET documentation</a>
+     */
     public Single getMatrix44() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -779,6 +1131,13 @@ public class ColorMatrix extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Matrix44.
+     *
+     * @param Matrix44 the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ColorMatrix.Matrix44" target="_top">.NET documentation</a>
+     */
     public void setMatrix44(Single Matrix44) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

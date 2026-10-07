@@ -101,7 +101,10 @@ public class Overlapped extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Overlapped(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class Overlapped extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.-ctor" target="_top">.NET documentation</a>
+     */
     public Overlapped() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,16 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param offsetLo the argument of type {@code int}
+     * @param offsetHi the argument of type {@code int}
+     * @param hEvent the argument of type {@code int}
+     * @param ar the argument of type {@code IAsyncResult}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.-ctor" target="_top">.NET documentation</a>
+     */
     public Overlapped(int offsetLo, int offsetHi, int hEvent, IAsyncResult ar) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +195,13 @@ public class Overlapped extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EventHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.EventHandle" target="_top">.NET documentation</a>
+     */
     public int getEventHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +242,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EventHandle.
+     *
+     * @param EventHandle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.EventHandle" target="_top">.NET documentation</a>
+     */
     public void setEventHandle(int EventHandle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +259,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetHigh.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.OffsetHigh" target="_top">.NET documentation</a>
+     */
     public int getOffsetHigh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +306,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetHigh.
+     *
+     * @param OffsetHigh the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.OffsetHigh" target="_top">.NET documentation</a>
+     */
     public void setOffsetHigh(int OffsetHigh) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +323,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OffsetLow.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.OffsetLow" target="_top">.NET documentation</a>
+     */
     public int getOffsetLow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +370,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OffsetLow.
+     *
+     * @param OffsetLow the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.OffsetLow" target="_top">.NET documentation</a>
+     */
     public void setOffsetLow(int OffsetLow) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -326,6 +387,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsyncResult.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.AsyncResult" target="_top">.NET documentation</a>
+     */
     public IAsyncResult getAsyncResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +409,13 @@ public class Overlapped extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AsyncResult.
+     *
+     * @param AsyncResult the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Overlapped.AsyncResult" target="_top">.NET documentation</a>
+     */
     public void setAsyncResult(IAsyncResult AsyncResult) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class ExceptionHandler extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExceptionHandler(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class ExceptionHandler extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HandleException.
+     *
+     * @param exception the argument of type {@code NetException}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ExceptionHandler.HandleException" target="_top">.NET documentation</a>
+     */
     public boolean HandleException(NetException exception) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +181,13 @@ public class ExceptionHandler extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AlwaysHandle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ExceptionHandler.AlwaysHandle" target="_top">.NET documentation</a>
+     */
     public static ExceptionHandler getAlwaysHandle() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +203,13 @@ public class ExceptionHandler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AsynchronousThreadExceptionHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ExceptionHandler.AsynchronousThreadExceptionHandler" target="_top">.NET documentation</a>
+     */
     public static ExceptionHandler getAsynchronousThreadExceptionHandler() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +225,13 @@ public class ExceptionHandler extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AsynchronousThreadExceptionHandler.
+     *
+     * @param AsynchronousThreadExceptionHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ExceptionHandler.AsynchronousThreadExceptionHandler" target="_top">.NET documentation</a>
+     */
     public static void setAsynchronousThreadExceptionHandler(ExceptionHandler AsynchronousThreadExceptionHandler) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +242,13 @@ public class ExceptionHandler extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransportExceptionHandler.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ExceptionHandler.TransportExceptionHandler" target="_top">.NET documentation</a>
+     */
     public static ExceptionHandler getTransportExceptionHandler() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -225,6 +264,13 @@ public class ExceptionHandler extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransportExceptionHandler.
+     *
+     * @param TransportExceptionHandler the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ExceptionHandler.TransportExceptionHandler" target="_top">.NET documentation</a>
+     */
     public static void setTransportExceptionHandler(ExceptionHandler TransportExceptionHandler) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

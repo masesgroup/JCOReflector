@@ -99,7 +99,10 @@ public class ExtensibleModelBinderAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ExtensibleModelBinderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ExtensibleModelBinderAttribute extends system.Attribute  {
     public ExtensibleModelBinderAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param binderType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ExtensibleModelBinderAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ExtensibleModelBinderAttribute(NetType binderType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class ExtensibleModelBinderAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SuppressPrefixCheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ExtensibleModelBinderAttribute.SuppressPrefixCheck" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressPrefixCheck() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +199,13 @@ public class ExtensibleModelBinderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressPrefixCheck.
+     *
+     * @param SuppressPrefixCheck the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ExtensibleModelBinderAttribute.SuppressPrefixCheck" target="_top">.NET documentation</a>
+     */
     public void setSuppressPrefixCheck(boolean SuppressPrefixCheck) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,13 @@ public class ExtensibleModelBinderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BinderType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ExtensibleModelBinderAttribute.BinderType" target="_top">.NET documentation</a>
+     */
     public NetType getBinderType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +238,13 @@ public class ExtensibleModelBinderAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BinderType.
+     *
+     * @param BinderType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ExtensibleModelBinderAttribute.BinderType" target="_top">.NET documentation</a>
+     */
     public void setBinderType(NetType BinderType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -52,5 +52,11 @@ import system.data.objects.ObjectMaterializedEventArgs;
  * @version 2.0.0.0
  */
 public interface IObjectMaterializedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Data.Objects.ObjectMaterializedEventArgs}
+     */
     public void Invoke(NetObject sender, ObjectMaterializedEventArgs e);
 }

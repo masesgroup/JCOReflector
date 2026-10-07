@@ -104,7 +104,10 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class XmlSchemaInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class XmlSchemaInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsDefault.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.IsDefault" target="_top">.NET documentation</a>
+     */
     public boolean getIsDefault() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsDefault.
+     *
+     * @param IsDefault the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.IsDefault" target="_top">.NET documentation</a>
+     */
     public void setIsDefault(boolean IsDefault) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsNil.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.IsNil" target="_top">.NET documentation</a>
+     */
     public boolean getIsNil() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsNil.
+     *
+     * @param IsNil the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.IsNil" target="_top">.NET documentation</a>
+     */
     public void setIsNil(boolean IsNil) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.SchemaAttribute" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAttribute getSchemaAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaAttribute.
+     *
+     * @param SchemaAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.SchemaAttribute" target="_top">.NET documentation</a>
+     */
     public void setSchemaAttribute(XmlSchemaAttribute SchemaAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +293,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.ContentType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaContentType getContentType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContentType.
+     *
+     * @param ContentType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.ContentType" target="_top">.NET documentation</a>
+     */
     public void setContentType(XmlSchemaContentType ContentType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +332,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaElement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.SchemaElement" target="_top">.NET documentation</a>
+     */
     public XmlSchemaElement getSchemaElement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +354,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaElement.
+     *
+     * @param SchemaElement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.SchemaElement" target="_top">.NET documentation</a>
+     */
     public void setSchemaElement(XmlSchemaElement SchemaElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +371,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.MemberType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getMemberType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +393,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MemberType.
+     *
+     * @param MemberType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.MemberType" target="_top">.NET documentation</a>
+     */
     public void setMemberType(XmlSchemaSimpleType MemberType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +410,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SchemaType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.SchemaType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaType getSchemaType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +432,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SchemaType.
+     *
+     * @param SchemaType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.SchemaType" target="_top">.NET documentation</a>
+     */
     public void setSchemaType(XmlSchemaType SchemaType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +449,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Validity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.Validity" target="_top">.NET documentation</a>
+     */
     public XmlSchemaValidity getValidity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +471,13 @@ public class XmlSchemaInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Validity.
+     *
+     * @param Validity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaInfo.Validity" target="_top">.NET documentation</a>
+     */
     public void setValidity(XmlSchemaValidity Validity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class XamlSourceInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlSourceInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class XamlSourceInfo extends NetObject  {
     public XamlSourceInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceUri the argument of type {@code Uri}
+     * @param lineNumber the argument of type {@code int}
+     * @param linePosition the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlSourceInfo(Uri sourceUri, int lineNumber, int linePosition) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +180,13 @@ public class XamlSourceInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LineNumber.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.LineNumber" target="_top">.NET documentation</a>
+     */
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +227,13 @@ public class XamlSourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LineNumber.
+     *
+     * @param LineNumber the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.LineNumber" target="_top">.NET documentation</a>
+     */
     public void setLineNumber(int LineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +244,13 @@ public class XamlSourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LinePosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.LinePosition" target="_top">.NET documentation</a>
+     */
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +291,13 @@ public class XamlSourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LinePosition.
+     *
+     * @param LinePosition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.LinePosition" target="_top">.NET documentation</a>
+     */
     public void setLinePosition(int LinePosition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +308,13 @@ public class XamlSourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceUri.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.SourceUri" target="_top">.NET documentation</a>
+     */
     public Uri getSourceUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +330,13 @@ public class XamlSourceInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceUri.
+     *
+     * @param SourceUri the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.XamlSourceInfo.SourceUri" target="_top">.NET documentation</a>
+     */
     public void setSourceUri(Uri SourceUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

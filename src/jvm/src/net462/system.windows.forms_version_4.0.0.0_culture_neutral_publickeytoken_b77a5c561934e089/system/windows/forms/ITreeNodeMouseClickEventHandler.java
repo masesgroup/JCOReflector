@@ -52,5 +52,11 @@ import system.windows.forms.TreeNodeMouseClickEventArgs;
  * @version 2.0.0.0
  */
 public interface ITreeNodeMouseClickEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Forms.TreeNodeMouseClickEventArgs}
+     */
     public void Invoke(NetObject sender, TreeNodeMouseClickEventArgs e);
 }

@@ -100,7 +100,10 @@ public class TemplateGroup extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TemplateGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class TemplateGroup extends NetObject  {
     public TemplateGroup() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateGroup(java.lang.String groupName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param groupName the argument of type {@code java.lang.String}
+     * @param groupStyle the argument of type {@code Style}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.-ctor" target="_top">.NET documentation</a>
+     */
     public TemplateGroup(java.lang.String groupName, Style groupStyle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +193,14 @@ public class TemplateGroup extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddTemplateDefinition.
+     *
+     * @param templateDefinition the argument of type {@code TemplateDefinition}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.AddTemplateDefinition" target="_top">.NET documentation</a>
+     */
     public void AddTemplateDefinition(TemplateDefinition templateDefinition) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +215,13 @@ public class TemplateGroup extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.IsEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +236,13 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.GroupName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getGroupName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +257,17 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Templates.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.Templates" target="_top">.NET documentation</a>
+     */
     public final TemplateDefinition[] getTemplates() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +289,13 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GroupStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.TemplateGroup.GroupStyle" target="_top">.NET documentation</a>
+     */
     public Style getGroupStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

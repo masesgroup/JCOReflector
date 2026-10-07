@@ -99,7 +99,10 @@ public class AttachedPropertyBrowsableForTypeAttribute extends system.windows.At
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AttachedPropertyBrowsableForTypeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,22 @@ public class AttachedPropertyBrowsableForTypeAttribute extends system.windows.At
     public AttachedPropertyBrowsableForTypeAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.AttachedPropertyBrowsableForTypeAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public AttachedPropertyBrowsableForTypeAttribute(NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +187,13 @@ public class AttachedPropertyBrowsableForTypeAttribute extends system.windows.At
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TargetType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.AttachedPropertyBrowsableForTypeAttribute.TargetType" target="_top">.NET documentation</a>
+     */
     public NetType getTargetType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

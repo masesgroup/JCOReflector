@@ -99,7 +99,10 @@ public class DbColumn extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbColumn(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class DbColumn extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowDBNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.AllowDBNull" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getAllowDBNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +181,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowDBNull.
+     *
+     * @param AllowDBNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.AllowDBNull" target="_top">.NET documentation</a>
+     */
     public void setAllowDBNull(Nullable_1 AllowDBNull) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +198,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAliased.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsAliased" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsAliased() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +220,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsAliased.
+     *
+     * @param IsAliased the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsAliased" target="_top">.NET documentation</a>
+     */
     public void setIsAliased(Nullable_1 IsAliased) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +237,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsAutoIncrement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsAutoIncrement" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsAutoIncrement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +259,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsAutoIncrement.
+     *
+     * @param IsAutoIncrement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsAutoIncrement" target="_top">.NET documentation</a>
+     */
     public void setIsAutoIncrement(Nullable_1 IsAutoIncrement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsExpression" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +298,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsExpression.
+     *
+     * @param IsExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsExpression" target="_top">.NET documentation</a>
+     */
     public void setIsExpression(Nullable_1 IsExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +315,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsHidden.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsHidden" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsHidden() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +337,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsHidden.
+     *
+     * @param IsHidden the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsHidden" target="_top">.NET documentation</a>
+     */
     public void setIsHidden(Nullable_1 IsHidden) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +354,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsIdentity" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +376,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsIdentity.
+     *
+     * @param IsIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsIdentity" target="_top">.NET documentation</a>
+     */
     public void setIsIdentity(Nullable_1 IsIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +393,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsKey.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsKey" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +415,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsKey.
+     *
+     * @param IsKey the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsKey" target="_top">.NET documentation</a>
+     */
     public void setIsKey(Nullable_1 IsKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +432,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsLong.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsLong" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsLong() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +454,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsLong.
+     *
+     * @param IsLong the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsLong" target="_top">.NET documentation</a>
+     */
     public void setIsLong(Nullable_1 IsLong) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +471,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsReadOnly.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +493,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsReadOnly.
+     *
+     * @param IsReadOnly the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsReadOnly" target="_top">.NET documentation</a>
+     */
     public void setIsReadOnly(Nullable_1 IsReadOnly) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +510,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsUnique.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsUnique" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getIsUnique() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -396,6 +532,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsUnique.
+     *
+     * @param IsUnique the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.IsUnique" target="_top">.NET documentation</a>
+     */
     public void setIsUnique(Nullable_1 IsUnique) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +549,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnOrdinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.ColumnOrdinal" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getColumnOrdinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +571,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnOrdinal.
+     *
+     * @param ColumnOrdinal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.ColumnOrdinal" target="_top">.NET documentation</a>
+     */
     public void setColumnOrdinal(Nullable_1 ColumnOrdinal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -431,6 +588,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.ColumnSize" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getColumnSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +610,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnSize.
+     *
+     * @param ColumnSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.ColumnSize" target="_top">.NET documentation</a>
+     */
     public void setColumnSize(Nullable_1 ColumnSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +627,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumericPrecision.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.NumericPrecision" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getNumericPrecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -471,6 +649,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumericPrecision.
+     *
+     * @param NumericPrecision the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.NumericPrecision" target="_top">.NET documentation</a>
+     */
     public void setNumericPrecision(Nullable_1 NumericPrecision) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -481,6 +666,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property NumericScale.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.NumericScale" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getNumericScale() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -496,6 +688,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property NumericScale.
+     *
+     * @param NumericScale the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.NumericScale" target="_top">.NET documentation</a>
+     */
     public void setNumericScale(Nullable_1 NumericScale) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -506,6 +705,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseCatalogName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseCatalogName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseCatalogName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -520,6 +726,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseCatalogName.
+     *
+     * @param BaseCatalogName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseCatalogName" target="_top">.NET documentation</a>
+     */
     public void setBaseCatalogName(java.lang.String BaseCatalogName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +743,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseColumnName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseColumnName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseColumnName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +764,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseColumnName.
+     *
+     * @param BaseColumnName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseColumnName" target="_top">.NET documentation</a>
+     */
     public void setBaseColumnName(java.lang.String BaseColumnName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +781,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseSchemaName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseSchemaName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseSchemaName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -568,6 +802,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseSchemaName.
+     *
+     * @param BaseSchemaName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseSchemaName" target="_top">.NET documentation</a>
+     */
     public void setBaseSchemaName(java.lang.String BaseSchemaName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -578,6 +819,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseServerName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseServerName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseServerName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -592,6 +840,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseServerName.
+     *
+     * @param BaseServerName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseServerName" target="_top">.NET documentation</a>
+     */
     public void setBaseServerName(java.lang.String BaseServerName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -602,6 +857,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseTableName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseTableName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getBaseTableName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -616,6 +878,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseTableName.
+     *
+     * @param BaseTableName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.BaseTableName" target="_top">.NET documentation</a>
+     */
     public void setBaseTableName(java.lang.String BaseTableName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -626,6 +895,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.ColumnName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getColumnName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -640,6 +916,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnName.
+     *
+     * @param ColumnName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.ColumnName" target="_top">.NET documentation</a>
+     */
     public void setColumnName(java.lang.String ColumnName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +933,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.DataTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -664,6 +954,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataTypeName.
+     *
+     * @param DataTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.DataTypeName" target="_top">.NET documentation</a>
+     */
     public void setDataTypeName(java.lang.String DataTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -674,6 +971,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UdtAssemblyQualifiedName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.UdtAssemblyQualifiedName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUdtAssemblyQualifiedName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -688,6 +992,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UdtAssemblyQualifiedName.
+     *
+     * @param UdtAssemblyQualifiedName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.UdtAssemblyQualifiedName" target="_top">.NET documentation</a>
+     */
     public void setUdtAssemblyQualifiedName(java.lang.String UdtAssemblyQualifiedName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -698,6 +1009,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.DataType" target="_top">.NET documentation</a>
+     */
     public NetType getDataType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -713,6 +1031,13 @@ public class DbColumn extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataType.
+     *
+     * @param DataType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbColumn.DataType" target="_top">.NET documentation</a>
+     */
     public void setDataType(NetType DataType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

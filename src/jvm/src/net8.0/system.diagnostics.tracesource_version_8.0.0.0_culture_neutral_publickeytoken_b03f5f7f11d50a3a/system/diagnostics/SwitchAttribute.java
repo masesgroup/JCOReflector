@@ -101,7 +101,10 @@ public class SwitchAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SwitchAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class SwitchAttribute extends system.Attribute  {
     public SwitchAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param switchName the argument of type {@code java.lang.String}
+     * @param switchType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public SwitchAttribute(java.lang.String switchName, NetType switchType) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +179,23 @@ public class SwitchAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAll.
+     *
+     * @param assembly the argument of type {@code Assembly}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.GetAll" target="_top">.NET documentation</a>
+     */
     public static SwitchAttribute[] GetAll(Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +221,13 @@ public class SwitchAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SwitchDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.SwitchDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSwitchDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +242,13 @@ public class SwitchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SwitchDescription.
+     *
+     * @param SwitchDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.SwitchDescription" target="_top">.NET documentation</a>
+     */
     public void setSwitchDescription(java.lang.String SwitchDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +259,13 @@ public class SwitchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SwitchName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.SwitchName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSwitchName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +280,16 @@ public class SwitchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SwitchName.
+     *
+     * @param SwitchName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.SwitchName" target="_top">.NET documentation</a>
+     */
     public void setSwitchName(java.lang.String SwitchName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +300,13 @@ public class SwitchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SwitchType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.SwitchType" target="_top">.NET documentation</a>
+     */
     public NetType getSwitchType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +322,22 @@ public class SwitchAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SwitchType.
+     *
+     * @param SwitchType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SwitchAttribute.SwitchType" target="_top">.NET documentation</a>
+     */
     public void setSwitchType(NetType SwitchType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

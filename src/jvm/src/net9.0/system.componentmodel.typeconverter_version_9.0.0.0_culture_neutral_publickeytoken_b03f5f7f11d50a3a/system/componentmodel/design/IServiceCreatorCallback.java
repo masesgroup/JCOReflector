@@ -53,5 +53,12 @@ import system.componentmodel.design.IServiceContainerImplementation;
  * @version 2.0.0.0
  */
 public interface IServiceCreatorCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param container the .NET argument of type {@code System.ComponentModel.Design.IServiceContainer}
+     * @param serviceType the .NET argument of type {@code System.Type}
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke(IServiceContainer container, NetType serviceType);
 }

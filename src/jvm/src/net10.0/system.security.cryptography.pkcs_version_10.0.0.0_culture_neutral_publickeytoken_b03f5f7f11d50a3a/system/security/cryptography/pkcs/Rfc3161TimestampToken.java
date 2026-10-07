@@ -105,7 +105,10 @@ public class Rfc3161TimestampToken extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Rfc3161TimestampToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,29 @@ public class Rfc3161TimestampToken extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryDecode.
+     *
+     * @param encodedBytes the argument of type {@code ReadOnlyMemory_1}
+     * @param token the argument of type {@code JCORefOut<Rfc3161TimestampToken>}
+     * @param bytesConsumed the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.TryDecode" target="_top">.NET documentation</a>
+     */
     public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampToken> token, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.InvalidOperationException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +200,28 @@ public class Rfc3161TimestampToken extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member VerifySignatureForSignerInfo.
+     *
+     * @param signerInfo the argument of type {@code SignerInfo}
+     * @param signerCertificate the argument of type {@code JCORefOut<X509Certificate2>}
+     * @param extraCandidates the argument of type {@code X509Certificate2Collection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.security.cryptography.CryptographicException if the .NET member raises it
+     * @throws system.formats.asn1.AsnContentException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.VerifySignatureForSignerInfo" target="_top">.NET documentation</a>
+     */
     public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +236,13 @@ public class Rfc3161TimestampToken extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AsSignedCms.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.AsSignedCms" target="_top">.NET documentation</a>
+     */
     public SignedCms AsSignedCms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +262,13 @@ public class Rfc3161TimestampToken extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TokenInfo.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.TokenInfo" target="_top">.NET documentation</a>
+     */
     public Rfc3161TimestampTokenInfo getTokenInfo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +284,13 @@ public class Rfc3161TimestampToken extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TokenInfo.
+     *
+     * @param TokenInfo the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Rfc3161TimestampToken.TokenInfo" target="_top">.NET documentation</a>
+     */
     public void setTokenInfo(Rfc3161TimestampTokenInfo TokenInfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InvokeAction_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.-ctor" target="_top">.NET documentation</a>
+     */
     public InvokeAction_1() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Action" target="_top">.NET documentation</a>
+     */
     public ActivityAction_1 getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(ActivityAction_1 Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
         }
     }
 
+    /**
+     * Gets the value of the .NET property Argument.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Argument" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
         }
     }
 
+    /**
+     * Sets the value of the .NET property Argument.
+     *
+     * @param Argument the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Argument" target="_top">.NET documentation</a>
+     */
     public void setArgument(InArgument_1 Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

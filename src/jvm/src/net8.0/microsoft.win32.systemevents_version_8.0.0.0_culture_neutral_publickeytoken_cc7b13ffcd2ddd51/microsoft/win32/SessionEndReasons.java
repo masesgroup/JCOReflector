@@ -114,7 +114,9 @@ public class SessionEndReasons extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public SessionEndReasons(java.lang.Object instance) {
         super(instance);

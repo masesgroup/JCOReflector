@@ -99,7 +99,10 @@ public class DebuggableAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DebuggableAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class DebuggableAttribute extends system.Attribute  {
     public DebuggableAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isJITTrackingEnabled the argument of type {@code boolean}
+     * @param isJITOptimizerDisabled the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggableAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DebuggableAttribute(boolean isJITTrackingEnabled, boolean isJITOptimizerDisabled) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class DebuggableAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsJITOptimizerDisabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsJITOptimizerDisabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class DebuggableAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsJITTrackingEnabled.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled" target="_top">.NET documentation</a>
+     */
     public boolean getIsJITTrackingEnabled() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -98,7 +98,10 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAppDomainInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsIdle.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IAppDomainInfo.IsIdle" target="_top">.NET documentation</a>
+     */
     public boolean IsIdle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -154,6 +164,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         }
     }
 
+    /**
+     * Invokes the .NET member GetSiteId.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IAppDomainInfo.GetSiteId" target="_top">.NET documentation</a>
+     */
     public int GetSiteId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +211,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         }
     }
 
+    /**
+     * Invokes the .NET member GetId.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IAppDomainInfo.GetId" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +232,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         }
     }
 
+    /**
+     * Invokes the .NET member GetPhysicalPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IAppDomainInfo.GetPhysicalPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPhysicalPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +253,13 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         }
     }
 
+    /**
+     * Invokes the .NET member GetVirtualPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IAppDomainInfo.GetVirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

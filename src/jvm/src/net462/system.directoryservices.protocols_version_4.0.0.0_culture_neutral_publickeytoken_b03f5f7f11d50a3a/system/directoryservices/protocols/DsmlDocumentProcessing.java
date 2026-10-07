@@ -114,7 +114,9 @@ public class DsmlDocumentProcessing extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public DsmlDocumentProcessing(java.lang.Object instance) {
         super(instance);

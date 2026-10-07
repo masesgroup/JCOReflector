@@ -101,7 +101,10 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CreateManifestResourceName(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,25 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Execute.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.Execute" target="_top">.NET documentation</a>
+     */
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +190,22 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Invokes the .NET member MakeValidEverettIdentifier.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier" target="_top">.NET documentation</a>
+     */
     public static java.lang.String MakeValidEverettIdentifier(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +224,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PrependCultureAsDirectory.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory" target="_top">.NET documentation</a>
+     */
     public boolean getPrependCultureAsDirectory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +245,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Sets the value of the .NET property PrependCultureAsDirectory.
+     *
+     * @param PrependCultureAsDirectory the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory" target="_top">.NET documentation</a>
+     */
     public void setPrependCultureAsDirectory(boolean PrependCultureAsDirectory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +262,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManifestResourceNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getManifestResourceNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +290,19 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceFiles.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResourceFiles() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +324,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceFiles.
+     *
+     * @param ResourceFiles the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles" target="_top">.NET documentation</a>
+     */
     public void setResourceFiles(ITaskItem[] ResourceFiles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +341,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceFilesWithManifestResourceNames.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames" target="_top">.NET documentation</a>
+     */
     public final ITaskItem[] getResourceFilesWithManifestResourceNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +369,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResourceFilesWithManifestResourceNames.
+     *
+     * @param ResourceFilesWithManifestResourceNames the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames" target="_top">.NET documentation</a>
+     */
     public void setResourceFilesWithManifestResourceNames(ITaskItem[] ResourceFilesWithManifestResourceNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +386,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Gets the value of the .NET property RootNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +407,13 @@ public class CreateManifestResourceName extends microsoft.build.tasks.TaskExtens
         }
     }
 
+    /**
+     * Sets the value of the .NET property RootNamespace.
+     *
+     * @param RootNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace" target="_top">.NET documentation</a>
+     */
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

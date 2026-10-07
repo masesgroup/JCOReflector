@@ -102,7 +102,10 @@ public class DispatchContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DispatchContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class DispatchContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.-ctor" target="_top">.NET documentation</a>
+     */
     public DispatchContext() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class DispatchContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ResponseMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.ResponseMessage" target="_top">.NET documentation</a>
+     */
     public RequestSecurityTokenResponse getResponseMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseMessage.
+     *
+     * @param ResponseMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.ResponseMessage" target="_top">.NET documentation</a>
+     */
     public void setResponseMessage(RequestSecurityTokenResponse ResponseMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +215,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.RequestMessage" target="_top">.NET documentation</a>
+     */
     public WSTrustMessage getRequestMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +237,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestMessage.
+     *
+     * @param RequestMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.RequestMessage" target="_top">.NET documentation</a>
+     */
     public void setRequestMessage(WSTrustMessage RequestMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +254,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SecurityTokenService.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.SecurityTokenService" target="_top">.NET documentation</a>
+     */
     public SecurityTokenService getSecurityTokenService() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +276,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SecurityTokenService.
+     *
+     * @param SecurityTokenService the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.SecurityTokenService" target="_top">.NET documentation</a>
+     */
     public void setSecurityTokenService(SecurityTokenService SecurityTokenService) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +293,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Principal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.Principal" target="_top">.NET documentation</a>
+     */
     public ClaimsPrincipal getPrincipal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +315,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Principal.
+     *
+     * @param Principal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.Principal" target="_top">.NET documentation</a>
+     */
     public void setPrincipal(ClaimsPrincipal Principal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +332,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.RequestAction" target="_top">.NET documentation</a>
+     */
     public java.lang.String getRequestAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +353,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestAction.
+     *
+     * @param RequestAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.RequestAction" target="_top">.NET documentation</a>
+     */
     public void setRequestAction(java.lang.String RequestAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +370,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResponseAction.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.ResponseAction" target="_top">.NET documentation</a>
+     */
     public java.lang.String getResponseAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +391,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ResponseAction.
+     *
+     * @param ResponseAction the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.ResponseAction" target="_top">.NET documentation</a>
+     */
     public void setResponseAction(java.lang.String ResponseAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +408,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TrustNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.TrustNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTrustNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +429,13 @@ public class DispatchContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TrustNamespace.
+     *
+     * @param TrustNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.DispatchContext.TrustNamespace" target="_top">.NET documentation</a>
+     */
     public void setTrustNamespace(java.lang.String TrustNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

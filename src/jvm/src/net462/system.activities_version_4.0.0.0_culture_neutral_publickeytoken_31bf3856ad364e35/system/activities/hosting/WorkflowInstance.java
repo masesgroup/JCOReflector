@@ -103,7 +103,10 @@ public class WorkflowInstance extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WorkflowInstance(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class WorkflowInstance extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WorkflowDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.WorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public Activity getWorkflowDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WorkflowDefinition.
+     *
+     * @param WorkflowDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.WorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public void setWorkflowDefinition(Activity WorkflowDefinition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,13 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostEnvironment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.HostEnvironment" target="_top">.NET documentation</a>
+     */
     public LocationReferenceEnvironment getHostEnvironment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +224,23 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HostEnvironment.
+     *
+     * @param HostEnvironment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.HostEnvironment" target="_top">.NET documentation</a>
+     */
     public void setHostEnvironment(LocationReferenceEnvironment HostEnvironment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +251,13 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DefinitionIdentity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.DefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public WorkflowIdentity getDefinitionIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +273,13 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DefinitionIdentity.
+     *
+     * @param DefinitionIdentity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.DefinitionIdentity" target="_top">.NET documentation</a>
+     */
     public void setDefinitionIdentity(WorkflowIdentity DefinitionIdentity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +290,13 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Id.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.Id" target="_top">.NET documentation</a>
+     */
     public Guid getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +312,13 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SynchronizationContext.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.SynchronizationContext" target="_top">.NET documentation</a>
+     */
     public SynchronizationContext getSynchronizationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +334,23 @@ public class WorkflowInstance extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SynchronizationContext.
+     *
+     * @param SynchronizationContext the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.WorkflowInstance.SynchronizationContext" target="_top">.NET documentation</a>
+     */
     public void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class VirtualizationCacheLength extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VirtualizationCacheLength(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class VirtualizationCacheLength extends system.ValueType  {
     public VirtualizationCacheLength() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheBeforeViewport the argument of type {@code double}
+     * @param cacheAfterViewport the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.VirtualizationCacheLength.-ctor" target="_top">.NET documentation</a>
+     */
     public VirtualizationCacheLength(double cacheBeforeViewport, double cacheAfterViewport) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +179,21 @@ public class VirtualizationCacheLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param cacheBeforeAndAfterViewport the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.VirtualizationCacheLength.-ctor" target="_top">.NET documentation</a>
+     */
     public VirtualizationCacheLength(double cacheBeforeAndAfterViewport) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +209,14 @@ public class VirtualizationCacheLength extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param cacheLength the argument of type {@code VirtualizationCacheLength}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.VirtualizationCacheLength.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(VirtualizationCacheLength cacheLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +235,13 @@ public class VirtualizationCacheLength extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CacheAfterViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.VirtualizationCacheLength.CacheAfterViewport" target="_top">.NET documentation</a>
+     */
     public double getCacheAfterViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +282,13 @@ public class VirtualizationCacheLength extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CacheBeforeViewport.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.VirtualizationCacheLength.CacheBeforeViewport" target="_top">.NET documentation</a>
+     */
     public double getCacheBeforeViewport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

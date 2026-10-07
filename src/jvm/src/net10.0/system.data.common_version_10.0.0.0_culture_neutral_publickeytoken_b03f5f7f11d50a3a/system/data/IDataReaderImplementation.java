@@ -109,7 +109,10 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDataReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBoolean.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetBoolean" target="_top">.NET documentation</a>
+     */
     public boolean GetBoolean(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member IsDBNull.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.IsDBNull" target="_top">.NET documentation</a>
+     */
     public boolean IsDBNull(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member NextResult.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.NextResult" target="_top">.NET documentation</a>
+     */
     public boolean NextResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +219,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member Read.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.Read" target="_top">.NET documentation</a>
+     */
     public boolean Read() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +240,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetByte.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetByte" target="_top">.NET documentation</a>
+     */
     public byte GetByte(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +288,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetChar.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetChar" target="_top">.NET documentation</a>
+     */
     public char GetChar(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -261,6 +310,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetDouble.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetDouble" target="_top">.NET documentation</a>
+     */
     public double GetDouble(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +358,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt16.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetInt16" target="_top">.NET documentation</a>
+     */
     public short GetInt16(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +406,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt32.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetInt32" target="_top">.NET documentation</a>
+     */
     public int GetInt32(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +454,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetOrdinal.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetOrdinal" target="_top">.NET documentation</a>
+     */
     public int GetOrdinal(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +502,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetValues.
+     *
+     * @param values the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetValues" target="_top">.NET documentation</a>
+     */
     public int GetValues(NetObject[] values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,6 +550,18 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param i the argument of type {@code int}
+     * @param fieldOffset the argument of type {@code long}
+     * @param buffer the argument of type {@code byte[]}
+     * @param bufferoffset the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetBytes" target="_top">.NET documentation</a>
+     */
     public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +602,18 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetBytes.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code long}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetBytes" target="_top">.NET documentation</a>
+     */
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -541,6 +654,18 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param i the argument of type {@code int}
+     * @param fieldoffset the argument of type {@code long}
+     * @param buffer the argument of type {@code char[]}
+     * @param bufferoffset the argument of type {@code int}
+     * @param length the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetChars" target="_top">.NET documentation</a>
+     */
     public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +706,18 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetChars.
+     *
+     * @param dupParam0 the argument of type {@code int}
+     * @param dupParam1 the argument of type {@code long}
+     * @param dupParam2 the argument of type {@code JCORefOut}
+     * @param dupParam3 the argument of type {@code int}
+     * @param dupParam4 the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetChars" target="_top">.NET documentation</a>
+     */
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -621,6 +758,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetInt64.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetInt64" target="_top">.NET documentation</a>
+     */
     public long GetInt64(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -661,6 +806,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetFloat.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetFloat" target="_top">.NET documentation</a>
+     */
     public Single GetFloat(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -676,6 +829,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetSchemaTable.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetSchemaTable" target="_top">.NET documentation</a>
+     */
     public DataTable GetSchemaTable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -691,6 +851,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetData" target="_top">.NET documentation</a>
+     */
     public IDataReader GetData(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -706,6 +874,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetDateTime.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetDateTime" target="_top">.NET documentation</a>
+     */
     public DateTime GetDateTime(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -721,6 +897,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetDecimal.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetDecimal" target="_top">.NET documentation</a>
+     */
     public Decimal GetDecimal(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -736,6 +920,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetGuid.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetGuid" target="_top">.NET documentation</a>
+     */
     public Guid GetGuid(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -751,6 +943,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetValue.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetValue(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -766,6 +966,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataTypeName.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetDataTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetDataTypeName(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -780,6 +988,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetName.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetName(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -794,6 +1010,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetString.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetString" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetString(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -808,6 +1032,14 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member GetFieldType.
+     *
+     * @param i the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.GetFieldType" target="_top">.NET documentation</a>
+     */
     public NetType GetFieldType(int i) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -823,6 +1055,12 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -833,6 +1071,12 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -847,6 +1091,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsClosed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.IsClosed" target="_top">.NET documentation</a>
+     */
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -861,6 +1112,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Gets the value of the .NET property Depth.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.Depth" target="_top">.NET documentation</a>
+     */
     public int getDepth() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -901,6 +1159,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Gets the value of the .NET property FieldCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.FieldCount" target="_top">.NET documentation</a>
+     */
     public int getFieldCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -941,6 +1206,13 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
+    /**
+     * Gets the value of the .NET property RecordsAffected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.IDataReader.RecordsAffected" target="_top">.NET documentation</a>
+     */
     public int getRecordsAffected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

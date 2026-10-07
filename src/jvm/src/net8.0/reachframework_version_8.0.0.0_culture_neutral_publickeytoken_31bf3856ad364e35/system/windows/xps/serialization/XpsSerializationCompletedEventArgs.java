@@ -99,7 +99,10 @@ public class XpsSerializationCompletedEventArgs extends system.componentmodel.As
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XpsSerializationCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,15 @@ public class XpsSerializationCompletedEventArgs extends system.componentmodel.As
     public XpsSerializationCompletedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param canceled the argument of type {@code boolean}
+     * @param state the argument of type {@code NetObject}
+     * @param exception the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationCompletedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public XpsSerializationCompletedEventArgs(boolean canceled, NetObject state, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file

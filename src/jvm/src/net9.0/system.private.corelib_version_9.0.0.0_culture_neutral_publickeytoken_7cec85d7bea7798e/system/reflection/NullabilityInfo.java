@@ -100,7 +100,10 @@ public class NullabilityInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NullabilityInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class NullabilityInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ElementType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.ElementType" target="_top">.NET documentation</a>
+     */
     public NullabilityInfo getElementType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +184,13 @@ public class NullabilityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GenericTypeArguments.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.GenericTypeArguments" target="_top">.NET documentation</a>
+     */
     public final NullabilityInfo[] getGenericTypeArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +212,13 @@ public class NullabilityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReadState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.ReadState" target="_top">.NET documentation</a>
+     */
     public NullabilityState getReadState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +234,13 @@ public class NullabilityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ReadState.
+     *
+     * @param ReadState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.ReadState" target="_top">.NET documentation</a>
+     */
     public void setReadState(NullabilityState ReadState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +251,13 @@ public class NullabilityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.WriteState" target="_top">.NET documentation</a>
+     */
     public NullabilityState getWriteState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +273,13 @@ public class NullabilityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WriteState.
+     *
+     * @param WriteState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.WriteState" target="_top">.NET documentation</a>
+     */
     public void setWriteState(NullabilityState WriteState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +290,13 @@ public class NullabilityInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.NullabilityInfo.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

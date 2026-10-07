@@ -100,7 +100,10 @@ public class LocalizedEntryCollection_1<T extends IJCOBridgeReflected> extends s
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LocalizedEntryCollection_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,13 @@ public class LocalizedEntryCollection_1<T extends IJCOBridgeReflected> extends s
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.LocalizedEntryCollection-1.-ctor" target="_top">.NET documentation</a>
+     */
     public LocalizedEntryCollection_1() throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file

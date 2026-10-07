@@ -102,7 +102,10 @@ public class ScrollViewerAutomationPeer extends system.windows.automation.peers.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ScrollViewerAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,19 @@ public class ScrollViewerAutomationPeer extends system.windows.automation.peers.
     public ScrollViewerAutomationPeer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ScrollViewer}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ScrollViewerAutomationPeer.-ctor" target="_top">.NET documentation</a>
+     */
     public ScrollViewerAutomationPeer(ScrollViewer owner) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,24 @@ public class ScrollViewerAutomationPeer extends system.windows.automation.peers.
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPattern.
+     *
+     * @param patternInterface the argument of type {@code PatternInterface}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ScrollViewerAutomationPeer.GetPattern" target="_top">.NET documentation</a>
+     */
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,8 +219,13 @@ public class ScrollViewerAutomationPeer extends system.windows.automation.peers.
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIScrollProvider method available in IScrollProvider to obtain an object with an invocable method
+     *
+     * @param horizontalAmount the argument of type {@code ScrollAmount}
+     * @param verticalAmount the argument of type {@code ScrollAmount}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.Scroll" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void Scroll(ScrollAmount horizontalAmount, ScrollAmount verticalAmount) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollProvider to obtain the full interface.");
     }
@@ -194,8 +233,13 @@ public class ScrollViewerAutomationPeer extends system.windows.automation.peers.
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIScrollProvider method available in IScrollProvider to obtain an object with an invocable method
+     *
+     * @param horizontalPercent the argument of type {@code double}
+     * @param verticalPercent the argument of type {@code double}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void SetScrollPercent(double horizontalPercent, double verticalPercent) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollProvider to obtain the full interface.");
     }

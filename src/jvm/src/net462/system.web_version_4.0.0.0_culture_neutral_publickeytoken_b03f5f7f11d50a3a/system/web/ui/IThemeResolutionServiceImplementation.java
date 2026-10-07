@@ -99,7 +99,10 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IThemeResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetStylesheetThemeProvider.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IThemeResolutionService.GetStylesheetThemeProvider" target="_top">.NET documentation</a>
+     */
     public ThemeProvider GetStylesheetThemeProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetThemeProvider.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IThemeResolutionService.GetThemeProvider" target="_top">.NET documentation</a>
+     */
     public ThemeProvider GetThemeProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +188,13 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllThemeProviders.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IThemeResolutionService.GetAllThemeProviders" target="_top">.NET documentation</a>
+     */
     public ThemeProvider[] GetAllThemeProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

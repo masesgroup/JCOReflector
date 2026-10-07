@@ -99,7 +99,10 @@ public class ClerkInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClerkInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class ClerkInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Clerk.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Clerk" target="_top">.NET documentation</a>
+     */
     public Clerk getClerk() throws Throwable, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +184,13 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.ActivityId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getActivityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +205,13 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Compensator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Compensator" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCompensator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +226,13 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +247,13 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InstanceId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.InstanceId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +268,13 @@ public class ClerkInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransactionUOW.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkInfo.TransactionUOW" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTransactionUOW() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

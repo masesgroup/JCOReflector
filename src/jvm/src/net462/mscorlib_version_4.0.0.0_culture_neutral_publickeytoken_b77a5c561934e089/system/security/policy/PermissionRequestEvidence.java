@@ -101,7 +101,10 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PermissionRequestEvidence(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,17 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
     public PermissionRequestEvidence() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param request the argument of type {@code PermissionSet}
+     * @param optional the argument of type {@code PermissionSet}
+     * @param denied the argument of type {@code PermissionSet}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PermissionRequestEvidence.-ctor" target="_top">.NET documentation</a>
+     */
     public PermissionRequestEvidence(PermissionSet request, PermissionSet optional, PermissionSet denied) throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +180,15 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PermissionRequestEvidence.Clone" target="_top">.NET documentation</a>
+     */
     public EvidenceBase Clone() throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +204,15 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
         }
     }
 
+    /**
+     * Invokes the .NET member Copy.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PermissionRequestEvidence.Copy" target="_top">.NET documentation</a>
+     */
     public PermissionRequestEvidence Copy() throws Throwable, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +232,13 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DeniedPermissions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PermissionRequestEvidence.DeniedPermissions" target="_top">.NET documentation</a>
+     */
     public PermissionSet getDeniedPermissions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +254,13 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property OptionalPermissions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PermissionRequestEvidence.OptionalPermissions" target="_top">.NET documentation</a>
+     */
     public PermissionSet getOptionalPermissions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +276,13 @@ public class PermissionRequestEvidence extends system.security.policy.EvidenceBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestedPermissions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.PermissionRequestEvidence.RequestedPermissions" target="_top">.NET documentation</a>
+     */
     public PermissionSet getRequestedPermissions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

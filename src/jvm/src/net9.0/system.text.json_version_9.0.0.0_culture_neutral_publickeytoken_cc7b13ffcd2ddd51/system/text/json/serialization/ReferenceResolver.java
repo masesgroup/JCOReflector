@@ -98,7 +98,10 @@ public class ReferenceResolver extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReferenceResolver(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class ReferenceResolver extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ResolveReference.
+     *
+     * @param referenceId the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceResolver.ResolveReference" target="_top">.NET documentation</a>
+     */
     public NetObject ResolveReference(java.lang.String referenceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +177,15 @@ public class ReferenceResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetReference.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param alreadyExists the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicBoolean>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceResolver.GetReference" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetReference(NetObject value, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> alreadyExists) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +200,14 @@ public class ReferenceResolver extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddReference.
+     *
+     * @param referenceId the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.ReferenceResolver.AddReference" target="_top">.NET documentation</a>
+     */
     public void AddReference(java.lang.String referenceId, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

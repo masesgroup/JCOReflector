@@ -100,7 +100,10 @@ public class ClassInterfaceAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClassInterfaceAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class ClassInterfaceAttribute extends system.Attribute  {
     public ClassInterfaceAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param classInterfaceType the argument of type {@code short}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ClassInterfaceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ClassInterfaceAttribute(short classInterfaceType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,13 @@ public class ClassInterfaceAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param classInterfaceType the argument of type {@code ClassInterfaceType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ClassInterfaceAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ClassInterfaceAttribute(ClassInterfaceType classInterfaceType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +196,13 @@ public class ClassInterfaceAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ClassInterfaceAttribute.Value" target="_top">.NET documentation</a>
+     */
     public ClassInterfaceType getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class MulticastOption extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MulticastOption(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class MulticastOption extends NetObject  {
     public MulticastOption() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param group the argument of type {@code IPAddress}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.-ctor" target="_top">.NET documentation</a>
+     */
     public MulticastOption(IPAddress group) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +170,16 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param group the argument of type {@code IPAddress}
+     * @param interfaceIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.-ctor" target="_top">.NET documentation</a>
+     */
     public MulticastOption(IPAddress group, int interfaceIndex) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +190,15 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param group the argument of type {@code IPAddress}
+     * @param mcint the argument of type {@code IPAddress}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.-ctor" target="_top">.NET documentation</a>
+     */
     public MulticastOption(IPAddress group, IPAddress mcint) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -188,6 +218,13 @@ public class MulticastOption extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InterfaceIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.InterfaceIndex" target="_top">.NET documentation</a>
+     */
     public int getInterfaceIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +265,14 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InterfaceIndex.
+     *
+     * @param InterfaceIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.InterfaceIndex" target="_top">.NET documentation</a>
+     */
     public void setInterfaceIndex(int InterfaceIndex) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +283,13 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Group.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.Group" target="_top">.NET documentation</a>
+     */
     public IPAddress getGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +305,13 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Group.
+     *
+     * @param Group the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.Group" target="_top">.NET documentation</a>
+     */
     public void setGroup(IPAddress Group) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +322,13 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.LocalAddress" target="_top">.NET documentation</a>
+     */
     public IPAddress getLocalAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +344,13 @@ public class MulticastOption extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocalAddress.
+     *
+     * @param LocalAddress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.MulticastOption.LocalAddress" target="_top">.NET documentation</a>
+     */
     public void setLocalAddress(IPAddress LocalAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class ColorBlend extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColorBlend(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class ColorBlend extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.ColorBlend.-ctor" target="_top">.NET documentation</a>
+     */
     public ColorBlend() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class ColorBlend extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param count the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.ColorBlend.-ctor" target="_top">.NET documentation</a>
+     */
     public ColorBlend(int count) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +191,13 @@ public class ColorBlend extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Positions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.ColorBlend.Positions" target="_top">.NET documentation</a>
+     */
     public final Single[] getPositions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class ColorBlend extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Positions.
+     *
+     * @param Positions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.ColorBlend.Positions" target="_top">.NET documentation</a>
+     */
     public void setPositions(Single[] Positions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class ColorBlend extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Colors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.ColorBlend.Colors" target="_top">.NET documentation</a>
+     */
     public final Color[] getColors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +264,13 @@ public class ColorBlend extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Colors.
+     *
+     * @param Colors the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.ColorBlend.Colors" target="_top">.NET documentation</a>
+     */
     public void setColors(Color[] Colors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

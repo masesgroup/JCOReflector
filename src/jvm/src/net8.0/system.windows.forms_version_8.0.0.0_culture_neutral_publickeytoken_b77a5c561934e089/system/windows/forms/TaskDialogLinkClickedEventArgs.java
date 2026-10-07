@@ -99,7 +99,10 @@ public class TaskDialogLinkClickedEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TaskDialogLinkClickedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class TaskDialogLinkClickedEventArgs extends system.EventArgs  {
     public TaskDialogLinkClickedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param linkHref the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogLinkClickedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskDialogLinkClickedEventArgs(java.lang.String linkHref) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class TaskDialogLinkClickedEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LinkHref.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialogLinkClickedEventArgs.LinkHref" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLinkHref() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

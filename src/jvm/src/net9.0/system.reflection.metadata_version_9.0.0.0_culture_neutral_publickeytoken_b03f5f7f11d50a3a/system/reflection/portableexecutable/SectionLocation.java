@@ -99,7 +99,10 @@ public class SectionLocation extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SectionLocation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class SectionLocation extends system.ValueType  {
     public SectionLocation() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param relativeVirtualAddress the argument of type {@code int}
+     * @param pointerToRawData the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionLocation.-ctor" target="_top">.NET documentation</a>
+     */
     public SectionLocation(int relativeVirtualAddress, int pointerToRawData) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class SectionLocation extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PointerToRawData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionLocation.PointerToRawData" target="_top">.NET documentation</a>
+     */
     public int getPointerToRawData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +226,13 @@ public class SectionLocation extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelativeVirtualAddress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.SectionLocation.RelativeVirtualAddress" target="_top">.NET documentation</a>
+     */
     public int getRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

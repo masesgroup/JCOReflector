@@ -101,7 +101,10 @@ public class IAuthorizeRemotingConnectionImplementation extends NetObject implem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAuthorizeRemotingConnectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IAuthorizeRemotingConnectionImplementation extends NetObject implem
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsConnectingEndPointAuthorized.
+     *
+     * @param endPoint the argument of type {@code EndPoint}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingEndPointAuthorized" target="_top">.NET documentation</a>
+     */
     public boolean IsConnectingEndPointAuthorized(EndPoint endPoint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,14 @@ public class IAuthorizeRemotingConnectionImplementation extends NetObject implem
         }
     }
 
+    /**
+     * Invokes the .NET member IsConnectingIdentityAuthorized.
+     *
+     * @param identity the argument of type {@code IIdentity}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingIdentityAuthorized" target="_top">.NET documentation</a>
+     */
     public boolean IsConnectingIdentityAuthorized(IIdentity identity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

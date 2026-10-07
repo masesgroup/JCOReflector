@@ -104,7 +104,9 @@ public class HttpIOException extends system.io.IOException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public HttpIOException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,15 @@ public class HttpIOException extends system.io.IOException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param httpRequestError the argument of type {@code HttpRequestError}
+     * @param message the argument of type {@code java.lang.String}
+     * @param innerException the argument of type {@code NetException}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpIOException.-ctor" target="_top">.NET documentation</a>
+     */
     public HttpIOException(HttpRequestError httpRequestError, java.lang.String message, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +194,13 @@ public class HttpIOException extends system.io.IOException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HttpRequestError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpIOException.HttpRequestError" target="_top">.NET documentation</a>
+     */
     public HttpRequestError getHttpRequestError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

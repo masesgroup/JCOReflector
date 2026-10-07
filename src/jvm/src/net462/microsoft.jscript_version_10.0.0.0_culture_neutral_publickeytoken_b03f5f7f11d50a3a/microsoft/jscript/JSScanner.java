@@ -100,7 +100,10 @@ public class JSScanner extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JSScanner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,16 @@ public class JSScanner extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.-ctor" target="_top">.NET documentation</a>
+     */
     public JSScanner() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +170,17 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceContext the argument of type {@code Context}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.-ctor" target="_top">.NET documentation</a>
+     */
     public JSScanner(Context sourceContext) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +195,13 @@ public class JSScanner extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GotEndOfLine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GotEndOfLine" target="_top">.NET documentation</a>
+     */
     public boolean GotEndOfLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +216,14 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsKeyword.
+     *
+     * @param token the argument of type {@code JSToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.IsKeyword" target="_top">.NET documentation</a>
+     */
     public static boolean IsKeyword(JSToken token) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +238,14 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsOperator.
+     *
+     * @param token the argument of type {@code JSToken}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.IsOperator" target="_top">.NET documentation</a>
+     */
     public static boolean IsOperator(JSToken token) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -213,6 +260,13 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentLine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GetCurrentLine" target="_top">.NET documentation</a>
+     */
     public int GetCurrentLine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +307,14 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCurrentPosition.
+     *
+     * @param absolute the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GetCurrentPosition" target="_top">.NET documentation</a>
+     */
     public int GetCurrentPosition(boolean absolute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +355,13 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStartLinePosition.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GetStartLinePosition" target="_top">.NET documentation</a>
+     */
     public int GetStartLinePosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +402,26 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SkipMultiLineComment.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.SkipMultiLineComment" target="_top">.NET documentation</a>
+     */
     public int SkipMultiLineComment() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -373,6 +462,13 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSourceCode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GetSourceCode" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetSourceCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +483,13 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetStringLiteral.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GetStringLiteral" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetStringLiteral() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +504,30 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextToken.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws microsoft.jscript.vsa.JSVsaException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.GetNextToken" target="_top">.NET documentation</a>
+     */
     public void GetNextToken() throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile, system.InvalidOperationException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -411,6 +538,13 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAuthoringMode.
+     *
+     * @param mode the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.SetAuthoringMode" target="_top">.NET documentation</a>
+     */
     public void SetAuthoringMode(boolean mode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -421,6 +555,17 @@ public class JSScanner extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetSource.
+     *
+     * @param sourceContext the argument of type {@code Context}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSScanner.SetSource" target="_top">.NET documentation</a>
+     */
     public void SetSource(Context sourceContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

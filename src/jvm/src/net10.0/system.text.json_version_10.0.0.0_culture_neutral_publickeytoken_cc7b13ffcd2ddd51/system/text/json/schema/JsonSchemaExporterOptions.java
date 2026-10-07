@@ -100,7 +100,10 @@ public class JsonSchemaExporterOptions extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JsonSchemaExporterOptions(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class JsonSchemaExporterOptions extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions.-ctor" target="_top">.NET documentation</a>
+     */
     public JsonSchemaExporterOptions() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +174,13 @@ public class JsonSchemaExporterOptions extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TreatNullObliviousAsNonNullable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions.TreatNullObliviousAsNonNullable" target="_top">.NET documentation</a>
+     */
     public boolean getTreatNullObliviousAsNonNullable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +195,13 @@ public class JsonSchemaExporterOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TreatNullObliviousAsNonNullable.
+     *
+     * @param TreatNullObliviousAsNonNullable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions.TreatNullObliviousAsNonNullable" target="_top">.NET documentation</a>
+     */
     public void setTreatNullObliviousAsNonNullable(boolean TreatNullObliviousAsNonNullable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +212,13 @@ public class JsonSchemaExporterOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TransformSchemaNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions.TransformSchemaNode" target="_top">.NET documentation</a>
+     */
     public Func_3 getTransformSchemaNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +233,13 @@ public class JsonSchemaExporterOptions extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TransformSchemaNode.
+     *
+     * @param TransformSchemaNode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions.TransformSchemaNode" target="_top">.NET documentation</a>
+     */
     public void setTransformSchemaNode(Func_3 TransformSchemaNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +250,13 @@ public class JsonSchemaExporterOptions extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions.Default" target="_top">.NET documentation</a>
+     */
     public static JsonSchemaExporterOptions getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

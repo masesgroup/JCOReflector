@@ -100,7 +100,10 @@ public class IApplicationResourceStreamResolverImplementation extends NetObject 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IApplicationResourceStreamResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IApplicationResourceStreamResolverImplementation extends NetObject 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetApplicationResourceStream.
+     *
+     * @param relativeUri the argument of type {@code Uri}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.IApplicationResourceStreamResolver.GetApplicationResourceStream" target="_top">.NET documentation</a>
+     */
     public Stream GetApplicationResourceStream(Uri relativeUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

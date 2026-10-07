@@ -99,7 +99,10 @@ public class IContextPropertyImplementation extends NetObject implements IContex
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IContextPropertyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IContextPropertyImplementation extends NetObject implements IContex
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsNewContextOK.
+     *
+     * @param newCtx the argument of type {@code Context}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextProperty.IsNewContextOK" target="_top">.NET documentation</a>
+     */
     public boolean IsNewContextOK(Context newCtx) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -155,6 +166,13 @@ public class IContextPropertyImplementation extends NetObject implements IContex
         }
     }
 
+    /**
+     * Invokes the .NET member Freeze.
+     *
+     * @param newContext the argument of type {@code Context}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextProperty.Freeze" target="_top">.NET documentation</a>
+     */
     public void Freeze(Context newContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +187,13 @@ public class IContextPropertyImplementation extends NetObject implements IContex
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Contexts.IContextProperty.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

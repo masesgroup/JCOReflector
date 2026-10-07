@@ -104,7 +104,10 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SimpleModelBinderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,15 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
     public SimpleModelBinderProvider() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinderFactory the argument of type {@code Func_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.SimpleModelBinderProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public SimpleModelBinderProvider(NetType modelType, Func_1 modelBinderFactory) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +176,15 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param modelType the argument of type {@code NetType}
+     * @param modelBinder the argument of type {@code IModelBinder}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.SimpleModelBinderProvider.-ctor" target="_top">.NET documentation</a>
+     */
     public SimpleModelBinderProvider(NetType modelType, IModelBinder modelBinder) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +200,24 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBinder.
+     *
+     * @param modelBindingExecutionContext the argument of type {@code ModelBindingExecutionContext}
+     * @param bindingContext the argument of type {@code ModelBindingContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.SimpleModelBinderProvider.GetBinder" target="_top">.NET documentation</a>
+     */
     public IModelBinder GetBinder(ModelBindingExecutionContext modelBindingExecutionContext, ModelBindingContext bindingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +237,13 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SuppressPrefixCheck.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.SimpleModelBinderProvider.SuppressPrefixCheck" target="_top">.NET documentation</a>
+     */
     public boolean getSuppressPrefixCheck() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +258,13 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
         }
     }
 
+    /**
+     * Sets the value of the .NET property SuppressPrefixCheck.
+     *
+     * @param SuppressPrefixCheck the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.SimpleModelBinderProvider.SuppressPrefixCheck" target="_top">.NET documentation</a>
+     */
     public void setSuppressPrefixCheck(boolean SuppressPrefixCheck) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +275,13 @@ public class SimpleModelBinderProvider extends system.web.modelbinding.ModelBind
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.SimpleModelBinderProvider.ModelType" target="_top">.NET documentation</a>
+     */
     public NetType getModelType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

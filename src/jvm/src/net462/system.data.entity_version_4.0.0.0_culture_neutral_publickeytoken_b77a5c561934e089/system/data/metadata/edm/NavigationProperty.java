@@ -104,7 +104,10 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public NavigationProperty(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,15 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDependentProperties.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.GetDependentProperties" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetDependentProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +190,13 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FromEndMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.FromEndMember" target="_top">.NET documentation</a>
+     */
     public RelationshipEndMember getFromEndMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +212,13 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FromEndMember.
+     *
+     * @param FromEndMember the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.FromEndMember" target="_top">.NET documentation</a>
+     */
     public void setFromEndMember(RelationshipEndMember FromEndMember) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +229,13 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ToEndMember.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.ToEndMember" target="_top">.NET documentation</a>
+     */
     public RelationshipEndMember getToEndMember() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +251,13 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ToEndMember.
+     *
+     * @param ToEndMember the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.ToEndMember" target="_top">.NET documentation</a>
+     */
     public void setToEndMember(RelationshipEndMember ToEndMember) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +268,13 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RelationshipType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.RelationshipType" target="_top">.NET documentation</a>
+     */
     public RelationshipType getRelationshipType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +290,13 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RelationshipType.
+     *
+     * @param RelationshipType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.RelationshipType" target="_top">.NET documentation</a>
+     */
     public void setRelationshipType(RelationshipType RelationshipType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

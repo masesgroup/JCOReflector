@@ -108,7 +108,10 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypeInfo2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateInstance.
+     *
+     * @param pUnkOuter the argument of type {@code NetObject}
+     * @param riid the argument of type {@code JCORefOut<Guid>}
+     * @param ppvObj the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.CreateInstance" target="_top">.NET documentation</a>
+     */
     public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +172,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetContainingTypeLib.
+     *
+     * @param ppTLB the argument of type {@code JCORefOut<ITypeLib>}
+     * @param pIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetContainingTypeLib" target="_top">.NET documentation</a>
+     */
     public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +190,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetCustData.
+     *
+     * @param guid the argument of type {@code JCORefOut<Guid>}
+     * @param pVarVal the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData" target="_top">.NET documentation</a>
+     */
     public void GetCustData(JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +208,17 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocumentation.
+     *
+     * @param index the argument of type {@code int}
+     * @param strName the argument of type {@code JCORefOut}
+     * @param strDocString the argument of type {@code JCORefOut}
+     * @param dwHelpContext the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param strHelpFile the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation" target="_top">.NET documentation</a>
+     */
     public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +229,16 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetDocumentation2.
+     *
+     * @param memid the argument of type {@code int}
+     * @param pbstrHelpString the argument of type {@code JCORefOut}
+     * @param pdwHelpStringContext the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @param pbstrHelpStringDll the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2" target="_top">.NET documentation</a>
+     */
     public void GetDocumentation2(int memid, JCORefOut pbstrHelpString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +249,15 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFuncCustData.
+     *
+     * @param index the argument of type {@code int}
+     * @param guid the argument of type {@code JCORefOut<Guid>}
+     * @param pVarVal the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncCustData" target="_top">.NET documentation</a>
+     */
     public void GetFuncCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -210,6 +268,15 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetFuncIndexOfMemId.
+     *
+     * @param memid the argument of type {@code int}
+     * @param invKind the argument of type {@code INVOKEKIND}
+     * @param pFuncIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetFuncIndexOfMemId" target="_top">.NET documentation</a>
+     */
     public void GetFuncIndexOfMemId(int memid, INVOKEKIND invKind, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pFuncIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +287,15 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetIDsOfNames.
+     *
+     * @param rgszNames the argument of type {@code java.lang.String[]}
+     * @param cNames the argument of type {@code int}
+     * @param pMemId the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetIDsOfNames" target="_top">.NET documentation</a>
+     */
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +306,15 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImplTypeCustData.
+     *
+     * @param index the argument of type {@code int}
+     * @param guid the argument of type {@code JCORefOut<Guid>}
+     * @param pVarVal the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetImplTypeCustData" target="_top">.NET documentation</a>
+     */
     public void GetImplTypeCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +325,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetImplTypeFlags.
+     *
+     * @param index the argument of type {@code int}
+     * @param pImplTypeFlags the argument of type {@code JCORefOut<IMPLTYPEFLAGS>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetImplTypeFlags" target="_top">.NET documentation</a>
+     */
     public void GetImplTypeFlags(int index, JCORefOut<IMPLTYPEFLAGS> pImplTypeFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +343,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetMops.
+     *
+     * @param memid the argument of type {@code int}
+     * @param pBstrMops the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetMops" target="_top">.NET documentation</a>
+     */
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +361,16 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNames.
+     *
+     * @param memid the argument of type {@code int}
+     * @param rgBstrNames the argument of type {@code JCORefOut}
+     * @param cMaxNames the argument of type {@code int}
+     * @param pcNames the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetNames" target="_top">.NET documentation</a>
+     */
     public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +381,16 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetParamCustData.
+     *
+     * @param indexFunc the argument of type {@code int}
+     * @param indexParam the argument of type {@code int}
+     * @param guid the argument of type {@code JCORefOut<Guid>}
+     * @param pVarVal the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetParamCustData" target="_top">.NET documentation</a>
+     */
     public void GetParamCustData(int indexFunc, int indexParam, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +401,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRefTypeInfo.
+     *
+     * @param hRef the argument of type {@code int}
+     * @param ppTI the argument of type {@code JCORefOut<ITypeInfo>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetRefTypeInfo" target="_top">.NET documentation</a>
+     */
     public void GetRefTypeInfo(int hRef, JCORefOut<ITypeInfo> ppTI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +419,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRefTypeOfImplType.
+     *
+     * @param index the argument of type {@code int}
+     * @param href the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetRefTypeOfImplType" target="_top">.NET documentation</a>
+     */
     public void GetRefTypeOfImplType(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> href) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +437,13 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeComp.
+     *
+     * @param ppTComp the argument of type {@code JCORefOut<ITypeComp>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeComp" target="_top">.NET documentation</a>
+     */
     public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +454,13 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeFlags.
+     *
+     * @param pTypeFlags the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeFlags" target="_top">.NET documentation</a>
+     */
     public void GetTypeFlags(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pTypeFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +471,13 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTypeKind.
+     *
+     * @param pTypeKind the argument of type {@code JCORefOut<TYPEKIND>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetTypeKind" target="_top">.NET documentation</a>
+     */
     public void GetTypeKind(JCORefOut<TYPEKIND> pTypeKind) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +488,15 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetVarCustData.
+     *
+     * @param index the argument of type {@code int}
+     * @param guid the argument of type {@code JCORefOut<Guid>}
+     * @param pVarVal the argument of type {@code JCORefOut<NetObject>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetVarCustData" target="_top">.NET documentation</a>
+     */
     public void GetVarCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +507,14 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
+    /**
+     * Invokes the .NET member GetVarIndexOfMemId.
+     *
+     * @param memid the argument of type {@code int}
+     * @param pVarIndex the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetVarIndexOfMemId" target="_top">.NET documentation</a>
+     */
     public void GetVarIndexOfMemId(int memid, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pVarIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

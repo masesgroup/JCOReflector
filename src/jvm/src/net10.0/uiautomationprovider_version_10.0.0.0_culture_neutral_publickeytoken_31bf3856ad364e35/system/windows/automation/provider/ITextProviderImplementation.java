@@ -104,7 +104,10 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITextProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,14 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
 
     // Methods section
     
+    /**
+     * Invokes the .NET member RangeFromChild.
+     *
+     * @param childElement the argument of type {@code IRawElementProviderSimple}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextProvider.RangeFromChild" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider RangeFromChild(IRawElementProviderSimple childElement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +172,14 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         }
     }
 
+    /**
+     * Invokes the .NET member RangeFromPoint.
+     *
+     * @param screenLocation the argument of type {@code Point}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextProvider.RangeFromPoint" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider RangeFromPoint(Point screenLocation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +195,13 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         }
     }
 
+    /**
+     * Invokes the .NET member GetSelection.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextProvider.GetSelection" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider[] GetSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +223,13 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         }
     }
 
+    /**
+     * Invokes the .NET member GetVisibleRanges.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextProvider.GetVisibleRanges" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider[] GetVisibleRanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +255,13 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DocumentRange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextProvider.DocumentRange" target="_top">.NET documentation</a>
+     */
     public ITextRangeProvider getDocumentRange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +277,13 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportedTextSelection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.ITextProvider.SupportedTextSelection" target="_top">.NET documentation</a>
+     */
     public SupportedTextSelection getSupportedTextSelection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

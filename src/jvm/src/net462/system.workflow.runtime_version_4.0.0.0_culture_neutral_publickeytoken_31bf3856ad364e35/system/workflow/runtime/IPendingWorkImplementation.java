@@ -101,7 +101,10 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IPendingWorkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,14 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
 
     // Methods section
     
+    /**
+     * Invokes the .NET member MustCommit.
+     *
+     * @param items the argument of type {@code ICollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.IPendingWork.MustCommit" target="_top">.NET documentation</a>
+     */
     public boolean MustCommit(ICollection items) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +168,14 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
         }
     }
 
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @param transaction the argument of type {@code Transaction}
+     * @param items the argument of type {@code ICollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.IPendingWork.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit(Transaction transaction, ICollection items) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -167,6 +186,14 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
         }
     }
 
+    /**
+     * Invokes the .NET member Complete.
+     *
+     * @param succeeded the argument of type {@code boolean}
+     * @param items the argument of type {@code ICollection}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.IPendingWork.Complete" target="_top">.NET documentation</a>
+     */
     public void Complete(boolean succeeded, ICollection items) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

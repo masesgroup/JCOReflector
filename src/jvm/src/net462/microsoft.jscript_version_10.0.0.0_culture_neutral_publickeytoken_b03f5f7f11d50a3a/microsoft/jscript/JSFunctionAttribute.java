@@ -101,7 +101,10 @@ public class JSFunctionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public JSFunctionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,13 @@ public class JSFunctionAttribute extends system.Attribute  {
     public JSFunctionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code JSFunctionAttributeEnum}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFunctionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JSFunctionAttribute(JSFunctionAttributeEnum value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +171,14 @@ public class JSFunctionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code JSFunctionAttributeEnum}
+     * @param builtinFunction the argument of type {@code JSBuiltin}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFunctionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public JSFunctionAttribute(JSFunctionAttributeEnum value, JSBuiltin builtinFunction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +194,13 @@ public class JSFunctionAttribute extends system.Attribute  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAttributeValue.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.JSFunctionAttribute.GetAttributeValue" target="_top">.NET documentation</a>
+     */
     public JSFunctionAttributeEnum GetAttributeValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

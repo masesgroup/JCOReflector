@@ -101,7 +101,10 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IMenuEditorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
 
     // Methods section
     
+    /**
+     * Invokes the .NET member IsActive.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IMenuEditorService.IsActive" target="_top">.NET documentation</a>
+     */
     public boolean IsActive() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +167,14 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
 
+    /**
+     * Invokes the .NET member MessageFilter.
+     *
+     * @param m the argument of type {@code JCORefOut<Message>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IMenuEditorService.MessageFilter" target="_top">.NET documentation</a>
+     */
     public boolean MessageFilter(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +189,13 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
 
+    /**
+     * Invokes the .NET member GetMenu.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IMenuEditorService.GetMenu" target="_top">.NET documentation</a>
+     */
     public Menu GetMenu() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +211,13 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
 
+    /**
+     * Invokes the .NET member SetMenu.
+     *
+     * @param menu the argument of type {@code Menu}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IMenuEditorService.SetMenu" target="_top">.NET documentation</a>
+     */
     public void SetMenu(Menu menu) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +228,13 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
 
+    /**
+     * Invokes the .NET member SetSelection.
+     *
+     * @param item the argument of type {@code MenuItem}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.IMenuEditorService.SetSelection" target="_top">.NET documentation</a>
+     */
     public void SetSelection(MenuItem item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

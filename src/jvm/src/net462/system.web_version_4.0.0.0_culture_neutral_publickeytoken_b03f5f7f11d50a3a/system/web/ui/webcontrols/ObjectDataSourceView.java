@@ -113,7 +113,10 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ObjectDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -163,6 +166,17 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     public ObjectDataSourceView() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code ObjectDataSource}
+     * @param name the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.-ctor" target="_top">.NET documentation</a>
+     */
     public ObjectDataSourceView(ObjectDataSource owner, java.lang.String name, HttpContext context) throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +192,16 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Delete.
+     *
+     * @param keys the argument of type {@code IDictionary}
+     * @param oldValues the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.Delete" target="_top">.NET documentation</a>
+     */
     public int Delete(IDictionary keys, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +242,15 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param values the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.Insert" target="_top">.NET documentation</a>
+     */
     public int Insert(IDictionary values) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +291,17 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member Update.
+     *
+     * @param keys the argument of type {@code IDictionary}
+     * @param values the argument of type {@code IDictionary}
+     * @param oldValues the argument of type {@code IDictionary}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.Update" target="_top">.NET documentation</a>
+     */
     public int Update(IDictionary keys, IDictionary values, IDictionary oldValues) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +342,14 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member Select.
+     *
+     * @param arguments the argument of type {@code DataSourceSelectArguments}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.Select" target="_top">.NET documentation</a>
+     */
     public IEnumerable Select(DataSourceSelectArguments arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,8 +368,12 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.SaveViewState" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public NetObject SaveViewState() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
@@ -325,8 +381,12 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     *
+     * @param state the argument of type {@code NetObject}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.LoadViewState" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void LoadViewState(NetObject state) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
@@ -334,8 +394,11 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IStateManager.TrackViewState" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void TrackViewState() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
@@ -344,6 +407,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConvertNullToDBNull.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.ConvertNullToDBNull" target="_top">.NET documentation</a>
+     */
     public boolean getConvertNullToDBNull() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -358,6 +428,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConvertNullToDBNull.
+     *
+     * @param ConvertNullToDBNull the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.ConvertNullToDBNull" target="_top">.NET documentation</a>
+     */
     public void setConvertNullToDBNull(boolean ConvertNullToDBNull) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -368,6 +445,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EnablePaging.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.EnablePaging" target="_top">.NET documentation</a>
+     */
     public boolean getEnablePaging() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +466,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnablePaging.
+     *
+     * @param EnablePaging the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.EnablePaging" target="_top">.NET documentation</a>
+     */
     public void setEnablePaging(boolean EnablePaging) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +483,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataObjectTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.DataObjectTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDataObjectTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -406,6 +504,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataObjectTypeName.
+     *
+     * @param DataObjectTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.DataObjectTypeName" target="_top">.NET documentation</a>
+     */
     public void setDataObjectTypeName(java.lang.String DataObjectTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -416,6 +521,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +542,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeleteMethod.
+     *
+     * @param DeleteMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.DeleteMethod" target="_top">.NET documentation</a>
+     */
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +559,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.FilterExpression" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFilterExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +580,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FilterExpression.
+     *
+     * @param FilterExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.FilterExpression" target="_top">.NET documentation</a>
+     */
     public void setFilterExpression(java.lang.String FilterExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +597,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.InsertMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInsertMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -478,6 +618,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InsertMethod.
+     *
+     * @param InsertMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.InsertMethod" target="_top">.NET documentation</a>
+     */
     public void setInsertMethod(java.lang.String InsertMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +635,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MaximumRowsParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.MaximumRowsParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMaximumRowsParameterName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +656,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MaximumRowsParameterName.
+     *
+     * @param MaximumRowsParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.MaximumRowsParameterName" target="_top">.NET documentation</a>
+     */
     public void setMaximumRowsParameterName(java.lang.String MaximumRowsParameterName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +673,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OldValuesParameterFormatString.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.OldValuesParameterFormatString" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOldValuesParameterFormatString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -526,6 +694,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OldValuesParameterFormatString.
+     *
+     * @param OldValuesParameterFormatString the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.OldValuesParameterFormatString" target="_top">.NET documentation</a>
+     */
     public void setOldValuesParameterFormatString(java.lang.String OldValuesParameterFormatString) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +711,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectCountMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SelectCountMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectCountMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -550,6 +732,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectCountMethod.
+     *
+     * @param SelectCountMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SelectCountMethod" target="_top">.NET documentation</a>
+     */
     public void setSelectCountMethod(java.lang.String SelectCountMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +749,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SelectMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +770,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SelectMethod.
+     *
+     * @param SelectMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SelectMethod" target="_top">.NET documentation</a>
+     */
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -584,6 +787,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SortParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SortParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSortParameterName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +808,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SortParameterName.
+     *
+     * @param SortParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SortParameterName" target="_top">.NET documentation</a>
+     */
     public void setSortParameterName(java.lang.String SortParameterName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -608,6 +825,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StartRowIndexParameterName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.StartRowIndexParameterName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getStartRowIndexParameterName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +846,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property StartRowIndexParameterName.
+     *
+     * @param StartRowIndexParameterName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.StartRowIndexParameterName" target="_top">.NET documentation</a>
+     */
     public void setStartRowIndexParameterName(java.lang.String StartRowIndexParameterName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -632,6 +863,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -646,6 +884,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TypeName.
+     *
+     * @param TypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.TypeName" target="_top">.NET documentation</a>
+     */
     public void setTypeName(java.lang.String TypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -656,6 +901,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateMethod.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +922,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdateMethod.
+     *
+     * @param UpdateMethod the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.UpdateMethod" target="_top">.NET documentation</a>
+     */
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -680,6 +939,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConflictDetection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.ConflictDetection" target="_top">.NET documentation</a>
+     */
     public ConflictOptions getConflictDetection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -695,6 +961,14 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ConflictDetection.
+     *
+     * @param ConflictDetection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.ConflictDetection" target="_top">.NET documentation</a>
+     */
     public void setConflictDetection(ConflictOptions ConflictDetection) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -705,6 +979,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeleteParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.DeleteParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getDeleteParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -720,6 +1001,14 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FilterParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.FilterParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getFilterParameters() throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -735,6 +1024,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InsertParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.InsertParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getInsertParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -750,6 +1046,14 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SelectParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.SelectParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getSelectParameters() throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -765,6 +1069,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdateParameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.UpdateParameters" target="_top">.NET documentation</a>
+     */
     public ParameterCollection getUpdateParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -780,6 +1091,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ParsingCulture.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.ParsingCulture" target="_top">.NET documentation</a>
+     */
     public ParsingCulture getParsingCulture() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -795,6 +1113,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ParsingCulture.
+     *
+     * @param ParsingCulture the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceView.ParsingCulture" target="_top">.NET documentation</a>
+     */
     public void setParsingCulture(ParsingCulture ParsingCulture) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -810,6 +1135,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addObjectDisposing.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceDisposingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -820,6 +1152,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectDisposing.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceDisposingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectDisposing(ObjectDataSourceDisposingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -830,6 +1169,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addFiltering.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceFilteringEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addFiltering(ObjectDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -840,6 +1186,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeFiltering.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceFilteringEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeFiltering(ObjectDataSourceFilteringEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -850,6 +1203,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDeleting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -860,6 +1220,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDeleting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDeleting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -870,6 +1237,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addInserting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInserting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -880,6 +1254,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeInserting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInserting(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -890,6 +1271,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUpdating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -900,6 +1288,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUpdating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceMethodEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUpdating(ObjectDataSourceMethodEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -910,6 +1305,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addObjectCreated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectCreated(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -920,6 +1322,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectCreated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectCreated(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -930,6 +1339,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addObjectCreating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addObjectCreating(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -940,6 +1356,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeObjectCreating.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceObjectEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeObjectCreating(ObjectDataSourceObjectEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -950,6 +1373,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelecting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceSelectingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -960,6 +1390,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelecting.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceSelectingEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelecting(ObjectDataSourceSelectingEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -970,6 +1407,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addDeleted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -980,6 +1424,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeDeleted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeDeleted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -990,6 +1441,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addInserted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1000,6 +1458,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeInserted.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInserted(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1010,6 +1475,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addSelected.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addSelected(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1020,6 +1492,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeSelected.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeSelected(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1030,6 +1509,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUpdated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1040,6 +1526,13 @@ public class ObjectDataSourceView extends system.web.ui.DataSourceView  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUpdated.
+     *
+     * @param handler the argument of type {@code ObjectDataSourceStatusEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUpdated(ObjectDataSourceStatusEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

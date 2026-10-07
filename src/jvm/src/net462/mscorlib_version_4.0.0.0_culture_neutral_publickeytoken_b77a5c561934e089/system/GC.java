@@ -101,7 +101,10 @@ public class GC extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GC(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,16 @@ public class GC extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member TryStartNoGCRegion.
+     *
+     * @param totalSize the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.TryStartNoGCRegion" target="_top">.NET documentation</a>
+     */
     public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +181,17 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryStartNoGCRegion.
+     *
+     * @param totalSize the argument of type {@code long}
+     * @param disallowFullBlockingGC the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.TryStartNoGCRegion" target="_top">.NET documentation</a>
+     */
     public static boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +206,17 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryStartNoGCRegion.
+     *
+     * @param totalSize the argument of type {@code long}
+     * @param lohSize the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.TryStartNoGCRegion" target="_top">.NET documentation</a>
+     */
     public static boolean TryStartNoGCRegion(long totalSize, long lohSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -196,6 +231,18 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member TryStartNoGCRegion.
+     *
+     * @param totalSize the argument of type {@code long}
+     * @param lohSize the argument of type {@code long}
+     * @param disallowFullBlockingGC the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.TryStartNoGCRegion" target="_top">.NET documentation</a>
+     */
     public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -210,6 +257,15 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CollectionCount.
+     *
+     * @param generation the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.CollectionCount" target="_top">.NET documentation</a>
+     */
     public static int CollectionCount(int generation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +306,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGeneration.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.GetGeneration" target="_top">.NET documentation</a>
+     */
     public static int GetGeneration(NetObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -290,6 +354,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetGeneration.
+     *
+     * @param wo the argument of type {@code WeakReference}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.GetGeneration" target="_top">.NET documentation</a>
+     */
     public static int GetGeneration(WeakReference wo) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -330,6 +402,13 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetAllocatedBytesForCurrentThread.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.GetAllocatedBytesForCurrentThread" target="_top">.NET documentation</a>
+     */
     public static long GetAllocatedBytesForCurrentThread() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -370,6 +449,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTotalMemory.
+     *
+     * @param forceFullCollection the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.GetTotalMemory" target="_top">.NET documentation</a>
+     */
     public static long GetTotalMemory(boolean forceFullCollection) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -410,6 +497,13 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WaitForFullGCApproach.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.WaitForFullGCApproach" target="_top">.NET documentation</a>
+     */
     public static GCNotificationStatus WaitForFullGCApproach() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -425,6 +519,15 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WaitForFullGCApproach.
+     *
+     * @param millisecondsTimeout the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.WaitForFullGCApproach" target="_top">.NET documentation</a>
+     */
     public static GCNotificationStatus WaitForFullGCApproach(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -440,6 +543,13 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WaitForFullGCComplete.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.WaitForFullGCComplete" target="_top">.NET documentation</a>
+     */
     public static GCNotificationStatus WaitForFullGCComplete() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -455,6 +565,15 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WaitForFullGCComplete.
+     *
+     * @param millisecondsTimeout the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.WaitForFullGCComplete" target="_top">.NET documentation</a>
+     */
     public static GCNotificationStatus WaitForFullGCComplete(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -470,6 +589,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddMemoryPressure.
+     *
+     * @param bytesAllocated the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.AddMemoryPressure" target="_top">.NET documentation</a>
+     */
     public static void AddMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -480,6 +607,13 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CancelFullGCNotification.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.CancelFullGCNotification" target="_top">.NET documentation</a>
+     */
     public static void CancelFullGCNotification() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -490,6 +624,12 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Collect.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.Collect" target="_top">.NET documentation</a>
+     */
     public static void Collect() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -500,6 +640,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Collect.
+     *
+     * @param generation the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.Collect" target="_top">.NET documentation</a>
+     */
     public static void Collect(int generation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -510,6 +658,15 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Collect.
+     *
+     * @param generation the argument of type {@code int}
+     * @param mode the argument of type {@code GCCollectionMode}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.Collect" target="_top">.NET documentation</a>
+     */
     public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -520,6 +677,16 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Collect.
+     *
+     * @param generation the argument of type {@code int}
+     * @param mode the argument of type {@code GCCollectionMode}
+     * @param blocking the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.Collect" target="_top">.NET documentation</a>
+     */
     public static void Collect(int generation, GCCollectionMode mode, boolean blocking) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -530,6 +697,17 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Collect.
+     *
+     * @param generation the argument of type {@code int}
+     * @param mode the argument of type {@code GCCollectionMode}
+     * @param blocking the argument of type {@code boolean}
+     * @param compacting the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.Collect" target="_top">.NET documentation</a>
+     */
     public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -540,6 +718,13 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EndNoGCRegion.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.EndNoGCRegion" target="_top">.NET documentation</a>
+     */
     public static void EndNoGCRegion() throws Throwable, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -550,6 +735,13 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member KeepAlive.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.KeepAlive" target="_top">.NET documentation</a>
+     */
     public static void KeepAlive(NetObject obj) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -560,6 +752,25 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterForFullGCNotification.
+     *
+     * @param maxGenerationThreshold the argument of type {@code int}
+     * @param largeObjectHeapThreshold the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.RegisterForFullGCNotification" target="_top">.NET documentation</a>
+     */
     public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -570,6 +781,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveMemoryPressure.
+     *
+     * @param bytesAllocated the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.RemoveMemoryPressure" target="_top">.NET documentation</a>
+     */
     public static void RemoveMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -580,6 +799,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ReRegisterForFinalize.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.ReRegisterForFinalize" target="_top">.NET documentation</a>
+     */
     public static void ReRegisterForFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -590,6 +817,14 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SuppressFinalize.
+     *
+     * @param obj the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.SuppressFinalize" target="_top">.NET documentation</a>
+     */
     public static void SuppressFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -600,6 +835,12 @@ public class GC extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member WaitForPendingFinalizers.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.WaitForPendingFinalizers" target="_top">.NET documentation</a>
+     */
     public static void WaitForPendingFinalizers() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -614,6 +855,13 @@ public class GC extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxGeneration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.GC.MaxGeneration" target="_top">.NET documentation</a>
+     */
     public static int getMaxGeneration() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

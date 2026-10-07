@@ -100,7 +100,10 @@ public class ICustomFormatterImplementation extends NetObject implements ICustom
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ICustomFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,16 @@ public class ICustomFormatterImplementation extends NetObject implements ICustom
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Format.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param arg the argument of type {@code NetObject}
+     * @param formatProvider the argument of type {@code IFormatProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ICustomFormatter.Format" target="_top">.NET documentation</a>
+     */
     public java.lang.String Format(java.lang.String format, NetObject arg, IFormatProvider formatProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

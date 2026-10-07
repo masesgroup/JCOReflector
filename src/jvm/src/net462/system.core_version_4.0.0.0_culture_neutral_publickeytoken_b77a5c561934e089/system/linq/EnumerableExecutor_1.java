@@ -100,7 +100,10 @@ public class EnumerableExecutor_1<T extends IJCOBridgeReflected> extends system.
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EnumerableExecutor_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class EnumerableExecutor_1<T extends IJCOBridgeReflected> extends system.
     public EnumerableExecutor_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param expression the argument of type {@code Expression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.EnumerableExecutor-1.-ctor" target="_top">.NET documentation</a>
+     */
     public EnumerableExecutor_1(Expression expression) throws Throwable {
         try {
             // add reference to assemblyName.dll file

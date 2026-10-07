@@ -103,7 +103,10 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartConnectionsCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,16 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
     public WebPartConnectionsCancelEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code WebPart}
+     * @param providerConnectionPoint the argument of type {@code ProviderConnectionPoint}
+     * @param consumer the argument of type {@code WebPart}
+     * @param consumerConnectionPoint the argument of type {@code ConsumerConnectionPoint}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartConnectionsCancelEventArgs(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +176,17 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param provider the argument of type {@code WebPart}
+     * @param providerConnectionPoint the argument of type {@code ProviderConnectionPoint}
+     * @param consumer the argument of type {@code WebPart}
+     * @param consumerConnectionPoint the argument of type {@code ConsumerConnectionPoint}
+     * @param connection the argument of type {@code WebPartConnection}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartConnectionsCancelEventArgs(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint, WebPartConnection connection) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +206,13 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConsumerConnectionPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.ConsumerConnectionPoint" target="_top">.NET documentation</a>
+     */
     public ConsumerConnectionPoint getConsumerConnectionPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +228,13 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProviderConnectionPoint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.ProviderConnectionPoint" target="_top">.NET documentation</a>
+     */
     public ProviderConnectionPoint getProviderConnectionPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +250,13 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
         }
     }
 
+    /**
+     * Gets the value of the .NET property Consumer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.Consumer" target="_top">.NET documentation</a>
+     */
     public WebPart getConsumer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +272,13 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
         }
     }
 
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.Provider" target="_top">.NET documentation</a>
+     */
     public WebPart getProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +294,13 @@ public class WebPartConnectionsCancelEventArgs extends system.componentmodel.Can
         }
     }
 
+    /**
+     * Gets the value of the .NET property Connection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartConnectionsCancelEventArgs.Connection" target="_top">.NET documentation</a>
+     */
     public WebPartConnection getConnection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

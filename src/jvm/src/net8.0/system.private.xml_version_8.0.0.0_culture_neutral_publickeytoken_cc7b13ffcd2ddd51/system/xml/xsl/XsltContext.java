@@ -105,7 +105,10 @@ public class XsltContext extends system.xml.XmlNamespaceManager  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XsltContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class XsltContext extends system.xml.XmlNamespaceManager  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member PreserveWhitespace.
+     *
+     * @param node the argument of type {@code XPathNavigator}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltContext.PreserveWhitespace" target="_top">.NET documentation</a>
+     */
     public boolean PreserveWhitespace(XPathNavigator node) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,15 @@ public class XsltContext extends system.xml.XmlNamespaceManager  {
         }
     }
 
+    /**
+     * Invokes the .NET member CompareDocument.
+     *
+     * @param baseUri the argument of type {@code java.lang.String}
+     * @param nextbaseUri the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltContext.CompareDocument" target="_top">.NET documentation</a>
+     */
     public int CompareDocument(java.lang.String baseUri, java.lang.String nextbaseUri) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +232,16 @@ public class XsltContext extends system.xml.XmlNamespaceManager  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveFunction.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @param ArgTypes the argument of type {@code XPathResultType[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltContext.ResolveFunction" target="_top">.NET documentation</a>
+     */
     public IXsltContextFunction ResolveFunction(java.lang.String prefix, java.lang.String name, XPathResultType[] ArgTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +257,15 @@ public class XsltContext extends system.xml.XmlNamespaceManager  {
         }
     }
 
+    /**
+     * Invokes the .NET member ResolveVariable.
+     *
+     * @param prefix the argument of type {@code java.lang.String}
+     * @param name the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltContext.ResolveVariable" target="_top">.NET documentation</a>
+     */
     public IXsltContextVariable ResolveVariable(java.lang.String prefix, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +285,13 @@ public class XsltContext extends system.xml.XmlNamespaceManager  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Whitespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.XsltContext.Whitespace" target="_top">.NET documentation</a>
+     */
     public boolean getWhitespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

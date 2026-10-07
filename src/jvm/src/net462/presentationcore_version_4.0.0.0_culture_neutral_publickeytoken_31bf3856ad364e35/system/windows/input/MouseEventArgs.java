@@ -105,7 +105,10 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MouseEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
     public MouseEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MouseEventArgs(MouseDevice mouse, int timestamp) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +177,16 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param stylusDevice the argument of type {@code StylusDevice}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MouseEventArgs(MouseDevice mouse, int timestamp, StylusDevice stylusDevice) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +202,23 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPosition.
+     *
+     * @param relativeTo the argument of type {@code IInputElement}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.GetPosition" target="_top">.NET documentation</a>
+     */
     public Point GetPosition(IInputElement relativeTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +238,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LeftButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.LeftButton" target="_top">.NET documentation</a>
+     */
     public MouseButtonState getLeftButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +260,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MiddleButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.MiddleButton" target="_top">.NET documentation</a>
+     */
     public MouseButtonState getMiddleButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +282,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RightButton.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.RightButton" target="_top">.NET documentation</a>
+     */
     public MouseButtonState getRightButton() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +304,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XButton1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.XButton1" target="_top">.NET documentation</a>
+     */
     public MouseButtonState getXButton1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +326,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XButton2.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.XButton2" target="_top">.NET documentation</a>
+     */
     public MouseButtonState getXButton2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +348,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseDevice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.MouseDevice" target="_top">.NET documentation</a>
+     */
     public MouseDevice getMouseDevice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +370,13 @@ public class MouseEventArgs extends system.windows.input.InputEventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property StylusDevice.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseEventArgs.StylusDevice" target="_top">.NET documentation</a>
+     */
     public StylusDevice getStylusDevice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.-ctor" target="_top">.NET documentation</a>
+     */
     public PropertyDefinition() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,13 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.Attributes" target="_top">.NET documentation</a>
+     */
     public IList_1 getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +198,13 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Modifier.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.Modifier" target="_top">.NET documentation</a>
+     */
     public java.lang.String getModifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +219,13 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Modifier.
+     *
+     * @param Modifier the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.Modifier" target="_top">.NET documentation</a>
+     */
     public void setModifier(java.lang.String Modifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.Type" target="_top">.NET documentation</a>
+     */
     public XamlType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +258,13 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
         }
     }
 
+    /**
+     * Sets the value of the .NET property Type.
+     *
+     * @param Type the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.Type" target="_top">.NET documentation</a>
+     */
     public void setType(XamlType Type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

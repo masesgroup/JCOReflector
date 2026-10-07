@@ -52,5 +52,11 @@ import system.windows.forms.BindingManagerDataErrorEventArgs;
  * @version 2.0.0.0
  */
 public interface IBindingManagerDataErrorEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Forms.BindingManagerDataErrorEventArgs}
+     */
     public void Invoke(NetObject sender, BindingManagerDataErrorEventArgs e);
 }

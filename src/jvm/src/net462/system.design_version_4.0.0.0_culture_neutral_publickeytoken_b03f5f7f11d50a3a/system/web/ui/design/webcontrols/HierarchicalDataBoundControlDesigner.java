@@ -103,7 +103,10 @@ public class HierarchicalDataBoundControlDesigner extends system.web.ui.design.w
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HierarchicalDataBoundControlDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class HierarchicalDataBoundControlDesigner extends system.web.ui.design.w
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.-ctor" target="_top">.NET documentation</a>
+     */
     public HierarchicalDataBoundControlDesigner() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class HierarchicalDataBoundControlDesigner extends system.web.ui.design.w
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesignerView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DesignerView" target="_top">.NET documentation</a>
+     */
     public DesignerHierarchicalDataSourceView getDesignerView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class HierarchicalDataBoundControlDesigner extends system.web.ui.design.w
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataSourceDesigner.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataBoundControlDesigner.DataSourceDesigner" target="_top">.NET documentation</a>
+     */
     public IHierarchicalDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

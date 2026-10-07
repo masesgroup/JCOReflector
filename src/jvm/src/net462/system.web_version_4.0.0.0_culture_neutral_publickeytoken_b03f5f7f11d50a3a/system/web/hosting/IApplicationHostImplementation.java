@@ -100,7 +100,10 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IApplicationHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetPhysicalPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationHost.GetPhysicalPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetPhysicalPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
 
+    /**
+     * Invokes the .NET member GetSiteID.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationHost.GetSiteID" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetSiteID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +187,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
 
+    /**
+     * Invokes the .NET member GetSiteName.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationHost.GetSiteName" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetSiteName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +208,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
 
+    /**
+     * Invokes the .NET member GetVirtualPath.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationHost.GetVirtualPath" target="_top">.NET documentation</a>
+     */
     public java.lang.String GetVirtualPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +229,13 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
 
+    /**
+     * Invokes the .NET member GetConfigMapPathFactory.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationHost.GetConfigMapPathFactory" target="_top">.NET documentation</a>
+     */
     public IConfigMapPathFactory GetConfigMapPathFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,12 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
         }
     }
 
+    /**
+     * Invokes the .NET member MessageReceived.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.IApplicationHost.MessageReceived" target="_top">.NET documentation</a>
+     */
     public void MessageReceived() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

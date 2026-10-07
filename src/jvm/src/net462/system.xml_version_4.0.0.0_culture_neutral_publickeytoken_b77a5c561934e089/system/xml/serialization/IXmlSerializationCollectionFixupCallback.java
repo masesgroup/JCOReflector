@@ -51,5 +51,11 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IXmlSerializationCollectionFixupCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param collection the .NET argument of type {@code System.Object}
+     * @param collectionItems the .NET argument of type {@code System.Object}
+     */
     public void Invoke(NetObject collection, NetObject collectionItems);
 }

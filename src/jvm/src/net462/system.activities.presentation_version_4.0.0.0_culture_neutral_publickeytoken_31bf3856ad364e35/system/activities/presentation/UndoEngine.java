@@ -103,7 +103,10 @@ public class UndoEngine extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UndoEngine(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class UndoEngine extends NetObject  {
     public UndoEngine() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code EditingContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.-ctor" target="_top">.NET documentation</a>
+     */
     public UndoEngine(EditingContext context) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,13 @@ public class UndoEngine extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Redo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.Redo" target="_top">.NET documentation</a>
+     */
     public boolean Redo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +200,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Undo.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.Undo" target="_top">.NET documentation</a>
+     */
     public boolean Undo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +221,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRedoActions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.GetRedoActions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetRedoActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +243,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetUndoActions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.GetUndoActions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetUndoActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +265,20 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddUndoUnit.
+     *
+     * @param unit the argument of type {@code UndoUnit}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.AddUndoUnit" target="_top">.NET documentation</a>
+     */
     public void AddUndoUnit(UndoUnit unit) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +293,13 @@ public class UndoEngine extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsUndoRedoInProgress.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.IsUndoRedoInProgress" target="_top">.NET documentation</a>
+     */
     public boolean getIsUndoRedoInProgress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +314,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IsUndoRedoInProgress.
+     *
+     * @param IsUndoRedoInProgress the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.UndoEngine.IsUndoRedoInProgress" target="_top">.NET documentation</a>
+     */
     public void setIsUndoRedoInProgress(boolean IsUndoRedoInProgress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +336,13 @@ public class UndoEngine extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addUndoRedoBufferChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUndoRedoBufferChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -279,6 +353,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUndoRedoBufferChanged.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUndoRedoBufferChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +370,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addUndoUnitDiscarded.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addUndoUnitDiscarded(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -299,6 +387,13 @@ public class UndoEngine extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeUndoUnitDiscarded.
+     *
+     * @param handler the argument of type {@code EventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeUndoUnitDiscarded(EventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

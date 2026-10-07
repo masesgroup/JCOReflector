@@ -100,7 +100,10 @@ public class SharedPersonalizationStateInfo extends system.web.ui.webcontrols.we
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SharedPersonalizationStateInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,28 @@ public class SharedPersonalizationStateInfo extends system.web.ui.webcontrols.we
     public SharedPersonalizationStateInfo() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param path the argument of type {@code java.lang.String}
+     * @param lastUpdatedDate the argument of type {@code DateTime}
+     * @param size the argument of type {@code int}
+     * @param sizeOfPersonalizations the argument of type {@code int}
+     * @param countOfPersonalizations the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public SharedPersonalizationStateInfo(java.lang.String path, DateTime lastUpdatedDate, int size, int sizeOfPersonalizations, int countOfPersonalizations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +194,13 @@ public class SharedPersonalizationStateInfo extends system.web.ui.webcontrols.we
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CountOfPersonalizations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.CountOfPersonalizations" target="_top">.NET documentation</a>
+     */
     public int getCountOfPersonalizations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +241,13 @@ public class SharedPersonalizationStateInfo extends system.web.ui.webcontrols.we
         }
     }
 
+    /**
+     * Gets the value of the .NET property SizeOfPersonalizations.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.SizeOfPersonalizations" target="_top">.NET documentation</a>
+     */
     public int getSizeOfPersonalizations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

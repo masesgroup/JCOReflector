@@ -99,7 +99,10 @@ public class ResolveInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ResolveInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveInfo() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,15 @@ public class ResolveInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param clientId the argument of type {@code Guid}
+     * @param meshId the argument of type {@code java.lang.String}
+     * @param maxAddresses the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveInfo(Guid clientId, java.lang.String meshId, int maxAddresses) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +188,13 @@ public class ResolveInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member HasBody.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveInfo.HasBody" target="_top">.NET documentation</a>
+     */
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +213,13 @@ public class ResolveInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MaxAddresses.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveInfo.MaxAddresses" target="_top">.NET documentation</a>
+     */
     public int getMaxAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +260,13 @@ public class ResolveInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveInfo.ClientId" target="_top">.NET documentation</a>
+     */
     public Guid getClientId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +282,13 @@ public class ResolveInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MeshId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveInfo.MeshId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMeshId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

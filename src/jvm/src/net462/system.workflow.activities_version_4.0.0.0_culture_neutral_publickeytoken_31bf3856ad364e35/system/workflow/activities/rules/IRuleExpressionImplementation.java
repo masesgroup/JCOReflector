@@ -106,7 +106,10 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRuleExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,14 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Match.
+     *
+     * @param expression the argument of type {@code CodeExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression.Match" target="_top">.NET documentation</a>
+     */
     public boolean Match(CodeExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +173,13 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
 
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression.Clone" target="_top">.NET documentation</a>
+     */
     public CodeExpression Clone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +195,15 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
 
+    /**
+     * Invokes the .NET member Validate.
+     *
+     * @param validation the argument of type {@code RuleValidation}
+     * @param isWritten the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression.Validate" target="_top">.NET documentation</a>
+     */
     public RuleExpressionInfo Validate(RuleValidation validation, boolean isWritten) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +219,14 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
 
+    /**
+     * Invokes the .NET member Evaluate.
+     *
+     * @param execution the argument of type {@code RuleExecution}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression.Evaluate" target="_top">.NET documentation</a>
+     */
     public RuleExpressionResult Evaluate(RuleExecution execution) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -207,6 +242,16 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
 
+    /**
+     * Invokes the .NET member AnalyzeUsage.
+     *
+     * @param analysis the argument of type {@code RuleAnalysis}
+     * @param isRead the argument of type {@code boolean}
+     * @param isWritten the argument of type {@code boolean}
+     * @param qualifier the argument of type {@code RulePathQualifier}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression.AnalyzeUsage" target="_top">.NET documentation</a>
+     */
     public void AnalyzeUsage(RuleAnalysis analysis, boolean isRead, boolean isWritten, RulePathQualifier qualifier) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +262,14 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
 
+    /**
+     * Invokes the .NET member Decompile.
+     *
+     * @param stringBuilder the argument of type {@code StringBuilder}
+     * @param parentExpression the argument of type {@code CodeExpression}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.IRuleExpression.Decompile" target="_top">.NET documentation</a>
+     */
     public void Decompile(StringBuilder stringBuilder, CodeExpression parentExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

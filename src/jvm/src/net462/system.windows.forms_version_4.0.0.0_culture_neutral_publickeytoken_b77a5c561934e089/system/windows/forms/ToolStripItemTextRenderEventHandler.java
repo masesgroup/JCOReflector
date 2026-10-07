@@ -157,7 +157,10 @@ public class ToolStripItemTextRenderEventHandler extends JCVoidDelegate implemen
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripItemTextRenderEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -179,6 +182,14 @@ public class ToolStripItemTextRenderEventHandler extends JCVoidDelegate implemen
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param sender the argument of type {@code NetObject}
+     * @param e the argument of type {@code ToolStripItemTextRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(NetObject sender, ToolStripItemTextRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,7 +201,10 @@ public class ToolStripItemTextRenderEventHandler extends JCVoidDelegate implemen
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.Windows.Forms.ToolStripItemTextRenderEventArgs}
      */
     public void Invoke(NetObject sender, ToolStripItemTextRenderEventArgs e) {
     }

@@ -89,6 +89,13 @@ public class BasicProfileViolationEnumerator extends NetObject implements Iterat
         }
     }
 
+    /**
+     * Invokes the .NET member addReference.
+     *
+     * @param ref the argument of type {@code String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     protected final void addReference(String ref) throws Throwable {
         try {
             bridge.AddReference(ref);
@@ -97,7 +104,9 @@ public class BasicProfileViolationEnumerator extends NetObject implements Iterat
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public BasicProfileViolationEnumerator(JCObject instance) {
         classInstance = instance.iterator();

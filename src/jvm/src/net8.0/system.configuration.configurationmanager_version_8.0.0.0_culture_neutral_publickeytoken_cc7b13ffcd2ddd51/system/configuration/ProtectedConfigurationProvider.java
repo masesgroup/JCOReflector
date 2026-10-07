@@ -100,7 +100,10 @@ public class ProtectedConfigurationProvider extends system.configuration.provide
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ProtectedConfigurationProvider(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,14 @@ public class ProtectedConfigurationProvider extends system.configuration.provide
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Decrypt.
+     *
+     * @param encryptedNode the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ProtectedConfigurationProvider.Decrypt" target="_top">.NET documentation</a>
+     */
     public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +179,14 @@ public class ProtectedConfigurationProvider extends system.configuration.provide
         }
     }
 
+    /**
+     * Invokes the .NET member Encrypt.
+     *
+     * @param node the argument of type {@code XmlNode}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.ProtectedConfigurationProvider.Encrypt" target="_top">.NET documentation</a>
+     */
     public XmlNode Encrypt(XmlNode node) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

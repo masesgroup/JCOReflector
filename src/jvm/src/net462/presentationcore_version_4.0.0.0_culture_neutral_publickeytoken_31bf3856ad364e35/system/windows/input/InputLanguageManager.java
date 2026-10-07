@@ -105,7 +105,10 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InputLanguageManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,22 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetRestoreInputLanguage.
+     *
+     * @param target the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.GetRestoreInputLanguage" target="_top">.NET documentation</a>
+     */
     public static boolean GetRestoreInputLanguage(DependencyObject target) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -174,6 +193,16 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member ReportInputLanguageChanging.
+     *
+     * @param newLanguageId the argument of type {@code CultureInfo}
+     * @param previousLanguageId the argument of type {@code CultureInfo}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.ReportInputLanguageChanging" target="_top">.NET documentation</a>
+     */
     public boolean ReportInputLanguageChanging(CultureInfo newLanguageId, CultureInfo previousLanguageId) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +217,22 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member GetInputLanguage.
+     *
+     * @param target the argument of type {@code DependencyObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.GetInputLanguage" target="_top">.NET documentation</a>
+     */
     public static CultureInfo GetInputLanguage(DependencyObject target) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -203,6 +248,18 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member RegisterInputLanguageSource.
+     *
+     * @param inputLanguageSource the argument of type {@code IInputLanguageSource}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.RegisterInputLanguageSource" target="_top">.NET documentation</a>
+     */
     public void RegisterInputLanguageSource(IInputLanguageSource inputLanguageSource) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +270,15 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member ReportInputLanguageChanged.
+     *
+     * @param newLanguageId the argument of type {@code CultureInfo}
+     * @param previousLanguageId the argument of type {@code CultureInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.ReportInputLanguageChanged" target="_top">.NET documentation</a>
+     */
     public void ReportInputLanguageChanged(CultureInfo newLanguageId, CultureInfo previousLanguageId) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +289,22 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member SetInputLanguage.
+     *
+     * @param target the argument of type {@code DependencyObject}
+     * @param inputLanguage the argument of type {@code CultureInfo}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.SetInputLanguage" target="_top">.NET documentation</a>
+     */
     public static void SetInputLanguage(DependencyObject target, CultureInfo inputLanguage) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -233,6 +315,21 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member SetRestoreInputLanguage.
+     *
+     * @param target the argument of type {@code DependencyObject}
+     * @param restore the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.SetRestoreInputLanguage" target="_top">.NET documentation</a>
+     */
     public static void SetRestoreInputLanguage(DependencyObject target, boolean restore) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -247,6 +344,13 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AvailableInputLanguages.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.AvailableInputLanguages" target="_top">.NET documentation</a>
+     */
     public IEnumerable getAvailableInputLanguages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +366,19 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentInputLanguage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.CurrentInputLanguage" target="_top">.NET documentation</a>
+     */
     public CultureInfo getCurrentInputLanguage() throws Throwable, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +394,21 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Sets the value of the .NET property CurrentInputLanguage.
+     *
+     * @param CurrentInputLanguage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.CurrentInputLanguage" target="_top">.NET documentation</a>
+     */
     public void setCurrentInputLanguage(CultureInfo CurrentInputLanguage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +419,21 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Gets the value of the .NET property Current.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InputLanguageManager.Current" target="_top">.NET documentation</a>
+     */
     public static InputLanguageManager getCurrent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +454,13 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addInputLanguageChanged.
+     *
+     * @param handler the argument of type {@code InputLanguageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInputLanguageChanged(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +471,13 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member removeInputLanguageChanged.
+     *
+     * @param handler the argument of type {@code InputLanguageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInputLanguageChanged(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +488,13 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member addInputLanguageChanging.
+     *
+     * @param handler the argument of type {@code InputLanguageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addInputLanguageChanging(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +505,13 @@ public class InputLanguageManager extends system.windows.threading.DispatcherObj
         }
     }
 
+    /**
+     * Invokes the .NET member removeInputLanguageChanging.
+     *
+     * @param handler the argument of type {@code InputLanguageEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeInputLanguageChanging(InputLanguageEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

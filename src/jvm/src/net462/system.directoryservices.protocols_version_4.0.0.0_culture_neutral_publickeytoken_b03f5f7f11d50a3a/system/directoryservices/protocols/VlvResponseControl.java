@@ -100,7 +100,10 @@ public class VlvResponseControl extends system.directoryservices.protocols.Direc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public VlvResponseControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -159,6 +162,13 @@ public class VlvResponseControl extends system.directoryservices.protocols.Direc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ContextId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VlvResponseControl.ContextId" target="_top">.NET documentation</a>
+     */
     public byte[] getContextId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +192,13 @@ public class VlvResponseControl extends system.directoryservices.protocols.Direc
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContentCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VlvResponseControl.ContentCount" target="_top">.NET documentation</a>
+     */
     public int getContentCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +239,13 @@ public class VlvResponseControl extends system.directoryservices.protocols.Direc
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetPosition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VlvResponseControl.TargetPosition" target="_top">.NET documentation</a>
+     */
     public int getTargetPosition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +286,13 @@ public class VlvResponseControl extends system.directoryservices.protocols.Direc
         }
     }
 
+    /**
+     * Gets the value of the .NET property Result.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.Protocols.VlvResponseControl.Result" target="_top">.NET documentation</a>
+     */
     public ResultCode getResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

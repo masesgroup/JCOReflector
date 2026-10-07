@@ -107,7 +107,10 @@ public class ContextBindingElementImporter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ContextBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,12 @@ public class ContextBindingElementImporter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ContextBindingElementImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public ContextBindingElementImporter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,15 @@ public class ContextBindingElementImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeforeImport.
+     *
+     * @param wsdlDocuments the argument of type {@code ServiceDescriptionCollection}
+     * @param xmlSchemas the argument of type {@code XmlSchemaSet}
+     * @param policy the argument of type {@code ICollection_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ContextBindingElementImporter.BeforeImport" target="_top">.NET documentation</a>
+     */
     public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1 policy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +196,14 @@ public class ContextBindingElementImporter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportContract.
+     *
+     * @param importer the argument of type {@code WsdlImporter}
+     * @param context the argument of type {@code WsdlContractConversionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ContextBindingElementImporter.ImportContract" target="_top">.NET documentation</a>
+     */
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +214,29 @@ public class ContextBindingElementImporter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportEndpoint.
+     *
+     * @param importer the argument of type {@code WsdlImporter}
+     * @param context the argument of type {@code WsdlEndpointConversionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ContextBindingElementImporter.ImportEndpoint" target="_top">.NET documentation</a>
+     */
     public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +247,27 @@ public class ContextBindingElementImporter extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ImportPolicy.
+     *
+     * @param importer the argument of type {@code MetadataImporter}
+     * @param context the argument of type {@code PolicyConversionContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ContextBindingElementImporter.ImportPolicy" target="_top">.NET documentation</a>
+     */
     public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

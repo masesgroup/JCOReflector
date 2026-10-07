@@ -100,7 +100,10 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicDependencyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,15 @@ public class DynamicDependencyAttribute extends system.Attribute  {
     public DynamicDependencyAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberTypes the argument of type {@code DynamicallyAccessedMemberTypes}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicDependencyAttribute(DynamicallyAccessedMemberTypes memberTypes, java.lang.String typeName, java.lang.String assemblyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +172,14 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberTypes the argument of type {@code DynamicallyAccessedMemberTypes}
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicDependencyAttribute(DynamicallyAccessedMemberTypes memberTypes, NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +190,15 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberSignature the argument of type {@code java.lang.String}
+     * @param typeName the argument of type {@code java.lang.String}
+     * @param assemblyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicDependencyAttribute(java.lang.String memberSignature, java.lang.String typeName, java.lang.String assemblyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +209,14 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberSignature the argument of type {@code java.lang.String}
+     * @param type the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicDependencyAttribute(java.lang.String memberSignature, NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -190,6 +227,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param memberSignature the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicDependencyAttribute(java.lang.String memberSignature) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -209,6 +253,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MemberTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberTypes" target="_top">.NET documentation</a>
+     */
     public DynamicallyAccessedMemberTypes getMemberTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +275,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AssemblyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.AssemblyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +296,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Condition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -252,6 +317,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Condition.
+     *
+     * @param Condition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Condition" target="_top">.NET documentation</a>
+     */
     public void setCondition(java.lang.String Condition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +334,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemberSignature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.MemberSignature" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMemberSignature() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +355,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.TypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +376,13 @@ public class DynamicDependencyAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Type.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CodeAnalysis.DynamicDependencyAttribute.Type" target="_top">.NET documentation</a>
+     */
     public NetType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

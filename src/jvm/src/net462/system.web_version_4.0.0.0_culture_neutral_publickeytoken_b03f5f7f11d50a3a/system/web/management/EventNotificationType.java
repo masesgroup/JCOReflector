@@ -114,7 +114,9 @@ public class EventNotificationType extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public EventNotificationType(java.lang.Object instance) {
         super(instance);

@@ -99,7 +99,10 @@ public class BrowserInteropHelper extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BrowserInteropHelper(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class BrowserInteropHelper extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsBrowserHosted.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted" target="_top">.NET documentation</a>
+     */
     public static boolean getIsBrowserHosted() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -170,6 +180,13 @@ public class BrowserInteropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClientSite.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.BrowserInteropHelper.ClientSite" target="_top">.NET documentation</a>
+     */
     public static NetObject getClientSite() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +202,13 @@ public class BrowserInteropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HostScript.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.BrowserInteropHelper.HostScript" target="_top">.NET documentation</a>
+     */
     public static NetObject getHostScript() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -200,6 +224,13 @@ public class BrowserInteropHelper extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.BrowserInteropHelper.Source" target="_top">.NET documentation</a>
+     */
     public static Uri getSource() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

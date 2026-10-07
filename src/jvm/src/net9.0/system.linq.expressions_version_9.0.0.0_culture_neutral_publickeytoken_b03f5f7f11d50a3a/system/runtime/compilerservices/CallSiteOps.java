@@ -101,7 +101,10 @@ public class CallSiteOps extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CallSiteOps(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class CallSiteOps extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetMatch.
+     *
+     * @param site the argument of type {@code CallSite}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.GetMatch" target="_top">.NET documentation</a>
+     */
     public static boolean GetMatch(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +179,14 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetNotMatched.
+     *
+     * @param site the argument of type {@code CallSite}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.SetNotMatched" target="_top">.NET documentation</a>
+     */
     public static boolean SetNotMatched(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +201,15 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMatchmaker.
+     *
+     * @param <T> the type of the generic argument T
+     * @param site the argument of type {@code CallSite_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.CreateMatchmaker" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> CallSite_1 CreateMatchmaker(CallSite_1 site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -197,6 +225,26 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetRuleCache.
+     *
+     * @param <T> the type of the generic argument T
+     * @param site the argument of type {@code CallSite_1}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.GetRuleCache" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> RuleCache_1 GetRuleCache(CallSite_1 site) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +260,23 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddRule.
+     *
+     * @param <T> the type of the generic argument T
+     * @param site the argument of type {@code CallSite_1}
+     * @param rule the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.AddRule" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void AddRule(CallSite_1 site, T rule) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +287,13 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ClearMatch.
+     *
+     * @param site the argument of type {@code CallSite}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.ClearMatch" target="_top">.NET documentation</a>
+     */
     public static void ClearMatch(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -232,6 +304,24 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member MoveRule.
+     *
+     * @param <T> the type of the generic argument T
+     * @param cache the argument of type {@code RuleCache_1}
+     * @param rule the argument of type {@code T}
+     * @param i the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.MoveRule" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void MoveRule(RuleCache_1 cache, T rule, int i) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -242,6 +332,15 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member UpdateRules.
+     *
+     * @param <T> the type of the generic argument T
+     * @param _this the argument of type {@code CallSite_1}
+     * @param matched the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteOps.UpdateRules" target="_top">.NET documentation</a>
+     */
     public static <T extends IJCOBridgeReflected> void UpdateRules(CallSite_1 _this, int matched) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

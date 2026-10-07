@@ -101,7 +101,10 @@ public class DataAnnotationsModelValidator_1<TAttribute extends IJCOBridgeReflec
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataAnnotationsModelValidator_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,16 @@ public class DataAnnotationsModelValidator_1<TAttribute extends IJCOBridgeReflec
     public DataAnnotationsModelValidator_1() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code ModelMetadata}
+     * @param context the argument of type {@code ModelBindingExecutionContext}
+     * @param attribute the argument of type {@code TAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DataAnnotationsModelValidator-1.-ctor" target="_top">.NET documentation</a>
+     */
     public DataAnnotationsModelValidator_1(ModelMetadata metadata, ModelBindingExecutionContext context, TAttribute attribute) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

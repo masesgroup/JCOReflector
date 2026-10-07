@@ -107,7 +107,10 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DiscretionaryAcl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,20 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
     public DiscretionaryAcl() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param revision the argument of type {@code byte}
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscretionaryAcl(boolean isContainer, boolean isDS, byte revision, int capacity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +184,18 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param capacity the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscretionaryAcl(boolean isContainer, boolean isDS, int capacity) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -177,6 +206,21 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param isContainer the argument of type {@code boolean}
+     * @param isDS the argument of type {@code boolean}
+     * @param rawAcl the argument of type {@code RawAcl}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.-ctor" target="_top">.NET documentation</a>
+     */
     public DiscretionaryAcl(boolean isContainer, boolean isDS, RawAcl rawAcl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +236,25 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member RemoveAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.RemoveAccess" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +269,28 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.RemoveAccess" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +305,23 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAccessRule}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.RemoveAccess" target="_top">.NET documentation</a>
+     */
     public boolean RemoveAccess(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -234,6 +336,24 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.AddAccess" target="_top">.NET documentation</a>
+     */
     public void AddAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +364,27 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.AddAccess" target="_top">.NET documentation</a>
+     */
     public void AddAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -254,6 +395,22 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.AddAccess" target="_top">.NET documentation</a>
+     */
     public void AddAccess(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +421,21 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessSpecific.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.RemoveAccessSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessSpecific(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,6 +446,24 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessSpecific.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.RemoveAccessSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessSpecific(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -284,6 +474,19 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveAccessSpecific.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.RemoveAccessSpecific" target="_top">.NET documentation</a>
+     */
     public void RemoveAccessSpecific(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +497,24 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.SetAccess" target="_top">.NET documentation</a>
+     */
     public void SetAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +525,27 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param accessMask the argument of type {@code int}
+     * @param inheritanceFlags the argument of type {@code InheritanceFlags}
+     * @param propagationFlags the argument of type {@code PropagationFlags}
+     * @param objectFlags the argument of type {@code ObjectAceFlags}
+     * @param objectType the argument of type {@code Guid}
+     * @param inheritedObjectType the argument of type {@code Guid}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.SetAccess" target="_top">.NET documentation</a>
+     */
     public void SetAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -314,6 +556,22 @@ public class DiscretionaryAcl extends system.security.accesscontrol.CommonAcl  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetAccess.
+     *
+     * @param accessType the argument of type {@code AccessControlType}
+     * @param sid the argument of type {@code SecurityIdentifier}
+     * @param rule the argument of type {@code ObjectAccessRule}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.SystemException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.DiscretionaryAcl.SetAccess" target="_top">.NET documentation</a>
+     */
     public void SetAccess(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

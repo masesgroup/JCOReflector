@@ -102,7 +102,10 @@ public class OSFeature extends system.windows.forms.FeatureSupport  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OSFeature(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,19 @@ public class OSFeature extends system.windows.forms.FeatureSupport  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsPresent.
+     *
+     * @param enumVal the argument of type {@code SystemParameter}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.OSFeature.IsPresent" target="_top">.NET documentation</a>
+     */
     public static boolean IsPresent(SystemParameter enumVal) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +187,21 @@ public class OSFeature extends system.windows.forms.FeatureSupport  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetVersionPresent.
+     *
+     * @param feature the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.OSFeature.GetVersionPresent" target="_top">.NET documentation</a>
+     */
     public Version GetVersionPresent(NetObject feature) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +221,13 @@ public class OSFeature extends system.windows.forms.FeatureSupport  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Feature.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.OSFeature.Feature" target="_top">.NET documentation</a>
+     */
     public static OSFeature getFeature() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -106,7 +106,10 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DynamicUpdateMapBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,12 @@ public class DynamicUpdateMapBuilder extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMapBuilder() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +176,28 @@ public class DynamicUpdateMapBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateMap.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.CreateMap" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMap CreateMap() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +213,26 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateMap.
+     *
+     * @param activitiesBlockingUpdate the argument of type {@code JCORefOut<IList_1>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.CreateMap" target="_top">.NET documentation</a>
+     */
     public DynamicUpdateMap CreateMap(JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +252,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ForImplementation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.ForImplementation" target="_top">.NET documentation</a>
+     */
     public boolean getForImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +273,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ForImplementation.
+     *
+     * @param ForImplementation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.ForImplementation" target="_top">.NET documentation</a>
+     */
     public void setForImplementation(boolean ForImplementation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +290,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalWorkflowDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.OriginalWorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public Activity getOriginalWorkflowDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +312,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OriginalWorkflowDefinition.
+     *
+     * @param OriginalWorkflowDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.OriginalWorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public void setOriginalWorkflowDefinition(Activity OriginalWorkflowDefinition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +329,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedWorkflowDefinition.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.UpdatedWorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public Activity getUpdatedWorkflowDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +351,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdatedWorkflowDefinition.
+     *
+     * @param UpdatedWorkflowDefinition the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.UpdatedWorkflowDefinition" target="_top">.NET documentation</a>
+     */
     public void setUpdatedWorkflowDefinition(Activity UpdatedWorkflowDefinition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +368,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OriginalEnvironment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.OriginalEnvironment" target="_top">.NET documentation</a>
+     */
     public LocationReferenceEnvironment getOriginalEnvironment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +390,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OriginalEnvironment.
+     *
+     * @param OriginalEnvironment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.OriginalEnvironment" target="_top">.NET documentation</a>
+     */
     public void setOriginalEnvironment(LocationReferenceEnvironment OriginalEnvironment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +407,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UpdatedEnvironment.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.UpdatedEnvironment" target="_top">.NET documentation</a>
+     */
     public LocationReferenceEnvironment getUpdatedEnvironment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +429,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UpdatedEnvironment.
+     *
+     * @param UpdatedEnvironment the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.UpdatedEnvironment" target="_top">.NET documentation</a>
+     */
     public void setUpdatedEnvironment(LocationReferenceEnvironment UpdatedEnvironment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +446,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisallowUpdateInside.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.DisallowUpdateInside" target="_top">.NET documentation</a>
+     */
     public ISet_1 getDisallowUpdateInside() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +468,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LookupImplementationMap.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupImplementationMap" target="_top">.NET documentation</a>
+     */
     public Func_2 getLookupImplementationMap() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +489,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LookupImplementationMap.
+     *
+     * @param LookupImplementationMap the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupImplementationMap" target="_top">.NET documentation</a>
+     */
     public void setLookupImplementationMap(Func_2 LookupImplementationMap) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -364,6 +506,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LookupMapItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupMapItem" target="_top">.NET documentation</a>
+     */
     public Func_2 getLookupMapItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +527,13 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LookupMapItem.
+     *
+     * @param LookupMapItem the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupMapItem" target="_top">.NET documentation</a>
+     */
     public void setLookupMapItem(Func_2 LookupMapItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class StringInfo extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StringInfo(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class StringInfo extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public StringInfo() throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +166,14 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.-ctor" target="_top">.NET documentation</a>
+     */
     public StringInfo(java.lang.String value) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +188,15 @@ public class StringInfo extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ParseCombiningCharacters.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.ParseCombiningCharacters" target="_top">.NET documentation</a>
+     */
     public static int[] ParseCombiningCharacters(java.lang.String str) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -193,6 +220,16 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextElementEnumerator.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.GetTextElementEnumerator" target="_top">.NET documentation</a>
+     */
     public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +245,17 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTextElementEnumerator.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.GetTextElementEnumerator" target="_top">.NET documentation</a>
+     */
     public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +271,16 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextTextElement.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.GetNextTextElement" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetNextTextElement(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -237,6 +295,17 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetNextTextElement.
+     *
+     * @param str the argument of type {@code java.lang.String}
+     * @param index the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.GetNextTextElement" target="_top">.NET documentation</a>
+     */
     public static java.lang.String GetNextTextElement(java.lang.String str, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -251,6 +320,16 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SubstringByTextElements.
+     *
+     * @param startingTextElement the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.SubstringByTextElements" target="_top">.NET documentation</a>
+     */
     public java.lang.String SubstringByTextElements(int startingTextElement) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +344,17 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member SubstringByTextElements.
+     *
+     * @param startingTextElement the argument of type {@code int}
+     * @param lengthInTextElements the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.SubstringByTextElements" target="_top">.NET documentation</a>
+     */
     public java.lang.String SubstringByTextElements(int startingTextElement, int lengthInTextElements) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +373,14 @@ public class StringInfo extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property LengthInTextElements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.LengthInTextElements" target="_top">.NET documentation</a>
+     */
     public int getLengthInTextElements() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +421,13 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property String.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.String" target="_top">.NET documentation</a>
+     */
     public java.lang.String getString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +442,14 @@ public class StringInfo extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property String.
+     *
+     * @param String the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Globalization.StringInfo.String" target="_top">.NET documentation</a>
+     */
     public void setString(java.lang.String String) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class INeedEngineImplementation extends NetObject implements INeedEngine 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public INeedEngineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class INeedEngineImplementation extends NetObject implements INeedEngine 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetEngine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.INeedEngine.GetEngine" target="_top">.NET documentation</a>
+     */
     public VsaEngine GetEngine() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,13 @@ public class INeedEngineImplementation extends NetObject implements INeedEngine 
         }
     }
 
+    /**
+     * Invokes the .NET member SetEngine.
+     *
+     * @param engine the argument of type {@code VsaEngine}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.INeedEngine.SetEngine" target="_top">.NET documentation</a>
+     */
     public void SetEngine(VsaEngine engine) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

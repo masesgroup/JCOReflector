@@ -98,7 +98,10 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITrackingPersonalizableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,12 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginLoad.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad" target="_top">.NET documentation</a>
+     */
     public void BeginLoad() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +159,12 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member BeginSave.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave" target="_top">.NET documentation</a>
+     */
     public void BeginSave() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -160,6 +175,12 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndLoad.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad" target="_top">.NET documentation</a>
+     */
     public void EndLoad() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +191,12 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
         }
     }
 
+    /**
+     * Invokes the .NET member EndSave.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave" target="_top">.NET documentation</a>
+     */
     public void EndSave() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +211,13 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TracksChanges.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges" target="_top">.NET documentation</a>
+     */
     public boolean getTracksChanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

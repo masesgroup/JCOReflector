@@ -53,5 +53,12 @@ import system.activities.ActivityInstance;
  * @version 2.0.0.0
  */
 public interface IFaultCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param faultContext the .NET argument of type {@code System.Activities.NativeActivityFaultContext}
+     * @param propagatedException the .NET argument of type {@code System.Exception}
+     * @param propagatedFrom the .NET argument of type {@code System.Activities.ActivityInstance}
+     */
     public void Invoke(NativeActivityFaultContext faultContext, NetException propagatedException, ActivityInstance propagatedFrom);
 }

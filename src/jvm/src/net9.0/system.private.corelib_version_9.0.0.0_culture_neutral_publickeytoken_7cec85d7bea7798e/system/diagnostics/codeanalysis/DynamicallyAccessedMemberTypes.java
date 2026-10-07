@@ -114,7 +114,9 @@ public class DynamicallyAccessedMemberTypes extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public DynamicallyAccessedMemberTypes(java.lang.Object instance) {
         super(instance);
@@ -191,18 +193,50 @@ public class DynamicallyAccessedMemberTypes extends NetObject  {
 
     // Flags management section
 
+    /**
+     * Invokes the .NET member add.
+     *
+     * @param val the argument of type {@code DynamicallyAccessedMemberTypes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final DynamicallyAccessedMemberTypes add(DynamicallyAccessedMemberTypes val) throws Throwable {
         return new DynamicallyAccessedMemberTypes(NetEnum.add(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member remove.
+     *
+     * @param val the argument of type {@code DynamicallyAccessedMemberTypes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final DynamicallyAccessedMemberTypes remove(DynamicallyAccessedMemberTypes val) throws Throwable {
         return new DynamicallyAccessedMemberTypes(NetEnum.remove(classInstance, val.classInstance));
     }
 
+    /**
+     * Invokes the .NET member is.
+     *
+     * @param val the argument of type {@code DynamicallyAccessedMemberTypes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean is(DynamicallyAccessedMemberTypes val) throws Throwable {
         return NetEnum.is(classInstance, val.classInstance);
     }
 
+    /**
+     * Invokes the .NET member has.
+     *
+     * @param val the argument of type {@code DynamicallyAccessedMemberTypes}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public final boolean has(DynamicallyAccessedMemberTypes val) throws Throwable {
         return NetEnum.has(classInstance, val.classInstance);
     }

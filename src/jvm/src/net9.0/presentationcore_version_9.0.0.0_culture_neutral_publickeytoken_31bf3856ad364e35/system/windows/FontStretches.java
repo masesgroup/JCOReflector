@@ -99,7 +99,10 @@ public class FontStretches extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public FontStretches(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class FontStretches extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Condensed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.Condensed" target="_top">.NET documentation</a>
+     */
     public static FontStretch getCondensed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +181,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Expanded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.Expanded" target="_top">.NET documentation</a>
+     */
     public static FontStretch getExpanded() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +203,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtraCondensed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.ExtraCondensed" target="_top">.NET documentation</a>
+     */
     public static FontStretch getExtraCondensed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +225,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExtraExpanded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.ExtraExpanded" target="_top">.NET documentation</a>
+     */
     public static FontStretch getExtraExpanded() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +247,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Medium.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.Medium" target="_top">.NET documentation</a>
+     */
     public static FontStretch getMedium() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -231,6 +269,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Normal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.Normal" target="_top">.NET documentation</a>
+     */
     public static FontStretch getNormal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +291,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SemiCondensed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.SemiCondensed" target="_top">.NET documentation</a>
+     */
     public static FontStretch getSemiCondensed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -261,6 +313,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SemiExpanded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.SemiExpanded" target="_top">.NET documentation</a>
+     */
     public static FontStretch getSemiExpanded() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -276,6 +335,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UltraCondensed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.UltraCondensed" target="_top">.NET documentation</a>
+     */
     public static FontStretch getUltraCondensed() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -291,6 +357,13 @@ public class FontStretches extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UltraExpanded.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.FontStretches.UltraExpanded" target="_top">.NET documentation</a>
+     */
     public static FontStretch getUltraExpanded() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

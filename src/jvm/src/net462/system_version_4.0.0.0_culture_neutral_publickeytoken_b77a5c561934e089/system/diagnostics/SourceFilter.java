@@ -101,7 +101,10 @@ public class SourceFilter extends system.diagnostics.TraceFilter  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SourceFilter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class SourceFilter extends system.diagnostics.TraceFilter  {
     public SourceFilter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param source the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SourceFilter.-ctor" target="_top">.NET documentation</a>
+     */
     public SourceFilter(java.lang.String source) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,22 @@ public class SourceFilter extends system.diagnostics.TraceFilter  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldTrace.
+     *
+     * @param cache the argument of type {@code TraceEventCache}
+     * @param source the argument of type {@code java.lang.String}
+     * @param eventType the argument of type {@code TraceEventType}
+     * @param id the argument of type {@code int}
+     * @param formatOrMessage the argument of type {@code java.lang.String}
+     * @param args the argument of type {@code NetObject[]}
+     * @param data1 the argument of type {@code NetObject}
+     * @param data the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SourceFilter.ShouldTrace" target="_top">.NET documentation</a>
+     */
     public boolean ShouldTrace(TraceEventCache cache, java.lang.String source, TraceEventType eventType, int id, java.lang.String formatOrMessage, NetObject[] args, NetObject data1, NetObject[] data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +211,13 @@ public class SourceFilter extends system.diagnostics.TraceFilter  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Source.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SourceFilter.Source" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +232,14 @@ public class SourceFilter extends system.diagnostics.TraceFilter  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Source.
+     *
+     * @param Source the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.SourceFilter.Source" target="_top">.NET documentation</a>
+     */
     public void setSource(java.lang.String Source) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

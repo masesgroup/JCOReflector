@@ -100,7 +100,10 @@ public class CornerRadius extends system.ValueType  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CornerRadius(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class CornerRadius extends system.ValueType  {
     public CornerRadius() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param topLeft the argument of type {@code double}
+     * @param topRight the argument of type {@code double}
+     * @param bottomRight the argument of type {@code double}
+     * @param bottomLeft the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.-ctor" target="_top">.NET documentation</a>
+     */
     public CornerRadius(double topLeft, double topRight, double bottomRight, double bottomLeft) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +173,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param uniformRadius the argument of type {@code double}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.-ctor" target="_top">.NET documentation</a>
+     */
     public CornerRadius(double uniformRadius) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +195,14 @@ public class CornerRadius extends system.ValueType  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param cornerRadius the argument of type {@code CornerRadius}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(CornerRadius cornerRadius) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +221,13 @@ public class CornerRadius extends system.ValueType  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BottomLeft.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.BottomLeft" target="_top">.NET documentation</a>
+     */
     public double getBottomLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +268,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BottomLeft.
+     *
+     * @param BottomLeft the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.BottomLeft" target="_top">.NET documentation</a>
+     */
     public void setBottomLeft(double BottomLeft) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +285,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BottomRight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.BottomRight" target="_top">.NET documentation</a>
+     */
     public double getBottomRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +332,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property BottomRight.
+     *
+     * @param BottomRight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.BottomRight" target="_top">.NET documentation</a>
+     */
     public void setBottomRight(double BottomRight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +349,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopLeft.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.TopLeft" target="_top">.NET documentation</a>
+     */
     public double getTopLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -333,6 +396,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TopLeft.
+     *
+     * @param TopLeft the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.TopLeft" target="_top">.NET documentation</a>
+     */
     public void setTopLeft(double TopLeft) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -343,6 +413,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TopRight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.TopRight" target="_top">.NET documentation</a>
+     */
     public double getTopRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -383,6 +460,13 @@ public class CornerRadius extends system.ValueType  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TopRight.
+     *
+     * @param TopRight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.CornerRadius.TopRight" target="_top">.NET documentation</a>
+     */
     public void setTopRight(double TopRight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class ManagedPEBuilder extends system.reflection.portableexecutable.PEBui
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ManagedPEBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,33 @@ public class ManagedPEBuilder extends system.reflection.portableexecutable.PEBui
     public ManagedPEBuilder() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param header the argument of type {@code PEHeaderBuilder}
+     * @param metadataRootBuilder the argument of type {@code MetadataRootBuilder}
+     * @param ilStream the argument of type {@code BlobBuilder}
+     * @param mappedFieldData the argument of type {@code BlobBuilder}
+     * @param managedResources the argument of type {@code BlobBuilder}
+     * @param nativeResources the argument of type {@code ResourceSectionBuilder}
+     * @param debugDirectoryBuilder the argument of type {@code DebugDirectoryBuilder}
+     * @param strongNameSignatureSize the argument of type {@code int}
+     * @param entryPoint the argument of type {@code MethodDefinitionHandle}
+     * @param flags the argument of type {@code CorFlags}
+     * @param deterministicIdProvider the argument of type {@code Func_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.ManagedPEBuilder.-ctor" target="_top">.NET documentation</a>
+     */
     public ManagedPEBuilder(PEHeaderBuilder header, MetadataRootBuilder metadataRootBuilder, BlobBuilder ilStream, BlobBuilder mappedFieldData, BlobBuilder managedResources, ResourceSectionBuilder nativeResources, DebugDirectoryBuilder debugDirectoryBuilder, int strongNameSignatureSize, MethodDefinitionHandle entryPoint, CorFlags flags, Func_2 deterministicIdProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -172,6 +202,30 @@ public class ManagedPEBuilder extends system.reflection.portableexecutable.PEBui
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Sign.
+     *
+     * @param peImage the argument of type {@code BlobBuilder}
+     * @param signatureProvider the argument of type {@code Func_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.MissingMemberException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.BadImageFormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.ManagedPEBuilder.Sign" target="_top">.NET documentation</a>
+     */
     public void Sign(BlobBuilder peImage, Func_2 signatureProvider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.NullReferenceException, system.FormatException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

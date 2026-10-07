@@ -99,7 +99,10 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ComClassAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class ComClassAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComClassAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,15 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _ClassID the argument of type {@code java.lang.String}
+     * @param _InterfaceID the argument of type {@code java.lang.String}
+     * @param _EventId the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComClassAttribute(java.lang.String _ClassID, java.lang.String _InterfaceID, java.lang.String _EventId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +184,14 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _ClassID the argument of type {@code java.lang.String}
+     * @param _InterfaceID the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComClassAttribute(java.lang.String _ClassID, java.lang.String _InterfaceID) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +202,13 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param _ClassID the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ComClassAttribute(java.lang.String _ClassID) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +227,13 @@ public class ComClassAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InterfaceShadows.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows" target="_top">.NET documentation</a>
+     */
     public boolean getInterfaceShadows() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +248,13 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InterfaceShadows.
+     *
+     * @param InterfaceShadows the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows" target="_top">.NET documentation</a>
+     */
     public void setInterfaceShadows(boolean InterfaceShadows) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +265,13 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClassID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.ClassID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getClassID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +286,13 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.EventID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getEventID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +307,13 @@ public class ComClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InterfaceID.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ComClassAttribute.InterfaceID" target="_top">.NET documentation</a>
+     */
     public java.lang.String getInterfaceID() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

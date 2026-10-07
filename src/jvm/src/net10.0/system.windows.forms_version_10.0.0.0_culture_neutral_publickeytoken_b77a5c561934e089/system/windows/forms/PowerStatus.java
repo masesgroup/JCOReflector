@@ -101,7 +101,10 @@ public class PowerStatus extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PowerStatus(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class PowerStatus extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BatteryFullLifetime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PowerStatus.BatteryFullLifetime" target="_top">.NET documentation</a>
+     */
     public int getBatteryFullLifetime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,6 +210,13 @@ public class PowerStatus extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BatteryLifeRemaining.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PowerStatus.BatteryLifeRemaining" target="_top">.NET documentation</a>
+     */
     public int getBatteryLifeRemaining() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -240,6 +257,13 @@ public class PowerStatus extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BatteryLifePercent.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PowerStatus.BatteryLifePercent" target="_top">.NET documentation</a>
+     */
     public Single getBatteryLifePercent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +279,13 @@ public class PowerStatus extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BatteryChargeStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PowerStatus.BatteryChargeStatus" target="_top">.NET documentation</a>
+     */
     public BatteryChargeStatus getBatteryChargeStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +301,13 @@ public class PowerStatus extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PowerLineStatus.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.PowerStatus.PowerLineStatus" target="_top">.NET documentation</a>
+     */
     public PowerLineStatus getPowerLineStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CodeCatchClause extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeCatchClause(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeCatchClause extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCatchClause() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,13 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param localName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCatchClause(java.lang.String localName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +184,14 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param localName the argument of type {@code java.lang.String}
+     * @param catchExceptionType the argument of type {@code CodeTypeReference}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCatchClause(java.lang.String localName, CodeTypeReference catchExceptionType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +202,16 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param localName the argument of type {@code java.lang.String}
+     * @param catchExceptionType the argument of type {@code CodeTypeReference}
+     * @param statements the argument of type {@code CodeStatement...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeCatchClause(java.lang.String localName, CodeTypeReference catchExceptionType, CodeStatement... statements) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +230,13 @@ public class CodeCatchClause extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Statements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.Statements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +252,16 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CatchExceptionType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.CatchExceptionType" target="_top">.NET documentation</a>
+     */
     public CodeTypeReference getCatchExceptionType() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +277,13 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CatchExceptionType.
+     *
+     * @param CatchExceptionType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.CatchExceptionType" target="_top">.NET documentation</a>
+     */
     public void setCatchExceptionType(CodeTypeReference CatchExceptionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +294,13 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property LocalName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.LocalName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLocalName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +315,13 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property LocalName.
+     *
+     * @param LocalName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeCatchClause.LocalName" target="_top">.NET documentation</a>
+     */
     public void setLocalName(java.lang.String LocalName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

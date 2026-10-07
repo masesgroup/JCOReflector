@@ -102,7 +102,10 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IRepeatInfoUserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,15 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetItemStyle.
+     *
+     * @param itemType the argument of type {@code ListItemType}
+     * @param repeatIndex the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle" target="_top">.NET documentation</a>
+     */
     public Style GetItemStyle(ListItemType itemType, int repeatIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +171,16 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
         }
     }
 
+    /**
+     * Invokes the .NET member RenderItem.
+     *
+     * @param itemType the argument of type {@code ListItemType}
+     * @param repeatIndex the argument of type {@code int}
+     * @param repeatInfo the argument of type {@code RepeatInfo}
+     * @param writer the argument of type {@code HtmlTextWriter}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IRepeatInfoUser.RenderItem" target="_top">.NET documentation</a>
+     */
     public void RenderItem(ListItemType itemType, int repeatIndex, RepeatInfo repeatInfo, HtmlTextWriter writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +195,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasFooter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IRepeatInfoUser.HasFooter" target="_top">.NET documentation</a>
+     */
     public boolean getHasFooter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +216,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasHeader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IRepeatInfoUser.HasHeader" target="_top">.NET documentation</a>
+     */
     public boolean getHasHeader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +237,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasSeparators.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators" target="_top">.NET documentation</a>
+     */
     public boolean getHasSeparators() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +258,13 @@ public class IRepeatInfoUserImplementation extends NetObject implements IRepeatI
         }
     }
 
+    /**
+     * Gets the value of the .NET property RepeatedItemCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount" target="_top">.NET documentation</a>
+     */
     public int getRepeatedItemCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class IFieldControlImplementation extends NetObject implements IFieldCont
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IFieldControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IFieldControlImplementation extends NetObject implements IFieldCont
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FieldsGenerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IFieldControl.FieldsGenerator" target="_top">.NET documentation</a>
+     */
     public IAutoFieldGenerator getFieldsGenerator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -161,6 +171,13 @@ public class IFieldControlImplementation extends NetObject implements IFieldCont
         }
     }
 
+    /**
+     * Sets the value of the .NET property FieldsGenerator.
+     *
+     * @param FieldsGenerator the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.IFieldControl.FieldsGenerator" target="_top">.NET documentation</a>
+     */
     public void setFieldsGenerator(IAutoFieldGenerator FieldsGenerator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

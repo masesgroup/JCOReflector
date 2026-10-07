@@ -99,7 +99,10 @@ public class ValueSerializerAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ValueSerializerAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class ValueSerializerAttribute extends system.Attribute  {
     public ValueSerializerAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueSerializerTypeName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ValueSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueSerializerAttribute(java.lang.String valueSerializerTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +169,13 @@ public class ValueSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param valueSerializerType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ValueSerializerAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ValueSerializerAttribute(NetType valueSerializerType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +195,13 @@ public class ValueSerializerAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValueSerializerTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ValueSerializerAttribute.ValueSerializerTypeName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getValueSerializerTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +216,19 @@ public class ValueSerializerAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueSerializerType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ValueSerializerAttribute.ValueSerializerType" target="_top">.NET documentation</a>
+     */
     public NetType getValueSerializerType() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

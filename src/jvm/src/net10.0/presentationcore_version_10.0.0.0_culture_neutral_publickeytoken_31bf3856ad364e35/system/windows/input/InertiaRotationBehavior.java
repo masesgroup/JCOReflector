@@ -98,7 +98,10 @@ public class InertiaRotationBehavior extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InertiaRotationBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class InertiaRotationBehavior extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.-ctor" target="_top">.NET documentation</a>
+     */
     public InertiaRotationBehavior() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class InertiaRotationBehavior extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DesiredDeceleration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +219,16 @@ public class InertiaRotationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredDeceleration.
+     *
+     * @param DesiredDeceleration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.DesiredDeceleration" target="_top">.NET documentation</a>
+     */
     public void setDesiredDeceleration(double DesiredDeceleration) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +239,13 @@ public class InertiaRotationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DesiredRotation.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.DesiredRotation" target="_top">.NET documentation</a>
+     */
     public double getDesiredRotation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +286,16 @@ public class InertiaRotationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DesiredRotation.
+     *
+     * @param DesiredRotation the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.DesiredRotation" target="_top">.NET documentation</a>
+     */
     public void setDesiredRotation(double DesiredRotation) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +306,13 @@ public class InertiaRotationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialVelocity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.InitialVelocity" target="_top">.NET documentation</a>
+     */
     public double getInitialVelocity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +353,13 @@ public class InertiaRotationBehavior extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialVelocity.
+     *
+     * @param InitialVelocity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.InertiaRotationBehavior.InitialVelocity" target="_top">.NET documentation</a>
+     */
     public void setInitialVelocity(double InitialVelocity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

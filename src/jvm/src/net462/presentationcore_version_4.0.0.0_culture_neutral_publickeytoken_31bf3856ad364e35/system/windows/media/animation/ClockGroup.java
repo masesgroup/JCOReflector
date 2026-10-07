@@ -101,7 +101,10 @@ public class ClockGroup extends system.windows.media.animation.Clock  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ClockGroup(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -160,6 +163,13 @@ public class ClockGroup extends system.windows.media.animation.Clock  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Children.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ClockGroup.Children" target="_top">.NET documentation</a>
+     */
     public ClockCollection getChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +185,13 @@ public class ClockGroup extends system.windows.media.animation.Clock  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TimelineNewClockGroup.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ClockGroup.TimelineNewClockGroup" target="_top">.NET documentation</a>
+     */
     public TimelineGroup getTimelineNewClockGroup() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

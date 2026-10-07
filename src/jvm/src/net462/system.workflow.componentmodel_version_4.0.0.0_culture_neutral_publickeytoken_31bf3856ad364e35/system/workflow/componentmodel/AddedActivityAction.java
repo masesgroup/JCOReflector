@@ -101,7 +101,10 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public AddedActivityAction(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.AddedActivityAction.-ctor" target="_top">.NET documentation</a>
+     */
     public AddedActivityAction() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,23 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param compositeActivity the argument of type {@code CompositeActivity}
+     * @param activityAdded the argument of type {@code Activity}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.AddedActivityAction.-ctor" target="_top">.NET documentation</a>
+     */
     public AddedActivityAction(CompositeActivity compositeActivity, Activity activityAdded) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +202,13 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Index.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.AddedActivityAction.Index" target="_top">.NET documentation</a>
+     */
     public int getIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +249,13 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
         }
     }
 
+    /**
+     * Sets the value of the .NET property Index.
+     *
+     * @param Index the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.AddedActivityAction.Index" target="_top">.NET documentation</a>
+     */
     public void setIndex(int Index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +266,13 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
         }
     }
 
+    /**
+     * Gets the value of the .NET property AddedActivity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.AddedActivityAction.AddedActivity" target="_top">.NET documentation</a>
+     */
     public Activity getAddedActivity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +288,13 @@ public class AddedActivityAction extends system.workflow.componentmodel.Activity
         }
     }
 
+    /**
+     * Sets the value of the .NET property AddedActivity.
+     *
+     * @param AddedActivity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.AddedActivityAction.AddedActivity" target="_top">.NET documentation</a>
+     */
     public void setAddedActivity(Activity AddedActivity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

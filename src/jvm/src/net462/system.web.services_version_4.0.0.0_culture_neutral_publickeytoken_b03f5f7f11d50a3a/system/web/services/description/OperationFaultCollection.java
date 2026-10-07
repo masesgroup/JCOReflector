@@ -100,7 +100,10 @@ public class OperationFaultCollection extends system.web.services.description.Se
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public OperationFaultCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class OperationFaultCollection extends system.web.services.description.Se
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param operationFaultMessage the argument of type {@code OperationFault}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationFaultCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class OperationFaultCollection extends system.web.services.description.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param operationFaultMessage the argument of type {@code OperationFault}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationFaultCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class OperationFaultCollection extends system.web.services.description.Se
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param operationFaultMessage the argument of type {@code OperationFault}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationFaultCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class OperationFaultCollection extends system.web.services.description.Se
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code OperationFault[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationFaultCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(OperationFault[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class OperationFaultCollection extends system.web.services.description.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param operationFaultMessage the argument of type {@code OperationFault}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationFaultCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class OperationFaultCollection extends system.web.services.description.Se
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param operationFaultMessage the argument of type {@code OperationFault}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.OperationFaultCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(OperationFault operationFaultMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

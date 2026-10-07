@@ -100,7 +100,10 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SendMessageContent(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.-ctor" target="_top">.NET documentation</a>
+     */
     public SendMessageContent() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -157,6 +166,13 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code InArgument}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.-ctor" target="_top">.NET documentation</a>
+     */
     public SendMessageContent(InArgument message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +183,14 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param message the argument of type {@code InArgument}
+     * @param declaredMessageType the argument of type {@code NetType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.-ctor" target="_top">.NET documentation</a>
+     */
     public SendMessageContent(InArgument message, NetType declaredMessageType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +205,13 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeDeclaredMessageType.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.ShouldSerializeDeclaredMessageType" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeDeclaredMessageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.Message" target="_top">.NET documentation</a>
+     */
     public InArgument getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +252,13 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(InArgument Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +269,13 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
         }
     }
 
+    /**
+     * Gets the value of the .NET property DeclaredMessageType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType" target="_top">.NET documentation</a>
+     */
     public NetType getDeclaredMessageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +291,13 @@ public class SendMessageContent extends system.servicemodel.activities.SendConte
         }
     }
 
+    /**
+     * Sets the value of the .NET property DeclaredMessageType.
+     *
+     * @param DeclaredMessageType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendMessageContent.DeclaredMessageType" target="_top">.NET documentation</a>
+     */
     public void setDeclaredMessageType(NetType DeclaredMessageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

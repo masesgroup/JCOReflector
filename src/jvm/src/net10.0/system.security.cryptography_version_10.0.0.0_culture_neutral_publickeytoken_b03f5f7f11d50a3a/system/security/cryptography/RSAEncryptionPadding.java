@@ -101,7 +101,10 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RSAEncryptionPadding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class RSAEncryptionPadding extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Equals.
+     *
+     * @param other the argument of type {@code RSAEncryptionPadding}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.Equals" target="_top">.NET documentation</a>
+     */
     public boolean Equals(RSAEncryptionPadding other) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -170,6 +183,17 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateOaep.
+     *
+     * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.CreateOaep" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding CreateOaep(HashAlgorithmName hashAlgorithm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -189,6 +213,13 @@ public class RSAEncryptionPadding extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property OaepHashAlgorithm.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepHashAlgorithm" target="_top">.NET documentation</a>
+     */
     public HashAlgorithmName getOaepHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +235,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA1" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA1() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -219,6 +257,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA256" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +279,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA3_256.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA3_256" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA3_256() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +301,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA3_384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA3_384" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA3_384() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -264,6 +323,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA3_512.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA3_512" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA3_512() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -279,6 +345,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA384.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA384" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA384() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -294,6 +367,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OaepSHA512.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.OaepSHA512" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getOaepSHA512() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -309,6 +389,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Pkcs1.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.Pkcs1" target="_top">.NET documentation</a>
+     */
     public static RSAEncryptionPadding getPkcs1() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -324,6 +411,13 @@ public class RSAEncryptionPadding extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Mode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.RSAEncryptionPadding.Mode" target="_top">.NET documentation</a>
+     */
     public RSAEncryptionPaddingMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntitiesDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public EntitiesDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,13 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param entityGroupList the argument of type {@code Collection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public EntitiesDescriptor(Collection_1 entityGroupList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +185,14 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param entityList the argument of type {@code Collection_1}
+     * @param entityGroupList the argument of type {@code Collection_1}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public EntitiesDescriptor(Collection_1 entityList, Collection_1 entityGroupList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +211,13 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChildEntityGroups.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.ChildEntityGroups" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getChildEntityGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +233,13 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChildEntities.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.ChildEntities" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getChildEntities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +255,13 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
         }
     }
 
+    /**
+     * Gets the value of the .NET property Name.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.Name" target="_top">.NET documentation</a>
+     */
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +276,13 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
         }
     }
 
+    /**
+     * Sets the value of the .NET property Name.
+     *
+     * @param Name the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.Name" target="_top">.NET documentation</a>
+     */
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

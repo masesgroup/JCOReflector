@@ -99,7 +99,10 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SplitterCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,16 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
     public SplitterCancelEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouseCursorX the argument of type {@code int}
+     * @param mouseCursorY the argument of type {@code int}
+     * @param splitX the argument of type {@code int}
+     * @param splitY the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public SplitterCancelEventArgs(int mouseCursorX, int mouseCursorY, int splitX, int splitY) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +181,13 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MouseCursorX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.MouseCursorX" target="_top">.NET documentation</a>
+     */
     public int getMouseCursorX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +228,13 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property MouseCursorY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.MouseCursorY" target="_top">.NET documentation</a>
+     */
     public int getMouseCursorY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +275,13 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property SplitX.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.SplitX" target="_top">.NET documentation</a>
+     */
     public int getSplitX() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +322,13 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Sets the value of the .NET property SplitX.
+     *
+     * @param SplitX the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.SplitX" target="_top">.NET documentation</a>
+     */
     public void setSplitX(int SplitX) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +339,13 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Gets the value of the .NET property SplitY.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.SplitY" target="_top">.NET documentation</a>
+     */
     public int getSplitY() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -338,6 +386,13 @@ public class SplitterCancelEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Sets the value of the .NET property SplitY.
+     *
+     * @param SplitY the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.SplitterCancelEventArgs.SplitY" target="_top">.NET documentation</a>
+     */
     public void setSplitY(int SplitY) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

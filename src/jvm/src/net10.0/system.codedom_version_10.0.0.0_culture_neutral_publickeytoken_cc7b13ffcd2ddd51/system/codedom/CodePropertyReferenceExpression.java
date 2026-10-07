@@ -99,7 +99,10 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodePropertyReferenceExpression(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodePropertyReferenceExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodePropertyReferenceExpression() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,14 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetObject the argument of type {@code CodeExpression}
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodePropertyReferenceExpression.-ctor" target="_top">.NET documentation</a>
+     */
     public CodePropertyReferenceExpression(CodeExpression targetObject, java.lang.String propertyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,13 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TargetObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodePropertyReferenceExpression.TargetObject" target="_top">.NET documentation</a>
+     */
     public CodeExpression getTargetObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +213,13 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
         }
     }
 
+    /**
+     * Sets the value of the .NET property TargetObject.
+     *
+     * @param TargetObject the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodePropertyReferenceExpression.TargetObject" target="_top">.NET documentation</a>
+     */
     public void setTargetObject(CodeExpression TargetObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodePropertyReferenceExpression.PropertyName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +251,13 @@ public class CodePropertyReferenceExpression extends system.codedom.CodeExpressi
         }
     }
 
+    /**
+     * Sets the value of the .NET property PropertyName.
+     *
+     * @param PropertyName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodePropertyReferenceExpression.PropertyName" target="_top">.NET documentation</a>
+     */
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

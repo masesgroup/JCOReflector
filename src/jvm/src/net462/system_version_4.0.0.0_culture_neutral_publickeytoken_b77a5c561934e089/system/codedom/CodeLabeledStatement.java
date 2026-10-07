@@ -99,7 +99,10 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeLabeledStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeLabeledStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param label the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeLabeledStatement(java.lang.String label) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +182,14 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param label the argument of type {@code java.lang.String}
+     * @param statement the argument of type {@code CodeStatement}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeLabeledStatement(java.lang.String label, CodeStatement statement) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +208,13 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Statement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.Statement" target="_top">.NET documentation</a>
+     */
     public CodeStatement getStatement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +230,13 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Statement.
+     *
+     * @param Statement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.Statement" target="_top">.NET documentation</a>
+     */
     public void setStatement(CodeStatement Statement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +247,13 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Label.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.Label" target="_top">.NET documentation</a>
+     */
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +268,13 @@ public class CodeLabeledStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Label.
+     *
+     * @param Label the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeLabeledStatement.Label" target="_top">.NET documentation</a>
+     */
     public void setLabel(java.lang.String Label) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

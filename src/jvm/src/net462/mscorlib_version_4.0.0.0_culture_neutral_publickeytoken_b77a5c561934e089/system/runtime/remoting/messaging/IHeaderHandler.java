@@ -52,5 +52,11 @@ import system.runtime.remoting.messaging.Header;
  * @version 2.0.0.0
  */
 public interface IHeaderHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param headers the .NET argument of type {@code System.Runtime.Remoting.Messaging.Header[]}
+     * @return the value returned to the CLR
+     */
     public NetObject Invoke(Header[] headers);
 }

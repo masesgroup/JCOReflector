@@ -98,7 +98,10 @@ public class Renewing extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Renewing(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class Renewing extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Renewing.-ctor" target="_top">.NET documentation</a>
+     */
     public Renewing() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,14 @@ public class Renewing extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param allowRenewal the argument of type {@code boolean}
+     * @param okForRenewalAfterExpiration the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Renewing.-ctor" target="_top">.NET documentation</a>
+     */
     public Renewing(boolean allowRenewal, boolean okForRenewalAfterExpiration) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,6 +190,13 @@ public class Renewing extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowRenewal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Renewing.AllowRenewal" target="_top">.NET documentation</a>
+     */
     public boolean getAllowRenewal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +211,13 @@ public class Renewing extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowRenewal.
+     *
+     * @param AllowRenewal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Renewing.AllowRenewal" target="_top">.NET documentation</a>
+     */
     public void setAllowRenewal(boolean AllowRenewal) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -197,6 +228,13 @@ public class Renewing extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OkForRenewalAfterExpiration.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Renewing.OkForRenewalAfterExpiration" target="_top">.NET documentation</a>
+     */
     public boolean getOkForRenewalAfterExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +249,13 @@ public class Renewing extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OkForRenewalAfterExpiration.
+     *
+     * @param OkForRenewalAfterExpiration the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Renewing.OkForRenewalAfterExpiration" target="_top">.NET documentation</a>
+     */
     public void setOkForRenewalAfterExpiration(boolean OkForRenewalAfterExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -100,7 +100,10 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UCOMIStreamImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Clone.
+     *
+     * @param ppstm the argument of type {@code JCORefOut<UCOMIStream>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIStream.Clone" target="_top">.NET documentation</a>
+     */
     public void Clone(JCORefOut<UCOMIStream> ppstm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
 
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @param grfCommitFlags the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIStream.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit(int grfCommitFlags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +179,15 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
 
+    /**
+     * Invokes the .NET member LockRegion.
+     *
+     * @param libOffset the argument of type {@code long}
+     * @param cb the argument of type {@code long}
+     * @param dwLockType the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIStream.LockRegion" target="_top">.NET documentation</a>
+     */
     public void LockRegion(long libOffset, long cb, int dwLockType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +198,12 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
 
+    /**
+     * Invokes the .NET member Revert.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIStream.Revert" target="_top">.NET documentation</a>
+     */
     public void Revert() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +214,13 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
 
+    /**
+     * Invokes the .NET member SetSize.
+     *
+     * @param libNewSize the argument of type {@code long}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIStream.SetSize" target="_top">.NET documentation</a>
+     */
     public void SetSize(long libNewSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +231,15 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
 
+    /**
+     * Invokes the .NET member UnlockRegion.
+     *
+     * @param libOffset the argument of type {@code long}
+     * @param cb the argument of type {@code long}
+     * @param dwLockType the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.UCOMIStream.UnlockRegion" target="_top">.NET documentation</a>
+     */
     public void UnlockRegion(long libOffset, long cb, int dwLockType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

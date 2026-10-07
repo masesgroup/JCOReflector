@@ -55,5 +55,14 @@ import system.AsyncCallback;
  * @version 2.0.0.0
  */
 public interface IBeginEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.EventArgs}
+     * @param cb the .NET argument of type {@code System.AsyncCallback}
+     * @param extraData the .NET argument of type {@code System.Object}
+     * @return the value returned to the CLR
+     */
     public IAsyncResult Invoke(NetObject sender, EventArgs e, AsyncCallback cb, NetObject extraData);
 }

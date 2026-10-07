@@ -102,7 +102,10 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TextEncoderSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class TextEncoderSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public TextEncoderSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param other the argument of type {@code TextEncoderSettings}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public TextEncoderSettings(TextEncoderSettings other) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +187,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param allowedRanges the argument of type {@code UnicodeRange...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public TextEncoderSettings(UnicodeRange... allowedRanges) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +210,13 @@ public class TextEncoderSettings extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAllowedCodePoints.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.GetAllowedCodePoints" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAllowedCodePoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +232,13 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowCharacter.
+     *
+     * @param character the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.AllowCharacter" target="_top">.NET documentation</a>
+     */
     public void AllowCharacter(char character) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +249,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowCharacters.
+     *
+     * @param characters the argument of type {@code char...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.AllowCharacters" target="_top">.NET documentation</a>
+     */
     public void AllowCharacters(char... characters) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +268,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowCharacters.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.AllowCharacters" target="_top">.NET documentation</a>
+     */
     public void AllowCharacters(JCORefOut dupParam0) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -228,6 +287,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowCodePoints.
+     *
+     * @param codePoints the argument of type {@code IEnumerable_1}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.AllowCodePoints" target="_top">.NET documentation</a>
+     */
     public void AllowCodePoints(IEnumerable_1 codePoints) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +306,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowRange.
+     *
+     * @param range the argument of type {@code UnicodeRange}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.AllowRange" target="_top">.NET documentation</a>
+     */
     public void AllowRange(UnicodeRange range) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +325,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AllowRanges.
+     *
+     * @param ranges the argument of type {@code UnicodeRange...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.AllowRanges" target="_top">.NET documentation</a>
+     */
     public void AllowRanges(UnicodeRange... ranges) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +344,12 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Clear.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.Clear" target="_top">.NET documentation</a>
+     */
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +360,13 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForbidCharacter.
+     *
+     * @param character the argument of type {@code char}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacter" target="_top">.NET documentation</a>
+     */
     public void ForbidCharacter(char character) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +377,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForbidCharacters.
+     *
+     * @param characters the argument of type {@code char...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacters" target="_top">.NET documentation</a>
+     */
     public void ForbidCharacters(char... characters) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +396,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForbidCharacters.
+     *
+     * @param dupParam0 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacters" target="_top">.NET documentation</a>
+     */
     public void ForbidCharacters(JCORefOut dupParam0) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +415,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForbidRange.
+     *
+     * @param range the argument of type {@code UnicodeRange}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.ForbidRange" target="_top">.NET documentation</a>
+     */
     public void ForbidRange(UnicodeRange range) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +434,15 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ForbidRanges.
+     *
+     * @param ranges the argument of type {@code UnicodeRange...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Encodings.Web.TextEncoderSettings.ForbidRanges" target="_top">.NET documentation</a>
+     */
     public void ForbidRanges(UnicodeRange... ranges) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

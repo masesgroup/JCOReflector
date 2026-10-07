@@ -105,7 +105,10 @@ public class SessionStateUtility extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SessionStateUtility(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class SessionStateUtility extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsSessionStateReadOnly.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly" target="_top">.NET documentation</a>
+     */
     public static boolean IsSessionStateReadOnly(HttpContext context) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +183,14 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSessionStateRequired.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.IsSessionStateRequired" target="_top">.NET documentation</a>
+     */
     public static boolean IsSessionStateRequired(HttpContext context) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +205,18 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSessionStaticObjects.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects" target="_top">.NET documentation</a>
+     */
     public static HttpStaticObjectsCollection GetSessionStaticObjects(HttpContext context) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +232,22 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetHttpSessionStateFromContext.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.GetHttpSessionStateFromContext" target="_top">.NET documentation</a>
+     */
     public static IHttpSessionState GetHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +263,25 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member AddHttpSessionStateToContext.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @param container the argument of type {@code IHttpSessionState}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext" target="_top">.NET documentation</a>
+     */
     public static void AddHttpSessionStateToContext(HttpContext context, IHttpSessionState container) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -226,6 +292,32 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RaiseSessionEnd.
+     *
+     * @param session the argument of type {@code IHttpSessionState}
+     * @param eventSource the argument of type {@code NetObject}
+     * @param eventArgs the argument of type {@code EventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.web.HttpException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.configuration.ConfigurationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.threading.AbandonedMutexException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.RaiseSessionEnd" target="_top">.NET documentation</a>
+     */
     public static void RaiseSessionEnd(IHttpSessionState session, NetObject eventSource, EventArgs eventArgs) throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.web.HttpException, system.ArgumentOutOfRangeException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -236,6 +328,17 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member RemoveHttpSessionStateFromContext.
+     *
+     * @param context the argument of type {@code HttpContext}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.RemoveHttpSessionStateFromContext" target="_top">.NET documentation</a>
+     */
     public static void RemoveHttpSessionStateFromContext(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +353,13 @@ public class SessionStateUtility extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SerializationSurrogateSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.SerializationSurrogateSelector" target="_top">.NET documentation</a>
+     */
     public static ISurrogateSelector getSerializationSurrogateSelector() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -265,6 +375,13 @@ public class SessionStateUtility extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializationSurrogateSelector.
+     *
+     * @param SerializationSurrogateSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.SessionState.SessionStateUtility.SerializationSurrogateSelector" target="_top">.NET documentation</a>
+     */
     public static void setSerializationSurrogateSelector(ISurrogateSelector SerializationSurrogateSelector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

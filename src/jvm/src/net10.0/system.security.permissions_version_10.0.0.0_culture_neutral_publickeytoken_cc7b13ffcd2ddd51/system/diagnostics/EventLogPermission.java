@@ -103,7 +103,10 @@ public class EventLogPermission extends system.security.permissions.ResourcePerm
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventLogPermission(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class EventLogPermission extends system.security.permissions.ResourcePerm
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public EventLogPermission() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class EventLogPermission extends system.security.permissions.ResourcePerm
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccess the argument of type {@code EventLogPermissionAccess}
+     * @param machineName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public EventLogPermission(EventLogPermissionAccess permissionAccess, java.lang.String machineName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +187,13 @@ public class EventLogPermission extends system.security.permissions.ResourcePerm
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param permissionAccessEntries the argument of type {@code EventLogPermissionEntry[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public EventLogPermission(EventLogPermissionEntry[] permissionAccessEntries) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +204,13 @@ public class EventLogPermission extends system.security.permissions.ResourcePerm
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param state the argument of type {@code PermissionState}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermission.-ctor" target="_top">.NET documentation</a>
+     */
     public EventLogPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -198,6 +229,13 @@ public class EventLogPermission extends system.security.permissions.ResourcePerm
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PermissionEntries.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.EventLogPermission.PermissionEntries" target="_top">.NET documentation</a>
+     */
     public EventLogPermissionEntryCollection getPermissionEntries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class EmptySecurityKeyIdentifierClause extends system.identitymodel.token
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EmptySecurityKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class EmptySecurityKeyIdentifierClause extends system.identitymodel.token
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EmptySecurityKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
+     */
     public EmptySecurityKeyIdentifierClause() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class EmptySecurityKeyIdentifierClause extends system.identitymodel.token
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param context the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EmptySecurityKeyIdentifierClause.-ctor" target="_top">.NET documentation</a>
+     */
     public EmptySecurityKeyIdentifierClause(NetObject context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class EmptySecurityKeyIdentifierClause extends system.identitymodel.token
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Context.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.EmptySecurityKeyIdentifierClause.Context" target="_top">.NET documentation</a>
+     */
     public NetObject getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

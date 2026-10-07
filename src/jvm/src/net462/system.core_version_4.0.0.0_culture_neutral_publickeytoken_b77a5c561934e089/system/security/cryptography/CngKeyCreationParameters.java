@@ -103,7 +103,10 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CngKeyCreationParameters(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,22 @@ public class CngKeyCreationParameters extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.-ctor" target="_top">.NET documentation</a>
+     */
     public CngKeyCreationParameters() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +187,13 @@ public class CngKeyCreationParameters extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExportPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.ExportPolicy" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getExportPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +209,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExportPolicy.
+     *
+     * @param ExportPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.ExportPolicy" target="_top">.NET documentation</a>
+     */
     public void setExportPolicy(Nullable_1 ExportPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyUsage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.KeyUsage" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getKeyUsage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +248,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyUsage.
+     *
+     * @param KeyUsage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.KeyUsage" target="_top">.NET documentation</a>
+     */
     public void setKeyUsage(Nullable_1 KeyUsage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +265,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KeyCreationOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.KeyCreationOptions" target="_top">.NET documentation</a>
+     */
     public CngKeyCreationOptions getKeyCreationOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +287,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property KeyCreationOptions.
+     *
+     * @param KeyCreationOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.KeyCreationOptions" target="_top">.NET documentation</a>
+     */
     public void setKeyCreationOptions(CngKeyCreationOptions KeyCreationOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +304,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Parameters.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.Parameters" target="_top">.NET documentation</a>
+     */
     public CngPropertyCollection getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +326,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Provider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.Provider" target="_top">.NET documentation</a>
+     */
     public CngProvider getProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +348,15 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Provider.
+     *
+     * @param Provider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.Provider" target="_top">.NET documentation</a>
+     */
     public void setProvider(CngProvider Provider) throws Throwable, system.NullReferenceException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +367,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UIPolicy.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.UIPolicy" target="_top">.NET documentation</a>
+     */
     public CngUIPolicy getUIPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +389,13 @@ public class CngKeyCreationParameters extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UIPolicy.
+     *
+     * @param UIPolicy the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.UIPolicy" target="_top">.NET documentation</a>
+     */
     public void setUIPolicy(CngUIPolicy UIPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

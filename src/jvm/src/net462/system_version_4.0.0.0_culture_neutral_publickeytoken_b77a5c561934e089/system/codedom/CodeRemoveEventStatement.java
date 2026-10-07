@@ -101,7 +101,10 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeRemoveEventStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeRemoveEventStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,14 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param eventRef the argument of type {@code CodeEventReferenceExpression}
+     * @param listener the argument of type {@code CodeExpression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeRemoveEventStatement(CodeEventReferenceExpression eventRef, CodeExpression listener) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +185,15 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param targetObject the argument of type {@code CodeExpression}
+     * @param eventName the argument of type {@code java.lang.String}
+     * @param listener the argument of type {@code CodeExpression}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeRemoveEventStatement(CodeExpression targetObject, java.lang.String eventName, CodeExpression listener) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +212,13 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Event.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.Event" target="_top">.NET documentation</a>
+     */
     public CodeEventReferenceExpression getEvent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +234,13 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Event.
+     *
+     * @param Event the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.Event" target="_top">.NET documentation</a>
+     */
     public void setEvent(CodeEventReferenceExpression Event) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +251,13 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Listener.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.Listener" target="_top">.NET documentation</a>
+     */
     public CodeExpression getListener() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +273,13 @@ public class CodeRemoveEventStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Listener.
+     *
+     * @param Listener the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeRemoveEventStatement.Listener" target="_top">.NET documentation</a>
+     */
     public void setListener(CodeExpression Listener) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

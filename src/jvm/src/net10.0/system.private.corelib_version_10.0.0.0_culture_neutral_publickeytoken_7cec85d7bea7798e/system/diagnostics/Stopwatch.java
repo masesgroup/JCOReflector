@@ -100,7 +100,10 @@ public class Stopwatch extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Stopwatch(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class Stopwatch extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.-ctor" target="_top">.NET documentation</a>
+     */
     public Stopwatch() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +170,13 @@ public class Stopwatch extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetTimestamp.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.GetTimestamp" target="_top">.NET documentation</a>
+     */
     public static long GetTimestamp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +217,13 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member StartNew.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.StartNew" target="_top">.NET documentation</a>
+     */
     public static Stopwatch StartNew() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +239,15 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElapsedTime.
+     *
+     * @param startingTimestamp the argument of type {@code long}
+     * @param endingTimestamp the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.GetElapsedTime" target="_top">.NET documentation</a>
+     */
     public static TimeSpan GetElapsedTime(long startingTimestamp, long endingTimestamp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -231,6 +263,14 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetElapsedTime.
+     *
+     * @param startingTimestamp the argument of type {@code long}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.GetElapsedTime" target="_top">.NET documentation</a>
+     */
     public static TimeSpan GetElapsedTime(long startingTimestamp) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -246,6 +286,12 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Reset.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.Reset" target="_top">.NET documentation</a>
+     */
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +302,12 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Restart.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.Restart" target="_top">.NET documentation</a>
+     */
     public void Restart() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +318,12 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.Start" target="_top">.NET documentation</a>
+     */
     public void Start() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +334,12 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Stop.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.Stop" target="_top">.NET documentation</a>
+     */
     public void Stop() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +354,13 @@ public class Stopwatch extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property IsRunning.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.IsRunning" target="_top">.NET documentation</a>
+     */
     public boolean getIsRunning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +375,13 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElapsedMilliseconds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.ElapsedMilliseconds" target="_top">.NET documentation</a>
+     */
     public long getElapsedMilliseconds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -344,6 +422,13 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ElapsedTicks.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.ElapsedTicks" target="_top">.NET documentation</a>
+     */
     public long getElapsedTicks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +469,13 @@ public class Stopwatch extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Elapsed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Stopwatch.Elapsed" target="_top">.NET documentation</a>
+     */
     public TimeSpan getElapsed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

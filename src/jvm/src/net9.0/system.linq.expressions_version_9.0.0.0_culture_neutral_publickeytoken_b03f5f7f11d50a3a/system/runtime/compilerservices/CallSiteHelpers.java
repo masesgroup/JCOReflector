@@ -99,7 +99,10 @@ public class CallSiteHelpers extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CallSiteHelpers(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,17 @@ public class CallSiteHelpers extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsInternalFrame.
+     *
+     * @param mb the argument of type {@code MethodBase}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteHelpers.IsInternalFrame" target="_top">.NET documentation</a>
+     */
     public static boolean IsInternalFrame(MethodBase mb) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

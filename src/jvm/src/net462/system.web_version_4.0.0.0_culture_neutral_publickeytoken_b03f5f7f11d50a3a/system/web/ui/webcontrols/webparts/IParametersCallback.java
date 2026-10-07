@@ -53,5 +53,10 @@ import system.collections.IDictionaryImplementation;
  * @version 2.0.0.0
  */
 public interface IParametersCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param parametersData the .NET argument of type {@code System.Collections.IDictionary}
+     */
     public void Invoke(IDictionary parametersData);
 }

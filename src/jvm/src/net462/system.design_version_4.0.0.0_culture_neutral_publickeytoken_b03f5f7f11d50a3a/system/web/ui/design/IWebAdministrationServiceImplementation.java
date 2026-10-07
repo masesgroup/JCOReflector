@@ -100,7 +100,10 @@ public class IWebAdministrationServiceImplementation extends NetObject implement
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWebAdministrationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IWebAdministrationServiceImplementation extends NetObject implement
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Start.
+     *
+     * @param arguments the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.IWebAdministrationService.Start" target="_top">.NET documentation</a>
+     */
     public void Start(IDictionary arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

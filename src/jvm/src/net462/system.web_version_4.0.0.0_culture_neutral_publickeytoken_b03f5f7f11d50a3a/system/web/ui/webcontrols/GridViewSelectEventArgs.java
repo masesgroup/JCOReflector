@@ -99,7 +99,10 @@ public class GridViewSelectEventArgs extends system.componentmodel.CancelEventAr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GridViewSelectEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,13 @@ public class GridViewSelectEventArgs extends system.componentmodel.CancelEventAr
     public GridViewSelectEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param newSelectedIndex the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewSelectEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public GridViewSelectEventArgs(int newSelectedIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +178,13 @@ public class GridViewSelectEventArgs extends system.componentmodel.CancelEventAr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewSelectedIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewSelectEventArgs.NewSelectedIndex" target="_top">.NET documentation</a>
+     */
     public int getNewSelectedIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +225,13 @@ public class GridViewSelectEventArgs extends system.componentmodel.CancelEventAr
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewSelectedIndex.
+     *
+     * @param NewSelectedIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.GridViewSelectEventArgs.NewSelectedIndex" target="_top">.NET documentation</a>
+     */
     public void setNewSelectedIndex(int NewSelectedIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

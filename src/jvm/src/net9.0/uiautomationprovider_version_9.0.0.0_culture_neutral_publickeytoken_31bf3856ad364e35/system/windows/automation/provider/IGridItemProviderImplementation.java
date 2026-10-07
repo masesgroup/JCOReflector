@@ -100,7 +100,10 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IGridItemProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Column.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IGridItemProvider.Column" target="_top">.NET documentation</a>
+     */
     public int getColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +196,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
         }
     }
 
+    /**
+     * Gets the value of the .NET property ColumnSpan.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan" target="_top">.NET documentation</a>
+     */
     public int getColumnSpan() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +243,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
         }
     }
 
+    /**
+     * Gets the value of the .NET property Row.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IGridItemProvider.Row" target="_top">.NET documentation</a>
+     */
     public int getRow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +290,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowSpan.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IGridItemProvider.RowSpan" target="_top">.NET documentation</a>
+     */
     public int getRowSpan() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +337,13 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainingGrid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid" target="_top">.NET documentation</a>
+     */
     public IRawElementProviderSimple getContainingGrid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -99,7 +99,10 @@ public class IComponentEditorPageSiteImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IComponentEditorPageSiteImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,13 @@ public class IComponentEditorPageSiteImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetControl.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IComponentEditorPageSite.GetControl" target="_top">.NET documentation</a>
+     */
     public Control GetControl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +166,12 @@ public class IComponentEditorPageSiteImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member SetDirty.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.IComponentEditorPageSite.SetDirty" target="_top">.NET documentation</a>
+     */
     public void SetDirty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

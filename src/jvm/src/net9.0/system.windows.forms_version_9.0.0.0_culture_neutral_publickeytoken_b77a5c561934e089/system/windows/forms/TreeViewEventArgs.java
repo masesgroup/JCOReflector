@@ -101,7 +101,10 @@ public class TreeViewEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TreeViewEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class TreeViewEventArgs extends system.EventArgs  {
     public TreeViewEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param node the argument of type {@code TreeNode}
+     * @param action the argument of type {@code TreeViewAction}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TreeViewEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TreeViewEventArgs(TreeNode node, TreeViewAction action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +172,13 @@ public class TreeViewEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param node the argument of type {@code TreeNode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TreeViewEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public TreeViewEventArgs(TreeNode node) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +198,13 @@ public class TreeViewEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Node.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TreeViewEventArgs.Node" target="_top">.NET documentation</a>
+     */
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +220,13 @@ public class TreeViewEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TreeViewEventArgs.Action" target="_top">.NET documentation</a>
+     */
     public TreeViewAction getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

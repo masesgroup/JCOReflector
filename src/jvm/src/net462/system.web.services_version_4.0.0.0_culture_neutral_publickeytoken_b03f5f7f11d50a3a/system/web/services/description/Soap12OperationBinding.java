@@ -99,7 +99,10 @@ public class Soap12OperationBinding extends system.web.services.description.Soap
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Soap12OperationBinding(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class Soap12OperationBinding extends system.web.services.description.Soap
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Soap12OperationBinding.-ctor" target="_top">.NET documentation</a>
+     */
     public Soap12OperationBinding() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class Soap12OperationBinding extends system.web.services.description.Soap
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property SoapActionRequired.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Soap12OperationBinding.SoapActionRequired" target="_top">.NET documentation</a>
+     */
     public boolean getSoapActionRequired() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class Soap12OperationBinding extends system.web.services.description.Soap
         }
     }
 
+    /**
+     * Sets the value of the .NET property SoapActionRequired.
+     *
+     * @param SoapActionRequired the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.Soap12OperationBinding.SoapActionRequired" target="_top">.NET documentation</a>
+     */
     public void setSoapActionRequired(boolean SoapActionRequired) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

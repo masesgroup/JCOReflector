@@ -106,7 +106,10 @@ public class EventAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,13 @@ public class EventAttribute extends system.Attribute  {
     public EventAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param eventId the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EventAttribute(int eventId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +185,13 @@ public class EventAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Version" target="_top">.NET documentation</a>
+     */
     public byte getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +232,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(byte Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +249,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EventId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.EventId" target="_top">.NET documentation</a>
+     */
     public int getEventId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +296,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ActivityOptions.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.ActivityOptions" target="_top">.NET documentation</a>
+     */
     public EventActivityOptions getActivityOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -280,6 +318,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ActivityOptions.
+     *
+     * @param ActivityOptions the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.ActivityOptions" target="_top">.NET documentation</a>
+     */
     public void setActivityOptions(EventActivityOptions ActivityOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +335,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Channel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Channel" target="_top">.NET documentation</a>
+     */
     public EventChannel getChannel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +357,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Channel.
+     *
+     * @param Channel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Channel" target="_top">.NET documentation</a>
+     */
     public void setChannel(EventChannel Channel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +374,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Keywords.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Keywords" target="_top">.NET documentation</a>
+     */
     public EventKeywords getKeywords() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +396,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Keywords.
+     *
+     * @param Keywords the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Keywords" target="_top">.NET documentation</a>
+     */
     public void setKeywords(EventKeywords Keywords) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +413,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Level.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Level" target="_top">.NET documentation</a>
+     */
     public EventLevel getLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +435,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Level.
+     *
+     * @param Level the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Level" target="_top">.NET documentation</a>
+     */
     public void setLevel(EventLevel Level) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +452,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Opcode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Opcode" target="_top">.NET documentation</a>
+     */
     public EventOpcode getOpcode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +474,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Opcode.
+     *
+     * @param Opcode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Opcode" target="_top">.NET documentation</a>
+     */
     public void setOpcode(EventOpcode Opcode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +491,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tags.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Tags" target="_top">.NET documentation</a>
+     */
     public EventTags getTags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +513,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Tags.
+     *
+     * @param Tags the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Tags" target="_top">.NET documentation</a>
+     */
     public void setTags(EventTags Tags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +530,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Task.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Task" target="_top">.NET documentation</a>
+     */
     public EventTask getTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +552,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Task.
+     *
+     * @param Task the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Task" target="_top">.NET documentation</a>
+     */
     public void setTask(EventTask Task) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -440,6 +569,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Message.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Message" target="_top">.NET documentation</a>
+     */
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +590,13 @@ public class EventAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Message.
+     *
+     * @param Message the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventAttribute.Message" target="_top">.NET documentation</a>
+     */
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

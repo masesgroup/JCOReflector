@@ -100,7 +100,10 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ServiceCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,14 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param service the argument of type {@code Service}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(Service service) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +180,14 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Add.
+     *
+     * @param service the argument of type {@code Service}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceCollection.Add" target="_top">.NET documentation</a>
+     */
     public int Add(Service service) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +228,14 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param service the argument of type {@code Service}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(Service service) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +276,14 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param array the argument of type {@code Service[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(Service[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +294,14 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Insert.
+     *
+     * @param index the argument of type {@code int}
+     * @param service the argument of type {@code Service}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceCollection.Insert" target="_top">.NET documentation</a>
+     */
     public void Insert(int index, Service service) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -269,6 +312,13 @@ public class ServiceCollection extends system.web.services.description.ServiceDe
         }
     }
 
+    /**
+     * Invokes the .NET member Remove.
+     *
+     * @param service the argument of type {@code Service}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Description.ServiceCollection.Remove" target="_top">.NET documentation</a>
+     */
     public void Remove(Service service) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

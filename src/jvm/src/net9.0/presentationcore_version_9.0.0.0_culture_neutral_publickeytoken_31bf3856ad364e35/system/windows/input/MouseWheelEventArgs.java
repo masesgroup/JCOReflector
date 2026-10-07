@@ -100,7 +100,10 @@ public class MouseWheelEventArgs extends system.windows.input.MouseEventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MouseWheelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,20 @@ public class MouseWheelEventArgs extends system.windows.input.MouseEventArgs  {
     public MouseWheelEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param mouse the argument of type {@code MouseDevice}
+     * @param timestamp the argument of type {@code int}
+     * @param delta the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseWheelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public MouseWheelEventArgs(MouseDevice mouse, int timestamp, int delta) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +186,13 @@ public class MouseWheelEventArgs extends system.windows.input.MouseEventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Delta.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.MouseWheelEventArgs.Delta" target="_top">.NET documentation</a>
+     */
     public int getDelta() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

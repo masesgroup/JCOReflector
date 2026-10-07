@@ -98,7 +98,10 @@ public class SecurityKey extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,14 @@ public class SecurityKey extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsAsymmetricAlgorithm.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.IsAsymmetricAlgorithm" target="_top">.NET documentation</a>
+     */
     public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +176,14 @@ public class SecurityKey extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSupportedAlgorithm.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm" target="_top">.NET documentation</a>
+     */
     public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +198,14 @@ public class SecurityKey extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member IsSymmetricAlgorithm.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.IsSymmetricAlgorithm" target="_top">.NET documentation</a>
+     */
     public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +220,15 @@ public class SecurityKey extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DecryptKey.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @param keyData the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.DecryptKey" target="_top">.NET documentation</a>
+     */
     public byte[] DecryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +252,15 @@ public class SecurityKey extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DecryptKey.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.DecryptKey" target="_top">.NET documentation</a>
+     */
     public byte[] DecryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +284,15 @@ public class SecurityKey extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EncryptKey.
+     *
+     * @param algorithm the argument of type {@code java.lang.String}
+     * @param keyData the argument of type {@code byte[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.EncryptKey" target="_top">.NET documentation</a>
+     */
     public byte[] EncryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +316,15 @@ public class SecurityKey extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member EncryptKey.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.EncryptKey" target="_top">.NET documentation</a>
+     */
     public byte[] EncryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -289,6 +352,13 @@ public class SecurityKey extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property KeySize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityKey.KeySize" target="_top">.NET documentation</a>
+     */
     public int getKeySize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

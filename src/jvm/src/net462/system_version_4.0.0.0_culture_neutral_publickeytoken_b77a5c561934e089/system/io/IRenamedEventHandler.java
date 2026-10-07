@@ -52,5 +52,11 @@ import system.io.RenamedEventArgs;
  * @version 2.0.0.0
  */
 public interface IRenamedEventHandler {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param sender the .NET argument of type {@code System.Object}
+     * @param e the .NET argument of type {@code System.IO.RenamedEventArgs}
+     */
     public void Invoke(NetObject sender, RenamedEventArgs e);
 }

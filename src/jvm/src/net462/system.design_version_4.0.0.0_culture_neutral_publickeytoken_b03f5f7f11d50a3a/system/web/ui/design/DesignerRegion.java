@@ -101,7 +101,10 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerRegion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
     public DesignerRegion() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerRegion(ControlDesigner designer, java.lang.String name) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -161,6 +173,16 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param designer the argument of type {@code ControlDesigner}
+     * @param name the argument of type {@code java.lang.String}
+     * @param selectable the argument of type {@code boolean}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.-ctor" target="_top">.NET documentation</a>
+     */
     public DesignerRegion(ControlDesigner designer, java.lang.String name, boolean selectable) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +198,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member GetBounds.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.GetBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle GetBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +224,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EnsureSize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.EnsureSize" target="_top">.NET documentation</a>
+     */
     public boolean getEnsureSize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +245,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EnsureSize.
+     *
+     * @param EnsureSize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.EnsureSize" target="_top">.NET documentation</a>
+     */
     public void setEnsureSize(boolean EnsureSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +262,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Highlight.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Highlight" target="_top">.NET documentation</a>
+     */
     public boolean getHighlight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +283,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Highlight.
+     *
+     * @param Highlight the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Highlight" target="_top">.NET documentation</a>
+     */
     public void setHighlight(boolean Highlight) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +300,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Selectable.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Selectable" target="_top">.NET documentation</a>
+     */
     public boolean getSelectable() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +321,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Selectable.
+     *
+     * @param Selectable the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Selectable" target="_top">.NET documentation</a>
+     */
     public void setSelectable(boolean Selectable) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +338,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Selected.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Selected" target="_top">.NET documentation</a>
+     */
     public boolean getSelected() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +359,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Selected.
+     *
+     * @param Selected the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Selected" target="_top">.NET documentation</a>
+     */
     public void setSelected(boolean Selected) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -291,6 +376,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.UserData" target="_top">.NET documentation</a>
+     */
     public NetObject getUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +398,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property UserData.
+     *
+     * @param UserData the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.UserData" target="_top">.NET documentation</a>
+     */
     public void setUserData(NetObject UserData) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +415,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Description.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Description" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +436,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Description.
+     *
+     * @param Description the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.Description" target="_top">.NET documentation</a>
+     */
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +453,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.DisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -354,6 +474,13 @@ public class DesignerRegion extends system.web.ui.design.DesignerObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DisplayName.
+     *
+     * @param DisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.DesignerRegion.DisplayName" target="_top">.NET documentation</a>
+     */
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

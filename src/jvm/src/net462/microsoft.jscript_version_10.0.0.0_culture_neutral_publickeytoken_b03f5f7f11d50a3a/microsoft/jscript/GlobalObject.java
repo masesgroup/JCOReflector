@@ -111,7 +111,10 @@ public class GlobalObject extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GlobalObject(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -166,6 +169,14 @@ public class GlobalObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member isFinite.
+     *
+     * @param number the argument of type {@code double}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.isFinite" target="_top">.NET documentation</a>
+     */
     public static boolean isFinite(double number) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -180,6 +191,27 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member isNaN.
+     *
+     * @param num the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.isNaN" target="_top">.NET documentation</a>
+     */
     public static boolean isNaN(NetObject num) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -194,6 +226,28 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member parseFloat.
+     *
+     * @param string the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.parseFloat" target="_top">.NET documentation</a>
+     */
     public static double parseFloat(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -234,6 +288,29 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member parseInt.
+     *
+     * @param string the argument of type {@code NetObject}
+     * @param radix the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArithmeticException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.parseInt" target="_top">.NET documentation</a>
+     */
     public static double parseInt(NetObject string, NetObject radix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +351,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScriptEngineBuildVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.ScriptEngineBuildVersion" target="_top">.NET documentation</a>
+     */
     public static int ScriptEngineBuildVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -314,6 +398,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScriptEngineMajorVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.ScriptEngineMajorVersion" target="_top">.NET documentation</a>
+     */
     public static int ScriptEngineMajorVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -354,6 +445,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScriptEngineMinorVersion.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.ScriptEngineMinorVersion" target="_top">.NET documentation</a>
+     */
     public static int ScriptEngineMinorVersion() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -394,6 +492,15 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member eval.
+     *
+     * @param x the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.eval" target="_top">.NET documentation</a>
+     */
     public static NetObject eval(NetObject x) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -409,6 +516,28 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetObject.
+     *
+     * @param moniker the argument of type {@code NetObject}
+     * @param progId the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws microsoft.jscript.EndOfFile if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.GetObject" target="_top">.NET documentation</a>
+     */
     public static NetObject GetObject(NetObject moniker, NetObject progId) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.NullReferenceException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -424,6 +553,26 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member decodeURI.
+     *
+     * @param encodedURI the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.decodeURI" target="_top">.NET documentation</a>
+     */
     public static java.lang.String decodeURI(NetObject encodedURI) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -438,6 +587,26 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member decodeURIComponent.
+     *
+     * @param encodedURI the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.decodeURIComponent" target="_top">.NET documentation</a>
+     */
     public static java.lang.String decodeURIComponent(NetObject encodedURI) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -452,6 +621,26 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member encodeURI.
+     *
+     * @param uri the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.encodeURI" target="_top">.NET documentation</a>
+     */
     public static java.lang.String encodeURI(NetObject uri) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -466,6 +655,26 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member encodeURIComponent.
+     *
+     * @param uriComponent the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.encodeURIComponent" target="_top">.NET documentation</a>
+     */
     public static java.lang.String encodeURIComponent(NetObject uriComponent) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -480,6 +689,27 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member escape.
+     *
+     * @param string the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.escape" target="_top">.NET documentation</a>
+     */
     public static java.lang.String escape(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -494,6 +724,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ScriptEngine.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.ScriptEngine" target="_top">.NET documentation</a>
+     */
     public static java.lang.String ScriptEngine() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -508,6 +745,27 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member unescape.
+     *
+     * @param string the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws microsoft.jscript.JScriptException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.unescape" target="_top">.NET documentation</a>
+     */
     public static java.lang.String unescape(NetObject string) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -522,6 +780,12 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CollectGarbage.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.CollectGarbage" target="_top">.NET documentation</a>
+     */
     public static void CollectGarbage() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -536,6 +800,13 @@ public class GlobalObject extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ActiveXObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.ActiveXObject" target="_top">.NET documentation</a>
+     */
     public static ActiveXObjectConstructor getActiveXObject() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -551,6 +822,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Array.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Array" target="_top">.NET documentation</a>
+     */
     public static ArrayConstructor getArray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -566,6 +844,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Boolean.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Boolean" target="_top">.NET documentation</a>
+     */
     public static BooleanConstructor getBoolean() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -581,6 +866,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Date.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Date" target="_top">.NET documentation</a>
+     */
     public static DateConstructor getDate() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -596,6 +888,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Enumerator.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Enumerator" target="_top">.NET documentation</a>
+     */
     public static EnumeratorConstructor getEnumerator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -611,6 +910,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Error.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Error" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -626,6 +932,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EvalError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.EvalError" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getEvalError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -641,6 +954,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RangeError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.RangeError" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getRangeError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -656,6 +976,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ReferenceError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.ReferenceError" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getReferenceError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -671,6 +998,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SyntaxError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.SyntaxError" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getSyntaxError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -686,6 +1020,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.TypeError" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getTypeError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -701,6 +1042,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property URIError.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.URIError" target="_top">.NET documentation</a>
+     */
     public static ErrorConstructor getURIError() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -716,6 +1064,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Function.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Function" target="_top">.NET documentation</a>
+     */
     public static FunctionConstructor getFunction() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -731,6 +1086,21 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Math.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Math" target="_top">.NET documentation</a>
+     */
     public static MathObject getMath() throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -746,6 +1116,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Number.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Number" target="_top">.NET documentation</a>
+     */
     public static NumberConstructor getNumber() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -761,6 +1138,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Object.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.Object" target="_top">.NET documentation</a>
+     */
     public static ObjectConstructor getObject() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -776,6 +1160,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RegExp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.RegExp" target="_top">.NET documentation</a>
+     */
     public static RegExpConstructor getRegExp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -791,6 +1182,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property String.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.String" target="_top">.NET documentation</a>
+     */
     public static StringConstructor getString() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -806,6 +1204,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property VBArray.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.VBArray" target="_top">.NET documentation</a>
+     */
     public static VBArrayConstructor getVBArray() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -821,6 +1226,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property boolean.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getboolean" target="_top">.NET documentation</a>
+     */
     public static NetType getboolean() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -836,6 +1248,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property byte.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getbyte" target="_top">.NET documentation</a>
+     */
     public static NetType getbyte() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -851,6 +1270,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property char.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getchar" target="_top">.NET documentation</a>
+     */
     public static NetType getchar() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -866,6 +1292,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property decimal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getdecimal" target="_top">.NET documentation</a>
+     */
     public static NetType getdecimal() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -881,6 +1314,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property double.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getdouble" target="_top">.NET documentation</a>
+     */
     public static NetType getdouble() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -896,6 +1336,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property float.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getfloat" target="_top">.NET documentation</a>
+     */
     public static NetType getfloat() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -911,6 +1358,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property int.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getint" target="_top">.NET documentation</a>
+     */
     public static NetType getint() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -926,6 +1380,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property long.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getlong" target="_top">.NET documentation</a>
+     */
     public static NetType getlong() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -941,6 +1402,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property sbyte.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getsbyte" target="_top">.NET documentation</a>
+     */
     public static NetType getsbyte() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -956,6 +1424,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property short.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getshort" target="_top">.NET documentation</a>
+     */
     public static NetType getshort() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -971,6 +1446,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property uint.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getuint" target="_top">.NET documentation</a>
+     */
     public static NetType getuint() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -986,6 +1468,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ulong.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getulong" target="_top">.NET documentation</a>
+     */
     public static NetType getulong() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1001,6 +1490,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ushort.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getushort" target="_top">.NET documentation</a>
+     */
     public static NetType getushort() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1016,6 +1512,13 @@ public class GlobalObject extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property void.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.GlobalObject.getvoid" target="_top">.NET documentation</a>
+     */
     public static NetType getvoid() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -98,7 +98,10 @@ public class StrongNamePublicKeyBlob extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public StrongNamePublicKeyBlob(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class StrongNamePublicKeyBlob extends NetObject  {
     public StrongNamePublicKeyBlob() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param publicKey the argument of type {@code byte[]}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.StrongNamePublicKeyBlob.-ctor" target="_top">.NET documentation</a>
+     */
     public StrongNamePublicKeyBlob(byte[] publicKey) throws Throwable {
         try {
             // add reference to assemblyName.dll file

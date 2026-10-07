@@ -103,7 +103,10 @@ public class DialogPropertyValueEditor extends system.activities.presentation.pr
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DialogPropertyValueEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class DialogPropertyValueEditor extends system.activities.presentation.pr
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public DialogPropertyValueEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,14 @@ public class DialogPropertyValueEditor extends system.activities.presentation.pr
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dialogEditorTemplate the argument of type {@code DataTemplate}
+     * @param inlineEditorTemplate the argument of type {@code DataTemplate}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public DialogPropertyValueEditor(DataTemplate dialogEditorTemplate, DataTemplate inlineEditorTemplate) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +191,14 @@ public class DialogPropertyValueEditor extends system.activities.presentation.pr
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShowDialog.
+     *
+     * @param propertyValue the argument of type {@code PropertyValue}
+     * @param commandSource the argument of type {@code IInputElement}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.ShowDialog" target="_top">.NET documentation</a>
+     */
     public void ShowDialog(PropertyValue propertyValue, IInputElement commandSource) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +213,13 @@ public class DialogPropertyValueEditor extends system.activities.presentation.pr
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DialogEditorTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.DialogEditorTemplate" target="_top">.NET documentation</a>
+     */
     public DataTemplate getDialogEditorTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +235,13 @@ public class DialogPropertyValueEditor extends system.activities.presentation.pr
         }
     }
 
+    /**
+     * Sets the value of the .NET property DialogEditorTemplate.
+     *
+     * @param DialogEditorTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor.DialogEditorTemplate" target="_top">.NET documentation</a>
+     */
     public void setDialogEditorTemplate(DataTemplate DialogEditorTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

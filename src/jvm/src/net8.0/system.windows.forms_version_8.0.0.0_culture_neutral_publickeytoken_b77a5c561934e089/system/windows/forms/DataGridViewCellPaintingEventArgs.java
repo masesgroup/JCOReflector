@@ -106,7 +106,10 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewCellPaintingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,32 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
     public DataGridViewCellPaintingEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param dataGridView the argument of type {@code DataGridView}
+     * @param graphics the argument of type {@code Graphics}
+     * @param clipBounds the argument of type {@code Rectangle}
+     * @param cellBounds the argument of type {@code Rectangle}
+     * @param rowIndex the argument of type {@code int}
+     * @param columnIndex the argument of type {@code int}
+     * @param cellState the argument of type {@code DataGridViewElementStates}
+     * @param value the argument of type {@code NetObject}
+     * @param formattedValue the argument of type {@code NetObject}
+     * @param errorText the argument of type {@code java.lang.String}
+     * @param cellStyle the argument of type {@code DataGridViewCellStyle}
+     * @param advancedBorderStyle the argument of type {@code DataGridViewAdvancedBorderStyle}
+     * @param paintParts the argument of type {@code DataGridViewPaintParts}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellPaintingEventArgs(DataGridView dataGridView, Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, int columnIndex, DataGridViewElementStates cellState, NetObject value, NetObject formattedValue, java.lang.String errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +200,30 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Paint.
+     *
+     * @param clipBounds the argument of type {@code Rectangle}
+     * @param paintParts the argument of type {@code DataGridViewPaintParts}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.Paint" target="_top">.NET documentation</a>
+     */
     public void Paint(Rectangle clipBounds, DataGridViewPaintParts paintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +234,30 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Invokes the .NET member PaintBackground.
+     *
+     * @param clipBounds the argument of type {@code Rectangle}
+     * @param cellsPaintSelectionBackground the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.PaintBackground" target="_top">.NET documentation</a>
+     */
     public void PaintBackground(Rectangle clipBounds, boolean cellsPaintSelectionBackground) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +268,29 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Invokes the .NET member PaintContent.
+     *
+     * @param clipBounds the argument of type {@code Rectangle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.MethodAccessException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.MemberAccessException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.PaintContent" target="_top">.NET documentation</a>
+     */
     public void PaintContent(Rectangle clipBounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +305,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ColumnIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +352,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property ColumnIndex.
+     *
+     * @param ColumnIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.ColumnIndex" target="_top">.NET documentation</a>
+     */
     public void setColumnIndex(int ColumnIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +369,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property RowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +416,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property RowIndex.
+     *
+     * @param RowIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.RowIndex" target="_top">.NET documentation</a>
+     */
     public void setRowIndex(int RowIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +433,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property Graphics.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics" target="_top">.NET documentation</a>
+     */
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +455,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property Graphics.
+     *
+     * @param Graphics the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics" target="_top">.NET documentation</a>
+     */
     public void setGraphics(Graphics Graphics) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -330,6 +472,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.CellBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getCellBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +494,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property CellBounds.
+     *
+     * @param CellBounds the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.CellBounds" target="_top">.NET documentation</a>
+     */
     public void setCellBounds(Rectangle CellBounds) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +511,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClipBounds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds" target="_top">.NET documentation</a>
+     */
     public Rectangle getClipBounds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +533,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property ClipBounds.
+     *
+     * @param ClipBounds the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds" target="_top">.NET documentation</a>
+     */
     public void setClipBounds(Rectangle ClipBounds) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +550,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property FormattedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.FormattedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getFormattedValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +572,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property FormattedValue.
+     *
+     * @param FormattedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.FormattedValue" target="_top">.NET documentation</a>
+     */
     public void setFormattedValue(NetObject FormattedValue) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +589,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.Value" target="_top">.NET documentation</a>
+     */
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -420,6 +611,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property Value.
+     *
+     * @param Value the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.Value" target="_top">.NET documentation</a>
+     */
     public void setValue(NetObject Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -430,6 +628,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property ErrorText.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.ErrorText" target="_top">.NET documentation</a>
+     */
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +649,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property ErrorText.
+     *
+     * @param ErrorText the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.ErrorText" target="_top">.NET documentation</a>
+     */
     public void setErrorText(java.lang.String ErrorText) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +666,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property AdvancedBorderStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.AdvancedBorderStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewAdvancedBorderStyle getAdvancedBorderStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -469,6 +688,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property AdvancedBorderStyle.
+     *
+     * @param AdvancedBorderStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.AdvancedBorderStyle" target="_top">.NET documentation</a>
+     */
     public void setAdvancedBorderStyle(DataGridViewAdvancedBorderStyle AdvancedBorderStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -479,6 +705,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property CellStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.CellStyle" target="_top">.NET documentation</a>
+     */
     public DataGridViewCellStyle getCellStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +727,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property CellStyle.
+     *
+     * @param CellStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.CellStyle" target="_top">.NET documentation</a>
+     */
     public void setCellStyle(DataGridViewCellStyle CellStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +744,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property State.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.State" target="_top">.NET documentation</a>
+     */
     public DataGridViewElementStates getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -519,6 +766,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property State.
+     *
+     * @param State the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.State" target="_top">.NET documentation</a>
+     */
     public void setState(DataGridViewElementStates State) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -529,6 +783,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Gets the value of the .NET property PaintParts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.PaintParts" target="_top">.NET documentation</a>
+     */
     public DataGridViewPaintParts getPaintParts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +805,13 @@ public class DataGridViewCellPaintingEventArgs extends system.componentmodel.Han
         }
     }
 
+    /**
+     * Sets the value of the .NET property PaintParts.
+     *
+     * @param PaintParts the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellPaintingEventArgs.PaintParts" target="_top">.NET documentation</a>
+     */
     public void setPaintParts(DataGridViewPaintParts PaintParts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

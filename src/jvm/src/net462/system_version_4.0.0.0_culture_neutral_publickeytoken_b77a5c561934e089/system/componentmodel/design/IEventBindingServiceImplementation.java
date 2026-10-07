@@ -106,7 +106,10 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IEventBindingServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,13 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ShowCode.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.ShowCode" target="_top">.NET documentation</a>
+     */
     public boolean ShowCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +172,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member ShowCode.
+     *
+     * @param lineNumber the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.ShowCode" target="_top">.NET documentation</a>
+     */
     public boolean ShowCode(int lineNumber) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,15 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member ShowCode.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.ShowCode" target="_top">.NET documentation</a>
+     */
     public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member GetCompatibleMethods.
+     *
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetCompatibleMethods" target="_top">.NET documentation</a>
+     */
     public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +240,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member GetEvent.
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetEvent" target="_top">.NET documentation</a>
+     */
     public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -220,6 +263,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member GetEventProperty.
+     *
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetEventProperty" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +286,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member GetEventProperties.
+     *
+     * @param events the argument of type {@code EventDescriptorCollection}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.GetEventProperties" target="_top">.NET documentation</a>
+     */
     public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +309,15 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
+    /**
+     * Invokes the .NET member CreateUniqueMethodName.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param e the argument of type {@code EventDescriptor}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IEventBindingService.CreateUniqueMethodName" target="_top">.NET documentation</a>
+     */
     public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

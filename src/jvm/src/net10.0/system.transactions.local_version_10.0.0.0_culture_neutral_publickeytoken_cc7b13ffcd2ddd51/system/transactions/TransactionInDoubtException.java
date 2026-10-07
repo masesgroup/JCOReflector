@@ -103,7 +103,9 @@ public class TransactionInDoubtException extends system.transactions.Transaction
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public TransactionInDoubtException(java.lang.Object instance) {
         super(instance);

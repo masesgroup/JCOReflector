@@ -99,7 +99,10 @@ public class XamlSchemaContextSettings extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlSchemaContextSettings(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class XamlSchemaContextSettings extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContextSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlSchemaContextSettings() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -156,6 +165,13 @@ public class XamlSchemaContextSettings extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param settings the argument of type {@code XamlSchemaContextSettings}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContextSettings.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlSchemaContextSettings(XamlSchemaContextSettings settings) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -174,6 +190,13 @@ public class XamlSchemaContextSettings extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FullyQualifyAssemblyNamesInClrNamespaces.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContextSettings.FullyQualifyAssemblyNamesInClrNamespaces" target="_top">.NET documentation</a>
+     */
     public boolean getFullyQualifyAssemblyNamesInClrNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class XamlSchemaContextSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FullyQualifyAssemblyNamesInClrNamespaces.
+     *
+     * @param FullyQualifyAssemblyNamesInClrNamespaces the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContextSettings.FullyQualifyAssemblyNamesInClrNamespaces" target="_top">.NET documentation</a>
+     */
     public void setFullyQualifyAssemblyNamesInClrNamespaces(boolean FullyQualifyAssemblyNamesInClrNamespaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +228,13 @@ public class XamlSchemaContextSettings extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportMarkupExtensionsWithDuplicateArity.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity" target="_top">.NET documentation</a>
+     */
     public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class XamlSchemaContextSettings extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportMarkupExtensionsWithDuplicateArity.
+     *
+     * @param SupportMarkupExtensionsWithDuplicateArity the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity" target="_top">.NET documentation</a>
+     */
     public void setSupportMarkupExtensionsWithDuplicateArity(boolean SupportMarkupExtensionsWithDuplicateArity) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

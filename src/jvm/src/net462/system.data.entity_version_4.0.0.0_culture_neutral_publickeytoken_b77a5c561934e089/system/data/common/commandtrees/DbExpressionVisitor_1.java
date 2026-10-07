@@ -141,7 +141,10 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DbExpressionVisitor_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -194,6 +197,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbAndExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbAndExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +219,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbApplyExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbApplyExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -222,6 +241,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbArithmeticExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbArithmeticExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +263,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbCaseExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbCaseExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -250,6 +285,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbCastExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbCastExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -264,6 +307,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbComparisonExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbComparisonExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -278,6 +329,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbConstantExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbConstantExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +351,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbCrossJoinExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbCrossJoinExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +373,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbDerefExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbDerefExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -320,6 +395,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbDistinctExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbDistinctExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -334,6 +417,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbElementExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbElementExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -348,6 +439,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbEntityRefExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbEntityRefExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +461,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbExceptExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbExceptExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -376,6 +483,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -390,6 +505,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbFilterExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbFilterExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +527,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbFunctionExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbFunctionExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -418,6 +549,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbGroupByExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbGroupByExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -432,6 +571,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbIntersectExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbIntersectExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -446,6 +593,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbIsEmptyExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbIsEmptyExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -460,6 +615,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbIsNullExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbIsNullExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +637,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbIsOfExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbIsOfExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -488,6 +659,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbJoinExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbJoinExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -502,6 +681,15 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbLambdaExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbLambdaExpression expression) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +704,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbLikeExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbLikeExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -530,6 +726,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbLimitExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbLimitExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +748,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbNewInstanceExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbNewInstanceExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -558,6 +770,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbNotExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbNotExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -572,6 +792,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbNullExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbNullExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -586,6 +814,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbOfTypeExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbOfTypeExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -600,6 +836,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbOrExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbOrExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -614,6 +858,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbParameterReferenceExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbParameterReferenceExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -628,6 +880,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbProjectExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbProjectExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -642,6 +902,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbPropertyExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbPropertyExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -656,6 +924,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbQuantifierExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbQuantifierExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -670,6 +946,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbRefExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbRefExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -684,6 +968,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbRefKeyExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbRefKeyExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -698,6 +990,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbRelationshipNavigationExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbRelationshipNavigationExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -712,6 +1012,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbScanExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbScanExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -726,6 +1034,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbSkipExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbSkipExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -740,6 +1056,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbSortExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbSortExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -754,6 +1078,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbTreatExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbTreatExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -768,6 +1100,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbUnionAllExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbUnionAllExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -782,6 +1122,14 @@ public class DbExpressionVisitor_1<TResultType extends IJCOBridgeReflected> exte
         }
     }
 
+    /**
+     * Invokes the .NET member Visit.
+     *
+     * @param expression the argument of type {@code DbVariableReferenceExpression}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpressionVisitor-1.Visit" target="_top">.NET documentation</a>
+     */
     public TResultType Visit(DbVariableReferenceExpression expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

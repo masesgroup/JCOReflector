@@ -108,7 +108,10 @@ public class Receive extends system.activities.Activity  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Receive(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,18 @@ public class Receive extends system.activities.Activity  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.-ctor" target="_top">.NET documentation</a>
+     */
     public Receive() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +184,13 @@ public class Receive extends system.activities.Activity  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member ShouldSerializeCorrelatesOn.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ShouldSerializeCorrelatesOn" target="_top">.NET documentation</a>
+     */
     public boolean ShouldSerializeCorrelatesOn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +205,27 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Invokes the .NET member FromOperationDescription.
+     *
+     * @param operation the argument of type {@code OperationDescription}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.FromOperationDescription" target="_top">.NET documentation</a>
+     */
     public static Receive FromOperationDescription(OperationDescription operation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +245,13 @@ public class Receive extends system.activities.Activity  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanCreateInstance.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CanCreateInstance" target="_top">.NET documentation</a>
+     */
     public boolean getCanCreateInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +266,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CanCreateInstance.
+     *
+     * @param CanCreateInstance the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CanCreateInstance" target="_top">.NET documentation</a>
+     */
     public void setCanCreateInstance(boolean CanCreateInstance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +283,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorrelatesWith.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelatesWith" target="_top">.NET documentation</a>
+     */
     public InArgument_1 getCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +305,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CorrelatesWith.
+     *
+     * @param CorrelatesWith the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelatesWith" target="_top">.NET documentation</a>
+     */
     public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +322,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorrelationInitializers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelationInitializers" target="_top">.NET documentation</a>
+     */
     public Collection_1 getCorrelationInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +344,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property KnownTypes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.KnownTypes" target="_top">.NET documentation</a>
+     */
     public Collection_1 getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -281,6 +366,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ProtectionLevel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public Nullable_1 getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +388,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ProtectionLevel.
+     *
+     * @param ProtectionLevel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ProtectionLevel" target="_top">.NET documentation</a>
+     */
     public void setProtectionLevel(Nullable_1 ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +405,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Content.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.Content" target="_top">.NET documentation</a>
+     */
     public ReceiveContent getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +427,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Content.
+     *
+     * @param Content the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.Content" target="_top">.NET documentation</a>
+     */
     public void setContent(ReceiveContent Content) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +444,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SerializerOption.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.SerializerOption" target="_top">.NET documentation</a>
+     */
     public SerializerOption getSerializerOption() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +466,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SerializerOption.
+     *
+     * @param SerializerOption the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.SerializerOption" target="_top">.NET documentation</a>
+     */
     public void setSerializerOption(SerializerOption SerializerOption) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -356,6 +483,15 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CorrelatesOn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelatesOn" target="_top">.NET documentation</a>
+     */
     public MessageQuerySet getCorrelatesOn() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -371,6 +507,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CorrelatesOn.
+     *
+     * @param CorrelatesOn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelatesOn" target="_top">.NET documentation</a>
+     */
     public void setCorrelatesOn(MessageQuerySet CorrelatesOn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -381,6 +524,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Action.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.Action" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -395,6 +545,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Action.
+     *
+     * @param Action the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.Action" target="_top">.NET documentation</a>
+     */
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -405,6 +562,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property OperationName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.OperationName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getOperationName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -419,6 +583,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property OperationName.
+     *
+     * @param OperationName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.OperationName" target="_top">.NET documentation</a>
+     */
     public void setOperationName(java.lang.String OperationName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +600,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceContractName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ServiceContractName" target="_top">.NET documentation</a>
+     */
     public XName getServiceContractName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +622,13 @@ public class Receive extends system.activities.Activity  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceContractName.
+     *
+     * @param ServiceContractName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ServiceContractName" target="_top">.NET documentation</a>
+     */
     public void setServiceContractName(XName ServiceContractName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

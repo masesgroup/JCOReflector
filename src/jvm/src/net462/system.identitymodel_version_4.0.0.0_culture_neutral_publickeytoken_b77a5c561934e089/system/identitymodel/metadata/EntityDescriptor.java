@@ -103,7 +103,10 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EntityDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityDescriptor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +169,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param entityId the argument of type {@code EntityId}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.-ctor" target="_top">.NET documentation</a>
+     */
     public EntityDescriptor(EntityId entityId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -178,6 +194,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Contacts.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.Contacts" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getContacts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Gets the value of the .NET property RoleDescriptors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.RoleDescriptors" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getRoleDescriptors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntityId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.EntityId" target="_top">.NET documentation</a>
+     */
     public EntityId getEntityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +260,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntityId.
+     *
+     * @param EntityId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.EntityId" target="_top">.NET documentation</a>
+     */
     public void setEntityId(EntityId EntityId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Gets the value of the .NET property Organization.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.Organization" target="_top">.NET documentation</a>
+     */
     public Organization getOrganization() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +299,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Sets the value of the .NET property Organization.
+     *
+     * @param Organization the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.Organization" target="_top">.NET documentation</a>
+     */
     public void setOrganization(Organization Organization) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +316,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Gets the value of the .NET property FederationId.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.FederationId" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFederationId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +337,13 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
         }
     }
 
+    /**
+     * Sets the value of the .NET property FederationId.
+     *
+     * @param FederationId the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.FederationId" target="_top">.NET documentation</a>
+     */
     public void setFederationId(java.lang.String FederationId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -102,7 +102,10 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ILeaseImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Renew.
+     *
+     * @param renewalTime the argument of type {@code TimeSpan}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.Renew" target="_top">.NET documentation</a>
+     */
     public TimeSpan Renew(TimeSpan renewalTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param obj the argument of type {@code ISponsor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.Register" target="_top">.NET documentation</a>
+     */
     public void Register(ISponsor obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +187,14 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Invokes the .NET member Register.
+     *
+     * @param obj the argument of type {@code ISponsor}
+     * @param renewalTime the argument of type {@code TimeSpan}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.Register" target="_top">.NET documentation</a>
+     */
     public void Register(ISponsor obj, TimeSpan renewalTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +205,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Invokes the .NET member Unregister.
+     *
+     * @param obj the argument of type {@code ISponsor}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.Unregister" target="_top">.NET documentation</a>
+     */
     public void Unregister(ISponsor obj) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +226,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CurrentState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.CurrentState" target="_top">.NET documentation</a>
+     */
     public LeaseState getCurrentState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +248,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CurrentLeaseTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.CurrentLeaseTime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getCurrentLeaseTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +270,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitialLeaseTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.InitialLeaseTime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getInitialLeaseTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -238,6 +292,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitialLeaseTime.
+     *
+     * @param InitialLeaseTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.InitialLeaseTime" target="_top">.NET documentation</a>
+     */
     public void setInitialLeaseTime(TimeSpan InitialLeaseTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +309,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RenewOnCallTime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRenewOnCallTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +331,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RenewOnCallTime.
+     *
+     * @param RenewOnCallTime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.RenewOnCallTime" target="_top">.NET documentation</a>
+     */
     public void setRenewOnCallTime(TimeSpan RenewOnCallTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +348,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SponsorshipTimeout.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.SponsorshipTimeout" target="_top">.NET documentation</a>
+     */
     public TimeSpan getSponsorshipTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +370,13 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SponsorshipTimeout.
+     *
+     * @param SponsorshipTimeout the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Lifetime.ILease.SponsorshipTimeout" target="_top">.NET documentation</a>
+     */
     public void setSponsorshipTimeout(TimeSpan SponsorshipTimeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

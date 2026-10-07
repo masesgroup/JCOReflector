@@ -99,7 +99,10 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public HttpListenerTimeoutManager(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class HttpListenerTimeoutManager extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property MinSendBytesPerSecond.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.MinSendBytesPerSecond" target="_top">.NET documentation</a>
+     */
     public long getMinSendBytesPerSecond() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -198,6 +208,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property MinSendBytesPerSecond.
+     *
+     * @param MinSendBytesPerSecond the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.HttpListenerException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.MinSendBytesPerSecond" target="_top">.NET documentation</a>
+     */
     public void setMinSendBytesPerSecond(long MinSendBytesPerSecond) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +233,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DrainEntityBody.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.DrainEntityBody" target="_top">.NET documentation</a>
+     */
     public TimeSpan getDrainEntityBody() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +256,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DrainEntityBody.
+     *
+     * @param DrainEntityBody the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.HttpListenerException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.DrainEntityBody" target="_top">.NET documentation</a>
+     */
     public void setDrainEntityBody(TimeSpan DrainEntityBody) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +281,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property EntityBody.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.EntityBody" target="_top">.NET documentation</a>
+     */
     public TimeSpan getEntityBody() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +304,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property EntityBody.
+     *
+     * @param EntityBody the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.HttpListenerException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.EntityBody" target="_top">.NET documentation</a>
+     */
     public void setEntityBody(TimeSpan EntityBody) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +329,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderWait.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.HeaderWait" target="_top">.NET documentation</a>
+     */
     public TimeSpan getHeaderWait() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +352,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderWait.
+     *
+     * @param HeaderWait the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.HttpListenerException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.HeaderWait" target="_top">.NET documentation</a>
+     */
     public void setHeaderWait(TimeSpan HeaderWait) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +377,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IdleConnection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.IdleConnection" target="_top">.NET documentation</a>
+     */
     public TimeSpan getIdleConnection() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -298,6 +400,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IdleConnection.
+     *
+     * @param IdleConnection the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.HttpListenerException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.IdleConnection" target="_top">.NET documentation</a>
+     */
     public void setIdleConnection(TimeSpan IdleConnection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -308,6 +425,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RequestQueue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.RequestQueue" target="_top">.NET documentation</a>
+     */
     public TimeSpan getRequestQueue() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -323,6 +448,21 @@ public class HttpListenerTimeoutManager extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property RequestQueue.
+     *
+     * @param RequestQueue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.net.HttpListenerException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.MulticastNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerTimeoutManager.RequestQueue" target="_top">.NET documentation</a>
+     */
     public void setRequestQueue(TimeSpan RequestQueue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

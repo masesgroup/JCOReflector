@@ -102,7 +102,10 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSerializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class XmlSerializerImplementation extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanSerialize.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.CanSerialize" target="_top">.NET documentation</a>
+     */
     public boolean CanSerialize(NetType type) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,15 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetSerializer.
+     *
+     * @param type the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.GetSerializer" target="_top">.NET documentation</a>
+     */
     public XmlSerializer GetSerializer(NetType type) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +209,14 @@ public class XmlSerializerImplementation extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ReadMethods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.ReadMethods" target="_top">.NET documentation</a>
+     */
     public Hashtable getReadMethods() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +232,14 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypedSerializers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.TypedSerializers" target="_top">.NET documentation</a>
+     */
     public Hashtable getTypedSerializers() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +255,14 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WriteMethods.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.WriteMethods" target="_top">.NET documentation</a>
+     */
     public Hashtable getWriteMethods() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +278,14 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Reader.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.Reader" target="_top">.NET documentation</a>
+     */
     public XmlSerializationReader getReader() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +301,14 @@ public class XmlSerializerImplementation extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Writer.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.XmlSerializerImplementation.Writer" target="_top">.NET documentation</a>
+     */
     public XmlSerializationWriter getWriter() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

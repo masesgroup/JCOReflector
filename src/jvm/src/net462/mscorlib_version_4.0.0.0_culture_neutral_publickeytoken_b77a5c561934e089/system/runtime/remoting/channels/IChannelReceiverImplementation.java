@@ -100,7 +100,10 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IChannelReceiverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Parse.
+     *
+     * @param url the argument of type {@code java.lang.String}
+     * @param objectURI the argument of type {@code JCORefOut}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.Parse" target="_top">.NET documentation</a>
+     */
     public java.lang.String Parse(java.lang.String url, JCORefOut objectURI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +168,14 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
         }
     }
 
+    /**
+     * Invokes the .NET member GetUrlsForUri.
+     *
+     * @param objectURI the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.GetUrlsForUri" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetUrlsForUri(java.lang.String objectURI) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +199,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
         }
     }
 
+    /**
+     * Invokes the .NET member StartListening.
+     *
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.StartListening" target="_top">.NET documentation</a>
+     */
     public void StartListening(NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +216,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
         }
     }
 
+    /**
+     * Invokes the .NET member StopListening.
+     *
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.StopListening" target="_top">.NET documentation</a>
+     */
     public void StopListening(NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +237,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ChannelPriority.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.ChannelPriority" target="_top">.NET documentation</a>
+     */
     public int getChannelPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +284,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.ChannelData" target="_top">.NET documentation</a>
+     */
     public NetObject getChannelData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +306,13 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
         }
     }
 
+    /**
+     * Gets the value of the .NET property ChannelName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Channels.IChannelReceiver.ChannelName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getChannelName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -107,7 +107,10 @@ public class ModelBindingContext extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ModelBindingContext(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -154,6 +157,14 @@ public class ModelBindingContext extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelBindingContext() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +175,15 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param bindingContext the argument of type {@code ModelBindingContext}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.-ctor" target="_top">.NET documentation</a>
+     */
     public ModelBindingContext(ModelBindingContext bindingContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -182,6 +202,13 @@ public class ModelBindingContext extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValidateRequest.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ValidateRequest" target="_top">.NET documentation</a>
+     */
     public boolean getValidateRequest() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +223,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidateRequest.
+     *
+     * @param ValidateRequest the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ValidateRequest" target="_top">.NET documentation</a>
+     */
     public void setValidateRequest(boolean ValidateRequest) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +240,17 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PropertyMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.PropertyMetadata" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getPropertyMetadata() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +266,22 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Model.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.Model" target="_top">.NET documentation</a>
+     */
     public NetObject getModel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +297,22 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Model.
+     *
+     * @param Model the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.Model" target="_top">.NET documentation</a>
+     */
     public void setModel(NetObject Model) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +323,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getModelName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +344,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelName.
+     *
+     * @param ModelName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelName" target="_top">.NET documentation</a>
+     */
     public void setModelName(java.lang.String ModelName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -270,6 +361,22 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelType" target="_top">.NET documentation</a>
+     */
     public NetType getModelType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +392,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValueProvider.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ValueProvider" target="_top">.NET documentation</a>
+     */
     public IValueProvider getValueProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -300,6 +414,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValueProvider.
+     *
+     * @param ValueProvider the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ValueProvider" target="_top">.NET documentation</a>
+     */
     public void setValueProvider(IValueProvider ValueProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -310,6 +431,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelBinderProviders.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelBinderProviders" target="_top">.NET documentation</a>
+     */
     public ModelBinderProviderCollection getModelBinderProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +453,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelBinderProviders.
+     *
+     * @param ModelBinderProviders the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelBinderProviders" target="_top">.NET documentation</a>
+     */
     public void setModelBinderProviders(ModelBinderProviderCollection ModelBinderProviders) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +470,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelMetadata.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelMetadata" target="_top">.NET documentation</a>
+     */
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -350,6 +492,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelMetadata.
+     *
+     * @param ModelMetadata the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelMetadata" target="_top">.NET documentation</a>
+     */
     public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -360,6 +509,15 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ModelState.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelState" target="_top">.NET documentation</a>
+     */
     public ModelStateDictionary getModelState() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +533,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ModelState.
+     *
+     * @param ModelState the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ModelState" target="_top">.NET documentation</a>
+     */
     public void setModelState(ModelStateDictionary ModelState) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -385,6 +550,15 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ValidationNode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ValidationNode" target="_top">.NET documentation</a>
+     */
     public ModelValidationNode getValidationNode() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -400,6 +574,13 @@ public class ModelBindingContext extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ValidationNode.
+     *
+     * @param ValidationNode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBindingContext.ValidationNode" target="_top">.NET documentation</a>
+     */
     public void setValidationNode(ModelValidationNode ValidationNode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

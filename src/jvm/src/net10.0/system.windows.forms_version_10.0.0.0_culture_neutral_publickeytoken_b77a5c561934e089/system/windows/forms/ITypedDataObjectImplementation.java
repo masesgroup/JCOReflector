@@ -101,7 +101,10 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITypedDataObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,15 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDataPresent.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetDataPresent" target="_top">.NET documentation</a>
+     */
     public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -157,6 +169,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataPresent.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetDataPresent" target="_top">.NET documentation</a>
+     */
     public boolean GetDataPresent(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +191,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetDataPresent.
+     *
+     * @param format the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetDataPresent" target="_top">.NET documentation</a>
+     */
     public boolean GetDataPresent(NetType format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +213,17 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -199,6 +238,18 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param resolver the argument of type {@code Func_2}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +264,16 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, JCORefOut<T> data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +288,15 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member TryGetData.
+     *
+     * @param <T> the type of the generic argument T
+     * @param data the argument of type {@code JCORefOut<T>}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.TryGetData" target="_top">.NET documentation</a>
+     */
     public <T extends IJCOBridgeReflected> boolean TryGetData(JCORefOut<T> data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +311,15 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +335,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(java.lang.String format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -271,6 +358,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetData.
+     *
+     * @param format the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetData" target="_top">.NET documentation</a>
+     */
     public NetObject GetData(NetType format) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -286,6 +381,13 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetFormats.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetFormats" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetFormats() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -309,6 +411,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member GetFormats.
+     *
+     * @param autoConvert the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.GetFormats" target="_top">.NET documentation</a>
+     */
     public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +442,13 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -342,6 +459,15 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param autoConvert the argument of type {@code boolean}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(java.lang.String format, boolean autoConvert, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -352,6 +478,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param format the argument of type {@code java.lang.String}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(java.lang.String format, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -362,6 +496,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
         }
     }
 
+    /**
+     * Invokes the .NET member SetData.
+     *
+     * @param format the argument of type {@code NetType}
+     * @param data the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ITypedDataObject.SetData" target="_top">.NET documentation</a>
+     */
     public void SetData(NetType format, NetObject data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

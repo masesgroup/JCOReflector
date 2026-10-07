@@ -51,5 +51,12 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface ITypeFilter {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param m the .NET argument of type {@code System.Type}
+     * @param filterCriteria the .NET argument of type {@code System.Object}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(NetType m, NetObject filterCriteria);
 }

@@ -103,7 +103,10 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaComplexContentExtension(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,12 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaComplexContentExtension() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +177,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AnyAttribute.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.AnyAttribute" target="_top">.NET documentation</a>
+     */
     public XmlSchemaAnyAttribute getAnyAttribute() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
 
+    /**
+     * Sets the value of the .NET property AnyAttribute.
+     *
+     * @param AnyAttribute the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.AnyAttribute" target="_top">.NET documentation</a>
+     */
     public void setAnyAttribute(XmlSchemaAnyAttribute AnyAttribute) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property Attributes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.Attributes" target="_top">.NET documentation</a>
+     */
     public XmlSchemaObjectCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +238,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property Particle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.Particle" target="_top">.NET documentation</a>
+     */
     public XmlSchemaParticle getParticle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -223,6 +260,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
 
+    /**
+     * Sets the value of the .NET property Particle.
+     *
+     * @param Particle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.Particle" target="_top">.NET documentation</a>
+     */
     public void setParticle(XmlSchemaParticle Particle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +277,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.BaseTypeName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getBaseTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +299,13 @@ public class XmlSchemaComplexContentExtension extends system.xml.schema.XmlSchem
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseTypeName.
+     *
+     * @param BaseTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentExtension.BaseTypeName" target="_top">.NET documentation</a>
+     */
     public void setBaseTypeName(XmlQualifiedName BaseTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

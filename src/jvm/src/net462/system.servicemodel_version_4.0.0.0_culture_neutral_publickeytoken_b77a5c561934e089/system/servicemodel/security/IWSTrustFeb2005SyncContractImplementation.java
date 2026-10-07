@@ -99,7 +99,10 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWSTrustFeb2005SyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -141,6 +144,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
 
     // Methods section
     
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005Cancel.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005Cancel" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005Cancel(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -156,6 +167,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005CancelResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005CancelResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005CancelResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +190,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005Issue.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005Issue" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005Issue(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +213,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005IssueResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005IssueResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005IssueResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +236,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005Renew.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005Renew" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005Renew(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +259,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005RenewResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005RenewResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005RenewResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +282,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005Validate.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005Validate" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005Validate(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -246,6 +305,14 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
+    /**
+     * Invokes the .NET member ProcessTrustFeb2005ValidateResponse.
+     *
+     * @param message the argument of type {@code Message}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IWSTrustFeb2005SyncContract.ProcessTrustFeb2005ValidateResponse" target="_top">.NET documentation</a>
+     */
     public Message ProcessTrustFeb2005ValidateResponse(Message message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

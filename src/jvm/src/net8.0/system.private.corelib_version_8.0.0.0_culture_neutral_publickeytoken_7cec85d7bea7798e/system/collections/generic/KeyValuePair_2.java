@@ -99,7 +99,10 @@ public class KeyValuePair_2<TKey extends IJCOBridgeReflected, TValue extends IJC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public KeyValuePair_2(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,14 @@ public class KeyValuePair_2<TKey extends IJCOBridgeReflected, TValue extends IJC
     public KeyValuePair_2() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param key the argument of type {@code TKey}
+     * @param value the argument of type {@code TValue}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.KeyValuePair-2.-ctor" target="_top">.NET documentation</a>
+     */
     public KeyValuePair_2(TKey key, TValue value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +177,14 @@ public class KeyValuePair_2<TKey extends IJCOBridgeReflected, TValue extends IJC
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Deconstruct.
+     *
+     * @param key the argument of type {@code JCORefOut<TKey>}
+     * @param value the argument of type {@code JCORefOut<TValue>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.KeyValuePair-2.Deconstruct" target="_top">.NET documentation</a>
+     */
     public void Deconstruct(JCORefOut<TKey> key, JCORefOut<TValue> value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +199,13 @@ public class KeyValuePair_2<TKey extends IJCOBridgeReflected, TValue extends IJC
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Key.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.KeyValuePair-2.Key" target="_top">.NET documentation</a>
+     */
     public TKey getKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +220,13 @@ public class KeyValuePair_2<TKey extends IJCOBridgeReflected, TValue extends IJC
         }
     }
 
+    /**
+     * Gets the value of the .NET property Value.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.KeyValuePair-2.Value" target="_top">.NET documentation</a>
+     */
     public TValue getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

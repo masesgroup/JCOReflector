@@ -52,5 +52,12 @@ import system.reflection.MemberInfo;
  * @version 2.0.0.0
  */
 public interface IMemberFilter {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param m the .NET argument of type {@code System.Reflection.MemberInfo}
+     * @param filterCriteria the .NET argument of type {@code System.Object}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(MemberInfo m, NetObject filterCriteria);
 }

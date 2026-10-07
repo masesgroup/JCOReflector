@@ -98,7 +98,10 @@ public class CompatibleFramework extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CompatibleFramework(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class CompatibleFramework extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.-ctor" target="_top">.NET documentation</a>
+     */
     public CompatibleFramework() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,13 @@ public class CompatibleFramework extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Profile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.Profile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Profile.
+     *
+     * @param Profile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.Profile" target="_top">.NET documentation</a>
+     */
     public void setProfile(java.lang.String Profile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +210,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SupportedRuntime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.SupportedRuntime" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSupportedRuntime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +231,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SupportedRuntime.
+     *
+     * @param SupportedRuntime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.SupportedRuntime" target="_top">.NET documentation</a>
+     */
     public void setSupportedRuntime(java.lang.String SupportedRuntime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +248,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Version.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.Version" target="_top">.NET documentation</a>
+     */
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +269,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Version.
+     *
+     * @param Version the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.Version" target="_top">.NET documentation</a>
+     */
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +286,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlProfile.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.XmlProfile" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlProfile() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -249,6 +307,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlProfile.
+     *
+     * @param XmlProfile the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.XmlProfile" target="_top">.NET documentation</a>
+     */
     public void setXmlProfile(java.lang.String XmlProfile) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +324,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlSupportedRuntime.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.XmlSupportedRuntime" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlSupportedRuntime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -273,6 +345,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlSupportedRuntime.
+     *
+     * @param XmlSupportedRuntime the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.XmlSupportedRuntime" target="_top">.NET documentation</a>
+     */
     public void setXmlSupportedRuntime(java.lang.String XmlSupportedRuntime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -283,6 +362,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property XmlVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.XmlVersion" target="_top">.NET documentation</a>
+     */
     public java.lang.String getXmlVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +383,13 @@ public class CompatibleFramework extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property XmlVersion.
+     *
+     * @param XmlVersion the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework.XmlVersion" target="_top">.NET documentation</a>
+     */
     public void setXmlVersion(java.lang.String XmlVersion) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

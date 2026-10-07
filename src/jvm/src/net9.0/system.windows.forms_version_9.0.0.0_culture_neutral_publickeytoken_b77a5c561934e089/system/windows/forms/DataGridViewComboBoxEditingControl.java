@@ -104,7 +104,10 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DataGridViewComboBoxEditingControl(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,22 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.-ctor" target="_top">.NET documentation</a>
+     */
     public DataGridViewComboBoxEditingControl() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +184,15 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EditingControlWantsInputKey.
+     *
+     * @param keyData the argument of type {@code Keys}
+     * @param dataGridViewWantsInputKey the argument of type {@code boolean}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlWantsInputKey" target="_top">.NET documentation</a>
+     */
     public boolean EditingControlWantsInputKey(Keys keyData, boolean dataGridViewWantsInputKey) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -179,6 +207,18 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Invokes the .NET member GetEditingControlFormattedValue.
+     *
+     * @param context the argument of type {@code DataGridViewDataErrorContexts}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.GetEditingControlFormattedValue" target="_top">.NET documentation</a>
+     */
     public NetObject GetEditingControlFormattedValue(DataGridViewDataErrorContexts context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +234,25 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Invokes the .NET member ApplyCellStyleToEditingControl.
+     *
+     * @param dataGridViewCellStyle the argument of type {@code DataGridViewCellStyle}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.ApplyCellStyleToEditingControl" target="_top">.NET documentation</a>
+     */
     public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +263,20 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Invokes the .NET member PrepareEditingControlForEdit.
+     *
+     * @param selectAll the argument of type {@code boolean}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.PrepareEditingControlForEdit" target="_top">.NET documentation</a>
+     */
     public void PrepareEditingControlForEdit(boolean selectAll) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +291,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property EditingControlValueChanged.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlValueChanged" target="_top">.NET documentation</a>
+     */
     public boolean getEditingControlValueChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +312,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingControlValueChanged.
+     *
+     * @param EditingControlValueChanged the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlValueChanged" target="_top">.NET documentation</a>
+     */
     public void setEditingControlValueChanged(boolean EditingControlValueChanged) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +329,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Gets the value of the .NET property RepositionEditingControlOnValueChange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.RepositionEditingControlOnValueChange" target="_top">.NET documentation</a>
+     */
     public boolean getRepositionEditingControlOnValueChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +350,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingControlRowIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlRowIndex" target="_top">.NET documentation</a>
+     */
     public int getEditingControlRowIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -296,6 +397,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingControlRowIndex.
+     *
+     * @param EditingControlRowIndex the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlRowIndex" target="_top">.NET documentation</a>
+     */
     public void setEditingControlRowIndex(int EditingControlRowIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +414,17 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingControlFormattedValue.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlFormattedValue" target="_top">.NET documentation</a>
+     */
     public NetObject getEditingControlFormattedValue() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +440,22 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingControlFormattedValue.
+     *
+     * @param EditingControlFormattedValue the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlFormattedValue" target="_top">.NET documentation</a>
+     */
     public void setEditingControlFormattedValue(NetObject EditingControlFormattedValue) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +466,19 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingPanelCursor.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingPanelCursor" target="_top">.NET documentation</a>
+     */
     public Cursor getEditingPanelCursor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -346,6 +494,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Gets the value of the .NET property EditingControlDataGridView.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlDataGridView" target="_top">.NET documentation</a>
+     */
     public DataGridView getEditingControlDataGridView() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -361,6 +516,13 @@ public class DataGridViewComboBoxEditingControl extends system.windows.forms.Com
         }
     }
 
+    /**
+     * Sets the value of the .NET property EditingControlDataGridView.
+     *
+     * @param EditingControlDataGridView the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlDataGridView" target="_top">.NET documentation</a>
+     */
     public void setEditingControlDataGridView(DataGridView EditingControlDataGridView) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

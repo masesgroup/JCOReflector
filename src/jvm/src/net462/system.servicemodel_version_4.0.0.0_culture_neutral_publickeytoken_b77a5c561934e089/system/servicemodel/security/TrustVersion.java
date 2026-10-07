@@ -100,7 +100,10 @@ public class TrustVersion extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public TrustVersion(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -157,6 +160,13 @@ public class TrustVersion extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TrustVersion.Default" target="_top">.NET documentation</a>
+     */
     public static TrustVersion getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,6 +182,13 @@ public class TrustVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSTrust13.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TrustVersion.WSTrust13" target="_top">.NET documentation</a>
+     */
     public static TrustVersion getWSTrust13() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +204,13 @@ public class TrustVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WSTrustFeb2005.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TrustVersion.WSTrustFeb2005" target="_top">.NET documentation</a>
+     */
     public static TrustVersion getWSTrustFeb2005() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -202,6 +226,13 @@ public class TrustVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Namespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TrustVersion.Namespace" target="_top">.NET documentation</a>
+     */
     public XmlDictionaryString getNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -217,6 +248,13 @@ public class TrustVersion extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Prefix.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.TrustVersion.Prefix" target="_top">.NET documentation</a>
+     */
     public XmlDictionaryString getPrefix() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

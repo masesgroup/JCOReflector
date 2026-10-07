@@ -99,7 +99,10 @@ public class LenientStringConstructor extends microsoft.jscript.StringConstructo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public LenientStringConstructor(java.lang.Object instance) throws Throwable {
         super(instance);

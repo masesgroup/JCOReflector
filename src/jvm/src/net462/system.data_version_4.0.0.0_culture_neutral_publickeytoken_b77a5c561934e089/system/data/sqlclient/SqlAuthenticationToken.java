@@ -99,7 +99,10 @@ public class SqlAuthenticationToken extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlAuthenticationToken(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,25 @@ public class SqlAuthenticationToken extends NetObject  {
     public SqlAuthenticationToken() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param accessToken the argument of type {@code java.lang.String}
+     * @param expiresOn the argument of type {@code DateTimeOffset}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationToken.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlAuthenticationToken(java.lang.String accessToken, DateTimeOffset expiresOn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +190,13 @@ public class SqlAuthenticationToken extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ExpiresOn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationToken.ExpiresOn" target="_top">.NET documentation</a>
+     */
     public DateTimeOffset getExpiresOn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +212,13 @@ public class SqlAuthenticationToken extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AccessToken.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationToken.AccessToken" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAccessToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

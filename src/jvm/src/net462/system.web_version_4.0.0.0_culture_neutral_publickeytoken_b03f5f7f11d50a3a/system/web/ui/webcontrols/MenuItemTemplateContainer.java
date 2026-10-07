@@ -102,7 +102,10 @@ public class MenuItemTemplateContainer extends system.web.ui.Control implements 
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MenuItemTemplateContainer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,14 @@ public class MenuItemTemplateContainer extends system.web.ui.Control implements 
     public MenuItemTemplateContainer() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @param dataItem the argument of type {@code MenuItem}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemTemplateContainer.-ctor" target="_top">.NET documentation</a>
+     */
     public MenuItemTemplateContainer(int itemIndex, MenuItem dataItem) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -171,6 +182,13 @@ public class MenuItemTemplateContainer extends system.web.ui.Control implements 
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ItemIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemTemplateContainer.ItemIndex" target="_top">.NET documentation</a>
+     */
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +229,13 @@ public class MenuItemTemplateContainer extends system.web.ui.Control implements 
         }
     }
 
+    /**
+     * Gets the value of the .NET property DataItem.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemTemplateContainer.DataItem" target="_top">.NET documentation</a>
+     */
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +251,13 @@ public class MenuItemTemplateContainer extends system.web.ui.Control implements 
         }
     }
 
+    /**
+     * Sets the value of the .NET property DataItem.
+     *
+     * @param DataItem the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.MenuItemTemplateContainer.DataItem" target="_top">.NET documentation</a>
+     */
     public void setDataItem(NetObject DataItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IControlDesignerAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetDesignModeState.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IControlDesignerAccessor.GetDesignModeState" target="_top">.NET documentation</a>
+     */
     public IDictionary GetDesignModeState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member SetDesignModeState.
+     *
+     * @param data the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IControlDesignerAccessor.SetDesignModeState" target="_top">.NET documentation</a>
+     */
     public void SetDesignModeState(IDictionary data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -168,6 +185,13 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
         }
     }
 
+    /**
+     * Invokes the .NET member SetOwnerControl.
+     *
+     * @param owner the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IControlDesignerAccessor.SetOwnerControl" target="_top">.NET documentation</a>
+     */
     public void SetOwnerControl(Control owner) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +206,13 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property UserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.IControlDesignerAccessor.UserData" target="_top">.NET documentation</a>
+     */
     public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

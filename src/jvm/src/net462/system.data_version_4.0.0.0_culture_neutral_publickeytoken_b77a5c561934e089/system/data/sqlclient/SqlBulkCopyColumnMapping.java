@@ -98,7 +98,10 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public SqlBulkCopyColumnMapping(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -145,6 +148,12 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -155,6 +164,19 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceColumnOrdinal the argument of type {@code int}
+     * @param destinationOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping(int sourceColumnOrdinal, int destinationOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +187,19 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceColumnOrdinal the argument of type {@code int}
+     * @param destinationColumn the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping(int sourceColumnOrdinal, java.lang.String destinationColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +210,19 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param destinationOrdinal the argument of type {@code int}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping(java.lang.String sourceColumn, int destinationOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -185,6 +233,14 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param sourceColumn the argument of type {@code java.lang.String}
+     * @param destinationColumn the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.-ctor" target="_top">.NET documentation</a>
+     */
     public SqlBulkCopyColumnMapping(java.lang.String sourceColumn, java.lang.String destinationColumn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -203,6 +259,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property DestinationOrdinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal" target="_top">.NET documentation</a>
+     */
     public int getDestinationOrdinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +306,20 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DestinationOrdinal.
+     *
+     * @param DestinationOrdinal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal" target="_top">.NET documentation</a>
+     */
     public void setDestinationOrdinal(int DestinationOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +330,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceOrdinal.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal" target="_top">.NET documentation</a>
+     */
     public int getSourceOrdinal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -293,6 +377,20 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceOrdinal.
+     *
+     * @param SourceOrdinal the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal" target="_top">.NET documentation</a>
+     */
     public void setSourceOrdinal(int SourceOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -303,6 +401,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DestinationColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDestinationColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +422,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property DestinationColumn.
+     *
+     * @param DestinationColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn" target="_top">.NET documentation</a>
+     */
     public void setDestinationColumn(java.lang.String DestinationColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -327,6 +439,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property SourceColumn.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -341,6 +460,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property SourceColumn.
+     *
+     * @param SourceColumn the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn" target="_top">.NET documentation</a>
+     */
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

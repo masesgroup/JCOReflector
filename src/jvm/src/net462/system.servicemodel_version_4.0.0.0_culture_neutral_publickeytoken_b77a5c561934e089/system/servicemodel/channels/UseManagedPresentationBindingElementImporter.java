@@ -100,7 +100,10 @@ public class UseManagedPresentationBindingElementImporter extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UseManagedPresentationBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -147,6 +150,12 @@ public class UseManagedPresentationBindingElementImporter extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.UseManagedPresentationBindingElementImporter.-ctor" target="_top">.NET documentation</a>
+     */
     public UseManagedPresentationBindingElementImporter() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,8 +173,13 @@ public class UseManagedPresentationBindingElementImporter extends NetObject  {
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPolicyImportExtension method available in IPolicyImportExtension to obtain an object with an invocable method
+     *
+     * @param importer the argument of type {@code MetadataImporter}
+     * @param context the argument of type {@code PolicyConversionContext}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
     }

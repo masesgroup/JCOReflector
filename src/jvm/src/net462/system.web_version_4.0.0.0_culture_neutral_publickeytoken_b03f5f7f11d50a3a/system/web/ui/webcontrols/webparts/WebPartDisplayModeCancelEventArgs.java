@@ -100,7 +100,10 @@ public class WebPartDisplayModeCancelEventArgs extends system.componentmodel.Can
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPartDisplayModeCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class WebPartDisplayModeCancelEventArgs extends system.componentmodel.Can
     public WebPartDisplayModeCancelEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param newDisplayMode the argument of type {@code WebPartDisplayMode}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public WebPartDisplayModeCancelEventArgs(WebPartDisplayMode newDisplayMode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class WebPartDisplayModeCancelEventArgs extends system.componentmodel.Can
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property NewDisplayMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs.NewDisplayMode" target="_top">.NET documentation</a>
+     */
     public WebPartDisplayMode getNewDisplayMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +201,13 @@ public class WebPartDisplayModeCancelEventArgs extends system.componentmodel.Can
         }
     }
 
+    /**
+     * Sets the value of the .NET property NewDisplayMode.
+     *
+     * @param NewDisplayMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs.NewDisplayMode" target="_top">.NET documentation</a>
+     */
     public void setNewDisplayMode(WebPartDisplayMode NewDisplayMode) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

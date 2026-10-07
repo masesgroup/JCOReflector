@@ -100,7 +100,10 @@ public class ReplicationOperationCollection extends system.collections.ReadOnlyC
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ReplicationOperationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -155,6 +158,15 @@ public class ReplicationOperationCollection extends system.collections.ReadOnlyC
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param operation the argument of type {@code ReplicationOperation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(ReplicationOperation operation) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +181,18 @@ public class ReplicationOperationCollection extends system.collections.ReadOnlyC
         }
     }
 
+    /**
+     * Invokes the .NET member IndexOf.
+     *
+     * @param operation the argument of type {@code ReplicationOperation}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationCollection.IndexOf" target="_top">.NET documentation</a>
+     */
     public int IndexOf(ReplicationOperation operation) throws Throwable, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +233,15 @@ public class ReplicationOperationCollection extends system.collections.ReadOnlyC
         }
     }
 
+    /**
+     * Invokes the .NET member CopyTo.
+     *
+     * @param operations the argument of type {@code ReplicationOperation[]}
+     * @param index the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.ReplicationOperationCollection.CopyTo" target="_top">.NET documentation</a>
+     */
     public void CopyTo(ReplicationOperation[] operations, int index) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

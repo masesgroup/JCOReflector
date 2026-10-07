@@ -101,7 +101,10 @@ public class ColorBuilder extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ColorBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,16 @@ public class ColorBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BuildColor.
+     *
+     * @param component the argument of type {@code IComponent}
+     * @param owner the argument of type {@code Control}
+     * @param initialColor the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.ColorBuilder.BuildColor" target="_top">.NET documentation</a>
+     */
     public static java.lang.String BuildColor(IComponent component, Control owner, java.lang.String initialColor) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

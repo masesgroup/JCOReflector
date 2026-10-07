@@ -102,7 +102,10 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IAuthenticationModuleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -144,6 +147,16 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Authenticate.
+     *
+     * @param challenge the argument of type {@code java.lang.String}
+     * @param request the argument of type {@code WebRequest}
+     * @param credentials the argument of type {@code ICredentials}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IAuthenticationModule.Authenticate" target="_top">.NET documentation</a>
+     */
     public Authorization Authenticate(java.lang.String challenge, WebRequest request, ICredentials credentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +172,15 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
         }
     }
 
+    /**
+     * Invokes the .NET member PreAuthenticate.
+     *
+     * @param request the argument of type {@code WebRequest}
+     * @param credentials the argument of type {@code ICredentials}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IAuthenticationModule.PreAuthenticate" target="_top">.NET documentation</a>
+     */
     public Authorization PreAuthenticate(WebRequest request, ICredentials credentials) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +200,13 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property CanPreAuthenticate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IAuthenticationModule.CanPreAuthenticate" target="_top">.NET documentation</a>
+     */
     public boolean getCanPreAuthenticate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +221,13 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthenticationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.IAuthenticationModule.AuthenticationType" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthenticationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

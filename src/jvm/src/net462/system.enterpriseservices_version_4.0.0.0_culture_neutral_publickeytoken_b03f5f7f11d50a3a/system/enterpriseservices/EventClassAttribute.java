@@ -99,7 +99,10 @@ public class EventClassAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public EventClassAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -146,6 +149,12 @@ public class EventClassAttribute extends system.Attribute  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public EventClassAttribute() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +173,13 @@ public class EventClassAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowInprocSubscribers.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.AllowInprocSubscribers" target="_top">.NET documentation</a>
+     */
     public boolean getAllowInprocSubscribers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +194,13 @@ public class EventClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowInprocSubscribers.
+     *
+     * @param AllowInprocSubscribers the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.AllowInprocSubscribers" target="_top">.NET documentation</a>
+     */
     public void setAllowInprocSubscribers(boolean AllowInprocSubscribers) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +211,13 @@ public class EventClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property FireInParallel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.FireInParallel" target="_top">.NET documentation</a>
+     */
     public boolean getFireInParallel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +232,13 @@ public class EventClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property FireInParallel.
+     *
+     * @param FireInParallel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.FireInParallel" target="_top">.NET documentation</a>
+     */
     public void setFireInParallel(boolean FireInParallel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,6 +249,13 @@ public class EventClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property PublisherFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.PublisherFilter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getPublisherFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +270,13 @@ public class EventClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property PublisherFilter.
+     *
+     * @param PublisherFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.EventClassAttribute.PublisherFilter" target="_top">.NET documentation</a>
+     */
     public void setPublisherFilter(java.lang.String PublisherFilter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

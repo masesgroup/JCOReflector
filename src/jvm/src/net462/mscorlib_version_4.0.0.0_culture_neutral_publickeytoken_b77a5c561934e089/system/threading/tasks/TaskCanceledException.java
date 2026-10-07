@@ -104,7 +104,9 @@ public class TaskCanceledException extends system.OperationCanceledException {
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public TaskCanceledException(java.lang.Object instance) {
         super(instance);
@@ -165,6 +167,13 @@ public class TaskCanceledException extends system.OperationCanceledException {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param task the argument of type {@code Task}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskCanceledException.-ctor" target="_top">.NET documentation</a>
+     */
     public TaskCanceledException(Task task) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -183,6 +192,13 @@ public class TaskCanceledException extends system.OperationCanceledException {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Task.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskCanceledException.Task" target="_top">.NET documentation</a>
+     */
     public Task getTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

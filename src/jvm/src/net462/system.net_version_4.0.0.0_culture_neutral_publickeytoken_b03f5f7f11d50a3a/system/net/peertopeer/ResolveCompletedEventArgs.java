@@ -100,7 +100,10 @@ public class ResolveCompletedEventArgs extends system.componentmodel.AsyncComple
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResolveCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,16 @@ public class ResolveCompletedEventArgs extends system.componentmodel.AsyncComple
     public ResolveCompletedEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param peerNameRecordCollection the argument of type {@code PeerNameRecordCollection}
+     * @param error the argument of type {@code NetException}
+     * @param canceled the argument of type {@code boolean}
+     * @param userToken the argument of type {@code NetObject}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.ResolveCompletedEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public ResolveCompletedEventArgs(PeerNameRecordCollection peerNameRecordCollection, NetException error, boolean canceled, NetObject userToken) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +182,13 @@ public class ResolveCompletedEventArgs extends system.componentmodel.AsyncComple
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property PeerNameRecordCollection.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.PeerToPeer.ResolveCompletedEventArgs.PeerNameRecordCollection" target="_top">.NET documentation</a>
+     */
     public PeerNameRecordCollection getPeerNameRecordCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

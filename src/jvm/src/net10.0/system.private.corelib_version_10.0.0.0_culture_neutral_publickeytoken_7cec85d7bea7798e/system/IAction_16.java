@@ -51,5 +51,25 @@ import org.mases.jcobridge.netreflection.*;
  * @version 2.0.0.0
  */
 public interface IAction_16<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param arg1 the .NET argument of type {@code T1}
+     * @param arg2 the .NET argument of type {@code T2}
+     * @param arg3 the .NET argument of type {@code T3}
+     * @param arg4 the .NET argument of type {@code T4}
+     * @param arg5 the .NET argument of type {@code T5}
+     * @param arg6 the .NET argument of type {@code T6}
+     * @param arg7 the .NET argument of type {@code T7}
+     * @param arg8 the .NET argument of type {@code T8}
+     * @param arg9 the .NET argument of type {@code T9}
+     * @param arg10 the .NET argument of type {@code T10}
+     * @param arg11 the .NET argument of type {@code T11}
+     * @param arg12 the .NET argument of type {@code T12}
+     * @param arg13 the .NET argument of type {@code T13}
+     * @param arg14 the .NET argument of type {@code T14}
+     * @param arg15 the .NET argument of type {@code T15}
+     * @param arg16 the .NET argument of type {@code T16}
+     */
     public void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16);
 }

@@ -101,7 +101,10 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebServiceDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ClaimTypesOffered.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ClaimTypesOffered" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getClaimTypesOffered() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +183,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property ClaimTypesRequested.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ClaimTypesRequested" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getClaimTypesRequested() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +205,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property TargetScopes.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.TargetScopes" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getTargetScopes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -203,6 +227,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenTypesOffered.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.TokenTypesOffered" target="_top">.NET documentation</a>
+     */
     public ICollection_1 getTokenTypesOffered() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +249,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceDescription.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ServiceDescription" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServiceDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -232,6 +270,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceDescription.
+     *
+     * @param ServiceDescription the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ServiceDescription" target="_top">.NET documentation</a>
+     */
     public void setServiceDescription(java.lang.String ServiceDescription) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -242,6 +287,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Gets the value of the .NET property ServiceDisplayName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ServiceDisplayName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getServiceDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -256,6 +308,13 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
         }
     }
 
+    /**
+     * Sets the value of the .NET property ServiceDisplayName.
+     *
+     * @param ServiceDisplayName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ServiceDisplayName" target="_top">.NET documentation</a>
+     */
     public void setServiceDisplayName(java.lang.String ServiceDisplayName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

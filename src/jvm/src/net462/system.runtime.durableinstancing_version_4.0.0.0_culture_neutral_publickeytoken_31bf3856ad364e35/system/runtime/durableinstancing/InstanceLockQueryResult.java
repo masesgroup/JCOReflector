@@ -102,7 +102,10 @@ public class InstanceLockQueryResult extends system.runtime.durableinstancing.In
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstanceLockQueryResult(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class InstanceLockQueryResult extends system.runtime.durableinstancing.In
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockQueryResult.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockQueryResult() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -159,6 +168,16 @@ public class InstanceLockQueryResult extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceOwnerIds the argument of type {@code IDictionary_2}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockQueryResult.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockQueryResult(IDictionary_2 instanceOwnerIds) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +188,17 @@ public class InstanceLockQueryResult extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instanceId the argument of type {@code Guid}
+     * @param instanceOwnerId the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockQueryResult.-ctor" target="_top">.NET documentation</a>
+     */
     public InstanceLockQueryResult(Guid instanceId, Guid instanceOwnerId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +217,13 @@ public class InstanceLockQueryResult extends system.runtime.durableinstancing.In
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstanceOwnerIds.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockQueryResult.InstanceOwnerIds" target="_top">.NET documentation</a>
+     */
     public IDictionary_2 getInstanceOwnerIds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +239,13 @@ public class InstanceLockQueryResult extends system.runtime.durableinstancing.In
         }
     }
 
+    /**
+     * Sets the value of the .NET property InstanceOwnerIds.
+     *
+     * @param InstanceOwnerIds the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceLockQueryResult.InstanceOwnerIds" target="_top">.NET documentation</a>
+     */
     public void setInstanceOwnerIds(IDictionary_2 InstanceOwnerIds) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

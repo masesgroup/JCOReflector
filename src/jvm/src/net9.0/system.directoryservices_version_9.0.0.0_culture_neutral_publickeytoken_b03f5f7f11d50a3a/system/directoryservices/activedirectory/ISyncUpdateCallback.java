@@ -53,5 +53,14 @@ import system.directoryservices.activedirectory.SyncFromAllServersOperationExcep
  * @version 2.0.0.0
  */
 public interface ISyncUpdateCallback {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param eventType the .NET argument of type {@code System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent}
+     * @param targetServer the .NET argument of type {@code System.String}
+     * @param sourceServer the .NET argument of type {@code System.String}
+     * @param exception the .NET argument of type {@code System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException}
+     * @return the value returned to the CLR
+     */
     public boolean Invoke(SyncFromAllServersEvent eventType, java.lang.String targetServer, java.lang.String sourceServer, SyncFromAllServersOperationException exception);
 }

@@ -103,7 +103,9 @@ public class ExpiredSecurityTokenException extends system.servicemodel.security.
         super();
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
      */
     public ExpiredSecurityTokenException(java.lang.Object instance) {
         super(instance);

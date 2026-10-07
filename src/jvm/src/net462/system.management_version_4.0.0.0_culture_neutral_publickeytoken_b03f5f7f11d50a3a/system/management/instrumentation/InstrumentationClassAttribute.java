@@ -100,7 +100,10 @@ public class InstrumentationClassAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InstrumentationClassAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class InstrumentationClassAttribute extends system.Attribute  {
     public InstrumentationClassAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instrumentationType the argument of type {@code InstrumentationType}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.InstrumentationClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public InstrumentationClassAttribute(InstrumentationType instrumentationType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +170,14 @@ public class InstrumentationClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param instrumentationType the argument of type {@code InstrumentationType}
+     * @param managedBaseClassName the argument of type {@code java.lang.String}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.InstrumentationClassAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public InstrumentationClassAttribute(InstrumentationType instrumentationType, java.lang.String managedBaseClassName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +197,13 @@ public class InstrumentationClassAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property InstrumentationType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.InstrumentationClassAttribute.InstrumentationType" target="_top">.NET documentation</a>
+     */
     public InstrumentationType getInstrumentationType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class InstrumentationClassAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ManagedBaseClassName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Management.Instrumentation.InstrumentationClassAttribute.ManagedBaseClassName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getManagedBaseClassName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

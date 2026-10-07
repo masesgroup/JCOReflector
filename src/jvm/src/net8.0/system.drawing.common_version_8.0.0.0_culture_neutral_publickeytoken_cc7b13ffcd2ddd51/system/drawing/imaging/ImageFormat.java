@@ -100,7 +100,10 @@ public class ImageFormat extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImageFormat(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class ImageFormat extends NetObject  {
     public ImageFormat() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param guid the argument of type {@code Guid}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.-ctor" target="_top">.NET documentation</a>
+     */
     public ImageFormat(Guid guid) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class ImageFormat extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Bmp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Bmp" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getBmp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +201,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Emf.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Emf" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getEmf() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +223,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Exif.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Exif" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getExif() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +245,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Gif.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Gif" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getGif() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +267,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Heif.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Heif" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getHeif() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -244,6 +289,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Icon.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Icon" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getIcon() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -259,6 +311,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Jpeg.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Jpeg" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getJpeg() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -274,6 +333,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MemoryBmp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.MemoryBmp" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getMemoryBmp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -289,6 +355,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Png.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Png" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getPng() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -304,6 +377,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Tiff.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Tiff" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getTiff() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -319,6 +399,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Webp.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Webp" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getWebp() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -334,6 +421,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Wmf.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Wmf" target="_top">.NET documentation</a>
+     */
     public static ImageFormat getWmf() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -349,6 +443,13 @@ public class ImageFormat extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Guid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Imaging.ImageFormat.Guid" target="_top">.NET documentation</a>
+     */
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

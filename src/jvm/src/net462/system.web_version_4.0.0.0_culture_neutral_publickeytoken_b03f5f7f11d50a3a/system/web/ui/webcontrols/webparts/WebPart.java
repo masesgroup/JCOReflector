@@ -109,7 +109,10 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public WebPart(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -162,6 +165,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateEditorParts.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.CreateEditorParts" target="_top">.NET documentation</a>
+     */
     public EditorPartCollection CreateEditorParts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +187,25 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Invokes the .NET member SetPersonalizationDirty.
+     *
+     * @param control the argument of type {@code Control}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty" target="_top">.NET documentation</a>
+     */
     public static void SetPersonalizationDirty(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -191,6 +220,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowClose.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowClose" target="_top">.NET documentation</a>
+     */
     public boolean getAllowClose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +241,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowClose.
+     *
+     * @param AllowClose the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowClose" target="_top">.NET documentation</a>
+     */
     public void setAllowClose(boolean AllowClose) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +258,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowConnect.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowConnect" target="_top">.NET documentation</a>
+     */
     public boolean getAllowConnect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +279,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowConnect.
+     *
+     * @param AllowConnect the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowConnect" target="_top">.NET documentation</a>
+     */
     public void setAllowConnect(boolean AllowConnect) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -239,6 +296,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowEdit" target="_top">.NET documentation</a>
+     */
     public boolean getAllowEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -253,6 +317,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowEdit.
+     *
+     * @param AllowEdit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowEdit" target="_top">.NET documentation</a>
+     */
     public void setAllowEdit(boolean AllowEdit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -263,6 +334,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowHide.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowHide" target="_top">.NET documentation</a>
+     */
     public boolean getAllowHide() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -277,6 +355,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowHide.
+     *
+     * @param AllowHide the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowHide" target="_top">.NET documentation</a>
+     */
     public void setAllowHide(boolean AllowHide) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -287,6 +372,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowMinimize.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize" target="_top">.NET documentation</a>
+     */
     public boolean getAllowMinimize() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -301,6 +393,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowMinimize.
+     *
+     * @param AllowMinimize the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowMinimize" target="_top">.NET documentation</a>
+     */
     public void setAllowMinimize(boolean AllowMinimize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -311,6 +410,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowZoneChange.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange" target="_top">.NET documentation</a>
+     */
     public boolean getAllowZoneChange() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +431,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowZoneChange.
+     *
+     * @param AllowZoneChange the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AllowZoneChange" target="_top">.NET documentation</a>
+     */
     public void setAllowZoneChange(boolean AllowZoneChange) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +448,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasSharedData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.HasSharedData" target="_top">.NET documentation</a>
+     */
     public boolean getHasSharedData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -349,6 +469,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HasUserData.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.HasUserData" target="_top">.NET documentation</a>
+     */
     public boolean getHasUserData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -363,6 +490,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Hidden.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.Hidden" target="_top">.NET documentation</a>
+     */
     public boolean getHidden() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -377,6 +511,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Hidden.
+     *
+     * @param Hidden the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.Hidden" target="_top">.NET documentation</a>
+     */
     public void setHidden(boolean Hidden) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -387,6 +528,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsClosed.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.IsClosed" target="_top">.NET documentation</a>
+     */
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +549,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsShared.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.IsShared" target="_top">.NET documentation</a>
+     */
     public boolean getIsShared() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -415,6 +570,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStandalone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.IsStandalone" target="_top">.NET documentation</a>
+     */
     public boolean getIsStandalone() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -429,6 +591,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IsStatic.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.IsStatic" target="_top">.NET documentation</a>
+     */
     public boolean getIsStatic() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -443,6 +612,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ZoneIndex.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.ZoneIndex" target="_top">.NET documentation</a>
+     */
     public int getZoneIndex() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -483,6 +659,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property WebBrowsableObject.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.WebBrowsableObject" target="_top">.NET documentation</a>
+     */
     public NetObject getWebBrowsableObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -498,6 +681,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AuthorizationFilter.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" target="_top">.NET documentation</a>
+     */
     public java.lang.String getAuthorizationFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -512,6 +702,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AuthorizationFilter.
+     *
+     * @param AuthorizationFilter the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" target="_top">.NET documentation</a>
+     */
     public void setAuthorizationFilter(java.lang.String AuthorizationFilter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -522,6 +719,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property CatalogIconImageUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getCatalogIconImageUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -536,6 +740,25 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property CatalogIconImageUrl.
+     *
+     * @param CatalogIconImageUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl" target="_top">.NET documentation</a>
+     */
     public void setCatalogIconImageUrl(java.lang.String CatalogIconImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -546,6 +769,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ConnectErrorMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.ConnectErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getConnectErrorMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -560,6 +790,24 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property DisplayTitle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle" target="_top">.NET documentation</a>
+     */
     public java.lang.String getDisplayTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +822,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.HelpUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHelpUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -588,6 +843,25 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpUrl.
+     *
+     * @param HelpUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.HelpUrl" target="_top">.NET documentation</a>
+     */
     public void setHelpUrl(java.lang.String HelpUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -598,6 +872,24 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ImportErrorMessage.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.ImportErrorMessage" target="_top">.NET documentation</a>
+     */
     public java.lang.String getImportErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -612,6 +904,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ImportErrorMessage.
+     *
+     * @param ImportErrorMessage the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.ImportErrorMessage" target="_top">.NET documentation</a>
+     */
     public void setImportErrorMessage(java.lang.String ImportErrorMessage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -622,6 +921,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Subtitle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.Subtitle" target="_top">.NET documentation</a>
+     */
     public java.lang.String getSubtitle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -636,6 +942,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TitleIconImageUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.TitleIconImageUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitleIconImageUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -650,6 +963,25 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TitleIconImageUrl.
+     *
+     * @param TitleIconImageUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.TitleIconImageUrl" target="_top">.NET documentation</a>
+     */
     public void setTitleIconImageUrl(java.lang.String TitleIconImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -660,6 +992,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TitleUrl.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.TitleUrl" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTitleUrl() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -674,6 +1013,25 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TitleUrl.
+     *
+     * @param TitleUrl the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.TitleUrl" target="_top">.NET documentation</a>
+     */
     public void setTitleUrl(java.lang.String TitleUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -684,6 +1042,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ExportMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.ExportMode" target="_top">.NET documentation</a>
+     */
     public WebPartExportMode getExportMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -699,6 +1064,24 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ExportMode.
+     *
+     * @param ExportMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.ExportMode" target="_top">.NET documentation</a>
+     */
     public void setExportMode(WebPartExportMode ExportMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -709,6 +1092,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HelpMode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.HelpMode" target="_top">.NET documentation</a>
+     */
     public WebPartHelpMode getHelpMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -724,6 +1114,14 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HelpMode.
+     *
+     * @param HelpMode the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.HelpMode" target="_top">.NET documentation</a>
+     */
     public void setHelpMode(WebPartHelpMode HelpMode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -734,6 +1132,13 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Verbs.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.Verbs" target="_top">.NET documentation</a>
+     */
     public WebPartVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -749,6 +1154,20 @@ public class WebPart extends system.web.ui.webcontrols.webparts.Part  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Zone.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPart.Zone" target="_top">.NET documentation</a>
+     */
     public WebPartZoneBase getZone() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

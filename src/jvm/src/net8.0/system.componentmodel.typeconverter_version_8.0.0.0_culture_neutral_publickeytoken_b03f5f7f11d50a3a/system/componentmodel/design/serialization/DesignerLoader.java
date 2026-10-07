@@ -100,7 +100,10 @@ public class DesignerLoader extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public DesignerLoader(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -153,6 +156,13 @@ public class DesignerLoader extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member BeginLoad.
+     *
+     * @param host the argument of type {@code IDesignerLoaderHost}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerLoader.BeginLoad" target="_top">.NET documentation</a>
+     */
     public void BeginLoad(IDesignerLoaderHost host) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -163,6 +173,12 @@ public class DesignerLoader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerLoader.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +189,12 @@ public class DesignerLoader extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member Flush.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerLoader.Flush" target="_top">.NET documentation</a>
+     */
     public void Flush() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +209,13 @@ public class DesignerLoader extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property Loading.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.DesignerLoader.Loading" target="_top">.NET documentation</a>
+     */
     public boolean getLoading() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

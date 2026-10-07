@@ -101,7 +101,10 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public UnmanagedMarshal(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,14 @@ public class UnmanagedMarshal extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member DefineByValArray.
+     *
+     * @param elemCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.DefineByValArray" target="_top">.NET documentation</a>
+     */
     public static UnmanagedMarshal DefineByValArray(int elemCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -171,6 +182,14 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineByValTStr.
+     *
+     * @param elemCount the argument of type {@code int}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.DefineByValTStr" target="_top">.NET documentation</a>
+     */
     public static UnmanagedMarshal DefineByValTStr(int elemCount) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -186,6 +205,14 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineLPArray.
+     *
+     * @param elemType the argument of type {@code UnmanagedType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.DefineLPArray" target="_top">.NET documentation</a>
+     */
     public static UnmanagedMarshal DefineLPArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -201,6 +228,14 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineSafeArray.
+     *
+     * @param elemType the argument of type {@code UnmanagedType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.DefineSafeArray" target="_top">.NET documentation</a>
+     */
     public static UnmanagedMarshal DefineSafeArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -216,6 +251,15 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DefineUnmanagedMarshal.
+     *
+     * @param unmanagedType the argument of type {@code UnmanagedType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.DefineUnmanagedMarshal" target="_top">.NET documentation</a>
+     */
     public static UnmanagedMarshal DefineUnmanagedMarshal(UnmanagedType unmanagedType) throws Throwable, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -235,6 +279,14 @@ public class UnmanagedMarshal extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ElementCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.ElementCount" target="_top">.NET documentation</a>
+     */
     public int getElementCount() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +327,14 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IIDGuid.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.IIDGuid" target="_top">.NET documentation</a>
+     */
     public Guid getIIDGuid() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +350,14 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property BaseType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.BaseType" target="_top">.NET documentation</a>
+     */
     public UnmanagedType getBaseType() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +373,13 @@ public class UnmanagedMarshal extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property GetUnmanagedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.UnmanagedMarshal.GetUnmanagedType" target="_top">.NET documentation</a>
+     */
     public UnmanagedType getGetUnmanagedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

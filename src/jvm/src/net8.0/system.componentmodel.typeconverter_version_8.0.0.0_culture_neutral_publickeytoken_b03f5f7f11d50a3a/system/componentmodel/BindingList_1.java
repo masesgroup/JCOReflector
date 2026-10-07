@@ -105,7 +105,10 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public BindingList_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,18 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingList_1() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +179,23 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param list the argument of type {@code IList_1}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.-ctor" target="_top">.NET documentation</a>
+     */
     public BindingList_1(IList_1 list) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -180,6 +212,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     
     // Methods section
     
+    /**
+     * Invokes the .NET member AddNew.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AddNew" target="_top">.NET documentation</a>
+     */
     public T AddNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +233,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member CancelNew.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.CancelNew" target="_top">.NET documentation</a>
+     */
     public void CancelNew(int itemIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -204,6 +250,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member EndNew.
+     *
+     * @param itemIndex the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.EndNew" target="_top">.NET documentation</a>
+     */
     public void EndNew(int itemIndex) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -214,6 +267,12 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member ResetBindings.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.ResetBindings" target="_top">.NET documentation</a>
+     */
     public void ResetBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +283,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member ResetItem.
+     *
+     * @param position the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.ResetItem" target="_top">.NET documentation</a>
+     */
     public void ResetItem(int position) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,8 +303,14 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param key the argument of type {@code NetObject}
+     * @return the value returned by the .NET member
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.Find" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -246,8 +318,12 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.AddIndex" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void AddIndex(PropertyDescriptor property) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -255,8 +331,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @param direction the argument of type {@code ListSortDirection}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.ApplySort" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -264,8 +345,12 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @param property the argument of type {@code PropertyDescriptor}
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.RemoveIndex" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveIndex(PropertyDescriptor property) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -273,8 +358,11 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     *
+     * @throws Throwable always, with an {@code UnsupportedOperationException}
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IBindingList.RemoveSort" target="_top">.NET documentation</a>
      */
-    @Deprecated 
+    @Deprecated
     public void RemoveSort() throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
@@ -283,6 +371,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property AllowEdit.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AllowEdit" target="_top">.NET documentation</a>
+     */
     public boolean getAllowEdit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -297,6 +392,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowEdit.
+     *
+     * @param AllowEdit the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AllowEdit" target="_top">.NET documentation</a>
+     */
     public void setAllowEdit(boolean AllowEdit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -307,6 +409,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowNew.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AllowNew" target="_top">.NET documentation</a>
+     */
     public boolean getAllowNew() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +430,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowNew.
+     *
+     * @param AllowNew the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AllowNew" target="_top">.NET documentation</a>
+     */
     public void setAllowNew(boolean AllowNew) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +447,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Gets the value of the .NET property AllowRemove.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AllowRemove" target="_top">.NET documentation</a>
+     */
     public boolean getAllowRemove() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +468,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property AllowRemove.
+     *
+     * @param AllowRemove the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.AllowRemove" target="_top">.NET documentation</a>
+     */
     public void setAllowRemove(boolean AllowRemove) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +485,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Gets the value of the .NET property RaiseListChangedEvents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.RaiseListChangedEvents" target="_top">.NET documentation</a>
+     */
     public boolean getRaiseListChangedEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -369,6 +506,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Sets the value of the .NET property RaiseListChangedEvents.
+     *
+     * @param RaiseListChangedEvents the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.RaiseListChangedEvents" target="_top">.NET documentation</a>
+     */
     public void setRaiseListChangedEvents(boolean RaiseListChangedEvents) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -384,6 +528,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addAddingNew.
+     *
+     * @param handler the argument of type {@code AddingNewEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addAddingNew(AddingNewEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +545,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member removeAddingNew.
+     *
+     * @param handler the argument of type {@code AddingNewEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeAddingNew(AddingNewEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +562,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member addListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +579,13 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
         }
     }
 
+    /**
+     * Invokes the .NET member removeListChanged.
+     *
+     * @param handler the argument of type {@code ListChangedEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

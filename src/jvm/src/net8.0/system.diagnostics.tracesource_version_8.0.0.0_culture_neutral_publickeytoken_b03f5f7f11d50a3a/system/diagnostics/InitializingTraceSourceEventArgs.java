@@ -100,7 +100,10 @@ public class InitializingTraceSourceEventArgs extends system.EventArgs  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InitializingTraceSourceEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,13 @@ public class InitializingTraceSourceEventArgs extends system.EventArgs  {
     public InitializingTraceSourceEventArgs() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param traceSource the argument of type {@code TraceSource}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs.-ctor" target="_top">.NET documentation</a>
+     */
     public InitializingTraceSourceEventArgs(TraceSource traceSource) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +179,13 @@ public class InitializingTraceSourceEventArgs extends system.EventArgs  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property WasInitialized.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs.WasInitialized" target="_top">.NET documentation</a>
+     */
     public boolean getWasInitialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +200,13 @@ public class InitializingTraceSourceEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property WasInitialized.
+     *
+     * @param WasInitialized the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs.WasInitialized" target="_top">.NET documentation</a>
+     */
     public void setWasInitialized(boolean WasInitialized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +217,13 @@ public class InitializingTraceSourceEventArgs extends system.EventArgs  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TraceSource.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs.TraceSource" target="_top">.NET documentation</a>
+     */
     public TraceSource getTraceSource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

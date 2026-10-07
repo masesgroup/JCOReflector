@@ -102,7 +102,10 @@ public class CalendarBlackoutDatesCollection extends system.collections.objectmo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CalendarBlackoutDatesCollection(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,13 @@ public class CalendarBlackoutDatesCollection extends system.collections.objectmo
     public CalendarBlackoutDatesCollection() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param owner the argument of type {@code Calendar}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection.-ctor" target="_top">.NET documentation</a>
+     */
     public CalendarBlackoutDatesCollection(Calendar owner) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -167,6 +177,23 @@ public class CalendarBlackoutDatesCollection extends system.collections.objectmo
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param start the argument of type {@code DateTime}
+     * @param end the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.RankException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(DateTime start, DateTime end) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +208,15 @@ public class CalendarBlackoutDatesCollection extends system.collections.objectmo
         }
     }
 
+    /**
+     * Invokes the .NET member Contains.
+     *
+     * @param date the argument of type {@code DateTime}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection.Contains" target="_top">.NET documentation</a>
+     */
     public boolean Contains(DateTime date) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +231,14 @@ public class CalendarBlackoutDatesCollection extends system.collections.objectmo
         }
     }
 
+    /**
+     * Invokes the .NET member ContainsAny.
+     *
+     * @param range the argument of type {@code CalendarDateRange}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection.ContainsAny" target="_top">.NET documentation</a>
+     */
     public boolean ContainsAny(CalendarDateRange range) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -209,6 +253,20 @@ public class CalendarBlackoutDatesCollection extends system.collections.objectmo
         }
     }
 
+    /**
+     * Invokes the .NET member AddDatesInPast.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.InvalidTimeZoneException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection.AddDatesInPast" target="_top">.NET documentation</a>
+     */
     public void AddDatesInPast() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public CodeIterationStatement(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeIterationStatement() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -158,6 +167,17 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param initStatement the argument of type {@code CodeStatement}
+     * @param testExpression the argument of type {@code CodeExpression}
+     * @param incrementStatement the argument of type {@code CodeStatement}
+     * @param statements the argument of type {@code CodeStatement...}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.-ctor" target="_top">.NET documentation</a>
+     */
     public CodeIterationStatement(CodeStatement initStatement, CodeExpression testExpression, CodeStatement incrementStatement, CodeStatement... statements) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -176,6 +196,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property TestExpression.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.TestExpression" target="_top">.NET documentation</a>
+     */
     public CodeExpression getTestExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +218,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TestExpression.
+     *
+     * @param TestExpression the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.TestExpression" target="_top">.NET documentation</a>
+     */
     public void setTestExpression(CodeExpression TestExpression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -201,6 +235,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property IncrementStatement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.IncrementStatement" target="_top">.NET documentation</a>
+     */
     public CodeStatement getIncrementStatement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +257,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property IncrementStatement.
+     *
+     * @param IncrementStatement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.IncrementStatement" target="_top">.NET documentation</a>
+     */
     public void setIncrementStatement(CodeStatement IncrementStatement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +274,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InitStatement.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.InitStatement" target="_top">.NET documentation</a>
+     */
     public CodeStatement getInitStatement() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -241,6 +296,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property InitStatement.
+     *
+     * @param InitStatement the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.InitStatement" target="_top">.NET documentation</a>
+     */
     public void setInitStatement(CodeStatement InitStatement) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +313,13 @@ public class CodeIterationStatement extends system.codedom.CodeStatement  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Statements.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeIterationStatement.Statements" target="_top">.NET documentation</a>
+     */
     public CodeStatementCollection getStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public Gauge_1(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -156,6 +159,21 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Record.
+     *
+     * @param value the argument of type {@code T}
+     * @param tag1 the argument of type {@code KeyValuePair_2}
+     * @param tag2 the argument of type {@code KeyValuePair_2}
+     * @param tag3 the argument of type {@code KeyValuePair_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Gauge-1.Record" target="_top">.NET documentation</a>
+     */
     public void Record(T value, KeyValuePair_2 tag1, KeyValuePair_2 tag2, KeyValuePair_2 tag3) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -166,6 +184,20 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
         }
     }
 
+    /**
+     * Invokes the .NET member Record.
+     *
+     * @param value the argument of type {@code T}
+     * @param tag1 the argument of type {@code KeyValuePair_2}
+     * @param tag2 the argument of type {@code KeyValuePair_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Gauge-1.Record" target="_top">.NET documentation</a>
+     */
     public void Record(T value, KeyValuePair_2 tag1, KeyValuePair_2 tag2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +208,19 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
         }
     }
 
+    /**
+     * Invokes the .NET member Record.
+     *
+     * @param value the argument of type {@code T}
+     * @param tag the argument of type {@code KeyValuePair_2}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Gauge-1.Record" target="_top">.NET documentation</a>
+     */
     public void Record(T value, KeyValuePair_2 tag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -186,6 +231,16 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
         }
     }
 
+    /**
+     * Invokes the .NET member Record.
+     *
+     * @param value the argument of type {@code T}
+     * @param tags the argument of type {@code KeyValuePair_2...}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Gauge-1.Record" target="_top">.NET documentation</a>
+     */
     public void Record(T value, KeyValuePair_2... tags) throws Throwable, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -196,6 +251,19 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
         }
     }
 
+    /**
+     * Invokes the .NET member Record.
+     *
+     * @param value the argument of type {@code T}
+     * @param tagList the argument of type {@code JCORefOut<TagList>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Gauge-1.Record" target="_top">.NET documentation</a>
+     */
     public void Record(T value, JCORefOut<TagList> tagList) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +274,15 @@ public class Gauge_1<T extends IJCOBridgeReflected> extends system.diagnostics.m
         }
     }
 
+    /**
+     * Invokes the .NET member Record.
+     *
+     * @param value the argument of type {@code T}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Gauge-1.Record" target="_top">.NET documentation</a>
+     */
     public void Record(T value) throws Throwable, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

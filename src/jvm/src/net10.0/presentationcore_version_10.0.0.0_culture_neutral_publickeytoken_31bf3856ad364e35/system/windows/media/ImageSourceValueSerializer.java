@@ -101,7 +101,10 @@ public class ImageSourceValueSerializer extends system.windows.markup.ValueSeria
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ImageSourceValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class ImageSourceValueSerializer extends system.windows.markup.ValueSeria
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.ImageSourceValueSerializer.-ctor" target="_top">.NET documentation</a>
+     */
     public ImageSourceValueSerializer() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,6 +171,15 @@ public class ImageSourceValueSerializer extends system.windows.markup.ValueSeria
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CanConvertFromString.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.ImageSourceValueSerializer.CanConvertFromString" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -176,6 +194,15 @@ public class ImageSourceValueSerializer extends system.windows.markup.ValueSeria
         }
     }
 
+    /**
+     * Invokes the .NET member CanConvertToString.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.ImageSourceValueSerializer.CanConvertToString" target="_top">.NET documentation</a>
+     */
     public boolean CanConvertToString(NetObject value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -190,6 +217,36 @@ public class ImageSourceValueSerializer extends system.windows.markup.ValueSeria
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertFromString.
+     *
+     * @param value the argument of type {@code java.lang.String}
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.diagnostics.UnreachableException if the .NET member raises it
+     * @throws system.UriFormatException if the .NET member raises it
+     * @throws system.OutOfMemoryException if the .NET member raises it
+     * @throws system.ArrayTypeMismatchException if the .NET member raises it
+     * @throws system.io.FileFormatException if the .NET member raises it
+     * @throws system.componentmodel.Win32Exception if the .NET member raises it
+     * @throws system.threading.ThreadStateException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.net.WebException if the .NET member raises it
+     * @throws system.net.CookieException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.ImageSourceValueSerializer.ConvertFromString" target="_top">.NET documentation</a>
+     */
     public NetObject ConvertFromString(java.lang.String value, IValueSerializerContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.io.FileFormatException, system.componentmodel.Win32Exception, system.threading.ThreadStateException, system.ObjectDisposedException, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +262,25 @@ public class ImageSourceValueSerializer extends system.windows.markup.ValueSeria
         }
     }
 
+    /**
+     * Invokes the .NET member ConvertToString.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param context the argument of type {@code IValueSerializerContext}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.globalization.CultureNotFoundException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.ImageSourceValueSerializer.ConvertToString" target="_top">.NET documentation</a>
+     */
     public java.lang.String ConvertToString(NetObject value, IValueSerializerContext context) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

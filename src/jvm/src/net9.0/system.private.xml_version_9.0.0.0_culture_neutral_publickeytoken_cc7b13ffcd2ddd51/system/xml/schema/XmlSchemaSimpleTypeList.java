@@ -101,7 +101,10 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaSimpleTypeList(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -148,6 +151,12 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.-ctor" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleTypeList() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,13 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BaseItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.BaseItemType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getBaseItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +197,13 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
         }
     }
 
+    /**
+     * Sets the value of the .NET property BaseItemType.
+     *
+     * @param BaseItemType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.BaseItemType" target="_top">.NET documentation</a>
+     */
     public void setBaseItemType(XmlSchemaSimpleType BaseItemType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +214,13 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.ItemType" target="_top">.NET documentation</a>
+     */
     public XmlSchemaSimpleType getItemType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +236,13 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemType.
+     *
+     * @param ItemType the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.ItemType" target="_top">.NET documentation</a>
+     */
     public void setItemType(XmlSchemaSimpleType ItemType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +253,13 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
         }
     }
 
+    /**
+     * Gets the value of the .NET property ItemTypeName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.ItemTypeName" target="_top">.NET documentation</a>
+     */
     public XmlQualifiedName getItemTypeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -231,6 +275,13 @@ public class XmlSchemaSimpleTypeList extends system.xml.schema.XmlSchemaSimpleTy
         }
     }
 
+    /**
+     * Sets the value of the .NET property ItemTypeName.
+     *
+     * @param ItemTypeName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaSimpleTypeList.ItemTypeName" target="_top">.NET documentation</a>
+     */
     public void setItemTypeName(XmlQualifiedName ItemTypeName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

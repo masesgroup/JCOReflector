@@ -158,7 +158,10 @@ public class PropertyChangedCallback extends JCVoidDelegate implements IJCVoidEv
         callerInstance = instance;
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public PropertyChangedCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
@@ -180,6 +183,14 @@ public class PropertyChangedCallback extends JCVoidDelegate implements IJCVoidEv
         return JCOBridgeInstance.translateException(ne);
     }
 
+    /**
+     * Invokes the .NET member DynamicInvoke.
+     *
+     * @param d the argument of type {@code DependencyObject}
+     * @param e the argument of type {@code DependencyPropertyChangedEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Delegate.DynamicInvoke" target="_top">.NET documentation</a>
+     */
     public void DynamicInvoke(DependencyObject d, DependencyPropertyChangedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,7 +202,10 @@ public class PropertyChangedCallback extends JCVoidDelegate implements IJCVoidEv
     }
 
     /**
-     * Methods invoked in JVM when an event is raised in CLR 
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param d the .NET argument of type {@code System.Windows.DependencyObject}
+     * @param e the .NET argument of type {@code System.Windows.DependencyPropertyChangedEventArgs}
      */
     public void Invoke(DependencyObject d, DependencyPropertyChangedEventArgs e) {
     }

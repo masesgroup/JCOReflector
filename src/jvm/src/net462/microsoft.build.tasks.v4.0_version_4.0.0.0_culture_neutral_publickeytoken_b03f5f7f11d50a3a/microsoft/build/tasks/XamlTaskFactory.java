@@ -105,7 +105,10 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XamlTaskFactory(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,12 @@ public class XamlTaskFactory extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.-ctor" target="_top">.NET documentation</a>
+     */
     public XamlTaskFactory() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -166,6 +175,42 @@ public class XamlTaskFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Initialize.
+     *
+     * @param taskName the argument of type {@code java.lang.String}
+     * @param taskParameters the argument of type {@code IDictionary_2}
+     * @param taskElementContents the argument of type {@code java.lang.String}
+     * @param taskFactoryLoggingHost the argument of type {@code IBuildEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.io.PathTooLongException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.NullReferenceException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.xml.XmlException if the .NET member raises it
+     * @throws system.xaml.XamlSchemaException if the .NET member raises it
+     * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.xaml.XamlException if the .NET member raises it
+     * @throws system.xaml.XamlParseException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
+     * @throws system.TypeLoadException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.Initialize" target="_top">.NET documentation</a>
+     */
     public boolean Initialize(java.lang.String taskName, IDictionary_2 taskParameters, java.lang.String taskElementContents, IBuildEngine taskFactoryLoggingHost) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.xaml.XamlException, system.xaml.XamlParseException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -180,6 +225,25 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CreateTask.
+     *
+     * @param taskFactoryLoggingHost the argument of type {@code IBuildEngine}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.MissingMethodException if the .NET member raises it
+     * @throws system.reflection.TargetInvocationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.CreateTask" target="_top">.NET documentation</a>
+     */
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +259,15 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member GetTaskParameters.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.GetTaskParameters" target="_top">.NET documentation</a>
+     */
     public TaskPropertyInfo[] GetTaskParameters() throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -216,6 +289,19 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member CleanupTask.
+     *
+     * @param task the argument of type {@code ITask}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.resources.MissingManifestResourceException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.CleanupTask" target="_top">.NET documentation</a>
+     */
     public void CleanupTask(ITask task) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -230,6 +316,13 @@ public class XamlTaskFactory extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property FactoryName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.FactoryName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getFactoryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -244,6 +337,13 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskElementContents.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskElementContents" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTaskElementContents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -258,6 +358,13 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TaskElementContents.
+     *
+     * @param TaskElementContents the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskElementContents" target="_top">.NET documentation</a>
+     */
     public void setTaskElementContents(java.lang.String TaskElementContents) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +375,13 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskName.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskName" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTaskName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +396,13 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TaskName.
+     *
+     * @param TaskName the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskName" target="_top">.NET documentation</a>
+     */
     public void setTaskName(java.lang.String TaskName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +413,13 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskNamespace.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskNamespace" target="_top">.NET documentation</a>
+     */
     public java.lang.String getTaskNamespace() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -306,6 +434,13 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property TaskNamespace.
+     *
+     * @param TaskNamespace the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskNamespace" target="_top">.NET documentation</a>
+     */
     public void setTaskNamespace(java.lang.String TaskNamespace) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -316,6 +451,15 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TaskType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.NotImplementedException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.XamlTaskFactory.TaskType" target="_top">.NET documentation</a>
+     */
     public NetType getTaskType() throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

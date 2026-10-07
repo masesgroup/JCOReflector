@@ -117,7 +117,10 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ToolStripRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -170,6 +173,27 @@ public class ToolStripRenderer extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member CreateDisabledImage.
+     *
+     * @param normalImage the argument of type {@code Image}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.ObjectDisposedException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.UnauthorizedAccessException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.CreateDisabledImage" target="_top">.NET documentation</a>
+     */
     public static Image CreateDisabledImage(Image normalImage) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -185,6 +209,20 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawArrow.
+     *
+     * @param e the argument of type {@code ToolStripArrowRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawArrow" target="_top">.NET documentation</a>
+     */
     public void DrawArrow(ToolStripArrowRenderEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -195,6 +233,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawButtonBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawButtonBackground" target="_top">.NET documentation</a>
+     */
     public void DrawButtonBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +250,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawDropDownButtonBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawDropDownButtonBackground" target="_top">.NET documentation</a>
+     */
     public void DrawDropDownButtonBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -215,6 +267,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawGrip.
+     *
+     * @param e the argument of type {@code ToolStripGripRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawGrip" target="_top">.NET documentation</a>
+     */
     public void DrawGrip(ToolStripGripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,6 +284,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawImageMargin.
+     *
+     * @param e the argument of type {@code ToolStripRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawImageMargin" target="_top">.NET documentation</a>
+     */
     public void DrawImageMargin(ToolStripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -235,6 +301,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawItemBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawItemBackground" target="_top">.NET documentation</a>
+     */
     public void DrawItemBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -245,6 +318,24 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawItemCheck.
+     *
+     * @param e the argument of type {@code ToolStripItemImageRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawItemCheck" target="_top">.NET documentation</a>
+     */
     public void DrawItemCheck(ToolStripItemImageRenderEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -255,6 +346,23 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawItemImage.
+     *
+     * @param e the argument of type {@code ToolStripItemImageRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.security.SecurityException if the .NET member raises it
+     * @throws system.io.IOException if the .NET member raises it
+     * @throws system.OverflowException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawItemImage" target="_top">.NET documentation</a>
+     */
     public void DrawItemImage(ToolStripItemImageRenderEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.security.SecurityException, system.io.IOException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -265,6 +373,20 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawItemText.
+     *
+     * @param e the argument of type {@code ToolStripItemTextRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawItemText" target="_top">.NET documentation</a>
+     */
     public void DrawItemText(ToolStripItemTextRenderEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +397,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawLabelBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawLabelBackground" target="_top">.NET documentation</a>
+     */
     public void DrawLabelBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +414,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawMenuItemBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawMenuItemBackground" target="_top">.NET documentation</a>
+     */
     public void DrawMenuItemBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -295,6 +431,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawOverflowButtonBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawOverflowButtonBackground" target="_top">.NET documentation</a>
+     */
     public void DrawOverflowButtonBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +448,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawSeparator.
+     *
+     * @param e the argument of type {@code ToolStripSeparatorRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawSeparator" target="_top">.NET documentation</a>
+     */
     public void DrawSeparator(ToolStripSeparatorRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -315,6 +465,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawSplitButton.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawSplitButton" target="_top">.NET documentation</a>
+     */
     public void DrawSplitButton(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -325,6 +482,25 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawStatusStripSizingGrip.
+     *
+     * @param e the argument of type {@code ToolStripRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentException if the .NET member raises it
+     * @throws system.NotSupportedException if the .NET member raises it
+     * @throws system.InvalidOperationException if the .NET member raises it
+     * @throws system.ArgumentOutOfRangeException if the .NET member raises it
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @throws system.PlatformNotSupportedException if the .NET member raises it
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @throws system.FormatException if the .NET member raises it
+     * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
+     * @throws system.threading.SynchronizationLockException if the .NET member raises it
+     * @throws system.InvalidCastException if the .NET member raises it
+     * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawStatusStripSizingGrip" target="_top">.NET documentation</a>
+     */
     public void DrawStatusStripSizingGrip(ToolStripRenderEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.threading.SynchronizationLockException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -335,6 +511,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawToolStripBackground.
+     *
+     * @param e the argument of type {@code ToolStripRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawToolStripBackground" target="_top">.NET documentation</a>
+     */
     public void DrawToolStripBackground(ToolStripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +528,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawToolStripBorder.
+     *
+     * @param e the argument of type {@code ToolStripRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawToolStripBorder" target="_top">.NET documentation</a>
+     */
     public void DrawToolStripBorder(ToolStripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -355,6 +545,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawToolStripContentPanelBackground.
+     *
+     * @param e the argument of type {@code ToolStripContentPanelRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawToolStripContentPanelBackground" target="_top">.NET documentation</a>
+     */
     public void DrawToolStripContentPanelBackground(ToolStripContentPanelRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -365,6 +562,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawToolStripPanelBackground.
+     *
+     * @param e the argument of type {@code ToolStripPanelRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawToolStripPanelBackground" target="_top">.NET documentation</a>
+     */
     public void DrawToolStripPanelBackground(ToolStripPanelRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -375,6 +579,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member DrawToolStripStatusLabelBackground.
+     *
+     * @param e the argument of type {@code ToolStripItemRenderEventArgs}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ToolStripRenderer.DrawToolStripStatusLabelBackground" target="_top">.NET documentation</a>
+     */
     public void DrawToolStripStatusLabelBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -394,6 +605,13 @@ public class ToolStripRenderer extends NetObject  {
     // Instance Events section
     
 
+    /**
+     * Invokes the .NET member addRenderArrow.
+     *
+     * @param handler the argument of type {@code ToolStripArrowRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderArrow(ToolStripArrowRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -404,6 +622,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderArrow.
+     *
+     * @param handler the argument of type {@code ToolStripArrowRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderArrow(ToolStripArrowRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -414,6 +639,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderToolStripContentPanelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripContentPanelRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderToolStripContentPanelBackground(ToolStripContentPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -424,6 +656,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderToolStripContentPanelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripContentPanelRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderToolStripContentPanelBackground(ToolStripContentPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -434,6 +673,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderGrip.
+     *
+     * @param handler the argument of type {@code ToolStripGripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderGrip(ToolStripGripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -444,6 +690,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderGrip.
+     *
+     * @param handler the argument of type {@code ToolStripGripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderGrip(ToolStripGripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -454,6 +707,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderItemCheck.
+     *
+     * @param handler the argument of type {@code ToolStripItemImageRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderItemCheck(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -464,6 +724,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderItemCheck.
+     *
+     * @param handler the argument of type {@code ToolStripItemImageRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderItemCheck(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -474,6 +741,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderItemImage.
+     *
+     * @param handler the argument of type {@code ToolStripItemImageRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderItemImage(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -484,6 +758,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderItemImage.
+     *
+     * @param handler the argument of type {@code ToolStripItemImageRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderItemImage(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -494,6 +775,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -504,6 +792,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -514,6 +809,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderDropDownButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderDropDownButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -524,6 +826,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderDropDownButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderDropDownButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -534,6 +843,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderItemBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -544,6 +860,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderItemBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -554,6 +877,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderLabelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -564,6 +894,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderLabelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -574,6 +911,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderMenuItemBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderMenuItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -584,6 +928,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderMenuItemBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderMenuItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -594,6 +945,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderOverflowButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderOverflowButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -604,6 +962,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderOverflowButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderOverflowButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -614,6 +979,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderSplitButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderSplitButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -624,6 +996,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderSplitButtonBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderSplitButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +1013,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderToolStripStatusLabelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderToolStripStatusLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -644,6 +1030,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderToolStripStatusLabelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripItemRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderToolStripStatusLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -654,6 +1047,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderItemText.
+     *
+     * @param handler the argument of type {@code ToolStripItemTextRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderItemText(ToolStripItemTextRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -664,6 +1064,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderItemText.
+     *
+     * @param handler the argument of type {@code ToolStripItemTextRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderItemText(ToolStripItemTextRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -674,6 +1081,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderToolStripPanelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripPanelRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderToolStripPanelBackground(ToolStripPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -684,6 +1098,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderToolStripPanelBackground.
+     *
+     * @param handler the argument of type {@code ToolStripPanelRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderToolStripPanelBackground(ToolStripPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -694,6 +1115,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderImageMargin.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderImageMargin(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -704,6 +1132,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderImageMargin.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderImageMargin(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -714,6 +1149,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderStatusStripSizingGrip.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderStatusStripSizingGrip(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -724,6 +1166,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderStatusStripSizingGrip.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderStatusStripSizingGrip(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -734,6 +1183,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderToolStripBackground.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderToolStripBackground(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -744,6 +1200,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderToolStripBackground.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderToolStripBackground(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -754,6 +1217,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderToolStripBorder.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderToolStripBorder(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -764,6 +1234,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderToolStripBorder.
+     *
+     * @param handler the argument of type {@code ToolStripRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderToolStripBorder(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -774,6 +1251,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member addRenderSeparator.
+     *
+     * @param handler the argument of type {@code ToolStripSeparatorRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void addRenderSeparator(ToolStripSeparatorRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -784,6 +1268,13 @@ public class ToolStripRenderer extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member removeRenderSeparator.
+     *
+     * @param handler the argument of type {@code ToolStripSeparatorRenderEventHandler}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
     public void removeRenderSeparator(ToolStripSeparatorRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

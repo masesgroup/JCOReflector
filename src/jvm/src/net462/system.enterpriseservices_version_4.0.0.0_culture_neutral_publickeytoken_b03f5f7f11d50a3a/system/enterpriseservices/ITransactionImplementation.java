@@ -100,7 +100,10 @@ public class ITransactionImplementation extends NetObject implements ITransactio
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ITransactionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,15 @@ public class ITransactionImplementation extends NetObject implements ITransactio
 
     // Methods section
     
+    /**
+     * Invokes the .NET member Abort.
+     *
+     * @param pboidReason the argument of type {@code JCORefOut<BOID>}
+     * @param fRetaining the argument of type {@code int}
+     * @param fAsync the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ITransaction.Abort" target="_top">.NET documentation</a>
+     */
     public void Abort(JCORefOut<BOID> pboidReason, int fRetaining, int fAsync) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +164,15 @@ public class ITransactionImplementation extends NetObject implements ITransactio
         }
     }
 
+    /**
+     * Invokes the .NET member Commit.
+     *
+     * @param fRetaining the argument of type {@code int}
+     * @param grfTC the argument of type {@code int}
+     * @param grfRM the argument of type {@code int}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ITransaction.Commit" target="_top">.NET documentation</a>
+     */
     public void Commit(int fRetaining, int grfTC, int grfRM) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +183,13 @@ public class ITransactionImplementation extends NetObject implements ITransactio
         }
     }
 
+    /**
+     * Invokes the .NET member GetTransactionInfo.
+     *
+     * @param pinfo the argument of type {@code JCORefOut<XACTTRANSINFO>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.ITransaction.GetTransactionInfo" target="_top">.NET documentation</a>
+     */
     public void GetTransactionInfo(JCORefOut<XACTTRANSINFO> pinfo) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

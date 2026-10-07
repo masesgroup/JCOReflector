@@ -98,7 +98,10 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public INotifyDataErrorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -140,6 +143,14 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetErrors.
+     *
+     * @param propertyName the argument of type {@code java.lang.String}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INotifyDataErrorInfo.GetErrors" target="_top">.NET documentation</a>
+     */
     public IEnumerable GetErrors(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -159,6 +170,13 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HasErrors.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.INotifyDataErrorInfo.HasErrors" target="_top">.NET documentation</a>
+     */
     public boolean getHasErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

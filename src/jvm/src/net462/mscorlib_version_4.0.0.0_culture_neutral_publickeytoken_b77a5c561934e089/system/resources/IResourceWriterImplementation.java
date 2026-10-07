@@ -100,7 +100,10 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IResourceWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,14 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     // Methods section
     
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code byte[]}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String name, byte[] value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +163,14 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param dupParam0 the argument of type {@code java.lang.String}
+     * @param dupParam1 the argument of type {@code JCORefOut}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +181,14 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code NetObject}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +199,14 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
+    /**
+     * Invokes the .NET member AddResource.
+     *
+     * @param name the argument of type {@code java.lang.String}
+     * @param value the argument of type {@code java.lang.String}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.AddResource" target="_top">.NET documentation</a>
+     */
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +217,12 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
+    /**
+     * Invokes the .NET member Close.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.Close" target="_top">.NET documentation</a>
+     */
     public void Close() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +233,12 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
+    /**
+     * Invokes the .NET member Dispose.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.Dispose" target="_top">.NET documentation</a>
+     */
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +249,12 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
         }
     }
 
+    /**
+     * Invokes the .NET member Generate.
+     *
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Resources.IResourceWriter.Generate" target="_top">.NET documentation</a>
+     */
     public void Generate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

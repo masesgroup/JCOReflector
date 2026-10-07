@@ -53,5 +53,12 @@ import system.activities.ActivityInstance;
  * @version 2.0.0.0
  */
 public interface ICompletionCallback_1<TResult extends IJCOBridgeReflected> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * @param context the .NET argument of type {@code System.Activities.NativeActivityContext}
+     * @param completedInstance the .NET argument of type {@code System.Activities.ActivityInstance}
+     * @param result the .NET argument of type {@code TResult}
+     */
     public void Invoke(NativeActivityContext context, ActivityInstance completedInstance, TResult result);
 }

@@ -99,7 +99,10 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public InterfaceImplementedInVersionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,17 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
     public InterfaceImplementedInVersionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param interfaceType the argument of type {@code NetType}
+     * @param majorVersion the argument of type {@code byte}
+     * @param minorVersion the argument of type {@code byte}
+     * @param buildVersion the argument of type {@code byte}
+     * @param revisionVersion the argument of type {@code byte}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public InterfaceImplementedInVersionAttribute(NetType interfaceType, byte majorVersion, byte minorVersion, byte buildVersion, byte revisionVersion) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +182,13 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property BuildVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.BuildVersion" target="_top">.NET documentation</a>
+     */
     public byte getBuildVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -208,6 +229,13 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MajorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MajorVersion" target="_top">.NET documentation</a>
+     */
     public byte getMajorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -248,6 +276,13 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property MinorVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.MinorVersion" target="_top">.NET documentation</a>
+     */
     public byte getMinorVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -288,6 +323,13 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property RevisionVersion.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.RevisionVersion" target="_top">.NET documentation</a>
+     */
     public byte getRevisionVersion() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -328,6 +370,13 @@ public class InterfaceImplementedInVersionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property InterfaceType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.InterfaceImplementedInVersionAttribute.InterfaceType" target="_top">.NET documentation</a>
+     */
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

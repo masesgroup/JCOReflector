@@ -100,7 +100,10 @@ public class ResourceConsumptionAttribute extends system.Attribute  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public ResourceConsumptionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -150,6 +153,14 @@ public class ResourceConsumptionAttribute extends system.Attribute  {
     public ResourceConsumptionAttribute() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resourceScope the argument of type {@code ResourceScope}
+     * @param consumptionScope the argument of type {@code ResourceScope}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ResourceConsumptionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ResourceConsumptionAttribute(ResourceScope resourceScope, ResourceScope consumptionScope) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -160,6 +171,13 @@ public class ResourceConsumptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param resourceScope the argument of type {@code ResourceScope}
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ResourceConsumptionAttribute.-ctor" target="_top">.NET documentation</a>
+     */
     public ResourceConsumptionAttribute(ResourceScope resourceScope) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -179,6 +197,13 @@ public class ResourceConsumptionAttribute extends system.Attribute  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ConsumptionScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ResourceConsumptionAttribute.ConsumptionScope" target="_top">.NET documentation</a>
+     */
     public ResourceScope getConsumptionScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -194,6 +219,13 @@ public class ResourceConsumptionAttribute extends system.Attribute  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ResourceScope.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Versioning.ResourceConsumptionAttribute.ResourceScope" target="_top">.NET documentation</a>
+     */
     public ResourceScope getResourceScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

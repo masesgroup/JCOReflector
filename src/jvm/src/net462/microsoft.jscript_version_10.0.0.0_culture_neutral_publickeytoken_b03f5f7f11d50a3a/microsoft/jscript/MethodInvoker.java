@@ -98,7 +98,10 @@ public class MethodInvoker extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MethodInvoker(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,15 @@ public class MethodInvoker extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member Invoke.
+     *
+     * @param thisob the argument of type {@code NetObject}
+     * @param parameters the argument of type {@code NetObject[]}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.MethodInvoker.Invoke" target="_top">.NET documentation</a>
+     */
     public NetObject Invoke(NetObject thisob, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

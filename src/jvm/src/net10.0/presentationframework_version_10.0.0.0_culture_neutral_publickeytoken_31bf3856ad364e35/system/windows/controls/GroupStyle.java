@@ -104,7 +104,10 @@ public class GroupStyle extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public GroupStyle(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -151,6 +154,12 @@ public class GroupStyle extends NetObject  {
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.-ctor" target="_top">.NET documentation</a>
+     */
     public GroupStyle() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +178,13 @@ public class GroupStyle extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property HidesIfEmpty.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HidesIfEmpty" target="_top">.NET documentation</a>
+     */
     public boolean getHidesIfEmpty() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -183,6 +199,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HidesIfEmpty.
+     *
+     * @param HidesIfEmpty the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HidesIfEmpty" target="_top">.NET documentation</a>
+     */
     public void setHidesIfEmpty(boolean HidesIfEmpty) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -193,6 +216,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property AlternationCount.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.AlternationCount" target="_top">.NET documentation</a>
+     */
     public int getAlternationCount() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -233,6 +263,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property AlternationCount.
+     *
+     * @param AlternationCount the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.AlternationCount" target="_top">.NET documentation</a>
+     */
     public void setAlternationCount(int AlternationCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -243,6 +280,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderStringFormat.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HeaderStringFormat" target="_top">.NET documentation</a>
+     */
     public java.lang.String getHeaderStringFormat() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -257,6 +301,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderStringFormat.
+     *
+     * @param HeaderStringFormat the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HeaderStringFormat" target="_top">.NET documentation</a>
+     */
     public void setHeaderStringFormat(java.lang.String HeaderStringFormat) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +318,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderTemplateSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HeaderTemplateSelector" target="_top">.NET documentation</a>
+     */
     public DataTemplateSelector getHeaderTemplateSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +340,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderTemplateSelector.
+     *
+     * @param HeaderTemplateSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HeaderTemplateSelector" target="_top">.NET documentation</a>
+     */
     public void setHeaderTemplateSelector(DataTemplateSelector HeaderTemplateSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -292,6 +357,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Default.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.Default" target="_top">.NET documentation</a>
+     */
     public static GroupStyle getDefault() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -307,6 +379,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Panel.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.Panel" target="_top">.NET documentation</a>
+     */
     public ItemsPanelTemplate getPanel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -322,6 +401,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property Panel.
+     *
+     * @param Panel the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.Panel" target="_top">.NET documentation</a>
+     */
     public void setPanel(ItemsPanelTemplate Panel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -332,6 +418,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainerStyleSelector.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.ContainerStyleSelector" target="_top">.NET documentation</a>
+     */
     public StyleSelector getContainerStyleSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -347,6 +440,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainerStyleSelector.
+     *
+     * @param ContainerStyleSelector the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.ContainerStyleSelector" target="_top">.NET documentation</a>
+     */
     public void setContainerStyleSelector(StyleSelector ContainerStyleSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -357,6 +457,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property HeaderTemplate.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HeaderTemplate" target="_top">.NET documentation</a>
+     */
     public DataTemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -372,6 +479,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property HeaderTemplate.
+     *
+     * @param HeaderTemplate the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.HeaderTemplate" target="_top">.NET documentation</a>
+     */
     public void setHeaderTemplate(DataTemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -382,6 +496,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property ContainerStyle.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.ContainerStyle" target="_top">.NET documentation</a>
+     */
     public Style getContainerStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -397,6 +518,13 @@ public class GroupStyle extends NetObject  {
         }
     }
 
+    /**
+     * Sets the value of the .NET property ContainerStyle.
+     *
+     * @param ContainerStyle the new value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.GroupStyle.ContainerStyle" target="_top">.NET documentation</a>
+     */
     public void setContainerStyle(Style ContainerStyle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

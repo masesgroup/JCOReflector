@@ -102,7 +102,10 @@ public class MinLengthAttributeAdapter extends system.web.modelbinding.DataAnnot
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public MinLengthAttributeAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -152,6 +155,16 @@ public class MinLengthAttributeAdapter extends system.web.modelbinding.DataAnnot
     public MinLengthAttributeAdapter() throws Throwable {
     }
 
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @param metadata the argument of type {@code ModelMetadata}
+     * @param context the argument of type {@code ModelBindingExecutionContext}
+     * @param attribute the argument of type {@code MinLengthAttribute}
+     * @throws Throwable if the .NET constructor fails
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.MinLengthAttributeAdapter.-ctor" target="_top">.NET documentation</a>
+     */
     public MinLengthAttributeAdapter(ModelMetadata metadata, ModelBindingExecutionContext context, MinLengthAttribute attribute) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file

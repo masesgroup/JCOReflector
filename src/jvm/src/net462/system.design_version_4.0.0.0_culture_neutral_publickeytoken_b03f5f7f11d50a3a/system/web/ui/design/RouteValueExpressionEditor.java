@@ -102,7 +102,10 @@ public class RouteValueExpressionEditor extends system.web.ui.design.ExpressionE
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public RouteValueExpressionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -149,6 +152,12 @@ public class RouteValueExpressionEditor extends system.web.ui.design.ExpressionE
 
     // Constructors section
     
+    /**
+     * Initializes a new instance by invoking the .NET constructor.
+     *
+     * @throws Throwable if the .NET constructor fails
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditor.-ctor" target="_top">.NET documentation</a>
+     */
     public RouteValueExpressionEditor() throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -163,6 +172,18 @@ public class RouteValueExpressionEditor extends system.web.ui.design.ExpressionE
     
     // Methods section
     
+    /**
+     * Invokes the .NET member EvaluateExpression.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param parseTimeData the argument of type {@code NetObject}
+     * @param propertyType the argument of type {@code NetType}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.IndexOutOfRangeException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditor.EvaluateExpression" target="_top">.NET documentation</a>
+     */
     public NetObject EvaluateExpression(java.lang.String expression, NetObject parseTimeData, NetType propertyType, IServiceProvider serviceProvider) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +199,15 @@ public class RouteValueExpressionEditor extends system.web.ui.design.ExpressionE
         }
     }
 
+    /**
+     * Invokes the .NET member GetExpressionEditorSheet.
+     *
+     * @param expression the argument of type {@code java.lang.String}
+     * @param serviceProvider the argument of type {@code IServiceProvider}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.Design.RouteValueExpressionEditor.GetExpressionEditorSheet" target="_top">.NET documentation</a>
+     */
     public ExpressionEditorSheet GetExpressionEditorSheet(java.lang.String expression, IServiceProvider serviceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -101,7 +101,10 @@ public class IWorkflowInstanceExtensionImplementation extends NetObject implemen
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IWorkflowInstanceExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -143,6 +146,13 @@ public class IWorkflowInstanceExtensionImplementation extends NetObject implemen
 
     // Methods section
     
+    /**
+     * Invokes the .NET member GetAdditionalExtensions.
+     *
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension.GetAdditionalExtensions" target="_top">.NET documentation</a>
+     */
     public IEnumerable_1 GetAdditionalExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -158,6 +168,13 @@ public class IWorkflowInstanceExtensionImplementation extends NetObject implemen
         }
     }
 
+    /**
+     * Invokes the .NET member SetInstance.
+     *
+     * @param instance the argument of type {@code WorkflowInstanceProxy}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension.SetInstance" target="_top">.NET documentation</a>
+     */
     public void SetInstance(WorkflowInstanceProxy instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

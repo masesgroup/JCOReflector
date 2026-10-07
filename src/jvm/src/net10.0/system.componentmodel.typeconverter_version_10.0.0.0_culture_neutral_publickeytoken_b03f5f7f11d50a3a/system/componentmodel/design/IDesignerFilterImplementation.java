@@ -100,7 +100,10 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public IDesignerFilterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -142,6 +145,13 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
 
     // Methods section
     
+    /**
+     * Invokes the .NET member PostFilterAttributes.
+     *
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterAttributes" target="_top">.NET documentation</a>
+     */
     public void PostFilterAttributes(IDictionary attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -152,6 +162,13 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
         }
     }
 
+    /**
+     * Invokes the .NET member PostFilterEvents.
+     *
+     * @param events the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterEvents" target="_top">.NET documentation</a>
+     */
     public void PostFilterEvents(IDictionary events) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -162,6 +179,13 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
         }
     }
 
+    /**
+     * Invokes the .NET member PostFilterProperties.
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PostFilterProperties" target="_top">.NET documentation</a>
+     */
     public void PostFilterProperties(IDictionary properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +196,13 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
         }
     }
 
+    /**
+     * Invokes the .NET member PreFilterAttributes.
+     *
+     * @param attributes the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterAttributes" target="_top">.NET documentation</a>
+     */
     public void PreFilterAttributes(IDictionary attributes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,6 +213,13 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
         }
     }
 
+    /**
+     * Invokes the .NET member PreFilterEvents.
+     *
+     * @param events the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterEvents" target="_top">.NET documentation</a>
+     */
     public void PreFilterEvents(IDictionary events) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +230,13 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
         }
     }
 
+    /**
+     * Invokes the .NET member PreFilterProperties.
+     *
+     * @param properties the argument of type {@code IDictionary}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.IDesignerFilter.PreFilterProperties" target="_top">.NET documentation</a>
+     */
     public void PreFilterProperties(IDictionary properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

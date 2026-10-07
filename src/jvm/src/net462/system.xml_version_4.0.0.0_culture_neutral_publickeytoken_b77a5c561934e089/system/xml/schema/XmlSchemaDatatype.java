@@ -105,7 +105,10 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
     /**
-     * Internal constructor. Use with caution 
+     * Internal constructor. Use with caution
+     *
+     * @param instance the underlying bridge object: it must be a {@code JCObject}
+     * @throws Throwable if {@code instance} is not a {@code JCObject}
      */
     public XmlSchemaDatatype(java.lang.Object instance) throws Throwable {
         super(instance);
@@ -158,6 +161,14 @@ public class XmlSchemaDatatype extends NetObject  {
     
     // Methods section
     
+    /**
+     * Invokes the .NET member IsDerivedFrom.
+     *
+     * @param datatype the argument of type {@code XmlSchemaDatatype}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.IsDerivedFrom" target="_top">.NET documentation</a>
+     */
     public boolean IsDerivedFrom(XmlSchemaDatatype datatype) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -172,6 +183,16 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeType.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.ChangeType" target="_top">.NET documentation</a>
+     */
     public NetObject ChangeType(NetObject value, NetType targetType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -187,6 +208,17 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ChangeType.
+     *
+     * @param value the argument of type {@code NetObject}
+     * @param targetType the argument of type {@code NetType}
+     * @param namespaceResolver the argument of type {@code IXmlNamespaceResolver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @throws system.ArgumentNullException if the .NET member raises it
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.ChangeType" target="_top">.NET documentation</a>
+     */
     public NetObject ChangeType(NetObject value, NetType targetType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +234,16 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
+    /**
+     * Invokes the .NET member ParseValue.
+     *
+     * @param s the argument of type {@code java.lang.String}
+     * @param nameTable the argument of type {@code XmlNameTable}
+     * @param nsmgr the argument of type {@code IXmlNamespaceResolver}
+     * @return the value returned by the .NET member
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.ParseValue" target="_top">.NET documentation</a>
+     */
     public NetObject ParseValue(java.lang.String s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +263,13 @@ public class XmlSchemaDatatype extends NetObject  {
     
     // Properties section
     
+    /**
+     * Gets the value of the .NET property ValueType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.ValueType" target="_top">.NET documentation</a>
+     */
     public NetType getValueType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +285,13 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property Variety.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.Variety" target="_top">.NET documentation</a>
+     */
     public XmlSchemaDatatypeVariety getVariety() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +307,13 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TypeCode.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.TypeCode" target="_top">.NET documentation</a>
+     */
     public XmlTypeCode getTypeCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +329,13 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
+    /**
+     * Gets the value of the .NET property TokenizedType.
+     *
+     * @return the value of the property
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaDatatype.TokenizedType" target="_top">.NET documentation</a>
+     */
     public XmlTokenizedType getTokenizedType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
